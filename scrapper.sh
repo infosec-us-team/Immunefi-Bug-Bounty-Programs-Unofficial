@@ -25,7 +25,7 @@ bounties_length=$(echo "$projects" | jq length)
 
 for (( c=0; c<=$bounties_length-1; c++))
 do
-   echo "$c"
+
    # Get project's name
    name=$(echo "$projects" | jq -r .[$c].id)
    # Get project's data
