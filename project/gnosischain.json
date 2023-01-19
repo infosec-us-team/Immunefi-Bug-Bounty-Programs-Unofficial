@@ -1,0 +1,177 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "gnosischain",
+      "slug": "gnosischain",
+      "project": "Gnosis Chain",
+      "maxBounty": 2000000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6ibSou9KOCjwRMOviQ4op0/bd40955a44009d5e7a35376fb4c0a248/Aatar_green_white.png",
+      "launchDate": "2022-02-10T21:00-07:00",
+      "updatedDate": "2022-10-13T14:00:09.874Z",
+      "kyc": false,
+      "rewards": [
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "Up to USD $2,000,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "high",
+          "payout": "USD $10,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "USD $1,000",
+          "pocRequired": true
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "39I4UubBcljARlt90OaRGQ",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016",
+          "description": "DAI-xDAI TokenBridge contract on the Ethereum Mainnet"
+        },
+        {
+          "id": "6VGumskpUySCP01OvbYYMn",
+          "type": "smart_contract",
+          "url": "https://blockscout.com/xdai/mainnet/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6",
+          "description": "DAI-xDAI OmniBridge contract on the xDai chain"
+        },
+        {
+          "id": "4oQoN6nat7OLKqL8ib88eC",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671",
+          "description": "ETH-xDAI OmniBridge contract on the Ethereum Mainnet"
+        },
+        {
+          "id": "1TEVjuzA8DmpOMImDZWzs3",
+          "type": "smart_contract",
+          "url": "https://blockscout.com/xdai/mainnet/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d",
+          "description": "ETH-xDAI OmniBridge contract on the xDai chain"
+        },
+        {
+          "id": "3rTq6Vwuvy8fP9DfCDdWi",
+          "type": "smart_contract",
+          "url": "https://bscscan.com/address/0xf0b456250dc9990662a6f25808cc74a6d1131ea9",
+          "description": "BSC-xDAI OmniBridge contract on the Binance Smart Chain"
+        },
+        {
+          "id": "4fWLXV2BOwatPreXdCLryj",
+          "type": "smart_contract",
+          "url": "https://blockscout.com/xdai/mainnet/address/0x59447362798334d3485c64D1e4870Fde2DDC0d75",
+          "description": "BSC-xDAI OmniBridge contract on the xDai chain"
+        }
+      ],
+      "impacts": [
+        {
+          "id": "3kBb7h2SWiqnPKcMEw38H6",
+          "title": "Critical smart contract impact",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "14OPd6vhBlHuCie7Si3Nn7",
+          "title": "High smart contract impact",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "28bbOpS24jOLTYGKuXGDEw",
+          "title": "Medium smart contract impact",
+          "type": "smart_contract",
+          "severity": "medium"
+        }
+      ],
+      "programOverview": "Gnosis chain, previously known as xDai, is a stable payments EVM (Ethereum Virtual Machine) blockchain designed for fast and inexpensive transactions. The chain uses a unique dual-token model; xDai is a stable token used for transactions, payments, and fees, and STAKE currently supports the underlying POSDAO Proof-of-Stake consensus.\n\nFor more information about Gnosis Chain, please visit [https://www.xdaichain.com/](https://www.xdaichain.com/) \n\nThis bug bounty program is focused on their smart contracts.\n",
+      "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the\nfollowing types:\n\n**Smart Contracts/Blockchain:**\n\n- Re-entrancy\n- Logic errors\n  - including user authentication errors\n- Solidity/EVM details not considered\n  - including integer over-/under-flow\n  - including unhandled exceptions\n- Trusting trust/dependency vulnerabilities\n  - including composability vulnerabilities\n- Oracle failure/manipulation\n- Novel governance attacks\n- Economic/financial attacks\n  - including flash loan attacks\n- Congestion and scalability\n  - including running out of gas\n  - including block stuffing\n  - including susceptibility to frontrunning\n- Consensus failures\n- Cryptography problems\n  - Signature malleability\n  - Susceptibility to replay attacks\n  - Weak randomness\n  - Weak encryption\n- Susceptibility to block timestamp manipulation\n- Missing access controls / unprotected internal or debugging interfaces",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll smart contract bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward.\n\nAll Critical smart contract vulnerabilities are further capped at 10% of economic damage, primarily taking into consideration the funds at risk. However, there is a minimum reward of __USD 50 000__.\n\nPayouts are handled by the Gnosis Chain team directly and are denominated in USD. However, payouts are done in USDT for payments up to USD 100 000. All remaining rewards are paid in STAKE.",
+      "outOfScopeAndRules": "**The following vulnerabilities are excluded from the rewards for this bug\nbounty program:**\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n\n**The following activities are prohibited by bug bounty program:**\n\n- Any testing with mainnet or public testnet contracts; all testing should be\n  done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees\n  and/or customers\n- Any testing with third party systems and applications (e.g. browser\n  extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": null,
+      "impactsBody": null,
+      "immunefiStandard": true,
+      "tags": {
+        "productType": [
+          "Crosschain Liquidity",
+          "Stablecoin",
+          "Staking",
+          "Wallet"
+        ],
+        "projectType": [
+          "Defi"
+        ],
+        "ecosystem": [
+          "BSC",
+          "ETH"
+        ],
+        "programType": [
+          "Smart Contract"
+        ],
+        "language": [
+          "Solidity"
+        ]
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract"
+        ],
+        "blockchain_rewards": [],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "Up to USD $2,000,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $10,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $1,000"
+          }
+        ],
+        "web_rewards": []
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Gnosis chain, previously known as xDai, is a stable payments EVM (Ethereum Virtual Machine) blockchain designed for fast and inexpensive transactions. The chain uses a unique dual-token model; xDai is a stable token used for transactions, payments, and fees, and STAKE currently supports the underlying POSDAO Proof-of-Stake consensus.\"), mdx(\"p\", null, \"For more information about Gnosis Chain, please visit \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://www.xdaichain.com/\"\n  }, \"https://www.xdaichain.com/\"), \" \"), mdx(\"p\", null, \"This bug bounty program is focused on their smart contracts.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Gnosis chain, previously known as xDai, is a stable payments EVM (Ethereum Virtual Machine) blockchain designed for fast and inexpensive transactions. The chain uses a unique dual-token model; xDai is a stable token used for transactions, payments, and fees, and STAKE currently supports the underlying POSDAO Proof-of-Stake consensus.</p><p>For more information about Gnosis Chain, please visit <a href=\"https://www.xdaichain.com/\">https://www.xdaichain.com/</a> </p><p>This bug bounty program is focused on their smart contracts.</p>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"We are especially interested in receiving and rewarding vulnerabilities of the\\nfollowing types:\"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts/Blockchain:\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Re-entrancy\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Logic errors\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including user authentication errors\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Solidity/EVM details not considered\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including integer over-/under-flow\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including unhandled exceptions\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Trusting trust/dependency vulnerabilities\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including composability vulnerabilities\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Oracle failure/manipulation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Novel governance attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Economic/financial attacks\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including flash loan attacks\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Congestion and scalability\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including running out of gas\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including block stuffing\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including susceptibility to frontrunning\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Consensus failures\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Cryptography problems\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Signature malleability\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Susceptibility to replay attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Weak randomness\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Weak encryption\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Susceptibility to block timestamp manipulation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Missing access controls / unprotected internal or debugging interfaces\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>We are especially interested in receiving and rewarding vulnerabilities of the\nfollowing types:</p><p><strong>Smart Contracts/Blockchain:</strong></p><ul><li>Re-entrancy</li><li>Logic errors<ul><li>including user authentication errors</li></ul></li><li>Solidity/EVM details not considered<ul><li>including integer over-/under-flow</li><li>including unhandled exceptions</li></ul></li><li>Trusting trust/dependency vulnerabilities<ul><li>including composability vulnerabilities</li></ul></li><li>Oracle failure/manipulation</li><li>Novel governance attacks</li><li>Economic/financial attacks<ul><li>including flash loan attacks</li></ul></li><li>Congestion and scalability<ul><li>including running out of gas</li><li>including block stuffing</li><li>including susceptibility to frontrunning</li></ul></li><li>Consensus failures</li><li>Cryptography problems<ul><li>Signature malleability</li><li>Susceptibility to replay attacks</li><li>Weak randomness</li><li>Weak encryption</li></ul></li><li>Susceptibility to block timestamp manipulation</li><li>Missing access controls / unprotected internal or debugging interfaces</li></ul>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Rewards are distributed according to the impact of the vulnerability based on the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\"\n  }, \"Immunefi Vulnerability Severity Classification System V2.2\"), \". This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\"), mdx(\"p\", null, \"All smart contract bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward.\"), mdx(\"p\", null, \"All Critical smart contract vulnerabilities are further capped at 10% of economic damage, primarily taking into consideration the funds at risk. However, there is a minimum reward of \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USD 50 000\"), \".\"), mdx(\"p\", null, \"Payouts are handled by the Gnosis Chain team directly and are denominated in USD. However, payouts are done in USDT for payments up to USD 100 000. All remaining rewards are paid in STAKE.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Rewards are distributed according to the impact of the vulnerability based on the <a href=\"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\">Immunefi Vulnerability Severity Classification System V2.2</a>. This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.</p><p>All smart contract bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward.</p><p>All Critical smart contract vulnerabilities are further capped at 10% of economic damage, primarily taking into consideration the funds at risk. However, there is a minimum reward of <strong>USD 50 000</strong>.</p><p>Payouts are handled by the Gnosis Chain team directly and are denominated in USD. However, payouts are done in USDT for payments up to USD 100 000. All remaining rewards are paid in STAKE.</p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"The following vulnerabilities are excluded from the rewards for this bug\\nbounty program:\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that the reporter has already exploited themselves, leading to damage\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to leaked keys/credentials\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to privileged addresses (governance, strategist)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Incorrect data supplied by third party oracles\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Not to exclude oracle manipulation/flash loan attacks\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Basic economic governance attacks (e.g. 51% attack)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Lack of liquidity\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practice critiques\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Sybil attacks\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"The following activities are prohibited by bug bounty program:\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with mainnet or public testnet contracts; all testing should be\\ndone on private testnets\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with pricing oracles or third party smart contracts\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attempting phishing or other social engineering attacks against our employees\\nand/or customers\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with third party systems and applications (e.g. browser\\nextensions) as well as websites (e.g. SSO providers, advertising networks)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any denial of service attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Automated testing of services that generates significant amounts of traffic\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Public disclosure of an unpatched vulnerability in an embargoed bounty\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p><strong>The following vulnerabilities are excluded from the rewards for this bug\nbounty program:</strong></p><ul><li>Attacks that the reporter has already exploited themselves, leading to damage</li><li>Attacks requiring access to leaked keys/credentials</li><li>Attacks requiring access to privileged addresses (governance, strategist)</li><li>Incorrect data supplied by third party oracles<ul><li>Not to exclude oracle manipulation/flash loan attacks</li></ul></li><li>Basic economic governance attacks (e.g. 51% attack)</li><li>Lack of liquidity</li><li>Best practice critiques</li><li>Sybil attacks</li></ul><p><strong>The following activities are prohibited by bug bounty program:</strong></p><ul><li>Any testing with mainnet or public testnet contracts; all testing should be\ndone on private testnets</li><li>Any testing with pricing oracles or third party smart contracts</li><li>Attempting phishing or other social engineering attacks against our employees\nand/or customers</li><li>Any testing with third party systems and applications (e.g. browser\nextensions) as well as websites (e.g. SSO providers, advertising networks)</li><li>Any denial of service attacks</li><li>Automated testing of services that generates significant amounts of traffic</li><li>Public disclosure of an unpatched vulnerability in an embargoed bounty</li></ul>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}

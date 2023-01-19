@@ -1,0 +1,329 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "stacks",
+      "slug": "stacks",
+      "project": "Stacks",
+      "maxBounty": 1000000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5fyZtgehW9ECXFKLpiDvq6/7228d788a3497d71277099985eb83987/Stacks.png",
+      "launchDate": "2022-03-31T13:30-06:00",
+      "updatedDate": "2022-10-19T23:00:57.849Z",
+      "kyc": true,
+      "rewards": [
+        {
+          "assetType": "blockchain_dlt",
+          "level": "critical",
+          "payout": "Up to USD $1,000,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "high",
+          "payout": "USD $50,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "medium",
+          "payout": "USD $10,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "low",
+          "payout": "USD $1,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "Up to USD $1,000,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "high",
+          "payout": "USD $50,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "USD $10,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "low",
+          "payout": "USD $1,000",
+          "pocRequired": false
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "4qy0Jzx2PPAQgPhuJdDk54",
+          "type": "smart_contract",
+          "url": "https://github.com/stacks-network/stacks-blockchain/blob/master/src/chainstate/stacks/boot/bns.clar",
+          "description": "BNS contract"
+        },
+        {
+          "id": "cOg6GDCBuTBMg879ePnHa",
+          "type": "smart_contract",
+          "url": "https://github.com/stacks-network/stacks-blockchain/blob/master/src/chainstate/stacks/boot/pox.clar",
+          "description": "POX contract"
+        },
+        {
+          "id": "bUooaKIGszVwaxPSCOa1g",
+          "type": "smart_contract",
+          "url": "https://github.com/stacks-network/stacks-blockchain/blob/master/src/chainstate/stacks/boot/lockup.clar",
+          "description": "Lockup contract"
+        },
+        {
+          "id": "3BygY3ZGnYEdOHHW9dXU1S",
+          "type": "smart_contract",
+          "url": "https://github.com/stacks-network/stacks-blockchain/blob/master/src/chainstate/stacks/boot/costs.clar",
+          "description": "Costs contract"
+        },
+        {
+          "id": "4b6Wq0UNsj6BzL3858905b",
+          "type": "smart_contract",
+          "url": "https://github.com/stacks-network/stacks-blockchain/blob/master/src/chainstate/stacks/boot/cost-voting.clar",
+          "description": "Cost voting contract"
+        },
+        {
+          "id": "21yykxBnBDpN6Q8HuV5TV2",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/stacks-network/stacks-blockchain/tree/master/src",
+          "description": "Main Repo"
+        },
+        {
+          "id": "3Zb6KyRQDEQZCEIgo0hWTA",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/stacks-network/stacks-blockchain/tree/master/testnet/stacks-node/src",
+          "description": "Node implementation"
+        }
+      ],
+      "impacts": [
+        {
+          "id": "6ww2SIETgtRlfAusxtT9pw",
+          "title": "Network not being able to confirm new transactions (Total network shutdown)",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "2pae20SR8jsQlMBuKcQ8b3",
+          "title": "Trigger a deep fork without spending the requisite BTC",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "7fyPTOuRTvSxrQ2CEjR0EN",
+          "title": "Chain split due to different nodes processing the same block or transaction with different results",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "6A2sNBFlOIz8cisVHOYySk",
+          "title": "Direct loss of funds other than permanent or temporary freezing",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "39zjzhmpNoqamVWjw1s8P8",
+          "title": "Invalid transaction confirmed (such as with an incorrect nonce)",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "zqAsEQpm1faUYLD9Xnl1i",
+          "title": "Loss of user funds by permanent freezing or theft",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "2EEO8AVY79s1r1HycLggBI",
+          "title": "Loss of governance funds (limited to `.cost-vote`)",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "35SraUnv2KE2pnB76A40xB",
+          "title": "Governance vote manipulation",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "5dgzF56MepSIa1iQuw8BZL",
+          "title": "Unintended chain split (Network partition)",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "1pVzsqK9TyBTRM1ZGcFvJw",
+          "title": "Transient consensus failures",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "3j8jHwQdeyeHzCmvXIaSgf",
+          "title": "Remotely-exploitable memory or disk access, restricted to the Stacks Blockchain RPC/P2P ports",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "7EPjKvgWnSVJw96WzVCLe4",
+          "title": "Remotely-exploitable denial of service in a node",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "62MKeJGOdNrDU2OxtbdjVD",
+          "title": "Theft of unclaimed reward",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "40ZT59bQN76XQNgnVRPlAi",
+          "title": "Permanent freezing of unclaimed reward",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "5WYpAM6O49wI2f5WZeX85G",
+          "title": "DoS of greater than 30% of miners and does not shut down the network",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        },
+        {
+          "id": "2Rm44uy0I4YzaElQsrsQ3V",
+          "title": "Block stuffing without fund transfers blocked",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "4etup9g5rNrQPpQDAx4AdJ",
+          "title": "Block stuffing the Stacks chain such that smart contract calls can be blocked, but without paying the requisite higher transaction fees",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "7Dl6dDgs8RAVKv5jjfw9Ih",
+          "title": "DoS of greater than 10% but less than 30% of miners and does not shut down the network",
+          "type": "blockchain_dlt",
+          "severity": "low"
+        },
+        {
+          "id": "5SjkomczFmzA7Ka5QqeA0q",
+          "title": "Underpricing transaction fees relative to computation time",
+          "type": "blockchain_dlt",
+          "severity": "low"
+        },
+        {
+          "id": "6d2mlEyJ9dPrGwUNdn8VCb",
+          "title": "Smart contract fails to deliver promised returns, but doesn’t lose value",
+          "type": "smart_contract",
+          "severity": "low"
+        },
+        {
+          "id": "3NgiRs9GGennGUxOsvZ2Yr",
+          "title": "A smart contract has certain operations underpriced or overpriced in ways that we don’t know about (i.e. that we don’t have open issues for)",
+          "type": "smart_contract",
+          "severity": "low"
+        }
+      ],
+      "programOverview": "Stacks is a layer-1 blockchain that shares consensus with Bitcoin, enabling apps and smart contracts on the world's most robust blockchain. Activity on the Stacks network settles to Bitcoin, allowing developers to harness the security, stability, and economic power of Bitcoin while benefitting from an expressive smart contract layer\n\nFor more information about Stacks, please visit [https://stacks.org/](https://stacks.org/) and [https://www.stacks.co/](https://www.stacks.co/). \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Theft of funds\n  - Permanent freezing of funds\n  - Total network shutdown",
+      "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Blockchain__\n\n__Critical__\n  - Network not being able to confirm new transactions (Total network shutdown)\n  - Trigger a deep fork without spending the requisite BTC.\n  - Direct loss of funds other than permanent or temporary freezing\n  - Chain split due to different nodes processing the same block or transaction with different results\n  - Invalid transaction confirmed (such as with an incorrect nonce)\n\n__High__\n  - Unintended chain split (Network partition)\n  - Transient consensus failures\n  - Remotely-exploitable denial of service in a node\n  - Remotely-exploitable memory or disk access, restricted to the Stacks Blockchain RPC/P2P ports\n\n__Medium__\n  - DoS of greater than 30% of miners and does not shut down the network\n\n__Low__\n  - DoS of greater than 10% but less than 30% of miners and does not shut down the network\n  - Underpricing transaction fees relative to computation time\n\n__Smart Contracts__\n\n__Critical__\n  - Loss of user funds by permanent freezing or theft\n  - Loss of governance funds (limited to `.cost-vote`)\n  - Governance vote manipulation\n\n__High__\n  - Theft of unclaimed reward\n  - Permanent freezing of unclaimed reward\n\n__Medium__\n  - Block stuffing without fund transfers blocked\n  - Block stuffing the Stacks chain such that smart contract calls can be blocked, but without paying the requisite higher transaction fees\n\n__Low__\n  - Smart contract fails to deliver promised returns, but doesn’t lose value\n  - A smart contract has certain operations underpriced or overpriced in ways that we don’t know about (i.e. that we don’t have open issues for).",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2) v2. This is a simplified 5-level scale, with separate scales for each category, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. If there is any discrepancy with the classification in the Impacts in Scope section, the classification in the Impacts in Scope section will hold true.\n\nAll critical bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nAll critical bug reports with direct financial impact are further capped at 10% of economic damage, which primarily takes into consideration the funds at risk while also having some PR and branding considerations, though at the discretion of the team. However, there is a minimum reward of USD 50 000.\n\nThis bug bounty program is only open to individuals outside the OFAC restricted countries. Bug bounty hunters will be required to provide evidence that they are not a resident or citizen of these countries. If the individual is a US person, tax information will be required, such as a W-9, in order to properly issue a 1099.\n\nVulnerabilities and their impacts mentioned in the following audit reports are ineligible for a reward:\n\n[https://forum.stacks.org/t/stacks-2-0-security-audits/11464](https://forum.stacks.org/t/stacks-2-0-security-audits/11464)\n\n[https://paper.dropbox.com/published/Stacks-2.0-Security-Audit-Resolution-0oyUrm2niuXUc9vS0bgT7rS](https://paper.dropbox.com/published/Stacks-2.0-Security-Audit-Resolution-0oyUrm2niuXUc9vS0bgT7rS) \n\n[https://www.dropbox.com/sh/ss01em9ly2r92lx/AACehrRuPhms9ONLLTCkIkXIa/Blockstack_Desktop_Wallet_Pentest_Report_11-12-2020.pdf?dl=0](https://www.dropbox.com/sh/ss01em9ly2r92lx/AACehrRuPhms9ONLLTCkIkXIa/Blockstack_Desktop_Wallet_Pentest_Report_11-12-2020.pdf?dl=0) \n\n[https://www.dropbox.com/sh/ss01em9ly2r92lx/AAAy4ktVAYN3kOSbLFs9M4O6a/NCC_Group_Stacks_Blockchain_Audit_Report_2020-11-23_v1.0.pdf?dl=0](https://www.dropbox.com/sh/ss01em9ly2r92lx/AAAy4ktVAYN3kOSbLFs9M4O6a/NCC_Group_Stacks_Blockchain_Audit_Report_2020-11-23_v1.0.pdf?dl=0) \n\n[https://www.dropbox.com/sh/ss01em9ly2r92lx/AAB4wj-g0c7RUbjrYLhRApdza/NCC_Group_Stacks_Wallet_Report_2020-11-17_v1.0.pdf?dl=0](https://www.dropbox.com/sh/ss01em9ly2r92lx/AAB4wj-g0c7RUbjrYLhRApdza/NCC_Group_Stacks_Wallet_Report_2020-11-17_v1.0.pdf?dl=0) \n\nPayouts are handled by the __Stacks Foundation__ team directly and are denominated in USD. However, payments can be made in __USD__ (including USDT and USDC), __STX__ (USD equivalent) or __BTC__ (USD equivalent) at the discretion of Stacks Foundation.",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n  - Attacks that depend on a remote bitcoin node over an untrusted network\n  - Attacks requiring the use of a bitcoin miner\n  - Attacks that require a bitcoin miner to cooperate with any attack\n  - Any attack using a vendored dependency is limited to at most a Low impact (Github issue or PR is preferred in this case)\n  - Any attack using a publicly known github issue or PR (including vendored dependencies - see above)\n\n__Smart Contracts and Blockchain__\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice/Test case critiques\n  - Sybil attacks\n  - Centralization risks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets or mocknet\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic and/or DoS of the HTTP endpoints\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": "All smart contracts of Stacks can be found at [https://github.com/stacks-network/stacks-blockchain/blob/master/src/chainstate/stacks/boot](https://github.com/stacks-network/stacks-blockchain/blob/master/src/chainstate/stacks/boot).  However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nThough the Node implementation asset has “testnet” in the folder name, it is not a testnet node and is within the scope of the bug bounty program.",
+      "impactsBody": null,
+      "immunefiStandard": true,
+      "tags": {
+        "productType": null,
+        "projectType": null,
+        "ecosystem": null,
+        "programType": null,
+        "language": null
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract",
+          "Blockchain/DLT"
+        ],
+        "blockchain_rewards": [
+          {
+            "level": "Critical",
+            "payout": "Up to USD $1,000,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $50,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $10,000"
+          },
+          {
+            "level": "Low",
+            "payout": "USD $1,000"
+          }
+        ],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "Up to USD $1,000,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $50,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $10,000"
+          },
+          {
+            "level": "Low",
+            "payout": "USD $1,000"
+          }
+        ],
+        "web_rewards": []
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Stacks is a layer-1 blockchain that shares consensus with Bitcoin, enabling apps and smart contracts on the world's most robust blockchain. Activity on the Stacks network settles to Bitcoin, allowing developers to harness the security, stability, and economic power of Bitcoin while benefitting from an expressive smart contract layer\"), mdx(\"p\", null, \"For more information about Stacks, please visit \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://stacks.org/\"\n  }, \"https://stacks.org/\"), \" and \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://www.stacks.co/\"\n  }, \"https://www.stacks.co/\"), \". \"), mdx(\"p\", null, \"This bug bounty program is focused on their smart contracts and is focused on preventing:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Theft of funds\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Permanent freezing of funds\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Total network shutdown\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Stacks is a layer-1 blockchain that shares consensus with Bitcoin, enabling apps and smart contracts on the world&#x27;s most robust blockchain. Activity on the Stacks network settles to Bitcoin, allowing developers to harness the security, stability, and economic power of Bitcoin while benefitting from an expressive smart contract layer</p><p>For more information about Stacks, please visit <a href=\"https://stacks.org/\">https://stacks.org/</a> and <a href=\"https://www.stacks.co/\">https://www.stacks.co/</a>. </p><p>This bug bounty program is focused on their smart contracts and is focused on preventing:</p><ul><li>Theft of funds</li><li>Permanent freezing of funds</li><li>Total network shutdown</li></ul>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Impacts in Scope\")), mdx(\"p\", null, \"Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Blockchain\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Critical\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Network not being able to confirm new transactions (Total network shutdown)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Trigger a deep fork without spending the requisite BTC.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Direct loss of funds other than permanent or temporary freezing\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Chain split due to different nodes processing the same block or transaction with different results\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Invalid transaction confirmed (such as with an incorrect nonce)\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"High\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Unintended chain split (Network partition)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Transient consensus failures\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Remotely-exploitable denial of service in a node\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Remotely-exploitable memory or disk access, restricted to the Stacks Blockchain RPC/P2P ports\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Medium\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"DoS of greater than 30% of miners and does not shut down the network\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Low\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"DoS of greater than 10% but less than 30% of miners and does not shut down the network\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Underpricing transaction fees relative to computation time\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Critical\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Loss of user funds by permanent freezing or theft\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Loss of governance funds (limited to \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \".cost-vote\"), \")\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Governance vote manipulation\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"High\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Theft of unclaimed reward\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Permanent freezing of unclaimed reward\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Medium\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Block stuffing without fund transfers blocked\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Block stuffing the Stacks chain such that smart contract calls can be blocked, but without paying the requisite higher transaction fees\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Low\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Smart contract fails to deliver promised returns, but doesn\\u2019t lose value\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"A smart contract has certain operations underpriced or overpriced in ways that we don\\u2019t know about (i.e. that we don\\u2019t have open issues for).\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p><strong>Impacts in Scope</strong></p><p>Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.</p><p><strong>Blockchain</strong></p><p><strong>Critical</strong></p><ul><li>Network not being able to confirm new transactions (Total network shutdown)</li><li>Trigger a deep fork without spending the requisite BTC.</li><li>Direct loss of funds other than permanent or temporary freezing</li><li>Chain split due to different nodes processing the same block or transaction with different results</li><li>Invalid transaction confirmed (such as with an incorrect nonce)</li></ul><p><strong>High</strong></p><ul><li>Unintended chain split (Network partition)</li><li>Transient consensus failures</li><li>Remotely-exploitable denial of service in a node</li><li>Remotely-exploitable memory or disk access, restricted to the Stacks Blockchain RPC/P2P ports</li></ul><p><strong>Medium</strong></p><ul><li>DoS of greater than 30% of miners and does not shut down the network</li></ul><p><strong>Low</strong></p><ul><li>DoS of greater than 10% but less than 30% of miners and does not shut down the network</li><li>Underpricing transaction fees relative to computation time</li></ul><p><strong>Smart Contracts</strong></p><p><strong>Critical</strong></p><ul><li>Loss of user funds by permanent freezing or theft</li><li>Loss of governance funds (limited to <code>.cost-vote</code>)</li><li>Governance vote manipulation</li></ul><p><strong>High</strong></p><ul><li>Theft of unclaimed reward</li><li>Permanent freezing of unclaimed reward</li></ul><p><strong>Medium</strong></p><ul><li>Block stuffing without fund transfers blocked</li><li>Block stuffing the Stacks chain such that smart contract calls can be blocked, but without paying the requisite higher transaction fees</li></ul><p><strong>Low</strong></p><ul><li>Smart contract fails to deliver promised returns, but doesn’t lose value</li><li>A smart contract has certain operations underpriced or overpriced in ways that we don’t know about (i.e. that we don’t have open issues for).</li></ul>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Rewards are distributed according to the impact of the vulnerability based on the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\"\n  }, \"Immunefi Vulnerability Severity Classification System V2.2\"), \" v2. This is a simplified 5-level scale, with separate scales for each category, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. If there is any discrepancy with the classification in the Impacts in Scope section, the classification in the Impacts in Scope section will hold true.\"), mdx(\"p\", null, \"All critical bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\"), mdx(\"p\", null, \"All critical bug reports with direct financial impact are further capped at 10% of economic damage, which primarily takes into consideration the funds at risk while also having some PR and branding considerations, though at the discretion of the team. However, there is a minimum reward of USD 50 000.\"), mdx(\"p\", null, \"This bug bounty program is only open to individuals outside the OFAC restricted countries. Bug bounty hunters will be required to provide evidence that they are not a resident or citizen of these countries. If the individual is a US person, tax information will be required, such as a W-9, in order to properly issue a 1099.\"), mdx(\"p\", null, \"Vulnerabilities and their impacts mentioned in the following audit reports are ineligible for a reward:\"), mdx(\"p\", null, mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://forum.stacks.org/t/stacks-2-0-security-audits/11464\"\n  }, \"https://forum.stacks.org/t/stacks-2-0-security-audits/11464\")), mdx(\"p\", null, mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://paper.dropbox.com/published/Stacks-2.0-Security-Audit-Resolution-0oyUrm2niuXUc9vS0bgT7rS\"\n  }, \"https://paper.dropbox.com/published/Stacks-2.0-Security-Audit-Resolution-0oyUrm2niuXUc9vS0bgT7rS\"), \" \"), mdx(\"p\", null, mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://www.dropbox.com/sh/ss01em9ly2r92lx/AACehrRuPhms9ONLLTCkIkXIa/Blockstack_Desktop_Wallet_Pentest_Report_11-12-2020.pdf?dl=0\"\n  }, \"https://www.dropbox.com/sh/ss01em9ly2r92lx/AACehrRuPhms9ONLLTCkIkXIa/Blockstack_Desktop_Wallet_Pentest_Report_11-12-2020.pdf?dl=0\"), \" \"), mdx(\"p\", null, mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://www.dropbox.com/sh/ss01em9ly2r92lx/AAAy4ktVAYN3kOSbLFs9M4O6a/NCC_Group_Stacks_Blockchain_Audit_Report_2020-11-23_v1.0.pdf?dl=0\"\n  }, \"https://www.dropbox.com/sh/ss01em9ly2r92lx/AAAy4ktVAYN3kOSbLFs9M4O6a/NCC_Group_Stacks_Blockchain_Audit_Report_2020-11-23_v1.0.pdf?dl=0\"), \" \"), mdx(\"p\", null, mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://www.dropbox.com/sh/ss01em9ly2r92lx/AAB4wj-g0c7RUbjrYLhRApdza/NCC_Group_Stacks_Wallet_Report_2020-11-17_v1.0.pdf?dl=0\"\n  }, \"https://www.dropbox.com/sh/ss01em9ly2r92lx/AAB4wj-g0c7RUbjrYLhRApdza/NCC_Group_Stacks_Wallet_Report_2020-11-17_v1.0.pdf?dl=0\"), \" \"), mdx(\"p\", null, \"Payouts are handled by the \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Stacks Foundation\"), \" team directly and are denominated in USD. However, payments can be made in \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USD\"), \" (including USDT and USDC), \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"STX\"), \" (USD equivalent) or \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"BTC\"), \" (USD equivalent) at the discretion of Stacks Foundation.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Rewards are distributed according to the impact of the vulnerability based on the <a href=\"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\">Immunefi Vulnerability Severity Classification System V2.2</a> v2. This is a simplified 5-level scale, with separate scales for each category, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. If there is any discrepancy with the classification in the Impacts in Scope section, the classification in the Impacts in Scope section will hold true.</p><p>All critical bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.</p><p>All critical bug reports with direct financial impact are further capped at 10% of economic damage, which primarily takes into consideration the funds at risk while also having some PR and branding considerations, though at the discretion of the team. However, there is a minimum reward of USD 50 000.</p><p>This bug bounty program is only open to individuals outside the OFAC restricted countries. Bug bounty hunters will be required to provide evidence that they are not a resident or citizen of these countries. If the individual is a US person, tax information will be required, such as a W-9, in order to properly issue a 1099.</p><p>Vulnerabilities and their impacts mentioned in the following audit reports are ineligible for a reward:</p><p><a href=\"https://forum.stacks.org/t/stacks-2-0-security-audits/11464\">https://forum.stacks.org/t/stacks-2-0-security-audits/11464</a></p><p><a href=\"https://paper.dropbox.com/published/Stacks-2.0-Security-Audit-Resolution-0oyUrm2niuXUc9vS0bgT7rS\">https://paper.dropbox.com/published/Stacks-2.0-Security-Audit-Resolution-0oyUrm2niuXUc9vS0bgT7rS</a> </p><p><a href=\"https://www.dropbox.com/sh/ss01em9ly2r92lx/AACehrRuPhms9ONLLTCkIkXIa/Blockstack_Desktop_Wallet_Pentest_Report_11-12-2020.pdf?dl=0\">https://www.dropbox.com/sh/ss01em9ly2r92lx/AACehrRuPhms9ONLLTCkIkXIa/Blockstack_Desktop_Wallet_Pentest_Report_11-12-2020.pdf?dl=0</a> </p><p><a href=\"https://www.dropbox.com/sh/ss01em9ly2r92lx/AAAy4ktVAYN3kOSbLFs9M4O6a/NCC_Group_Stacks_Blockchain_Audit_Report_2020-11-23_v1.0.pdf?dl=0\">https://www.dropbox.com/sh/ss01em9ly2r92lx/AAAy4ktVAYN3kOSbLFs9M4O6a/NCC_Group_Stacks_Blockchain_Audit_Report_2020-11-23_v1.0.pdf?dl=0</a> </p><p><a href=\"https://www.dropbox.com/sh/ss01em9ly2r92lx/AAB4wj-g0c7RUbjrYLhRApdza/NCC_Group_Stacks_Wallet_Report_2020-11-17_v1.0.pdf?dl=0\">https://www.dropbox.com/sh/ss01em9ly2r92lx/AAB4wj-g0c7RUbjrYLhRApdza/NCC_Group_Stacks_Wallet_Report_2020-11-17_v1.0.pdf?dl=0</a> </p><p>Payouts are handled by the <strong>Stacks Foundation</strong> team directly and are denominated in USD. However, payments can be made in <strong>USD</strong> (including USDT and USDC), <strong>STX</strong> (USD equivalent) or <strong>BTC</strong> (USD equivalent) at the discretion of Stacks Foundation.</p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The following vulnerabilities are excluded from the rewards for this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that the reporter has already exploited themselves, leading to damage\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to leaked keys/credentials\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to privileged addresses (governance, strategist)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that depend on a remote bitcoin node over an untrusted network\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring the use of a bitcoin miner\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that require a bitcoin miner to cooperate with any attack\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any attack using a vendored dependency is limited to at most a Low impact (Github issue or PR is preferred in this case)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any attack using a publicly known github issue or PR (including vendored dependencies - see above)\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts and Blockchain\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Incorrect data supplied by third party oracles\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Not to exclude oracle manipulation/flash loan attacks\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Basic economic governance attacks (e.g. 51% attack)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Lack of liquidity\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practice/Test case critiques\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Sybil attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Centralization risks\")), mdx(\"p\", null, \"The following activities are prohibited by this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with mainnet or public testnet contracts; all testing should be done on private testnets or mocknet\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with pricing oracles or third party smart contracts\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attempting phishing or other social engineering attacks against our employees and/or customers\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any denial of service attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Automated testing of services that generates significant amounts of traffic and/or DoS of the HTTP endpoints\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Public disclosure of an unpatched vulnerability in an embargoed bounty\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The following vulnerabilities are excluded from the rewards for this bug bounty program:</p><ul><li>Attacks that the reporter has already exploited themselves, leading to damage</li><li>Attacks requiring access to leaked keys/credentials</li><li>Attacks requiring access to privileged addresses (governance, strategist)</li><li>Attacks that depend on a remote bitcoin node over an untrusted network</li><li>Attacks requiring the use of a bitcoin miner</li><li>Attacks that require a bitcoin miner to cooperate with any attack</li><li>Any attack using a vendored dependency is limited to at most a Low impact (Github issue or PR is preferred in this case)</li><li>Any attack using a publicly known github issue or PR (including vendored dependencies - see above)</li></ul><p><strong>Smart Contracts and Blockchain</strong></p><ul><li>Incorrect data supplied by third party oracles<ul><li>Not to exclude oracle manipulation/flash loan attacks</li></ul></li><li>Basic economic governance attacks (e.g. 51% attack)</li><li>Lack of liquidity</li><li>Best practice/Test case critiques</li><li>Sybil attacks</li><li>Centralization risks</li></ul><p>The following activities are prohibited by this bug bounty program:</p><ul><li>Any testing with mainnet or public testnet contracts; all testing should be done on private testnets or mocknet</li><li>Any testing with pricing oracles or third party smart contracts</li><li>Attempting phishing or other social engineering attacks against our employees and/or customers</li><li>Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)</li><li>Any denial of service attacks</li><li>Automated testing of services that generates significant amounts of traffic and/or DoS of the HTTP endpoints</li><li>Public disclosure of an unpatched vulnerability in an embargoed bounty</li></ul>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"All smart contracts of Stacks can be found at \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/stacks-network/stacks-blockchain/blob/master/src/chainstate/stacks/boot\"\n  }, \"https://github.com/stacks-network/stacks-blockchain/blob/master/src/chainstate/stacks/boot\"), \".  However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\"), mdx(\"p\", null, \"Though the Node implementation asset has \\u201Ctestnet\\u201D in the folder name, it is not a testnet node and is within the scope of the bug bounty program.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>All smart contracts of Stacks can be found at <a href=\"https://github.com/stacks-network/stacks-blockchain/blob/master/src/chainstate/stacks/boot\">https://github.com/stacks-network/stacks-blockchain/blob/master/src/chainstate/stacks/boot</a>.  However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.</p><p>Though the Node implementation asset has “testnet” in the folder name, it is not a testnet node and is within the scope of the bug bounty program.</p>",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}

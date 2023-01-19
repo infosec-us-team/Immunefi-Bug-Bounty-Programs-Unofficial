@@ -1,0 +1,164 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "gamma",
+      "slug": "gamma",
+      "project": "Gamma",
+      "maxBounty": 50000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2teADVeqlZjb4p9u7YbiMX/9c40208f8f56b9beb73bb3077228fa2c/Gamma_Logo.png",
+      "launchDate": "2021-10-08T10:00-05:00",
+      "updatedDate": "2022-12-20T18:03:53.073Z",
+      "kyc": false,
+      "rewards": [
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "USD $50,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "USD $5,000",
+          "pocRequired": true
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "21zPm19TlbEQqK0SR1jK48",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x26805021988F1a45dC708B5FB75Fc75F21747D8c",
+          "description": "xGamma"
+        },
+        {
+          "id": "2zW4jVKz9ikehx9XfuQkKY",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0xa8076ae31e4b6c64d07b1ed27889924a962a70d3",
+          "description": "Hypervisor"
+        },
+        {
+          "id": "5HYeXpcawP3e58xcFJJJrT",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x83de646a7125ac04950fea7e322481d4be66c71d",
+          "description": "UniProxy"
+        }
+      ],
+      "impacts": [
+        {
+          "id": "6K5e1URbnne8iDT4rJh3rc",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "2437m0ZpgAEgScPT3hHpVO",
+          "title": "Permanent freezing of funds",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "5vO8zwqkWuv7AUkOw4qAcg",
+          "title": "Theft of unclaimed yield",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "1lS8fumElDQ3eUdOOUFtyp",
+          "title": "Permanent freezing of unclaimed yield",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "74IHgx9xYaVEFYmFoQ3Hfu",
+          "title": "Temporary freezing of funds",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "FQjpmmlpryS0rA2VDY0vq",
+          "title": "Smart contract unable to operate due to lack of token funds",
+          "type": "smart_contract",
+          "severity": "medium"
+        }
+      ],
+      "programOverview": "Access active liquidity management on Uniswap v3. Gamma has developed a protocol, a management infrastructure, and a variety of strategies used by managers and market makers. As an LP, you can deposit your assets for Gamma to actively manage in Uniswap v3 positions, returning yield in the asset you deposit.\n\nFor more information about Gamma, please visit [https://www.gammastrategies.org/](https://www.gammastrategies.org/).   \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Loss of user funds\n  - Theft of unclaimed yield or principal\n  - Freezing of unclaimed yield",
+      "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n    - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces\n",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the Immunefi Vulnerability Severity Classification System. This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nAll bug reports must come with a PoC in order to be considered for a reward. \n\nThe following known issues would be considered as out-of-scope of this bounty program: \n  - For the UniProxy contract, its deposit configuration is its operational context. Attacks which depend on different configuration than provided for their example hypervisor contract are not to be considered\n  - For the xGamma contract, an attack is possible wherein the attacker deposits just before and withdraws just after rebase. In our operational context, they do not send funds (rebase) to the xGamma contract outside of private rpc.\n\nPayouts are handled by the __Gamma__ team directly and are denominated in USD. However, payouts are done in either __GAMMA__, __ETH__ or __USDC__, up to the discretion of the team.",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n  - Attacks which require differing operational configuration than targets supplied\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
+      "assetsBodyV2": "All smart contracts of Gamma can be found at [https://github.com/GammaStrategies/hypervisor/tree/stable](https://github.com/GammaStrategies/hypervisor/tree/stable). \nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n",
+      "impactsBody": null,
+      "immunefiStandard": null,
+      "tags": {
+        "productType": [
+          "AMM"
+        ],
+        "projectType": [
+          "Defi",
+          "Infrastructure"
+        ],
+        "ecosystem": [
+          "ETH"
+        ],
+        "programType": [
+          "Smart Contract"
+        ],
+        "language": [
+          "Solidity"
+        ]
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract"
+        ],
+        "blockchain_rewards": [],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $50,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $5,000"
+          }
+        ],
+        "web_rewards": []
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Access active liquidity management on Uniswap v3. Gamma has developed a protocol, a management infrastructure, and a variety of strategies used by managers and market makers. As an LP, you can deposit your assets for Gamma to actively manage in Uniswap v3 positions, returning yield in the asset you deposit.\"), mdx(\"p\", null, \"For more information about Gamma, please visit \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://www.gammastrategies.org/\"\n  }, \"https://www.gammastrategies.org/\"), \".   \"), mdx(\"p\", null, \"This bug bounty program is focused on their smart contracts and is focused on preventing:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Loss of user funds\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Theft of unclaimed yield or principal\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Freezing of unclaimed yield\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Access active liquidity management on Uniswap v3. Gamma has developed a protocol, a management infrastructure, and a variety of strategies used by managers and market makers. As an LP, you can deposit your assets for Gamma to actively manage in Uniswap v3 positions, returning yield in the asset you deposit.</p><p>For more information about Gamma, please visit <a href=\"https://www.gammastrategies.org/\">https://www.gammastrategies.org/</a>.   </p><p>This bug bounty program is focused on their smart contracts and is focused on preventing:</p><ul><li>Loss of user funds</li><li>Theft of unclaimed yield or principal</li><li>Freezing of unclaimed yield</li></ul>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"We are especially interested in receiving and rewarding vulnerabilities of the following types:\"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts and Blockchain\"), \" \"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Re-entrancy\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Logic errors\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including user authentication errors\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Solidity/EVM details not considered\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including integer over-/under-flow\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including rounding errors\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including unhandled exceptions\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Trusting trust/dependency vulnerabilities\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including composability vulnerabilities\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Oracle failure/manipulation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Novel governance attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Economic/financial attacks\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including flash loan attacks\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Congestion and scalability\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including running out of gas\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including block stuffing\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including susceptibility to frontrunning\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Consensus failures\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Cryptography problems\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Signature malleability\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Susceptibility to replay attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Weak randomness\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Weak encryption\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Susceptibility to block timestamp manipulation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Missing access controls / unprotected internal or debugging interfaces\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>We are especially interested in receiving and rewarding vulnerabilities of the following types:</p><p><strong>Smart Contracts and Blockchain</strong> </p><ul><li>Re-entrancy</li><li>Logic errors<ul><li>including user authentication errors</li></ul></li><li>Solidity/EVM details not considered<ul><li>including integer over-/under-flow</li><li>including rounding errors</li><li>including unhandled exceptions</li><li>Trusting trust/dependency vulnerabilities</li><li>including composability vulnerabilities</li></ul></li><li>Oracle failure/manipulation</li><li>Novel governance attacks</li><li>Economic/financial attacks<ul><li>including flash loan attacks</li></ul></li><li>Congestion and scalability<ul><li>including running out of gas</li><li>including block stuffing</li><li>including susceptibility to frontrunning</li></ul></li><li>Consensus failures</li><li>Cryptography problems<ul><li>Signature malleability</li><li>Susceptibility to replay attacks</li><li>Weak randomness</li><li>Weak encryption</li></ul></li><li>Susceptibility to block timestamp manipulation</li><li>Missing access controls / unprotected internal or debugging interfaces</li></ul>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Rewards are distributed according to the impact of the vulnerability based on the Immunefi Vulnerability Severity Classification System. This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \"), mdx(\"p\", null, \"All bug reports must come with a PoC in order to be considered for a reward. \"), mdx(\"p\", null, \"The following known issues would be considered as out-of-scope of this bounty program: \"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"For the UniProxy contract, its deposit configuration is its operational context. Attacks which depend on different configuration than provided for their example hypervisor contract are not to be considered\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"For the xGamma contract, an attack is possible wherein the attacker deposits just before and withdraws just after rebase. In our operational context, they do not send funds (rebase) to the xGamma contract outside of private rpc.\")), mdx(\"p\", null, \"Payouts are handled by the \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Gamma\"), \" team directly and are denominated in USD. However, payouts are done in either \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"GAMMA\"), \", \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"ETH\"), \" or \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USDC\"), \", up to the discretion of the team.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Rewards are distributed according to the impact of the vulnerability based on the Immunefi Vulnerability Severity Classification System. This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. </p><p>All bug reports must come with a PoC in order to be considered for a reward. </p><p>The following known issues would be considered as out-of-scope of this bounty program: </p><ul><li>For the UniProxy contract, its deposit configuration is its operational context. Attacks which depend on different configuration than provided for their example hypervisor contract are not to be considered</li><li>For the xGamma contract, an attack is possible wherein the attacker deposits just before and withdraws just after rebase. In our operational context, they do not send funds (rebase) to the xGamma contract outside of private rpc.</li></ul><p>Payouts are handled by the <strong>Gamma</strong> team directly and are denominated in USD. However, payouts are done in either <strong>GAMMA</strong>, <strong>ETH</strong> or <strong>USDC</strong>, up to the discretion of the team.</p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The following vulnerabilities are excluded from the rewards for this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that the reporter has already exploited themselves, leading to damage\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to leaked keys/credentials\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to privileged addresses (governance, strategist)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks which require differing operational configuration than targets supplied\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts and Blockchain\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Incorrect data supplied by third party oracles\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Not to exclude oracle manipulation/flash loan attacks\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Basic economic governance attacks (e.g. 51% attack)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Lack of liquidity\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practice critiques\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Sybil attacks\")), mdx(\"p\", null, \"The following activities are prohibited by this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with pricing oracles or third party smart contracts\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attempting phishing or other social engineering attacks against our employees and/or customers\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any denial of service attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Automated testing of services that generates significant amounts of traffic\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Public disclosure of an unpatched vulnerability in an embargoed bounty\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The following vulnerabilities are excluded from the rewards for this bug bounty program:</p><ul><li>Attacks that the reporter has already exploited themselves, leading to damage</li><li>Attacks requiring access to leaked keys/credentials</li><li>Attacks requiring access to privileged addresses (governance, strategist)</li><li>Attacks which require differing operational configuration than targets supplied</li></ul><p><strong>Smart Contracts and Blockchain</strong></p><ul><li>Incorrect data supplied by third party oracles<ul><li>Not to exclude oracle manipulation/flash loan attacks</li></ul></li><li>Basic economic governance attacks (e.g. 51% attack)</li><li>Lack of liquidity</li><li>Best practice critiques</li><li>Sybil attacks</li></ul><p>The following activities are prohibited by this bug bounty program:</p><ul><li>Any testing with mainnet or public testnet contracts; all testing should be done on private testnets</li><li>Any testing with pricing oracles or third party smart contracts</li><li>Attempting phishing or other social engineering attacks against our employees and/or customers</li><li>Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)</li><li>Any denial of service attacks</li><li>Automated testing of services that generates significant amounts of traffic</li><li>Public disclosure of an unpatched vulnerability in an embargoed bounty</li></ul>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"All smart contracts of Gamma can be found at \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/GammaStrategies/hypervisor/tree/stable\"\n  }, \"https://github.com/GammaStrategies/hypervisor/tree/stable\"), \".\\nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>All smart contracts of Gamma can be found at <a href=\"https://github.com/GammaStrategies/hypervisor/tree/stable\">https://github.com/GammaStrategies/hypervisor/tree/stable</a>.\nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.</p>",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}

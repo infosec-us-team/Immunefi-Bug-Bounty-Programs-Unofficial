@@ -1,0 +1,352 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "aloeprotocol",
+      "slug": "aloeprotocol",
+      "project": "Aloe Protocol",
+      "maxBounty": 50000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/51IzSZLBt894lnbsstJ8eT/f146559e85c54edd25a80d2856940394/Aloe_Protocol_logo.jpeg",
+      "launchDate": "2022-05-03T10:30-06:00",
+      "updatedDate": "2022-10-13T13:56:57.193Z",
+      "kyc": true,
+      "rewards": [
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "Up to USD $50,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "high",
+          "payout": "Up to USD $10,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "USD $2,500",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "low",
+          "payout": "USD $1,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "critical",
+          "payout": "USD $7,500",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "high",
+          "payout": "USD $5,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "medium",
+          "payout": "USD $2,500",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "low",
+          "payout": "USD $1,000",
+          "pocRequired": true
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "4FbdSFEMsrB9XzcoMl0ptx",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x0000000000f0021d219C5AE2Fd5b261966012Dd7",
+          "description": "Volatility Oracle"
+        },
+        {
+          "id": "18lfDzinF22qesLtg5764F",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x0a230CCa01f7107933D5355913E9a65082F37c52",
+          "description": "Compound WETH Silo"
+        },
+        {
+          "id": "2RGeZio8vc7zeXyJ4XYdCJ",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x723bFE564661536FDFfa3E9e060135928d3bf18F",
+          "description": "Compound USDC Silo"
+        },
+        {
+          "id": "6FmBRknmyykXOdnSX47wE3",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0xdA2D30c659cFEb176053B22Be11fc351e077FDc0",
+          "description": "Yearn WBTC Silo"
+        },
+        {
+          "id": "6YtNCeXFm8M95vRetXugR5",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x33cB657E7fd57F1f2d5f392FB78D5FA80806d1B4",
+          "description": "Aloe Blend USDC/WETH"
+        },
+        {
+          "id": "3hWOFt6bpBa1L4jOd3XDR9",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x0B76ABb170519C292da41404fDc30Bb5BEf308Fc",
+          "description": "Aloe Blend FEI/TRIBE"
+        },
+        {
+          "id": "4Nc6dzodxHh9GQ7A53mtxz",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0xE801c4175A0341e65dFef8F3B79e1889047AfEbb",
+          "description": "Aloe Blend WBTC/WETH"
+        },
+        {
+          "id": "1nTDGBiRNtrQ9cGPW9JWFH",
+          "type": "websites_and_applications",
+          "url": "https://app.aloe.capital/",
+          "description": "Aloe Labs’ Web App"
+        }
+      ],
+      "impacts": [
+        {
+          "id": "6uD8bOhEgfEtF4Eyxa2Pk7",
+          "title": "Theft of user funds from `AloeBlend.sol` instances",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "5WjR7KDj3nh4kKEnr3TH1d",
+          "title": "Freezing of user funds in `AloeBlend.sol` instances for any amount of time",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "45OwuxjTo3g8btn6MT2DQ8",
+          "title": "Theft of Yield is considered Critical if the theft is greater than what the endangered entity (may be a specific Blend pool, set of pools, or protocol as a whole) generates in an average week.",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "39m7jyoVDNHXwU8v1PA30g",
+          "title": "Manipulation of `AloeBlend.sol`.",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "4PdlEb1UqI9mWceVNFGkRO",
+          "title": "Execute arbitrary system commands",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "245LQoUBHkzAwCBGVpzq9p",
+          "title": "Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "4iPfx6Swgy5Bhuru5N4xvK",
+          "title": "Taking Down the application/website",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "5UatPv2EAgpPEJB2Wx9QKv",
+          "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc.",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "5qIc3ivUmILbqChxDazMoM",
+          "title": "Subdomain takeover with already-connected wallet interaction",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "3RPHG8mOiGm8jfYUWvwSIn",
+          "title": "Direct theft of user funds",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "5Mt3QMypEP5lnFY0Api7cv",
+          "title": "Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "2jCSUejZXQzDDNm6vmcrVj",
+          "title": "Any attack which causes pool performance to dip below the `sqrt(price)` baseline",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "3BrLdXcWoLJpP7DYxkJLf7",
+          "title": "Theft of unclaimed user yields from `AloeBlend.sol` instances",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "18MQMhYFv0EyhIc4ntF1MS",
+          "title": "Injecting/modifying the static content on the target application without Javascript (Persistent) such as HTML injection without Javascript, replacing existing text with arbitrary text, arbitrary file uploads, etc.",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "7laLOg9kLofX695s2G8IOG",
+          "title": "Subdomain takeover without already-connected wallet interaction",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "pA0o2lmMu7cDXduNDsd1z",
+          "title": "Unbounded gas consumption",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "5KiwzQs2OpNTW6eU3xSLBR",
+          "title": "`rebalance` incentivization exploits that freeze incentives for more than 1 month",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "2dVIbJQ80ut5IeXJ8XBdw2",
+          "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data",
+          "type": "websites_and_applications",
+          "severity": "medium"
+        },
+        {
+          "id": "bklkyvxy5tH4QTI24sJIe",
+          "title": "Redirecting users to malicious websites (Open Redirect)",
+          "type": "websites_and_applications",
+          "severity": "medium"
+        },
+        {
+          "id": "5uUM16vAW6LipgGCGWgjfc",
+          "title": "Oversights in contract efficiency (optimizations > 50000 gas)",
+          "type": "smart_contract",
+          "severity": "low"
+        },
+        {
+          "id": "5LgCsLF2MkygTCzoOarkjX",
+          "title": "Any impact involving a publicly released CVE without a working PoC",
+          "type": "websites_and_applications",
+          "severity": "low"
+        },
+        {
+          "id": "5Ot84h0dsPhFjesFrycqi",
+          "title": "Temporarily disabling user to access target site, such as locking up the victim from login, cookie bombing, etc.",
+          "type": "websites_and_applications",
+          "severity": "low"
+        }
+      ],
+      "programOverview": "The Aloe Protocol is a liquidity allocator for AMMs, targeting Uniswap V3 at launch. Aloe Blend uses a hybrid liquidity management system that's designed to earn more trading fees for liquidity providers (LPs) without requiring them to select specific ranges or manually move their funds around. This is done through silos, which are adapters to arbitrary yield strategies that enable otherwise idle funds to earn extra yield.\n\nFor more information about Aloe Protocol, please visit [https://docs.aloe.capital](https://docs.aloe.capital).",
+      "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Smart Contracts__\n\n__Critical__\n  - Theft of user funds from `AloeBlend.sol` instances\n  - Freezing of user funds in `AloeBlend.sol` instances for any amount of time\n  - Theft of Yield is considered Critical if the theft is greater than what the endangered entity (may be a specific Blend pool, set of pools, or protocol as a whole) generates in an average week.\n  - Manipulation of `AloeBlend.sol`. This includes but is not limited to:\n    - Calling `rebalance` such that it loses track of or freezes funds\n    - Calling `rebalance` such that it gives the caller more than `maintenanceBudget{0,1}` worth of `token{0,1}` or allows them to divert more than 10% of `token{0,1}` earnings to the maintenance budgets\n    - Causing errant deposits and withdrawals to/from Uniswap V3 via overflows, rounding errors, poor input validation, or similar\n    - Causing errant deposits and withdrawals to/from the protocols with which Aloe integrates (silos)\n\n__High__\n  - Any attack which causes pool performance to dip below the `sqrt(price)` baseline. For example, the USDC/ETH pool should perform at least as well as `sqrt(ETH price)`. Examples:\n    - Incorrect math in the `_computeMagicAmounts` function\n    - Flaws in `rebalance` that accrue too much value to the maintenance budgets\n  - Theft of unclaimed user yields from `AloeBlend.sol` instances\n\n__Medium__\n  - Unbounded gas consumption \n  - `rebalance` incentivization exploits that freeze incentives for more than 1 month:\n    - Gas price oracle manipulation. Note: If the cost of oracle manipulation is >>> than the reward for doing so, we’re not so worried about it.\n\n__Low__\n  - Oversights in contract efficiency (optimizations > 50000 gas)\n\n__Websites and Applications__\n\n__Critical__\n  - Execute arbitrary system commands\n  - Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)\n  - Taking down the application/website\n  - Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc.\n  - Subdomain takeover with already-connected wallet interaction\n  - Direct theft of user funds\n  - Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions \n\n__High__\n  - Injecting/modifying the static content on the target application without Javascript (Persistent) such as HTML injection without Javascript, replacing existing text with arbitrary text, arbitrary file uploads, etc.\n  - Subdomain takeover without already-connected wallet interaction\n\n__Medium__\n  - Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data\n  - Redirecting users to malicious websites (Open Redirect)\n\n__Low__\n  - Any impact involving a publicly released CVE without a working PoC\n  - Temporarily disabling user to access target site, such as locking up the victim from login, cookie bombing, etc.",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. All Low and Medium Smart Contract bug reports require a suggestion for a fix to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nCritical smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of __USD 10 000__. \n\nHigh smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of __USD 5 000__. \n\nThe following vulnerabilities are not eligible for a reward:\n\n  - Aloe Blend is incompatible with fee-on-transfer tokens\n  - On `deposit`, the contract may slightly underestimate how many shares the depositor deserves. This is the case if and only if, during the next rebalance, the conditional on line 519 or 529 of `AloeBlend.sol` is true. Furthermore, the value forfeited by the depositor is less than 10% of yield earned since the last rebalance.\n  - On `withdraw` the contract may slightly underestimate how many tokens are owed to the withdrawer. This is the case if and only if, during the next rebalance, the conditional on line 519 or 529 of `AloeBlend.sol` is true. Furthermore, the value forfeited by the withdrawer is less than 10% of yield earned since the last rebalance.\n  - Aloe Blend’s gas price oracle has insufficient precision to capture gas prices less than 1e-4 token units per gas unit. For example, USDC has 6 decimals, so gas price < 0.0001 USD/gasunit would not be recorded properly.\n  - Aloe Blend’s gas price oracle is vulnerable to an attack described here, but it’s designed to be expensive to execute and has minimal economic benefit for the attacker.\n  - Equations for implied volatility, position width, and limit order size are approximations. See here.\n\nAloe Labs requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed is a W9 or W8-BEN. This includes information like name, address, and taxpayer identification number. The collection of this information will be done by the project team.\n\nPayouts are handled by the __Aloe Labs__ team directly and are denominated in USD. However, payouts are done in __USDC and USDT__, with the choice of the ratio at the discretion of the reporters. \n",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Macro-economic trends such as just-in-time liquidity (this may reduce users’ yield, but it is not a bug in Aloe)\n  - Attacks on the protocols with which Aloe is integrated (Uniswap, Compound, Rari Fuse, Yearn, etc)\n  - Loss/freezing of tokens other than the Blend pool’s primary tokens (`token0` and `token1`) unless the silo is specifically designed to collect them. For example, the Compound CToken Silos are not designed to collect COMP rewards, so COMP losses are out of scope\n\n__Websites and Apps__\n  - Theoretical vulnerabilities without any proof or demonstration\n  - Attacks requiring physical access to the victim device\n  - Attacks requiring access to the local network of the victim\n  - Reflected plain text injection ex: url parameters, path, etc.\n    - This does not exclude reflected HTML injection with or without javascript\n    - This does not exclude persistent plain text injection\n  - Self-XSS\n  - Captcha bypass using OCR without impact demonstration\n  - CSRF with no state modifying security impact (ex: logout CSRF)\n  - Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n  - Server-side non-confidential information disclosure such as IPs, server names, and most stack traces\n  - Vulnerabilities used only to enumerate or confirm the existence of users or tenants\n  - Vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n  - Lack of SSL/TLS best practices\n  - DDoS vulnerabilities\n  - Feature requests\n  - Issues related to the frontend without concrete impact and PoC\n  - Best practices issues without concrete impact and PoC\n  - Vulnerabilities primarily caused by browser/plugin defects\n  - Leakage of non sensitive api keys ex: etherscan, Infura, Alchemy, etc.\n  - Any vulnerability exploit requiring browser bugs for exploitation. ex: CSP bypass\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": null,
+      "impactsBody": null,
+      "immunefiStandard": true,
+      "tags": {
+        "productType": [
+          "AMM"
+        ],
+        "projectType": [
+          "Defi"
+        ],
+        "ecosystem": [
+          "ETH"
+        ],
+        "programType": [
+          "Smart Contract",
+          "Websites and Applications"
+        ],
+        "language": [
+          "Solidity"
+        ]
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract",
+          "Websites and Applications"
+        ],
+        "blockchain_rewards": [],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "Up to USD $50,000"
+          },
+          {
+            "level": "High",
+            "payout": "Up to USD $10,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $2,500"
+          },
+          {
+            "level": "Low",
+            "payout": "USD $1,000"
+          }
+        ],
+        "web_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $7,500"
+          },
+          {
+            "level": "High",
+            "payout": "USD $5,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $2,500"
+          },
+          {
+            "level": "Low",
+            "payout": "USD $1,000"
+          }
+        ]
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The Aloe Protocol is a liquidity allocator for AMMs, targeting Uniswap V3 at launch. Aloe Blend uses a hybrid liquidity management system that's designed to earn more trading fees for liquidity providers (LPs) without requiring them to select specific ranges or manually move their funds around. This is done through silos, which are adapters to arbitrary yield strategies that enable otherwise idle funds to earn extra yield.\"), mdx(\"p\", null, \"For more information about Aloe Protocol, please visit \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://docs.aloe.capital\"\n  }, \"https://docs.aloe.capital\"), \".\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The Aloe Protocol is a liquidity allocator for AMMs, targeting Uniswap V3 at launch. Aloe Blend uses a hybrid liquidity management system that&#x27;s designed to earn more trading fees for liquidity providers (LPs) without requiring them to select specific ranges or manually move their funds around. This is done through silos, which are adapters to arbitrary yield strategies that enable otherwise idle funds to earn extra yield.</p><p>For more information about Aloe Protocol, please visit <a href=\"https://docs.aloe.capital\">https://docs.aloe.capital</a>.</p>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Impacts in Scope\")), mdx(\"p\", null, \"Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Critical\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Theft of user funds from \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"AloeBlend.sol\"), \" instances\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Freezing of user funds in \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"AloeBlend.sol\"), \" instances for any amount of time\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Theft of Yield is considered Critical if the theft is greater than what the endangered entity (may be a specific Blend pool, set of pools, or protocol as a whole) generates in an average week.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Manipulation of \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"AloeBlend.sol\"), \". This includes but is not limited to:\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Calling \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"rebalance\"), \" such that it loses track of or freezes funds\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Calling \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"rebalance\"), \" such that it gives the caller more than \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"maintenanceBudget{0,1}\"), \" worth of \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"token{0,1}\"), \" or allows them to divert more than 10% of \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"token{0,1}\"), \" earnings to the maintenance budgets\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Causing errant deposits and withdrawals to/from Uniswap V3 via overflows, rounding errors, poor input validation, or similar\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Causing errant deposits and withdrawals to/from the protocols with which Aloe integrates (silos)\")))), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"High\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any attack which causes pool performance to dip below the \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"sqrt(price)\"), \" baseline. For example, the USDC/ETH pool should perform at least as well as \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"sqrt(ETH price)\"), \". Examples:\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Incorrect math in the \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"_computeMagicAmounts\"), \" function\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Flaws in \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"rebalance\"), \" that accrue too much value to the maintenance budgets\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Theft of unclaimed user yields from \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"AloeBlend.sol\"), \" instances\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Medium\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Unbounded gas consumption \"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"rebalance\"), \" incentivization exploits that freeze incentives for more than 1 month:\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Gas price oracle manipulation. Note: If the cost of oracle manipulation is >>> than the reward for doing so, we\\u2019re not so worried about it.\")))), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Low\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Oversights in contract efficiency (optimizations > 50000 gas)\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Websites and Applications\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Critical\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Execute arbitrary system commands\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Taking down the application/website\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Subdomain takeover with already-connected wallet interaction\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Direct theft of user funds\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions \")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"High\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Injecting/modifying the static content on the target application without Javascript (Persistent) such as HTML injection without Javascript, replacing existing text with arbitrary text, arbitrary file uploads, etc.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Subdomain takeover without already-connected wallet interaction\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Medium\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Redirecting users to malicious websites (Open Redirect)\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Low\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any impact involving a publicly released CVE without a working PoC\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Temporarily disabling user to access target site, such as locking up the victim from login, cookie bombing, etc.\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p><strong>Impacts in Scope</strong></p><p>Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.</p><p><strong>Smart Contracts</strong></p><p><strong>Critical</strong></p><ul><li>Theft of user funds from <code>AloeBlend.sol</code> instances</li><li>Freezing of user funds in <code>AloeBlend.sol</code> instances for any amount of time</li><li>Theft of Yield is considered Critical if the theft is greater than what the endangered entity (may be a specific Blend pool, set of pools, or protocol as a whole) generates in an average week.</li><li>Manipulation of <code>AloeBlend.sol</code>. This includes but is not limited to:<ul><li>Calling <code>rebalance</code> such that it loses track of or freezes funds</li><li>Calling <code>rebalance</code> such that it gives the caller more than <code>maintenanceBudget{0,1}</code> worth of <code>token{0,1}</code> or allows them to divert more than 10% of <code>token{0,1}</code> earnings to the maintenance budgets</li><li>Causing errant deposits and withdrawals to/from Uniswap V3 via overflows, rounding errors, poor input validation, or similar</li><li>Causing errant deposits and withdrawals to/from the protocols with which Aloe integrates (silos)</li></ul></li></ul><p><strong>High</strong></p><ul><li>Any attack which causes pool performance to dip below the <code>sqrt(price)</code> baseline. For example, the USDC/ETH pool should perform at least as well as <code>sqrt(ETH price)</code>. Examples:<ul><li>Incorrect math in the <code>_computeMagicAmounts</code> function</li><li>Flaws in <code>rebalance</code> that accrue too much value to the maintenance budgets</li></ul></li><li>Theft of unclaimed user yields from <code>AloeBlend.sol</code> instances</li></ul><p><strong>Medium</strong></p><ul><li>Unbounded gas consumption </li><li><code>rebalance</code> incentivization exploits that freeze incentives for more than 1 month:<ul><li>Gas price oracle manipulation. Note: If the cost of oracle manipulation is &gt;&gt;&gt; than the reward for doing so, we’re not so worried about it.</li></ul></li></ul><p><strong>Low</strong></p><ul><li>Oversights in contract efficiency (optimizations &gt; 50000 gas)</li></ul><p><strong>Websites and Applications</strong></p><p><strong>Critical</strong></p><ul><li>Execute arbitrary system commands</li><li>Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)</li><li>Taking down the application/website</li><li>Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc.</li><li>Subdomain takeover with already-connected wallet interaction</li><li>Direct theft of user funds</li><li>Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions </li></ul><p><strong>High</strong></p><ul><li>Injecting/modifying the static content on the target application without Javascript (Persistent) such as HTML injection without Javascript, replacing existing text with arbitrary text, arbitrary file uploads, etc.</li><li>Subdomain takeover without already-connected wallet interaction</li></ul><p><strong>Medium</strong></p><ul><li>Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data</li><li>Redirecting users to malicious websites (Open Redirect)</li></ul><p><strong>Low</strong></p><ul><li>Any impact involving a publicly released CVE without a working PoC</li><li>Temporarily disabling user to access target site, such as locking up the victim from login, cookie bombing, etc.</li></ul>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Rewards are distributed according to the impact of the vulnerability based on the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\"\n  }, \"Immunefi Vulnerability Severity Classification System V2.2\"), \". This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\"), mdx(\"p\", null, \"All web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. All Low and Medium Smart Contract bug reports require a suggestion for a fix to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required.\"), mdx(\"p\", null, \"Critical smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USD 10 000\"), \". \"), mdx(\"p\", null, \"High smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USD 5 000\"), \". \"), mdx(\"p\", null, \"The following vulnerabilities are not eligible for a reward:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Aloe Blend is incompatible with fee-on-transfer tokens\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"On \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"deposit\"), \", the contract may slightly underestimate how many shares the depositor deserves. This is the case if and only if, during the next rebalance, the conditional on line 519 or 529 of \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"AloeBlend.sol\"), \" is true. Furthermore, the value forfeited by the depositor is less than 10% of yield earned since the last rebalance.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"On \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"withdraw\"), \" the contract may slightly underestimate how many tokens are owed to the withdrawer. This is the case if and only if, during the next rebalance, the conditional on line 519 or 529 of \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"AloeBlend.sol\"), \" is true. Furthermore, the value forfeited by the withdrawer is less than 10% of yield earned since the last rebalance.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Aloe Blend\\u2019s gas price oracle has insufficient precision to capture gas prices less than 1e-4 token units per gas unit. For example, USDC has 6 decimals, so gas price < 0.0001 USD/gasunit would not be recorded properly.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Aloe Blend\\u2019s gas price oracle is vulnerable to an attack described here, but it\\u2019s designed to be expensive to execute and has minimal economic benefit for the attacker.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Equations for implied volatility, position width, and limit order size are approximations. See here.\")), mdx(\"p\", null, \"Aloe Labs requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed is a W9 or W8-BEN. This includes information like name, address, and taxpayer identification number. The collection of this information will be done by the project team.\"), mdx(\"p\", null, \"Payouts are handled by the \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Aloe Labs\"), \" team directly and are denominated in USD. However, payouts are done in \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USDC and USDT\"), \", with the choice of the ratio at the discretion of the reporters. \"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Rewards are distributed according to the impact of the vulnerability based on the <a href=\"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\">Immunefi Vulnerability Severity Classification System V2.2</a>. This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.</p><p>All web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. All Low and Medium Smart Contract bug reports require a suggestion for a fix to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required.</p><p>Critical smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of <strong>USD 10 000</strong>. </p><p>High smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of <strong>USD 5 000</strong>. </p><p>The following vulnerabilities are not eligible for a reward:</p><ul><li>Aloe Blend is incompatible with fee-on-transfer tokens</li><li>On <code>deposit</code>, the contract may slightly underestimate how many shares the depositor deserves. This is the case if and only if, during the next rebalance, the conditional on line 519 or 529 of <code>AloeBlend.sol</code> is true. Furthermore, the value forfeited by the depositor is less than 10% of yield earned since the last rebalance.</li><li>On <code>withdraw</code> the contract may slightly underestimate how many tokens are owed to the withdrawer. This is the case if and only if, during the next rebalance, the conditional on line 519 or 529 of <code>AloeBlend.sol</code> is true. Furthermore, the value forfeited by the withdrawer is less than 10% of yield earned since the last rebalance.</li><li>Aloe Blend’s gas price oracle has insufficient precision to capture gas prices less than 1e-4 token units per gas unit. For example, USDC has 6 decimals, so gas price &lt; 0.0001 USD/gasunit would not be recorded properly.</li><li>Aloe Blend’s gas price oracle is vulnerable to an attack described here, but it’s designed to be expensive to execute and has minimal economic benefit for the attacker.</li><li>Equations for implied volatility, position width, and limit order size are approximations. See here.</li></ul><p>Aloe Labs requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed is a W9 or W8-BEN. This includes information like name, address, and taxpayer identification number. The collection of this information will be done by the project team.</p><p>Payouts are handled by the <strong>Aloe Labs</strong> team directly and are denominated in USD. However, payouts are done in <strong>USDC and USDT</strong>, with the choice of the ratio at the discretion of the reporters. </p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The following vulnerabilities are excluded from the rewards for this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that the reporter has already exploited themselves, leading to damage\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to leaked keys/credentials\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to privileged addresses (governance, strategist)\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts and Blockchain\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Incorrect data supplied by third party oracles\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Not to exclude oracle manipulation/flash loan attacks\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Basic economic governance attacks (e.g. 51% attack)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Lack of liquidity\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practice critiques\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Sybil attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Macro-economic trends such as just-in-time liquidity (this may reduce users\\u2019 yield, but it is not a bug in Aloe)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks on the protocols with which Aloe is integrated (Uniswap, Compound, Rari Fuse, Yearn, etc)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Loss/freezing of tokens other than the Blend pool\\u2019s primary tokens (\", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"token0\"), \" and \", mdx(\"inlineCode\", {\n    parentName: \"li\"\n  }, \"token1\"), \") unless the silo is specifically designed to collect them. For example, the Compound CToken Silos are not designed to collect COMP rewards, so COMP losses are out of scope\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Websites and Apps\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Theoretical vulnerabilities without any proof or demonstration\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring physical access to the victim device\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to the local network of the victim\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Reflected plain text injection ex: url parameters, path, etc.\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"This does not exclude reflected HTML injection with or without javascript\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"This does not exclude persistent plain text injection\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Self-XSS\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Captcha bypass using OCR without impact demonstration\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"CSRF with no state modifying security impact (ex: logout CSRF)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as \\u201Chttponly\\u201D) without demonstration of impact\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Server-side non-confidential information disclosure such as IPs, server names, and most stack traces\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Vulnerabilities used only to enumerate or confirm the existence of users or tenants\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Lack of SSL/TLS best practices\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"DDoS vulnerabilities\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Feature requests\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Issues related to the frontend without concrete impact and PoC\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practices issues without concrete impact and PoC\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Vulnerabilities primarily caused by browser/plugin defects\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Leakage of non sensitive api keys ex: etherscan, Infura, Alchemy, etc.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any vulnerability exploit requiring browser bugs for exploitation. ex: CSP bypass\")), mdx(\"p\", null, \"The following activities are prohibited by this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with pricing oracles or third party smart contracts\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attempting phishing or other social engineering attacks against our employees and/or customers\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any denial of service attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Automated testing of services that generates significant amounts of traffic\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Public disclosure of an unpatched vulnerability in an embargoed bounty\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The following vulnerabilities are excluded from the rewards for this bug bounty program:</p><ul><li>Attacks that the reporter has already exploited themselves, leading to damage</li><li>Attacks requiring access to leaked keys/credentials</li><li>Attacks requiring access to privileged addresses (governance, strategist)</li></ul><p><strong>Smart Contracts and Blockchain</strong></p><ul><li>Incorrect data supplied by third party oracles<ul><li>Not to exclude oracle manipulation/flash loan attacks</li></ul></li><li>Basic economic governance attacks (e.g. 51% attack)</li><li>Lack of liquidity</li><li>Best practice critiques</li><li>Sybil attacks</li><li>Macro-economic trends such as just-in-time liquidity (this may reduce users’ yield, but it is not a bug in Aloe)</li><li>Attacks on the protocols with which Aloe is integrated (Uniswap, Compound, Rari Fuse, Yearn, etc)</li><li>Loss/freezing of tokens other than the Blend pool’s primary tokens (<code>token0</code> and <code>token1</code>) unless the silo is specifically designed to collect them. For example, the Compound CToken Silos are not designed to collect COMP rewards, so COMP losses are out of scope</li></ul><p><strong>Websites and Apps</strong></p><ul><li>Theoretical vulnerabilities without any proof or demonstration</li><li>Attacks requiring physical access to the victim device</li><li>Attacks requiring access to the local network of the victim</li><li>Reflected plain text injection ex: url parameters, path, etc.<ul><li>This does not exclude reflected HTML injection with or without javascript</li><li>This does not exclude persistent plain text injection</li></ul></li><li>Self-XSS</li><li>Captcha bypass using OCR without impact demonstration</li><li>CSRF with no state modifying security impact (ex: logout CSRF)</li><li>Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact</li><li>Server-side non-confidential information disclosure such as IPs, server names, and most stack traces</li><li>Vulnerabilities used only to enumerate or confirm the existence of users or tenants</li><li>Vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows</li><li>Lack of SSL/TLS best practices</li><li>DDoS vulnerabilities</li><li>Feature requests</li><li>Issues related to the frontend without concrete impact and PoC</li><li>Best practices issues without concrete impact and PoC</li><li>Vulnerabilities primarily caused by browser/plugin defects</li><li>Leakage of non sensitive api keys ex: etherscan, Infura, Alchemy, etc.</li><li>Any vulnerability exploit requiring browser bugs for exploitation. ex: CSP bypass</li></ul><p>The following activities are prohibited by this bug bounty program:</p><ul><li>Any testing with mainnet or public testnet contracts; all testing should be done on private testnets</li><li>Any testing with pricing oracles or third party smart contracts</li><li>Attempting phishing or other social engineering attacks against our employees and/or customers</li><li>Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)</li><li>Any denial of service attacks</li><li>Automated testing of services that generates significant amounts of traffic</li><li>Public disclosure of an unpatched vulnerability in an embargoed bounty</li></ul>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}

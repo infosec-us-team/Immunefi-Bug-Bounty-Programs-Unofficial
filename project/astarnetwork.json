@@ -1,0 +1,440 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "astarnetwork",
+      "slug": "astarnetwork",
+      "project": "Astar Network",
+      "maxBounty": 1000000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/14P174mW7atHe0iqI2UmE8/b47c08fa562ebe74aaff6b179e371d00/Astar_Network_logo.jpeg",
+      "launchDate": "2022-05-31T10:30-06:00",
+      "updatedDate": "2022-10-13T13:57:29.049Z",
+      "kyc": true,
+      "rewards": [
+        {
+          "assetType": "blockchain_dlt",
+          "level": "critical",
+          "payout": "Up to USD $1,000,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "high",
+          "payout": "USD $50,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "medium",
+          "payout": "USD $10,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "low",
+          "payout": "USD $5,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "critical",
+          "payout": "USD $15,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "high",
+          "payout": "USD $7,500",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "medium",
+          "payout": "USD $2,500",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "low",
+          "payout": "USD $1,000",
+          "pocRequired": true
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "27sVtrJRQEFDettJ84lagu",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/AstarNetwork/Astar",
+          "description": "Mainnet Astar and Shiden (Included subfolders: runtime/)"
+        },
+        {
+          "id": "BweuVNy1epvMruM8SYBLA",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/AstarNetwork/astar-frame",
+          "description": "Astar pallets (Included subfolders: frame/ and precompiles/)"
+        },
+        {
+          "id": "6rJLhVifUyzzcnPytYfSrV",
+          "type": "websites_and_applications",
+          "url": "https://github.com/AstarNetwork/astar-apps",
+          "description": "Astar Portal (Included subfolders: src/)"
+        }
+      ],
+      "impacts": [
+        {
+          "id": "6ww2SIETgtRlfAusxtT9pw",
+          "title": "Network not being able to confirm new transactions (Total network shutdown)",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "2HZbmveYdaKv0D9O3c0Krp",
+          "title": "Unintended permanent chain split requiring hard fork (Network partition requiring hard fork)",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "4CrU3sw2leZfwvGw3AxZh0",
+          "title": "Direct loss of funds",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "1lTZ3iN9VQD08Nr8jIWxK5",
+          "title": "Permanent freezing of funds (fix requires hardfork)",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "7IGbyLHpVhIMeyaPLfNG97",
+          "title": "Transaction/consensus manipulation",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "IklDmMLN43hQHDIVWsGLG",
+          "title": "Unauthorized token minting",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "187MLJ5VClylXyUEcFqCL0",
+          "title": "Governance compromise",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "4zQ1oGtr7jcIKfHNgOTFvv",
+          "title": "Getting access to an identity that can lead to unauthorized access to system’s or user’s assets",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "5nZr7wkRJ3H3TaUh7eWRWe",
+          "title": "Empty or freeze the contract's holdings (e.g. economic attacks, flash loans, reentrancy, MEV, logic errors, integer over-/under-flow)",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "1VbSz8qyAatropbkYXsZfw",
+          "title": "Cryptographic flaws",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "FBaal2YDV6IqMLKD0EqCu",
+          "title": "Execute arbitrary system commands",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "6VtiXS0PYUF2APceizqAbn",
+          "title": "Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys(this does not include non-sensitive environment variables, open source code, or usernames)",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "WZjJbVhTF5J468ShzapVI",
+          "title": "Taking down the application/website",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "1kFU2D8zE4w1wyCyEqoAMF",
+          "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as: Changing registration information, commenting, voting, making trades, withdrawals, etc.",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "7c5AJr4rjYL5BR0oWncsAd",
+          "title": "Subdomain takeover without already-connected wallet interaction",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "4hCjnvv06wZ090mSoXd9aR",
+          "title": "Direct theft of user funds",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "5JgwpZqsdyo9OGZsQOBsoi",
+          "title": "Malicious interactions with an already-connected wallet such as: Modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "5dgzF56MepSIa1iQuw8BZL",
+          "title": "Unintended chain split (Network partition)",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "1pVzsqK9TyBTRM1ZGcFvJw",
+          "title": "Transient consensus failures",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "1i1kor9QuhUUS38JDy2kol",
+          "title": "Blocking or modifying processes for governance or users from performing their tasks",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "6PScT0cF5DDoL0TzaeMQYI",
+          "title": "Generating not handled on-chain errors - These actions can lead to blocking users or governance from accessing their assets or performing system functions",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "2m3qOeUI2FsIKfxA3RyiYX",
+          "title": "Token holders temporarily unable to transfer holdings",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "3boQMCY4p9FXH7u2gSJIIy",
+          "title": "Transient consensus failures",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "C0EX78T4ltvapJx00ZhD7",
+          "title": "Injecting/modifying the static content on the target application without Javascript (Persistent) such as: HTML injection without Javascript, replacing existing text with arbitrary text, arbitrary file uploads, etc.",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "3FzjSvnWuvlfXtUMjtIgFe",
+          "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as: Email or password of the victim, etc.",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "3yHjueTbvdbXOZqdTrc6BG",
+          "title": "Improperly disclosing confidential user information such as: Email address, phone number, physical address, etc.",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "7c5AJr4rjYL5BR0oWncsAd",
+          "title": "Subdomain takeover without already-connected wallet interaction",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "4PDkDkJDDBrZXUGRhQcpl8",
+          "title": "High compute consumption by validator/mining nodes",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        },
+        {
+          "id": "4PfsFGaVadKoOyLtqARiGL",
+          "title": "Attacks against thin clients",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        },
+        {
+          "id": "5JoQctwXx7FdLvXKV9wJAe",
+          "title": "DoS of greater than 30% of validator or miner nodes and does not shut down the network",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        },
+        {
+          "id": "1VYGr0623e11Gq8AOz0wWW",
+          "title": "Putting on-chain data into an unexpected state without interrupting the system or users from performing their tasks, e.g. generating redundant events, logs, etc",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        },
+        {
+          "id": "2eSDkqfvaczSn0ChP2Punz",
+          "title": "Block stuffing",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        },
+        {
+          "id": "2yQJTIYmmNx0jZtucNbYIh",
+          "title": "Changing non-sensitive details of other users (including modifying browser local storage) w/o already-connected wallet interaction and with up to one click of user interaction, such as: Changing the first/last name of user, enabling/disabling notifications",
+          "type": "websites_and_applications",
+          "severity": "medium"
+        },
+        {
+          "id": "7fhDnPtCyfyTpmjbSBJ3ll",
+          "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as: Reflected HTML injection, loading external site data",
+          "type": "websites_and_applications",
+          "severity": "medium"
+        },
+        {
+          "id": "2YliCsJdaHccfky5syWEDd",
+          "title": "Open Redirect in H2O production’s environment",
+          "type": "websites_and_applications",
+          "severity": "medium"
+        },
+        {
+          "id": "6D4aqdYfRqQF0k7evUsJ3G",
+          "title": "DoS of greater than 10% but less than 30% of validator or miner nodes and does not shut down the network",
+          "type": "blockchain_dlt",
+          "severity": "low"
+        },
+        {
+          "id": "5SjkomczFmzA7Ka5QqeA0q",
+          "title": "Underpricing transaction fees relative to computation time",
+          "type": "blockchain_dlt",
+          "severity": "low"
+        },
+        {
+          "id": "68ES5XjgwBZUm1Ut4dM5iI",
+          "title": "Changing details of other users (including modifying browser local storage) w/o already-connected wallet interaction and with significant user interaction such as: Iframing leading to modifying the backend/browser state (must demonstrate impact with PoC)",
+          "type": "websites_and_applications",
+          "severity": "low"
+        },
+        {
+          "id": "6KWBWCAzYxDVnLFOxMP2dE",
+          "title": "Any impact involving a publicly released CVE without a working PoC",
+          "type": "websites_and_applications",
+          "severity": "low"
+        },
+        {
+          "id": "qDR47dJac1R6KcVd8y8y5",
+          "title": "Taking over broken or expired outgoing links such as social media handles, etc.",
+          "type": "websites_and_applications",
+          "severity": "low"
+        },
+        {
+          "id": "1KFk5ni2RXRyZVb2HLZeKz",
+          "title": "Temporarily disabling user to access target site, such as: Locking up the victim from login, cookie bombing, etc.",
+          "type": "websites_and_applications",
+          "severity": "low"
+        }
+      ],
+      "programOverview": "Astar Network is the Smart Contract Hub for WASM + EVM on Polkadot.\n\nSince winning its Parachain auction in January 2022, Astar Network has become the top Parachain in the Polkadot ecosystem in terms of Total Value Locked and most Ethereum assets transferred over. Astar Network is the leading smart contract hub that connects the Polkadot ecosystem to Ethereum, Cosmos, and all major layer 1 blockchains. Astar Network supports dApps using multiple virtual machines—namely WASM and EVM—and offers the best technology solutions and financial incentives via its Build2Earn and Astar Incubation Program  ** for Web3 developers to build on top of a secure, scalable and interoperable blockchain.\n\nFor more information about Astar, please visit [https://astar.network/](https://astar.network/).",
+      "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. All High and Critical Blockchain bug reports require a PoC and a suggestion for a fix to be eligible for a reward. All Medium and Low Blockchain bug reports require a suggestion for a fix to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nCritical vulnerabilities involving a direct loss of user funds, double spending, or the minting of tokens are capped at 10% of the economic damage, taking primarily into consideration the funds at risk or the amount of tokens that can be minted but also branding and PR considerations, at the discretion of the team. However, there is a minimum reward of __USD 50 000__. Consensus manipulation or governance compromise results in the full __USD 1 000 000__.\n\nA reward can only be provided if:\n  - The bug wasn't reported before.\n  - You do not disclose the bug to other parties or publicity until it's fixed by the Astar dev Team.\n  - You didn't exploit the vulnerability or allow anyone else to profit from it.\n  - You report a bug without any additional conditions or threats.\n  - The investigation was NOT conducted with Ineligible methods or Prohibited Activities, defined in this document.\n  - You should reply to our additional questions regarding the reproduction of the reported bug (if they follow) within a reasonable time (up to 24h for Critical and up to 48hours for other levels of vulnerability)\n  - When duplicate bug reports occur, we reward only the first one if it's provided with enough information for reproduction.\n  - When multiple vulnerabilities are caused by one underlying issue, we will reward only the first reported.\n  - The vulnerability is found in the runtime pallet of Astar (no tests, or modules that aren’t in runtime, e.g. live, can be considered as vulnerability).\n\nAstar requires KYC and an invoice to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed are Name, Address, Email. The collection of this information will be done by the Astar team.\n\nPayouts are handled by the __Astar Network__ team directly and are denominated in USD. However, payouts are done in __SDN, ASTR and stable coins in Astar Network__, For Astar specific bugs: 100% USDC or other stable coins on Astar. For Shiden bugs: 75% SDN + 25% USDC other stable coins on Astar. (If the amount is huge, this ratio may be changed)",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n  - Spamming\n  - Any physical attacks against Astar property, or employees\n  - Phishing or other social engineering attacks against our Astar’s employees\n\n__Websites and Apps__\n  - Theoretical vulnerabilities without any proof or demonstration\n  - Attacks requiring physical access to the victim device\n  - Attacks requiring access to the local network of the victim\n  - Reflected plain text injection ex: url parameters, path, etc.\n    - This does not exclude reflected HTML injection with or without javascript\n    - This does not exclude persistent plain text injection\n  - Self-XSS\n  - Captcha bypass using OCR without impact demonstration\n  - CSRF with no state modifying security impact (ex: logout CSRF)\n  - Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n  - Server-side non-confidential information disclosure such as IPs, server names, and most stack traces\n  - Vulnerabilities used only to enumerate or confirm the existence of users or tenants\n  - Vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n  - Lack of SSL/TLS best practices\n  - DDoS vulnerabilities\n  - Feature requests\n  - Issues related to the frontend without concrete impact and PoC\n  - Best practices issues without concrete impact and PoC\n  - Vulnerabilities primarily caused by browser/plugin defects\n  - Leakage of non sensitive api keys ex: etherscan, Infura, Alchemy, etc.\n  - Any vulnerability exploit requiring browser bugs for exploitation. ex: CSP bypass\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": "The Shiden parachain on Kusama and the Astar parachain on Polkadot are both included in the assets-in-scope.\n\nAll source code can be found at [https://github.com/AstarNetwork/](https://github.com/AstarNetwork/). However, only those explicitly listed in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf an impact can be caused to any other asset managed by Astar Network that isn’t on this table but for which the impact is in the Impacts in Scope section, you are encouraged to submit it for the consideration of the project. This only applies to Critical impacts.",
+      "impactsBody": null,
+      "immunefiStandard": true,
+      "tags": {
+        "productType": [
+          "Crosschain Liquidity",
+          "L2",
+          "Staking"
+        ],
+        "projectType": [
+          "Defi"
+        ],
+        "ecosystem": [
+          "ETH",
+          "Polkadot"
+        ],
+        "programType": [
+          "Blockchain/DLT",
+          "Websites and Applications"
+        ],
+        "language": [
+          "JavaScript",
+          "Rust"
+        ]
+      },
+      "legacy": {
+        "technologies": [
+          "Websites and Applications",
+          "Blockchain/DLT"
+        ],
+        "blockchain_rewards": [
+          {
+            "level": "Critical",
+            "payout": "Up to USD $1,000,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $50,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $10,000"
+          },
+          {
+            "level": "Low",
+            "payout": "USD $5,000"
+          }
+        ],
+        "smartcontract_rewards": [],
+        "web_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $15,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $7,500"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $2,500"
+          },
+          {
+            "level": "Low",
+            "payout": "USD $1,000"
+          }
+        ]
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Astar Network is the Smart Contract Hub for WASM + EVM on Polkadot.\"), mdx(\"p\", null, \"Since winning its Parachain auction in January 2022, Astar Network has become the top Parachain in the Polkadot ecosystem in terms of Total Value Locked and most Ethereum assets transferred over. Astar Network is the leading smart contract hub that connects the Polkadot ecosystem to Ethereum, Cosmos, and all major layer 1 blockchains. Astar Network supports dApps using multiple virtual machines\\u2014namely WASM and EVM\\u2014and offers the best technology solutions and financial incentives via its Build2Earn and Astar Incubation Program  ** for Web3 developers to build on top of a secure, scalable and interoperable blockchain.\"), mdx(\"p\", null, \"For more information about Astar, please visit \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://astar.network/\"\n  }, \"https://astar.network/\"), \".\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Astar Network is the Smart Contract Hub for WASM + EVM on Polkadot.</p><p>Since winning its Parachain auction in January 2022, Astar Network has become the top Parachain in the Polkadot ecosystem in terms of Total Value Locked and most Ethereum assets transferred over. Astar Network is the leading smart contract hub that connects the Polkadot ecosystem to Ethereum, Cosmos, and all major layer 1 blockchains. Astar Network supports dApps using multiple virtual machines—namely WASM and EVM—and offers the best technology solutions and financial incentives via its Build2Earn and Astar Incubation Program  ** for Web3 developers to build on top of a secure, scalable and interoperable blockchain.</p><p>For more information about Astar, please visit <a href=\"https://astar.network/\">https://astar.network/</a>.</p>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.</p>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Rewards are distributed according to the impact of the vulnerability based on the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\"\n  }, \"Immunefi Vulnerability Severity Classification System V2.2\"), \". This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\"), mdx(\"p\", null, \"All web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. All High and Critical Blockchain bug reports require a PoC and a suggestion for a fix to be eligible for a reward. All Medium and Low Blockchain bug reports require a suggestion for a fix to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required.\"), mdx(\"p\", null, \"Critical vulnerabilities involving a direct loss of user funds, double spending, or the minting of tokens are capped at 10% of the economic damage, taking primarily into consideration the funds at risk or the amount of tokens that can be minted but also branding and PR considerations, at the discretion of the team. However, there is a minimum reward of \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USD 50 000\"), \". Consensus manipulation or governance compromise results in the full \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USD 1 000 000\"), \".\"), mdx(\"p\", null, \"A reward can only be provided if:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"The bug wasn't reported before.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"You do not disclose the bug to other parties or publicity until it's fixed by the Astar dev Team.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"You didn't exploit the vulnerability or allow anyone else to profit from it.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"You report a bug without any additional conditions or threats.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"The investigation was NOT conducted with Ineligible methods or Prohibited Activities, defined in this document.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"You should reply to our additional questions regarding the reproduction of the reported bug (if they follow) within a reasonable time (up to 24h for Critical and up to 48hours for other levels of vulnerability)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"When duplicate bug reports occur, we reward only the first one if it's provided with enough information for reproduction.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"When multiple vulnerabilities are caused by one underlying issue, we will reward only the first reported.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"The vulnerability is found in the runtime pallet of Astar (no tests, or modules that aren\\u2019t in runtime, e.g. live, can be considered as vulnerability).\")), mdx(\"p\", null, \"Astar requires KYC and an invoice to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed are Name, Address, Email. The collection of this information will be done by the Astar team.\"), mdx(\"p\", null, \"Payouts are handled by the \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Astar Network\"), \" team directly and are denominated in USD. However, payouts are done in \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"SDN, ASTR and stable coins in Astar Network\"), \", For Astar specific bugs: 100% USDC or other stable coins on Astar. For Shiden bugs: 75% SDN + 25% USDC other stable coins on Astar. (If the amount is huge, this ratio may be changed)\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Rewards are distributed according to the impact of the vulnerability based on the <a href=\"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\">Immunefi Vulnerability Severity Classification System V2.2</a>. This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.</p><p>All web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. All High and Critical Blockchain bug reports require a PoC and a suggestion for a fix to be eligible for a reward. All Medium and Low Blockchain bug reports require a suggestion for a fix to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required.</p><p>Critical vulnerabilities involving a direct loss of user funds, double spending, or the minting of tokens are capped at 10% of the economic damage, taking primarily into consideration the funds at risk or the amount of tokens that can be minted but also branding and PR considerations, at the discretion of the team. However, there is a minimum reward of <strong>USD 50 000</strong>. Consensus manipulation or governance compromise results in the full <strong>USD 1 000 000</strong>.</p><p>A reward can only be provided if:</p><ul><li>The bug wasn&#x27;t reported before.</li><li>You do not disclose the bug to other parties or publicity until it&#x27;s fixed by the Astar dev Team.</li><li>You didn&#x27;t exploit the vulnerability or allow anyone else to profit from it.</li><li>You report a bug without any additional conditions or threats.</li><li>The investigation was NOT conducted with Ineligible methods or Prohibited Activities, defined in this document.</li><li>You should reply to our additional questions regarding the reproduction of the reported bug (if they follow) within a reasonable time (up to 24h for Critical and up to 48hours for other levels of vulnerability)</li><li>When duplicate bug reports occur, we reward only the first one if it&#x27;s provided with enough information for reproduction.</li><li>When multiple vulnerabilities are caused by one underlying issue, we will reward only the first reported.</li><li>The vulnerability is found in the runtime pallet of Astar (no tests, or modules that aren’t in runtime, e.g. live, can be considered as vulnerability).</li></ul><p>Astar requires KYC and an invoice to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed are Name, Address, Email. The collection of this information will be done by the Astar team.</p><p>Payouts are handled by the <strong>Astar Network</strong> team directly and are denominated in USD. However, payouts are done in <strong>SDN, ASTR and stable coins in Astar Network</strong>, For Astar specific bugs: 100% USDC or other stable coins on Astar. For Shiden bugs: 75% SDN + 25% USDC other stable coins on Astar. (If the amount is huge, this ratio may be changed)</p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The following vulnerabilities are excluded from the rewards for this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that the reporter has already exploited themselves, leading to damage\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to leaked keys/credentials\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to privileged addresses (governance, strategist)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Spamming\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any physical attacks against Astar property, or employees\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Phishing or other social engineering attacks against our Astar\\u2019s employees\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Websites and Apps\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Theoretical vulnerabilities without any proof or demonstration\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring physical access to the victim device\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to the local network of the victim\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Reflected plain text injection ex: url parameters, path, etc.\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"This does not exclude reflected HTML injection with or without javascript\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"This does not exclude persistent plain text injection\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Self-XSS\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Captcha bypass using OCR without impact demonstration\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"CSRF with no state modifying security impact (ex: logout CSRF)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as \\u201Chttponly\\u201D) without demonstration of impact\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Server-side non-confidential information disclosure such as IPs, server names, and most stack traces\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Vulnerabilities used only to enumerate or confirm the existence of users or tenants\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Lack of SSL/TLS best practices\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"DDoS vulnerabilities\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Feature requests\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Issues related to the frontend without concrete impact and PoC\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practices issues without concrete impact and PoC\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Vulnerabilities primarily caused by browser/plugin defects\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Leakage of non sensitive api keys ex: etherscan, Infura, Alchemy, etc.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any vulnerability exploit requiring browser bugs for exploitation. ex: CSP bypass\")), mdx(\"p\", null, \"The following activities are prohibited by this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with pricing oracles or third party smart contracts\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attempting phishing or other social engineering attacks against our employees and/or customers\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any denial of service attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Automated testing of services that generates significant amounts of traffic\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Public disclosure of an unpatched vulnerability in an embargoed bounty\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The following vulnerabilities are excluded from the rewards for this bug bounty program:</p><ul><li>Attacks that the reporter has already exploited themselves, leading to damage</li><li>Attacks requiring access to leaked keys/credentials</li><li>Attacks requiring access to privileged addresses (governance, strategist)</li><li>Spamming</li><li>Any physical attacks against Astar property, or employees</li><li>Phishing or other social engineering attacks against our Astar’s employees</li></ul><p><strong>Websites and Apps</strong></p><ul><li>Theoretical vulnerabilities without any proof or demonstration</li><li>Attacks requiring physical access to the victim device</li><li>Attacks requiring access to the local network of the victim</li><li>Reflected plain text injection ex: url parameters, path, etc.<ul><li>This does not exclude reflected HTML injection with or without javascript</li><li>This does not exclude persistent plain text injection</li></ul></li><li>Self-XSS</li><li>Captcha bypass using OCR without impact demonstration</li><li>CSRF with no state modifying security impact (ex: logout CSRF)</li><li>Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact</li><li>Server-side non-confidential information disclosure such as IPs, server names, and most stack traces</li><li>Vulnerabilities used only to enumerate or confirm the existence of users or tenants</li><li>Vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows</li><li>Lack of SSL/TLS best practices</li><li>DDoS vulnerabilities</li><li>Feature requests</li><li>Issues related to the frontend without concrete impact and PoC</li><li>Best practices issues without concrete impact and PoC</li><li>Vulnerabilities primarily caused by browser/plugin defects</li><li>Leakage of non sensitive api keys ex: etherscan, Infura, Alchemy, etc.</li><li>Any vulnerability exploit requiring browser bugs for exploitation. ex: CSP bypass</li></ul><p>The following activities are prohibited by this bug bounty program:</p><ul><li>Any testing with mainnet or public testnet contracts; all testing should be done on private testnets</li><li>Any testing with pricing oracles or third party smart contracts</li><li>Attempting phishing or other social engineering attacks against our employees and/or customers</li><li>Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)</li><li>Any denial of service attacks</li><li>Automated testing of services that generates significant amounts of traffic</li><li>Public disclosure of an unpatched vulnerability in an embargoed bounty</li></ul>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The Shiden parachain on Kusama and the Astar parachain on Polkadot are both included in the assets-in-scope.\"), mdx(\"p\", null, \"All source code can be found at \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/AstarNetwork/\"\n  }, \"https://github.com/AstarNetwork/\"), \". However, only those explicitly listed in the Assets in Scope table are considered as in-scope of the bug bounty program.\"), mdx(\"p\", null, \"If an impact can be caused to any other asset managed by Astar Network that isn\\u2019t on this table but for which the impact is in the Impacts in Scope section, you are encouraged to submit it for the consideration of the project. This only applies to Critical impacts.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The Shiden parachain on Kusama and the Astar parachain on Polkadot are both included in the assets-in-scope.</p><p>All source code can be found at <a href=\"https://github.com/AstarNetwork/\">https://github.com/AstarNetwork/</a>. However, only those explicitly listed in the Assets in Scope table are considered as in-scope of the bug bounty program.</p><p>If an impact can be caused to any other asset managed by Astar Network that isn’t on this table but for which the impact is in the Impacts in Scope section, you are encouraged to submit it for the consideration of the project. This only applies to Critical impacts.</p>",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}

@@ -1,0 +1,205 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "idlefinance",
+      "slug": "idlefinance",
+      "project": "Idle Finance",
+      "maxBounty": 100000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5VrN6pAefb3vpdjFPdDR4m/94d1a5806d123f8d9a26e7726b09ae71/Idle.png",
+      "launchDate": "2021-03-25T00:00-07:00",
+      "updatedDate": "2022-12-02T12:31:06.887Z",
+      "kyc": false,
+      "rewards": [
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "Up to USD $100,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "high",
+          "payout": "Up to USD $50,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "Up to USD $10,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "low",
+          "payout": "Up to USD $5,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "none",
+          "payout": "USD $1,000",
+          "pocRequired": false
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "15QmZWJqYsLvjAClv8qP10",
+          "type": "smart_contract",
+          "url": "https://docs.idle.finance/developers/best-yield/deployed-contracts#best-yield-strategy-v4",
+          "description": "Smart Contract"
+        }
+      ],
+      "impacts": [
+        {
+          "id": "5hTKRk9BW4evR8EbAIviQm",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "7KnU2B7m4Uiw0Zq0yvCqxt",
+          "title": "Permanent freezing of funds",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "qrnATW4i02iLF6CJMaLCY",
+          "title": "Miner-extractable value (MEV) if can freeze funds or cause protocol insolvency",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "3wbxLGCStKr2O5WqYXk3zS",
+          "title": "Protocol insolvency",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "3zvEgHm25i75TntTzXLWrx",
+          "title": "Theft of unclaimed yield",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "4fi9Mwu8OCcR8eLYbpHcPb",
+          "title": "Permanent freezing of unclaimed yield",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "1raDj57cLNQu3l5crzFHuS",
+          "title": "Temporary freezing of funds",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "FXabdALQS2FBvKbgRsmnM",
+          "title": "Smart contract unable to operate due to lack of token funds",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "6u9kXZ8yXb4sXV5SLs4MQE",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "01SvJD0vpOAJsHKmkGtBhp",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "type": "smart_contract",
+          "severity": "low"
+        }
+      ],
+      "programOverview": "Idle is a decentralized protocol dedicated to bringing automatic asset\nallocation and aggregation to the interest-bearing tokens economy. This\nprotocol bundles stable crypto-assets (stablecoins) into tokenized baskets that\nare programmed to automatically rebalance based on different management logics.\n\nThe Idle Protocol employs a strategy-token system. Every allocation strategy\nhas its own set of tokens that represent a pool of yield-generating assets\nspread across different DeFi protocols. These tokens represent the investor’s\nproportional ownership of the whole pool and the interest accrued over\ntime. This issuing method is similar to traditional mutual funds shares\nstructure, and it allows Idle to be non-custodial.\n\nCurrently, Idle uses this allocation strategy:\n\n- **Best-Yield**: this strategy combines multiple money markets to\nautomatically provide the highest interest rates, beating the best traditional\nofferings across interest-bearing tokens and DeFi protocols.\n\nConsequently, users can hold IdleTokens related to a specific strategy and a\nspecific stablecoin.\n\nIdle aims to unlock the power of decentralized finance for everyone by a single\nvehicle that automatically rebalances between underlying providers to always\nmaintain the highest rates or the optimal risk/return allocation.\n\nThe bug bounty program is focused around the Idle protocol V4 smart contracts\nand the prevention of loss of user funds. It was created due to an <Link href=\"https://snapshot.org/#/idlefinance.eth/proposal/QmakuMytvpec6TTThEkBr6M4YGKfCssFcQyAa8LcbB9fff\">approved poll</Link> within the Idle community.",
+      "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the\nfollowing types:\n\n**Smart Contracts/Blockchain:**\n\n- Re-entrancy\n- Logic errors\n  - including user authentication errors\n- Solidity/EVM details not considered\n  - including integer over-/under-flow\n  - including unhandled exceptions\n- Trusting trust/dependency vulnerabilities\n  - including composability vulnerabilities\n- Oracle failure/manipulation\n- Novel governance attacks\n- Economic/financial attacks\n  - including flash loan attacks\n- Congestion and scalability\n  - including running out of gas\n  - including block stuffing\n  - including susceptibility to frontrunning\n- Consensus failures\n- Cryptography problems\n  - Signature malleability\n  - Susceptibility to replay attacks\n  - Weak randomness\n  - Weak encryption\n- Susceptibility to block timestamp manipulation\n- Missing access controls / unprotected internal or debugging interfaces",
+      "rewardsBody": "\nRewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System 2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nThe final reward for critical bounty payouts is capped at 10% of the funds at\nrisk based on the vulnerability reported.\n\nTheft of yield or interest is considered as Medium but may be considered High depending on the amount of funds at risk.\n\nBest practices critiques are not accepted under this program. This None/Very Low \nlevel is for bugs that may be considered “Low” but have an even lower impact level.\n\nThe likelihood of exploitability is also taken into consideration in the\ndetermination of the final payout amount based on the severity of the bug\nreported according to the table below:\n\n| | Very Low/None | Low | Medium | High | Critical |\n| :-- | :-- | :-- | :-- | :-- | :-: |\n| Almost Certain | $1,000 | $5,000 | $10,000 | $50,000 | $100,000 |\n| Likely | $500 | $1,000 | $5,000 | $10,000 | $50,000 | \n| Possible | $100 | $500 | $1,000 | $5,000 | $10,000 |\n| Unlikely  | $100 | $100 | $500 | $1,000 | $5,000 |\n| Almost Possible | $100 | $100 | $100 | $500 | $1,000 |\n\nPayouts are handled by **Idle Finance** governance directly and are denominated\nin **USD**. Payouts under $10,000 are done in **USDC**. When payouts are over\n$10,000, the first $10,000 is paid in **USDC** and then the rest are paid in\n**IDLE** up to the total of $100 000.",
+      "outOfScopeAndRules": "**The following vulnerabilities are excluded from the rewards for this bug\nbounty program:**\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n\n**The following activities are prohibited by bug bounty program:**\n\n- Any testing with mainnet or public testnet contracts; all testing should be\n  done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees\n  and/or customers\n- Any testing with third party systems and applications (e.g. browser\n  extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": "Governance and Utilities contracts are not covered under this bug bounty program.\n",
+      "impactsBody": null,
+      "immunefiStandard": null,
+      "tags": {
+        "productType": [
+          "Yield Aggregator"
+        ],
+        "projectType": [
+          "Defi"
+        ],
+        "ecosystem": [
+          "ETH"
+        ],
+        "programType": [
+          "Smart Contract"
+        ],
+        "language": [
+          "Solidity"
+        ]
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract"
+        ],
+        "blockchain_rewards": [],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "Up to USD $100,000"
+          },
+          {
+            "level": "High",
+            "payout": "Up to USD $50,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "Up to USD $10,000"
+          },
+          {
+            "level": "Low",
+            "payout": "Up to USD $5,000"
+          },
+          {
+            "level": "Informational",
+            "payout": "USD $1,000"
+          }
+        ],
+        "web_rewards": []
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Idle is a decentralized protocol dedicated to bringing automatic asset\\nallocation and aggregation to the interest-bearing tokens economy. This\\nprotocol bundles stable crypto-assets (stablecoins) into tokenized baskets that\\nare programmed to automatically rebalance based on different management logics.\"), mdx(\"p\", null, \"The Idle Protocol employs a strategy-token system. Every allocation strategy\\nhas its own set of tokens that represent a pool of yield-generating assets\\nspread across different DeFi protocols. These tokens represent the investor\\u2019s\\nproportional ownership of the whole pool and the interest accrued over\\ntime. This issuing method is similar to traditional mutual funds shares\\nstructure, and it allows Idle to be non-custodial.\"), mdx(\"p\", null, \"Currently, Idle uses this allocation strategy:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"strong\", {\n    parentName: \"li\"\n  }, \"Best-Yield\"), \": this strategy combines multiple money markets to\\nautomatically provide the highest interest rates, beating the best traditional\\nofferings across interest-bearing tokens and DeFi protocols.\")), mdx(\"p\", null, \"Consequently, users can hold IdleTokens related to a specific strategy and a\\nspecific stablecoin.\"), mdx(\"p\", null, \"Idle aims to unlock the power of decentralized finance for everyone by a single\\nvehicle that automatically rebalances between underlying providers to always\\nmaintain the highest rates or the optimal risk/return allocation.\"), mdx(\"p\", null, \"The bug bounty program is focused around the Idle protocol V4 smart contracts\\nand the prevention of loss of user funds. It was created due to an \", mdx(Link, {\n    href: \"https://snapshot.org/#/idlefinance.eth/proposal/QmakuMytvpec6TTThEkBr6M4YGKfCssFcQyAa8LcbB9fff\",\n    mdxType: \"Link\"\n  }, \"approved poll\"), \" within the Idle community.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Idle is a decentralized protocol dedicated to bringing automatic asset\nallocation and aggregation to the interest-bearing tokens economy. This\nprotocol bundles stable crypto-assets (stablecoins) into tokenized baskets that\nare programmed to automatically rebalance based on different management logics.</p><p>The Idle Protocol employs a strategy-token system. Every allocation strategy\nhas its own set of tokens that represent a pool of yield-generating assets\nspread across different DeFi protocols. These tokens represent the investor’s\nproportional ownership of the whole pool and the interest accrued over\ntime. This issuing method is similar to traditional mutual funds shares\nstructure, and it allows Idle to be non-custodial.</p><p>Currently, Idle uses this allocation strategy:</p><ul><li><strong>Best-Yield</strong>: this strategy combines multiple money markets to\nautomatically provide the highest interest rates, beating the best traditional\nofferings across interest-bearing tokens and DeFi protocols.</li></ul><p>Consequently, users can hold IdleTokens related to a specific strategy and a\nspecific stablecoin.</p><p>Idle aims to unlock the power of decentralized finance for everyone by a single\nvehicle that automatically rebalances between underlying providers to always\nmaintain the highest rates or the optimal risk/return allocation.</p><p>The bug bounty program is focused around the Idle protocol V4 smart contracts\nand the prevention of loss of user funds. It was created due to an <a href=\"https://snapshot.org/?utm_source=immunefi#/idlefinance.eth/proposal/QmakuMytvpec6TTThEkBr6M4YGKfCssFcQyAa8LcbB9fff\" target=\"_blank\" rel=\"noopener noreferrer\">approved poll</a> within the Idle community.</p>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"We are especially interested in receiving and rewarding vulnerabilities of the\\nfollowing types:\"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts/Blockchain:\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Re-entrancy\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Logic errors\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including user authentication errors\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Solidity/EVM details not considered\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including integer over-/under-flow\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including unhandled exceptions\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Trusting trust/dependency vulnerabilities\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including composability vulnerabilities\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Oracle failure/manipulation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Novel governance attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Economic/financial attacks\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including flash loan attacks\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Congestion and scalability\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including running out of gas\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including block stuffing\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including susceptibility to frontrunning\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Consensus failures\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Cryptography problems\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Signature malleability\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Susceptibility to replay attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Weak randomness\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Weak encryption\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Susceptibility to block timestamp manipulation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Missing access controls / unprotected internal or debugging interfaces\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>We are especially interested in receiving and rewarding vulnerabilities of the\nfollowing types:</p><p><strong>Smart Contracts/Blockchain:</strong></p><ul><li>Re-entrancy</li><li>Logic errors<ul><li>including user authentication errors</li></ul></li><li>Solidity/EVM details not considered<ul><li>including integer over-/under-flow</li><li>including unhandled exceptions</li></ul></li><li>Trusting trust/dependency vulnerabilities<ul><li>including composability vulnerabilities</li></ul></li><li>Oracle failure/manipulation</li><li>Novel governance attacks</li><li>Economic/financial attacks<ul><li>including flash loan attacks</li></ul></li><li>Congestion and scalability<ul><li>including running out of gas</li><li>including block stuffing</li><li>including susceptibility to frontrunning</li></ul></li><li>Consensus failures</li><li>Cryptography problems<ul><li>Signature malleability</li><li>Susceptibility to replay attacks</li><li>Weak randomness</li><li>Weak encryption</li></ul></li><li>Susceptibility to block timestamp manipulation</li><li>Missing access controls / unprotected internal or debugging interfaces</li></ul>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Rewards are distributed according to the impact of the vulnerability based on the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/\"\n  }, \"Immunefi Vulnerability Severity Classification System 2.2\"), \". This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \"), mdx(\"p\", null, \"The final reward for critical bounty payouts is capped at 10% of the funds at\\nrisk based on the vulnerability reported.\"), mdx(\"p\", null, \"Theft of yield or interest is considered as Medium but may be considered High depending on the amount of funds at risk.\"), mdx(\"p\", null, \"Best practices critiques are not accepted under this program. This None/Very Low\\nlevel is for bugs that may be considered \\u201CLow\\u201D but have an even lower impact level.\"), mdx(\"p\", null, \"The likelihood of exploitability is also taken into consideration in the\\ndetermination of the final payout amount based on the severity of the bug\\nreported according to the table below:\"), mdx(\"table\", null, mdx(\"thead\", {\n    parentName: \"table\"\n  }, mdx(\"tr\", {\n    parentName: \"thead\"\n  }, mdx(\"th\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }), mdx(\"th\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"Very Low/None\"), mdx(\"th\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"Low\"), mdx(\"th\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"Medium\"), mdx(\"th\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"High\"), mdx(\"th\", {\n    parentName: \"tr\",\n    \"align\": \"center\"\n  }, \"Critical\"))), mdx(\"tbody\", {\n    parentName: \"table\"\n  }, mdx(\"tr\", {\n    parentName: \"tbody\"\n  }, mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"Almost Certain\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$1,000\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$5,000\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$10,000\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$50,000\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"center\"\n  }, \"$100,000\")), mdx(\"tr\", {\n    parentName: \"tbody\"\n  }, mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"Likely\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$500\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$1,000\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$5,000\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$10,000\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"center\"\n  }, \"$50,000\")), mdx(\"tr\", {\n    parentName: \"tbody\"\n  }, mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"Possible\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$100\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$500\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$1,000\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$5,000\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"center\"\n  }, \"$10,000\")), mdx(\"tr\", {\n    parentName: \"tbody\"\n  }, mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"Unlikely\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$100\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$100\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$500\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$1,000\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"center\"\n  }, \"$5,000\")), mdx(\"tr\", {\n    parentName: \"tbody\"\n  }, mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"Almost Possible\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$100\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$100\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$100\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"$500\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"center\"\n  }, \"$1,000\")))), mdx(\"p\", null, \"Payouts are handled by \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Idle Finance\"), \" governance directly and are denominated\\nin \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USD\"), \". Payouts under $10,000 are done in \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USDC\"), \". When payouts are over\\n$10,000, the first $10,000 is paid in \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USDC\"), \" and then the rest are paid in\\n\", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"IDLE\"), \" up to the total of $100 000.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Rewards are distributed according to the impact of the vulnerability based on the <a href=\"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/\">Immunefi Vulnerability Severity Classification System 2.2</a>. This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. </p><p>The final reward for critical bounty payouts is capped at 10% of the funds at\nrisk based on the vulnerability reported.</p><p>Theft of yield or interest is considered as Medium but may be considered High depending on the amount of funds at risk.</p><p>Best practices critiques are not accepted under this program. This None/Very Low\nlevel is for bugs that may be considered “Low” but have an even lower impact level.</p><p>The likelihood of exploitability is also taken into consideration in the\ndetermination of the final payout amount based on the severity of the bug\nreported according to the table below:</p><table><thead><tr><th align=\"left\"></th><th align=\"left\">Very Low/None</th><th align=\"left\">Low</th><th align=\"left\">Medium</th><th align=\"left\">High</th><th align=\"center\">Critical</th></tr></thead><tbody><tr><td align=\"left\">Almost Certain</td><td align=\"left\">$1,000</td><td align=\"left\">$5,000</td><td align=\"left\">$10,000</td><td align=\"left\">$50,000</td><td align=\"center\">$100,000</td></tr><tr><td align=\"left\">Likely</td><td align=\"left\">$500</td><td align=\"left\">$1,000</td><td align=\"left\">$5,000</td><td align=\"left\">$10,000</td><td align=\"center\">$50,000</td></tr><tr><td align=\"left\">Possible</td><td align=\"left\">$100</td><td align=\"left\">$500</td><td align=\"left\">$1,000</td><td align=\"left\">$5,000</td><td align=\"center\">$10,000</td></tr><tr><td align=\"left\">Unlikely</td><td align=\"left\">$100</td><td align=\"left\">$100</td><td align=\"left\">$500</td><td align=\"left\">$1,000</td><td align=\"center\">$5,000</td></tr><tr><td align=\"left\">Almost Possible</td><td align=\"left\">$100</td><td align=\"left\">$100</td><td align=\"left\">$100</td><td align=\"left\">$500</td><td align=\"center\">$1,000</td></tr></tbody></table><p>Payouts are handled by <strong>Idle Finance</strong> governance directly and are denominated\nin <strong>USD</strong>. Payouts under $10,000 are done in <strong>USDC</strong>. When payouts are over\n$10,000, the first $10,000 is paid in <strong>USDC</strong> and then the rest are paid in\n<strong>IDLE</strong> up to the total of $100 000.</p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"The following vulnerabilities are excluded from the rewards for this bug\\nbounty program:\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that the reporter has already exploited themselves, leading to damage\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to leaked keys/credentials\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to privileged addresses (governance, strategist)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Incorrect data supplied by third party oracles\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Not to exclude oracle manipulation/flash loan attacks\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Basic economic governance attacks (e.g. 51% attack)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Lack of liquidity\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practice critiques\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Sybil attacks\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"The following activities are prohibited by bug bounty program:\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with mainnet or public testnet contracts; all testing should be\\ndone on private testnets\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with pricing oracles or third party smart contracts\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attempting phishing or other social engineering attacks against our employees\\nand/or customers\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with third party systems and applications (e.g. browser\\nextensions) as well as websites (e.g. SSO providers, advertising networks)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any denial of service attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Automated testing of services that generates significant amounts of traffic\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Public disclosure of an unpatched vulnerability in an embargoed bounty\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p><strong>The following vulnerabilities are excluded from the rewards for this bug\nbounty program:</strong></p><ul><li>Attacks that the reporter has already exploited themselves, leading to damage</li><li>Attacks requiring access to leaked keys/credentials</li><li>Attacks requiring access to privileged addresses (governance, strategist)</li><li>Incorrect data supplied by third party oracles<ul><li>Not to exclude oracle manipulation/flash loan attacks</li></ul></li><li>Basic economic governance attacks (e.g. 51% attack)</li><li>Lack of liquidity</li><li>Best practice critiques</li><li>Sybil attacks</li></ul><p><strong>The following activities are prohibited by bug bounty program:</strong></p><ul><li>Any testing with mainnet or public testnet contracts; all testing should be\ndone on private testnets</li><li>Any testing with pricing oracles or third party smart contracts</li><li>Attempting phishing or other social engineering attacks against our employees\nand/or customers</li><li>Any testing with third party systems and applications (e.g. browser\nextensions) as well as websites (e.g. SSO providers, advertising networks)</li><li>Any denial of service attacks</li><li>Automated testing of services that generates significant amounts of traffic</li><li>Public disclosure of an unpatched vulnerability in an embargoed bounty</li></ul>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Governance and Utilities contracts are not covered under this bug bounty program.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Governance and Utilities contracts are not covered under this bug bounty program.</p>",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}

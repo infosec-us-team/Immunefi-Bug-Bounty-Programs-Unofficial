@@ -1,0 +1,185 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "apecoinmainnet",
+      "slug": "apecoinmainnet",
+      "project": "ApeCoin Mainnet",
+      "maxBounty": 3500000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2Pv5v8qy7B5xVa3zU0lIfn/1c5059f2aed9dcd70c66b9500fc31bbf/ApeCoin_logo.jpeg",
+      "launchDate": "2022-12-07T01:00-05:00",
+      "updatedDate": "2022-12-13T18:14:06.281Z",
+      "kyc": true,
+      "rewards": [
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "USD $100,000 to USD $3,500,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "high",
+          "payout": "USD $10,000 to USD $50,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "USD $2,500",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "low",
+          "payout": "USD $1,000",
+          "pocRequired": false
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "6e35GKxLvb8FL0gh7ghWfb",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x5954aB967Bc958940b7EB73ee84797Dc8a2AFbb9",
+          "description": "Apecoin Staking"
+        }
+      ],
+      "impacts": [
+        {
+          "id": "7yToSFTMa533CRDuvVHZuI",
+          "title": "Direct theft of any user deposited ApeCoin or unclaimed staking yield, whether at-rest or in-motion",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "2L1mnFIw6cmZg5hFT5yOrH",
+          "title": "Permanent freezing of user deposited ApeCoin or unclaimed staking yield above $100,000 in value",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "7hEJnzZKKRDXhReVgAkqCD",
+          "title": "Permanent freezing of user deposited ApeCoin or unclaimed staking yield below $100,000 in value",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "7IHjsonHWIS3pHkLGy9PwU",
+          "title": "Temporary freezing of user deposited ApeCoin for at least 1 day",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "7vVjvAhxLGQKi6iny7J7xQ",
+          "title": "Staking in the BAYC pool, MAYC pool, or paired pool without ownership of the required NFTs",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "28ebiF6Mqa4HYdyyOjdZRv",
+          "title": "Staking more than 10,094 per BAYC or 2,042 per MAYC in the BAYC pool, MAYC pool, or paired pool",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "37OYcrQRwaVAMfZFZGrGNf",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "6GRWV35pBIuM8ZOq7ZS4xi",
+          "title": "Minor accounting miscalculations for staking accrual",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "74PMlmIxQ9ZMT0zKtbDuGW",
+          "title": "Smart contract fails to deliver promised returns, but doesn’t lose value",
+          "type": "smart_contract",
+          "severity": "low"
+        }
+      ],
+      "programOverview": "ApeCoin is an ERC-20 governance and utility token used within the APE ecosystem to empower a decentralized community building at the forefront of web3. It allows its holders to participate in the ApeCoin DAO and provides access to exclusive games, merch, events, services, and more.\n\nEarlier this year, the DAO voted to launch a staking system to incentivize engagement within the ecosystem. ApeCoin staking will allow users to stake their APE in various pools to gain rewards. Anyone holding ApeCoin can participate, however additional pools are available to holders who own NFTs within the Bored Ape Yacht Club ecosystem.\n\nFor more information about Apecoin and staking, please visit [https://apecoin.com](https://apecoin.com/) and read [AIP-21](https://forum.apecoin.com/t/aip-21-staking-process-with-caps-1x-drop-process/5074) and [AIP-22](https://forum.apecoin.com/t/aip-22-staking-pool-allocation-reloaded-ecosystem-fund-allocation/5071).\n\nThe program will continue for the life of the staking system (3 years).\n",
+      "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nCritical smart contract vulnerabilities are capped at 10% of economic damage, primarily based on value at risk, but also PR and branding aspects. However, there is a minimum reward for critical vulnerabilities of __USD 100 000__. \n\nHigh smart contract vulnerabilities are capped at 100% of economic damage, primarily based on value at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward for high vulnerabilities of __USD 10 000__. \n\nAll Critical and High Smart Contract bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nAll vulnerabilities marked acknowledged and accepted in the [Halborn security review](https://drive.google.com/file/d/1ppauv4me-WWWKIwWUUiWP32vtisXcKKg/view?usp=share_link) are not eligible for a reward.\n\nApeCoin requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. Recipients must provide their name, certificate of incorporation (if a company), physical address, email address, ethereum address to receive the funds, and confirmation on whether the ethereum address is at an exchange or other custodian, or owned directly by the recipient. They will also be required to sign the ApeCoin foundation’s standard grant agreement document. The collection of this information will be done by the project team.\n\nPayouts are handled by the __ApeCoin Foundation__ directly and are denominated in __USD__. However, all payouts are done in __ApeCoin (APE)__.\n",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - User error that results in the loss of custody of a BAYC, MAYC, or BAKC which leads to the unintentional loss of staked ApeCoin\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks, which are in-scope\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n\nThe following activities are prohibited by this bug bounty program:\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty\n  - Vulnerabilities requiring access to the staking contract’s owner role\nAttacks that are a direct result of user error (e.g. using incorrect function arguments)\n",
+      "assetsBodyV2": "All smart contracts can be found in the [staking github repo](https://github.com/HorizenLabs/ape-staking-public). However, only [ApeCoinStaking.sol](https://github.com/HorizenLabs/ape-staking-public/blob/main/contracts/ApeCoinStaking.sol) is in-scope for the bug bounty program. The repo is a hardhat project that contains a simple local deploy script that uses realistic config parameters.\n\nIf an impact can be caused to any other asset managed by ApeCoin that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.\n\nPlease watch the [Horizen Labs Ape Staking Smart Contract Walk-Thru](https://www.youtube.com/watch?v=_LO-1f9nyjs) for a video overview of the staking contract and read the docs for further information, [https://docs.apestake.io/](https://docs.apestake.io/).",
+      "impactsBody": null,
+      "immunefiStandard": true,
+      "tags": {
+        "productType": null,
+        "projectType": [
+          "Defi"
+        ],
+        "ecosystem": [
+          "ETH"
+        ],
+        "programType": [
+          "Smart Contract"
+        ],
+        "language": null
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract"
+        ],
+        "blockchain_rewards": [],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $100,000 to USD $3,500,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $10,000 to USD $50,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $2,500"
+          },
+          {
+            "level": "Low",
+            "payout": "USD $1,000"
+          }
+        ],
+        "web_rewards": []
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"ApeCoin is an ERC-20 governance and utility token used within the APE ecosystem to empower a decentralized community building at the forefront of web3. It allows its holders to participate in the ApeCoin DAO and provides access to exclusive games, merch, events, services, and more.\"), mdx(\"p\", null, \"Earlier this year, the DAO voted to launch a staking system to incentivize engagement within the ecosystem. ApeCoin staking will allow users to stake their APE in various pools to gain rewards. Anyone holding ApeCoin can participate, however additional pools are available to holders who own NFTs within the Bored Ape Yacht Club ecosystem.\"), mdx(\"p\", null, \"For more information about Apecoin and staking, please visit \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://apecoin.com/\"\n  }, \"https://apecoin.com\"), \" and read \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://forum.apecoin.com/t/aip-21-staking-process-with-caps-1x-drop-process/5074\"\n  }, \"AIP-21\"), \" and \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://forum.apecoin.com/t/aip-22-staking-pool-allocation-reloaded-ecosystem-fund-allocation/5071\"\n  }, \"AIP-22\"), \".\"), mdx(\"p\", null, \"The program will continue for the life of the staking system (3 years).\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>ApeCoin is an ERC-20 governance and utility token used within the APE ecosystem to empower a decentralized community building at the forefront of web3. It allows its holders to participate in the ApeCoin DAO and provides access to exclusive games, merch, events, services, and more.</p><p>Earlier this year, the DAO voted to launch a staking system to incentivize engagement within the ecosystem. ApeCoin staking will allow users to stake their APE in various pools to gain rewards. Anyone holding ApeCoin can participate, however additional pools are available to holders who own NFTs within the Bored Ape Yacht Club ecosystem.</p><p>For more information about Apecoin and staking, please visit <a href=\"https://apecoin.com/\">https://apecoin.com</a> and read <a href=\"https://forum.apecoin.com/t/aip-21-staking-process-with-caps-1x-drop-process/5074\">AIP-21</a> and <a href=\"https://forum.apecoin.com/t/aip-22-staking-pool-allocation-reloaded-ecosystem-fund-allocation/5071\">AIP-22</a>.</p><p>The program will continue for the life of the staking system (3 years).</p>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.</p>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Rewards are distributed according to the impact of the vulnerability based on the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\"\n  }, \"Immunefi Vulnerability Severity Classification System V2.2\"), \". This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\"), mdx(\"p\", null, \"Critical smart contract vulnerabilities are capped at 10% of economic damage, primarily based on value at risk, but also PR and branding aspects. However, there is a minimum reward for critical vulnerabilities of \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USD 100 000\"), \". \"), mdx(\"p\", null, \"High smart contract vulnerabilities are capped at 100% of economic damage, primarily based on value at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward for high vulnerabilities of \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USD 10 000\"), \". \"), mdx(\"p\", null, \"All Critical and High Smart Contract bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\"), mdx(\"p\", null, \"All vulnerabilities marked acknowledged and accepted in the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://drive.google.com/file/d/1ppauv4me-WWWKIwWUUiWP32vtisXcKKg/view?usp=share_link\"\n  }, \"Halborn security review\"), \" are not eligible for a reward.\"), mdx(\"p\", null, \"ApeCoin requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. Recipients must provide their name, certificate of incorporation (if a company), physical address, email address, ethereum address to receive the funds, and confirmation on whether the ethereum address is at an exchange or other custodian, or owned directly by the recipient. They will also be required to sign the ApeCoin foundation\\u2019s standard grant agreement document. The collection of this information will be done by the project team.\"), mdx(\"p\", null, \"Payouts are handled by the \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"ApeCoin Foundation\"), \" directly and are denominated in \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USD\"), \". However, all payouts are done in \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"ApeCoin (APE)\"), \".\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Rewards are distributed according to the impact of the vulnerability based on the <a href=\"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\">Immunefi Vulnerability Severity Classification System V2.2</a>. This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.</p><p>Critical smart contract vulnerabilities are capped at 10% of economic damage, primarily based on value at risk, but also PR and branding aspects. However, there is a minimum reward for critical vulnerabilities of <strong>USD 100 000</strong>. </p><p>High smart contract vulnerabilities are capped at 100% of economic damage, primarily based on value at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward for high vulnerabilities of <strong>USD 10 000</strong>. </p><p>All Critical and High Smart Contract bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.</p><p>All vulnerabilities marked acknowledged and accepted in the <a href=\"https://drive.google.com/file/d/1ppauv4me-WWWKIwWUUiWP32vtisXcKKg/view?usp=share_link\">Halborn security review</a> are not eligible for a reward.</p><p>ApeCoin requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. Recipients must provide their name, certificate of incorporation (if a company), physical address, email address, ethereum address to receive the funds, and confirmation on whether the ethereum address is at an exchange or other custodian, or owned directly by the recipient. They will also be required to sign the ApeCoin foundation’s standard grant agreement document. The collection of this information will be done by the project team.</p><p>Payouts are handled by the <strong>ApeCoin Foundation</strong> directly and are denominated in <strong>USD</strong>. However, all payouts are done in <strong>ApeCoin (APE)</strong>.</p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The following vulnerabilities are excluded from the rewards for this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"User error that results in the loss of custody of a BAYC, MAYC, or BAKC which leads to the unintentional loss of staked ApeCoin\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that the reporter has already exploited themselves, leading to damage\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to leaked keys/credentials\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to privileged addresses (governance, strategist)\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts and Blockchain\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Incorrect data supplied by third party oracles\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Not to exclude oracle manipulation/flash loan attacks, which are in-scope\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Basic economic governance attacks (e.g. 51% attack)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Lack of liquidity\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practice critiques\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Sybil attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Centralization risks\")), mdx(\"p\", null, \"The following activities are prohibited by this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with pricing oracles or third party smart contracts\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attempting phishing or other social engineering attacks against our employees and/or customers\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any denial of service attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Automated testing of services that generates significant amounts of traffic\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Public disclosure of an unpatched vulnerability in an embargoed bounty\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Vulnerabilities requiring access to the staking contract\\u2019s owner role\\nAttacks that are a direct result of user error (e.g. using incorrect function arguments)\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The following vulnerabilities are excluded from the rewards for this bug bounty program:</p><ul><li>User error that results in the loss of custody of a BAYC, MAYC, or BAKC which leads to the unintentional loss of staked ApeCoin</li><li>Attacks that the reporter has already exploited themselves, leading to damage</li><li>Attacks requiring access to leaked keys/credentials</li><li>Attacks requiring access to privileged addresses (governance, strategist)</li></ul><p><strong>Smart Contracts and Blockchain</strong></p><ul><li>Incorrect data supplied by third party oracles<ul><li>Not to exclude oracle manipulation/flash loan attacks, which are in-scope</li></ul></li><li>Basic economic governance attacks (e.g. 51% attack)</li><li>Lack of liquidity</li><li>Best practice critiques</li><li>Sybil attacks</li><li>Centralization risks</li></ul><p>The following activities are prohibited by this bug bounty program:</p><ul><li>Any testing with mainnet or public testnet contracts; all testing should be done on private testnets</li><li>Any testing with pricing oracles or third party smart contracts</li><li>Attempting phishing or other social engineering attacks against our employees and/or customers</li><li>Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)</li><li>Any denial of service attacks</li><li>Automated testing of services that generates significant amounts of traffic</li><li>Public disclosure of an unpatched vulnerability in an embargoed bounty</li><li>Vulnerabilities requiring access to the staking contract’s owner role\nAttacks that are a direct result of user error (e.g. using incorrect function arguments)</li></ul>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"All smart contracts can be found in the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/HorizenLabs/ape-staking-public\"\n  }, \"staking github repo\"), \". However, only \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/HorizenLabs/ape-staking-public/blob/main/contracts/ApeCoinStaking.sol\"\n  }, \"ApeCoinStaking.sol\"), \" is in-scope for the bug bounty program. The repo is a hardhat project that contains a simple local deploy script that uses realistic config parameters.\"), mdx(\"p\", null, \"If an impact can be caused to any other asset managed by ApeCoin that isn\\u2019t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.\"), mdx(\"p\", null, \"Please watch the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://www.youtube.com/watch?v=_LO-1f9nyjs\"\n  }, \"Horizen Labs Ape Staking Smart Contract Walk-Thru\"), \" for a video overview of the staking contract and read the docs for further information, \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://docs.apestake.io/\"\n  }, \"https://docs.apestake.io/\"), \".\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>All smart contracts can be found in the <a href=\"https://github.com/HorizenLabs/ape-staking-public\">staking github repo</a>. However, only <a href=\"https://github.com/HorizenLabs/ape-staking-public/blob/main/contracts/ApeCoinStaking.sol\">ApeCoinStaking.sol</a> is in-scope for the bug bounty program. The repo is a hardhat project that contains a simple local deploy script that uses realistic config parameters.</p><p>If an impact can be caused to any other asset managed by ApeCoin that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.</p><p>Please watch the <a href=\"https://www.youtube.com/watch?v=_LO-1f9nyjs\">Horizen Labs Ape Staking Smart Contract Walk-Thru</a> for a video overview of the staking contract and read the docs for further information, <a href=\"https://docs.apestake.io/\">https://docs.apestake.io/</a>.</p>",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}

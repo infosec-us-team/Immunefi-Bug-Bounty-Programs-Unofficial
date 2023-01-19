@@ -1,0 +1,193 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "neo",
+      "slug": "neo",
+      "project": "Neo",
+      "maxBounty": 100000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/58geaDlgfAExuX3WhGHYI/3d1a9283f18f6a95528789acd9cfd89c/OCDuOiZ__400x400.png",
+      "launchDate": "2022-01-06T21:00-07:00",
+      "updatedDate": "2022-10-13T14:01:58.540Z",
+      "kyc": true,
+      "rewards": [
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "Up to $100,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "high",
+          "payout": "Up to $50,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "Up to $20,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "low",
+          "payout": "Up to $5,000",
+          "pocRequired": false
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "21btOo3h0jPg5kq4VGDc02",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/neo-project/neo",
+          "description": null
+        },
+        {
+          "id": "7CuK6JOuVnXeUdgTgAzsxz",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/neo-project/neo-vm",
+          "description": null
+        },
+        {
+          "id": "22r6KHyTHaoZ2pMRPMmQFh",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/neo-project/neo-compiler",
+          "description": null
+        },
+        {
+          "id": "1F3780h6koRE9LZX4qzq6e",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/neo-project/neo-gui",
+          "description": null
+        },
+        {
+          "id": "6MfLlE77vG7XVUGPFaKbq6",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/neo-project/neo-devpack-dotnet",
+          "description": null
+        },
+        {
+          "id": "6HSDPDtK0QDGahIUT6VEWL",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/neo-project/neo-node",
+          "description": null
+        },
+        {
+          "id": "2pQdrZVMJdIq7OgnUPMaPG",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/neo-project/neo-modules",
+          "description": null
+        }
+      ],
+      "impacts": [
+        {
+          "id": "5cIyRSXZYk5xBZbmoHuGkT",
+          "title": "Issues leading to severe asset loss",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "jzSDVaN4q7uWlZvuLddO9",
+          "title": "Issues leading to total network failure",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "7tRVvoiahlSMlGm695KGur",
+          "title": "Single node failure",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        },
+        {
+          "id": "y3GacDLll4Xu7OrS34ubR",
+          "title": "Any other low (OWASP) issue",
+          "type": "blockchain_dlt",
+          "severity": "low"
+        }
+      ],
+      "programOverview": "Neo is a distributed network which utilizes blockchain technology and digital identity to digitize assets and automate the management of digital assets using smart contracts. Neo network has two tokens, NEO representing the right to manage Neo blockchain and GAS representing the right to use the Neo Blockchain.\n\nThe purpose of the Neo vulnerability bounty program is to be proactive about blockchain security by providing a channel for security researchers to report potential security vulnerabilities identified related to our underlying infrastructure. Everyone who finds the vulnerabilities can submit a bug report through Immunefi. Neo will try their best to investigate those eligible vulnerabilities and fix the valid issues. All rewards will be paid in the equivalent amount of NEO.\n\nNote: Higher rewards will be paid out in case of vulnerabilities of certain interest and criticality. Before reporting any issues, please check the following disclosures on responsibilities, program rules, and reporting manner notice.\n\nFor more information about Neo, please visit [https://neo.org/](https://neo.org/).  \n\nThis bug bounty program has a different reward timeline than other bug bounty programs on Immunefi, though the 48 hours for acknowledgement is observed. Please check the “Program Rules and Response Terms” section for more information.",
+      "prioritizedVulnerabilities": "Vulnerabilities fitting in any of the following descriptions will not be eligible for the rewards:\n  - Those published or known ones are not eligible for rewards.\n  - If you unveil such vulnerabilities before Neo fixes or publish them, the reward becomes null and void.\n  - Participants who use submitted vulnerabilities to damage the Neo ecosystem, infringe on users' interests and perform pilferage on users' assets will be disqualified for rewards; meanwhile, Neo is rightful to resort to justice.",
+      "rewardsBody": "Bounties are paid out after a risk assessment ([OWASP risk rating methodology](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology)) has been made by the Neo DAU team. There are four rates of severity, Critical, High, Medium, Low. All rewards will be paid in the equivalent amount of NEO. Roughly speaking, we calculate the severity of an issue with the following formula:\n\nSeverity = Impact * Likelihood\nBase bounty amounts related to severity are as follows:\n\n| Vulnerability Severity | Bounty | Example |\n| :-- | :-: | --: |\n| **Critical** | Up to $100,000 | Issues leading to severe asset loss | \n| **High** | Up to $50,000 | Issues leading to total networks failure |\n| **Medium** | Up to $20,000 | Single node failure |\n| **Low** | Up to $5,000 | Other valid issues |\n\nTo be eligible for a reward, bug bounty hunters must never attempt to access anyone else's data and do not engage in any activity that would be disruptive or damaging to the Neo production network and testing network, you can investigate with your own built private chain on a private network. The full rules of the bug bounty program can be found further below, which need to be followed. \n\nAll bug reports must include the following in the report:\n  - Asset - What software asset the vulnerability is related to (e.g. Neo core software/products)\n  - Severity - Your opinion on the severity of the issue (e.g. high, moderate, low)\n  - Summary - Add a summary of the vulnerability\n  - Description - Any additional details about this vulnerability\n  - Steps - Steps to reproduce, getting Neo staff or technical team clearly informed of every detailed step.\n  - Supporting Material/References - Source code to replicate, list any additional material (e.g. screenshots, logs, etc.)\n  - Impact - What security impact could an attacker achieve?\n  - Your name and country.\n\nNeo may require more KYC information to be submitted over the Immunefi bug reporting dashboard at its discretion.\n\nPayouts are handled by the __Neo__ team directly and are denominated in USD. However, payouts are done in __NEO__.",
+      "outOfScopeAndRules": "The level of feedback on its website and social media channels. Rewards will be distributed within three (3) days following the official announcement. Neo reserves the right to the final interpretation of the event.\n\nTo finally achieve the self-worthy reward the submitters should abide by the following event rules:\n  - Only issues related to stability and security with design and implementation are within the scope, vulnerabilities with the Neo website and related infrastructure on the Neo blockchain are out of the scope. Find more details at the Scope of Vulnerability Bounty Program.\n  - Submitted reports should contain detailed reproduction procedures, in the absence of which, the reports will be excluded from the rewarding list. The more detailed the proof of vulnerabilities and the descriptions are, the higher your reward will be.\n  - For those who report the same vulnerability, the reward goes to whoever comes first.\n  - Serial vulnerabilities caused by one vulnerability will be considered as one vulnerability, e.g., a series of computing errors caused by data overflow.",
+      "assetsBodyV2": null,
+      "impactsBody": null,
+      "immunefiStandard": null,
+      "tags": {
+        "productType": [
+          "L1"
+        ],
+        "projectType": [
+          "Blockchain"
+        ],
+        "ecosystem": null,
+        "programType": [
+          "Blockchain/DLT"
+        ],
+        "language": [
+          "C#"
+        ]
+      },
+      "legacy": {
+        "technologies": [
+          "Blockchain/DLT"
+        ],
+        "blockchain_rewards": [],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "Up to $100,000"
+          },
+          {
+            "level": "High",
+            "payout": "Up to $50,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "Up to $20,000"
+          },
+          {
+            "level": "Low",
+            "payout": "Up to $5,000"
+          }
+        ],
+        "web_rewards": []
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Neo is a distributed network which utilizes blockchain technology and digital identity to digitize assets and automate the management of digital assets using smart contracts. Neo network has two tokens, NEO representing the right to manage Neo blockchain and GAS representing the right to use the Neo Blockchain.\"), mdx(\"p\", null, \"The purpose of the Neo vulnerability bounty program is to be proactive about blockchain security by providing a channel for security researchers to report potential security vulnerabilities identified related to our underlying infrastructure. Everyone who finds the vulnerabilities can submit a bug report through Immunefi. Neo will try their best to investigate those eligible vulnerabilities and fix the valid issues. All rewards will be paid in the equivalent amount of NEO.\"), mdx(\"p\", null, \"Note: Higher rewards will be paid out in case of vulnerabilities of certain interest and criticality. Before reporting any issues, please check the following disclosures on responsibilities, program rules, and reporting manner notice.\"), mdx(\"p\", null, \"For more information about Neo, please visit \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://neo.org/\"\n  }, \"https://neo.org/\"), \".  \"), mdx(\"p\", null, \"This bug bounty program has a different reward timeline than other bug bounty programs on Immunefi, though the 48 hours for acknowledgement is observed. Please check the \\u201CProgram Rules and Response Terms\\u201D section for more information.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Neo is a distributed network which utilizes blockchain technology and digital identity to digitize assets and automate the management of digital assets using smart contracts. Neo network has two tokens, NEO representing the right to manage Neo blockchain and GAS representing the right to use the Neo Blockchain.</p><p>The purpose of the Neo vulnerability bounty program is to be proactive about blockchain security by providing a channel for security researchers to report potential security vulnerabilities identified related to our underlying infrastructure. Everyone who finds the vulnerabilities can submit a bug report through Immunefi. Neo will try their best to investigate those eligible vulnerabilities and fix the valid issues. All rewards will be paid in the equivalent amount of NEO.</p><p>Note: Higher rewards will be paid out in case of vulnerabilities of certain interest and criticality. Before reporting any issues, please check the following disclosures on responsibilities, program rules, and reporting manner notice.</p><p>For more information about Neo, please visit <a href=\"https://neo.org/\">https://neo.org/</a>.  </p><p>This bug bounty program has a different reward timeline than other bug bounty programs on Immunefi, though the 48 hours for acknowledgement is observed. Please check the “Program Rules and Response Terms” section for more information.</p>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Vulnerabilities fitting in any of the following descriptions will not be eligible for the rewards:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Those published or known ones are not eligible for rewards.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"If you unveil such vulnerabilities before Neo fixes or publish them, the reward becomes null and void.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Participants who use submitted vulnerabilities to damage the Neo ecosystem, infringe on users' interests and perform pilferage on users' assets will be disqualified for rewards; meanwhile, Neo is rightful to resort to justice.\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Vulnerabilities fitting in any of the following descriptions will not be eligible for the rewards:</p><ul><li>Those published or known ones are not eligible for rewards.</li><li>If you unveil such vulnerabilities before Neo fixes or publish them, the reward becomes null and void.</li><li>Participants who use submitted vulnerabilities to damage the Neo ecosystem, infringe on users&#x27; interests and perform pilferage on users&#x27; assets will be disqualified for rewards; meanwhile, Neo is rightful to resort to justice.</li></ul>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Bounties are paid out after a risk assessment (\", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology\"\n  }, \"OWASP risk rating methodology\"), \") has been made by the Neo DAU team. There are four rates of severity, Critical, High, Medium, Low. All rewards will be paid in the equivalent amount of NEO. Roughly speaking, we calculate the severity of an issue with the following formula:\"), mdx(\"p\", null, \"Severity = Impact * Likelihood\\nBase bounty amounts related to severity are as follows:\"), mdx(\"table\", null, mdx(\"thead\", {\n    parentName: \"table\"\n  }, mdx(\"tr\", {\n    parentName: \"thead\"\n  }, mdx(\"th\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, \"Vulnerability Severity\"), mdx(\"th\", {\n    parentName: \"tr\",\n    \"align\": \"center\"\n  }, \"Bounty\"), mdx(\"th\", {\n    parentName: \"tr\",\n    \"align\": \"right\"\n  }, \"Example\"))), mdx(\"tbody\", {\n    parentName: \"table\"\n  }, mdx(\"tr\", {\n    parentName: \"tbody\"\n  }, mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, mdx(\"strong\", {\n    parentName: \"td\"\n  }, \"Critical\")), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"center\"\n  }, \"Up to $100,000\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"right\"\n  }, \"Issues leading to severe asset loss\")), mdx(\"tr\", {\n    parentName: \"tbody\"\n  }, mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, mdx(\"strong\", {\n    parentName: \"td\"\n  }, \"High\")), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"center\"\n  }, \"Up to $50,000\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"right\"\n  }, \"Issues leading to total networks failure\")), mdx(\"tr\", {\n    parentName: \"tbody\"\n  }, mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, mdx(\"strong\", {\n    parentName: \"td\"\n  }, \"Medium\")), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"center\"\n  }, \"Up to $20,000\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"right\"\n  }, \"Single node failure\")), mdx(\"tr\", {\n    parentName: \"tbody\"\n  }, mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"left\"\n  }, mdx(\"strong\", {\n    parentName: \"td\"\n  }, \"Low\")), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"center\"\n  }, \"Up to $5,000\"), mdx(\"td\", {\n    parentName: \"tr\",\n    \"align\": \"right\"\n  }, \"Other valid issues\")))), mdx(\"p\", null, \"To be eligible for a reward, bug bounty hunters must never attempt to access anyone else's data and do not engage in any activity that would be disruptive or damaging to the Neo production network and testing network, you can investigate with your own built private chain on a private network. The full rules of the bug bounty program can be found further below, which need to be followed. \"), mdx(\"p\", null, \"All bug reports must include the following in the report:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Asset - What software asset the vulnerability is related to (e.g. Neo core software/products)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Severity - Your opinion on the severity of the issue (e.g. high, moderate, low)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Summary - Add a summary of the vulnerability\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Description - Any additional details about this vulnerability\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Steps - Steps to reproduce, getting Neo staff or technical team clearly informed of every detailed step.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Supporting Material/References - Source code to replicate, list any additional material (e.g. screenshots, logs, etc.)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Impact - What security impact could an attacker achieve?\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Your name and country.\")), mdx(\"p\", null, \"Neo may require more KYC information to be submitted over the Immunefi bug reporting dashboard at its discretion.\"), mdx(\"p\", null, \"Payouts are handled by the \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Neo\"), \" team directly and are denominated in USD. However, payouts are done in \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"NEO\"), \".\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Bounties are paid out after a risk assessment (<a href=\"https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology\">OWASP risk rating methodology</a>) has been made by the Neo DAU team. There are four rates of severity, Critical, High, Medium, Low. All rewards will be paid in the equivalent amount of NEO. Roughly speaking, we calculate the severity of an issue with the following formula:</p><p>Severity = Impact * Likelihood\nBase bounty amounts related to severity are as follows:</p><table><thead><tr><th align=\"left\">Vulnerability Severity</th><th align=\"center\">Bounty</th><th align=\"right\">Example</th></tr></thead><tbody><tr><td align=\"left\"><strong>Critical</strong></td><td align=\"center\">Up to $100,000</td><td align=\"right\">Issues leading to severe asset loss</td></tr><tr><td align=\"left\"><strong>High</strong></td><td align=\"center\">Up to $50,000</td><td align=\"right\">Issues leading to total networks failure</td></tr><tr><td align=\"left\"><strong>Medium</strong></td><td align=\"center\">Up to $20,000</td><td align=\"right\">Single node failure</td></tr><tr><td align=\"left\"><strong>Low</strong></td><td align=\"center\">Up to $5,000</td><td align=\"right\">Other valid issues</td></tr></tbody></table><p>To be eligible for a reward, bug bounty hunters must never attempt to access anyone else&#x27;s data and do not engage in any activity that would be disruptive or damaging to the Neo production network and testing network, you can investigate with your own built private chain on a private network. The full rules of the bug bounty program can be found further below, which need to be followed. </p><p>All bug reports must include the following in the report:</p><ul><li>Asset - What software asset the vulnerability is related to (e.g. Neo core software/products)</li><li>Severity - Your opinion on the severity of the issue (e.g. high, moderate, low)</li><li>Summary - Add a summary of the vulnerability</li><li>Description - Any additional details about this vulnerability</li><li>Steps - Steps to reproduce, getting Neo staff or technical team clearly informed of every detailed step.</li><li>Supporting Material/References - Source code to replicate, list any additional material (e.g. screenshots, logs, etc.)</li><li>Impact - What security impact could an attacker achieve?</li><li>Your name and country.</li></ul><p>Neo may require more KYC information to be submitted over the Immunefi bug reporting dashboard at its discretion.</p><p>Payouts are handled by the <strong>Neo</strong> team directly and are denominated in USD. However, payouts are done in <strong>NEO</strong>.</p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The level of feedback on its website and social media channels. Rewards will be distributed within three (3) days following the official announcement. Neo reserves the right to the final interpretation of the event.\"), mdx(\"p\", null, \"To finally achieve the self-worthy reward the submitters should abide by the following event rules:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Only issues related to stability and security with design and implementation are within the scope, vulnerabilities with the Neo website and related infrastructure on the Neo blockchain are out of the scope. Find more details at the Scope of Vulnerability Bounty Program.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Submitted reports should contain detailed reproduction procedures, in the absence of which, the reports will be excluded from the rewarding list. The more detailed the proof of vulnerabilities and the descriptions are, the higher your reward will be.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"For those who report the same vulnerability, the reward goes to whoever comes first.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Serial vulnerabilities caused by one vulnerability will be considered as one vulnerability, e.g., a series of computing errors caused by data overflow.\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The level of feedback on its website and social media channels. Rewards will be distributed within three (3) days following the official announcement. Neo reserves the right to the final interpretation of the event.</p><p>To finally achieve the self-worthy reward the submitters should abide by the following event rules:</p><ul><li>Only issues related to stability and security with design and implementation are within the scope, vulnerabilities with the Neo website and related infrastructure on the Neo blockchain are out of the scope. Find more details at the Scope of Vulnerability Bounty Program.</li><li>Submitted reports should contain detailed reproduction procedures, in the absence of which, the reports will be excluded from the rewarding list. The more detailed the proof of vulnerabilities and the descriptions are, the higher your reward will be.</li><li>For those who report the same vulnerability, the reward goes to whoever comes first.</li><li>Serial vulnerabilities caused by one vulnerability will be considered as one vulnerability, e.g., a series of computing errors caused by data overflow.</li></ul>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}

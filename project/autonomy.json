@@ -1,0 +1,203 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "autonomy",
+      "slug": "autonomy",
+      "project": "Autonomy",
+      "maxBounty": 50000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3RqbQwpyC1z9ZAVv5xAugM/3cc5cdef9ce12bbe3b5b97bc2f3d0471/Autonomy_Network_logo.jpeg",
+      "launchDate": "2021-12-09T08:00-06:00",
+      "updatedDate": "2022-10-13T13:57:42.931Z",
+      "kyc": false,
+      "rewards": [
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "USD $50,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "high",
+          "payout": "USD $15,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "USD $5,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "low",
+          "payout": "USD $1,000",
+          "pocRequired": false
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "2NC6UeIpY1qemc5SXQdEdg",
+          "type": "smart_contract",
+          "url": "https://snowtrace.io/address/0x9118dbc12dc5979daBCe6782739b020b8908a6CB",
+          "description": "PriceOracle"
+        },
+        {
+          "id": "3gH0oxlITcfp9ECUv0NqvX",
+          "type": "smart_contract",
+          "url": "https://snowtrace.io/address/0xbaB6d0B770b9970e9FF2aF9A7e2a52b3D7aA157f",
+          "description": "Oracle"
+        },
+        {
+          "id": "3DVRvpDzYdCtYSuSaSBxlg",
+          "type": "smart_contract",
+          "url": "https://snowtrace.io/address/0x1430F4CB9D123F1542d908a29D6987bA05a858e3",
+          "description": "StakeManager"
+        },
+        {
+          "id": "5mrpdBomQwaXCdF6gKuVsO",
+          "type": "smart_contract",
+          "url": "https://snowtrace.io/address/0xd638029a9356dB6301462470094786494D1ddA39",
+          "description": "Forwarder (user forwarder)"
+        },
+        {
+          "id": "22r2wugcdL4ZUpGlAv9S15",
+          "type": "smart_contract",
+          "url": "https://snowtrace.io/address/0x4c335894Cd87c2a2dBAecE82e752606e4bcA25cB",
+          "description": "Forwarder (fee forwarder)"
+        },
+        {
+          "id": "3QRXYvWg0ffiF6vPcHRvNR",
+          "type": "smart_contract",
+          "url": "https://snowtrace.io/address/0xc21E82fe258ABf9BC3Ef68fB38aecDA79e472964",
+          "description": "Forwarder (user fee forwarder) "
+        },
+        {
+          "id": "1od5fO6xzwrcqkfesGCuTX",
+          "type": "smart_contract",
+          "url": "https://snowtrace.io/address/0x68FCbECa74A7E5D386f74E14682c94DE0e1bC56b",
+          "description": "Registry"
+        },
+        {
+          "id": "3Bp548Fco7luXtSZuvgYB9",
+          "type": "smart_contract",
+          "url": "https://snowtrace.io/address/0xA9E74167a120B139eBdf0858401FFd85b64E4810",
+          "description": "Timelock"
+        },
+        {
+          "id": "6Me4Qp9v0GUELChoFW14tC",
+          "type": "smart_contract",
+          "url": "https://snowtrace.io/address/0xE3e761127cBD037E18186698a2733d1e71623ebE",
+          "description": "UniV2LimitsStops"
+        }
+      ],
+      "impacts": [
+        {
+          "id": "3ieZFsuvdmykbbVivAIwIU",
+          "title": "Critical Smart Contract Impact",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "5oC3h60gIfLkSeQD20oNUT",
+          "title": "High Smart Contract Impact",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "Wugga2hutA46Rkh9xkWeB",
+          "title": "Medium Smart Contract Impact",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "1bP4OmfMKW5d94ay1YKCH5",
+          "title": "Low Smart Contract Impact",
+          "type": "smart_contract",
+          "severity": "low"
+        }
+      ],
+      "programOverview": "Autonomy Network is an off-the-shelf generalized automation solution, empowering the Web3 with on-chain conditional execution. A decentralized network built on users, executors and the blockchain. It’s a B2B infrastructure tool used by dapps to add features, like limit orders, stop losses, and impermanent loss prevention.\n\nFor more information about Autonomy Network, please visit [https://www.autonomynetwork.io/](https://www.autonomynetwork.io/). \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Theft or loss of value of funds on any contract\n  - Attack that would modify or change the requirements of an order\n  - Attack that would invalidate the execution of an order \n  - Dos for order executing bots",
+      "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nAll Critical Smart Contract bug reports require a PoC and a suggestion for a fix to be eligible for a reward. All High and Medium Smart Contract bug reports require a suggestion for a fix to be eligible for a reward.  \n\nIn addition to Immunefi’s Vulnerability Severity Classification System, Autonomy Network classifies the following vulnerabilities as follows. In case of discrepancy, the one below will be followed.\n\n__Critical__\n  - Theft or loss of value of funds on any contract\n\n__High__\n  - Attack that would modify or change the requirements of an order\n\n__Medium__\n  - Attack that would invalidate the execution of an order\n\n__Low__\n  - Dos for order executing bots\n\nThe following vulnerabilities are not eligible for a reward:\n\n  - ‘Miner’ contract in [https://github.com/Autonomy-Network/autonomy-contracts](https://github.com/Autonomy-Network/autonomy-contracts)\n\n  - Issues addressed in [https://github.com/HashEx/public_audits/blob/master/autonomy/Autonomy%20report.pdf](https://github.com/HashEx/public_audits/blob/master/autonomy/Autonomy%20report.pdf)\n\n  - Issues addressed in [https://drive.google.com/drive/folders/1eg3OeaHRT0NcyV6IpAlwZhvhU6mZoBDG?usp=sharing](https://drive.google.com/drive/folders/1eg3OeaHRT0NcyV6IpAlwZhvhU6mZoBDG?usp=sharing)\n\n  - Executors can choose not to execute and essentially censor requests from execution temporarily\n  - Executors can uniquely frontrun limit orders\n  - The `owner` can change the oracle price, and change the default token used to pay etc, which affect users\n  - The gas refunded is not the correct amount\n  - Requests can be spammed and fill up the Registry\n  - Overflows can occur from user-inputted value, such as in the line `uniArgs.amountOutMax * tradeInput / msg.value`\n  - Users can waste the gas of executors by making them think something is executable, then frontrunning it to make it not executable\n  - An executor can manipulate when an order is triggerable by taking out a flash loan and moving the market before the execution in but in the same transaction\n\nPayouts are handled by the __Autonomy Network__ team directly and are denominated in USD. However, payouts are done in __USDT, DAI or ETH__, with the choice of the ratio at the discretion of the team. ",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": "All smart contracts of Autonomy Network can be found at [https://github.com/Autonomy-Network/autonomy-contracts](https://github.com/Autonomy-Network/autonomy-contracts) \n\nand \n\n[https://github.com/Autonomy-Network/uniV2-limits-stops/tree/eth-to-avax-names-2](https://github.com/Autonomy-Network/uniV2-limits-stops/tree/eth-to-avax-names-2) . However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n",
+      "impactsBody": null,
+      "immunefiStandard": true,
+      "tags": {
+        "productType": null,
+        "projectType": [
+          "NFT",
+          "Defi",
+          "Infrastructure"
+        ],
+        "ecosystem": null,
+        "programType": [
+          "Smart Contract"
+        ],
+        "language": null
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract"
+        ],
+        "blockchain_rewards": [],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $50,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $15,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $5,000"
+          },
+          {
+            "level": "Low",
+            "payout": "USD $1,000"
+          }
+        ],
+        "web_rewards": []
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Autonomy Network is an off-the-shelf generalized automation solution, empowering the Web3 with on-chain conditional execution. A decentralized network built on users, executors and the blockchain. It\\u2019s a B2B infrastructure tool used by dapps to add features, like limit orders, stop losses, and impermanent loss prevention.\"), mdx(\"p\", null, \"For more information about Autonomy Network, please visit \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://www.autonomynetwork.io/\"\n  }, \"https://www.autonomynetwork.io/\"), \". \"), mdx(\"p\", null, \"This bug bounty program is focused on their smart contracts and is focused on preventing:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Theft or loss of value of funds on any contract\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attack that would modify or change the requirements of an order\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attack that would invalidate the execution of an order \"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Dos for order executing bots\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Autonomy Network is an off-the-shelf generalized automation solution, empowering the Web3 with on-chain conditional execution. A decentralized network built on users, executors and the blockchain. It’s a B2B infrastructure tool used by dapps to add features, like limit orders, stop losses, and impermanent loss prevention.</p><p>For more information about Autonomy Network, please visit <a href=\"https://www.autonomynetwork.io/\">https://www.autonomynetwork.io/</a>. </p><p>This bug bounty program is focused on their smart contracts and is focused on preventing:</p><ul><li>Theft or loss of value of funds on any contract</li><li>Attack that would modify or change the requirements of an order</li><li>Attack that would invalidate the execution of an order </li><li>Dos for order executing bots</li></ul>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"We are especially interested in receiving and rewarding vulnerabilities of the following types:\"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts and Blockchain\"), \" \"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Re-entrancy\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Logic errors\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including user authentication errors\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Solidity/EVM details not considered\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including integer over-/under-flow\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including rounding errors\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including unhandled exceptions\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Oracle failure/manipulation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Novel governance attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Economic/financial attacks\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including flash loan attacks\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Congestion and scalability\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including running out of gas\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including block stuffing\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including susceptibility to frontrunning\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Consensus failures\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Cryptography problems\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Signature malleability\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Susceptibility to replay attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Weak randomness\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Weak encryption\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Susceptibility to block timestamp manipulation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Missing access controls / unprotected internal or debugging interfaces\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>We are especially interested in receiving and rewarding vulnerabilities of the following types:</p><p><strong>Smart Contracts and Blockchain</strong> </p><ul><li>Re-entrancy</li><li>Logic errors<ul><li>including user authentication errors</li></ul></li><li>Solidity/EVM details not considered<ul><li>including integer over-/under-flow</li><li>including rounding errors</li><li>including unhandled exceptions</li></ul></li><li>Oracle failure/manipulation</li><li>Novel governance attacks</li><li>Economic/financial attacks<ul><li>including flash loan attacks</li></ul></li><li>Congestion and scalability<ul><li>including running out of gas</li><li>including block stuffing</li><li>including susceptibility to frontrunning</li></ul></li><li>Consensus failures</li><li>Cryptography problems<ul><li>Signature malleability</li><li>Susceptibility to replay attacks</li><li>Weak randomness</li><li>Weak encryption</li></ul></li><li>Susceptibility to block timestamp manipulation</li><li>Missing access controls / unprotected internal or debugging interfaces</li></ul>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Rewards are distributed according to the impact of the vulnerability based on the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\"\n  }, \"Immunefi Vulnerability Severity Classification System V2.2\"), \". This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \"), mdx(\"p\", null, \"All Critical Smart Contract bug reports require a PoC and a suggestion for a fix to be eligible for a reward. All High and Medium Smart Contract bug reports require a suggestion for a fix to be eligible for a reward.  \"), mdx(\"p\", null, \"In addition to Immunefi\\u2019s Vulnerability Severity Classification System, Autonomy Network classifies the following vulnerabilities as follows. In case of discrepancy, the one below will be followed.\"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Critical\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Theft or loss of value of funds on any contract\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"High\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attack that would modify or change the requirements of an order\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Medium\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attack that would invalidate the execution of an order\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Low\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Dos for order executing bots\")), mdx(\"p\", null, \"The following vulnerabilities are not eligible for a reward:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"p\", {\n    parentName: \"li\"\n  }, \"\\u2018Miner\\u2019 contract in \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/Autonomy-Network/autonomy-contracts\"\n  }, \"https://github.com/Autonomy-Network/autonomy-contracts\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"p\", {\n    parentName: \"li\"\n  }, \"Issues addressed in \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/HashEx/public_audits/blob/master/autonomy/Autonomy%20report.pdf\"\n  }, \"https://github.com/HashEx/public_audits/blob/master/autonomy/Autonomy%20report.pdf\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"p\", {\n    parentName: \"li\"\n  }, \"Issues addressed in \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://drive.google.com/drive/folders/1eg3OeaHRT0NcyV6IpAlwZhvhU6mZoBDG?usp=sharing\"\n  }, \"https://drive.google.com/drive/folders/1eg3OeaHRT0NcyV6IpAlwZhvhU6mZoBDG?usp=sharing\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"p\", {\n    parentName: \"li\"\n  }, \"Executors can choose not to execute and essentially censor requests from execution temporarily\")), mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"p\", {\n    parentName: \"li\"\n  }, \"Executors can uniquely frontrun limit orders\")), mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"p\", {\n    parentName: \"li\"\n  }, \"The \", mdx(\"inlineCode\", {\n    parentName: \"p\"\n  }, \"owner\"), \" can change the oracle price, and change the default token used to pay etc, which affect users\")), mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"p\", {\n    parentName: \"li\"\n  }, \"The gas refunded is not the correct amount\")), mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"p\", {\n    parentName: \"li\"\n  }, \"Requests can be spammed and fill up the Registry\")), mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"p\", {\n    parentName: \"li\"\n  }, \"Overflows can occur from user-inputted value, such as in the line \", mdx(\"inlineCode\", {\n    parentName: \"p\"\n  }, \"uniArgs.amountOutMax * tradeInput / msg.value\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"p\", {\n    parentName: \"li\"\n  }, \"Users can waste the gas of executors by making them think something is executable, then frontrunning it to make it not executable\")), mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"p\", {\n    parentName: \"li\"\n  }, \"An executor can manipulate when an order is triggerable by taking out a flash loan and moving the market before the execution in but in the same transaction\"))), mdx(\"p\", null, \"Payouts are handled by the \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Autonomy Network\"), \" team directly and are denominated in USD. However, payouts are done in \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USDT, DAI or ETH\"), \", with the choice of the ratio at the discretion of the team. \"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Rewards are distributed according to the impact of the vulnerability based on the <a href=\"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\">Immunefi Vulnerability Severity Classification System V2.2</a>. This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. </p><p>All Critical Smart Contract bug reports require a PoC and a suggestion for a fix to be eligible for a reward. All High and Medium Smart Contract bug reports require a suggestion for a fix to be eligible for a reward.  </p><p>In addition to Immunefi’s Vulnerability Severity Classification System, Autonomy Network classifies the following vulnerabilities as follows. In case of discrepancy, the one below will be followed.</p><p><strong>Critical</strong></p><ul><li>Theft or loss of value of funds on any contract</li></ul><p><strong>High</strong></p><ul><li>Attack that would modify or change the requirements of an order</li></ul><p><strong>Medium</strong></p><ul><li>Attack that would invalidate the execution of an order</li></ul><p><strong>Low</strong></p><ul><li>Dos for order executing bots</li></ul><p>The following vulnerabilities are not eligible for a reward:</p><ul><li><p>‘Miner’ contract in <a href=\"https://github.com/Autonomy-Network/autonomy-contracts\">https://github.com/Autonomy-Network/autonomy-contracts</a></p></li><li><p>Issues addressed in <a href=\"https://github.com/HashEx/public_audits/blob/master/autonomy/Autonomy%20report.pdf\">https://github.com/HashEx/public_audits/blob/master/autonomy/Autonomy%20report.pdf</a></p></li><li><p>Issues addressed in <a href=\"https://drive.google.com/drive/folders/1eg3OeaHRT0NcyV6IpAlwZhvhU6mZoBDG?usp=sharing\">https://drive.google.com/drive/folders/1eg3OeaHRT0NcyV6IpAlwZhvhU6mZoBDG?usp=sharing</a></p></li><li><p>Executors can choose not to execute and essentially censor requests from execution temporarily</p></li><li><p>Executors can uniquely frontrun limit orders</p></li><li><p>The <code>owner</code> can change the oracle price, and change the default token used to pay etc, which affect users</p></li><li><p>The gas refunded is not the correct amount</p></li><li><p>Requests can be spammed and fill up the Registry</p></li><li><p>Overflows can occur from user-inputted value, such as in the line <code>uniArgs.amountOutMax * tradeInput / msg.value</code></p></li><li><p>Users can waste the gas of executors by making them think something is executable, then frontrunning it to make it not executable</p></li><li><p>An executor can manipulate when an order is triggerable by taking out a flash loan and moving the market before the execution in but in the same transaction</p></li></ul><p>Payouts are handled by the <strong>Autonomy Network</strong> team directly and are denominated in USD. However, payouts are done in <strong>USDT, DAI or ETH</strong>, with the choice of the ratio at the discretion of the team. </p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The following vulnerabilities are excluded from the rewards for this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that the reporter has already exploited themselves, leading to damage\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to leaked keys/credentials\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to privileged addresses (governance, strategist)\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts and Blockchain\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Incorrect data supplied by third party oracles\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Not to exclude oracle manipulation/flash loan attacks\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Basic economic governance attacks (e.g. 51% attack)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Lack of liquidity\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practice critiques\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Sybil attacks\")), mdx(\"p\", null, \"The following activities are prohibited by this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with pricing oracles or third party smart contracts\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attempting phishing or other social engineering attacks against our employees and/or customers\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any denial of service attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Automated testing of services that generates significant amounts of traffic\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Public disclosure of an unpatched vulnerability in an embargoed bounty\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The following vulnerabilities are excluded from the rewards for this bug bounty program:</p><ul><li>Attacks that the reporter has already exploited themselves, leading to damage</li><li>Attacks requiring access to leaked keys/credentials</li><li>Attacks requiring access to privileged addresses (governance, strategist)</li></ul><p><strong>Smart Contracts and Blockchain</strong></p><ul><li>Incorrect data supplied by third party oracles<ul><li>Not to exclude oracle manipulation/flash loan attacks</li></ul></li><li>Basic economic governance attacks (e.g. 51% attack)</li><li>Lack of liquidity</li><li>Best practice critiques</li><li>Sybil attacks</li></ul><p>The following activities are prohibited by this bug bounty program:</p><ul><li>Any testing with mainnet or public testnet contracts; all testing should be done on private testnets</li><li>Any testing with pricing oracles or third party smart contracts</li><li>Attempting phishing or other social engineering attacks against our employees and/or customers</li><li>Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)</li><li>Any denial of service attacks</li><li>Automated testing of services that generates significant amounts of traffic</li><li>Public disclosure of an unpatched vulnerability in an embargoed bounty</li></ul>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"All smart contracts of Autonomy Network can be found at \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/Autonomy-Network/autonomy-contracts\"\n  }, \"https://github.com/Autonomy-Network/autonomy-contracts\"), \" \"), mdx(\"p\", null, \"and \"), mdx(\"p\", null, mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/Autonomy-Network/uniV2-limits-stops/tree/eth-to-avax-names-2\"\n  }, \"https://github.com/Autonomy-Network/uniV2-limits-stops/tree/eth-to-avax-names-2\"), \" . However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>All smart contracts of Autonomy Network can be found at <a href=\"https://github.com/Autonomy-Network/autonomy-contracts\">https://github.com/Autonomy-Network/autonomy-contracts</a> </p><p>and </p><p><a href=\"https://github.com/Autonomy-Network/uniV2-limits-stops/tree/eth-to-avax-names-2\">https://github.com/Autonomy-Network/uniV2-limits-stops/tree/eth-to-avax-names-2</a> . However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.</p>",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}

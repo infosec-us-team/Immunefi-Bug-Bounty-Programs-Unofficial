@@ -1,0 +1,206 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "yinfinance",
+      "slug": "yinfinance",
+      "project": "YIN Finance",
+      "maxBounty": 50000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/XnswcBaNqgSo0mZMBBMs1/2722a1b53d5ecdbe8a9f07d87d54622f/SymbolDark__1_.png",
+      "launchDate": "2021-12-13T20:45-06:00",
+      "updatedDate": "2022-10-14T04:25:57.953Z",
+      "kyc": false,
+      "rewards": [
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "Up to USD $50,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "high",
+          "payout": "USD $10,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "USD $5,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "low",
+          "payout": "USD $2,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "critical",
+          "payout": "USD $10,000",
+          "pocRequired": true
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "4mybbjInXLVO4LIDEFiZFn",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x271b7ed53e217d9a2dfa2b80ba39b436472eec04#code",
+          "description": "YIN Asset Manager Vault (YANG)"
+        },
+        {
+          "id": "7afVh3zrS5vdVfcCgmMEPZ",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x47311560a625042a4cd14ded8567472e79a7a26a#code",
+          "description": "YIN Uniswap V3 Positions Manager (CHI)"
+        },
+        {
+          "id": "5uzO1ihjQU9wV03m82DV8X",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x3dad37a1dacdb0e5ce30ee738165efcdb3fdfadc",
+          "description": "ChainLinkFeedsRegistry"
+        },
+        {
+          "id": "4NzSukgktmWsc8R94VvmUK",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x7f990083369bc83e07be4029acc5eed29902dca3",
+          "description": "CHIVaultDeployer"
+        },
+        {
+          "id": "79hQrfrIfLXFJ6HAUHGYPH",
+          "type": "websites_and_applications",
+          "url": "https://yin.finance",
+          "description": null
+        }
+      ],
+      "impacts": [
+        {
+          "id": "4duVTlZ0dyMK2VaK9OQVI9",
+          "title": "Critical Smart Contract Impact",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "6ATi7lmGUXOvaXGP36Rrvi",
+          "title": "Critical Websites and Applications Impact",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "3dfvGeAmkL4kmVrTVTdowI",
+          "title": "High Smart Contract Impact",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "2tcOhLP8Zr1wfgbUkKXfQy",
+          "title": "Medium Smart Contract Impact",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "72YamPNfqmmLQ1f7MR0rrq",
+          "title": "Low Smart Contract Impact",
+          "type": "smart_contract",
+          "severity": "low"
+        }
+      ],
+      "programOverview": "YIN Finance is a multi-strategy NFT liquidity management platform that allows users to subscribe to the project’s strategy to achieve effective high-yield liquidity management. YIN Finance aims to provide proactive liquidity management services on different public chains and decentralized exchanges. \n\nYIN Finance is deployed on the Ethereum mainnet currently with budding deployment on Polygon, from which a development grant was received, and on Solana.\n\nFor more information about YIN Finance, please visit [https://yin.finance/](https://yin.finance/). \nThis bug bounty program is focused on their smart contracts and app and is focused on preventing:\n\n  - Thefts and freezing of principal of any amount\n  - Thefts and freezing of unclaimed yield of any amount\n  - Theft of governance funds \n  - Governance activity disruption\n  - Website goes down\n  - Leak of user data\n  - Deletion of user data\n  - Access to sensitive pages without authorization",
+      "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n    - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces\n\n__Websites and Apps__\n\n  - Remote Code Execution\n  - Trusting trust/dependency vulnerabilities\n  - Vertical Privilege Escalation\n  - XML External Entities Injection\n  - SQL Injection\n  - LFI/RFI\n  - Horizontal Privilege Escalation\n  - Stored XSS\n  - Reflective XSS with impact\n  - CSRF with impact\n  - Direct object reference\n  - Internal SSRF\n  - Session fixation\n  - Insecure Deserialization\n  - DOM XSS\n  - SSL misconfigurations\n  - SSL/TLS issues (weak crypto, improper setup)\n  - URL redirect\n  - Clickjacking (must be accompanied with PoC)\n  - Misleading Unicode text (e.g. using right to left override characters)",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll web/app bug reports must come with a PoC in order to be considered for a reward. Critical, High and Medium severity smart contract bug reports must come with a PoC in order to be considered for a reward. All smart contract bug reports must come with a suggestion for a fix in order to be considered for a reward. \n\nCritical vulnerabilities are further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team.  However, there is a minimum of __USD 20 000__ for Critical bug reports.\n\nPayouts are handled by the __YIN Finance__ team directly and are denominated in USD. However, payouts are done in __USDT__.",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Code style issues\n  - Sybil attacks\n  - Centralization risks\n\n__Websites and Apps__\n\n  - Theoretical vulnerabilities without any proof or demonstration\n  - Content spoofing / Text injection issues\n  - Self-XSS\n  - Captcha bypass using OCR\n  - CSRF with no security impact (logout CSRF, change language, etc.)\n  - Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”)\n  - Server-side information disclosure such as IPs, server names, and most stack traces\n  - Vulnerabilities used to enumerate or confirm the existence of users or tenants\n  - Vulnerabilities requiring unlikely user actions\n  - URL Redirects (unless combined with another vulnerability to produce a more severe vulnerability)\n  - Lack of SSL/TLS best practices\n  - DDoS vulnerabilities\n  - Attacks requiring privileged access from within the organization\n  - Feature requests\n  - Best practices\n  - Interface design issues \n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": "\nAll smart contracts of YIN Finance can be found at https://github.com/YinFinance. However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n",
+      "impactsBody": null,
+      "immunefiStandard": true,
+      "tags": {
+        "productType": [
+          "DEX",
+          "Staking"
+        ],
+        "projectType": [
+          "NFT"
+        ],
+        "ecosystem": [
+          "BSC",
+          "ETH",
+          "Polygon"
+        ],
+        "programType": [
+          "Smart Contract",
+          "Websites and Applications"
+        ],
+        "language": [
+          "JavaScript",
+          "Solidity"
+        ]
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract",
+          "Websites and Applications"
+        ],
+        "blockchain_rewards": [],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "Up to USD $50,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $10,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $5,000"
+          },
+          {
+            "level": "Low",
+            "payout": "USD $2,000"
+          }
+        ],
+        "web_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $10,000"
+          }
+        ]
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"YIN Finance is a multi-strategy NFT liquidity management platform that allows users to subscribe to the project\\u2019s strategy to achieve effective high-yield liquidity management. YIN Finance aims to provide proactive liquidity management services on different public chains and decentralized exchanges. \"), mdx(\"p\", null, \"YIN Finance is deployed on the Ethereum mainnet currently with budding deployment on Polygon, from which a development grant was received, and on Solana.\"), mdx(\"p\", null, \"For more information about YIN Finance, please visit \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://yin.finance/\"\n  }, \"https://yin.finance/\"), \".\\nThis bug bounty program is focused on their smart contracts and app and is focused on preventing:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Thefts and freezing of principal of any amount\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Thefts and freezing of unclaimed yield of any amount\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Theft of governance funds \"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Governance activity disruption\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Website goes down\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Leak of user data\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Deletion of user data\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Access to sensitive pages without authorization\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>YIN Finance is a multi-strategy NFT liquidity management platform that allows users to subscribe to the project’s strategy to achieve effective high-yield liquidity management. YIN Finance aims to provide proactive liquidity management services on different public chains and decentralized exchanges. </p><p>YIN Finance is deployed on the Ethereum mainnet currently with budding deployment on Polygon, from which a development grant was received, and on Solana.</p><p>For more information about YIN Finance, please visit <a href=\"https://yin.finance/\">https://yin.finance/</a>.\nThis bug bounty program is focused on their smart contracts and app and is focused on preventing:</p><ul><li>Thefts and freezing of principal of any amount</li><li>Thefts and freezing of unclaimed yield of any amount</li><li>Theft of governance funds </li><li>Governance activity disruption</li><li>Website goes down</li><li>Leak of user data</li><li>Deletion of user data</li><li>Access to sensitive pages without authorization</li></ul>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"We are especially interested in receiving and rewarding vulnerabilities of the following types:\"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts and Blockchain\"), \" \"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Re-entrancy\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Logic errors\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including user authentication errors\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Solidity/EVM details not considered\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including integer over-/under-flow\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including rounding errors\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including unhandled exceptions\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Trusting trust/dependency vulnerabilities\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including composability vulnerabilities\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Oracle failure/manipulation\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Novel governance attacks\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Economic/financial attacks\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including flash loan attacks\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Congestion and scalability\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including running out of gas\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including block stuffing\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"including susceptibility to frontrunning\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Consensus failures\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Cryptography problems\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Signature malleability\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Susceptibility to replay attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Weak randomness\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Weak encryption\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Susceptibility to block timestamp manipulation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Missing access controls / unprotected internal or debugging interfaces\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Websites and Apps\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Remote Code Execution\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Trusting trust/dependency vulnerabilities\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Vertical Privilege Escalation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"XML External Entities Injection\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"SQL Injection\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"LFI/RFI\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Horizontal Privilege Escalation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Stored XSS\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Reflective XSS with impact\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"CSRF with impact\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Direct object reference\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Internal SSRF\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Session fixation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Insecure Deserialization\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"DOM XSS\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"SSL misconfigurations\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"SSL/TLS issues (weak crypto, improper setup)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"URL redirect\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Clickjacking (must be accompanied with PoC)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Misleading Unicode text (e.g. using right to left override characters)\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>We are especially interested in receiving and rewarding vulnerabilities of the following types:</p><p><strong>Smart Contracts and Blockchain</strong> </p><ul><li>Re-entrancy</li><li>Logic errors<ul><li>including user authentication errors</li></ul></li><li>Solidity/EVM details not considered<ul><li>including integer over-/under-flow</li><li>including rounding errors</li><li>including unhandled exceptions</li></ul></li><li>Trusting trust/dependency vulnerabilities<ul><li>including composability vulnerabilities</li></ul></li><li>Oracle failure/manipulation<ul><li>Novel governance attacks</li></ul></li><li>Economic/financial attacks<ul><li>including flash loan attacks</li></ul></li><li>Congestion and scalability<ul><li>including running out of gas</li><li>including block stuffing</li><li>including susceptibility to frontrunning</li></ul></li><li>Consensus failures</li><li>Cryptography problems<ul><li>Signature malleability</li><li>Susceptibility to replay attacks</li><li>Weak randomness</li><li>Weak encryption</li></ul></li><li>Susceptibility to block timestamp manipulation</li><li>Missing access controls / unprotected internal or debugging interfaces</li></ul><p><strong>Websites and Apps</strong></p><ul><li>Remote Code Execution</li><li>Trusting trust/dependency vulnerabilities</li><li>Vertical Privilege Escalation</li><li>XML External Entities Injection</li><li>SQL Injection</li><li>LFI/RFI</li><li>Horizontal Privilege Escalation</li><li>Stored XSS</li><li>Reflective XSS with impact</li><li>CSRF with impact</li><li>Direct object reference</li><li>Internal SSRF</li><li>Session fixation</li><li>Insecure Deserialization</li><li>DOM XSS</li><li>SSL misconfigurations</li><li>SSL/TLS issues (weak crypto, improper setup)</li><li>URL redirect</li><li>Clickjacking (must be accompanied with PoC)</li><li>Misleading Unicode text (e.g. using right to left override characters)</li></ul>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Rewards are distributed according to the impact of the vulnerability based on the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\"\n  }, \"Immunefi Vulnerability Severity Classification System V2.2\"), \". This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\"), mdx(\"p\", null, \"All web/app bug reports must come with a PoC in order to be considered for a reward. Critical, High and Medium severity smart contract bug reports must come with a PoC in order to be considered for a reward. All smart contract bug reports must come with a suggestion for a fix in order to be considered for a reward. \"), mdx(\"p\", null, \"Critical vulnerabilities are further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team.  However, there is a minimum of \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USD 20 000\"), \" for Critical bug reports.\"), mdx(\"p\", null, \"Payouts are handled by the \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"YIN Finance\"), \" team directly and are denominated in USD. However, payouts are done in \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USDT\"), \".\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Rewards are distributed according to the impact of the vulnerability based on the <a href=\"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\">Immunefi Vulnerability Severity Classification System V2.2</a>. This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.</p><p>All web/app bug reports must come with a PoC in order to be considered for a reward. Critical, High and Medium severity smart contract bug reports must come with a PoC in order to be considered for a reward. All smart contract bug reports must come with a suggestion for a fix in order to be considered for a reward. </p><p>Critical vulnerabilities are further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team.  However, there is a minimum of <strong>USD 20 000</strong> for Critical bug reports.</p><p>Payouts are handled by the <strong>YIN Finance</strong> team directly and are denominated in USD. However, payouts are done in <strong>USDT</strong>.</p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The following vulnerabilities are excluded from the rewards for this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that the reporter has already exploited themselves, leading to damage\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to leaked keys/credentials\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to privileged addresses (governance, strategist)\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts and Blockchain\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Incorrect data supplied by third party oracles\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Not to exclude oracle manipulation/flash loan attacks\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Basic economic governance attacks (e.g. 51% attack)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Lack of liquidity\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practice critiques\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Code style issues\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Sybil attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Centralization risks\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Websites and Apps\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Theoretical vulnerabilities without any proof or demonstration\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Content spoofing / Text injection issues\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Self-XSS\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Captcha bypass using OCR\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"CSRF with no security impact (logout CSRF, change language, etc.)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as \\u201Chttponly\\u201D)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Server-side information disclosure such as IPs, server names, and most stack traces\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Vulnerabilities used to enumerate or confirm the existence of users or tenants\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Vulnerabilities requiring unlikely user actions\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"URL Redirects (unless combined with another vulnerability to produce a more severe vulnerability)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Lack of SSL/TLS best practices\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"DDoS vulnerabilities\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring privileged access from within the organization\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Feature requests\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practices\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Interface design issues \")), mdx(\"p\", null, \"The following activities are prohibited by this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with pricing oracles or third party smart contracts\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attempting phishing or other social engineering attacks against our employees and/or customers\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any denial of service attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Automated testing of services that generates significant amounts of traffic\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Public disclosure of an unpatched vulnerability in an embargoed bounty\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The following vulnerabilities are excluded from the rewards for this bug bounty program:</p><ul><li>Attacks that the reporter has already exploited themselves, leading to damage</li><li>Attacks requiring access to leaked keys/credentials</li><li>Attacks requiring access to privileged addresses (governance, strategist)</li></ul><p><strong>Smart Contracts and Blockchain</strong></p><ul><li>Incorrect data supplied by third party oracles<ul><li>Not to exclude oracle manipulation/flash loan attacks</li></ul></li><li>Basic economic governance attacks (e.g. 51% attack)</li><li>Lack of liquidity</li><li>Best practice critiques</li><li>Code style issues</li><li>Sybil attacks</li><li>Centralization risks</li></ul><p><strong>Websites and Apps</strong></p><ul><li>Theoretical vulnerabilities without any proof or demonstration</li><li>Content spoofing / Text injection issues</li><li>Self-XSS</li><li>Captcha bypass using OCR</li><li>CSRF with no security impact (logout CSRF, change language, etc.)</li><li>Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”)</li><li>Server-side information disclosure such as IPs, server names, and most stack traces</li><li>Vulnerabilities used to enumerate or confirm the existence of users or tenants</li><li>Vulnerabilities requiring unlikely user actions</li><li>URL Redirects (unless combined with another vulnerability to produce a more severe vulnerability)</li><li>Lack of SSL/TLS best practices</li><li>DDoS vulnerabilities</li><li>Attacks requiring privileged access from within the organization</li><li>Feature requests</li><li>Best practices</li><li>Interface design issues </li></ul><p>The following activities are prohibited by this bug bounty program:</p><ul><li>Any testing with mainnet or public testnet contracts; all testing should be done on private testnets</li><li>Any testing with pricing oracles or third party smart contracts</li><li>Attempting phishing or other social engineering attacks against our employees and/or customers</li><li>Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)</li><li>Any denial of service attacks</li><li>Automated testing of services that generates significant amounts of traffic</li><li>Public disclosure of an unpatched vulnerability in an embargoed bounty</li></ul>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"All smart contracts of YIN Finance can be found at \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/YinFinance\"\n  }, \"https://github.com/YinFinance\"), \". However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>All smart contracts of YIN Finance can be found at <a href=\"https://github.com/YinFinance\">https://github.com/YinFinance</a>. However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.</p>",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}

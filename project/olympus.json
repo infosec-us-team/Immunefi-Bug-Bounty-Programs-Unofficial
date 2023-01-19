@@ -1,0 +1,210 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "olympus",
+      "slug": "olympus",
+      "project": "Olympus",
+      "maxBounty": 3333333,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7csKh5iZlfBPWyb3cJUY5h/c48c6526392aac027d7d1013a612d96a/final_logo_01_07_22_OLYMPUS.png",
+      "launchDate": "2022-01-06T11:45-06:00",
+      "updatedDate": "2022-12-06T06:18:20.619Z",
+      "kyc": false,
+      "rewards": [
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "Up to USD $3,333,333",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "critical",
+          "payout": "Up to USD $3,333,333",
+          "pocRequired": true
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "1hBIRu6CtqnMJc80hskjmU",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x31f8cc382c9898b273eff4e0b7626a6987c846e8",
+          "description": "Olympus Treasury"
+        },
+        {
+          "id": "18yqNYmieYg3y1JMmxRioe",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x1c21F8EA7e39E2BA00BC12d2968D63F4acb38b7A",
+          "description": "Authority"
+        },
+        {
+          "id": "2rMVApViz3ee1ReTpe2skH",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x9A315BdF513367C0377FB36545857d12e85813Ef",
+          "description": "Treasury v2"
+        },
+        {
+          "id": "5WnJNoWXRXXaZFeFhjVKk5",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x04906695D6D12CF5459975d7C3C03356E4Ccd460",
+          "description": "sOHM v2"
+        },
+        {
+          "id": "7syzpfzs4xu7jGXtN2h9s0",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x64aa3364F17a4D01c6f1751Fd97C2BD3D7e7f1D5",
+          "description": "OHM v2"
+        },
+        {
+          "id": "1NqPfWlIvHb0agE5xDv6hi",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0xeeeb97A127a342656191E0313DF33D58D06B2E05",
+          "description": "Distributor v2"
+        },
+        {
+          "id": "2PA3GGrap7GgVbcj6HoSOh",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0xB63cac384247597756545b500253ff8E607a8020",
+          "description": "Staking v2"
+        },
+        {
+          "id": "6mNeOhPLlDLmCf7dl1vd2m",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x0ab87046fBb341D058F17CBC4c1133F25a20a52f",
+          "description": "gOHM"
+        },
+        {
+          "id": "1nwuA3lV3bbRfJH41gLQM1",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x9025046c6fb25Fb39e720d97a8FD881ED69a1Ef6",
+          "description": "Bond Depo v2"
+        },
+        {
+          "id": "58olmIrcZQhK2UdVLVTO9A",
+          "type": "websites_and_applications",
+          "url": "https://app.olympusdao.finance/#/dashboard",
+          "description": null
+        }
+      ],
+      "impacts": [
+        {
+          "id": "7FSN4Y65BAIZsietfMfrf",
+          "title": "Loss of treasury funds",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "h9aqdI1np1IAY33stHuOX",
+          "title": "Loss of treasury funds",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "vpZPhrCOBcBGbv3EURzp4",
+          "title": "Loss of user funds",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "2tog1ZicjEsq4o4Ye9asx7",
+          "title": "Loss of user funds",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "6x2gSGdLxH9GYLy88IFb5S",
+          "title": "Loss of bond funds",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "6AiUYuqW3ynIKlRAkORb3I",
+          "title": "Loss of bond funds",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        }
+      ],
+      "programOverview": "Olympus is a decentralized reserve currency protocol based on the OHM token. Each OHM token is backed by a basket of assets (e.g. DAI, FRAX) in the Olympus treasury, giving it an intrinsic value. Olympus also introduces unique economic and game-theoretic dynamics into the market through staking and bonding. \n\nFor more information about Olympus, please visit \n[https://www.olympusdao.finance/](https://www.olympusdao.finance/). \n\nThis bug bounty program is focused on their smart contracts and app and is focused on preventing:\n  - Loss of treasury funds\n  - Loss of user funds\n  - Loss of bond funds\n\nThis bug bounty program is managed by OlympusDAO under the provisions of [OIP-38](https://forum.olympusdao.finance/d/197-oip-38-formalize-partnership-with-immunefi-for-the-bug-bounty-program), an extension of [OIP-17](https://forum.olympusdao.finance/d/72-oip-17-creation-funding-of-bug-bounty-program) and [OIP-34](https://forum.olympusdao.finance/d/165-oip-34-adding-language-to-tier-1-of-bug-bounty). __Note that this bounty is not available to Olympus Contributors, who should go through the internal process found [here]__(https://discord.com/channels/@me/936109546143907911/1047907929413648476).",
+      "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\n  - Any vulnerability that directly has an impact in scope.\n\n__Websites and Applications__\n\n  - Any vulnerability that directly has an impact in scope.",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll bug reports must come with a PoC in order to be considered for a reward. Smart contract bug reports must have the PoC be fully runnable.\n\nCritical vulnerabilities are further subcategorized into four tiers:\n\n  - Tier 1: For bugs/exploits which would lead to a loss of bond funds or a loss of user funds,a reward amount equal to the potential loss of funds up to __USD 333 333 (paid in OHM)__ is provided.\n\n  - Tier 2: For bugs/exploits which would lead to a loss of treasury funds, a reward amount equal to the potential loss of funds up to __USD 3,333,333 (paid in OHM)__  is provided.\n\n  - Tier 3: For bugs/exploits which would lead to an incorrect rebase amount, a reward amount equal to the potential loss of funds up to __USD 33,333 (paid in OHM)__ is provided.\n\n  - Tier 4: The Bug Bounty Management team may from time to time, at its discretion, issue an award of up to $16,942.00 for submissions which do not qualify for bounties under other tiers, but which the team feels nonetheless are high effort, high quality, and of material use in improving Olympus’ codebase. Note that this bounty is not available to Olympus contributors, who should contact the Bug Bounty Management team directly for a bounty if they have found a bug or inefficiency that is within Olympus’ codebase but outside of their mandate as a contributor. Further note that this bounty will not be awarded regularly. It is meant only for extremely high quality submissions which have significant material impacts to Olympus. No person submitting a bounty should assume that they are entitled to this or will be awarded it, as the bar to qualify for it will be very high.\n\nFor vulnerabilities of websites and applications, only bugs that lead to direct financial damage listed in the Impacts in Scope are accepted and are categorized as critical. All others are not accepted. An example of an acceptable vulnerability in this category would be [https://rekt.news/badger-rekt/](https://rekt.news/badger-rekt/).\n\nBugs that have been previously disclosed, either publicly or in an earlier bug submission, are ineligible for a reward.\n\nPayouts are handled by the __Olympus DAO__ directly and are denominated in USD, under the terms set out in OIP-38. However, payouts are done in __OHM__.",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n  - Attacks requiring physical access to the victim device\n  - Attacks requiring access to the local network of the victim\n  - Loss of gas costs or funds will not be considered ‘loss of funds’\n\n__Smart Contracts and Blockchain__\n\n  - Anything that doesn’t directly lead to an impact in scope. \n  - Centralization risks\n\n__Websites and Applications__\n\n  - Anything that doesn’t directly lead to an impact in scope. \n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": "All smart contracts of Olympus can be found at [https://github.com/OlympusDAO/olympus-contracts](https://github.com/OlympusDAO/olympus-contracts). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n",
+      "impactsBody": null,
+      "immunefiStandard": true,
+      "tags": {
+        "productType": [
+          "Stablecoin",
+          "Staking"
+        ],
+        "projectType": [
+          "Defi"
+        ],
+        "ecosystem": [
+          "ETH"
+        ],
+        "programType": [
+          "Smart Contract",
+          "Websites and Applications"
+        ],
+        "language": [
+          "JavaScript",
+          "Solidity"
+        ]
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract",
+          "Websites and Applications"
+        ],
+        "blockchain_rewards": [],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "Up to USD $3,333,333"
+          }
+        ],
+        "web_rewards": [
+          {
+            "level": "Critical",
+            "payout": "Up to USD $3,333,333"
+          }
+        ]
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Olympus is a decentralized reserve currency protocol based on the OHM token. Each OHM token is backed by a basket of assets (e.g. DAI, FRAX) in the Olympus treasury, giving it an intrinsic value. Olympus also introduces unique economic and game-theoretic dynamics into the market through staking and bonding. \"), mdx(\"p\", null, \"For more information about Olympus, please visit\\n\", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://www.olympusdao.finance/\"\n  }, \"https://www.olympusdao.finance/\"), \". \"), mdx(\"p\", null, \"This bug bounty program is focused on their smart contracts and app and is focused on preventing:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Loss of treasury funds\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Loss of user funds\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Loss of bond funds\")), mdx(\"p\", null, \"This bug bounty program is managed by OlympusDAO under the provisions of \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://forum.olympusdao.finance/d/197-oip-38-formalize-partnership-with-immunefi-for-the-bug-bounty-program\"\n  }, \"OIP-38\"), \", an extension of \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://forum.olympusdao.finance/d/72-oip-17-creation-funding-of-bug-bounty-program\"\n  }, \"OIP-17\"), \" and \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://forum.olympusdao.finance/d/165-oip-34-adding-language-to-tier-1-of-bug-bounty\"\n  }, \"OIP-34\"), \". \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Note that this bounty is not available to Olympus Contributors, who should go through the internal process found \", \"[here]\"), \"(\", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://discord.com/channels/@me/936109546143907911/1047907929413648476\"\n  }, \"https://discord.com/channels/@me/936109546143907911/1047907929413648476\"), \").\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Olympus is a decentralized reserve currency protocol based on the OHM token. Each OHM token is backed by a basket of assets (e.g. DAI, FRAX) in the Olympus treasury, giving it an intrinsic value. Olympus also introduces unique economic and game-theoretic dynamics into the market through staking and bonding. </p><p>For more information about Olympus, please visit\n<a href=\"https://www.olympusdao.finance/\">https://www.olympusdao.finance/</a>. </p><p>This bug bounty program is focused on their smart contracts and app and is focused on preventing:</p><ul><li>Loss of treasury funds</li><li>Loss of user funds</li><li>Loss of bond funds</li></ul><p>This bug bounty program is managed by OlympusDAO under the provisions of <a href=\"https://forum.olympusdao.finance/d/197-oip-38-formalize-partnership-with-immunefi-for-the-bug-bounty-program\">OIP-38</a>, an extension of <a href=\"https://forum.olympusdao.finance/d/72-oip-17-creation-funding-of-bug-bounty-program\">OIP-17</a> and <a href=\"https://forum.olympusdao.finance/d/165-oip-34-adding-language-to-tier-1-of-bug-bounty\">OIP-34</a>. <strong>Note that this bounty is not available to Olympus Contributors, who should go through the internal process found <!-- -->[here]</strong>(<a href=\"https://discord.com/channels/@me/936109546143907911/1047907929413648476\">https://discord.com/channels/@me/936109546143907911/1047907929413648476</a>).</p>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"We are especially interested in receiving and rewarding vulnerabilities of the following types:\"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts and Blockchain\"), \" \"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any vulnerability that directly has an impact in scope.\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Websites and Applications\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any vulnerability that directly has an impact in scope.\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>We are especially interested in receiving and rewarding vulnerabilities of the following types:</p><p><strong>Smart Contracts and Blockchain</strong> </p><ul><li>Any vulnerability that directly has an impact in scope.</li></ul><p><strong>Websites and Applications</strong></p><ul><li>Any vulnerability that directly has an impact in scope.</li></ul>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Rewards are distributed according to the impact of the vulnerability based on the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\"\n  }, \"Immunefi Vulnerability Severity Classification System V2.2\"), \". This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\"), mdx(\"p\", null, \"All bug reports must come with a PoC in order to be considered for a reward. Smart contract bug reports must have the PoC be fully runnable.\"), mdx(\"p\", null, \"Critical vulnerabilities are further subcategorized into four tiers:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"p\", {\n    parentName: \"li\"\n  }, \"Tier 1: For bugs/exploits which would lead to a loss of bond funds or a loss of user funds,a reward amount equal to the potential loss of funds up to \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USD 333 333 (paid in OHM)\"), \" is provided.\")), mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"p\", {\n    parentName: \"li\"\n  }, \"Tier 2: For bugs/exploits which would lead to a loss of treasury funds, a reward amount equal to the potential loss of funds up to \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USD 3,333,333 (paid in OHM)\"), \"  is provided.\")), mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"p\", {\n    parentName: \"li\"\n  }, \"Tier 3: For bugs/exploits which would lead to an incorrect rebase amount, a reward amount equal to the potential loss of funds up to \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USD 33,333 (paid in OHM)\"), \" is provided.\")), mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"p\", {\n    parentName: \"li\"\n  }, \"Tier 4: The Bug Bounty Management team may from time to time, at its discretion, issue an award of up to $16,942.00 for submissions which do not qualify for bounties under other tiers, but which the team feels nonetheless are high effort, high quality, and of material use in improving Olympus\\u2019 codebase. Note that this bounty is not available to Olympus contributors, who should contact the Bug Bounty Management team directly for a bounty if they have found a bug or inefficiency that is within Olympus\\u2019 codebase but outside of their mandate as a contributor. Further note that this bounty will not be awarded regularly. It is meant only for extremely high quality submissions which have significant material impacts to Olympus. No person submitting a bounty should assume that they are entitled to this or will be awarded it, as the bar to qualify for it will be very high.\"))), mdx(\"p\", null, \"For vulnerabilities of websites and applications, only bugs that lead to direct financial damage listed in the Impacts in Scope are accepted and are categorized as critical. All others are not accepted. An example of an acceptable vulnerability in this category would be \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://rekt.news/badger-rekt/\"\n  }, \"https://rekt.news/badger-rekt/\"), \".\"), mdx(\"p\", null, \"Bugs that have been previously disclosed, either publicly or in an earlier bug submission, are ineligible for a reward.\"), mdx(\"p\", null, \"Payouts are handled by the \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Olympus DAO\"), \" directly and are denominated in USD, under the terms set out in OIP-38. However, payouts are done in \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"OHM\"), \".\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Rewards are distributed according to the impact of the vulnerability based on the <a href=\"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\">Immunefi Vulnerability Severity Classification System V2.2</a>. This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.</p><p>All bug reports must come with a PoC in order to be considered for a reward. Smart contract bug reports must have the PoC be fully runnable.</p><p>Critical vulnerabilities are further subcategorized into four tiers:</p><ul><li><p>Tier 1: For bugs/exploits which would lead to a loss of bond funds or a loss of user funds,a reward amount equal to the potential loss of funds up to <strong>USD 333 333 (paid in OHM)</strong> is provided.</p></li><li><p>Tier 2: For bugs/exploits which would lead to a loss of treasury funds, a reward amount equal to the potential loss of funds up to <strong>USD 3,333,333 (paid in OHM)</strong>  is provided.</p></li><li><p>Tier 3: For bugs/exploits which would lead to an incorrect rebase amount, a reward amount equal to the potential loss of funds up to <strong>USD 33,333 (paid in OHM)</strong> is provided.</p></li><li><p>Tier 4: The Bug Bounty Management team may from time to time, at its discretion, issue an award of up to $16,942.00 for submissions which do not qualify for bounties under other tiers, but which the team feels nonetheless are high effort, high quality, and of material use in improving Olympus’ codebase. Note that this bounty is not available to Olympus contributors, who should contact the Bug Bounty Management team directly for a bounty if they have found a bug or inefficiency that is within Olympus’ codebase but outside of their mandate as a contributor. Further note that this bounty will not be awarded regularly. It is meant only for extremely high quality submissions which have significant material impacts to Olympus. No person submitting a bounty should assume that they are entitled to this or will be awarded it, as the bar to qualify for it will be very high.</p></li></ul><p>For vulnerabilities of websites and applications, only bugs that lead to direct financial damage listed in the Impacts in Scope are accepted and are categorized as critical. All others are not accepted. An example of an acceptable vulnerability in this category would be <a href=\"https://rekt.news/badger-rekt/\">https://rekt.news/badger-rekt/</a>.</p><p>Bugs that have been previously disclosed, either publicly or in an earlier bug submission, are ineligible for a reward.</p><p>Payouts are handled by the <strong>Olympus DAO</strong> directly and are denominated in USD, under the terms set out in OIP-38. However, payouts are done in <strong>OHM</strong>.</p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The following vulnerabilities are excluded from the rewards for this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that the reporter has already exploited themselves, leading to damage\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to leaked keys/credentials\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to privileged addresses (governance, strategist)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring physical access to the victim device\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to the local network of the victim\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Loss of gas costs or funds will not be considered \\u2018loss of funds\\u2019\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts and Blockchain\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Anything that doesn\\u2019t directly lead to an impact in scope. \"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Centralization risks\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Websites and Applications\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Anything that doesn\\u2019t directly lead to an impact in scope. \")), mdx(\"p\", null, \"The following activities are prohibited by this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with pricing oracles or third party smart contracts\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attempting phishing or other social engineering attacks against our employees and/or customers\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any denial of service attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Automated testing of services that generates significant amounts of traffic\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Public disclosure of an unpatched vulnerability in an embargoed bounty\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The following vulnerabilities are excluded from the rewards for this bug bounty program:</p><ul><li>Attacks that the reporter has already exploited themselves, leading to damage</li><li>Attacks requiring access to leaked keys/credentials</li><li>Attacks requiring access to privileged addresses (governance, strategist)</li><li>Attacks requiring physical access to the victim device</li><li>Attacks requiring access to the local network of the victim</li><li>Loss of gas costs or funds will not be considered ‘loss of funds’</li></ul><p><strong>Smart Contracts and Blockchain</strong></p><ul><li>Anything that doesn’t directly lead to an impact in scope. </li><li>Centralization risks</li></ul><p><strong>Websites and Applications</strong></p><ul><li>Anything that doesn’t directly lead to an impact in scope. </li></ul><p>The following activities are prohibited by this bug bounty program:</p><ul><li>Any testing with mainnet or public testnet contracts; all testing should be done on private testnets</li><li>Any testing with pricing oracles or third party smart contracts</li><li>Attempting phishing or other social engineering attacks against our employees and/or customers</li><li>Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)</li><li>Any denial of service attacks</li><li>Automated testing of services that generates significant amounts of traffic</li><li>Public disclosure of an unpatched vulnerability in an embargoed bounty</li></ul>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"All smart contracts of Olympus can be found at \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/OlympusDAO/olympus-contracts\"\n  }, \"https://github.com/OlympusDAO/olympus-contracts\"), \". However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>All smart contracts of Olympus can be found at <a href=\"https://github.com/OlympusDAO/olympus-contracts\">https://github.com/OlympusDAO/olympus-contracts</a>. However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.</p>",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}

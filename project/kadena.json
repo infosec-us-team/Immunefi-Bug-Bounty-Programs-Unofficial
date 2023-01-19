@@ -1,0 +1,555 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "kadena",
+      "slug": "kadena",
+      "project": "Kadena",
+      "maxBounty": 250000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2VoJFlCBCrBw3zjzABlRd7/30b4a49722e8496665cc39d16fbea7ff/Kadena_logo.jpeg",
+      "launchDate": "2022-01-08T16:00-06:00",
+      "updatedDate": "2022-11-21T15:40:01.967Z",
+      "kyc": true,
+      "rewards": [
+        {
+          "assetType": "blockchain_dlt",
+          "level": "critical",
+          "payout": "USD $250,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "high",
+          "payout": "USD $10,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "medium",
+          "payout": "USD $1,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "USD $250,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "high",
+          "payout": "USD $10,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "USD $1,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "critical",
+          "payout": "USD $250,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "high",
+          "payout": "USD $10,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "medium",
+          "payout": "USD $1,000",
+          "pocRequired": true
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "4dEoQOB3PLEU0FWnOVlgya",
+          "type": "smart_contract",
+          "url": "https://github.com/kadena-io/chainweb-node/tree/master/pact/coin-contract/v2",
+          "description": "Coin"
+        },
+        {
+          "id": "7byRuoTTMIEEpZdPweVoC7",
+          "type": "smart_contract",
+          "url": "https://github.com/kadena-io/chainweb-node/blob/master/pact/coin-contract/v2/fungible-v2.pact",
+          "description": "Fungible"
+        },
+        {
+          "id": "X0Rn0e8PSPT0rqZIzJFC6",
+          "type": "smart_contract",
+          "url": "https://balance.chainweb.com/modules.html?server=api.chainweb.com&module=guards1&chain=1",
+          "description": "Guards1"
+        },
+        {
+          "id": "kcUM31P5m8nmLzB11C0yP",
+          "type": "smart_contract",
+          "url": "https://balance.chainweb.com/modules.html?server=api.chainweb.com&module=gas-payer-v1&chain=1",
+          "description": "Gas-payer"
+        },
+        {
+          "id": "llx6Bylv8I1yGoLzWiKFf",
+          "type": "smart_contract",
+          "url": "https://github.com/kadena-io/marmalade",
+          "description": "Marmalade (NFT)"
+        },
+        {
+          "id": "rQD1Rq7w2bNSb5tS2wtBO",
+          "type": "smart_contract",
+          "url": "https://github.com/kadena-io/pact",
+          "description": "Pact (Smart Contract Language)"
+        },
+        {
+          "id": "44xR5tWVvnIHDachnoE8bt",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/kadena-io/chainweb-node",
+          "description": "Chainweb-node"
+        },
+        {
+          "id": "6qUYQ7RsL9LrQboQ08iqU7",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/kadena-io/chainweaver",
+          "description": "Chainweaver"
+        },
+        {
+          "id": "5j7VSjWCVgEo76NkfYCvty",
+          "type": "websites_and_applications",
+          "url": "https://chainweaver.kadena.network/",
+          "description": "Chainweaver Web Wallet"
+        },
+        {
+          "id": "6dDsiru4FK0hyTVPtzXJAg",
+          "type": "websites_and_applications",
+          "url": "https://kadena-1.gitbook.io/welcome-to-gitbook/manage-your-kda/wallets",
+          "description": "Chainweaver Main App"
+        }
+      ],
+      "impacts": [
+        {
+          "id": "3wOsqCIoNVLJsairoWiYRH",
+          "title": "Network not being able to confirm new transactions (Total network shutdown)",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "2CiDNp0QDUNGghs26KcqWB",
+          "title": "Unintended permanent chain split requiring hard fork (Network partition requiring hard fork)",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "5Bwx5iezUmxcFFVTmshGRk",
+          "title": "Direct loss of funds",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "hTWqziKrb1go66IOsw9JR",
+          "title": "Permanent freezing of funds (fix requires hardfork)",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "WTF4xt9FRdAZbm7yFY6oe",
+          "title": "Exploits via P2P API requests - Manipulating the content of the Pact (sqlite) database of a node such that those are not consistent with block validation results",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "2cOYOv9HfSet8arb0u9vO",
+          "title": "Exploits via P2P API requests - Causing permanent network forks of a larger number (>25%) of independent nodes in the network",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "2JW17wIMfc5IVUksReL3ro",
+          "title": "Network shut down where network stops processing blocks",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "1WUKAw3hHAn2fRSWBQqL1k",
+          "title": "Any governance voting result manipulation",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "59zhxmw9e3zZQ5afLXJsF2",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "2SpEhDD55SDhXpW18a2bW4",
+          "title": "Permanent freezing of funds",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "1Hmpww8tbwrldn8Nz4xAOM",
+          "title": "Insolvency",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "5hMagD3jLqBXSI4gglYD2k",
+          "title": "Execute arbitrary system commands",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "2jmRFV06bSASF4g5Nak4FB",
+          "title": "Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys(this does not include non-sensitive environment variables, open source code, or usernames)",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "2b3PjrmPLyJiVo0dua67Lc",
+          "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc.",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "2pdssZCMd1TAW7VFCvT4jL",
+          "title": "Subdomain takeover with already-connected wallet interaction",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "3VIH8ujSojCsrnTaJ7bsCy",
+          "title": "Direct theft of user funds",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "aM86I1TRBdlRZqWE3DKhg",
+          "title": "Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "4mV0Ll8VmQ1zlPhgBgUtHE",
+          "title": "Redirected funds by address modification",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "4ihYgd5yA7m0YmXbzEiIuL",
+          "title": "Leak of unencrypted private keys controlling mainnet funds",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "3eNQryH95xnfuEjfJcWJQe",
+          "title": "Unintended chain split (Network partition)",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "5splyLSOC7QAUsjtqi6oEy",
+          "title": "Transient consensus failures",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "7E2TMfX9KOpSBi83n3MCIp",
+          "title": "Exploits via P2P API requests - Manipulating the content of the chain database (rocksdb) of a node",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "4Wf0m1gtCYHODkI66JDN36",
+          "title": "Exploits via P2P API requests - Deleting (or partially deleting) the content of the chain database (rocksdb) of a node",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "210f4dTvQmrg8rPnRYKZiE",
+          "title": "Exploits via P2P API requests - Causing lasting (longer than several minutes) network partitions",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "4y87icL7BhmT4Ys4Ke36B",
+          "title": "Exploits via P2P API requests - Preventing a larger number independent nodes from processing new valid blocks",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "5lHT0N0wgQrYJ55a9dc74L",
+          "title": "Exploits via P2P API requests - Causing forks in the network that are supported by a larger number of independent nodes that persist longer than just a few dozen block in depths",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "26uBmaJ0B7IIfLqemMR6dE",
+          "title": "Exploits via P2P API requests - Crashing a larger number of independent nodes",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "5gsArXQo9GxdOpil0NwAzD",
+          "title": "Theft of unclaimed yield",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "5IdP94d5sH8TlRZyJzxsUW",
+          "title": "Permanent freezing of unclaimed yield",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "73LxEuQHQVhZg5UJ8uRitF",
+          "title": "Temporary freezing of funds",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "76VyP3nCvheQudPEzmX3v7",
+          "title": "Injecting/modifying the static content on the target application without Javascript (Persistent) such as HTML injection without Javascript, replacing existing text with arbitrary text, arbitrary file uploads, etc.",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "1EvGMVtjb8MzhMZR0giJ8S",
+          "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as email or password of the victim, etc.",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "5gNptgYh7FEjHIn5ZpkGvU",
+          "title": "Improperly disclosing confidential user information such as email address, phone number, physical address, etc.",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "2hydgAGwFD9UxE0nQA48qN",
+          "title": "Taking down the application/website",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "2wcFsR21UjmWYbIRjMi6K1",
+          "title": "Subdomain takeover without already-connected wallet interaction",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "3dfAtXABqQjzQXV7CTwXlJ",
+          "title": "Leak of keys and/or credentials that allow access to private systems",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "DtpDuXyN34fhnluiCyMXz",
+          "title": "High compute consumption by validator/mining nodes",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        },
+        {
+          "id": "6yaZsr70aZWNvVpAKJxk2R",
+          "title": "DoS of greater than 30% of validator or miner nodes and does not shut down the network",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        },
+        {
+          "id": "44iKZhmk3lbbWcXUdmNkH",
+          "title": "Exploits via P2P API requests - Deleting (or partially deleting) the Pact (sqlite) data of a node",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        },
+        {
+          "id": "328HKmCHbgJ6ycEsYEj9yI",
+          "title": "Exploits via P2P API requests - Permanently preventing nodes from processing any transactions",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        },
+        {
+          "id": "1hsrregoyv5U0si0sjDR64",
+          "title": "Exploits via P2P API requests - Preventing individual nodes from processing new valid blocks",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        },
+        {
+          "id": "2Kld8fbdC4Kj1ipzse3P4Y",
+          "title": "Exploits via P2P API requests - Permanently preventing mining nodes from including transactions into blocks",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        },
+        {
+          "id": "1o3TPINWQvxBWH9WGVAvM4",
+          "title": "Exploits via P2P API requests - Crashing individual nodes",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        },
+        {
+          "id": "2MrGYyPTjadUWHw6YtS2dD",
+          "title": "Smart contract unable to operate due to lack of funds",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "6cUVC1qstuKLONoI0gbOgV",
+          "title": "Block stuffing for profit",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "68aHNnzPR2EBvbNfDHx4WH",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "6jZUKjImhWhDaNEnxkPK4I",
+          "title": "Theft of gas",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "2S54WWkPJ212FoxLgtF1uU",
+          "title": "Unbounded gas consumption",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "3sZrBD7zCwL4FuMpF0vzUs",
+          "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as changing the first/last name of user, or en/disabling notification",
+          "type": "websites_and_applications",
+          "severity": "medium"
+        },
+        {
+          "id": "1Zo4Fi40HZumaqDLkRprzC",
+          "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data",
+          "type": "websites_and_applications",
+          "severity": "medium"
+        },
+        {
+          "id": "3v8KA4CG9zEwUpL7vguXmw",
+          "title": "Redirecting users to malicious websites (Open Redirect)",
+          "type": "websites_and_applications",
+          "severity": "medium"
+        }
+      ],
+      "programOverview": "Kadena was founded on the idea that blockchain could revolutionize how the world interacts and transacts. But to get to mass adoption, chain technology and the ecosystem connecting it to the business world needed to be reimagined from the ground up. Our founders built a proprietary chain architecture and created the tools to make blockchain work for business – at speed, scale, and energy efficiency previously thought unachievable.\n\nFor more information about Kadena, please visit [https://kadena.io/](https://kadena.io/). \n\nThis bug bounty program is focused on their smart contracts, blockchain, websites and application and is focused on preventing:\n\n  - Network Shutdown\n  - Website goes down\n  - DoS attacks on node software",
+      "prioritizedVulnerabilities": "Refer to __Impacts in Scope__ section above.",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll web/app bug reports must come with a PoC (Proof of Concept document) with an end result that impacts an asset-in-scope in order to be considered for a reward. All Medium, High and Critical Smart Contract bug reports require a PoC to be eligible for a reward. A valid PoC is demonstrated privately, for example using a private devnet, and must clearly communicate the nature of the flaw, how it was discovered, and how to exercise the flaw within that private environment. It must be sufficiently well documented to allow reproduction of the findings by a third party. Explanations and statements alone are not accepted as PoC: code is required. Any bug report that has already been run on a public facing network such as mainnet or testnet will not be eligible for payout.\n\nThe following vulnerabilities are not eligible for a reward:\n\n  - Congestion and scalability vulnerabilities\n\nPayouts are handled by the __Kadena team__ directly and are denominated in USD. However, payouts are done in __KDA and stablecoins__, with the choice of the ratio at the discretion of the team. In addition, as part of claiming a bug bounty, whitehats must complete a KYC process from SumSub and submit relevant tax documents requested by the Kadena team.",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n\n__Websites and Apps__\n\n  - Theoretical vulnerabilities without any proof or demonstration\n  - Content spoofing / Text injection issues\n  - Self-XSS\n  - Captcha bypass using OCR\n  - CSRF with no security impact (logout CSRF, change language, etc.)\n  - Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”)\n  - Server-side information disclosure such as IPs, server names, and most stack traces\n  - Vulnerabilities used to enumerate or confirm the existence of users or tenants\n  - Vulnerabilities requiring unlikely user actions\n  - URL Redirects (unless combined with another vulnerability to produce a more severe vulnerability)\n  - Lack of SSL/TLS best practices\n  - DDoS vulnerabilities\n  - Attacks requiring privileged access from within the organization\n  - Feature requests\n  - Best practices\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private devnet\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": "All smart contracts of Kadena can be found at https://github.com/kadena-io. However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nKadena’s API specification can be found at [https://api.chainweb.com/openapi/](https://api.chainweb.com/openapi/) \n",
+      "impactsBody": null,
+      "immunefiStandard": true,
+      "tags": {
+        "productType": [
+          "AMM",
+          "DEX"
+        ],
+        "projectType": [
+          "Blockchain",
+          "Defi",
+          "NFT"
+        ],
+        "ecosystem": [
+          "Polkadot",
+          "Terra"
+        ],
+        "programType": [
+          "Blockchain/DLT",
+          "Smart Contract",
+          "Websites and Applications"
+        ],
+        "language": [
+          "JavaScript"
+        ]
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract",
+          "Websites and Applications",
+          "Blockchain/DLT"
+        ],
+        "blockchain_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $250,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $10,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $1,000"
+          }
+        ],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $250,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $10,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $1,000"
+          }
+        ],
+        "web_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $250,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $10,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $1,000"
+          }
+        ]
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Kadena was founded on the idea that blockchain could revolutionize how the world interacts and transacts. But to get to mass adoption, chain technology and the ecosystem connecting it to the business world needed to be reimagined from the ground up. Our founders built a proprietary chain architecture and created the tools to make blockchain work for business \\u2013 at speed, scale, and energy efficiency previously thought unachievable.\"), mdx(\"p\", null, \"For more information about Kadena, please visit \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://kadena.io/\"\n  }, \"https://kadena.io/\"), \". \"), mdx(\"p\", null, \"This bug bounty program is focused on their smart contracts, blockchain, websites and application and is focused on preventing:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Network Shutdown\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Website goes down\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"DoS attacks on node software\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Kadena was founded on the idea that blockchain could revolutionize how the world interacts and transacts. But to get to mass adoption, chain technology and the ecosystem connecting it to the business world needed to be reimagined from the ground up. Our founders built a proprietary chain architecture and created the tools to make blockchain work for business – at speed, scale, and energy efficiency previously thought unachievable.</p><p>For more information about Kadena, please visit <a href=\"https://kadena.io/\">https://kadena.io/</a>. </p><p>This bug bounty program is focused on their smart contracts, blockchain, websites and application and is focused on preventing:</p><ul><li>Network Shutdown</li><li>Website goes down</li><li>DoS attacks on node software</li></ul>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Refer to \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Impacts in Scope\"), \" section above.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Refer to <strong>Impacts in Scope</strong> section above.</p>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Rewards are distributed according to the impact of the vulnerability based on the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\"\n  }, \"Immunefi Vulnerability Severity Classification System V2.2\"), \". This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\"), mdx(\"p\", null, \"All web/app bug reports must come with a PoC (Proof of Concept document) with an end result that impacts an asset-in-scope in order to be considered for a reward. All Medium, High and Critical Smart Contract bug reports require a PoC to be eligible for a reward. A valid PoC is demonstrated privately, for example using a private devnet, and must clearly communicate the nature of the flaw, how it was discovered, and how to exercise the flaw within that private environment. It must be sufficiently well documented to allow reproduction of the findings by a third party. Explanations and statements alone are not accepted as PoC: code is required. Any bug report that has already been run on a public facing network such as mainnet or testnet will not be eligible for payout.\"), mdx(\"p\", null, \"The following vulnerabilities are not eligible for a reward:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Congestion and scalability vulnerabilities\")), mdx(\"p\", null, \"Payouts are handled by the \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Kadena team\"), \" directly and are denominated in USD. However, payouts are done in \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"KDA and stablecoins\"), \", with the choice of the ratio at the discretion of the team. In addition, as part of claiming a bug bounty, whitehats must complete a KYC process from SumSub and submit relevant tax documents requested by the Kadena team.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Rewards are distributed according to the impact of the vulnerability based on the <a href=\"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\">Immunefi Vulnerability Severity Classification System V2.2</a>. This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.</p><p>All web/app bug reports must come with a PoC (Proof of Concept document) with an end result that impacts an asset-in-scope in order to be considered for a reward. All Medium, High and Critical Smart Contract bug reports require a PoC to be eligible for a reward. A valid PoC is demonstrated privately, for example using a private devnet, and must clearly communicate the nature of the flaw, how it was discovered, and how to exercise the flaw within that private environment. It must be sufficiently well documented to allow reproduction of the findings by a third party. Explanations and statements alone are not accepted as PoC: code is required. Any bug report that has already been run on a public facing network such as mainnet or testnet will not be eligible for payout.</p><p>The following vulnerabilities are not eligible for a reward:</p><ul><li>Congestion and scalability vulnerabilities</li></ul><p>Payouts are handled by the <strong>Kadena team</strong> directly and are denominated in USD. However, payouts are done in <strong>KDA and stablecoins</strong>, with the choice of the ratio at the discretion of the team. In addition, as part of claiming a bug bounty, whitehats must complete a KYC process from SumSub and submit relevant tax documents requested by the Kadena team.</p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The following vulnerabilities are excluded from the rewards for this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that the reporter has already exploited themselves, leading to damage\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to leaked keys/credentials\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to privileged addresses (governance, strategist)\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts and Blockchain\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Incorrect data supplied by third party oracles\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Not to exclude oracle manipulation/flash loan attacks\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Basic economic governance attacks (e.g. 51% attack)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Lack of liquidity\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practice critiques\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Sybil attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Centralization risks\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Websites and Apps\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Theoretical vulnerabilities without any proof or demonstration\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Content spoofing / Text injection issues\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Self-XSS\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Captcha bypass using OCR\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"CSRF with no security impact (logout CSRF, change language, etc.)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as \\u201Chttponly\\u201D)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Server-side information disclosure such as IPs, server names, and most stack traces\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Vulnerabilities used to enumerate or confirm the existence of users or tenants\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Vulnerabilities requiring unlikely user actions\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"URL Redirects (unless combined with another vulnerability to produce a more severe vulnerability)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Lack of SSL/TLS best practices\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"DDoS vulnerabilities\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring privileged access from within the organization\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Feature requests\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practices\")), mdx(\"p\", null, \"The following activities are prohibited by this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with mainnet or public testnet contracts; all testing should be done on private devnet\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with pricing oracles or third party smart contracts\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attempting phishing or other social engineering attacks against our employees and/or customers\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any denial of service attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Automated testing of services that generates significant amounts of traffic\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Public disclosure of an unpatched vulnerability in an embargoed bounty\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The following vulnerabilities are excluded from the rewards for this bug bounty program:</p><ul><li>Attacks that the reporter has already exploited themselves, leading to damage</li><li>Attacks requiring access to leaked keys/credentials</li><li>Attacks requiring access to privileged addresses (governance, strategist)</li></ul><p><strong>Smart Contracts and Blockchain</strong></p><ul><li>Incorrect data supplied by third party oracles<ul><li>Not to exclude oracle manipulation/flash loan attacks</li></ul></li><li>Basic economic governance attacks (e.g. 51% attack)</li><li>Lack of liquidity</li><li>Best practice critiques</li><li>Sybil attacks</li><li>Centralization risks</li></ul><p><strong>Websites and Apps</strong></p><ul><li>Theoretical vulnerabilities without any proof or demonstration</li><li>Content spoofing / Text injection issues</li><li>Self-XSS</li><li>Captcha bypass using OCR</li><li>CSRF with no security impact (logout CSRF, change language, etc.)</li><li>Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”)</li><li>Server-side information disclosure such as IPs, server names, and most stack traces</li><li>Vulnerabilities used to enumerate or confirm the existence of users or tenants</li><li>Vulnerabilities requiring unlikely user actions</li><li>URL Redirects (unless combined with another vulnerability to produce a more severe vulnerability)</li><li>Lack of SSL/TLS best practices</li><li>DDoS vulnerabilities</li><li>Attacks requiring privileged access from within the organization</li><li>Feature requests</li><li>Best practices</li></ul><p>The following activities are prohibited by this bug bounty program:</p><ul><li>Any testing with mainnet or public testnet contracts; all testing should be done on private devnet</li><li>Any testing with pricing oracles or third party smart contracts</li><li>Attempting phishing or other social engineering attacks against our employees and/or customers</li><li>Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)</li><li>Any denial of service attacks</li><li>Automated testing of services that generates significant amounts of traffic</li><li>Public disclosure of an unpatched vulnerability in an embargoed bounty</li></ul>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"All smart contracts of Kadena can be found at \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/kadena-io\"\n  }, \"https://github.com/kadena-io\"), \". However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\"), mdx(\"p\", null, \"Kadena\\u2019s API specification can be found at \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://api.chainweb.com/openapi/\"\n  }, \"https://api.chainweb.com/openapi/\"), \" \"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>All smart contracts of Kadena can be found at <a href=\"https://github.com/kadena-io\">https://github.com/kadena-io</a>. However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.</p><p>Kadena’s API specification can be found at <a href=\"https://api.chainweb.com/openapi/\">https://api.chainweb.com/openapi/</a> </p>",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}

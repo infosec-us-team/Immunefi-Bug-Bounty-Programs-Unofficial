@@ -1,0 +1,212 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "tinyman",
+      "slug": "tinyman",
+      "project": "Tinyman",
+      "maxBounty": 100000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4UlrKSIPpMRMuGG06spCHw/c4470d0f4bf6ec163133669afffb41af/Tinyman_Logo.png",
+      "launchDate": "2022-01-21T11:00-06:00",
+      "updatedDate": "2022-12-01T19:18:15.352Z",
+      "kyc": false,
+      "rewards": [
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "USD $100,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "high",
+          "payout": "USD $10,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "USD $5,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "low",
+          "payout": "USD $1,000",
+          "pocRequired": false
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "5UH5nPIEmL5mdgvQOz5hbV",
+          "type": "smart_contract",
+          "url": "https://github.com/tinymanorg/tinyman-contracts-v1/tree/13acadd1a619d0fcafadd6f6c489a906bf347484/contracts",
+          "description": "Smart Contracts"
+        }
+      ],
+      "impacts": [
+        {
+          "id": "VHmvVNC6sk0dhQBqFndsh",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "5E6hJmYHNERZPMTK4aVYIm",
+          "title": "Permanent freezing of funds",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "4qo5B4SHAxI8QA3LbSds7Z",
+          "title": "Protocol insolvency",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "5c98g8lZWS54vZWRfE5drm",
+          "title": "Modification/deletion of Validator App",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "2UhUpCXRlPCk8noQphMwHv",
+          "title": "Taking signer authority of pool accounts",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "1d3J7LbkJ1oeMTvqR5Za8S",
+          "title": "Theft of unclaimed yield",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "1ml8BTaoylCKBBspeFH7pD",
+          "title": "Permanent freezing of unclaimed yield",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "78rmotJpBZKeZheLxMDte3",
+          "title": "Temporary freezing of funds",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "3oscSsQLAp3ONpKa1gQfc9",
+          "title": "Smart contract unable to operate due to lack of token funds",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "6fz7pI2rUWkeubRx9nteLV",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "2KYF3IrFQBRwEQ4HzjcboX",
+          "title": "Making pool accounts pay unnecessary fees",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "4qVa1r94J91szYRH2Mnf5I",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "type": "smart_contract",
+          "severity": "low"
+        },
+        {
+          "id": "6S2jbI7nfgB4yrAMVpDRxL",
+          "title": "Bootstrapping a pool with incorrect Pool Token properties",
+          "type": "smart_contract",
+          "severity": "low"
+        }
+      ],
+      "programOverview": "Tinyman is a decentralised exchange (DEX) on Algorand. More specifically, it is an Automated Market Maker (AMM) exchange employing the Constant Product Market Maker algorithm.\n\nThe exchange is fully decentralized and non-custodial. Funds are held in permissionless smart contract accounts. This means the only methods to withdraw funds from the pool accounts are those encoded in the smart contract. At a high level this code only allows withdrawals in exchange for an appropriate amount of another asset or by the liquidity owners in exchange for their Pool Tokens.\n\nFurthermore the contracts are fully permissionless. This means that any account can create a pool by issuing the correct set of transactions. It means that no account has authority over the pool's assets or functionality. This also means there is no mechanism to revert or adjust transactions even if they are made in error.\n\nThe contracts are also fully immutable. This means no account has the authority to update or delete the contracts that control the pools. This means that funds cannot be stolen by an update to the contracts.\n\nFor more information about Tinyman, please visit [https://tinyman.org/](https://tinyman.org/).\n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Thefts and freezing of liquidity pools\n  - Unauthorized and fraudulent calls to Tinyman v1.1 smart contracts",
+      "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System](https://immunefi.com/severity-updated). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nNo PoC is required, but all bug reports must be detailed with either step-by-step exploit instructions or pointers to specific lines of code in order to be considered for a reward. The Tinyman team may ask for further explanations for bug reports to prove validity. \n\nTinyman will also issue an NFT reward for valid High severity reports, and a single edition Tinyman NFT reward for valid Critical severity reports.\n\nThe following impacts are considered to be out of scope of this bug bounty program: \n  - Issues due to Freeze or Clawback of pooled assets\n  - Rounding issues when swapping/minting/burning with <1000 microunits of an asset\n  - Overflow errors when attempting to swap/mint/burn very large amounts \n  - Attacks against accounts not created from the Pool LogicSig Template\n  - MEV style attacks\n  - Pool ratio/price manipulation due to donations to the pool account\n\nAll known issues listed here are also considered as out-of-scope of the bug bounty program: [https://github.com/tinymanorg/docs/tree/main/known-issues](https://github.com/tinymanorg/docs/tree/main/known-issues).   \n\nPayouts are handled by the __Tinyman__ team directly and are denominated in USD. However, payouts are done in __USDC__ or __ALGO__, at the discretion of the team.",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": "This bug bounty program applies only for Tinyman v1.1 contracts which includes validator approval, validator clear state and pool logic sig (stateless) programs. The Pool accounts are LogicSignature Contract accounts. The unique LogicSignature contract for each is generated from [pool_logicsig.teal.tmpl](https://github.com/tinymanorg/tinyman-contracts-v1/blob/8be3e7f8005bb131c51e10e82885a8e764d7a336/contracts/pool_logicsig.teal.tmpl). It does not exist on-chain.",
+      "impactsBody": null,
+      "immunefiStandard": true,
+      "tags": {
+        "productType": [
+          "AMM",
+          "DEX"
+        ],
+        "projectType": [
+          "Blockchain"
+        ],
+        "ecosystem": [
+          "Algorand"
+        ],
+        "programType": [
+          "Smart Contract"
+        ],
+        "language": null
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract"
+        ],
+        "blockchain_rewards": [],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $100,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $10,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $5,000"
+          },
+          {
+            "level": "Low",
+            "payout": "USD $1,000"
+          }
+        ],
+        "web_rewards": []
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Tinyman is a decentralised exchange (DEX) on Algorand. More specifically, it is an Automated Market Maker (AMM) exchange employing the Constant Product Market Maker algorithm.\"), mdx(\"p\", null, \"The exchange is fully decentralized and non-custodial. Funds are held in permissionless smart contract accounts. This means the only methods to withdraw funds from the pool accounts are those encoded in the smart contract. At a high level this code only allows withdrawals in exchange for an appropriate amount of another asset or by the liquidity owners in exchange for their Pool Tokens.\"), mdx(\"p\", null, \"Furthermore the contracts are fully permissionless. This means that any account can create a pool by issuing the correct set of transactions. It means that no account has authority over the pool's assets or functionality. This also means there is no mechanism to revert or adjust transactions even if they are made in error.\"), mdx(\"p\", null, \"The contracts are also fully immutable. This means no account has the authority to update or delete the contracts that control the pools. This means that funds cannot be stolen by an update to the contracts.\"), mdx(\"p\", null, \"For more information about Tinyman, please visit \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://tinyman.org/\"\n  }, \"https://tinyman.org/\"), \".\"), mdx(\"p\", null, \"This bug bounty program is focused on their smart contracts and is focused on preventing:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Thefts and freezing of liquidity pools\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Unauthorized and fraudulent calls to Tinyman v1.1 smart contracts\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Tinyman is a decentralised exchange (DEX) on Algorand. More specifically, it is an Automated Market Maker (AMM) exchange employing the Constant Product Market Maker algorithm.</p><p>The exchange is fully decentralized and non-custodial. Funds are held in permissionless smart contract accounts. This means the only methods to withdraw funds from the pool accounts are those encoded in the smart contract. At a high level this code only allows withdrawals in exchange for an appropriate amount of another asset or by the liquidity owners in exchange for their Pool Tokens.</p><p>Furthermore the contracts are fully permissionless. This means that any account can create a pool by issuing the correct set of transactions. It means that no account has authority over the pool&#x27;s assets or functionality. This also means there is no mechanism to revert or adjust transactions even if they are made in error.</p><p>The contracts are also fully immutable. This means no account has the authority to update or delete the contracts that control the pools. This means that funds cannot be stolen by an update to the contracts.</p><p>For more information about Tinyman, please visit <a href=\"https://tinyman.org/\">https://tinyman.org/</a>.</p><p>This bug bounty program is focused on their smart contracts and is focused on preventing:</p><ul><li>Thefts and freezing of liquidity pools</li><li>Unauthorized and fraudulent calls to Tinyman v1.1 smart contracts</li></ul>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.</p>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Rewards are distributed according to the impact of the vulnerability based on the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefi.com/severity-updated\"\n  }, \"Immunefi Vulnerability Severity Classification System\"), \". This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\"), mdx(\"p\", null, \"No PoC is required, but all bug reports must be detailed with either step-by-step exploit instructions or pointers to specific lines of code in order to be considered for a reward. The Tinyman team may ask for further explanations for bug reports to prove validity. \"), mdx(\"p\", null, \"Tinyman will also issue an NFT reward for valid High severity reports, and a single edition Tinyman NFT reward for valid Critical severity reports.\"), mdx(\"p\", null, \"The following impacts are considered to be out of scope of this bug bounty program: \"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Issues due to Freeze or Clawback of pooled assets\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Rounding issues when swapping/minting/burning with <1000 microunits of an asset\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Overflow errors when attempting to swap/mint/burn very large amounts \"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks against accounts not created from the Pool LogicSig Template\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"MEV style attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Pool ratio/price manipulation due to donations to the pool account\")), mdx(\"p\", null, \"All known issues listed here are also considered as out-of-scope of the bug bounty program: \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/tinymanorg/docs/tree/main/known-issues\"\n  }, \"https://github.com/tinymanorg/docs/tree/main/known-issues\"), \".   \"), mdx(\"p\", null, \"Payouts are handled by the \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Tinyman\"), \" team directly and are denominated in USD. However, payouts are done in \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USDC\"), \" or \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"ALGO\"), \", at the discretion of the team.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Rewards are distributed according to the impact of the vulnerability based on the <a href=\"https://immunefi.com/severity-updated\">Immunefi Vulnerability Severity Classification System</a>. This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.</p><p>No PoC is required, but all bug reports must be detailed with either step-by-step exploit instructions or pointers to specific lines of code in order to be considered for a reward. The Tinyman team may ask for further explanations for bug reports to prove validity. </p><p>Tinyman will also issue an NFT reward for valid High severity reports, and a single edition Tinyman NFT reward for valid Critical severity reports.</p><p>The following impacts are considered to be out of scope of this bug bounty program: </p><ul><li>Issues due to Freeze or Clawback of pooled assets</li><li>Rounding issues when swapping/minting/burning with &lt;1000 microunits of an asset</li><li>Overflow errors when attempting to swap/mint/burn very large amounts </li><li>Attacks against accounts not created from the Pool LogicSig Template</li><li>MEV style attacks</li><li>Pool ratio/price manipulation due to donations to the pool account</li></ul><p>All known issues listed here are also considered as out-of-scope of the bug bounty program: <a href=\"https://github.com/tinymanorg/docs/tree/main/known-issues\">https://github.com/tinymanorg/docs/tree/main/known-issues</a>.   </p><p>Payouts are handled by the <strong>Tinyman</strong> team directly and are denominated in USD. However, payouts are done in <strong>USDC</strong> or <strong>ALGO</strong>, at the discretion of the team.</p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The following vulnerabilities are excluded from the rewards for this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that the reporter has already exploited themselves, leading to damage\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to leaked keys/credentials\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to privileged addresses (governance, strategist)\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts and Blockchain\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Incorrect data supplied by third party oracles\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Not to exclude oracle manipulation/flash loan attacks\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Basic economic governance attacks (e.g. 51% attack)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Lack of liquidity\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practice critiques\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Sybil attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Centralization risks\")), mdx(\"p\", null, \"The following activities are prohibited by this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with pricing oracles or third party smart contracts\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attempting phishing or other social engineering attacks against our employees and/or customers\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any denial of service attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Automated testing of services that generates significant amounts of traffic\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Public disclosure of an unpatched vulnerability in an embargoed bounty\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The following vulnerabilities are excluded from the rewards for this bug bounty program:</p><ul><li>Attacks that the reporter has already exploited themselves, leading to damage</li><li>Attacks requiring access to leaked keys/credentials</li><li>Attacks requiring access to privileged addresses (governance, strategist)</li></ul><p><strong>Smart Contracts and Blockchain</strong></p><ul><li>Incorrect data supplied by third party oracles<ul><li>Not to exclude oracle manipulation/flash loan attacks</li></ul></li><li>Basic economic governance attacks (e.g. 51% attack)</li><li>Lack of liquidity</li><li>Best practice critiques</li><li>Sybil attacks</li><li>Centralization risks</li></ul><p>The following activities are prohibited by this bug bounty program:</p><ul><li>Any testing with mainnet or public testnet contracts; all testing should be done on private testnets</li><li>Any testing with pricing oracles or third party smart contracts</li><li>Attempting phishing or other social engineering attacks against our employees and/or customers</li><li>Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)</li><li>Any denial of service attacks</li><li>Automated testing of services that generates significant amounts of traffic</li><li>Public disclosure of an unpatched vulnerability in an embargoed bounty</li></ul>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"This bug bounty program applies only for Tinyman v1.1 contracts which includes validator approval, validator clear state and pool logic sig (stateless) programs. The Pool accounts are LogicSignature Contract accounts. The unique LogicSignature contract for each is generated from \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/tinymanorg/tinyman-contracts-v1/blob/8be3e7f8005bb131c51e10e82885a8e764d7a336/contracts/pool_logicsig.teal.tmpl\"\n  }, \"pool_logicsig.teal.tmpl\"), \". It does not exist on-chain.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>This bug bounty program applies only for Tinyman v1.1 contracts which includes validator approval, validator clear state and pool logic sig (stateless) programs. The Pool accounts are LogicSignature Contract accounts. The unique LogicSignature contract for each is generated from <a href=\"https://github.com/tinymanorg/tinyman-contracts-v1/blob/8be3e7f8005bb131c51e10e82885a8e764d7a336/contracts/pool_logicsig.teal.tmpl\">pool_logicsig.teal.tmpl</a>. It does not exist on-chain.</p>",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}

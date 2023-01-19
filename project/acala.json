@@ -1,0 +1,171 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "acala",
+      "slug": "acala",
+      "project": "Acala",
+      "maxBounty": 500000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2yQpKoZm8AOR2wLqYzZa9j/fd4701886536ad5828e0ff05edd4771d/acala_logo.png",
+      "launchDate": "2021-12-13T20:00-06:00",
+      "updatedDate": "2022-12-15T00:12:24.582Z",
+      "kyc": false,
+      "rewards": [
+        {
+          "assetType": "blockchain_dlt",
+          "level": "critical",
+          "payout": "Up to USD $500,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "high",
+          "payout": "Up to USD $50,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "medium",
+          "payout": "USD $10,000",
+          "pocRequired": false
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "5jGp7rJ8ISt7yT1fg4YihL",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/AcalaNetwork/Acala",
+          "description": "Main Network "
+        },
+        {
+          "id": "4ICBfjRxAFKyE9yz8poEP3",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/open-web3-stack/open-runtime-module-library",
+          "description": "Open Runtime Module Library"
+        }
+      ],
+      "impacts": [
+        {
+          "id": "6RK4MF9D8od67kZ8UPThg8",
+          "title": "Transaction/consensus manipulation",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "7ymmVZ1a4GlBF61W8ZiI08",
+          "title": "Double-spending",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "2zxbsu2mK7w4hUbWgWOq24",
+          "title": "Unauthorized token minting",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "6nYhnzAfy4E9B1p1xsVUpJ",
+          "title": "Getting access to an identity that can lead to unauthorized access to system’s or user’s assets",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "1TG6UIiD5nSHL7V3Abm9lt",
+          "title": "Governance compromise",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "7cmDvLsOgsli3USYHH6FfQ",
+          "title": "Blocking or modifying processes for governance or users from performing their tasks, generating not handled on-chain errors",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "h4zVpRTXsOomt9LGJQXFw",
+          "title": "Putting on-chain data into an unexpected state without interrupting the system or users from performing their tasks, e.g. generating redundant events, logs, etc.",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        }
+      ],
+      "programOverview": "Acala is the decentralized finance network and liquidity hub of Polkadot. It’s a layer-1 smart contract platform that’s scalable, Ethereum-compatible, and optimized for DeFi with built-in liquidity and ready-made financial applications. With its trustless exchange, decentralized stablecoin (aUSD), DOT Liquid Staking (LDOT), and EVM+, Acala lets developers access the best of Ethereum and the full power of Substrate.\n\nFor more information about Acala, please visit [https://acala.network/](https://acala.network/).   \n\nThis bug bounty program is focused on Acala and is focused on preventing:\n\n- Transaction/consensus manipulation, \n  - Double-spending, \n  - Unauthorized token minting, \n  - Governance compromise, \n  - Getting access to an identity that can lead to unauthorized access to system’s or user’s assets. \n  - Blocking or modifying processes for governance or users from performing their tasks, generating not handled on-chain errors. \n  - Putting on-chain data into an unexpected state without interrupting the system or users from performing their tasks, e.g. generating redundant events, logs, etc.\n",
+      "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\nAll those that lead to the impacts stated in the Impacts in Scope section",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the following severity scale:\n\n__Critical__: transaction/consensus manipulation, double-spending, unauthorized token minting, governance compromise, getting access to an identity that can lead to unauthorized access to system’s or user’s assets. \n\n__High__: blocking or modifying processes for governance or users from performing their tasks, generating not handled on-chain errors. These actions can lead to blocking users or governance from accessing their assets or performing system functions.\n\n__Medium__: Putting on-chain data into an unexpected state without interrupting the system or users from performing their tasks, e.g. generating redundant events, logs, etc.\n\nCritical vulnerabilities involving a direct loss of user funds, double spending, or the minting of tokens are capped at 10% of the economic damage, taking primarily into consideration the funds at risk or the amount of tokens that can be minted but also branding and PR considerations, at the discretion of the team. However, there is a minimum reward of __USD 50 000__. Consensus manipulation or governance compromise results in the full __USD 500 000__. \n\nPoC is required for all submissions. Suggestion for a fix is not required, but its addition may be grounds for a bonus provided by the team at its discretion.\n\nA reward can only be provided if:\n\n  - The Bug wasn't reported before.\n  - The Bounty Hunter does not disclose the Bug to other parties or publicity until it's fixed by the Acala Team.\n  - The Hunter didn't exploit the vulnerability or allow anyone else to profit from it.\n  - The Hunter reports a Bug without any additional conditions or threats.\n  - The investigation was NOT conducted with Ineligible methods or Prohibited Activities, defined in this document.\n  - The Hunter should reply to our additional questions regarding the reproduction of the reported bug (if they follow) within a reasonable time.\n  - When duplicate bug reports occur, we reward only the first one if it's provided with enough information for reproduction.\n  - When multiple vulnerabilities are caused by one underlying issue, we will reward only the first reported.\n  - The vulnerability is found in runtime pallet of Karura (no tests, or modules that aren’t in runtime, e.g. live, can be considered as vulnerability)\n\nPayouts are handled by the __Acala__ team directly in crypto tokens of their choices, valued at the US dollar market rates, e.g. __DOT, ACA, aUSD__. ",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n  - DDOS attack\n  - Denial of service attacks\n  - Spamming\n  - Any physical attacks against Karura property, or employees\n  - Phishing or other social engineering attacks against our Karura’s employees\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": "Only code involving runtime pallets of Acala are considered as in-scope of the bug bounty program. Modules that are not in runtime pallets like tests, those under development, and those that are not live, are considered as out-of-scope of the bug bounty program. \n\nAll code of Acala can be found at [https://github.com/AcalaNetwork/](https://github.com/AcalaNetwork/). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n",
+      "impactsBody": null,
+      "immunefiStandard": true,
+      "tags": {
+        "productType": [
+          "AMM",
+          "DEX"
+        ],
+        "projectType": [
+          "Defi"
+        ],
+        "ecosystem": [
+          "Polkadot",
+          "ETH"
+        ],
+        "programType": null,
+        "language": null
+      },
+      "legacy": {
+        "technologies": [
+          "Blockchain/DLT"
+        ],
+        "blockchain_rewards": [
+          {
+            "level": "Critical",
+            "payout": "Up to USD $500,000"
+          },
+          {
+            "level": "High",
+            "payout": "Up to USD $50,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $10,000"
+          }
+        ],
+        "smartcontract_rewards": [],
+        "web_rewards": []
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Acala is the decentralized finance network and liquidity hub of Polkadot. It\\u2019s a layer-1 smart contract platform that\\u2019s scalable, Ethereum-compatible, and optimized for DeFi with built-in liquidity and ready-made financial applications. With its trustless exchange, decentralized stablecoin (aUSD), DOT Liquid Staking (LDOT), and EVM+, Acala lets developers access the best of Ethereum and the full power of Substrate.\"), mdx(\"p\", null, \"For more information about Acala, please visit \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://acala.network/\"\n  }, \"https://acala.network/\"), \".   \"), mdx(\"p\", null, \"This bug bounty program is focused on Acala and is focused on preventing:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Transaction/consensus manipulation, \", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Double-spending, \"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Unauthorized token minting, \"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Governance compromise, \"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Getting access to an identity that can lead to unauthorized access to system\\u2019s or user\\u2019s assets. \"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Blocking or modifying processes for governance or users from performing their tasks, generating not handled on-chain errors. \"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Putting on-chain data into an unexpected state without interrupting the system or users from performing their tasks, e.g. generating redundant events, logs, etc.\")))));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Acala is the decentralized finance network and liquidity hub of Polkadot. It’s a layer-1 smart contract platform that’s scalable, Ethereum-compatible, and optimized for DeFi with built-in liquidity and ready-made financial applications. With its trustless exchange, decentralized stablecoin (aUSD), DOT Liquid Staking (LDOT), and EVM+, Acala lets developers access the best of Ethereum and the full power of Substrate.</p><p>For more information about Acala, please visit <a href=\"https://acala.network/\">https://acala.network/</a>.   </p><p>This bug bounty program is focused on Acala and is focused on preventing:</p><ul><li>Transaction/consensus manipulation, <ul><li>Double-spending, </li><li>Unauthorized token minting, </li><li>Governance compromise, </li><li>Getting access to an identity that can lead to unauthorized access to system’s or user’s assets. </li><li>Blocking or modifying processes for governance or users from performing their tasks, generating not handled on-chain errors. </li><li>Putting on-chain data into an unexpected state without interrupting the system or users from performing their tasks, e.g. generating redundant events, logs, etc.</li></ul></li></ul>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"We are especially interested in receiving and rewarding vulnerabilities of the following types:\"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts and Blockchain\"), \" \"), mdx(\"p\", null, \"All those that lead to the impacts stated in the Impacts in Scope section\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>We are especially interested in receiving and rewarding vulnerabilities of the following types:</p><p><strong>Smart Contracts and Blockchain</strong> </p><p>All those that lead to the impacts stated in the Impacts in Scope section</p>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Rewards are distributed according to the impact of the vulnerability based on the following severity scale:\"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Critical\"), \": transaction/consensus manipulation, double-spending, unauthorized token minting, governance compromise, getting access to an identity that can lead to unauthorized access to system\\u2019s or user\\u2019s assets. \"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"High\"), \": blocking or modifying processes for governance or users from performing their tasks, generating not handled on-chain errors. These actions can lead to blocking users or governance from accessing their assets or performing system functions.\"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Medium\"), \": Putting on-chain data into an unexpected state without interrupting the system or users from performing their tasks, e.g. generating redundant events, logs, etc.\"), mdx(\"p\", null, \"Critical vulnerabilities involving a direct loss of user funds, double spending, or the minting of tokens are capped at 10% of the economic damage, taking primarily into consideration the funds at risk or the amount of tokens that can be minted but also branding and PR considerations, at the discretion of the team. However, there is a minimum reward of \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USD 50 000\"), \". Consensus manipulation or governance compromise results in the full \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USD 500 000\"), \". \"), mdx(\"p\", null, \"PoC is required for all submissions. Suggestion for a fix is not required, but its addition may be grounds for a bonus provided by the team at its discretion.\"), mdx(\"p\", null, \"A reward can only be provided if:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"The Bug wasn't reported before.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"The Bounty Hunter does not disclose the Bug to other parties or publicity until it's fixed by the Acala Team.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"The Hunter didn't exploit the vulnerability or allow anyone else to profit from it.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"The Hunter reports a Bug without any additional conditions or threats.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"The investigation was NOT conducted with Ineligible methods or Prohibited Activities, defined in this document.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"The Hunter should reply to our additional questions regarding the reproduction of the reported bug (if they follow) within a reasonable time.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"When duplicate bug reports occur, we reward only the first one if it's provided with enough information for reproduction.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"When multiple vulnerabilities are caused by one underlying issue, we will reward only the first reported.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"The vulnerability is found in runtime pallet of Karura (no tests, or modules that aren\\u2019t in runtime, e.g. live, can be considered as vulnerability)\")), mdx(\"p\", null, \"Payouts are handled by the \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Acala\"), \" team directly in crypto tokens of their choices, valued at the US dollar market rates, e.g. \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"DOT, ACA, aUSD\"), \". \"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Rewards are distributed according to the impact of the vulnerability based on the following severity scale:</p><p><strong>Critical</strong>: transaction/consensus manipulation, double-spending, unauthorized token minting, governance compromise, getting access to an identity that can lead to unauthorized access to system’s or user’s assets. </p><p><strong>High</strong>: blocking or modifying processes for governance or users from performing their tasks, generating not handled on-chain errors. These actions can lead to blocking users or governance from accessing their assets or performing system functions.</p><p><strong>Medium</strong>: Putting on-chain data into an unexpected state without interrupting the system or users from performing their tasks, e.g. generating redundant events, logs, etc.</p><p>Critical vulnerabilities involving a direct loss of user funds, double spending, or the minting of tokens are capped at 10% of the economic damage, taking primarily into consideration the funds at risk or the amount of tokens that can be minted but also branding and PR considerations, at the discretion of the team. However, there is a minimum reward of <strong>USD 50 000</strong>. Consensus manipulation or governance compromise results in the full <strong>USD 500 000</strong>. </p><p>PoC is required for all submissions. Suggestion for a fix is not required, but its addition may be grounds for a bonus provided by the team at its discretion.</p><p>A reward can only be provided if:</p><ul><li>The Bug wasn&#x27;t reported before.</li><li>The Bounty Hunter does not disclose the Bug to other parties or publicity until it&#x27;s fixed by the Acala Team.</li><li>The Hunter didn&#x27;t exploit the vulnerability or allow anyone else to profit from it.</li><li>The Hunter reports a Bug without any additional conditions or threats.</li><li>The investigation was NOT conducted with Ineligible methods or Prohibited Activities, defined in this document.</li><li>The Hunter should reply to our additional questions regarding the reproduction of the reported bug (if they follow) within a reasonable time.</li><li>When duplicate bug reports occur, we reward only the first one if it&#x27;s provided with enough information for reproduction.</li><li>When multiple vulnerabilities are caused by one underlying issue, we will reward only the first reported.</li><li>The vulnerability is found in runtime pallet of Karura (no tests, or modules that aren’t in runtime, e.g. live, can be considered as vulnerability)</li></ul><p>Payouts are handled by the <strong>Acala</strong> team directly in crypto tokens of their choices, valued at the US dollar market rates, e.g. <strong>DOT, ACA, aUSD</strong>. </p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The following vulnerabilities are excluded from the rewards for this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that the reporter has already exploited themselves, leading to damage\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to leaked keys/credentials\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to privileged addresses (governance, strategist)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"DDOS attack\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Denial of service attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Spamming\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any physical attacks against Karura property, or employees\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Phishing or other social engineering attacks against our Karura\\u2019s employees\")), mdx(\"p\", null, \"The following activities are prohibited by this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with pricing oracles or third party smart contracts\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attempting phishing or other social engineering attacks against our employees and/or customers\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any denial of service attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Automated testing of services that generates significant amounts of traffic\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Public disclosure of an unpatched vulnerability in an embargoed bounty\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The following vulnerabilities are excluded from the rewards for this bug bounty program:</p><ul><li>Attacks that the reporter has already exploited themselves, leading to damage</li><li>Attacks requiring access to leaked keys/credentials</li><li>Attacks requiring access to privileged addresses (governance, strategist)</li><li>DDOS attack</li><li>Denial of service attacks</li><li>Spamming</li><li>Any physical attacks against Karura property, or employees</li><li>Phishing or other social engineering attacks against our Karura’s employees</li></ul><p>The following activities are prohibited by this bug bounty program:</p><ul><li>Any testing with mainnet or public testnet contracts; all testing should be done on private testnets</li><li>Any testing with pricing oracles or third party smart contracts</li><li>Attempting phishing or other social engineering attacks against our employees and/or customers</li><li>Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)</li><li>Any denial of service attacks</li><li>Automated testing of services that generates significant amounts of traffic</li><li>Public disclosure of an unpatched vulnerability in an embargoed bounty</li></ul>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Only code involving runtime pallets of Acala are considered as in-scope of the bug bounty program. Modules that are not in runtime pallets like tests, those under development, and those that are not live, are considered as out-of-scope of the bug bounty program. \"), mdx(\"p\", null, \"All code of Acala can be found at \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/AcalaNetwork/\"\n  }, \"https://github.com/AcalaNetwork/\"), \". However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Only code involving runtime pallets of Acala are considered as in-scope of the bug bounty program. Modules that are not in runtime pallets like tests, those under development, and those that are not live, are considered as out-of-scope of the bug bounty program. </p><p>All code of Acala can be found at <a href=\"https://github.com/AcalaNetwork/\">https://github.com/AcalaNetwork/</a>. However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.</p>",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}

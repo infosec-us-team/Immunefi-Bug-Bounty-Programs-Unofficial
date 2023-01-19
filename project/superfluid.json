@@ -1,0 +1,230 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "superfluid",
+      "slug": "superfluid",
+      "project": "Superfluid",
+      "maxBounty": 100000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2OOJdM7H7ZWI54ZO8sv9NX/fc52c455ed577f0aa83b99ba45beef22/Superfluid_Logo.png",
+      "launchDate": "2022-02-10T09:00-07:00",
+      "updatedDate": "2022-10-13T14:04:09.585Z",
+      "kyc": true,
+      "rewards": [
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "USD $30,000 - $100,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "high",
+          "payout": "USD $10,000 - $30,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "USD $5,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "low",
+          "payout": "USD $2,000",
+          "pocRequired": false
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "3JVABO524hD7TEGL4WFVJJ",
+          "type": "smart_contract",
+          "url": "https://polygonscan.com/address/0xE0cc76334405EE8b39213E620587d815967af39C",
+          "description": "Resolver"
+        },
+        {
+          "id": "iQP5blL27C1G8KYOOYmEV",
+          "type": "smart_contract",
+          "url": "https://polygonscan.com/address/0x3E14dC1b13c488a8d5D310918780c983bD5982E7",
+          "description": "Host"
+        },
+        {
+          "id": "1WACGv6dF9XqI9nVj8NkTc",
+          "type": "smart_contract",
+          "url": "https://polygonscan.com/address/0x3ad3f7a0965ce6f9358ad5cce86bc2b05f1ee087",
+          "description": "Governance"
+        },
+        {
+          "id": "47W5OQUXI2Qe1BlPHv8duY",
+          "type": "smart_contract",
+          "url": "https://polygonscan.com/address/0x6EeE6060f715257b970700bc2656De21dEdF074C",
+          "description": "cFAv1"
+        },
+        {
+          "id": "1uItKibEV56C6asHUIZm5O",
+          "type": "smart_contract",
+          "url": "https://polygonscan.com/address/0xB0aABBA4B2783A72C52956CDEF62d438ecA2d7a1",
+          "description": "IDAv1​"
+        },
+        {
+          "id": "56Lz1xvbgMOpf5vbFvxIAI",
+          "type": "smart_contract",
+          "url": "https://polygonscan.com/address/0x2C90719f25B10Fc5646c82DA3240C76Fa5BcCF34",
+          "description": "SuuperTokenFactory"
+        },
+        {
+          "id": "6bbkAZrAbjF3REvzWfsFv7",
+          "type": "smart_contract",
+          "url": "https://polygonscan.com/address/0x15F0Ca26781C3852f8166eD2ebce5D18265cceb7",
+          "description": "SuperfluidLoader v1​"
+        },
+        {
+          "id": "5yRUzxAcE2KAWHTZNuWXkn",
+          "type": "smart_contract",
+          "url": "https://polygonscan.com/address/0x1b18770E5198983AF04B3735d01E09A57d27bD43",
+          "description": "TOGA"
+        },
+        {
+          "id": "7t3MRw1r7gLRQSiMUansjp",
+          "type": "smart_contract",
+          "url": "https://polygonscan.com/address/0x3aD736904E9e65189c3000c7DD2c8AC8bB7cD4e3",
+          "description": "MATICx​ - SETH Super Token "
+        },
+        {
+          "id": "4ZhdmLi2dBFIV0170X0jN6",
+          "type": "smart_contract",
+          "url": "https://polygonscan.com/address/0x27e1e4E6BC79D93032abef01025811B7E4727e85",
+          "description": "ETHx​ - Super Token Wrapper"
+        },
+        {
+          "id": "2uLEVEcOh5ge0QrrU8xB27",
+          "type": "smart_contract",
+          "url": "https://polygonscan.com/address/0x263026e7e53dbfdce5ae55ade22493f828922965",
+          "description": "RIC - Custom Super Token"
+        }
+      ],
+      "impacts": [
+        {
+          "id": "4QHUFo6p3IPmjpf6HSO1Av",
+          "title": "Drainage of all user funds",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "1GzOMcKt4Z8ivlJbomivBK",
+          "title": "Drainage of portion of user funds",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "5jerrnJvHO83kFavwGK9CV",
+          "title": "Temporary freezing of funds (reproducible)",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "5pppRWGRFt9LDK58SDX539",
+          "title": "Temporary freezing of funds (non-reproducible)",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "3EJW1W4rKTfDIE263Qrfa6",
+          "title": "Unbounded gas consumption",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "4HX8T9RWiaDKBUCLyZ3iF1",
+          "title": "Vulnerability which causes contracts to behave in an unintended manner which results in a negative user experience, but no loss of user funds either through theft or being stuck",
+          "type": "smart_contract",
+          "severity": "low"
+        }
+      ],
+      "programOverview": "Superfluid is an asset streaming protocol that has the power to describe cash flows and execute them automatically on-chain over time in a non-interactive way. Superfluid streams are programmable, composable and modular. The first cash flow type allows constant streams of value and one-to-many distributions. All streams are settled at the same time, based on block timestamps. No capital is locked up, and all inflows and outflows are netted in real time, drastically increasing capital efficiency. With a single on-chain transaction, the money will flow from your wallet to the receiver in real time! No further transactions required - it works like magic.\n\nSuperfluid enables:\n  - Real money streaming - constant token flows on-chain with no capital lockups.\n  - Rewards distributions - Fixed cost distribution in a single transaction for any number of receivers.\n  - Anything you can imagine - Superfluid is a flexible developer toolbox to build entirely new applications.\n\nFor more information about Superfluid, please visit [https://www.superfluid.finance](https://www.superfluid.finance).  \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Superfluid framework bugs\n  - Bugs in CFA/IDA in general\n    - Anything that would avoid streams from being closed\n    - Anything that would result in the sum of all account balances drifting significantly from the total supply\n  - Theft of tokens in third party wrapper contracts \n  - Other unexpected behaviour in any of their token contracts",
+      "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect a contract in the Assets in Scope table.\n\n__Smart Contracts/Blockchain__\n\n  - Superfluid framework bugs\n  - Bugs in CFA/IDA in general\n    - Anything that would avoid streams from being closed\n    - Anything that would result in the sum of all account balances drifting greatly from the total supply\n  - Theft of tokens in wrapper contracts\n  - Frozen/stuck funds \n  - Unbounded gas consumption by contract\n  - Other unexpected behavior in any of the token contracts",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the  [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nCritical/High smart contract reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nThis program has the following severity classification and reward structure. In cases where this conflicts with Immunefi’s own classification system, the structure below will be followed. \n\nCritical: Reward - USD 30 000 - USD 100 000\n  - A reproducible vulnerability discovered in the core protocol that can be exploited by anyone that results in the loss of a portion or all user funds in the Superfluid protocol:\n    - Critical bug which results in the drainage of all user funds (USD 100 000).\n    - Critical bug which results in the drainage of a portion of user funds (USD 30 000 + 15% of user funds at risk or stuck, up to USD 100 000).\n\nHigh: Reward - USD 10 000 - USD 30 000\n  - A reproducible bug by anyone that results in the core protocol not functioning properly where funds are stuck. If funds are stuck: you get a base reward of USD 10 000 + 15% of the total amount of funds that are stuck.\n    - If not reproducible (requires special conditions which can’t be affected by anyone): USD 10 000 + 7.5% of the total amount of funds that are stuck\n\nMedium: Reward - USD 5 000\n  - An unknown vulnerability which results in any of the Superfluid contracts consuming unbounded gas for any operation.\n\nLow: Reward - USD 2 000\n  - A vulnerability that causes any of the contracts to behave in an unintended manner (which leads to a negative user experience) without resulting in loss of user funds or user funds being stuck.\n\nGas griefing attacks in general are classified as Low severity.\n\nThe following known issues are considered to be out of scope: \n  - Gas griefing specifically by spam attacks \n  - Gas griefing specifically in SuperApp termination callbacks \n  - Re-entrance issues:\n    - SuperApp framework allowing callbacks \n    - Super Token is ERC-777, which also allows callbacks \n\nRewards for critical vulnerabilities are further capped at 15% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum reward of __USD 30 000__ for Critical bug reports. \n\nSuperfluid requires bug bounty hunters to pass a successful KYC screening in order to be eligible for rewards. By submitting a report, bug bounty hunters agree to share the following information: Name, Surname, Address, Citizenship Country, Wallet Address. The collection of this information will be done by Superfluid Finance Ltd.\n\nPayouts are handled by __Superfluid__ directly and are denominated in USD. However, payouts are done in __USDC__.",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Spam attacks\n  - Centralization risks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": "All smart contracts of Superfluid can be found at [https://github.com/superfluid-finance/protocol-monorepo/tree/dev/packages/ethereum-contracts/](https://github.com/superfluid-finance/protocol-monorepo/tree/dev/packages/ethereum-contracts/contracts). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
+      "impactsBody": null,
+      "immunefiStandard": true,
+      "tags": {
+        "productType": null,
+        "projectType": [
+          "Defi"
+        ],
+        "ecosystem": [
+          "Polygon"
+        ],
+        "programType": [
+          "Smart Contract"
+        ],
+        "language": [
+          "JavaScript",
+          "Solidity"
+        ]
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract"
+        ],
+        "blockchain_rewards": [],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $30,000 - $100,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $10,000 - $30,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $5,000"
+          },
+          {
+            "level": "Low",
+            "payout": "USD $2,000"
+          }
+        ],
+        "web_rewards": []
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Superfluid is an asset streaming protocol that has the power to describe cash flows and execute them automatically on-chain over time in a non-interactive way. Superfluid streams are programmable, composable and modular. The first cash flow type allows constant streams of value and one-to-many distributions. All streams are settled at the same time, based on block timestamps. No capital is locked up, and all inflows and outflows are netted in real time, drastically increasing capital efficiency. With a single on-chain transaction, the money will flow from your wallet to the receiver in real time! No further transactions required - it works like magic.\"), mdx(\"p\", null, \"Superfluid enables:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Real money streaming - constant token flows on-chain with no capital lockups.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Rewards distributions - Fixed cost distribution in a single transaction for any number of receivers.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Anything you can imagine - Superfluid is a flexible developer toolbox to build entirely new applications.\")), mdx(\"p\", null, \"For more information about Superfluid, please visit \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://www.superfluid.finance\"\n  }, \"https://www.superfluid.finance\"), \".  \"), mdx(\"p\", null, \"This bug bounty program is focused on their smart contracts and is focused on preventing:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Superfluid framework bugs\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Bugs in CFA/IDA in general\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Anything that would avoid streams from being closed\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Anything that would result in the sum of all account balances drifting significantly from the total supply\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Theft of tokens in third party wrapper contracts \"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Other unexpected behaviour in any of their token contracts\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Superfluid is an asset streaming protocol that has the power to describe cash flows and execute them automatically on-chain over time in a non-interactive way. Superfluid streams are programmable, composable and modular. The first cash flow type allows constant streams of value and one-to-many distributions. All streams are settled at the same time, based on block timestamps. No capital is locked up, and all inflows and outflows are netted in real time, drastically increasing capital efficiency. With a single on-chain transaction, the money will flow from your wallet to the receiver in real time! No further transactions required - it works like magic.</p><p>Superfluid enables:</p><ul><li>Real money streaming - constant token flows on-chain with no capital lockups.</li><li>Rewards distributions - Fixed cost distribution in a single transaction for any number of receivers.</li><li>Anything you can imagine - Superfluid is a flexible developer toolbox to build entirely new applications.</li></ul><p>For more information about Superfluid, please visit <a href=\"https://www.superfluid.finance\">https://www.superfluid.finance</a>.  </p><p>This bug bounty program is focused on their smart contracts and is focused on preventing:</p><ul><li>Superfluid framework bugs</li><li>Bugs in CFA/IDA in general<ul><li>Anything that would avoid streams from being closed</li><li>Anything that would result in the sum of all account balances drifting significantly from the total supply</li></ul></li><li>Theft of tokens in third party wrapper contracts </li><li>Other unexpected behaviour in any of their token contracts</li></ul>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Impacts in Scope\")), mdx(\"p\", null, \"Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect a contract in the Assets in Scope table.\"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts/Blockchain\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Superfluid framework bugs\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Bugs in CFA/IDA in general\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Anything that would avoid streams from being closed\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Anything that would result in the sum of all account balances drifting greatly from the total supply\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Theft of tokens in wrapper contracts\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Frozen/stuck funds \"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Unbounded gas consumption by contract\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Other unexpected behavior in any of the token contracts\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p><strong>Impacts in Scope</strong></p><p>Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect a contract in the Assets in Scope table.</p><p><strong>Smart Contracts/Blockchain</strong></p><ul><li>Superfluid framework bugs</li><li>Bugs in CFA/IDA in general<ul><li>Anything that would avoid streams from being closed</li><li>Anything that would result in the sum of all account balances drifting greatly from the total supply</li></ul></li><li>Theft of tokens in wrapper contracts</li><li>Frozen/stuck funds </li><li>Unbounded gas consumption by contract</li><li>Other unexpected behavior in any of the token contracts</li></ul>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Rewards are distributed according to the impact of the vulnerability based on the  \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\"\n  }, \"Immunefi Vulnerability Severity Classification System V2.2\"), \". This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\"), mdx(\"p\", null, \"Critical/High smart contract reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\"), mdx(\"p\", null, \"This program has the following severity classification and reward structure. In cases where this conflicts with Immunefi\\u2019s own classification system, the structure below will be followed. \"), mdx(\"p\", null, \"Critical: Reward - USD 30 000 - USD 100 000\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"A reproducible vulnerability discovered in the core protocol that can be exploited by anyone that results in the loss of a portion or all user funds in the Superfluid protocol:\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Critical bug which results in the drainage of all user funds (USD 100 000).\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Critical bug which results in the drainage of a portion of user funds (USD 30 000 + 15% of user funds at risk or stuck, up to USD 100 000).\")))), mdx(\"p\", null, \"High: Reward - USD 10 000 - USD 30 000\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"A reproducible bug by anyone that results in the core protocol not functioning properly where funds are stuck. If funds are stuck: you get a base reward of USD 10 000 + 15% of the total amount of funds that are stuck.\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"If not reproducible (requires special conditions which can\\u2019t be affected by anyone): USD 10 000 + 7.5% of the total amount of funds that are stuck\")))), mdx(\"p\", null, \"Medium: Reward - USD 5 000\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"An unknown vulnerability which results in any of the Superfluid contracts consuming unbounded gas for any operation.\")), mdx(\"p\", null, \"Low: Reward - USD 2 000\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"A vulnerability that causes any of the contracts to behave in an unintended manner (which leads to a negative user experience) without resulting in loss of user funds or user funds being stuck.\")), mdx(\"p\", null, \"Gas griefing attacks in general are classified as Low severity.\"), mdx(\"p\", null, \"The following known issues are considered to be out of scope: \"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Gas griefing specifically by spam attacks \"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Gas griefing specifically in SuperApp termination callbacks \"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Re-entrance issues:\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"SuperApp framework allowing callbacks \"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Super Token is ERC-777, which also allows callbacks \")))), mdx(\"p\", null, \"Rewards for critical vulnerabilities are further capped at 15% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum reward of \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USD 30 000\"), \" for Critical bug reports. \"), mdx(\"p\", null, \"Superfluid requires bug bounty hunters to pass a successful KYC screening in order to be eligible for rewards. By submitting a report, bug bounty hunters agree to share the following information: Name, Surname, Address, Citizenship Country, Wallet Address. The collection of this information will be done by Superfluid Finance Ltd.\"), mdx(\"p\", null, \"Payouts are handled by \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Superfluid\"), \" directly and are denominated in USD. However, payouts are done in \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"USDC\"), \".\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Rewards are distributed according to the impact of the vulnerability based on the  <a href=\"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2\">Immunefi Vulnerability Severity Classification System V2.2</a>. This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.</p><p>Critical/High smart contract reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.</p><p>This program has the following severity classification and reward structure. In cases where this conflicts with Immunefi’s own classification system, the structure below will be followed. </p><p>Critical: Reward - USD 30 000 - USD 100 000</p><ul><li>A reproducible vulnerability discovered in the core protocol that can be exploited by anyone that results in the loss of a portion or all user funds in the Superfluid protocol:<ul><li>Critical bug which results in the drainage of all user funds (USD 100 000).</li><li>Critical bug which results in the drainage of a portion of user funds (USD 30 000 + 15% of user funds at risk or stuck, up to USD 100 000).</li></ul></li></ul><p>High: Reward - USD 10 000 - USD 30 000</p><ul><li>A reproducible bug by anyone that results in the core protocol not functioning properly where funds are stuck. If funds are stuck: you get a base reward of USD 10 000 + 15% of the total amount of funds that are stuck.<ul><li>If not reproducible (requires special conditions which can’t be affected by anyone): USD 10 000 + 7.5% of the total amount of funds that are stuck</li></ul></li></ul><p>Medium: Reward - USD 5 000</p><ul><li>An unknown vulnerability which results in any of the Superfluid contracts consuming unbounded gas for any operation.</li></ul><p>Low: Reward - USD 2 000</p><ul><li>A vulnerability that causes any of the contracts to behave in an unintended manner (which leads to a negative user experience) without resulting in loss of user funds or user funds being stuck.</li></ul><p>Gas griefing attacks in general are classified as Low severity.</p><p>The following known issues are considered to be out of scope: </p><ul><li>Gas griefing specifically by spam attacks </li><li>Gas griefing specifically in SuperApp termination callbacks </li><li>Re-entrance issues:<ul><li>SuperApp framework allowing callbacks </li><li>Super Token is ERC-777, which also allows callbacks </li></ul></li></ul><p>Rewards for critical vulnerabilities are further capped at 15% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum reward of <strong>USD 30 000</strong> for Critical bug reports. </p><p>Superfluid requires bug bounty hunters to pass a successful KYC screening in order to be eligible for rewards. By submitting a report, bug bounty hunters agree to share the following information: Name, Surname, Address, Citizenship Country, Wallet Address. The collection of this information will be done by Superfluid Finance Ltd.</p><p>Payouts are handled by <strong>Superfluid</strong> directly and are denominated in USD. However, payouts are done in <strong>USDC</strong>.</p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The following vulnerabilities are excluded from the rewards for this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that the reporter has already exploited themselves, leading to damage\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to leaked keys/credentials\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to privileged addresses (governance, strategist)\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts and Blockchain\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Incorrect data supplied by third party oracles\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Not to exclude oracle manipulation/flash loan attacks\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Basic economic governance attacks (e.g. 51% attack)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Lack of liquidity\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practice critiques\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Sybil attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Spam attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Centralization risks\")), mdx(\"p\", null, \"The following activities are prohibited by this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with pricing oracles or third party smart contracts\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attempting phishing or other social engineering attacks against our employees and/or customers\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any denial of service attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Automated testing of services that generates significant amounts of traffic\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Public disclosure of an unpatched vulnerability in an embargoed bounty\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The following vulnerabilities are excluded from the rewards for this bug bounty program:</p><ul><li>Attacks that the reporter has already exploited themselves, leading to damage</li><li>Attacks requiring access to leaked keys/credentials</li><li>Attacks requiring access to privileged addresses (governance, strategist)</li></ul><p><strong>Smart Contracts and Blockchain</strong></p><ul><li>Incorrect data supplied by third party oracles<ul><li>Not to exclude oracle manipulation/flash loan attacks</li></ul></li><li>Basic economic governance attacks (e.g. 51% attack)</li><li>Lack of liquidity</li><li>Best practice critiques</li><li>Sybil attacks</li><li>Spam attacks</li><li>Centralization risks</li></ul><p>The following activities are prohibited by this bug bounty program:</p><ul><li>Any testing with mainnet or public testnet contracts; all testing should be done on private testnets</li><li>Any testing with pricing oracles or third party smart contracts</li><li>Attempting phishing or other social engineering attacks against our employees and/or customers</li><li>Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)</li><li>Any denial of service attacks</li><li>Automated testing of services that generates significant amounts of traffic</li><li>Public disclosure of an unpatched vulnerability in an embargoed bounty</li></ul>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"All smart contracts of Superfluid can be found at \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/superfluid-finance/protocol-monorepo/tree/dev/packages/ethereum-contracts/contracts\"\n  }, \"https://github.com/superfluid-finance/protocol-monorepo/tree/dev/packages/ethereum-contracts/\"), \". However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>All smart contracts of Superfluid can be found at <a href=\"https://github.com/superfluid-finance/protocol-monorepo/tree/dev/packages/ethereum-contracts/contracts\">https://github.com/superfluid-finance/protocol-monorepo/tree/dev/packages/ethereum-contracts/</a>. However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.</p>",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}
