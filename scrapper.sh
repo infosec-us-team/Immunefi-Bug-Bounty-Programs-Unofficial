@@ -6,16 +6,21 @@ NEXT_DATA=$(curl -s https://immunefi.com/explore/ | grep -o "<script id=\"__NEXT
 # Get bounties in a variable
 projects=$(echo "$NEXT_DATA" | jq '.props.pageProps.bounties')
 
-# Check if bounties were added or removed, then do something about it
-#prev_bounties=$(cat projects.json)
-#if [ "$projects" = "$prev_projects" ]; then
-    # No programs were removed or added - do something here
-#else
-    # Programs were removed or added - do something here
-#fi
+# Let's see if new projects were added or paused
+cat ./projects.json | jq -r '.[].project' | sort > prev_projects_name.txt
+echo "$projects" | jq -r '.[].project' | sort > current_projects_name.txt
+
+# Paused or Removed
+paused_programs=$(comm -23 ./prev_projects_name.txt ./current_projects_name.txt)
+# Added or Unpaused
+added_programs=$(comm -13 ./prev_projects_name.txt ./current_projects_name.txt)
+
+# Clean temporal files
+rm ./prev_projects_name.txt
+rm ./current_projects_name.txt
 
 # Save current bounties
-echo "$NEXT_DATA" | jq '.props.pageProps.bounties' > projects.json
+echo "$projects" > projects.json
 
 # Get buildId
 buildId=$(echo "$NEXT_DATA" | jq -r '.buildId')
@@ -49,3 +54,21 @@ do
    fi
 
 done
+
+# If there are any changes, commit them.
+if [[ -z $(git status -s) ]]
+then
+  echo "Nothing changed"
+else
+
+  added_qty=$(echo "$added_programs" | wc -l)
+  paused_qty=$(echo "$paused_programs" | wc -l)
+  projects_changed=$(git status -s | grep 'M project\/' | grep -o -P '(?<=M project\/).*(?=\.json)')
+  updated_qty=$(echo "$projects_changed" | wc -l)
+
+  # Commit message
+  mg=$(echo -e "Programs added or unpaused: $added_qty\n$added_programs\n\nPrograms removed or paused: $paused_qty\n$paused_programs\n\nProjects changed: $updated_qty\n$projects_changed")
+  echo -e "$mg"
+
+  exit
+fi
