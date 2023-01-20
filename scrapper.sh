@@ -56,19 +56,25 @@ do
 done
 
 # If there are any changes, commit them.
-if [[ -z $(git status -s) ]]
+if [[ -z $(git status -s | grep -o -P '(?<=M project\/).*(?=\.json)') ]]
 then
   echo "Nothing changed"
 else
 
-  added_qty=$(echo "$added_programs" | wc -l)
-  paused_qty=$(echo "$paused_programs" | wc -l)
-  projects_changed=$(git status -s | grep 'M project\/' | grep -o -P '(?<=M project\/).*(?=\.json)')
-  updated_qty=$(echo "$projects_changed" | wc -l)
+  added_qty=$(echo "$added_programs" | sed '/^\s*$/d' | wc -l)
+  paused_qty=$(echo "$paused_programs" | sed '/^\s*$/d' | wc -l)
+  projects_changed=$(git status -s | grep -o -P '(?<=M project\/).*(?=\.json)')
+  updated_qty=$(echo "$projects_changed" | sed '/^\s*$/d' | wc -l)
 
   # Commit message
+  echo -e "\n"
   mg=$(echo -e "Programs added or unpaused: $added_qty\n$added_programs\n\nPrograms removed or paused: $paused_qty\n$paused_programs\n\nProjects changed: $updated_qty\n$projects_changed")
   echo -e "$mg"
 
+  git add --all
+  git commit -m "$mg"
+  git push
+
   exit
 fi
+
