@@ -9,7 +9,7 @@ No, the information and history of changes will stay here forever.
 ## Can I use this as a public API to get a list of programms and assets in scope?
 Yes.
 
-To get a list of programms call this endpoint:
+To get **a list of programms** call this endpoint:
 
 > `https://raw.githubusercontent.com/infosec-us-team/Immunefi-Bug-Bounty-Programs-Unofficial/main/projects.json`
 
