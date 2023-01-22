@@ -11,9 +11,9 @@ cat ./projects.json | jq -r '.[].project' | sort > prev_projects_name.txt
 echo "$projects" | jq -r '.[].project' | sort > current_projects_name.txt
 
 # Paused or Removed
-paused_programs=$(comm -23 ./prev_projects_name.txt ./current_projects_name.txt | xargs)
+paused_programs=$(comm -23 ./prev_projects_name.txt ./current_projects_name.txt | sed 's/^/#/' | xargs)
 # Added or Unpaused
-added_programs=$(comm -13 ./prev_projects_name.txt ./current_projects_name.txt | xargs)
+added_programs=$(comm -13 ./prev_projects_name.txt ./current_projects_name.txt | sed 's/^/#/' | xargs)
 
 # Clean temporal files
 rm ./prev_projects_name.txt
@@ -79,15 +79,15 @@ else
   # Tweet about it
   tweet="🤖 Bip bop! "
   if [ "$added_qty" -ne "0" ]; then
-    tweet="${tweet}New projects: $added_qty [$added_programs] - "
+    tweet="${tweet}New projects: [$added_programs] - "
   fi
 
   if [ "$paused_qty" -ne "0" ]; then
-    tweet="${tweet}Paused projects: $paused_qty [$paused_programs] - "
+    tweet="${tweet}Paused projects: [$paused_programs] - "
   fi
 
   if [ "$updated_qty" -ne "0" ]; then
-    tweet="${tweet}Projects that updated their program: $updated_qty [$projects_changed] - "
+    tweet="${tweet}Projects that updated their program: [$projects_changed] - "
   fi
 
   tweet="${tweet}Changes committed to the repo, link in the description. #Immunefi #Infosec #Bugbounty"
