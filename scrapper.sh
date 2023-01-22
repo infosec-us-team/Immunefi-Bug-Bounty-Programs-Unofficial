@@ -68,7 +68,7 @@ else
 
   # Commit message
   echo -e "\n"
-  mg="Update\n\nProjects added or unpaused: $added_qty\n$added_programs\nProjects removed or paused: $paused_qty\n$paused_programs\nProjects updated their program: $updated_qty\n$projects_changed"
+  mg=$(echo -e "Update\n\nProjects added or unpaused: $added_qty\n$added_programs\nProjects removed or paused: $paused_qty\n$paused_programs\nProjects updated their program: $updated_qty\n$projects_changed")
   echo -e "$mg"
 
   # Push to github
@@ -77,7 +77,7 @@ else
   git push
 
   # Tweet about it
-  tweet="🤖 Bip bop!\n"
+  tweet="🤖 Bip bop! "
   if [ "$added_qty" -ne "0" ]; then
     tweet="${tweet}New projects: $added_qty [$added_programs] | "
   fi
