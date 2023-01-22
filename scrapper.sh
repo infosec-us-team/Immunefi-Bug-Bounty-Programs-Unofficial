@@ -46,7 +46,7 @@ do
      echo "$PROJECT_DATA" | jq > ./project/$name.json
      #Print DONE
      echo "$name updated!"
-     sleep .2
+     sleep .1
 
    else
      # PANIC!
@@ -79,15 +79,15 @@ else
   # Tweet about it
   tweet="🤖 Bip bop! "
   if [ "$added_qty" -ne "0" ]; then
-    tweet="${tweet}New projects: $added_qty [$added_programs] | "
+    tweet="${tweet}New projects: $added_qty [$added_programs] - "
   fi
 
   if [ "$paused_qty" -ne "0" ]; then
-    tweet="${tweet}Paused projects: $paused_qty [$paused_programs] | "
+    tweet="${tweet}Paused projects: $paused_qty [$paused_programs] - "
   fi
 
   if [ "$updated_qty" -ne "0" ]; then
-    tweet="${tweet}Projects that updated their program: $updated_qty [$projects_changed] | "
+    tweet="${tweet}Projects that updated their program: $updated_qty [$projects_changed] - "
   fi
 
   tweet="${tweet}Changes committed to the repo, link in the description. #Immunefi #Infosec #Bugbounty"
