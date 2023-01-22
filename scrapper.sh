@@ -68,12 +68,31 @@ else
 
   # Commit message
   echo -e "\n"
-  mg=$(echo -e "Programs added or unpaused: $added_qty\n$added_programs\n\nPrograms removed or paused: $paused_qty\n$paused_programs\n\nProjects changed: $updated_qty\n$projects_changed")
+  mg="Update\n\nProjects added or unpaused: $added_qty\n$added_programs\nProjects removed or paused: $paused_qty\n$paused_programs\nProjects updated their program: $updated_qty\n$projects_changed"
   echo -e "$mg"
 
+  # Push to github
   git add --all
   git commit -m "$mg"
   git push
+
+  # Tweet about it
+  tweet="🤖 Bip bop!\n"
+  if [ "$added_qty" -ne "0" ]; then
+    tweet="${tweet}New projects: $added_qty\n$added_programs\n"
+  fi
+
+  if [ "$paused_qty" -ne "0" ]; then
+    tweet="${tweet}Paused projects: $paused_qty\n$paused_programs\n"
+  fi
+
+  if [ "$updated_qty" -ne "0" ]; then
+    tweet="${tweet}Projects that updated their program: $updated_qty\n$projects_changed\n\n"
+  fi
+
+  tweet="${tweet}Changes committed to the Github repo: https://github.com/infosec-us-team/Immunefi-Bug-Bounty-Programs-Unofficial-API-Private\n\n#Immunefi #Infosec #Bugbounty"
+
+  python3 ./tweet.py "${tweet}"
 
   exit
 fi
