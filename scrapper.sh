@@ -56,7 +56,7 @@ do
 done
 
 # If there are any changes, commit them.
-if [[ -z $(git status -s | grep -o -P '(?<=M project\/).*(?=\.json)') ]]
+if [[ -z $(git status -s | grep -o -P 'project/.*') ]]
 then
   echo "Nothing changed"
 else
