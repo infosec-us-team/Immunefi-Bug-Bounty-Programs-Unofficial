@@ -46,7 +46,7 @@ do
      echo "$PROJECT_DATA" | jq > ./project/$name.json
      #Print DONE
      echo "$name updated!"
-     sleep .1
+     sleep .3
 
    else
      # PANIC!
