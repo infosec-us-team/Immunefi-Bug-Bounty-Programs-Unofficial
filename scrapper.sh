@@ -11,9 +11,9 @@ cat ./projects.json | jq -r '.[].project' | sort > prev_projects_name.txt
 echo "$projects" | jq -r '.[].project' | sort > current_projects_name.txt
 
 # Paused or Removed
-paused_programs=$(comm -23 ./prev_projects_name.txt ./current_projects_name.txt | sed 's/^/#/' | xargs | sed -r 's/\s+//g')
+paused_programs=$(comm -23 ./prev_projects_name.txt ./current_projects_name.txt | sed 's/^/#/' | sed -r 's/\s+//g' | xargs)
 # Added or Unpaused
-added_programs=$(comm -13 ./prev_projects_name.txt ./current_projects_name.txt | sed 's/^/#/' | xargs | sed -r 's/\s+//g')
+added_programs=$(comm -13 ./prev_projects_name.txt ./current_projects_name.txt | sed 's/^/#/' | sed -r 's/\s+//g' | xargs)
 
 # Clean temporal files
 rm ./prev_projects_name.txt
@@ -61,8 +61,8 @@ then
   echo "Nothing changed"
 else
 
-  added_qty=$(echo "$added_programs" | sed '/^\s*$/d' | wc -l)
-  paused_qty=$(echo "$paused_programs" | sed '/^\s*$/d' | wc -l)
+  added_qty=$(echo "$added_programs" | sed 's/ /\n/g' | wc -l)
+  paused_qty=$(echo "$paused_programs" | sed 's/ /\n/g' | wc -l)
   projects_changed=$(git status -s | grep -o -P '(?<=M project\/).*(?=\.json)' | sed 's/^/#/' | xargs)
   updated_qty=$(git status -s | grep -o -P '(?<=M project\/).*(?=\.json)' | sed '/^\s*$/d' | wc -l)
 
