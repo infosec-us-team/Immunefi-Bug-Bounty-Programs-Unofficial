@@ -45,7 +45,7 @@ do
      # All good!
      echo "$PROJECT_DATA" | jq > ./project/$name.json
      #Print DONE
-     echo "$name updated!"
+     echo "$name"
      sleep .3
 
    else
@@ -94,6 +94,7 @@ else
 
   python3 ./tweet.py "${tweet}"
 
-  exit
 fi
 
+date
+exit
