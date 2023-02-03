@@ -61,8 +61,8 @@ then
   echo "Nothing changed"
 else
 
-  added_qty=$(echo "$added_programs" | sed 's/ /\n/g' | wc -l)
-  paused_qty=$(echo "$paused_programs" | sed 's/ /\n/g' | wc -l)
+  added_qty=$(echo "$added_programs" | sed '/^\s*$/d'  | wc -l)
+  paused_qty=$(echo "$paused_programs" | sed '/^\s*$/d'  | wc -l)
   projects_changed=$(git status -s | grep -o -P '(?<=M project\/).*(?=\.json)' | sed 's/^/#/' | xargs)
   updated_qty=$(git status -s | grep -o -P '(?<=M project\/).*(?=\.json)' | sed '/^\s*$/d' | wc -l)
 
@@ -90,7 +90,7 @@ else
     tweet="${tweet}Updated: [$projects_changed] - "
   fi
 
-  tweet="${tweet}Changes committed to the Github repo."
+  tweet="${tweet}Find out what exactly changed, in our latest Github commit."
 
   python3 ./tweet.py "${tweet}"
 
