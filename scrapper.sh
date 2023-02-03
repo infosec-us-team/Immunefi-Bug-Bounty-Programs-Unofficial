@@ -77,20 +77,20 @@ else
   git push
 
   # Tweet about it
-  tweet="🤖 Bip bop! "
+  tweet="🤖 Bip! "
   if [ "$added_qty" -ne "0" ]; then
-    tweet="${tweet}New projects: [$added_programs] - "
+    tweet="${tweet}New: [$added_programs] - "
   fi
 
   if [ "$paused_qty" -ne "0" ]; then
-    tweet="${tweet}Paused projects: [$paused_programs] - "
+    tweet="${tweet}Paused: [$paused_programs] - "
   fi
 
   if [ "$updated_qty" -ne "0" ]; then
-    tweet="${tweet}Projects that updated their program: [$projects_changed] - "
+    tweet="${tweet}Updated: [$projects_changed] - "
   fi
 
-  tweet="${tweet}Changes committed to the repo, link in the description. #Immunefi #Infosec #Bugbounty"
+  tweet="${tweet}Changes committed to the Github repo."
 
   python3 ./tweet.py "${tweet}"
 
