@@ -103,7 +103,7 @@ else
   fi
 
   latest_commit = $(git rev-parse HEAD)
-  tweet="${tweet}Find out what changed: https://github.com/infosec-us-team/Immunefi-Bug-Bounty-Programs-Unofficial/commit/${latest_commit}"
+  tweet="${tweet}Find out what changed: https://github.com/infosec-us-team/Immunefi-Bug-Bounty-Programs-Unofficial/commit/$latest_commit"
 
   python3 ./tweet.py "${tweet}"
 
