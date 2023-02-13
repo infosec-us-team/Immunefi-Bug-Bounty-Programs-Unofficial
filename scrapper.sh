@@ -78,19 +78,32 @@ else
 
   # Tweet about it
   tweet="🤖 Bip! "
-  if [ "$added_qty" -ne "0" ]; then
+  if [ "$added_qty" -ne "0" ] && [ "$added_qty" -lt 3 ]; then
     tweet="${tweet}New: [$added_programs] - "
   fi
 
-  if [ "$paused_qty" -ne "0" ]; then
+  if [ "$added_qty" -ne "0" ] && [ "$added_qty" -gt 2 ]; then
+    tweet="${tweet}$added_qty new/unpaused - "
+  fi
+
+  if [ "$paused_qty" -ne "0" ] && [ "$paused_qty" -lt 3 ]; then
     tweet="${tweet}Paused: [$paused_programs] - "
   fi
 
-  if [ "$updated_qty" -ne "0" ]; then
+  if [ "$paused_qty" -ne "0" ] && [ "$paused_qty" -gt 2 ]; then
+    tweet="${tweet}$paused_qty paused - "
+  fi
+
+  if [ "$updated_qty" -ne "0" ] && [ "$updated_qty" -lt 3 ]; then
     tweet="${tweet}Updated: [$projects_changed] - "
   fi
 
-  tweet="${tweet}Find out what exactly changed, in our latest Github commit."
+  if [ "$updated_qty" -ne "0" ] && [ "$updated_qty" -gt 2 ]; then
+    tweet="${tweet}$updated_qty updated - "
+  fi
+
+  latest_commit = $(git rev-parse HEAD)
+  tweet="${tweet}Find out what changed: https://github.com/infosec-us-team/Immunefi-Bug-Bounty-Programs-Unofficial/commit/${latest_commit}"
 
   python3 ./tweet.py "${tweet}"
 
