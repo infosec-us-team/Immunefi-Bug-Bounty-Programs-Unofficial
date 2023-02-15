@@ -33,23 +33,25 @@ do
 
    # Get project's name
    name=$(echo "$projects" | jq -r .[$c].id)
+   echo "Scanning: $name [$c/$bounties_length]"
    # Get project's data
    PROJECT_DATA=$(curl -s "https://immunefi.com/_next/data/$buildId/bounty/$name.json")
-
    # There's no try/catch in batch, so this is our way to double check everything went right:
    # Get name from JSON response
    name_received=$(echo "$PROJECT_DATA" | jq -r '.pageProps.bounty.id')
+   echo "Name received: $name_received [$c/$bounties_length]"
    # Compare it with stored name
    if [ "$name_received" = "$name" ]; then
 
      # All good!
      echo "$PROJECT_DATA" | jq > ./project/$name.json
      #Print DONE
-     echo "$name"
+     echo "Scanned: $name [$c/$bounties_length]"
      sleep .3
 
    else
      # PANIC!
+     echo "PANIC ERROR!!! [$c/$bounties_length]"
      break;
    fi
 
