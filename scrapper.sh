@@ -7,17 +7,17 @@ NEXT_DATA=$(curl -s https://immunefi.com/explore/ | grep -o "<script id=\"__NEXT
 projects=$(echo "$NEXT_DATA" | jq '.props.pageProps.bounties')
 
 # Let's see if new projects were added or paused
-cat ./projects.json | jq -r '.[].project' | sort > prev_projects_name.txt
-echo "$projects" | jq -r '.[].project' | sort > current_projects_name.txt
+#cat ./projects.json | jq -r '.[].project' | sort > prev_projects_name.txt
+#echo "$projects" | jq -r '.[].project' | sort > current_projects_name.txt
 
 # Paused or Removed
-paused_programs=$(comm -23 ./prev_projects_name.txt ./current_projects_name.txt | sed 's/^/#/' | sed -r 's/\s+//g' | xargs)
+#paused_programs=$(comm -23 ./prev_projects_name.txt ./current_projects_name.txt | sed 's/^/#/' | sed -r 's/\s+//g' | xargs)
 # Added or Unpaused
-added_programs=$(comm -13 ./prev_projects_name.txt ./current_projects_name.txt | sed 's/^/#/' | sed -r 's/\s+//g' | xargs)
+#added_programs=$(comm -13 ./prev_projects_name.txt ./current_projects_name.txt | sed 's/^/#/' | sed -r 's/\s+//g' | xargs)
 
 # Clean temporal files
-rm ./prev_projects_name.txt
-rm ./current_projects_name.txt
+#rm ./prev_projects_name.txt
+#rm ./current_projects_name.txt
 
 # Save current bounties
 echo "$projects" > projects.json
@@ -65,10 +65,14 @@ then
   echo "Nothing changed"
 else
 
-  added_qty=$(echo "$added_programs" | sed '/^\s*$/d'  | wc -l)
-  paused_qty=$(echo "$paused_programs" | sed '/^\s*$/d'  | wc -l)
+  #added_qty=$(echo "$added_programs" | sed '/^\s*$/d'  | wc -l)
+  #paused_qty=$(echo "$paused_programs" | sed '/^\s*$/d'  | wc -l)
+  addded_programs=$(git status -s | grep -o -P '(?<=A project\/).*(?=\.json)' | sed 's/^/#/' | xargs)
+  paused_programs=$(git status -s | grep -o -P '(?<=R project\/).*(?=\.json)' | sed 's/^/#/' | xargs) 
   projects_changed=$(git status -s | grep -o -P '(?<=M project\/).*(?=\.json)' | sed 's/^/#/' | xargs)
   updated_qty=$(git status -s | grep -o -P '(?<=M project\/).*(?=\.json)' | sed '/^\s*$/d' | wc -l)
+  added_qty=$(git status -s | grep -o -P '(?<=A project\/).*(?=\.json)' | sed '/^\s*$/d' | wc -l)
+  paused_qty=$(git status -s | grep -o -P '(?<=R project\/).*(?=\.json)' | sed '/^\s*$/d' | wc -l)
 
   # Commit message
   echo -e "\n"
