@@ -36,6 +36,8 @@ do
    echo "Scanning: $name [$c/$bounties_length]"
    # Get project's data
    PROJECT_DATA=$(curl -s "https://immunefi.com/_next/data/$buildId/bounty/$name.json")
+   echo "Calling: https://immunefi.com/_next/data/$buildId/bounty/$name.json"
+   echo "$PROJECT_DATA"
    # There's no try/catch in batch, so this is our way to double check everything went right:
    # Get name from JSON response
    name_received=$(echo "$PROJECT_DATA" | jq -r '.pageProps.bounty.id')

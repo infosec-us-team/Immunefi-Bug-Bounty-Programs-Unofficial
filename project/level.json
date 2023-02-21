@@ -1,0 +1,201 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "level",
+      "slug": "level",
+      "project": "LEVEL",
+      "maxBounty": 10000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2OSSB8gmU7tl4ehhSpl0XQ/ac90ea662226d6a7d47c4b335c5998a7/image_2023-02-08_18-30-36.png",
+      "launchDate": "2023-02-21T15:00-05:00",
+      "updatedDate": "2023-02-21T19:57:35.756Z",
+      "kyc": false,
+      "rewards": [
+        {
+          "assetType": "websites_and_applications",
+          "level": "critical",
+          "payout": "USD $10,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "high",
+          "payout": "USD $5,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "medium",
+          "payout": "USD $2,000",
+          "pocRequired": true
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "6xZerxBrbeUhiZv8Ae3VUA",
+          "type": "websites_and_applications",
+          "url": "https://app.level.finance/",
+          "description": "App frontend"
+        }
+      ],
+      "impacts": [
+        {
+          "id": "2jpS922D3QOVvvoRp82uxm",
+          "title": "Execute arbitrary system commands",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "ZPDB9vezHL3I8kn5GxuUr",
+          "title": "Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys(this does not include non-sensitive environment variables, open source code, or usernames)",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "RzvIR7ajcCxJfQO1Bju8M",
+          "title": "Taking down the application/website",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "7ATJKonYlXBjNtHdOAw8Ge",
+          "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc.",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "7jVuMqgKdOJDYErEoXxkwl",
+          "title": "Subdomain takeover with already-connected wallet interaction",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "ks5AzUtfSH4JgtUvy9sdZ",
+          "title": "Direct theft of user funds",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "67HzsofgLuRI2FcaXZx4iR",
+          "title": "Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "5GA3tLcHa2zj3wRm0UBGhA",
+          "title": "Injecting/modifying the static content on the target application without Javascript (Persistent) such as HTML injection without Javascript, replacing existing text with arbitrary text, arbitrary file uploads, etc.",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "5z0f7F3EXWPYPNgxviXzbl",
+          "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as email or password of the victim, etc.",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "5vJ9XSaXoj4aGuDVAQ85Cr",
+          "title": "Subdomain takeover without already-connected wallet interaction",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "5nQ6cK1GHqeOMmF1pPTyAG",
+          "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as changing the first/last name of user, or en/disabling notification",
+          "type": "websites_and_applications",
+          "severity": "medium"
+        },
+        {
+          "id": "1HX1As1jNFcWb5OmxnJiMI",
+          "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data",
+          "type": "websites_and_applications",
+          "severity": "medium"
+        },
+        {
+          "id": "4RlrUG18B9Fb4eoN4jppuZ",
+          "title": "Redirecting users to malicious websites (Open Redirect)",
+          "type": "websites_and_applications",
+          "severity": "medium"
+        }
+      ],
+      "programOverview": "LEVEL is a decentralized and non-custodial perpetual DEX on BNB Chain focused on delivering highly effective risk management along with first of a kind liquidity solution for LPs using original code designed from the ground up. \n\nLEVEL's architecture facilitates direct market access to programmatic pools of liquidity, enabling capital-efficient hedging with near-zero market impact for traders looking to protect their gains while seamlessly creating a yield-bearing instrument for asset owners looking to earn passive income on their crypto holdings.\n\nFor more information about LEVEL, please visit [https://app.level.finance/ ](https://app.level.finance/) ",
+      "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the  [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported. \n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required. Bug reports are required to include a runnable PoC in order to prove impact. Exceptions may be made in cases where the vulnerability is objectively evident from simply mentioning the vulnerability and where it exists. However, the bug reporter may be required to provide a PoC at any point in time.\n\nPayouts are handled by the __LEVEL__ team directly and are denominated in USD. However, payouts are done in __LVL__.  This bug bounty program will have a hard cap of USD 35 000. In the event that multiple bug reports are submitted that exceed this amount, the rewards will be provided on a first come first served basis\n",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n\n__Websites and Apps__\n\n- Theoretical vulnerabilities without any proof or demonstration\n- Attacks requiring physical access to the victim device\n- Attacks requiring access to the local network of the victim\n- Reflected plain text injection ex: url parameters, path, etc.\n   - This does not exclude reflected HTML injection with or without javascript\n   - This does not exclude persistent plain text injection\n- Self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (ex: logout CSRF)\n- Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure such as IPs, server names, and most stack traces\n- Vulnerabilities used only to enumerate or confirm the existence of users or tenants\n- Vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- DDoS vulnerabilities\n- Feature requests\n- Issues related to the frontend without concrete impact and PoC\n- Best practices issues without concrete impact and PoC\n- Vulnerabilities primarily caused by browser/plugin defects\n- Leakage of non sensitive api keys ex: etherscan, Infura, Alchemy, etc.\n- Any vulnerability exploit requiring browser bugs for exploitation. ex: CSP bypass\n\nThe following activities are prohibited by this bug bounty program:\n\n- Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
+      "assetsBodyV2": "All code of LEVEL can be found at [https://github.com/level-fi](https://github.com/level-fi). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nDocumentation and instruction for PoC can be found here:\n- [https://github.com/level-fi](https://github.com/level-fi)\n- [https://docs.level.finance/](https://docs.level.finance/)\n\nA public testnet of LEVEL can be found at [https://test.level.finance/](https://test.level.finance/). However, note that testing on the public testnet is prohibited by the program rules. The public testnet is provided for reference only.\n\nIf an impact can be caused to any other asset managed by LEVEL that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project. \n",
+      "impactsBody": null,
+      "immunefiStandard": true,
+      "tags": {
+        "productType": [
+          "AMM"
+        ],
+        "projectType": [
+          "Defi"
+        ],
+        "ecosystem": [
+          "BSC"
+        ],
+        "programType": [
+          "Websites and Applications"
+        ],
+        "language": null
+      },
+      "legacy": {
+        "technologies": [
+          "Websites and Applications"
+        ],
+        "blockchain_rewards": [],
+        "smartcontract_rewards": [],
+        "web_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $10,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $5,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $2,000"
+          }
+        ]
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"LEVEL is a decentralized and non-custodial perpetual DEX on BNB Chain focused on delivering highly effective risk management along with first of a kind liquidity solution for LPs using original code designed from the ground up. \"), mdx(\"p\", null, \"LEVEL's architecture facilitates direct market access to programmatic pools of liquidity, enabling capital-efficient hedging with near-zero market impact for traders looking to protect their gains while seamlessly creating a yield-bearing instrument for asset owners looking to earn passive income on their crypto holdings.\"), mdx(\"p\", null, \"For more information about LEVEL, please visit \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://app.level.finance/\"\n  }, \"https://app.level.finance/ \"), \" \"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>LEVEL is a decentralized and non-custodial perpetual DEX on BNB Chain focused on delivering highly effective risk management along with first of a kind liquidity solution for LPs using original code designed from the ground up. </p><p>LEVEL&#x27;s architecture facilitates direct market access to programmatic pools of liquidity, enabling capital-efficient hedging with near-zero market impact for traders looking to protect their gains while seamlessly creating a yield-bearing instrument for asset owners looking to earn passive income on their crypto holdings.</p><p>For more information about LEVEL, please visit <a href=\"https://app.level.finance/\">https://app.level.finance/ </a> </p>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.</p>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Rewards are distributed according to the impact of the vulnerability based on the  \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/\"\n  }, \"Immunefi Vulnerability Severity Classification System V2.2\"), \". This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported. \"), mdx(\"p\", null, \"All bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required. Bug reports are required to include a runnable PoC in order to prove impact. Exceptions may be made in cases where the vulnerability is objectively evident from simply mentioning the vulnerability and where it exists. However, the bug reporter may be required to provide a PoC at any point in time.\"), mdx(\"p\", null, \"Payouts are handled by the \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"LEVEL\"), \" team directly and are denominated in USD. However, payouts are done in \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"LVL\"), \".  This bug bounty program will have a hard cap of USD 35 000. In the event that multiple bug reports are submitted that exceed this amount, the rewards will be provided on a first come first served basis\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Rewards are distributed according to the impact of the vulnerability based on the  <a href=\"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/\">Immunefi Vulnerability Severity Classification System V2.2</a>. This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported. </p><p>All bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required. Bug reports are required to include a runnable PoC in order to prove impact. Exceptions may be made in cases where the vulnerability is objectively evident from simply mentioning the vulnerability and where it exists. However, the bug reporter may be required to provide a PoC at any point in time.</p><p>Payouts are handled by the <strong>LEVEL</strong> team directly and are denominated in USD. However, payouts are done in <strong>LVL</strong>.  This bug bounty program will have a hard cap of USD 35 000. In the event that multiple bug reports are submitted that exceed this amount, the rewards will be provided on a first come first served basis</p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The following vulnerabilities are excluded from the rewards for this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that the reporter has already exploited themselves, leading to damage\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to leaked keys/credentials\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to privileged addresses (governance, strategist)\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Websites and Apps\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Theoretical vulnerabilities without any proof or demonstration\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring physical access to the victim device\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to the local network of the victim\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Reflected plain text injection ex: url parameters, path, etc.\", mdx(\"ul\", {\n    parentName: \"li\"\n  }, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"This does not exclude reflected HTML injection with or without javascript\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"This does not exclude persistent plain text injection\"))), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Self-XSS\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Captcha bypass using OCR without impact demonstration\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"CSRF with no state modifying security impact (ex: logout CSRF)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as \\u201Chttponly\\u201D) without demonstration of impact\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Server-side non-confidential information disclosure such as IPs, server names, and most stack traces\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Vulnerabilities used only to enumerate or confirm the existence of users or tenants\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Lack of SSL/TLS best practices\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"DDoS vulnerabilities\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Feature requests\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Issues related to the frontend without concrete impact and PoC\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practices issues without concrete impact and PoC\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Vulnerabilities primarily caused by browser/plugin defects\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Leakage of non sensitive api keys ex: etherscan, Infura, Alchemy, etc.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any vulnerability exploit requiring browser bugs for exploitation. ex: CSP bypass\")), mdx(\"p\", null, \"The following activities are prohibited by this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with pricing oracles or third party smart contracts\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attempting phishing or other social engineering attacks against our employees and/or customers\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any denial of service attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Automated testing of services that generates significant amounts of traffic\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Public disclosure of an unpatched vulnerability in an embargoed bounty\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The following vulnerabilities are excluded from the rewards for this bug bounty program:</p><ul><li>Attacks that the reporter has already exploited themselves, leading to damage</li><li>Attacks requiring access to leaked keys/credentials</li><li>Attacks requiring access to privileged addresses (governance, strategist)</li></ul><p><strong>Websites and Apps</strong></p><ul><li>Theoretical vulnerabilities without any proof or demonstration</li><li>Attacks requiring physical access to the victim device</li><li>Attacks requiring access to the local network of the victim</li><li>Reflected plain text injection ex: url parameters, path, etc.<ul><li>This does not exclude reflected HTML injection with or without javascript</li><li>This does not exclude persistent plain text injection</li></ul></li><li>Self-XSS</li><li>Captcha bypass using OCR without impact demonstration</li><li>CSRF with no state modifying security impact (ex: logout CSRF)</li><li>Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact</li><li>Server-side non-confidential information disclosure such as IPs, server names, and most stack traces</li><li>Vulnerabilities used only to enumerate or confirm the existence of users or tenants</li><li>Vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows</li><li>Lack of SSL/TLS best practices</li><li>DDoS vulnerabilities</li><li>Feature requests</li><li>Issues related to the frontend without concrete impact and PoC</li><li>Best practices issues without concrete impact and PoC</li><li>Vulnerabilities primarily caused by browser/plugin defects</li><li>Leakage of non sensitive api keys ex: etherscan, Infura, Alchemy, etc.</li><li>Any vulnerability exploit requiring browser bugs for exploitation. ex: CSP bypass</li></ul><p>The following activities are prohibited by this bug bounty program:</p><ul><li>Any testing with mainnet or public testnet contracts; all testing should be done on private testnets</li><li>Any testing with pricing oracles or third party smart contracts</li><li>Attempting phishing or other social engineering attacks against our employees and/or customers</li><li>Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)</li><li>Any denial of service attacks</li><li>Automated testing of services that generates significant amounts of traffic</li><li>Public disclosure of an unpatched vulnerability in an embargoed bounty</li></ul>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"All code of LEVEL can be found at \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/level-fi\"\n  }, \"https://github.com/level-fi\"), \". However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\"), mdx(\"p\", null, \"Documentation and instruction for PoC can be found here:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"a\", {\n    parentName: \"li\",\n    \"href\": \"https://github.com/level-fi\"\n  }, \"https://github.com/level-fi\")), mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"a\", {\n    parentName: \"li\",\n    \"href\": \"https://docs.level.finance/\"\n  }, \"https://docs.level.finance/\"))), mdx(\"p\", null, \"A public testnet of LEVEL can be found at \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://test.level.finance/\"\n  }, \"https://test.level.finance/\"), \". However, note that testing on the public testnet is prohibited by the program rules. The public testnet is provided for reference only.\"), mdx(\"p\", null, \"If an impact can be caused to any other asset managed by LEVEL that isn\\u2019t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project. \"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>All code of LEVEL can be found at <a href=\"https://github.com/level-fi\">https://github.com/level-fi</a>. However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.</p><p>Documentation and instruction for PoC can be found here:</p><ul><li><a href=\"https://github.com/level-fi\">https://github.com/level-fi</a></li><li><a href=\"https://docs.level.finance/\">https://docs.level.finance/</a></li></ul><p>A public testnet of LEVEL can be found at <a href=\"https://test.level.finance/\">https://test.level.finance/</a>. However, note that testing on the public testnet is prohibited by the program rules. The public testnet is provided for reference only.</p><p>If an impact can be caused to any other asset managed by LEVEL that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project. </p>",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}
