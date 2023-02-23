@@ -69,8 +69,6 @@ else
   paused_qty=$(echo "$paused_programs" | sed '/^\s*$/d'  | wc -l)
   projects_changed=$(git status -s | grep -o -P '(?<=M project\/).*(?=\.json)' | sed 's/^/#/' | xargs)
   updated_qty=$(git status -s | grep -o -P '(?<=M project\/).*(?=\.json)' | sed '/^\s*$/d' | wc -l)
-  added_qty=$(git status -s | grep -o -P '(?<=A project\/).*(?=\.json)' | sed '/^\s*$/d' | wc -l)
-  paused_qty=$(git status -s | grep -o -P '(?<=R project\/).*(?=\.json)' | sed '/^\s*$/d' | wc -l)
 
   # Commit message
   echo -e "\n"
