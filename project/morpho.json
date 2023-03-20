@@ -8,7 +8,7 @@
       "maxBounty": 555555,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/56tCTIfGWf2p07D1Fy33YO/19176e7aefc1ca5498e6dcba7d8ae997/Morpho_Logo.jpg",
       "launchDate": "2022-06-17T10:00-06:00",
-      "updatedDate": "2022-12-19T13:27:26.945Z",
+      "updatedDate": "2023-03-20T14:47:54.603Z",
       "kyc": true,
       "rewards": [
         {
@@ -47,19 +47,19 @@
         {
           "id": "2V9bbEJETSwrnRN3hrQUM",
           "type": "smart_contract",
-          "url": "https://etherscan.io/address/0xbbb011b923f382543a94e67e1d0c88d9763356e5",
+          "url": "https://etherscan.io/address/​​0xe3d7a242614174ccf9f96bd479c42795d666fc81",
           "description": "Morpho (Compound)"
         },
         {
           "id": "1lwfaobZQw2sqWpY12A2I3",
           "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x309a4505d79fcc59affaba205fdcb880d400ef39",
+          "url": "https://etherscan.io/address/0x79a1b5888009bB4887E00EA27CF52551aAf2A004",
           "description": "PositionsManager (Compound)"
         },
         {
           "id": "3RwXWcbdlHzDxCFvrDiC5S",
           "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x3e483225666871d192b686c42e6834e217a9871c",
+          "url": "https://etherscan.io/address/0xD9B7209eD2936b5c06990A8356D155c3665d43Ab",
           "description": "InterestRatesManager (Compound)"
         },
         {
@@ -77,38 +77,32 @@
         {
           "id": "01l1bSZwR8z5LZe8ACP02n",
           "type": "smart_contract",
-          "url": "https://etherscan.io/address/0xf47963cc317ebe4b8ebcf30f6e144b7e7e5571b7",
-          "description": "RewardsManager"
+          "url": "https://etherscan.io/address/0x581c3816589ad0de7f9c76bc242c97fe96c9f100",
+          "description": "RewardsManager (Compound)"
         },
         {
           "id": "2axY5BP1dKuxvWSJjtvWaV",
           "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x497897080d90bc0418f896f4bfcdddd06fe8a9ea",
+          "url": "https://etherscan.io/address/0xFBc7693f114273739C74a3FF028C13769C49F2d0",
           "description": "Morpho (Aave)"
         },
         {
           "id": "7ECRgb1CCFwiULw2HQgixQ",
           "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x2a46cad23484c15f60663ece368395b3a249632a",
+          "url": "https://etherscan.io/address/0x029Ee1AF5BafC481f9E8FBeD5164253f1266B968",
           "description": "EntryPositionsManager (Aave)"
         },
         {
           "id": "4LdTZ4w1gWEp0lsPob70IK",
           "type": "smart_contract",
-          "url": "https://etherscan.io/address/0xfa652aa169c23277a941cf2d23d2d707fda60ed9",
+          "url": "https://etherscan.io/address/0xfd9b1Ad429667D27cE666EA800f828B931A974D2",
           "description": "ExitPositionsManager (Aave)"
         },
         {
           "id": "6k5TlyFwP953l5wYWXKOow",
           "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x4f54235e17eb8dcdfc941a77e7734a537f7bed86",
+          "url": "https://etherscan.io/address/0x22a4ecf5195c87605ae6bad413ae79d5c4170ff1",
           "description": "InterestRatesManager (Aave)"
-        },
-        {
-          "id": "7fBlUie85icOPgaffFVM69",
-          "type": "websites_and_applications",
-          "url": "https://morpho.xyz/",
-          "description": "Web/App"
         },
         {
           "id": "2WF4rHSEgSZVL2U5zgwzdW",
@@ -195,7 +189,7 @@
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nRewards for critical smart contract vulnerabilities are further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum reward of USD 55 555 for Critical smart contract bug reports. \n\nCurrent and past contractors with Morpho Labs or the Morpho Association are not eligible for any rewards from this bug bounty program. \n\nMorpho requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed is a scan of a photo ID. Morpho will also request an invoice with your name, email address and crypto wallet address in order to payout the reward.\n\nThe following known issues are considered to be out of scope of this program: \n  - Rounding errors.\n  - COMP rewards can be claimed as part of the reserve factor if COMP is listed as market.\n  - Someone can repay on behalf of Morpho.\n  - Relatively high gas consumption.\n  - Extreme market turmoil vulnerability.\n  - Some contracts are not set yet (eg: IncentivesVault).\n  - Manipulation of the matching engine. Here are some examples:\n    - Split large amounts: On Morpho, pure supplier whales are always in the first positions of data structures and constantly matched/unmatched. What is possible to do is to supply a large amount with a first account. Borrow-repay (free), to match itself, and then withdraw enough from the supply  to be inserted in the FIFO part of the data structure. The final result is a huge liquidity matched splitted across multiple accounts. \n    - Flashloan to enter peer-to-peer: A user is waiting in the FIFO part of the pool data structure because larger users are placed before this user. With a flash loan, it’s possible to supply enough to become the first user waiting to be matched. Then borrow-repay (free), to match peer-to-peer the user itself as well as the second one. Then withdraw the flasloaned amount and end the tx. The user is thus matched peer-to-peer.\n\n  - All other issues highlighted in the audits in this folder:\n    - [https://github.com/morpho-dao/morpho-core-v1/blob/main/audits](https://github.com/morphodao/morpho-core-v1/blob/main/audits/Morpho%20Labs%20Final%20Report.pdf)\n\nPayouts are handled by the __Morpho Labs__ team directly and are denominated in USD. However, payouts are done in __USDC__ or __DAI__, at the discretion of the team.",
       "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n\n__Websites and Apps__\n  - Theoretical vulnerabilities without any proof or demonstration\n  - Attacks requiring physical access to the victim device\n  - Attacks requiring access to the local network of the victim\n  - Reflected plain text injection ex: url parameters, path, etc.\n    - This does not exclude reflected HTML injection with or without javascript\n    - This does not exclude persistent plain text injection\n  - Self-XSS\n  - Captcha bypass using OCR without impact demonstration\n  - CSRF with no state modifying security impact (ex: logout CSRF)\n  - Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n  - Server-side non-confidential information disclosure such as IPs, server names, and most stack traces\n  - Vulnerabilities used only to enumerate or confirm the existence of users or tenants\n  - Vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n  - Lack of SSL/TLS best practices\n  - DDoS vulnerabilities\n  - Feature requests\n  - Issues related to the frontend without concrete impact and PoC\n  - Best practices issues without concrete impact and PoC\n  - Vulnerabilities primarily caused by browser/plugin defects\n  - Leakage of non sensitive api keys ex: etherscan, Infura, Alchemy, etc.\n  - Any vulnerability exploit requiring browser bugs for exploitation. ex: CSP bypass\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty\n\nAll contractors with Morpho Labs or with the Morpho Association cannot claim the bounty.",
-      "assetsBodyV2": "For proxy contracts, only the current implementation and any further updates to the implementation contracts are considered in scope. \n\nAll smart contracts of Morpho can be found at [https://github.com/morphodao/morpho-core-v1](https://github.com/morphodao/morpho-core-v1). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf any Critical or High severity impacts can be caused to any other asset managed by Morpho that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.",
+      "assetsBodyV2": "For proxy contracts, only the current implementation and any further updates to the implementation contracts are considered in scope. \n\nAll smart contracts of Morpho can be found at [https://github.com/morpho-dao/morpho-v1](https://github.com/morphodao/morpho-core-v1). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf any Critical or High severity impacts can be caused to any other asset managed by Morpho that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -266,8 +260,8 @@
         "scope": {}
       },
       "assetsBodyV2": {
-        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"For proxy contracts, only the current implementation and any further updates to the implementation contracts are considered in scope. \"), mdx(\"p\", null, \"All smart contracts of Morpho can be found at \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/morphodao/morpho-core-v1\"\n  }, \"https://github.com/morphodao/morpho-core-v1\"), \". However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\"), mdx(\"p\", null, \"If any Critical or High severity impacts can be caused to any other asset managed by Morpho that isn\\u2019t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
-        "renderedOutput": "<p>For proxy contracts, only the current implementation and any further updates to the implementation contracts are considered in scope. </p><p>All smart contracts of Morpho can be found at <a href=\"https://github.com/morphodao/morpho-core-v1\">https://github.com/morphodao/morpho-core-v1</a>. However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.</p><p>If any Critical or High severity impacts can be caused to any other asset managed by Morpho that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.</p>",
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"For proxy contracts, only the current implementation and any further updates to the implementation contracts are considered in scope. \"), mdx(\"p\", null, \"All smart contracts of Morpho can be found at \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/morphodao/morpho-core-v1\"\n  }, \"https://github.com/morpho-dao/morpho-v1\"), \". However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\"), mdx(\"p\", null, \"If any Critical or High severity impacts can be caused to any other asset managed by Morpho that isn\\u2019t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>For proxy contracts, only the current implementation and any further updates to the implementation contracts are considered in scope. </p><p>All smart contracts of Morpho can be found at <a href=\"https://github.com/morphodao/morpho-core-v1\">https://github.com/morpho-dao/morpho-v1</a>. However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.</p><p>If any Critical or High severity impacts can be caused to any other asset managed by Morpho that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.</p>",
         "scope": {}
       },
       "impactsBody": {
