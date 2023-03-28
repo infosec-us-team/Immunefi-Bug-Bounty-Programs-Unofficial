@@ -1,0 +1,185 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "jusd",
+      "slug": "jusd",
+      "project": "JUSD",
+      "maxBounty": 10000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7tvQ22LlpNsUZg0TiotiFZ/be49da2ea889c9f2bd02666abc30b4c1/JOJO_logo.png",
+      "launchDate": "2023-03-28T13:00-04:00",
+      "updatedDate": "2023-03-28T14:05:23.825Z",
+      "kyc": false,
+      "rewards": [
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "USD $10,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "high",
+          "payout": "USD $5,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "USD $1,000",
+          "pocRequired": true
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "21LjMPr4X5ZKq6hW49BZ3I",
+          "type": "smart_contract",
+          "url": "https://github.com/JOJOexchange/USDO/tree/bb2a4179625eab389c18f7ce49e9478521970bec/src",
+          "description": "Core"
+        }
+      ],
+      "impacts": [
+        {
+          "id": "1WOP0i4hniZNQ1RHqLWxG7",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "1eN2HgbJ3sHAiMEkCQbnOa",
+          "title": "Permanent freezing of funds",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "4TsPH4nF4c9Pu4lh7U03D6",
+          "title": "Protocol insolvency",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "1as7EdWiZpcvIKvrbQ5sds",
+          "title": "Theft of unclaimed yield",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "226gFztiNdZcGtOJVAt4Ub",
+          "title": "Permanent freezing of unclaimed yield",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "6PvU1M7YNcH6QBtoADoXaY",
+          "title": "Temporary freezing of funds",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "3sWjHZxTwd66oS3lkP1OwG",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "4Ptm5ErDpR6TxQR1nNtkWY",
+          "title": "Theft of gas",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "1q6crNmvChOjZWFbaaec9c",
+          "title": "Miner-extractable value (MEV)",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "4KBjVejKStDmaUgpY3QZXB",
+          "title": "Unbounded gas consumption",
+          "type": "smart_contract",
+          "severity": "medium"
+        }
+      ],
+      "programOverview": "JUSD is a stable coin developed by the JOJO system to support multi-collateralization. This feature allows users to use other non-stable coin assets (BTC, ETH, etc.) as a margin for trading. JUSD works like DAI, and users can mint JUSD by staking other ERC20 tokens as collateral. JUSD can be freely traded. However, its price is not guaranteed equally to the Primary asset in the open market.\n\nFor more information about JUSD, please visit [https://jojo-docs.netlify.app/jusd/](https://jojo-docs.netlify.app/jusd/)\n\n__For Whitehats__: It is highly recommended that you review the details of this program in full. Although many Bug Bounty programs have standard terms and conditions, each also has their own unique details that are critical to your success.  \n\nPrior to submitting a report please review the [Immunefi Bug Report Template and Best Practices. ](https://immunefisupport.zendesk.com/hc/en-us/articles/12435277406481-Bug-Report-Template)\n",
+      "prioritizedVulnerabilities": "Only those listed in the Assets in Scope table are considered to be in-scope of the bug bounty program. ",
+      "rewardsBody": "Please review how rewards are distributed based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/). This is a simplified 5-level scale system with separate scales for Smart Contracts.\n\n__Payouts and Payout Requirements:__\n\nPayouts are handled by the JUSD team directly and are denominated in USD. However, payouts are done in USDC. JUSD commits to honoring payouts according to the terms set out in this program at the time of report submission, and to treat this program as the agreement and source of truth concerning bug reports and responsible disclosures. \n\nFor the purposes of determining report validity, this is a __Primacy of Rules__ program. \n\nLearn more about report validity best practices here: [Best Practice - Primacy of Impact vs Primacy of Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact). \n\n__KYC Requirements:__\n\nJUSD __does not__ have a Know Your Customer (KYC) requirement for bug bounty payouts. \n",
+      "outOfScopeAndRules": "The following impacts and attack vectors are excluded from rewards by default for all Immunefi bug bounty programs: \n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist), except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Broken link hijacking is out of scope\n\n__Smart Contracts and Blockchain/DLT:__\n\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n- Centralization risks\n\n__Prohibited Activities:__\n\nThe following activities are prohibited by this bug bounty program. Violation of these rules can result in a temporary suspension or permanent ban from the Immunefi platform at the sole discretion of the Immunefi team, which may also result in: 1) the forfeiture and loss of access to all bug submissions, and 2) zero payout. \n\nPlease note that Immunefi has no tolerance for spam/low-quality/incomplete bug reports, “beg bounty” behavior, and misrepresentation of assets and severity. Immunefi exists to protect the global crypto community, not facilitate grift.\n\nProhibited: \n\n- Any testing with mainnet or public testnet deployed code; all testing should be done on private testnets\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/). These rules are subject to change at any time.  \n",
+      "assetsBodyV2": "__Smart Contracts:__ \n\n- __Smart Contracts - PoC__, Smart Contract bug reports are to include a runnable Proof of Concept (PoC) in order to prove impact.  \n- For more information on PoCs please visit: [Proof of Concept (PoC) Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n- All smart contracts of JUSD can be found at: [https://github.com/JOJOexchange/JUSD ](https://github.com/JOJOexchange/JUSD)\n\n__Dev Environment and Documentation:__ \nJUSD has included dev documentation and/or instructions to help in reviewing code and exploring for bugs:\n- [https://jojo-docs.netlify.app/ ](https://jojo-docs.netlify.app/)\n\n__Impacts in Scope:__\n\n(For Blockchain/DLTR and Smart Contracts Only) This program is considered to be governed by Primacy of Rules. For more information on what this means visit: [Best Practice - Primacy of Impact vs Primacy of Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact). \n\nImpacts are based on the [Immunefi Vulnerability Severity Classification System V2.2.](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/)\n\nAt Immunefi, we classify bugs on a simplified 5-level scale:\n- Critical\n- High\n- Medium\n- Low\n- None\n",
+      "impactsBody": null,
+      "immunefiStandard": true,
+      "tags": {
+        "productType": [
+          "Perpetuals"
+        ],
+        "projectType": [
+          "Defi"
+        ],
+        "ecosystem": [
+          "Arbitrum"
+        ],
+        "programType": [
+          "Smart Contract"
+        ],
+        "language": [
+          "Solidity"
+        ]
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract"
+        ],
+        "blockchain_rewards": [],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $10,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $5,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $1,000"
+          }
+        ],
+        "web_rewards": []
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"JUSD is a stable coin developed by the JOJO system to support multi-collateralization. This feature allows users to use other non-stable coin assets (BTC, ETH, etc.) as a margin for trading. JUSD works like DAI, and users can mint JUSD by staking other ERC20 tokens as collateral. JUSD can be freely traded. However, its price is not guaranteed equally to the Primary asset in the open market.\"), mdx(\"p\", null, \"For more information about JUSD, please visit \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://jojo-docs.netlify.app/jusd/\"\n  }, \"https://jojo-docs.netlify.app/jusd/\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"For Whitehats\"), \": It is highly recommended that you review the details of this program in full. Although many Bug Bounty programs have standard terms and conditions, each also has their own unique details that are critical to your success.  \"), mdx(\"p\", null, \"Prior to submitting a report please review the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefisupport.zendesk.com/hc/en-us/articles/12435277406481-Bug-Report-Template\"\n  }, \"Immunefi Bug Report Template and Best Practices. \")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>JUSD is a stable coin developed by the JOJO system to support multi-collateralization. This feature allows users to use other non-stable coin assets (BTC, ETH, etc.) as a margin for trading. JUSD works like DAI, and users can mint JUSD by staking other ERC20 tokens as collateral. JUSD can be freely traded. However, its price is not guaranteed equally to the Primary asset in the open market.</p><p>For more information about JUSD, please visit <a href=\"https://jojo-docs.netlify.app/jusd/\">https://jojo-docs.netlify.app/jusd/</a></p><p><strong>For Whitehats</strong>: It is highly recommended that you review the details of this program in full. Although many Bug Bounty programs have standard terms and conditions, each also has their own unique details that are critical to your success.  </p><p>Prior to submitting a report please review the <a href=\"https://immunefisupport.zendesk.com/hc/en-us/articles/12435277406481-Bug-Report-Template\">Immunefi Bug Report Template and Best Practices. </a></p>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Only those listed in the Assets in Scope table are considered to be in-scope of the bug bounty program. \"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Only those listed in the Assets in Scope table are considered to be in-scope of the bug bounty program. </p>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Please review how rewards are distributed based on the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/\"\n  }, \"Immunefi Vulnerability Severity Classification System V2.2\"), \". This is a simplified 5-level scale system with separate scales for Smart Contracts.\"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Payouts and Payout Requirements:\")), mdx(\"p\", null, \"Payouts are handled by the JUSD team directly and are denominated in USD. However, payouts are done in USDC. JUSD commits to honoring payouts according to the terms set out in this program at the time of report submission, and to treat this program as the agreement and source of truth concerning bug reports and responsible disclosures. \"), mdx(\"p\", null, \"For the purposes of determining report validity, this is a \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Primacy of Rules\"), \" program. \"), mdx(\"p\", null, \"Learn more about report validity best practices here: \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact\"\n  }, \"Best Practice - Primacy of Impact vs Primacy of Rules\"), \". \"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"KYC Requirements:\")), mdx(\"p\", null, \"JUSD \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"does not\"), \" have a Know Your Customer (KYC) requirement for bug bounty payouts. \"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Please review how rewards are distributed based on the <a href=\"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/\">Immunefi Vulnerability Severity Classification System V2.2</a>. This is a simplified 5-level scale system with separate scales for Smart Contracts.</p><p><strong>Payouts and Payout Requirements:</strong></p><p>Payouts are handled by the JUSD team directly and are denominated in USD. However, payouts are done in USDC. JUSD commits to honoring payouts according to the terms set out in this program at the time of report submission, and to treat this program as the agreement and source of truth concerning bug reports and responsible disclosures. </p><p>For the purposes of determining report validity, this is a <strong>Primacy of Rules</strong> program. </p><p>Learn more about report validity best practices here: <a href=\"https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact\">Best Practice - Primacy of Impact vs Primacy of Rules</a>. </p><p><strong>KYC Requirements:</strong></p><p>JUSD <strong>does not</strong> have a Know Your Customer (KYC) requirement for bug bounty payouts. </p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The following impacts and attack vectors are excluded from rewards by default for all Immunefi bug bounty programs: \"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that the reporter has already exploited themselves, leading to damage\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to leaked keys/credentials\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to privileged addresses (governance, strategist), except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Broken link hijacking is out of scope\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts and Blockchain/DLT:\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Basic economic governance attacks (e.g. 51% attack)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Lack of liquidity\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practice critiques\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Sybil attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Centralization risks\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Prohibited Activities:\")), mdx(\"p\", null, \"The following activities are prohibited by this bug bounty program. Violation of these rules can result in a temporary suspension or permanent ban from the Immunefi platform at the sole discretion of the Immunefi team, which may also result in: 1) the forfeiture and loss of access to all bug submissions, and 2) zero payout. \"), mdx(\"p\", null, \"Please note that Immunefi has no tolerance for spam/low-quality/incomplete bug reports, \\u201Cbeg bounty\\u201D behavior, and misrepresentation of assets and severity. Immunefi exists to protect the global crypto community, not facilitate grift.\"), mdx(\"p\", null, \"Prohibited: \"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with mainnet or public testnet deployed code; all testing should be done on private testnets\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attempting phishing or other social engineering attacks against our employees and/or customers\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any denial of service attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Automated testing of services that generates significant amounts of traffic\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Public disclosure of an unpatched vulnerability in an embargoed bounty\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"a\", {\n    parentName: \"li\",\n    \"href\": \"https://immunefi.com/rules/\"\n  }, \"Any other actions prohibited by the Immunefi Rules\"), \". These rules are subject to change at any time.  \")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The following impacts and attack vectors are excluded from rewards by default for all Immunefi bug bounty programs: </p><ul><li>Attacks that the reporter has already exploited themselves, leading to damage</li><li>Attacks requiring access to leaked keys/credentials</li><li>Attacks requiring access to privileged addresses (governance, strategist), except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible</li><li>Broken link hijacking is out of scope</li></ul><p><strong>Smart Contracts and Blockchain/DLT:</strong></p><ul><li>Basic economic governance attacks (e.g. 51% attack)</li><li>Lack of liquidity</li><li>Best practice critiques</li><li>Sybil attacks</li><li>Centralization risks</li></ul><p><strong>Prohibited Activities:</strong></p><p>The following activities are prohibited by this bug bounty program. Violation of these rules can result in a temporary suspension or permanent ban from the Immunefi platform at the sole discretion of the Immunefi team, which may also result in: 1) the forfeiture and loss of access to all bug submissions, and 2) zero payout. </p><p>Please note that Immunefi has no tolerance for spam/low-quality/incomplete bug reports, “beg bounty” behavior, and misrepresentation of assets and severity. Immunefi exists to protect the global crypto community, not facilitate grift.</p><p>Prohibited: </p><ul><li>Any testing with mainnet or public testnet deployed code; all testing should be done on private testnets</li><li>Attempting phishing or other social engineering attacks against our employees and/or customers</li><li>Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)</li><li>Any denial of service attacks</li><li>Automated testing of services that generates significant amounts of traffic</li><li>Public disclosure of an unpatched vulnerability in an embargoed bounty</li><li><a href=\"https://immunefi.com/rules/\">Any other actions prohibited by the Immunefi Rules</a>. These rules are subject to change at any time.  </li></ul>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts:\"), \" \"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"strong\", {\n    parentName: \"li\"\n  }, \"Smart Contracts - PoC\"), \", Smart Contract bug reports are to include a runnable Proof of Concept (PoC) in order to prove impact.  \"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"For more information on PoCs please visit: \", mdx(\"a\", {\n    parentName: \"li\",\n    \"href\": \"https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules\"\n  }, \"Proof of Concept (PoC) Guidelines and Rules\")), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"All smart contracts of JUSD can be found at: \", mdx(\"a\", {\n    parentName: \"li\",\n    \"href\": \"https://github.com/JOJOexchange/JUSD\"\n  }, \"https://github.com/JOJOexchange/JUSD \"))), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Dev Environment and Documentation:\"), \"\\nJUSD has included dev documentation and/or instructions to help in reviewing code and exploring for bugs:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"a\", {\n    parentName: \"li\",\n    \"href\": \"https://jojo-docs.netlify.app/\"\n  }, \"https://jojo-docs.netlify.app/ \"))), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Impacts in Scope:\")), mdx(\"p\", null, \"(For Blockchain/DLTR and Smart Contracts Only) This program is considered to be governed by Primacy of Rules. For more information on what this means visit: \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact\"\n  }, \"Best Practice - Primacy of Impact vs Primacy of Rules\"), \". \"), mdx(\"p\", null, \"Impacts are based on the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/\"\n  }, \"Immunefi Vulnerability Severity Classification System V2.2.\")), mdx(\"p\", null, \"At Immunefi, we classify bugs on a simplified 5-level scale:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Critical\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"High\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Medium\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Low\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"None\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p><strong>Smart Contracts:</strong> </p><ul><li><strong>Smart Contracts - PoC</strong>, Smart Contract bug reports are to include a runnable Proof of Concept (PoC) in order to prove impact.  </li><li>For more information on PoCs please visit: <a href=\"https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules\">Proof of Concept (PoC) Guidelines and Rules</a></li><li>All smart contracts of JUSD can be found at: <a href=\"https://github.com/JOJOexchange/JUSD\">https://github.com/JOJOexchange/JUSD </a></li></ul><p><strong>Dev Environment and Documentation:</strong>\nJUSD has included dev documentation and/or instructions to help in reviewing code and exploring for bugs:</p><ul><li><a href=\"https://jojo-docs.netlify.app/\">https://jojo-docs.netlify.app/ </a></li></ul><p><strong>Impacts in Scope:</strong></p><p>(For Blockchain/DLTR and Smart Contracts Only) This program is considered to be governed by Primacy of Rules. For more information on what this means visit: <a href=\"https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact\">Best Practice - Primacy of Impact vs Primacy of Rules</a>. </p><p>Impacts are based on the <a href=\"https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/\">Immunefi Vulnerability Severity Classification System V2.2.</a></p><p>At Immunefi, we classify bugs on a simplified 5-level scale:</p><ul><li>Critical</li><li>High</li><li>Medium</li><li>Low</li><li>None</li></ul>",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}
