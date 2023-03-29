@@ -8,7 +8,7 @@
       "maxBounty": 100000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5VrN6pAefb3vpdjFPdDR4m/94d1a5806d123f8d9a26e7726b09ae71/Idle.png",
       "launchDate": "2021-03-25T00:00-07:00",
-      "updatedDate": "2023-02-09T20:29:08.231Z",
+      "updatedDate": "2023-03-29T15:05:11.918Z",
       "kyc": false,
       "rewards": [
         {
@@ -47,7 +47,7 @@
         {
           "id": "15QmZWJqYsLvjAClv8qP10",
           "type": "smart_contract",
-          "url": "https://docs.idle.finance/developers/best-yield/deployed-contracts#best-yield-strategy-v4",
+          "url": "https://docs.idle.finance/developers/best-yield/deployed-contracts#senior-best-yield",
           "description": "Smart Contract"
         }
       ],
@@ -89,12 +89,6 @@
           "severity": "high"
         },
         {
-          "id": "1raDj57cLNQu3l5crzFHuS",
-          "title": "Temporary freezing of funds",
-          "type": "smart_contract",
-          "severity": "high"
-        },
-        {
           "id": "FXabdALQS2FBvKbgRsmnM",
           "title": "Smart contract unable to operate due to lack of token funds",
           "type": "smart_contract",
@@ -103,6 +97,12 @@
         {
           "id": "6u9kXZ8yXb4sXV5SLs4MQE",
           "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "79m9WCOb18hIxqcpb1Mui0",
+          "title": "Temporary freezing of funds",
           "type": "smart_contract",
           "severity": "medium"
         },
@@ -117,7 +117,7 @@
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the\nfollowing types:\n\n**Smart Contracts/Blockchain:**\n\n- Re-entrancy\n- Logic errors\n  - including user authentication errors\n- Solidity/EVM details not considered\n  - including integer over-/under-flow\n  - including unhandled exceptions\n- Trusting trust/dependency vulnerabilities\n  - including composability vulnerabilities\n- Oracle failure/manipulation\n- Novel governance attacks\n- Economic/financial attacks\n  - including flash loan attacks\n- Congestion and scalability\n  - including running out of gas\n  - including block stuffing\n  - including susceptibility to frontrunning\n- Consensus failures\n- Cryptography problems\n  - Signature malleability\n  - Susceptibility to replay attacks\n  - Weak randomness\n  - Weak encryption\n- Susceptibility to block timestamp manipulation\n- Missing access controls / unprotected internal or debugging interfaces",
       "rewardsBody": "\nRewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System 2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nThe final reward for critical bounty payouts is capped at 10% of the funds at\nrisk based on the vulnerability reported.\n\nTheft of yield or interest is considered as Medium but may be considered High depending on the amount of funds at risk.\n\nBest practices critiques are not accepted under this program. This None/Very Low \nlevel is for bugs that may be considered “Low” but have an even lower impact level.\n\nThe likelihood of exploitability is also taken into consideration in the\ndetermination of the final payout amount based on the severity of the bug\nreported according to the table below:\n\n| | Very Low/None | Low | Medium | High | Critical |\n| :-- | :-- | :-- | :-- | :-- | :-: |\n| Almost Certain | $1,000 | $5,000 | $10,000 | $50,000 | $100,000 |\n| Likely | $500 | $1,000 | $5,000 | $10,000 | $50,000 | \n| Possible | $100 | $500 | $1,000 | $5,000 | $10,000 |\n| Unlikely  | $100 | $100 | $500 | $1,000 | $5,000 |\n| Almost Possible | $100 | $100 | $100 | $500 | $1,000 |\n\nPayouts are handled by **Idle Finance** governance directly and are denominated\nin **USD**. Payouts under $10,000 are done in **USDC**. When payouts are over\n$10,000, the first $10,000 is paid in **USDC** and then the rest are paid in\n**IDLE** up to the total of $100 000.",
       "outOfScopeAndRules": "**The following vulnerabilities are excluded from the rewards for this bug\nbounty program:**\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n\n**The following activities are prohibited by bug bounty program:**\n\n- Any testing with mainnet or public testnet contracts; all testing should be\n  done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees\n  and/or customers\n- Any testing with third party systems and applications (e.g. browser\n  extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "Governance and Utilities contracts are not covered under this bug bounty program.\n",
+      "assetsBodyV2": "Only Senior Best Yield contracts will be considered in scope. Governance and Utilities contracts are not covered under this bug bounty program. Paused contracts are not considered in scope.\n",
       "impactsBody": null,
       "immunefiStandard": null,
       "tags": {
@@ -189,8 +189,8 @@
         "scope": {}
       },
       "assetsBodyV2": {
-        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Governance and Utilities contracts are not covered under this bug bounty program.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
-        "renderedOutput": "<p>Governance and Utilities contracts are not covered under this bug bounty program.</p>",
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Only Senior Best Yield contracts will be considered in scope. Governance and Utilities contracts are not covered under this bug bounty program. Paused contracts are not considered in scope.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Only Senior Best Yield contracts will be considered in scope. Governance and Utilities contracts are not covered under this bug bounty program. Paused contracts are not considered in scope.</p>",
         "scope": {}
       },
       "impactsBody": {
