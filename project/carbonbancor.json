@@ -1,0 +1,208 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "carbonbancor",
+      "slug": "carbonbancor",
+      "project": "Carbon & Bancor",
+      "maxBounty": 900000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1nqF3UKYXUVR0FZzbX8zcf/3e9ef81cd45a182e816adbfad9ba4fc3/Bancor-logo.png",
+      "launchDate": "2021-04-07T00:00-07:00",
+      "updatedDate": "2023-04-19T13:28:25.519Z",
+      "kyc": true,
+      "rewards": [
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "up to USD $900,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "high",
+          "payout": "USD $36,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "USD $4,500",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "low",
+          "payout": "USD $900",
+          "pocRequired": false
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "394YKxYje8735aISAveqmZ",
+          "type": "smart_contract",
+          "url": "https://github.com/bancorprotocol/contracts-v3/tree/dev",
+          "description": "V3"
+        },
+        {
+          "id": "4jHE0bld2xLIuwNQz616Fz",
+          "type": "smart_contract",
+          "url": "https://github.com/bancorprotocol/carbon-contracts",
+          "description": "Carbon"
+        }
+      ],
+      "impacts": [
+        {
+          "id": "6rwi4UDudg4U7aZGlXrSBN",
+          "title": "Direct theft of user funds other than unclaimed yield",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "vh8wnnqY8TOEMl8X3AKXz",
+          "title": "Protocol Insolvency",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "4jKZFSClYTiDaEFtjWEQob",
+          "title": "Permanent freezing of funds",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "3UJ5mHgwGixZ37L6NikqUk",
+          "title": "Theft of unclaimed yield in excess of $1,000",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "7m2E4HkujSbbtn534vFMhU",
+          "title": "Permanent freezing of unclaimed yield",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "b2byiSPQWQHObtHtI1inF",
+          "title": "Smart contract unable to operate due to lack of token funds",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "2MLkt77EgT1qIpkmoFoDqB",
+          "title": "Block stuffing for profit",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "vLu7NkFn22i2R3X3W4vuS",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "6uAOs5EueVGPS0WIEUFCXm",
+          "title": "Unbounded gas consumption",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "732XrpyQ0IKnskYy7NBelR",
+          "title": "Theft of gas",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "6IeLBqDh86W1hJfDRG2nS5",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "type": "smart_contract",
+          "severity": "low"
+        }
+      ],
+      "programOverview": "The Carbon/Bancor3 Bug Bounty aims to incentivize responsible disclosures of any bugs in the Carbon/Bancor3 smart contracts. Starting with the official Beta launch, the [contracts-v3 repository](https://github.com/bancorprotocol/contracts-v3/tree/dev) and [carbon-contracts repository](https://github.com/bancorprotocol/carbon-contracts)  are subject to the bounty program.\n\nRewards are allocated based on the severity of the bug disclosed and awarded up to __$900,000 USD__. The scope, terms and rewards are at the sole discretion of the Bprotocol Foundation.",
+      "prioritizedVulnerabilities": "__Scope__\n\nThe list below is not limited to the following submissions but it gives an overview of the issues we care about:\n\n  - Stealing or loss of funds\n  - Unauthorized transactions\n  - Transaction manipulation\n  - Price manipulation\n  - Fee payment bypass\n  - Balance manipulation\n  - Privacy violation\n  - Cryptographic flaws\n  - Reentrancy\n  - Logic errors (including user authentication errors)\n  - Solidity details not considered, including integer over-/under-flow, rounding errors, unhandled exceptions)\n  - Trusting trust/dependency vulnerabilities, including composability vulnerabilities)\n  - Oracle failure/manipulation\n  - Novel governance attacks and economic/financial attacks, including flash loan attacks\n  - Congestion and scalability, including running out of gas, block stuffing, susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems, e.g., signature malleability, susceptibility to replay attacks, weak randomness and weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces\n  - Issues arising from whitelisted tokens\n\n__Disclosure__\n\nThe vulnerability must not be disclosed publicly or to any other person, entity or email address before Bprotocol Foundation has been notified, has confirmed the issue is fixed, and has granted permission for public disclosure. In addition, disclosure must be made within 24 hours following discovery of the vulnerability.\n\nA detailed report of a vulnerability increases the likelihood of a reward and may increase the reward amount. Please provide as much information about the vulnerability as possible, including:\n\n  - The conditions on which reproducing the bug is contingent.\n  - The steps needed to reproduce the bug or, preferably, a proof of concept.\n  - The potential implications of the vulnerability being abused.\n\nAnyone who reports a unique, previously-unreported vulnerability that results in a change to the code or a configuration change and who keeps such vulnerability confidential until it has been resolved will be recognized publicly for their contribution if they so choose.",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on\nthe <Link href=\"/severity-system/\">Immunefi Vulnerability Severity Classification System</Link>. This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nPayouts are handled by __Bancor__ directly and are denominated in USD. However, payouts are done in __BNT__. ",
+      "outOfScopeAndRules": "The following are not within the scope of the Program:\n\n  - Bugs in any third party contract or platform that interacts with Carbon/Bancor V3.\n  - Vulnerabilities already reported and/or discovered in contracts built by third parties on Carbon/Bancor V3. We reserve the right to keep private previous bug disclosures.\n  - Any previously reported bugs.\n\nThe following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage.\n  - Attacks requiring access to leaked keys/credentials.\n  - Attacks requiring access to privileged addresses (governance, strategist)\n  - Incorrect data supplied by third party oracles (Note that oracle manipulation and flash loan attacks are included in the bounty)\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Best practice critiques\n  - Sybil attacks\n  - Bugs in any third party contract or platform that interacts with the Carbon/Bancor protocol (Note that oracle manipulation and flash loan attacks are included in the bounty)\n\nThe following activities are prohibited by bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets or private mainnet forks\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against contributors and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty\n\n__Other Terms__\n\nBy submitting your report, you grant the Bprotocol Foundation any and all rights, including intellectual property rights, needed to validate, mitigate, and disclose the vulnerability. All reward decisions, including eligibility for and amounts of the rewards and the manner in which such rewards will be paid, are made at the sole discretion of the Bprotocol Foundation. The terms and conditions of the Carbon/Bancor 3 Bug Bounty Program may be altered at any time. The above scope, terms and rewards of the program are at the sole discretion of the Bprotocol Foundation.\n",
+      "assetsBodyV2": "### Eligibility \n\nTo be eligible for a reward under this Program, you must:\n\n  - Discover a previously unreported, non-public vulnerability in Carbon/Bancor V3 (but not on any third party platform interacting with Carbon/Bancor V3) that is within the scope of this Program. Vulnerabilities must be distinct from issues covered in any of the official security audits.\n  - Be the first to disclose the unique vulnerability, in compliance with the disclosure requirements above. If similar vulnerabilities are reported within the same 24 hour period, rewards will be split at the discretion of Bprotocol Foundation.\n  - Provide sufficient information to enable contributors to reproduce and fix the vulnerability.\n  - Not engage in any unlawful conduct when disclosing the bug, including through threats, demands, or any other coercive tactics.\n  - Not exploit the vulnerability in any way, including through making it public or by obtaining a profit (other than a reward under this Program).\n  - Make a good faith effort to avoid privacy violations, destruction of data, interruption or degradation of Carbon/Bancor V3.\n  - Submit only one vulnerability per submission, unless you need to chain vulnerabilities to provide impact regarding any of the vulnerabilities.\n  - Not submit a vulnerability caused by an underlying issue that is the same as an issue on which a reward has been paid under this program.\n  - Not be a current or former vendor, contractor or subcontractor to the Bprotocol Foundation\n  - Not be subject to Swiss sanctions or reside in a Swiss-embargoed country.\n  - Be at least 18 years of age or, if younger, submit your vulnerability with the consent of your parent or guardian.\n",
+      "impactsBody": null,
+      "immunefiStandard": true,
+      "tags": {
+        "productType": [
+          "AMM",
+          "DEX"
+        ],
+        "projectType": [
+          "Defi"
+        ],
+        "ecosystem": [
+          "ETH"
+        ],
+        "programType": [
+          "Smart Contract"
+        ],
+        "language": [
+          "Solidity"
+        ]
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract"
+        ],
+        "blockchain_rewards": [],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "up to USD $900,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $36,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $4,500"
+          },
+          {
+            "level": "Low",
+            "payout": "USD $900"
+          }
+        ],
+        "web_rewards": []
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The Carbon/Bancor3 Bug Bounty aims to incentivize responsible disclosures of any bugs in the Carbon/Bancor3 smart contracts. Starting with the official Beta launch, the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/bancorprotocol/contracts-v3/tree/dev\"\n  }, \"contracts-v3 repository\"), \" and \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/bancorprotocol/carbon-contracts\"\n  }, \"carbon-contracts repository\"), \"  are subject to the bounty program.\"), mdx(\"p\", null, \"Rewards are allocated based on the severity of the bug disclosed and awarded up to \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"$900,000 USD\"), \". The scope, terms and rewards are at the sole discretion of the Bprotocol Foundation.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The Carbon/Bancor3 Bug Bounty aims to incentivize responsible disclosures of any bugs in the Carbon/Bancor3 smart contracts. Starting with the official Beta launch, the <a href=\"https://github.com/bancorprotocol/contracts-v3/tree/dev\">contracts-v3 repository</a> and <a href=\"https://github.com/bancorprotocol/carbon-contracts\">carbon-contracts repository</a>  are subject to the bounty program.</p><p>Rewards are allocated based on the severity of the bug disclosed and awarded up to <strong>$900,000 USD</strong>. The scope, terms and rewards are at the sole discretion of the Bprotocol Foundation.</p>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Scope\")), mdx(\"p\", null, \"The list below is not limited to the following submissions but it gives an overview of the issues we care about:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Stealing or loss of funds\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Unauthorized transactions\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Transaction manipulation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Price manipulation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Fee payment bypass\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Balance manipulation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Privacy violation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Cryptographic flaws\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Reentrancy\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Logic errors (including user authentication errors)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Solidity details not considered, including integer over-/under-flow, rounding errors, unhandled exceptions)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Trusting trust/dependency vulnerabilities, including composability vulnerabilities)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Oracle failure/manipulation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Novel governance attacks and economic/financial attacks, including flash loan attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Congestion and scalability, including running out of gas, block stuffing, susceptibility to frontrunning\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Consensus failures\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Cryptography problems, e.g., signature malleability, susceptibility to replay attacks, weak randomness and weak encryption\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Susceptibility to block timestamp manipulation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Missing access controls / unprotected internal or debugging interfaces\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Issues arising from whitelisted tokens\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Disclosure\")), mdx(\"p\", null, \"The vulnerability must not be disclosed publicly or to any other person, entity or email address before Bprotocol Foundation has been notified, has confirmed the issue is fixed, and has granted permission for public disclosure. In addition, disclosure must be made within 24 hours following discovery of the vulnerability.\"), mdx(\"p\", null, \"A detailed report of a vulnerability increases the likelihood of a reward and may increase the reward amount. Please provide as much information about the vulnerability as possible, including:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"The conditions on which reproducing the bug is contingent.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"The steps needed to reproduce the bug or, preferably, a proof of concept.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"The potential implications of the vulnerability being abused.\")), mdx(\"p\", null, \"Anyone who reports a unique, previously-unreported vulnerability that results in a change to the code or a configuration change and who keeps such vulnerability confidential until it has been resolved will be recognized publicly for their contribution if they so choose.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p><strong>Scope</strong></p><p>The list below is not limited to the following submissions but it gives an overview of the issues we care about:</p><ul><li>Stealing or loss of funds</li><li>Unauthorized transactions</li><li>Transaction manipulation</li><li>Price manipulation</li><li>Fee payment bypass</li><li>Balance manipulation</li><li>Privacy violation</li><li>Cryptographic flaws</li><li>Reentrancy</li><li>Logic errors (including user authentication errors)</li><li>Solidity details not considered, including integer over-/under-flow, rounding errors, unhandled exceptions)</li><li>Trusting trust/dependency vulnerabilities, including composability vulnerabilities)</li><li>Oracle failure/manipulation</li><li>Novel governance attacks and economic/financial attacks, including flash loan attacks</li><li>Congestion and scalability, including running out of gas, block stuffing, susceptibility to frontrunning</li><li>Consensus failures</li><li>Cryptography problems, e.g., signature malleability, susceptibility to replay attacks, weak randomness and weak encryption</li><li>Susceptibility to block timestamp manipulation</li><li>Missing access controls / unprotected internal or debugging interfaces</li><li>Issues arising from whitelisted tokens</li></ul><p><strong>Disclosure</strong></p><p>The vulnerability must not be disclosed publicly or to any other person, entity or email address before Bprotocol Foundation has been notified, has confirmed the issue is fixed, and has granted permission for public disclosure. In addition, disclosure must be made within 24 hours following discovery of the vulnerability.</p><p>A detailed report of a vulnerability increases the likelihood of a reward and may increase the reward amount. Please provide as much information about the vulnerability as possible, including:</p><ul><li>The conditions on which reproducing the bug is contingent.</li><li>The steps needed to reproduce the bug or, preferably, a proof of concept.</li><li>The potential implications of the vulnerability being abused.</li></ul><p>Anyone who reports a unique, previously-unreported vulnerability that results in a change to the code or a configuration change and who keeps such vulnerability confidential until it has been resolved will be recognized publicly for their contribution if they so choose.</p>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Rewards are distributed according to the impact of the vulnerability based on\\nthe \", mdx(Link, {\n    href: \"/severity-system/\",\n    mdxType: \"Link\"\n  }, \"Immunefi Vulnerability Severity Classification System\"), \". This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\"), mdx(\"p\", null, \"Payouts are handled by \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Bancor\"), \" directly and are denominated in USD. However, payouts are done in \", mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"BNT\"), \". \"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Rewards are distributed according to the impact of the vulnerability based on\nthe <a href=\"/severity-system/\" target=\"_blank\" rel=\"noopener noreferrer\">Immunefi Vulnerability Severity Classification System</a>. This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.</p><p>Payouts are handled by <strong>Bancor</strong> directly and are denominated in USD. However, payouts are done in <strong>BNT</strong>. </p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"The following are not within the scope of the Program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Bugs in any third party contract or platform that interacts with Carbon/Bancor V3.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Vulnerabilities already reported and/or discovered in contracts built by third parties on Carbon/Bancor V3. We reserve the right to keep private previous bug disclosures.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any previously reported bugs.\")), mdx(\"p\", null, \"The following vulnerabilities are excluded from the rewards for this bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that the reporter has already exploited themselves, leading to damage.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to leaked keys/credentials.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to privileged addresses (governance, strategist)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Incorrect data supplied by third party oracles (Note that oracle manipulation and flash loan attacks are included in the bounty)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Basic economic governance attacks (e.g. 51% attack)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practice critiques\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Sybil attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Bugs in any third party contract or platform that interacts with the Carbon/Bancor protocol (Note that oracle manipulation and flash loan attacks are included in the bounty)\")), mdx(\"p\", null, \"The following activities are prohibited by bug bounty program:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with mainnet or public testnet contracts; all testing should be done on private testnets or private mainnet forks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with pricing oracles or third party smart contracts\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attempting phishing or other social engineering attacks against contributors and/or customers\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Any denial of service attacks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Automated testing of services that generates significant amounts of traffic\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Public disclosure of an unpatched vulnerability in an embargoed bounty\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Other Terms\")), mdx(\"p\", null, \"By submitting your report, you grant the Bprotocol Foundation any and all rights, including intellectual property rights, needed to validate, mitigate, and disclose the vulnerability. All reward decisions, including eligibility for and amounts of the rewards and the manner in which such rewards will be paid, are made at the sole discretion of the Bprotocol Foundation. The terms and conditions of the Carbon/Bancor 3 Bug Bounty Program may be altered at any time. The above scope, terms and rewards of the program are at the sole discretion of the Bprotocol Foundation.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>The following are not within the scope of the Program:</p><ul><li>Bugs in any third party contract or platform that interacts with Carbon/Bancor V3.</li><li>Vulnerabilities already reported and/or discovered in contracts built by third parties on Carbon/Bancor V3. We reserve the right to keep private previous bug disclosures.</li><li>Any previously reported bugs.</li></ul><p>The following vulnerabilities are excluded from the rewards for this bug bounty program:</p><ul><li>Attacks that the reporter has already exploited themselves, leading to damage.</li><li>Attacks requiring access to leaked keys/credentials.</li><li>Attacks requiring access to privileged addresses (governance, strategist)</li><li>Incorrect data supplied by third party oracles (Note that oracle manipulation and flash loan attacks are included in the bounty)</li><li>Basic economic governance attacks (e.g. 51% attack)</li><li>Best practice critiques</li><li>Sybil attacks</li><li>Bugs in any third party contract or platform that interacts with the Carbon/Bancor protocol (Note that oracle manipulation and flash loan attacks are included in the bounty)</li></ul><p>The following activities are prohibited by bug bounty program:</p><ul><li>Any testing with mainnet or public testnet contracts; all testing should be done on private testnets or private mainnet forks</li><li>Any testing with pricing oracles or third party smart contracts</li><li>Attempting phishing or other social engineering attacks against contributors and/or customers</li><li>Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)</li><li>Any denial of service attacks</li><li>Automated testing of services that generates significant amounts of traffic</li><li>Public disclosure of an unpatched vulnerability in an embargoed bounty</li></ul><p><strong>Other Terms</strong></p><p>By submitting your report, you grant the Bprotocol Foundation any and all rights, including intellectual property rights, needed to validate, mitigate, and disclose the vulnerability. All reward decisions, including eligibility for and amounts of the rewards and the manner in which such rewards will be paid, are made at the sole discretion of the Bprotocol Foundation. The terms and conditions of the Carbon/Bancor 3 Bug Bounty Program may be altered at any time. The above scope, terms and rewards of the program are at the sole discretion of the Bprotocol Foundation.</p>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"h3\", null, \"Eligibility\"), mdx(\"p\", null, \"To be eligible for a reward under this Program, you must:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Discover a previously unreported, non-public vulnerability in Carbon/Bancor V3 (but not on any third party platform interacting with Carbon/Bancor V3) that is within the scope of this Program. Vulnerabilities must be distinct from issues covered in any of the official security audits.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Be the first to disclose the unique vulnerability, in compliance with the disclosure requirements above. If similar vulnerabilities are reported within the same 24 hour period, rewards will be split at the discretion of Bprotocol Foundation.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Provide sufficient information to enable contributors to reproduce and fix the vulnerability.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Not engage in any unlawful conduct when disclosing the bug, including through threats, demands, or any other coercive tactics.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Not exploit the vulnerability in any way, including through making it public or by obtaining a profit (other than a reward under this Program).\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Make a good faith effort to avoid privacy violations, destruction of data, interruption or degradation of Carbon/Bancor V3.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Submit only one vulnerability per submission, unless you need to chain vulnerabilities to provide impact regarding any of the vulnerabilities.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Not submit a vulnerability caused by an underlying issue that is the same as an issue on which a reward has been paid under this program.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Not be a current or former vendor, contractor or subcontractor to the Bprotocol Foundation\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Not be subject to Swiss sanctions or reside in a Swiss-embargoed country.\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Be at least 18 years of age or, if younger, submit your vulnerability with the consent of your parent or guardian.\")));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<h3>Eligibility</h3><p>To be eligible for a reward under this Program, you must:</p><ul><li>Discover a previously unreported, non-public vulnerability in Carbon/Bancor V3 (but not on any third party platform interacting with Carbon/Bancor V3) that is within the scope of this Program. Vulnerabilities must be distinct from issues covered in any of the official security audits.</li><li>Be the first to disclose the unique vulnerability, in compliance with the disclosure requirements above. If similar vulnerabilities are reported within the same 24 hour period, rewards will be split at the discretion of Bprotocol Foundation.</li><li>Provide sufficient information to enable contributors to reproduce and fix the vulnerability.</li><li>Not engage in any unlawful conduct when disclosing the bug, including through threats, demands, or any other coercive tactics.</li><li>Not exploit the vulnerability in any way, including through making it public or by obtaining a profit (other than a reward under this Program).</li><li>Make a good faith effort to avoid privacy violations, destruction of data, interruption or degradation of Carbon/Bancor V3.</li><li>Submit only one vulnerability per submission, unless you need to chain vulnerabilities to provide impact regarding any of the vulnerabilities.</li><li>Not submit a vulnerability caused by an underlying issue that is the same as an issue on which a reward has been paid under this program.</li><li>Not be a current or former vendor, contractor or subcontractor to the Bprotocol Foundation</li><li>Not be subject to Swiss sanctions or reside in a Swiss-embargoed country.</li><li>Be at least 18 years of age or, if younger, submit your vulnerability with the consent of your parent or guardian.</li></ul>",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}
