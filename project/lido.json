@@ -8,7 +8,7 @@
       "maxBounty": 2000000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1juChpOkenRApXgGp4CcXF/7fe8265cab1624d296bbeb316cc76d8f/LDO.png",
       "launchDate": "2021-05-22T00:00-05:00",
-      "updatedDate": "2023-04-15T01:24:32.973Z",
+      "updatedDate": "2023-05-15T19:14:58.303Z",
       "kyc": false,
       "rewards": [
         {
@@ -63,27 +63,15 @@
       "audits": null,
       "assets": [
         {
-          "id": "2XmBVVuxy97iMskfzNE3Pa",
-          "type": "smart_contract",
-          "url": "https://github.com/lidofinance/aave-protocol-v2/tree/feature/steth-on-prev-version/contracts/protocol/tokenization/lido",
-          "description": "Lido"
-        },
-        {
           "id": "40Hi0IrxIZVK2InNJxWMY0",
           "type": "smart_contract",
           "url": "https://docs.lido.fi/deployed-contracts",
           "description": null
         },
         {
-          "id": "4UvWqINkBAOE8uUXgvHu0X",
+          "id": "5riYRwlznbFEw62j0l7bdr",
           "type": "smart_contract",
-          "url": "https://github.com/lidofinance/lido-dao/releases/tag/v2.0.0-rc.2",
-          "description": null
-        },
-        {
-          "id": "61c1D4ROKlUgLwSTJz9pYz",
-          "type": "smart_contract",
-          "url": "https://github.com/lidofinance/dc4bc",
+          "url": "https://github.com/lidofinance/lido-dao",
           "description": null
         },
         {
@@ -96,12 +84,6 @@
           "id": "19SBjnCi0Us1mWwe7tjM6N",
           "type": "smart_contract",
           "url": "https://github.com/lidofinance/curve-merkle-oracle",
-          "description": null
-        },
-        {
-          "id": "5riYRwlznbFEw62j0l7bdr",
-          "type": "smart_contract",
-          "url": "https://github.com/lidofinance/lido-dao",
           "description": null
         },
         {
@@ -121,6 +103,12 @@
           "type": "smart_contract",
           "url": "https://github.com/lidofinance/anchor-collateral-steth/",
           "description": null
+        },
+        {
+          "id": "2XmBVVuxy97iMskfzNE3Pa",
+          "type": "smart_contract",
+          "url": "https://github.com/lidofinance/aave-protocol-v2/tree/feature/steth-on-prev-version/contracts/protocol/tokenization/lido",
+          "description": "Lido"
         },
         {
           "id": "38rtEP97WsV6OJygyur8nG",
@@ -347,7 +335,7 @@
           "severity": "low"
         }
       ],
-      "programOverview": "Lido is a liquid staking solution for ETH 2.0 backed by industry-leading staking providers. Lido lets users stake their ETH - without locking assets or maintaining infrastructure - whilst participating in on-chain activities, e.g. lending.\n\nLido attempts to solve the problems associated with initial ETH 2.0 staking - illiquidity, immovability and accessibility - making staked ETH liquid and allowing for participation with any amount of ETH to improve security of the Ethereum network.\n\nFor more information about Lido, please visit [Lido.fi](https://lido.fi/). \n\nThe bug bounty program covers its smart contracts and apps and is focused on the prevention of loss of user funds, denial of service, governance hijacks, data breaches, and data leaks.",
+      "programOverview": "Lido is a liquid staking solution for Ethereum backed by industry-leading staking providers. Lido lets users stake their ETH - without locking assets or maintaining infrastructure - whilst participating in on-chain activities, e.g. lending.\n\nLido attempts to solve the problems associated with initial Ethereum staking - illiquidity, immovability and accessibility - making staked ETH liquid and allowing for participation with any amount of ETH to improve security of the Ethereum network.\n\nFor more information about Lido, please visit [Lido.fi](https://lido.fi/). \n\nThe bug bounty program covers its smart contracts and apps and is focused on the prevention of loss of user funds, denial of service, governance hijacks, data breaches, and data leaks.",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces\n\n__Websites and Apps__\n\n  - Remote Code Execution\n  - Trusting trust/dependency vulnerabilities\n  - Vertical Privilege Escalation\n  - XML External Entities Injection\n  - SQL Injection\n  - LFI/RFI\n  - Horizontal Privilege Escalation\n  - Stored XSS\n  - Reflective XSS with impact\n  - CSRF with impact\n  - Direct object reference\n  - Internal SSRF\n  - Session fixation\n  - Insecure Deserialization\n  - DOM XSS\n  - SSL misconfigurations\n  - SSL/TLS issues (weak crypto, improper setup)\n  - URL redirect\n  - Clickjacking (must be accompanied with PoC)\n  - Misleading Unicode text (e.g. using right to left override characters)",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll web and app bugs must come with a PoC in order to be accepted. All web and app bug reports without a PoC will be rejected with a request for a PoC.\n\n__Smart Contracts Rewards Breakdowns__\n\n  - __Smart Contracts Critical:__\n\n    - Loss of user funds: \n      - 1% of assets at risk, minimum 100 000 USD, maximum 2 000 000 USD\n    - Loss of non-user funds (e.g. treasury): \n      - 1% of assets at risk, minimum  50 000 USD , maximum 1 000 000 USD\n\n  - __Smart Contracts High:__\n\n    - 1% of assets at risk when attack persists for 1 month\n      -  minimum 20 000 USD, maximum of 400 000 USD\n\n  - __Smart Contracts Medium:__\n\n    - 1% of assets at risk when attack persists for 1 month \n      - minimum 5 000 USD, maximum 100 000 USD\n\n  - __Smart Contracts Low:__\n\n     - 2 000 USD\n\n__Web/App Rewards Breakdowns__\n\n  - __Web/App Critical:__\n\n    -  40 000 USD\n\n  - __Web/App High:__\n\n    -  7 500 USD  \n    -  If attack can modify the transaction users approve so it sends funds to the wrong address: then this reward increases to a total of 40 000 USD\n\n  - __Web/App Medium:__\n\n    -  3 250 USD\n\n  - __Web/App Low:__\n\n    -  500 USD  \n\nPayouts are handled by the __Lido__ team directly and are denominated in __USD__. Payouts can be done in __ETH__, __DAI__, __RAI__, or __LDO__, at the decision of the bug bounty hunter.",
       "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n\n__Websites and Apps__\n\n  - Theoretical vulnerabilities without any proof or demonstration\n  - Content spoofing / Text injection issues\n  - Self-XSS\n  - Captcha bypass using OCR\n  - CSRF with no security impact (logout CSRF, change language, etc.)\n  - Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”)\n  - Server-side information disclosure such as IPs, server names, and most stack traces\n  - Vulnerabilities used to enumerate or confirm the existence of users or tenants\n  - Vulnerabilities requiring unlikely user actions\n  - URL Redirects (unless combined with another vulnerability to produce a more severe vulnerability)\n  - Lack of SSL/TLS best practices\n  - DDoS vulnerabilities\n  - Attacks requiring privileged access from within the organization\n  - Feature requests\n  - Best practices\n\nThe following activities are prohibited by bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
@@ -418,8 +406,8 @@
     },
     "mdx": {
       "programOverview": {
-        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Lido is a liquid staking solution for ETH 2.0 backed by industry-leading staking providers. Lido lets users stake their ETH - without locking assets or maintaining infrastructure - whilst participating in on-chain activities, e.g. lending.\"), mdx(\"p\", null, \"Lido attempts to solve the problems associated with initial ETH 2.0 staking - illiquidity, immovability and accessibility - making staked ETH liquid and allowing for participation with any amount of ETH to improve security of the Ethereum network.\"), mdx(\"p\", null, \"For more information about Lido, please visit \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://lido.fi/\"\n  }, \"Lido.fi\"), \". \"), mdx(\"p\", null, \"The bug bounty program covers its smart contracts and apps and is focused on the prevention of loss of user funds, denial of service, governance hijacks, data breaches, and data leaks.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
-        "renderedOutput": "<p>Lido is a liquid staking solution for ETH 2.0 backed by industry-leading staking providers. Lido lets users stake their ETH - without locking assets or maintaining infrastructure - whilst participating in on-chain activities, e.g. lending.</p><p>Lido attempts to solve the problems associated with initial ETH 2.0 staking - illiquidity, immovability and accessibility - making staked ETH liquid and allowing for participation with any amount of ETH to improve security of the Ethereum network.</p><p>For more information about Lido, please visit <a href=\"https://lido.fi/\">Lido.fi</a>. </p><p>The bug bounty program covers its smart contracts and apps and is focused on the prevention of loss of user funds, denial of service, governance hijacks, data breaches, and data leaks.</p>",
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\n\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Lido is a liquid staking solution for Ethereum backed by industry-leading staking providers. Lido lets users stake their ETH - without locking assets or maintaining infrastructure - whilst participating in on-chain activities, e.g. lending.\"), mdx(\"p\", null, \"Lido attempts to solve the problems associated with initial Ethereum staking - illiquidity, immovability and accessibility - making staked ETH liquid and allowing for participation with any amount of ETH to improve security of the Ethereum network.\"), mdx(\"p\", null, \"For more information about Lido, please visit \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://lido.fi/\"\n  }, \"Lido.fi\"), \". \"), mdx(\"p\", null, \"The bug bounty program covers its smart contracts and apps and is focused on the prevention of loss of user funds, denial of service, governance hijacks, data breaches, and data leaks.\"));\n}\n\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Lido is a liquid staking solution for Ethereum backed by industry-leading staking providers. Lido lets users stake their ETH - without locking assets or maintaining infrastructure - whilst participating in on-chain activities, e.g. lending.</p><p>Lido attempts to solve the problems associated with initial Ethereum staking - illiquidity, immovability and accessibility - making staked ETH liquid and allowing for participation with any amount of ETH to improve security of the Ethereum network.</p><p>For more information about Lido, please visit <a href=\"https://lido.fi/\">Lido.fi</a>. </p><p>The bug bounty program covers its smart contracts and apps and is focused on the prevention of loss of user funds, denial of service, governance hijacks, data breaches, and data leaks.</p>",
         "scope": {}
       },
       "prioritizedVulnerabilities": {
