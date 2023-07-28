@@ -41,68 +41,68 @@
         {
           "id": "7kD4zenE5mQjRXsv3poQ9u",
           "type": "smart_contract",
-          "url": "https://github.com/Synthetixio/synthetix",
-          "description": "Synthetix"
+          "url": "https://github.com/Synthetixio/synthetix-docs/blob/master/content/addresses.md",
+          "description": "V2x"
         },
         {
           "id": "2DPlTvydIyd0iRonNzsRM5",
           "type": "smart_contract",
-          "url": "https://docs.synthetix.io/addresses/",
-          "description": "Synthetix Addresses"
+          "url": "https://docs.synthetix.io/v/v3/for-developers/addresses-+-abis",
+          "description": "V3"
         }
       ],
       "impacts": [
         {
           "id": "6t8Dq1146AnDZDzoAPrh9O",
-          "title": "Any governance voting result manipulation",
+          "title": "Direct theft of collateral from liquidity providers and borrowers (i.e. staked assets)",
           "type": "smart_contract",
           "severity": "critical"
         },
         {
           "id": "1y0wxWvLDBlX4MA8vI517B",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "title": "Direct theft of tokens and NFTs from token and NFT holders (i.e. v3 staking position / sUSD / snxUSD /…)",
           "type": "smart_contract",
           "severity": "critical"
         },
         {
           "id": "5quICoWhIv0jR3FDmMOL4G",
-          "title": "Permanent freezing of funds",
+          "title": "Permanent bricking of staking or trading contracts resulting in losses to owners, where the assets can’t be recovered by any means",
           "type": "smart_contract",
           "severity": "critical"
         },
         {
           "id": "61ixkYjmUkYGjfc48D7biO",
-          "title": "Protocol insolvency",
+          "title": "Governance voting result manipulation that could result a critical severity classification",
           "type": "smart_contract",
           "severity": "critical"
         },
         {
           "id": "4KGeMwenovTLi239bFWqVF",
-          "title": "Theft of unclaimed yield",
+          "title": "Theft of unclaimed yield that can be become claimable by the attacker within 24 hours of the attack",
           "type": "smart_contract",
           "severity": "high"
         },
         {
           "id": "3wJDV49TWFaKQMduVYdpRv",
-          "title": "Permanent freezing of unclaimed yield",
-          "type": "smart_contract",
-          "severity": "high"
-        },
-        {
-          "id": "6sF78AlLfWJKC4THw9U8xP",
           "title": "Temporary freezing of funds",
           "type": "smart_contract",
           "severity": "high"
         },
         {
+          "id": "6sF78AlLfWJKC4THw9U8xP",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
           "id": "Lf2Yb7u5lbrrQz4WtTVqj",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "title": "Other governance voting result manipulation",
           "type": "smart_contract",
           "severity": "medium"
         },
         {
           "id": "1kuxSEyCAi7V8DbVPXTa8h",
-          "title": "Block stuffing for profit",
+          "title": "Theft of unclaimed yield that can be become claimable by the attacker",
           "type": "smart_contract",
           "severity": "medium"
         },
