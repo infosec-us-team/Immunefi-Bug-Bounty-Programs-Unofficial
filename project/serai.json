@@ -1,0 +1,228 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "serai",
+      "slug": "serai",
+      "project": "Serai",
+      "maxBounty": 30000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3BgXni606gQMXNuKQ9dO8B/bc0c46df1edb3f95f35d95aa9c131618/icon.svg",
+      "launchDate": "2023-08-04T12:00+01:00",
+      "updatedDate": "2023-08-04T16:09:35.543Z",
+      "kyc": true,
+      "rewards": [
+        {
+          "assetType": "blockchain_dlt",
+          "level": "critical",
+          "payout": "USD $30,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "high",
+          "payout": "USD $5,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "medium",
+          "payout": "USD $1,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "low",
+          "payout": "USD $250",
+          "pocRequired": true
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "7Gm6mlwT0WqsqD68yB0ttp",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/serai-dex/serai/tree/develop/crypto/transcript",
+          "description": " flexible-transcript"
+        },
+        {
+          "id": "6YH3ugptVFFnU8RrL4anNk",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/serai-dex/serai/tree/develop/crypto/dalek-ff-group",
+          "description": "dalek-ff-group"
+        },
+        {
+          "id": "Y4c8YGTbaJy4jATtAsncD",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/serai-dex/serai/tree/develop/crypto/multiexp",
+          "description": "multiexp"
+        },
+        {
+          "id": "1Eg6t3JkxqQoKzeB0AxSVq",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/serai-dex/serai/tree/develop/crypto/ciphersuite",
+          "description": "ciphersuite"
+        },
+        {
+          "id": "S0HPyOGuPLO9RoqQ42dKy",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/serai-dex/serai/tree/develop/crypto/schnorr",
+          "description": "schnorr-signatures"
+        },
+        {
+          "id": "463okXUFOAsKzsU5XiQIRU",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/serai-dex/serai/tree/develop/crypto/dleq",
+          "description": "dleq"
+        },
+        {
+          "id": "23cnhEMoYY1M6X7dgosrUQ",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/serai-dex/serai/tree/develop/crypto/dkg",
+          "description": "dkg"
+        },
+        {
+          "id": "4pj5Yi3VZHdQf2o8pyRdMw",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/serai-dex/serai/tree/develop/crypto/frost",
+          "description": "modular-frost"
+        },
+        {
+          "id": "6jm53RI29T7duolrIEfFz3",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/serai-dex/serai/tree/develop/crypto/schnorrkel",
+          "description": "frost-schnorrkel"
+        }
+      ],
+      "impacts": [
+        {
+          "id": "1DoOUJxrThEmlmzZfz8SKr",
+          "title": "Recovery of private keys/shares/nonces",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "2gjvSUY7fqRCX0jQr5RqC9",
+          "title": "Signing of unintended messages",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "587IE07Sid0XfUhCE3V3bk",
+          "title": "Ability to forge proofs",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "3XGbfzTIyMENVTIKGQ1OuN",
+          "title": "Incorrect/incomplete formulas",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "5qcrdVL1vGBpTR6z5IliWl",
+          "title": "Undocumented transcript collision",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        },
+        {
+          "id": "6mvZP9ZQeNjpl7OIh3cUqi",
+          "title": "Undocumented panic reachable from a public API",
+          "type": "blockchain_dlt",
+          "severity": "low"
+        },
+        {
+          "id": "72ZFkvZnM89mMGuN4hXz7N",
+          "title": "Non-constant time implementation with regards to secret data",
+          "type": "blockchain_dlt",
+          "severity": "low"
+        }
+      ],
+      "programOverview": "Serai is an actively developed cross-chain, decentralized exchange for Bitcoin, Ethereum, and Monero. Built from scratch in Rust, Serai uses threshold multisignatures to secure coins under its own decentralized network.\n\nFor more information about Serai, please visit [https://github.com/serai-dex/serai](https://github.com/serai-dex/serai)\n\nSerai provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__\n\nThe provision of KYC is required to receive a reward for this bug bounty program, where the following information will be required to be provided:\n- IRS form W-8/W-9, as applicable\n- Applicant is not listed on the [OFAC SDN list](https://www.treasury.gov/ofac/downloads/sdnlist.pdf)\n\nKYC information is only required on confirmation of the validity of a bug report.   \n\n__Responsible Publication__\n\nSerai adheres to category 1. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication ](https://immunefi.com/responsible-publication/)page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nSerai adheres to the Primacy of Impact for the following severity levels:\n- Blockchain/DLT - Critical\n- Blockchain/DLT - High\n- Blockchain/DLT - Medium\n- Blockchain/DLT - Low\n\nIf a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nAll other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n__Known Issue Assurance__\n\nSerai commits to providing Known Issue Assurance to bug submissions through their program. This means that Serai will either disclose known issues publicly or at the very least privately via a self-reported bug submission in order to allow for a more objective and streamlined mediation process to prove that an issue is known. Otherwise, assuming the bug report itself is valid, it would result in the bug report being considered in-scope and due 100% of the reward with respect to the bug bounty program terms. \n\n__Immunefi Standard Badge__\n\nSerai has satisfied the requirements for the [Immunefi Standard Badge,](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-) which is given to projects that adhere to our best practices. ",
+      "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+      "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Overtime Attack Limitations__\n\nIn cases of attacks executed over time for smart contract and blockchain/DLT bugs, an explicit two hour window without human intervention is provided, starting from the first erroneous or malicious action. Only achievements during this window will be counted, regardless of further impact.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs acknowledged below are not eligible for any reward through the bug bounty program. \n- [https://github.com/serai-dex/serai/issues](https://github.com/serai-dex/serai/issues)\n- [https://github.com/serai-dex/serai/tree/develop/audits](https://github.com/serai-dex/serai/tree/develop/audits)\n\n__Previous Audits__\n\nSerai has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [https://github.com/serai-dex/serai/blob/develop/audits/Cypher%20Stack%20crypto%20March%202023/Audit.pdf](https://github.com/serai-dex/serai/blob/develop/audits/Cypher%20Stack%20crypto%20March%202023/Audit.pdf)\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Blockchain/DLT - Critical\n\nIn addition, PoC will be required for the following low impact:\n- Undocumented panic\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Serai team directly and are denominated in USD. However, payments are done in USDC. \n",
+      "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories__\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials, though not attacks gaining access to keys/credentials\n- Broken link hijacking is out of scope\n\n__Smart Contracts and Blockchain/DLT__ \n\n- Attacks breaking BFT assumptions\n- Lack of liquidity\n- Best practice critiques\n- Centralization risks\n- Signature production by the threshold\n- Attacks reliant on attacking an out of scope communication protocol between library users\n- Invalid circumstances reachable by providing invalid hashes/curves/ciphersuites/algorithms/etc\n- Attacks on the cross-group discrete logarithm proof, marked experimental\n- Vulnerabilities/issues in tests/code explicitly for tests\n- Bugs only reachable via unsafe code\n",
+      "assetsBodyV2": "All code of Serai can be found at [https://github.com/serai-dex/serai. ](https://github.com/serai-dex/serai)\n",
+      "impactsBody": null,
+      "immunefiStandard": true,
+      "tags": {
+        "productType": [
+          "AMM",
+          "Crosschain Liquidity",
+          "DEX",
+          "L1"
+        ],
+        "projectType": [
+          "Exchange",
+          "Defi",
+          "Blockchain"
+        ],
+        "ecosystem": null,
+        "programType": [
+          "Blockchain/DLT"
+        ],
+        "language": [
+          "Rust"
+        ]
+      },
+      "legacy": {
+        "technologies": [
+          "Blockchain/DLT"
+        ],
+        "blockchain_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $30,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $5,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $1,000"
+          },
+          {
+            "level": "Low",
+            "payout": "USD $250"
+          }
+        ],
+        "smartcontract_rewards": [],
+        "web_rewards": []
+      }
+    },
+    "mdx": {
+      "programOverview": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\nfunction _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n/* @jsxRuntime classic */\n/* @jsx mdx */\n\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n    props = _objectWithoutProperties(_ref, _excluded);\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Serai is an actively developed cross-chain, decentralized exchange for Bitcoin, Ethereum, and Monero. Built from scratch in Rust, Serai uses threshold multisignatures to secure coins under its own decentralized network.\"), mdx(\"p\", null, \"For more information about Serai, please visit \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/serai-dex/serai\"\n  }, \"https://github.com/serai-dex/serai\")), mdx(\"p\", null, \"Serai provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below. \"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"KYC Requirement\")), mdx(\"p\", null, \"The provision of KYC is required to receive a reward for this bug bounty program, where the following information will be required to be provided:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"IRS form W-8/W-9, as applicable\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Applicant is not listed on the \", mdx(\"a\", {\n    parentName: \"li\",\n    \"href\": \"https://www.treasury.gov/ofac/downloads/sdnlist.pdf\"\n  }, \"OFAC SDN list\"))), mdx(\"p\", null, \"KYC information is only required on confirmation of the validity of a bug report.   \"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Responsible Publication\")), mdx(\"p\", null, \"Serai adheres to category 1. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefi.com/responsible-publication/\"\n  }, \"Responsible Publication \"), \"page.\"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Primacy of Impact vs Primacy of Rules\")), mdx(\"p\", null, \"Serai adheres to the Primacy of Impact for the following severity levels:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Blockchain/DLT - Critical\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Blockchain/DLT - High\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Blockchain/DLT - Medium\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Blockchain/DLT - Low\")), mdx(\"p\", null, \"If a category\\u2019s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\"), mdx(\"p\", null, \"All other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Known Issue Assurance\")), mdx(\"p\", null, \"Serai commits to providing Known Issue Assurance to bug submissions through their program. This means that Serai will either disclose known issues publicly or at the very least privately via a self-reported bug submission in order to allow for a more objective and streamlined mediation process to prove that an issue is known. Otherwise, assuming the bug report itself is valid, it would result in the bug report being considered in-scope and due 100% of the reward with respect to the bug bounty program terms. \"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Immunefi Standard Badge\")), mdx(\"p\", null, \"Serai has satisfied the requirements for the \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-\"\n  }, \"Immunefi Standard Badge,\"), \" which is given to projects that adhere to our best practices. \"));\n}\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Serai is an actively developed cross-chain, decentralized exchange for Bitcoin, Ethereum, and Monero. Built from scratch in Rust, Serai uses threshold multisignatures to secure coins under its own decentralized network.</p><p>For more information about Serai, please visit <a href=\"https://github.com/serai-dex/serai\">https://github.com/serai-dex/serai</a></p><p>Serai provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below. </p><p><strong>KYC Requirement</strong></p><p>The provision of KYC is required to receive a reward for this bug bounty program, where the following information will be required to be provided:</p><ul><li>IRS form W-8/W-9, as applicable</li><li>Applicant is not listed on the <a href=\"https://www.treasury.gov/ofac/downloads/sdnlist.pdf\">OFAC SDN list</a></li></ul><p>KYC information is only required on confirmation of the validity of a bug report.   </p><p><strong>Responsible Publication</strong></p><p>Serai adheres to category 1. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our <a href=\"https://immunefi.com/responsible-publication/\">Responsible Publication </a>page.</p><p><strong>Primacy of Impact vs Primacy of Rules</strong></p><p>Serai adheres to the Primacy of Impact for the following severity levels:</p><ul><li>Blockchain/DLT - Critical</li><li>Blockchain/DLT - High</li><li>Blockchain/DLT - Medium</li><li>Blockchain/DLT - Low</li></ul><p>If a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.</p><p>All other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.</p><p><strong>Known Issue Assurance</strong></p><p>Serai commits to providing Known Issue Assurance to bug submissions through their program. This means that Serai will either disclose known issues publicly or at the very least privately via a self-reported bug submission in order to allow for a more objective and streamlined mediation process to prove that an issue is known. Otherwise, assuming the bug report itself is valid, it would result in the bug report being considered in-scope and due 100% of the reward with respect to the bug bounty program terms. </p><p><strong>Immunefi Standard Badge</strong></p><p>Serai has satisfied the requirements for the <a href=\"https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-\">Immunefi Standard Badge,</a> which is given to projects that adhere to our best practices. </p>",
+        "scope": {}
+      },
+      "prioritizedVulnerabilities": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\nfunction _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n/* @jsxRuntime classic */\n/* @jsx mdx */\n\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n    props = _objectWithoutProperties(_ref, _excluded);\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\"));\n}\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.</p>",
+        "scope": {}
+      },
+      "rewardsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\nfunction _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n/* @jsxRuntime classic */\n/* @jsx mdx */\n\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n    props = _objectWithoutProperties(_ref, _excluded);\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Overtime Attack Limitations\")), mdx(\"p\", null, \"In cases of attacks executed over time for smart contract and blockchain/DLT bugs, an explicit two hour window without human intervention is provided, starting from the first erroneous or malicious action. Only achievements during this window will be counted, regardless of further impact.\"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Public Disclosure of Known Issues\")), mdx(\"p\", null, \"Bug reports covering previously-discovered bugs acknowledged below are not eligible for any reward through the bug bounty program. \"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"a\", {\n    parentName: \"li\",\n    \"href\": \"https://github.com/serai-dex/serai/issues\"\n  }, \"https://github.com/serai-dex/serai/issues\")), mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"a\", {\n    parentName: \"li\",\n    \"href\": \"https://github.com/serai-dex/serai/tree/develop/audits\"\n  }, \"https://github.com/serai-dex/serai/tree/develop/audits\"))), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Previous Audits\")), mdx(\"p\", null, \"Serai has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, mdx(\"a\", {\n    parentName: \"li\",\n    \"href\": \"https://github.com/serai-dex/serai/blob/develop/audits/Cypher%20Stack%20crypto%20March%202023/Audit.pdf\"\n  }, \"https://github.com/serai-dex/serai/blob/develop/audits/Cypher%20Stack%20crypto%20March%202023/Audit.pdf\"))), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Proof of Concept (PoC) Requirements\")), mdx(\"p\", null, \"A PoC is required for the following severity levels:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Blockchain/DLT - Critical\")), mdx(\"p\", null, \"In addition, PoC will be required for the following low impact:\"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Undocumented panic\")), mdx(\"p\", null, \"All PoCs submitted must comply with the Immunefi-wide \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules\"\n  }, \"PoC Guidelines and Rules.\"), \" Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Reward Payment Terms\")), mdx(\"p\", null, \"Payouts are handled by the Serai team directly and are denominated in USD. However, payments are done in USDC. \"));\n}\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. </p><p><strong>Overtime Attack Limitations</strong></p><p>In cases of attacks executed over time for smart contract and blockchain/DLT bugs, an explicit two hour window without human intervention is provided, starting from the first erroneous or malicious action. Only achievements during this window will be counted, regardless of further impact.</p><p><strong>Public Disclosure of Known Issues</strong></p><p>Bug reports covering previously-discovered bugs acknowledged below are not eligible for any reward through the bug bounty program. </p><ul><li><a href=\"https://github.com/serai-dex/serai/issues\">https://github.com/serai-dex/serai/issues</a></li><li><a href=\"https://github.com/serai-dex/serai/tree/develop/audits\">https://github.com/serai-dex/serai/tree/develop/audits</a></li></ul><p><strong>Previous Audits</strong></p><p>Serai has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.</p><ul><li><a href=\"https://github.com/serai-dex/serai/blob/develop/audits/Cypher%20Stack%20crypto%20March%202023/Audit.pdf\">https://github.com/serai-dex/serai/blob/develop/audits/Cypher%20Stack%20crypto%20March%202023/Audit.pdf</a></li></ul><p><strong>Proof of Concept (PoC) Requirements</strong></p><p>A PoC is required for the following severity levels:</p><ul><li>Blockchain/DLT - Critical</li></ul><p>In addition, PoC will be required for the following low impact:</p><ul><li>Undocumented panic</li></ul><p>All PoCs submitted must comply with the Immunefi-wide <a href=\"https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules\">PoC Guidelines and Rules.</a> Bug report submissions without a PoC when a PoC is required will not be provided with a reward.</p><p><strong>Reward Payment Terms</strong></p><p>Payouts are handled by the Serai team directly and are denominated in USD. However, payments are done in USDC. </p>",
+        "scope": {}
+      },
+      "outOfScopeAndRules": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\nfunction _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n/* @jsxRuntime classic */\n/* @jsx mdx */\n\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n    props = _objectWithoutProperties(_ref, _excluded);\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"These impacts are out of scope for this bug bounty program. \"), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"All Categories\")), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks that the reporter has already exploited themselves, leading to damage\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks requiring access to leaked keys/credentials, though not attacks gaining access to keys/credentials\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Broken link hijacking is out of scope\")), mdx(\"p\", null, mdx(\"strong\", {\n    parentName: \"p\"\n  }, \"Smart Contracts and Blockchain/DLT\"), \" \"), mdx(\"ul\", null, mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks breaking BFT assumptions\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Lack of liquidity\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Best practice critiques\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Centralization risks\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Signature production by the threshold\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks reliant on attacking an out of scope communication protocol between library users\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Invalid circumstances reachable by providing invalid hashes/curves/ciphersuites/algorithms/etc\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Attacks on the cross-group discrete logarithm proof, marked experimental\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Vulnerabilities/issues in tests/code explicitly for tests\"), mdx(\"li\", {\n    parentName: \"ul\"\n  }, \"Bugs only reachable via unsafe code\")));\n}\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>These impacts are out of scope for this bug bounty program. </p><p><strong>All Categories</strong></p><ul><li>Attacks that the reporter has already exploited themselves, leading to damage</li><li>Attacks requiring access to leaked keys/credentials, though not attacks gaining access to keys/credentials</li><li>Broken link hijacking is out of scope</li></ul><p><strong>Smart Contracts and Blockchain/DLT</strong> </p><ul><li>Attacks breaking BFT assumptions</li><li>Lack of liquidity</li><li>Best practice critiques</li><li>Centralization risks</li><li>Signature production by the threshold</li><li>Attacks reliant on attacking an out of scope communication protocol between library users</li><li>Invalid circumstances reachable by providing invalid hashes/curves/ciphersuites/algorithms/etc</li><li>Attacks on the cross-group discrete logarithm proof, marked experimental</li><li>Vulnerabilities/issues in tests/code explicitly for tests</li><li>Bugs only reachable via unsafe code</li></ul>",
+        "scope": {}
+      },
+      "assetsBodyV2": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\nfunction _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n/* @jsxRuntime classic */\n/* @jsx mdx */\n\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n    props = _objectWithoutProperties(_ref, _excluded);\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }), mdx(\"p\", null, \"All code of Serai can be found at \", mdx(\"a\", {\n    parentName: \"p\",\n    \"href\": \"https://github.com/serai-dex/serai\"\n  }, \"https://github.com/serai-dex/serai. \")));\n}\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "<p>All code of Serai can be found at <a href=\"https://github.com/serai-dex/serai\">https://github.com/serai-dex/serai. </a></p>",
+        "scope": {}
+      },
+      "impactsBody": {
+        "compiledSource": "\"use strict\";\n\nvar _excluded = [\"components\"];\nfunction _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n/* @jsxRuntime classic */\n/* @jsx mdx */\n\nvar layoutProps = {};\nvar MDXLayout = \"wrapper\";\nfunction MDXContent(_ref) {\n  var components = _ref.components,\n    props = _objectWithoutProperties(_ref, _excluded);\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: \"MDXLayout\"\n  }));\n}\n;\nMDXContent.isMDXComponent = true;",
+        "renderedOutput": "",
+        "scope": {}
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}
