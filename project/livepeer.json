@@ -8,7 +8,7 @@
       "maxBounty": 40000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3UUkKoNVTz0RMrIhQnL0v8/042be0217ef163209cec501313440815/Livepeer_logo.jpeg",
       "launchDate": "2022-02-24T21:00-07:00",
-      "updatedDate": "2023-02-06T22:03:02.645Z",
+      "updatedDate": "2023-10-16T15:45:30.626Z",
       "kyc": true,
       "rewards": [
         {
@@ -76,7 +76,7 @@
         {
           "id": "4nAId0h2gZRYDmpdkL6Fmr",
           "type": "smart_contract",
-          "url": "https://arbiscan.io/address/0x3a941e1094B9E33efABB26a9047a8ABb4b257907",
+          "url": "https://arbiscan.io/address/0x363cdB9BaE210Ef182c60b5a496139E980330127",
           "description": "Bonding Manager (Target)",
           "isPrimacyOfImpact": null
         },
@@ -212,6 +212,41 @@
           "url": "https://etherscan.io/address/0x8dDDB96CF36AC8860f1DE5C7c4698fd499FAB405#code",
           "description": "BridgeMinter",
           "isPrimacyOfImpact": null
+        },
+        {
+          "id": "59ZoRvD4GpRzXwxNy7WoUm",
+          "type": "smart_contract",
+          "url": "https://arbiscan.io/address/0x0B9C254837E72Ebe9Fe04960C43B69782E68169A",
+          "description": " BondingVotes (Proxy)",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "3IjoNUdBKndd3aRYcokmdn",
+          "type": "smart_contract",
+          "url": "https://arbiscan.io/address/0x68AF80376Bc1CA0C25a83b28e5570E8c7bdD3119",
+          "description": "BondingVotes (Target)",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "kMHoU7FXSsPrezO4ABjjN",
+          "type": "smart_contract",
+          "url": "https://arbiscan.io/address/0xf82C1FF415F1fCf582554fDba790E27019c8E8C4",
+          "description": "Treasury",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "kXQE4SNkUVTkvCfhrcPal",
+          "type": "smart_contract",
+          "url": "https://arbiscan.io/address/0xcFE4E2879B786C3aa075813F0E364bb5acCb6aa0",
+          "description": "LivepeerGovernor (Proxy)",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "68hiZaKh1uq3yXqY3VNeZ0",
+          "type": "smart_contract",
+          "url": "https://arbiscan.io/address/0xd2Ce37BCB287CaDc40647f567C2D3C4220901634",
+          "description": "LivepeerGovernor (Target)",
+          "isPrimacyOfImpact": null
         }
       ],
       "impacts": [
@@ -242,6 +277,12 @@
         {
           "id": "2zEso8BuwCXpbyrdqBzqZI",
           "title": "Unexpected calls to functions that should only be called by authorized addresses (i.e. Governor)",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "5QDf9ymNHamg6Ewj0yNig9",
+          "title": "Direct manipulation treasury voting that manipulate the outcome of the vote resulting in drained funds from the treasury",
           "type": "smart_contract",
           "severity": "critical"
         },
@@ -284,6 +325,12 @@
         {
           "id": "1i2wTrYz0v55Fa3EJab1b7",
           "title": "Unbounded gas consumption or any other gas drainage",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "BlAOQ4pNQ9AR1xvq6LXIQ",
+          "title": "Manipulation of protocol governance vote or treasury voting that does not effect the result of the vote",
           "type": "smart_contract",
           "severity": "medium"
         },
