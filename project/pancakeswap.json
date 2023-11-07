@@ -8,31 +8,25 @@
       "maxBounty": 1000000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2xJOw4FpKeRGxyQOV0RG0G/58c413a9b3969ddbd605bea881c02e72/Pancakeswap-logo.jpg",
       "launchDate": "2021-03-28T00:00-07:00",
-      "updatedDate": "2023-03-08T16:06:47.451Z",
+      "updatedDate": "2023-11-06T07:36:26.073Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
           "level": "critical",
-          "payout": "Up to USD $1,000,000",
+          "payout": " Group 1: Up to USD $1,000,000 or Group 2: Up to USD $100,000",
           "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "high",
-          "payout": "USD $40,000",
+          "payout": "Group 1: From USD $20,000 or Group 2: From $5,000",
           "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "medium",
-          "payout": "USD $5,000",
-          "pocRequired": true
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $1,000",
+          "payout": "Group 1: From USD $2,000 or  Group 2: From $2,000",
           "pocRequired": true
         },
         {
@@ -64,13 +58,6 @@
           "isPrimacyOfImpact": null
         },
         {
-          "id": "65qVtJ0lcgcB8lxc0AVWno",
-          "type": "websites_and_applications",
-          "url": "https://exchange.pancakeswap.finance",
-          "description": null,
-          "isPrimacyOfImpact": null
-        },
-        {
           "id": "64uHioWRBRmaIcufPUGgI1",
           "type": "smart_contract",
           "url": "https://docs.pancakeswap.finance/code/smart-contracts",
@@ -94,7 +81,7 @@
         },
         {
           "id": "5blkstmcggJ0TBuvitKktR",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield (dependent on the value at stake)",
           "type": "smart_contract",
           "severity": "critical"
         },
@@ -106,7 +93,7 @@
         },
         {
           "id": "ZzZXe2f0XJCvujTI9erTM",
-          "title": "Protocol Insolvency",
+          "title": "Protocol Insolvency (dependent of the shortfall in value)",
           "type": "smart_contract",
           "severity": "critical"
         },
@@ -154,19 +141,19 @@
         },
         {
           "id": "1dAPmN2MQGbESpUZeJNu1J",
-          "title": "Theft of unclaimed yield",
+          "title": "Complete theft of unclaimed yield (dependent on the value at stake)",
           "type": "smart_contract",
           "severity": "high"
         },
         {
           "id": "7HOZGvoR7cvqBQH3pKSzGO",
-          "title": "Temporary freezing of funds",
+          "title": "Temporary freezing of funds (dependent on the value at stake and duration of freeze)",
           "type": "smart_contract",
           "severity": "high"
         },
         {
           "id": "4KaiNHpQG1GNXJMgjGT05I",
-          "title": "Permanent freezing of unclaimed yield (dependent on the value at stake)",
+          "title": "Permanent freezing of unclaimed yield (dependent on the value at stake and duration of freeze)",
           "type": "smart_contract",
           "severity": "high"
         },
@@ -243,12 +230,6 @@
           "severity": "medium"
         },
         {
-          "id": "6YFFM2urkKQGH5XrvUWyVJ",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
-          "type": "smart_contract",
-          "severity": "low"
-        },
-        {
           "id": "2uPBJYoizHYTSLEXRL0jOX",
           "title": "Changing details of other users (including modifying browser local storage) without already-connected wallet interaction and with significant user interaction such as iframing leading to modifying the backend/browser state (PoC required)",
           "type": "websites_and_applications",
@@ -267,11 +248,11 @@
           "severity": "low"
         }
       ],
-      "programOverview": "PancakeSwap is a decentralized exchange running on Binance Smart Chain, with\nlots of other features that let you earn and win tokens. It's fast, cheap, and\nanyone can use it. It's also got pancakes and rabbits.\n\nThe exchange is an automated market maker (“AMM”) that allows two tokens to be\nexchanged on the Binance Smart Chain. On top of that, you can earn CAKE with\nyield farms, earn CAKE with Staking, and earn even more tokens with Syrup\npools. Additionally PancakeSwap runs a lottery every 6 hours with 20 000 CAKE\ninjected into the lottery every day.\n\nThe PancakeSwap bug bounty program is focused around its smart contracts,\nwebsites, and apps with a primary interest in the prevention of loss of user\nfunds, either by direct draining of locked funds or social engineering attacks\nby redirecting users or forcing them to sign a transaction.",
+      "programOverview": "PancakeSwap is a decentralized exchange running on Binance Smart Chain, with\nlots of other features that let you earn and win tokens. It's fast, cheap, and anyone can use it. It's also got pancakes and rabbits.\n\nThe exchange is an automated market maker (“AMM”) that allows two tokens to be exchanged on the Binance Smart Chain. On top of that, you can earn CAKE with yield farms, earn CAKE with Staking, and earn even more tokens with Syrup pools. Additionally PancakeSwap runs a lottery every 6 hours with 20 000 CAKE injected into the lottery every day.\n\nThe PancakeSwap bug bounty program is focused around its smart contracts,\nwebsites, and apps with a primary interest in the prevention of loss of user\nfunds, either by direct draining of locked funds or social engineering attacks by redirecting users or forcing them to sign a transaction. Priority and focus is placed on issues that can result in irreversible financial loss.\n",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the\nfollowing types:\n\n**Smart Contracts/Blockchain:**\n\n- Re-entrancy\n- Logic errors\n  - including user authentication errors\n- Solidity/EVM details not considered\n  - including integer over-/under-flow\n  - including unhandled exceptions\n- Trusting trust/dependency vulnerabilities\n  - including composability vulnerabilities\n- Oracle failure/manipulation\n- Novel governance attacks\n- Economic/financial attacks\n  - including flash loan attacks\n- Congestion and scalability\n  - including running out of gas\n  - including block stuffing\n  - including susceptibility to frontrunning\n- Consensus failures\n- Cryptography problems\n  - Signature malleability\n  - Susceptibility to replay attacks\n  - Weak randomness\n  - Weak encryption\n- Susceptibility to block timestamp manipulation\n- Missing access controls / unprotected internal or debugging interfaces\n\n**Websites and Apps** \n\n- Remote Code Execution\n- Trusting trust/dependency vulnerabilities\n- Vertical Privilege Escalation\n- XML External Entities Injection\n- Horizontal Privilege Escalation\n- Stored XSS\n- Reflective XSS with impact\n- CSRF (reports of CSRF must include a demonstration of impact)\n- Direct object reference\n- Session fixation\n- Insecure Deserialization\n- Direct object reference\n- DOM XSS",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on\nthe [Immunefi Vulnerability Severity Classification System 2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll bug reports must include a Proof of Concept demonstrating how the vulnerability can be exploited to be eligible for a reward.\n\nThe final reward amount for critical smart contract vulnerabilities is capped at 10% of the funds at risk based on the vulnerability reported.\n\nXSS reports are restricted to those that have an impact of prompting a user to \nsign a transaction or a redirect.\n\nAll payouts are done by the **PancakeSwap** team and are pegged to the **USD**\nvalues set here and are payable in **CAKE** or **BUSD**.",
-      "outOfScopeAndRules": "**The following vulnerabilities are excluded from the rewards for this bug\nbounty program:**\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n- \n\n**Smart Contracts and Blockchain**\n\n- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n\n**Websites and Apps**\n\n- Theoretical vulnerabilities without any proof or demonstration\n- Content spoofing / Text injection issues\n- Self-XSS\n- Captcha bypass using OCR\n- CSRF with no security impact (logout CSRF, change language, etc.)\n- Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security\n  flags (such as “httponly”)\n- Server-side information disclosure such as IPs, server names, and most stack\n  traces\n- Vulnerabilities used to enumerate or confirm the existence of users or\n  tenants\n- Vulnerabilities requiring unlikely user actions\n- URL Redirects (unless combined with another vulnerability to produce a more\n  severe vulnerability)\n- Lack of SSL/TLS best practices\n- DDoS vulnerabilities\n- Attacks requiring privileged access from within the organization\n- Feature requests\n- Best practices\n- Internal SSRF\n- Path Traversal\n- SPF/DKIM/DMARC Configuration Problems\n- SSL misconfigurations\n- SSL/TLS issues (weak crypto, improper setup)\n- Clickjacking \n- Misleading Unicode text (e.g. using right to left override characters)\n- HTTP security headers\n- Cache control issues\n- Issues with the LP contracts that are due to specific underlying tokens are not in scope.\n\n**The following activities are prohibited by bug bounty program:**\n\n- Any testing with mainnet or public testnet contracts; all testing should be\n  done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees\n  and/or customers\n- Any testing with third party systems and applications (e.g. browser\n  extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": null,
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on\nthe [Immunefi Vulnerability Severity Classification System 2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nSmart Contract rewards are classified by __Group 1__ and __Group 2__. \n\n__Group 1__ consists of the core swap and reward components such as:\n\nAMM: Pancakeswap V2, V3, Stableswap and related periphery contracts\nStaking: Masterchef V2, V3, Smart Chef (Syrup pools), Cake Pool\n\n__Group 2__ consists of other contracts not mentioned in group 1.\n\nGroup 1 rewards are notated in the rewards table by the higher ranges listed by severity level, while Group 2 rewards are notated by the lower ranges listed by severity level.\n\nAll bug reports must include a Proof of Concept demonstrating how the vulnerability can be exploited to be eligible for a reward. \n\nThe final reward amount for critical vulnerabilities is capped at 10% of the funds at risk based on the vulnerability reported.\n\nCritical smart contract vulnerability payouts for Group 1 are a minimum of __USD $50,000__, or 10% of the value at risk at the time of report submission, with a hard cap of __USD $1,000,000__, whichever is larger. Value at risk should be calculated primarily (though not exclusively) based on concrete and demonstrable funds at risk. Any supplementary reward beyond the minimum __USD $50,000__ or 10% of value at risk is at the discretion of the team.\n\nCritical smart contract vulnerability payouts for Group 2 are a minimum of __USD $20,000__, or 10% of the value at risk at the time of report submission, with a hard cap of __USD $100,000__, whichever is larger. Value at risk should be calculated primarily (though not exclusively) based on concrete and demonstrable funds at risk. Any supplementary reward beyond the minimum __USD $20,000__ or 10% of value at risk is at the discretion of the team.\n\nAll non-critical rewards for the project bug bounty program are scaled based on an internally established team criteria, taking into account the exploitability of the bug, the impact it causes, and the likelihood of the vulnerability presenting itself, which is especially factored in with bug reports requiring multiple conditions to be met that are currently not in-place. Rewards will be provided at the determined fair value by the team depending on these conditions, assuming that the bug report is in-scope of the bug bounty program.\n\nXSS reports are restricted to those that have an impact of prompting a user to  sign a transaction or a redirect.\n\nAll payouts are done by the **PancakeSwap** team and are pegged to the **USD** values set here and are payable in **CAKE** or **USDT**.",
+      "outOfScopeAndRules": "**The following vulnerabilities are excluded from the rewards for this bug\nbounty program:**\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n- \n\n**Smart Contracts and Blockchain**\n\n- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n\n**Websites and Apps**\n\n- Theoretical vulnerabilities without any proof or demonstration\n- Content spoofing / Text injection issues\n- Self-XSS\n- Captcha bypass using OCR\n- CSRF with no security impact (logout CSRF, change language, etc.)\n- Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security\n  flags (such as “httponly”)\n- Server-side information disclosure such as IPs, server names, and most stack\n  traces\n- Vulnerabilities used to enumerate or confirm the existence of users or\n  tenants\n- Vulnerabilities requiring unlikely user actions\n- URL Redirects (unless combined with another vulnerability to produce a more\n  severe vulnerability)\n- Lack of SSL/TLS best practices\n- DDoS vulnerabilities\n- Attacks requiring privileged access from within the organization\n- Feature requests\n- Best practices\n- Internal SSRF\n- Path Traversal\n- SPF/DKIM/DMARC Configuration Problems\n- Clickjacking \n\n**The following activities are prohibited by bug bounty program:**\n\n- Any testing with mainnet or public testnet contracts; all testing should be\n  done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees\n  and/or customers\n- Any testing with third party systems and applications (e.g. browser\n  extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": "OFT related contracts are not in the scope of this program, unless the logic is specific to PancakeSwap’s implementation.\n\nIf you have found an issue with OFT related contracts, please report it to [https://immunefi.com/bounty/layerzero/](https://immunefi.com/bounty/layerzero/). ",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -302,19 +283,15 @@
         "smartcontract_rewards": [
           {
             "level": "Critical",
-            "payout": "Up to USD $1,000,000"
+            "payout": " Group 1: Up to USD $1,000,000 or Group 2: Up to USD $100,000"
           },
           {
             "level": "High",
-            "payout": "USD $40,000"
+            "payout": "Group 1: From USD $20,000 or Group 2: From $5,000"
           },
           {
             "level": "Medium",
-            "payout": "USD $5,000"
-          },
-          {
-            "level": "Low",
-            "payout": "USD $1,000"
+            "payout": "Group 1: From USD $2,000 or  Group 2: From $2,000"
           }
         ],
         "web_rewards": [
