@@ -5,16 +5,16 @@
       "id": "integral",
       "slug": "integral",
       "project": "Integral",
-      "maxBounty": 50000,
+      "maxBounty": 25000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5dHTFAc230t6p8vYxgilO2/38e96d7cbe65593285dfec560c736985/Integral-logo.jpg",
       "launchDate": "2021-04-15T00:00-07:00",
-      "updatedDate": "2023-08-04T16:55:29.215Z",
+      "updatedDate": "2023-11-09T07:00:09.922Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
           "level": "critical",
-          "payout": "Up to USD $50,000",
+          "payout": "Up to USD $25,000",
           "pocRequired": false
         },
         {
@@ -82,14 +82,21 @@
         {
           "id": "hz5AKhh9wVAck7vrAUAXK",
           "type": "smart_contract",
-          "url": "https://etherscan.io/address/0xE85fcb42c37a3856DC503a6a896072B841487D84",
+          "url": "https://etherscan.io/address/0x35cb375799b28c8d6b7c5c8d494ed180ae2e60cb",
           "description": "SIZE Delay",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "10LWwEKaAL6U3yW1e0J0dV",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0xF4418d9fe76A788F2868a558dD216549aD2d869B",
+          "description": "Fee governor",
           "isPrimacyOfImpact": null
         },
         {
           "id": "dH0Y40F8XDRhqztVePbXn",
           "type": "smart_contract",
-          "url": "https://arbiscan.io/address/0x7f2ff401faa8d7e6a6e971f25781839591128244",
+          "url": "https://arbiscan.io/address/0x8bfed1e49610576f0bd2a83540aecac5a1b8819d",
           "description": "SIZE (Arbitrum) Delay",
           "isPrimacyOfImpact": null
         },
@@ -183,15 +190,16 @@
           "url": "https://etherscan.io/address/0x6ec472b613012a492693697FA551420E60567eA7",
           "description": "SIZE Pair (USDC-USDT)",
           "isPrimacyOfImpact": null
+        },
+        {
+          "id": "2wYizmVxxuUMkziiK3n6X9",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0xd17b3c9784510E33cD5B87b490E79253BcD81e2E",
+          "description": "SIZE Rrelayer",
+          "isPrimacyOfImpact": null
         }
       ],
       "impacts": [
-        {
-          "id": "2hV2N3v7iNyUZEC8meApB6",
-          "title": "Any governance voting result manipulation",
-          "type": "smart_contract",
-          "severity": "critical"
-        },
         {
           "id": "1k32WI3ZnmrnGg5k6Oj49B",
           "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
@@ -217,8 +225,8 @@
           "severity": "high"
         },
         {
-          "id": "6OeWNqvUuQYFXBk0i5QUvJ",
-          "title": "Temporary freezing of funds",
+          "id": "6ncdMivkqbkJiSFMdhCqFt",
+          "title": "Any governance voting result manipulation",
           "type": "smart_contract",
           "severity": "high"
         },
@@ -247,6 +255,12 @@
           "severity": "medium"
         },
         {
+          "id": "3PzrB9QcP7Pz5Y1BYKaz9G",
+          "title": "Temporary freezing of funds",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
           "id": "2hztknqPWG45Wu5vIYIFya",
           "title": "Any other minor smart contract vulnerabilities not mentioned above",
           "type": "smart_contract",
@@ -255,8 +269,8 @@
       ],
       "programOverview": "At Integral we build on-chain trading products and tools to rival those of centralized exchanges. Our mission is to serve DeFi users who care about self-custody, decentralization, security, and financial usability. Integral SIZE is a TWAP based DEX with zero price impact swaps on Ethereum. In addition, traders enjoy a MEV-resistant and low-fee trading experience. Further information about Integral can be found here [https://docs.integral.link](https://docs.integral.link).\n\nThe bug bounty program is focused around its smart contracts and is mostly concerned with:\n\n  - Direct theft of any user funds from smart contracts, whether at-rest or in-motion\n  - Loss of user funds through freezing, theft, manipulation of the pools, or denial of service to smart contracts.\n",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the\nfollowing types:\n\n**Smart Contracts/Blockchain:**\n\n- Re-entrancy\n- Logic errors\n  - including user authentication errors\n- Solidity/EVM details not considered\n  - including integer over-/under-flow\n  - including unhandled exceptions\n- Trusting trust/dependency vulnerabilities\n  - including composability vulnerabilities\n- Oracle failure/manipulation\n- Novel governance attacks\n- Economic/financial attacks\n  - including flash loan attacks\n- Congestion and scalability\n  - including running out of gas\n  - including block stuffing\n  - including susceptibility to frontrunning\n- Consensus failures\n- Cryptography problems\n  - Signature malleability\n  - Susceptibility to replay attacks\n  - Weak randomness\n  - Weak encryption\n- Susceptibility to block timestamp manipulation\n- Missing access controls / unprotected internal or debugging interfaces",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on\nthe [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required. All bug reports without a PoC will not be accepted under this bug bounty program.\n\nThe final reward for critical bounty payouts is capped at 10% of economic damage up to USD 50 000, primarily based on the funds at risk, at the discretion of the team. However, the minimum reward is USD 10 000.\n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\nThe following scenarios are not eligible for a reward:\n  - Exploits that require access to the admin keys\n  - Cases involving risks of losses to the pools in case the assets in the pools decrease in price\n  - Cases involving risks of impermanent losses in the pools\n  - Exploits or arbitrages which are not economically practical to execute\n  - Exploits or arbitrages which rely on predicting future price movements\n  - Cases involving price manipulation on other exchanges or external price oracles\n  - Cases involving dynamic pool ratios due to the nature of the design\n  - Exploits due to issues with hosting providers which cannot be fixed by changing any configuration on our side will be given an Informational classification or lower, these exploits should be reported using the bug bounty program of the hosting providers instead\n\nPayouts are handled by the Integral team directly and are denominated in USD. However, payouts are done in DAI, USDT, USDC, ETH, or ITGR, at the discretion of the team.\n",
-      "outOfScopeAndRules": "**The following vulnerabilities are excluded from the rewards for this bug\nbounty program:**\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n  - Attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n  - Attacks on test files and configuration files unless stated otherwise in the bug bounty program\n  - Incorrect data supplied by third party oracles\n  - Manipulation and flash loan attacks on third-party oracles \n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n\n**The following activities are prohibited by bug bounty program:**\n\n- Any testing with mainnet or public testnet contracts; all testing should be\n  done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees\n  and/or customers\n- Any testing with third party systems and applications (e.g. browser\n  extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n\n__Eligibility__\n\nTo be eligible for a reward under this Program, you must:\n  - Be the first to disclose the unique vulnerability in compliance with the disclosure requirements above.\n  - Provide sufficient information to enable our team to reproduce and fix the vulnerability.\n  - Not engage in any unlawful conduct when disclosing the bug including through threats, demands, or any other coercive tactics.\n  - Make a good faith effort to avoid privacy violations, destruction of data, interruption or degradation of Integral.\n  - Submit only one vulnerability per submission, unless you need to chain vulnerabilities to provide impact regarding any of the vulnerabilities.\n  - Not submit a vulnerability caused by an underlying issue that is the same as an issue on which a reward has been paid under this Program.\n  - Be at least 18 years of age.\n  - Not be subject to US, UK, and EU  sanctions or reside in a US, UK, or EU-embargoed country.\n  - Comply with all the eligibility and disclosure requirements of the Program.\n  - The vulnerability must not already be a known by the Integral team.\n",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on\nthe [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required. All bug reports without a PoC will not be accepted under this bug bounty program.\n\nThe final reward for critical bounty payouts is capped at 10% of economic damage up to USD 25 000, primarily based on the funds at risk, at the discretion of the team. However, the minimum reward is USD 10 000.\n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\nThe following scenarios are not eligible for a reward:\n  - Exploits that require access to the admin keys\n  - Cases involving risks of losses to the pools in case the assets in the pools decrease in price\n  - Cases involving risks of impermanent losses in the pools\n  - Exploits or arbitrages which are not economically practical to execute\n  - Exploits or arbitrages which rely on predicting future price movements, and/or price differentials between either the delay or the relayer contract, and other on-chain or off-chain venues regardless of whether it is realistic to execute such exploits or arbitrages.\n  - Cases involving dynamic pool ratios due to the nature of the design\n  - Cases involving dynamic pool ratios due to the nature of the design including but not limited to large changes of pool ratios due to orderflow, temporary guardrail pauses on LP withdrawal when pool ratios are extremely skewed. \n  - Exploits due to issues with hosting providers which cannot be fixed by changing any configuration on our side will be given an Informational classification or lower, these exploits should be reported using the bug bounty program of the hosting providers instead\n\nPayouts are handled by the Integral team directly and are denominated in USD. However, payouts are done in DAI, USDT, USDC, ETH, or ITGR, at the discretion of the team.\n",
+      "outOfScopeAndRules": "**The following vulnerabilities are excluded from the rewards for this bug\nbounty program:**\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, admin, owners of contracts, etc.)\n  - Attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n  - Attacks on test files and configuration files unless stated otherwise in the bug bounty program\n  - Incorrect data supplied by third party oracles\n  - Manipulation and flash loan attacks on third-party oracles\n  - Loss of slippage through sandwich attacks. \n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n\n**The following activities are prohibited by bug bounty program:**\n\n- Any testing with mainnet or public testnet contracts; all testing should be\n  done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees\n  and/or customers\n- Any testing with third party systems and applications (e.g. browser\n  extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n\n__Eligibility__\n\nTo be eligible for a reward under this Program, you must:\n  - Be the first to disclose the unique vulnerability in compliance with the disclosure requirements above.\n  - Provide sufficient information to enable our team to reproduce and fix the vulnerability.\n  - Not engage in any unlawful conduct when disclosing the bug including through threats, demands, or any other coercive tactics.\n  - Make a good faith effort to avoid privacy violations, destruction of data, interruption or degradation of Integral.\n  - Submit only one vulnerability per submission, unless you need to chain vulnerabilities to provide impact regarding any of the vulnerabilities.\n  - Not submit a vulnerability caused by an underlying issue that is the same as an issue on which a reward has been paid under this Program.\n  - Be at least 18 years of age.\n  - Not be subject to US, UK, and EU  sanctions or reside in a US, UK, or EU-embargoed country.\n  - Comply with all the eligibility and disclosure requirements of the Program.\n  - The vulnerability must not already be a known by the Integral team.\n",
       "assetsBodyV2": null,
       "impactsBody": null,
       "immunefiStandard": true,
@@ -286,7 +300,7 @@
         "smartcontract_rewards": [
           {
             "level": "Critical",
-            "payout": "Up to USD $50,000"
+            "payout": "Up to USD $25,000"
           },
           {
             "level": "High",
