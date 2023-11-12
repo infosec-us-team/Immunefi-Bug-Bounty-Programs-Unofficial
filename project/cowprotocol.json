@@ -169,37 +169,37 @@
       "impacts": [
         {
           "id": "72CxOR04Wir0UDFuw5OXwu",
-          "title": "Critical Smart Contract Impact",
-          "type": "smart_contract",
-          "severity": "critical"
-        },
-        {
-          "id": "7boUvgyM46EpGxSArHrejA",
           "title": "Changing the owner address of the authentication contract as well as adding a solver without authorization",
           "type": "smart_contract",
           "severity": "critical"
         },
         {
-          "id": "37iGDJEPRzixOvb6KoGvtw",
+          "id": "7boUvgyM46EpGxSArHrejA",
           "title": "Forgery of a user’s signature that would allow them to execute a funded trade without using the user’s private key",
           "type": "smart_contract",
           "severity": "critical"
         },
         {
-          "id": "xEFtE66sNmVBBkRJ6xOTi",
+          "id": "37iGDJEPRzixOvb6KoGvtw",
           "title": "Execute arbitrary settlements without being a solver",
           "type": "smart_contract",
           "severity": "critical"
         },
         {
-          "id": "7yksksPpj7OnffubObO7m9",
+          "id": "xEFtE66sNmVBBkRJ6xOTi",
           "title": "Executing a user’s trade that is expired or at a price worse than the limit price (also as a solver)",
           "type": "smart_contract",
           "severity": "critical"
         },
         {
-          "id": "7k2gMt0UZujWf46zHD3ZN2",
+          "id": "7yksksPpj7OnffubObO7m9",
           "title": "Transferring in tokens more than once for the same fill-or-kill order in the same settlement (also as a solver)",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "7k2gMt0UZujWf46zHD3ZN2",
+          "title": "Access to user funds outside of a trade.",
           "type": "smart_contract",
           "severity": "critical"
         },
@@ -211,19 +211,19 @@
         },
         {
           "id": "RLuFesfg0re4E543w6tbU",
-          "title": "High Smart Contract Impact",
-          "type": "smart_contract",
-          "severity": "high"
-        },
-        {
-          "id": "5gK47m0YCiHN3GdSIxrAGj",
           "title": "Changing the order of a legitimate interaction, as well as skipping one, in a settlement",
           "type": "smart_contract",
           "severity": "high"
         },
         {
-          "id": "1zVW5euwoDOEG7TKJWbr8W",
+          "id": "5gK47m0YCiHN3GdSIxrAGj",
           "title": "Removing a solver without authorization (also as a solver)",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "1zVW5euwoDOEG7TKJWbr8W",
+          "title": "Making the contract unable to be operated by any solver, e.g., through self-destruction (also as a solver)",
           "type": "smart_contract",
           "severity": "high"
         },
@@ -235,13 +235,13 @@
         },
         {
           "id": "U9TYPQaRimsgqn0U9pEPu",
-          "title": "Medium Smart Contract Impact",
+          "title": "Freeing storage without being a solver",
           "type": "smart_contract",
           "severity": "medium"
         },
         {
           "id": "7lCeBsNs0OWrYFBuk0EXw3",
-          "title": "Freeing storage without being a solver",
+          "title": "Invalidate an order without the permission of the user who created it",
           "type": "smart_contract",
           "severity": "medium"
         },

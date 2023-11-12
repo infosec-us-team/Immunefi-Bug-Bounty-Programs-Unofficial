@@ -8,19 +8,31 @@
       "maxBounty": 500000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5xpKx9iCTDuLzY5uUHjUZm/4c520b8edc0050155ba8e1f26d62ce34/Kwenta_logo.jpeg",
       "launchDate": "2023-05-23T09:00+03:00",
-      "updatedDate": "2023-10-06T08:42:26.730Z",
-      "kyc": false,
+      "updatedDate": "2023-11-11T15:09:08.513Z",
+      "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
           "level": "critical",
-          "payout": "USD $50,000 to USD $500,000",
+          "payout": "USD $50,000 - $500,000",
           "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "high",
           "payout": "USD $10,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "critical",
+          "payout": "USD $5,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "high",
+          "payout": "USD $1,000",
           "pocRequired": true
         }
       ],
@@ -57,14 +69,14 @@
         {
           "id": "6J78OZuX9EErAJ6mQJu0LF",
           "type": "smart_contract",
-          "url": "https://optimistic.etherscan.io/address/0xc3d16e00833355b48d2fD69D838c6ACF004cf4b6#code",
+          "url": "https://optimistic.etherscan.io/address/0xB753d2EE5dcA1fF39A83CA3Ec500656c31Be940b",
           "description": "Smart Margin - Events",
           "isPrimacyOfImpact": null
         },
         {
           "id": "Zove6XYTqygM39SMWXC1J",
           "type": "smart_contract",
-          "url": "https://optimistic.etherscan.io/address/0x8857CA2255f82E19c52f2E22529afb5f8d021492#code",
+          "url": "https://optimistic.etherscan.io/address/0x6B86c1A6878940666489780871E1C98B366d0aFF#code",
           "description": "Smart Margin - Account",
           "isPrimacyOfImpact": null
         },
@@ -73,6 +85,20 @@
           "type": "smart_contract",
           "url": "https://optimistic.etherscan.io/address/0x865dA103d126b3Be3599D84caB57109A861F5631",
           "description": "Smart Margin - Settings",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "7EIP9kzWMfe4r6ds0p8Tq9",
+          "type": "websites_and_applications",
+          "url": "https://kwenta.eth.limo",
+          "description": null,
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "6uolAy5QCwACG6yJB820Qk",
+          "type": "websites_and_applications",
+          "url": "https://kwenta.io",
+          "description": null,
           "isPrimacyOfImpact": null
         }
       ],
@@ -96,6 +122,60 @@
           "severity": "critical"
         },
         {
+          "id": "5NymnxUjjdm83Bl00eM320",
+          "title": "Execute arbitrary system commands",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "6HsLaNk5WiFKRuusz8jcV2",
+          "title": "Retrieve sensitive data/files from a running server, such as: /etc/shadow database passwords blockchain keys (does not include nonsensitive environment variables, open source code, or usernames), Taking down the application/website, Taking down the NFT URI",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "R6YNqwo1BLdyBEjFh9GcA",
+          "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as: Changing registration information Commenting Voting Making trades Withdrawals, etc.",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "1KXNsmEsLMk2JhtFda7nzF",
+          "title": "Changing NFT metadata",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "2bKs8xMcBgEqA7h4keWBJa",
+          "title": "Subdomain takeover with already-connected wallet interaction",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "KdxxIMRXeSeo2qAwXC2C7",
+          "title": "Direct theft of user funds",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "5WRgootcbXqeW5NfS7liyv",
+          "title": "Malicious interactions with an already-connected wallet, such as: Modifying transaction arguments or parameters, Substituting contract addresses, Submitting malicious transactions",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "7qNeouqgz7fAUjEcxL416J",
+          "title": "Direct theft of user NFTs",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "5KemloXUDxqC9xWmbgYav8",
+          "title": "Injection of malicious HTML or XSS through metadata",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
           "id": "5rOnqKnEjo9K9hNK72EN9t",
           "title": "Theft of unclaimed yield",
           "type": "smart_contract",
@@ -109,16 +189,40 @@
         },
         {
           "id": "2q0nIFEBy30OIHACLq1lwI",
-          "title": "Temporary freezing of funds for at least 1 month",
+          "title": "Temporary freezing of funds",
           "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "shjXAxmbTWuz5t7naQQPr",
+          "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as: HTML injection without JavaScript, Replacing existing text with arbitrary text, Arbitrary file uploads, etc",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "44SqlhCQpdTt3OGvhIhksJ",
+          "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as: Email, Password of the victim etc.",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "3uExDMTsAh7rSbEiHy3NP5",
+          "title": "Improperly disclosing confidential user information, such as: Email address, Phone number, Physical address, etc.",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "5qLznIq1q4iW6el8bJjIfj",
+          "title": "Subdomain takeover without already-connected wallet interaction",
+          "type": "websites_and_applications",
           "severity": "high"
         }
       ],
-      "programOverview": "Kwenta is a decentralized derivatives trading platform offering perpetual futures and options trading on Optimism. Trader’s can cain exposure to a variety of on-chain and real-world assets, and access advanced functionality through the Kwenta Smart Margin Wallet. \n\nFor more information about Kwenta, please visit [https://kwenta.eth.limo/.](https://kwenta.eth.limo/)  \n\n__For Whitehats:__ It is highly recommended that you review the details of this program in full. Although many Bug Bounty programs have standard terms and conditions, each also has their own unique details that are critical to your success.  \n\nPrior to submitting a report please review the [Immunefi Bug Report Template and Best Practices. ](https://immunefisupport.zendesk.com/hc/en-us/articles/12435277406481-Bug-Report-Template)\n",
+      "programOverview": "Kwenta is a decentralized derivatives trading platform offering perpetual futures and options trading on Optimism. Trader’s can cain exposure to a variety of on-chain and real-world assets, and access advanced functionality through the Kwenta Smart Margin Wallet. \n\nFor more information about Kwenta, please visit [https://kwenta.eth.limo/](https://kwenta.eth.limo/).  \n\nFor Whitehats: It is highly recommended that you review the details of this program in full. Although many Bug Bounty programs have standard terms and conditions, each also has their own unique details that are critical to your success.  \n\nPrior to submitting a report please review the [Immunefi Bug Report Template and Best Practices](https://immunefisupport.zendesk.com/hc/en-us/articles/12435277406481-Bug-Report-Template). \n\n__KYC Requirement__ \n\nKwenta will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n\n  - Full name \n  - Date of birth\n  - Proof of address (either a redacted bank statement with address or a recent utility bill)\n  - Copy of Passport or other Government issued ID\n\nSecurity researchers must pass OFAC screening and cannot be on the SDN list. \nResponsible Publication\n\nKwenta adheres to category __3 - Approval__. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nKwenta adheres to the Primacy of Rules. This means that the entire bug bounty program is run strictly under the terms stated within this page.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Known Issue Assurance__\n\nKwenta commits to providing Known Issue Assurance to bug submissions through their program. This means that Kwenta will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nBug reports covering previously-discovered bugs are not eligible for any reward through the bug bounty program. If a bug report covers a known issue, it may be rejected together with proof of the issue being known before escalation of the bug report via Immunefi.\n\n__Previous Audits__\n\nA list of Kwenta’s completed audit reports can be found on: [https://docs.kwenta.io/resources/audits](https://docs.kwenta.io/resources/audits). Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. \nConversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Kwenta has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-).\n",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are considered out-of-scope and ineligible for payout.",
-      "rewardsBody": "Please review how rewards are distributed based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). This is a simplified 5-level scale system with separate scales for Smart Contracts and Websites/Apps.\n\nRewards for critical smart contract bug reports will be further capped at __10%__ of direct funds at risk if the bug discovered is exploited. However, there is a minimum reward of __USD 50 000__.\n\nIn cases of repeatable attacks, only the first attack is considered unless the smart contract cannot be upgraded or paused. If the attack impacts a smart contract directly holding funds that cannot be upgraded or paused, the amount of funds at risk will be calculated with the first attack being at 100% of the funds that could be stolen and then a reduction of 25% from the amount of the first attack for every 300 blocks the attack needs for subsequent attacks from the first attack, rounded down. For avoidance of doubt, if a second attack would happen at 600 blocks and then a third at 900 blocks, the funds at risk would be counted at 50% and 25% from the first attack, respectively.\n\n__Payouts and Payout Requirements__\n\nPayouts are handled by the Kwenta team directly and are denominated in USD. However, payouts are done in sUSD, USDC and KWENTA. Kwenta commits to honoring payouts according to the terms set out in this program at the time of report submission, and to treat this program as the agreement and source of truth concerning bug reports and responsible disclosures. \n\nFor the purposes of determining report validity, this is a Primacy of Rules program. \n\nLearn more about report validity best practices here: [Best Practice - Primacy of Impact vs Primacy of Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact). \n\n__KYC Requirements__\n\nKwenta __does not__ have a Know Your Customer (KYC) requirement for bug bounty payouts. \n\n__Audit Discoveries and Known Issues__\n\nBug reports covering previously-discovered bugs are not eligible for any reward through the bug bounty program. If a bug report covers a known issue, it may be rejected together with proof of the issue being known before escalation of the bug report via Immunefi. \n",
-      "outOfScopeAndRules": "The following impacts and attack vectors are excluded from rewards by default for all Immunefi bug bounty programs: \n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist), except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Broken link hijacking is out of scope\n\n__Smart Contracts and Blockchain/DLT__\n\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n- Centralization risks\n\n__Prohibited Activities__\n\nThe following activities are prohibited by this bug bounty program. Violation of these rules can result in a temporary suspension or permanent ban from the Immunefi platform at the sole discretion of the Immunefi team, which may also result in: 1) the forfeiture and loss of access to all bug submissions, and 2) zero payout. \n\nPlease note that Immunefi has no tolerance for spam/low-quality/incomplete bug reports, “beg bounty” behavior, and misrepresentation of assets and severity. Immunefi exists to protect the global crypto community, not facilitate grift.\n\nProhibited: \n- Any testing with mainnet or public testnet deployed code; all testing should be done on private testnets\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules.](https://immunefi.com/rules/) These rules are subject to change at any time.  \n",
-      "assetsBodyV2": "Only those listed in the Assets in Scope table are considered to be in-scope of the bug bounty program. \n\n__Smart Contracts__ \n\n- __Smart Contracts - PoC__, Smart Contract bug reports are to include a runnable Proof of Concept (PoC) in order to prove impact.  \n- For more information on PoCs please visit: [Proof of Concept (PoC) Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n- All smart contracts of Kwenta can be found at: [https://github.com/Kwenta ](https://github.com/Kwenta)\n\n__Impacts in Scope__\n\n(For Blockchain/DLT and Smart Contracts Only) This program is considered to be governed by Primacy of Rules. For more information on what this means visit: [Best Practice - Primacy of Impact vs Primacy of Rules. ](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\nImpacts are based on the [Immunefi Vulnerability Severity Classification System V2.3.](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\nAt Immunefi, we classify bugs on a simplified 5-level scale:\n- Critical\n- High\n- Medium\n- Low\n- None\n",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/).\n\n__Reward Calculation for Critical Level Reports__\n\nRewards for critical smart contract bug reports will be capped at __10%__ of funds  directly affected up to a maximum of __USD 500 000__. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of __USD 50 000__ is to be rewarded in order to incentivize security researchers against withholding a bug report.\n\nFor critical web/apps bug reports will be rewarded with __USD 5 000__, only if the impact leads to:\n\n  - A loss of funds involving an attack that does not require any user action\n  - Unauthorized minting of tokens on-chain\n  - Private key or private key generation leakage leading to unauthorized access to user funds \n  - All other web/app impacts that would be classified as critical would be rewarded in a range between __USD 1 000__ and __USD 5 000__. The rest of the severity levels are paid out according to the Impact in Scope table. \n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks on smart contracts, only the first attack is considered unless the smart contract cannot be upgraded or paused. If the attack impacts a smart contract directly holding funds that cannot be upgraded or paused, the amount of funds at risk will be calculated with the first attack being at 100% of the funds that could be stolen and then a reduction of 25% from the amount of the first attack for every 300 blocks the attack needs for subsequent attacks from the first attack, rounded down. For avoidance of doubt, if a second attack would happen at 600 blocks and then a third at 900 blocks, the funds at risk would be counted at 50% and 25% from the first attack, respectively.\n\n__Reward Calculation for High Level Reports__\n\nIn the event of temporary freezing, the reward increases at a multiplier of two from the full frozen value for every additional 300 block that the funds are temporarily frozen, up until a max cap of the high reward of __USD 10 000__. This is because as the duration of the freezing lenghents, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.    \n\n__Reward Payment Terms__\n\nPayouts are handled by the __Kwenta__ team directly and are denominated in __USD__. However, payments are done in __sUSD, USDC__ and __KWENTA__. Kwenta commits to honoring payouts according to the terms set out in this program at the time of report submission, and to treat this program as the agreement and source of truth concerning bug reports and responsible disclosures.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability. ",
+      "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories:__\n\n  - Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n  - Impacts caused by attacks requiring access to leaked keys/credentials\n  - Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n  - Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n  - Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n  - Best practice recommendations\n  - Feature requests\n  - Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Smart Contract Specific:__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n  - Lack of liquidity impacts\n  - Impacts from Sybil attacks\n  - Impacts involving centralization risks\n\nWebsites and Apps\n\n  - Theoretical impacts without any proof or demonstration\n  - Impacts involving attacks requiring physical access to the victim device\n  - Impacts involving attacks requiring access to the local network of the victim\n  - Reflected plain text injection (e.g. url parameters, path, etc.)\n    - This does not exclude reflected HTML injection with or without JavaScript\n    - This does not exclude persistent plain text injection\n  - Any impacts involving self-XSS\n  - Captcha bypass using OCR without impact demonstration\n  - CSRF with no state modifying security impact (e.g. logout CSRF)\n  - Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n  - Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n  - Impacts causing only the enumeration or confirmation of the existence of users or tenants\n  - Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n  - Lack of SSL/TLS best practices\n  - Impacts that only require DDoS\n  - UX and UI impacts that do not materially disrupt use of the platform\n  - Impacts primarily caused by browser/plugin defects\n  - Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n  - Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n  - SPF/DMARC misconfigured records)\n  - Missing HTTP Headers without demonstrated impact\n  - Automated scanner reports without demonstrated impact\n  - UI/UX best practice recommendations\n  - Non-future-proof NFT rendering\n\n__Prohibited Activities:__\n\n  - Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n  - Any testing with pricing oracles or third-party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks that are executed against project assets\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
+      "assetsBodyV2": null,
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -138,7 +242,8 @@
           "Stacks"
         ],
         "programType": [
-          "Smart Contract"
+          "Smart Contract",
+          "Websites and Applications"
         ],
         "language": [
           "Solidity"
@@ -146,20 +251,30 @@
       },
       "legacy": {
         "technologies": [
-          "Smart Contract"
+          "Smart Contract",
+          "Websites and Applications"
         ],
         "blockchain_rewards": [],
         "smartcontract_rewards": [
           {
             "level": "Critical",
-            "payout": "USD $50,000 to USD $500,000"
+            "payout": "USD $50,000 - $500,000"
           },
           {
             "level": "High",
             "payout": "USD $10,000"
           }
         ],
-        "web_rewards": []
+        "web_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $5,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $1,000"
+          }
+        ]
       }
     },
     "project": null
