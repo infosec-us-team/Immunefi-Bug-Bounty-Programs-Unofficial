@@ -5,52 +5,40 @@
       "id": "marsecosystem",
       "slug": "marsecosystem",
       "project": "Mars Ecosystem",
-      "maxBounty": 60000,
+      "maxBounty": 10000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7KJxasjqM6UtmFBkXCD2Mj/4fc1b19a942ac6be1e3f1ba945ad5491/Mars_Ecosystem.jpeg",
       "launchDate": "2021-09-08T06:00-05:00",
       "endDate": null,
-      "updatedDate": "2023-08-27T06:02:58.786Z",
+      "updatedDate": "2023-11-21T16:57:54.847Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
           "level": "critical",
-          "payout": "USD $60,000",
+          "payout": "USD $10,000",
           "pocRequired": false
         },
         {
           "assetType": "smart_contract",
           "level": "high",
-          "payout": "USD $15,000",
+          "payout": "USD $3,000",
           "pocRequired": false
         },
         {
           "assetType": "smart_contract",
           "level": "medium",
-          "payout": "USD $5,000",
-          "pocRequired": false
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "low",
           "payout": "USD $1,000",
           "pocRequired": false
         },
         {
           "assetType": "websites_and_applications",
           "level": "critical",
-          "payout": "USD $10,000",
+          "payout": "USD $2,500",
           "pocRequired": true
         },
         {
           "assetType": "websites_and_applications",
           "level": "high",
-          "payout": "USD $5,000",
-          "pocRequired": true
-        },
-        {
-          "assetType": "websites_and_applications",
-          "level": "medium",
           "payout": "USD $1,000",
           "pocRequired": true
         }
@@ -142,6 +130,12 @@
           "severity": "critical"
         },
         {
+          "id": "1enTCKumOCxHeXPGlg6tQT",
+          "title": "Protocol Insolvency",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
           "id": "20ao5NIuSdiYchSibxnvpi",
           "title": "Permanent freezing of unclaimed yield",
           "type": "smart_contract",
@@ -150,6 +144,12 @@
         {
           "id": "m0siO651cl9oFK9GdwbqR",
           "title": "Theft of Unclaimed Yield",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "4dsNxq9Bc8a0FFzVYsbe8v",
+          "title": "Temporary freezing of funds",
           "type": "smart_contract",
           "severity": "high"
         },
@@ -172,12 +172,12 @@
           "severity": "low"
         }
       ],
-      "programOverview": "The fundamental issue within most current stablecoin protocols is positive externality. The cost of producing and maintaining stablecoins are incurred by the protocol and its users (minters, share holders, bond holders). Whereas the majority of the value comes from the transaction of stablecoins within DeFi primitives and is captured by these DeFi primitives.\n\nMars Ecosystem solves this problem by integrating the creation and the use of stablecoin into one stable yet decentralized ecosystem. The relationship between Mars Stablecoin and Mars DeFi platform creates a positive feedback loop and generates a flywheel effect.\n\nMars Stablecoin (USDM) is price stable, capital efficient, scalable and decentralized. It is an over-backed stablecoin: the redeemability of USDM is backed by the Mars Ecosystem Governance Token (XMS). The market cap of XMS is always multiple times the market cap of Mars Stablecoin which ensures that the stablecoin can be redeemed 1:1 at any given time.\n\nMars Swap provides liquidity between Mars Stablecoin and all the other tokens, making USDM the ideal medium of exchange and store of value for DeFi. The incurred transaction fees generated at Mars Swap are used to back the stability of Mars Stablecoin.\n\nFor more information about Mars Ecosystem, please visit [https://marsecosystem.com/](https://marsecosystem.com/).    \n\nThis bug bounty program is focused on their smart contracts and app and is focused on preventing the following impacts:\n\n  - Thefts and freezing of principal of any amount\n  - Thefts and freezing of unclaimed yield of any amount\n  - Theft of governance funds \n  - Governance activity disruption\n  - Website goes down\n  - Leak of user data\n  - Deletion of user data\n  - Access to sensitive pages without authorization\n  - Smart contracts fails to delivery promised returns based on APR",
+      "programOverview": "The fundamental issue within most current stablecoin protocols is positive externality. The cost of producing and maintaining stablecoins are incurred by the protocol and its users (minters, share holders, bond holders). Whereas the majority of the value comes from the transaction The fundamental issue within most current stablecoin protocols is positive externality. The cost of stablecoins within DeFi primitives and is captured by these DeFi primitives.\n\nMars Ecosystem solves this problem by integrating the creation and the use of stablecoin into one stable yet decentralized ecosystem. The relationship between Mars Stablecoin and Mars DeFi platform creates a positive feedback loop and generates a flywheel effect.\n\nMars Stablecoin (USDm) is price stable, capital efficient, scalable and decentralized. It is an over-backed stablecoin: the redeemability of USDm is backed by the Mars Ecosystem Governance Token (XMS). The market cap of XMS is always multiple times the market cap of Mars Stablecoin which ensures that the stablecoin can be redeemed 1:1 at any given time.\n\nMars Swap provides liquidity between Mars Stablecoin and all the other tokens, making USDM the ideal medium of exchange and store of value for DeFi. The incurred transaction fees generated at Mars Swap are used to back the stability of Mars Stablecoin.\n\nFor more information about Mars Ecosystem, please visit [https://marsecosystem.com/](https://marsecosystem.com/).    \n",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces\n\n__Websites and Apps__\n\n  - Remote Code Execution\n  - Trusting trust/dependency vulnerabilities\n  - Vertical Privilege Escalation\n  - XML External Entities Injection\n  - SQL Injection\n  - LFI/RFI\n  - Horizontal Privilege Escalation\n  - Stored XSS\n  - Reflective XSS with impact\n  - CSRF with impact\n  - Direct object reference\n  - Internal SSRF\n  - Session fixation\n  - Insecure Deserialization\n  - DOM XSS\n  - SSL misconfigurations\n  - SSL/TLS issues (weak crypto, improper setup)\n  - URL redirect\n  - Clickjacking (must be accompanied with PoC)\n  - Misleading Unicode text (e.g. using right to left override characters)",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll web/app bug reports must come with a PoC in order to be considered for a reward.\n\nBugs reported in the following audits are not eligible for a reward:\n\n[SlowMist Audit](https://github.com/MarsEcosystem/mars-resource/blob/master/audit/SlowMist%20Audit%20Report%20-%20Mars%20Ecosystem%20-%20EN.pdf)\n\n[CertiK Audit](https://github.com/MarsEcosystem/mars-resource/blob/master/audit/Certik%20Audit%20Report%20-%20Mars%20Ecosystem.pdf)\n\nPayouts are handled by the __Mars Ecosystem__ team directly and are denominated in USD. However, payouts are done in __XMS__ or __BUSD__, at the discretion of the team.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n\n__Websites and Apps__\n\n  - Theoretical vulnerabilities without any proof or demonstration\n  - Content spoofing / Text injection issues\n  - Self-XSS\n  - Captcha bypass using OCR\n  - CSRF with no security impact (logout CSRF, change language, etc.)\n  - Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”)\n  - Server-side information disclosure such as IPs, server names, and most stack traces\n  - Vulnerabilities used to enumerate or confirm the existence of users or tenants\n  - Vulnerabilities requiring unlikely user actions\n  - URL Redirects (unless combined with another vulnerability to produce a more severe vulnerability)\n  - Lack of SSL/TLS best practices\n  - DDoS vulnerabilities\n  - Attacks requiring privileged access from within the organization\n  - Feature requests\n  - Best practices\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third-party systems and applications (e.g., browser extensions) as well as websites (e.g., SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System 3.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nBugs reported in the following audits are not eligible for a reward:\n\n  - [SlowMist Audit](https://github.com/MarsEcosystem/mars-resource/blob/master/audit/SlowMist%20Audit%20Report%20-%20Mars%20Ecosystem%20-%20EN.pdf)\n  - [CertiK Audit](https://github.com/MarsEcosystem/mars-resource/blob/master/audit/Certik%20Audit%20Report%20-%20Mars%20Ecosystem.pdf)\n\nPayouts are handled by the __Mars Ecosystem__ team directly and are denominated in __USD__. However, payouts are done in __XMS__ or __BUSD__, at the discretion of the team.",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Protocol Risks Caused by BlockChain(BNB Chain) Vulnerabilities\n  - Sandwich attack during swap with the issues with victim leading to exploiting himself\n  - The residual unowned rewards in the contract is frozen\n  - Withdrawal of abnormally entered (such as direct transfer) assets through the contract public function\n  - Assets entered abnormally (such as direct transfer) cannot be withdrawn\n  - Issues with the LP contracts that are due to specific underlying tokens are not in scope.\n\n__Websites and Apps__\n\n  - Theoretical vulnerabilities without any proof or demonstration\n  - Content spoofing / Text injection issues\n  - Self-XSS\n  - Captcha bypass using OCR\n  - CSRF with no security impact (logout CSRF, change language, etc.)\n  - Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”)\n  - Server-side information disclosure such as IPs, server names, and most stack traces\n  - Vulnerabilities used to enumerate or confirm the existence of users or tenants\n  - Vulnerabilities requiring unlikely user actions\n  - URL Redirects (unless combined with another vulnerability to produce a more severe vulnerability)\n  - Lack of SSL/TLS best practices\n  - DDoS vulnerabilities\n  - Attacks requiring privileged access from within the organization\n  - Feature requests\n  - Best practices\n  - Internal SSRF\n  - Path Traversal with no impact\n  - SPF/DKIM/DMARC Configuration Problems\n  - SSL misconfigurations\n  - SSL/TLS issues (weak crypto, improper setup)\n  - Clickjacking\n  - Misleading Unicode text (e.g. using right to left override characters)\n  - HTTP security headers\n  - Cache control issues\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third-party systems and applications (e.g., browser extensions) as well as websites (e.g., SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
       "assetsBodyV2": "All smart contracts of Mars Ecosystem can be found at [https://github.com/MarsEcosystem](https://github.com/MarsEcosystem). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n",
-      "impactsBody": null,
+      "impactsBody": "__Theft of user funds:__ is a worst case scenario for a project. An example of in-motion funds is a swap. A user is transferring funds to the contract with the full expectation to exchange them for an equivalent value of another asset. If an attacker can manipulate the system in such a way that a user incurs losses during the transfer and the attacker profits, this is considered direct theft of user funds. If users are losing their stake, principal, vault balances, etc, that is theft of user funds.\n\n__Permanent Freezing of funds:__ This includes bricking a contract which holds tokens so that a user is no longer able to withdraw their funds. It may also include burning of funds so that they can no longer be accessed by the owner. This also includes things like self-destructing implementation contracts so that the proxy becomes useless. The impact here is that funds within a system are no longer accessible.\n\n__Protocol Insolvency:__ Some protocols provide yield to some users that is paid by other users (e.g. Compound lenders are owed yield that is provided by borrowers). An error in this calculation could result in the amount owed to users exceeding the amount owed by other users. This is insolvency. Alternatively, the protocol could have debts that exceed its assets in other ways. Of course this does not include \"bank run\" situations where it’s temporarily not possible to withdraw money from the protocol, but the protocol is otherwise adequately collateralized\n\n__Theft of Unclaimed Yield:__  A yield is any asset distributed as a reward for participation in a system. Any theft of these rewards before they are distributed or claimed is classified as theft of an unclaimed yield.\n\n__Permanent Freezing of Unclaimed Yield:__ A yield is any asset distributed as a reward for participation in a system. Whenever an attacker can prevent the yield from being able to move from the contract, for example by making the harvest() function always fail, this would mean the yield is permanently frozen.\n\n__Temporary Freezing of Funds:__ This classification refers to temporary freezing of funds belonging to the protocol or another user, which the attacker does not own. There may be an amount of time or number of blocks which is in an acceptable range of operation for a project and is therefore excluded from consideration under this impact; however, this range of operation should be kept as short as possible because attacker locked funds can significantly impact user experience and cause rippling issues for a protocol. If an attacker needs to submit many costly transactions to achieve this impact, it is instead \"Griefing\" and is classified as \"Medium\".\n\n__Smart contract unable to operate due to lack of token funds:__ This classification refers to bugs that mark the smart contract as unable to operate or work correctly due to lack of token funds. There may be cases where the smart contract cannot pay out any rewards for staked tokens because the contract doesn't hold any funds or won't accept any reimbursements. Another example would be the LINK token required to pay for certain Chainlink services. If those services are required for proper function of the system and it's possible (or likely) for the funds to be depleted, that would be a vulnerability.\n\n__Unbounded gas consumption:__ Any looping done over an arbitrarily sized array may be vulnerable to unbounded gas consumption. If an attacker can add enough items to cause the gas used to call the function to exceed the block gas limit, it can result in a denial of service attack and prevent the function from being called.\n",
       "immunefiStandard": true,
       "tags": {
         "productType": [
@@ -207,32 +207,24 @@
         "smartcontract_rewards": [
           {
             "level": "Critical",
-            "payout": "USD $60,000"
+            "payout": "USD $10,000"
           },
           {
             "level": "High",
-            "payout": "USD $15,000"
+            "payout": "USD $3,000"
           },
           {
             "level": "Medium",
-            "payout": "USD $5,000"
-          },
-          {
-            "level": "Low",
             "payout": "USD $1,000"
           }
         ],
         "web_rewards": [
           {
             "level": "Critical",
-            "payout": "USD $10,000"
+            "payout": "USD $2,500"
           },
           {
             "level": "High",
-            "payout": "USD $5,000"
-          },
-          {
-            "level": "Medium",
             "payout": "USD $1,000"
           }
         ]
