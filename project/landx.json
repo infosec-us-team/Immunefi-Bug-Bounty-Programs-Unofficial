@@ -1,0 +1,235 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "landx",
+      "slug": "landx",
+      "project": "LandX",
+      "maxBounty": 10000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7JXlJYBYRGKKXWw6wC1g09/46ebe44f1e6ecd3a643726be3f6c369a/LandX_Logo_CMYK_05_copy.png",
+      "launchDate": "2023-12-01T17:00+03:00",
+      "endDate": null,
+      "updatedDate": "2023-12-01T13:28:46.946Z",
+      "kyc": true,
+      "rewards": [
+        {
+          "assetType": "blockchain_dlt",
+          "level": "critical",
+          "payout": "",
+          "pocRequired": false
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "high",
+          "payout": "",
+          "pocRequired": false
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "medium",
+          "payout": "",
+          "pocRequired": false
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "low",
+          "payout": "",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "USD $10,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "high",
+          "payout": "USD $5,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "low",
+          "payout": "",
+          "pocRequired": false
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "critical",
+          "payout": "",
+          "pocRequired": false
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "high",
+          "payout": "",
+          "pocRequired": false
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "medium",
+          "payout": "",
+          "pocRequired": false
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "low",
+          "payout": "",
+          "pocRequired": false
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "25KDxdkCU9ZycwfmvB5OOE",
+          "type": "smart_contract",
+          "url": "https://github.com/LandXit/land-x-smart-contracts/blob/develop/contracts/LNDX.sol",
+          "description": "LNDX",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "5RbIC9vX6douXe09ad4qGz",
+          "type": "smart_contract",
+          "url": "https://github.com/LandXit/land-x-smart-contracts/blob/develop/contracts/xToken.sol",
+          "description": "xTokens",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "811DpUiXxwqZbSrgkcuOG",
+          "type": "smart_contract",
+          "url": "https://github.com/LandXit/land-x-smart-contracts/blob/develop/contracts/xBasket.sol",
+          "description": "xBasket",
+          "isPrimacyOfImpact": null
+        }
+      ],
+      "impacts": [
+        {
+          "id": "NpgUcPhiGwyAWuBJ5MoXk",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "oQXEcudGaEQS4lVkdFkz2",
+          "title": "Permanent freezing of funds exceeding $1000 value",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "2jqFTpqSkuv0RiGdqsWcDd",
+          "title": "Protocol insolvency",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "FOpxbeK89pu9pgQMi8ZIs",
+          "title": "Theft of USDC from rentFoundation contract",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "55oMLEL6NgCVTyk1xVka3B",
+          "title": "Permanent freezing of unclaimed yield",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "4oULCyO09DLiQ1Y3wjQgyZ",
+          "title": "Temporary freezing of funds exceeding $1000 value",
+          "type": "smart_contract",
+          "severity": "high"
+        }
+      ],
+      "programOverview": "LandX is a decentralized protocol closing the gap between farmland owners and crypto investors through blockchain-based perpetual commodity vaults.\n\nThe LandX protocol enables an agreement between borrowers (farmers) and investors. The vault acts as a blockchain-based token that trades for a market-determined principal price. The holder of the staked token receives a daily yield of the underlying commodity in perpetuity.\n\nLandX is built on the Ethereum blockchain, meaning all transactions reach consensus through a peer-to-peer system. There is no third party needed for any financial transaction (token trade). The LandX code is autonomous and executes on Ethereum in a permissionless manner.\n\nFor more information about LandX, please visit [https://testnet.landx.fi/](https://testnet.landx.fi/)\n\nLandX provides rewards in USDC, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__\n\nLandX will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n\n- Full name\n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nLandX adheres to category 3 - Approval Required. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nLandX adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms stated in this page.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n__Known Issue Assurance__\n\nLandX commits to providing Known Issue Assurance to bug submissions through their program. This means that LandX will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n__Previous Audits__\n\nLandX’s completed audit reports can be found at [https://landx.gitbook.io/landx/whitepaper/security-audit.](https://landx.gitbook.io/landx/whitepaper/security-audit) Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards ](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards)which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, LandX has satisfied the requirements for the [Immunefi Standard Badge.](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209)",
+      "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\nFor critical smart contract bugs on testnet assets, the reward is paid as a flat amount of USD 10 000. This is because there are no actual funds at risk on the testnet, hence limits objective calculation. \n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attacks within the first hour will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n__Reward Calculation for High Level Reports__\n\n- High vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are considered at the full amount of funds at risk, capped at the maximum high reward. This is to incentivize security researchers to uncover and responsibly disclose vulnerabilities that may have not have significant monetary value today, but could still be damaging to the project if it goes unaddressed.   \n- In the event of temporary freezing, the reward doubles from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lenghents, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\n__Reward Payment Terms__\n\nPayouts are handled by the LandX team directly and are denominated in USD. However, payments are done in USDC\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability. \n",
+      "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories:__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Blockchain/DLT & Smart Contract Specific:__\n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n\n__Prohibited Activities:__\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
+      "assetsBodyV2": "LandX’s codebase can be found at [https://github.com/LandXit/land-x-smart-contracts.](https://github.com/LandXit/land-x-smart-contracts) Documentation and further resources can be found on [https://landx.gitbook.io/landx/introduction-to-landx/video-explainer. ](https://landx.gitbook.io/landx/introduction-to-landx/video-explainer)",
+      "impactsBody": null,
+      "immunefiStandard": true,
+      "tags": {
+        "productType": [
+          "Yield Aggregator"
+        ],
+        "projectType": [
+          "Defi"
+        ],
+        "ecosystem": null,
+        "programType": [
+          "Smart Contract"
+        ],
+        "language": [
+          "Solidity"
+        ]
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract"
+        ],
+        "blockchain_rewards": [
+          {
+            "level": "Critical",
+            "payout": ""
+          },
+          {
+            "level": "High",
+            "payout": ""
+          },
+          {
+            "level": "Medium",
+            "payout": ""
+          },
+          {
+            "level": "Low",
+            "payout": ""
+          }
+        ],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $10,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $5,000"
+          },
+          {
+            "level": "Medium",
+            "payout": ""
+          },
+          {
+            "level": "Low",
+            "payout": ""
+          }
+        ],
+        "web_rewards": [
+          {
+            "level": "Critical",
+            "payout": ""
+          },
+          {
+            "level": "High",
+            "payout": ""
+          },
+          {
+            "level": "Medium",
+            "payout": ""
+          },
+          {
+            "level": "Low",
+            "payout": ""
+          }
+        ]
+      }
+    },
+    "project": null
+  },
+  "__N_SSG": true
+}
