@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/nYC6PqIgLjot92oyzZKKN/d72cb6d440cb994d48f49425acfca766/photo_2023-11-20_11-01-45_copy_2.jpg",
       "launchDate": "2023-12-01T12:00+03:00",
       "endDate": null,
-      "updatedDate": "2023-12-07T19:59:05.749Z",
+      "updatedDate": "2023-12-13T09:27:59.617Z",
       "kyc": false,
       "rewards": [
         {
@@ -26,24 +26,6 @@
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $20,000",
-          "pocRequired": true
-        },
-        {
-          "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $50,000 to USD $100,000",
-          "pocRequired": true
-        },
-        {
-          "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "USD $40,000",
-          "pocRequired": true
-        },
-        {
-          "assetType": "websites_and_applications",
           "level": "medium",
           "payout": "USD $20,000",
           "pocRequired": true
@@ -134,27 +116,6 @@
           "url": "https://etherscan.io/address/0xfC446dB5E1255e837E95dB90c818C6fEb8e93ab0",
           "description": "RepoDriver Logic",
           "isPrimacyOfImpact": null
-        },
-        {
-          "id": "ffr0sHr8YmASIM9JzMI8q",
-          "type": "websites_and_applications",
-          "url": "https://www.drips.network/",
-          "description": "Website",
-          "isPrimacyOfImpact": null
-        },
-        {
-          "id": "76LmUMgtEzFeGUWl5d87DT",
-          "type": "websites_and_applications",
-          "url": "https://github.com/drips-network/app/tree/main",
-          "description": "The Drips web/app",
-          "isPrimacyOfImpact": null
-        },
-        {
-          "id": "4Pn0tAWRhDF9RamWkWhfKH",
-          "type": "websites_and_applications",
-          "url": "https://github.com/drips-network/sdk/tree/main",
-          "description": "The Drips SDK",
-          "isPrimacyOfImpact": null
         }
       ],
       "impacts": [
@@ -201,30 +162,6 @@
           "severity": "critical"
         },
         {
-          "id": "k4YrgJyc5FKoHuzsFOYza",
-          "title": "Execute arbitrary system commands",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "6oauoZTIUhShRagWZGeIhT",
-          "title": "Retrieve sensitive data/files from a running server such as: /etc/shadow, database passwords, blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "2t73eLXuLBTA9NvRzlHmm9",
-          "title": "Direct theft of user funds",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "26W2cgcTuT1aiGG1ll4FcX",
-          "title": "Direct theft of user NFTs",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
           "id": "4ODJAEsxmE1awD0MscCiSX",
           "title": "Temporary freezing of funds",
           "type": "smart_contract",
@@ -247,18 +184,12 @@
           "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
           "type": "smart_contract",
           "severity": "medium"
-        },
-        {
-          "id": "3pi6TMhjL8Ps0bQDXz20U5",
-          "title": "Taking down the application/website",
-          "type": "websites_and_applications",
-          "severity": "medium"
         }
       ],
       "programOverview": "Drips is an Ethereum protocol and web app that makes it easy for organizations and individuals to provide direct financial support to developers of free and open source software (FOSS).\n\nIn essence, Drips serves as an off-the-shelf solution for direct and recurring financial support, allowing organizations to effortlessly allocate ongoing ERC-20 tokens to the projects they consider essential and to link their success to the success of their dependents.\n\nIn Drips, funders provide financial support to FOSS developers by creating Drip Lists.  A Drip List is a collection of Ethereum addresses, ENS names and Git repositories curated by an individual user or organization and packaged together under one title. This list is accompanied by a percentage of funds to be allocated to each item on the list. These lists are publicly available, shareable on the web and open for anyone to fund.\n\nDrips also includes a built-in capability to allow funders to provide continuous, recurring support to FOSS projects over time, which we refer to as “streaming”. Funders who create a stream have the ability to cancel the remainder of a stream at any time and reclaim any un-streamed funds, providing them with complete control and the freedom to adapt their support based on evolving circumstances.\n\nFinally, to enable funders to support FOSS projects that do not have Ethereum addresses at the time the funds are sent, Drips also includes an optional, oracle-based identity solution, powered by Chainlink. This feature enables users to directly send funds to the owners of public software repositories on Github, which the owner of the repository can claim at a later time by adding a FUNDING.json file to the root of the repository’s default branch.\n\nFor more information about Drips, please visit [https://www.drips.network/ ](https://www.drips.network/) \n\nDrips provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__Responsible Publication__\n\nDrips adheres to category 3: Approval Required. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nDrips adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms stated in this page.\n\n__Known Issue Assurance__\n\nDrips commits to providing Known Issue Assurance to bug submissions through their program. This means that Drips will either disclose known issues publicly or at the very least privately via a self-reported bug submission in order to allow for a more objective and streamlined mediation process to prove that an issue is known. Otherwise, assuming the bug report itself is valid, it would result in the bug report being considered in-scope and due 100% of the reward with respect to the bug bounty program terms. \n",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 100 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 50 000 is to be rewarded in order to incentivize security researchers against withholding a bug report.   \nCritical website and application bug reports will be rewarded with USD 100 000, only if the impact results in a loss of $1M in token funds from user accounts, even if there are no changes to the NFTs. \n\nAll other impacts that would be classified as Critical, or an impact resulting in a theft of funds that does not fall under this definition, would be rewarded 50 000.\n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs acknowledged below are not eligible for any reward through the bug bounty program. \n- [https://hackmd.io/6_EgTHw6TVGlfxls0iKMAQ?view](https://hackmd.io/6_EgTHw6TVGlfxls0iKMAQ?view)\n\n__Previous Audits__\n\nDrips has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [https://docs.drips.network/assets/files/Spearbit_Drips_Network_Security_Review-d5cda225c36d4c2f1185e154431812b5.pdf](https://docs.drips.network/assets/files/Spearbit_Drips_Network_Security_Review-d5cda225c36d4c2f1185e154431812b5.pdf)\n- [https://docs.drips.network/assets/files/Drips_Audit_Report-c2efbc01f0ce28c8847226339d63c3a7.pdf](https://docs.drips.network/assets/files/Drips_Audit_Report-c2efbc01f0ce28c8847226339d63c3a7.pdf)\n- [https://code4rena.com/reports/2023-01-drips](https://code4rena.com/reports/2023-01-drips)\n- [https://docs.drips.network/assets/files/Certora_Radicle_Drips_Report-a557b047cd7806033d47cfcba1ce334e.pdf](https://docs.drips.network/assets/files/Certora_Radicle_Drips_Report-a557b047cd7806033d47cfcba1ce334e.pdf)\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards ](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards)which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the all Smart contract and Web/App severity levels\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Other Terms and Information__\n\nExceptions to the PoC requirement for smart contract bugs may be made in cases where the vulnerability is objectively evident from simply mentioning the vulnerability and where it exists. However, the bug reporter may be required to provide a PoC at any point in time.\n\nFor smart contract-related vulnerabilities, in order to be eligible for a reward, the vulnerability must exist both in the deployed smart contract on Ethereum Mainnet and the GitHub file in the Assets in Scope table.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Drips team directly and are denominated in USD. However, payments are done in USDC. \n",
-      "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Smart Contracts and Blockchain/DLT__ \n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n- Best practice recommendations\n\n__Web/App__ \n\n- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n   - This does not exclude reflected HTML injection with or without JavaScript\n   - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass) \n- SPF/DMARC misconfigured records\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering\n\nThe following activities are prohibited by this bug bounty program:\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
+      "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 100 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 50 000 is to be rewarded in order to incentivize security researchers against withholding a bug report. \n\nAll other impacts that would be classified as Critical, or an impact resulting in a theft of funds that does not fall under this definition, would be rewarded 50 000.\n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs acknowledged below are not eligible for any reward through the bug bounty program. \n- [https://hackmd.io/6_EgTHw6TVGlfxls0iKMAQ?view](https://hackmd.io/6_EgTHw6TVGlfxls0iKMAQ?view)\n\n__Previous Audits__\n\nDrips has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [https://docs.drips.network/assets/files/Spearbit_Drips_Network_Security_Review-d5cda225c36d4c2f1185e154431812b5.pdf](https://docs.drips.network/assets/files/Spearbit_Drips_Network_Security_Review-d5cda225c36d4c2f1185e154431812b5.pdf)\n- [https://docs.drips.network/assets/files/Drips_Audit_Report-c2efbc01f0ce28c8847226339d63c3a7.pdf](https://docs.drips.network/assets/files/Drips_Audit_Report-c2efbc01f0ce28c8847226339d63c3a7.pdf)\n- [https://code4rena.com/reports/2023-01-drips](https://code4rena.com/reports/2023-01-drips)\n- [https://docs.drips.network/assets/files/Certora_Radicle_Drips_Report-a557b047cd7806033d47cfcba1ce334e.pdf](https://docs.drips.network/assets/files/Certora_Radicle_Drips_Report-a557b047cd7806033d47cfcba1ce334e.pdf)\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards ](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards)which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the all Smart contract and Web/App severity levels\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Other Terms and Information__\n\nExceptions to the PoC requirement for smart contract bugs may be made in cases where the vulnerability is objectively evident from simply mentioning the vulnerability and where it exists. However, the bug reporter may be required to provide a PoC at any point in time.\n\nFor smart contract-related vulnerabilities, in order to be eligible for a reward, the vulnerability must exist both in the deployed smart contract on Ethereum Mainnet and the GitHub file in the Assets in Scope table.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Drips team directly and are denominated in USD. However, payments are done in USDC. \n",
+      "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Smart Contracts and Blockchain/DLT__ \n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n- Best practice recommendations\n\nThe following activities are prohibited by this bug bounty program:\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
       "assetsBodyV2": "All code of Drips can be found at [https://github.com/orgs/drips-network/repositories.](https://github.com/orgs/drips-network/repositories) Documentation for the assets provided in the table can be found at [https://docs.drips.network/. ](https://docs.drips.network/)\n\nUnless explicitly listed, only pages of the web/app assets in addition to the direct link are considered in-scope of the bug bounty program. Other subdomains are not considered as in-scope. However, for subdomain takeovers that lead to an impact on the in-scope asset, please refer to our page about [Reported Subdomain Takeovers.](https://immunefisupport.zendesk.com/hc/en-us/articles/14352199704593-Reported-Subdomain-Takeovers)\n",
       "impactsBody": null,
       "immunefiStandard": true,
@@ -271,8 +202,7 @@
           "ETH"
         ],
         "programType": [
-          "Smart Contract",
-          "Websites and Applications"
+          "Smart Contract"
         ],
         "language": [
           "Solidity"
@@ -280,8 +210,7 @@
       },
       "legacy": {
         "technologies": [
-          "Smart Contract",
-          "Websites and Applications"
+          "Smart Contract"
         ],
         "blockchain_rewards": [],
         "smartcontract_rewards": [
@@ -298,20 +227,7 @@
             "payout": "USD $20,000"
           }
         ],
-        "web_rewards": [
-          {
-            "level": "Critical",
-            "payout": "USD $50,000 to USD $100,000"
-          },
-          {
-            "level": "High",
-            "payout": "USD $40,000"
-          },
-          {
-            "level": "Medium",
-            "payout": "USD $20,000"
-          }
-        ]
+        "web_rewards": []
       }
     },
     "project": null,

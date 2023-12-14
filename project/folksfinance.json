@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6vyGPEBgWiuraOLL70pn0O/e927d5f9e3903dd5e4abdcf9a388c46c/Folks_Finance_logo.jpeg",
       "launchDate": "2022-03-31T11:00-06:00",
       "endDate": null,
-      "updatedDate": "2023-09-06T14:55:23.105Z",
+      "updatedDate": "2023-12-14T10:48:22.064Z",
       "kyc": true,
       "rewards": [
         {
@@ -35,12 +35,6 @@
           "level": "low",
           "payout": "USD $1,000",
           "pocRequired": false
-        },
-        {
-          "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $50,000",
-          "pocRequired": true
         }
       ],
       "audits": null,
@@ -50,13 +44,6 @@
           "type": "smart_contract",
           "url": "https://docs.folks.finance/developer/contracts",
           "description": "Core",
-          "isPrimacyOfImpact": null
-        },
-        {
-          "id": "6QoMRP3W0ZiESjJmxtqBzp",
-          "type": "websites_and_applications",
-          "url": "https://folks.finance/",
-          "description": "Main Web",
           "isPrimacyOfImpact": null
         }
       ],
@@ -84,30 +71,6 @@
           "title": "Manipulation of asset prices",
           "type": "smart_contract",
           "severity": "critical"
-        },
-        {
-          "id": "3rXD164EmshX5P6griHQWz",
-          "title": "Direct theft of user funds",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "7sh9nq8GxRzIWPrww6Q30Z",
-          "title": "Tampering with transactions submitted to the user’s wallet",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "7nxZSznR0GGaznnm5PY40s",
-          "title": "Submitting malicious transactions to an already-connected wallet",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "2Pk5YagpXuCJX4eQ61mX9Z",
-          "title": "Theft of frTokens",
-          "type": "smart_contract",
-          "severity": "high"
         },
         {
           "id": "60MMBQZzLxbxbv9mRuC12Y",
@@ -148,8 +111,8 @@
       ],
       "programOverview": "Folks Finance is a community-driven DeFi protocol offering a variety of tools for digital asset management\n\nFor more information about Folks Finance, please visit [https://folks.finance/](https://folks.finance/). \n\nThis bounty program will expire on 31.12.2023\n",
       "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Smart Contracts__\n\n__Critical__\n  - Unrecoverable failure of smart contracts\n  - Theft of pooled assets\n  - Theft of fTokens\n  - Manipulation of asset prices\n\n__High__\n  - Theft of frTokens\n  - Theft of rewards\n  - Theft of yield\n\n__Medium__\n  - Flaws in implementation of calculations\n  - Smart contract deviates from expected protocol behavior\n  - Retrieval of supposed locked funds\n\n__Low__\n  - Unhandled erasure of user data\n\n__Websites and Applications__\n\n__Critical__\n  - Direct theft of user funds \n  - Tampering with transactions submitted to the user’s wallet\n  - Submitting malicious transactions to an already-connected wallet\n\nIn case of discrepancy between [Immunefi Vulnerability Severity Classification System V2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2/) and Folks Finance’s classification above, Folks Finance classification will be followed.",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported. \n\nAll web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. All High and Critical Smart Contract bug reports require a PoC and a suggestion for a fix to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nCritical smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of USD 100 000. \n\nThe Algorand Foundation has  agreed to match 100% of any financial reward offered by Folks Finance for any validated Critical or High impact vulnerability payout. In effect, if a white hat finds a critical vulnerability and it is validated, they will be eligible to receive USD 100,000 from Folks Finance as well as USD 100,000 from the Algorand Foundation for a total of USD 200,000. \n\nAll vulnerabilities marked in the following Github repository [https://github.com/Folks-Finance/audits](https://github.com/Folks-Finance/audits) are ineligible for a reward\n\n__KYC__ shall be completed for bug bounty hunters submitting a vulnerability report and requesting a reward for Critical and High Smart Contracts vulnerabilities and Critical Websites and Applications\nvulnerabilities. The basic information needed is full name, residential address, and passport details (DOB, issuing country and passport number). Based on the basic information submitted, Folks Finance team may request further information at its sole discretion for compliance with applicable\nLaws.\n\nAdditionally, all levels of bug bounty hunters submitting a vulnerability report and requesting a reward need to submit certification that (i) they are not acting, directly or indirectly, for or on behalf of any person, group entity, or nation named by any Executive Order or the United States Treasury Department as a terrorist, “Specially Designated National and Blocked Person,” or other banned or blocked person, entity, nation, or transaction pursuant to any law, order, rule or regulation that is\nenforced or administered by the Office of Foreign Assets Control; and (ii) they are not engaging in, instigating or facilitating this transaction, directly or indirectly, on behalf of any such person, group,\nentity, or nation. They also need to submit an attestation that all information provided is true, correct, up-to-date and not misleading. The collection of this information will be done by the Folks Finance team.\n\nPayouts are handled by the __Folks Finance__ team directly and are denominated in USD. However, payouts are done in __USDCa__. ",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n  - Incorrect data supplied by third party oracles and market manipulation\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Impacts relying on the depegging of an external token where the attacker does not directly cause the depegging from a bug in the in-scope contracts\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n\n__Websites and Apps__\n  - Theoretical vulnerabilities without any proof or demonstration\n  - Content spoofing / Text injection issues\n  - Self-XSS\n  - Captcha bypass using OCR\n  - CSRF with no security impact (logout CSRF, change language, etc.)\n  - Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”)\n  - Server-side information disclosure such as IPs, server names, and most stack traces\n  - Vulnerabilities used to enumerate or confirm the existence of users or tenants\n  - Vulnerabilities requiring unlikely user actions\n  - URL Redirects (unless combined with another vulnerability to produce a more severe vulnerability)\n  - Lack of SSL/TLS best practices\n  - DDoS vulnerabilities\n  - Attacks requiring privileged access from within the organization\n  - Feature requests\n  - Best practices\n  - Vulnerabilities primarily caused by browser/plugin defects\n  - Any vulnerability exploit requiring CSP bypass resulting from a browser bug\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported. \n\nSmart Contract bug reports require a PoC and a suggestion for a fix to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nCritical smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of USD 100 000. \n\nUntil 31st December 2023, the Algorand Foundation has agreed to match 100% of any financial reward offered by Folks Finance for any validated Critical or High impact vulnerability payout. In effect, if a whitehat finds a critical vulnerability and it is validated, they will be eligible to receive up to USD 100,000 from Folks Finance as well as USD 100,000 from the Algorand Foundation for a total of USD 200,000. \n\nAll vulnerabilities marked in the following Github repository [https://github.com/Folks-Finance/audits](https://github.com/Folks-Finance/audits) are ineligible for a reward\n\n__KYC__ shall be completed for bug bounty hunters submitting a vulnerability report and requesting a reward for Critical and High Smart Contracts vulnerabilities and Critical Websites and Applications\nvulnerabilities. The basic information needed is full name, residential address, and passport details (DOB, issuing country and passport number). Based on the basic information submitted, Folks Finance team may request further information at its sole discretion for compliance with applicable\nLaws.\n\nAdditionally, all levels of bug bounty hunters submitting a vulnerability report and requesting a reward need to submit certification that (i) they are not acting, directly or indirectly, for or on behalf of any person, group entity, or nation named by any Executive Order or the United States Treasury Department as a terrorist, “Specially Designated National and Blocked Person,” or other banned or blocked person, entity, nation, or transaction pursuant to any law, order, rule or regulation that is\nenforced or administered by the Office of Foreign Assets Control; and (ii) they are not engaging in, instigating or facilitating this transaction, directly or indirectly, on behalf of any such person, group,\nentity, or nation. They also need to submit an attestation that all information provided is true, correct, up-to-date and not misleading. The collection of this information will be done by the Folks Finance team.\n\nPayouts are handled by the __Folks Finance__ team directly and are denominated in USD. However, payouts are done in __USDCa__. ",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n  - Incorrect data supplied by third party oracles and market manipulation\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Impacts relying on the depegging of an external token where the attacker does not directly cause the depegging from a bug in the in-scope contracts\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
       "assetsBodyV2": "In the Github link in the Assets in Scope table, only Exact Match Verified smart contracts are considered as in-scope of the bug bounty program. \n",
       "impactsBody": null,
       "immunefiStandard": true,
@@ -171,8 +134,7 @@
       },
       "legacy": {
         "technologies": [
-          "Smart Contract",
-          "Websites and Applications"
+          "Smart Contract"
         ],
         "blockchain_rewards": [],
         "smartcontract_rewards": [
@@ -193,12 +155,7 @@
             "payout": "USD $1,000"
           }
         ],
-        "web_rewards": [
-          {
-            "level": "Critical",
-            "payout": "USD $50,000"
-          }
-        ]
+        "web_rewards": []
       }
     },
     "project": null,
