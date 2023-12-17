@@ -1,0 +1,85 @@
+{
+  "pageProps": {
+    "type": "bounty",
+    "bounty": {
+      "id": "waymont",
+      "slug": "waymont",
+      "project": "Waymont",
+      "maxBounty": 250000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5u7ggMEIi7w6abohzGtLwG/af0ed08f8ec0b843509e647f8e13ab9b/2023-12-08_19.05.14_2.png",
+      "launchDate": "2023-12-13T12:00+03:00",
+      "endDate": null,
+      "updatedDate": "2023-12-15T16:16:01.417Z",
+      "kyc": false,
+      "rewards": [
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "USD $250,000",
+          "pocRequired": true
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "ysF3WvBCZTpQzurvdYvfH",
+          "type": "smart_contract",
+          "url": "https://github.com/pentagonxyz/waymont-contracts",
+          "description": "Waymont Contract",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "5NMsmUP0qTcNEVkO3pFh96",
+          "type": "smart_contract",
+          "url": "https://immunefi.com/",
+          "description": "Primacy of Impact",
+          "isPrimacyOfImpact": true
+        }
+      ],
+      "impacts": [
+        {
+          "id": "7z8XphpWWxweVCVDNV7cqU",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "type": "smart_contract",
+          "severity": "critical"
+        }
+      ],
+      "programOverview": "Waymont is a self-custody platform built on top of Safe. We help users abstract away the burdens of:\n- Private key management\n- Poor hardware UX and, \n- Adverse onchain risks & security\n\nWe offer an integrated web app, mobile app, and dApp connection (WalletConnect) product, that are all in scope for this program.\n\nWe are rewarding the demonstrable direct theft of assets.\n\nFor more information about Waymont, please visit [https://www.waymont.co/](https://www.waymont.co/)\n\nWaymont provides rewards in USDC, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__Responsible Publication__\n\nWaymont adheres to category 3 - Approval Required. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nWaymont adheres to the Primacy of Impact for the following impacts:\n- Smart Contract - Critical - Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact ](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n__Known Issue Assurance__\n\nWaymont commits to providing Known Issue Assurance to bug submissions through their program. This means that Waymont will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n__Previous Audits__\n\nWaymont has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [https://drive.google.com/file/d/1_pxVZK9IPP91F2dW23OcJPss1lsxJqWD/view?usp=sharing](https://drive.google.com/file/d/1_pxVZK9IPP91F2dW23OcJPss1lsxJqWD/view?usp=sharing)\n- [https://drive.google.com/file/d/18NB4-m3vfJFnslAGyb22-gy-js_VFvef/view](https://drive.google.com/file/d/18NB4-m3vfJFnslAGyb22-gy-js_VFvef/view)\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Waymont has satisfied the requirements for the [Immunefi Standard Badge.](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209)\n",
+      "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attacks within the first hour will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\nFor critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Payment Terms__\n\nPayouts are handled by the Waymont team directly and are denominated in USD. However, payments are done in USDC\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability. \n",
+      "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories:__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Blockchain/DLT & Smart Contract Specific:__\n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n\nProhibited Activities:\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
+      "assetsBodyV2": "Waymont’s codebase can be found at [https://github.com/pentagonxyz/waymont-contracts/.](https://github.com/pentagonxyz/waymont-contracts/) Documentation and further resources can be found on [https://waymont.gitbook.io/waymont/](https://waymont.gitbook.io/waymont/)",
+      "impactsBody": null,
+      "immunefiStandard": true,
+      "tags": {
+        "productType": [
+          "Asset Management"
+        ],
+        "projectType": null,
+        "ecosystem": null,
+        "programType": [
+          "Smart Contract"
+        ],
+        "language": null
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract"
+        ],
+        "blockchain_rewards": [],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $250,000"
+          }
+        ],
+        "web_rewards": []
+      }
+    },
+    "project": null,
+    "layoutProps": {
+      "headerMarginBottom": null
+    }
+  },
+  "__N_SSG": true
+}
