@@ -5,17 +5,17 @@
       "id": "swell",
       "slug": "swell",
       "project": "Swell",
-      "maxBounty": 100000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/49Iuyx7Sfkmzm6SI8INxX/a0427021527efd66ae89bd01c4d3b7ff/photo_2023-04-18_14-31-24.jpg",
+      "maxBounty": 250000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/49Iuyx7Sfkmzm6SI8INxX/91d54b122e661d32074e984b19f00741/photo_2023-04-18_14-31-24_copy.png",
       "launchDate": "2023-04-27T13:00+03:00",
       "endDate": null,
-      "updatedDate": "2023-04-28T01:02:47.878Z",
+      "updatedDate": "2024-01-10T11:14:56.683Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
           "level": "critical",
-          "payout": "Up to USD $100,000",
+          "payout": "Up to USD $250,000",
           "pocRequired": true
         },
         {
@@ -33,7 +33,7 @@
         {
           "assetType": "websites_and_applications",
           "level": "critical",
-          "payout": "USD $10,000",
+          "payout": "USD $20,000",
           "pocRequired": true
         },
         {
@@ -307,7 +307,7 @@
       ],
       "programOverview": "Swell is a permissionless, non-custodial, and liquid ETH staking protocol that is built for stakers, node operators, and the Ethereum ecosystem.\n\nSwell provides users with an opportunity to earn yield on the ETH they hold through staking. This is done by staking ETH in conjunction with node operators that participate in validating the Ethereum proof-of-stake blockchain. The yield is earned through staking rewards received from the blockchain for validating block production. \n\nAbove all Swell aims to contribute to the Ethereum ecosystem and it’s users by simplifying the staking process as much as possible and driving utility for the reward-bearing token swETH.\n\nFor more information about Swell, please visit [https://swellnetwork.io/.](https://swellnetwork.io/)  \n",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the  [Immunefi Vulnerability Severity Classification System V2.2.](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/) This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported. \n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nRewards for critical smart contract vulnerabilities are further capped at 10% of the funds at risk. In cases of repeatable attacks, only the first attack is considered unless the smart contract cannot be upgraded or paused.  However, there is a minimum reward of __USD 50 000__ and a maximum reward of __USD 100 000__ for Critical smart contract bug reports.\n\nPreviously known issues highlighted in the following audit reports are considered as out of scope: \n- [https://github.com/SwellNetwork/v3-core-public/tree/master/Audit%20Reports](https://github.com/SwellNetwork/v3-core-public/tree/master/Audit%20Reports)\n\nPayouts are handled by the __Swell__ team directly and are denominated in USD. However, payouts are done in __USDC__.\n",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the  [Immunefi Vulnerability Severity Classification System V2.2.](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/) This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported. \n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nRewards for critical smart contract vulnerabilities are further capped at 10% of the funds at risk. In cases of repeatable attacks, only the first attack is considered unless the smart contract cannot be upgraded or paused.  However, there is a minimum reward of __USD 50 000__ and a maximum reward of __USD 250 000__ for Critical smart contract bug reports.\n\nPreviously known issues highlighted in the following audit reports are considered as out of scope: \n- [https://github.com/SwellNetwork/v3-core-public/tree/master/Audit%20Reports](https://github.com/SwellNetwork/v3-core-public/tree/master/Audit%20Reports)\n\nPayouts are handled by the __Swell__ team directly and are denominated in USD. However, payouts are done in __USDC__.\n",
       "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n- Attacks that the reporter has already exploited themselves, leading to damag\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n- Centralization risks\n\n__Websites and Apps__\n\n- Theoretical vulnerabilities without any proof or demonstration\n- Attacks requiring physical access to the victim device\n- Attacks requiring access to the local network of the victim\n- Reflected plain text injection ex: url parameters, path, etc.\n   - This does not exclude reflected HTML injection with or without javascript\n   - This does not exclude persistent plain text injection\n- Self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (ex: logout CSRF)\n- Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure such as IPs, server names, and most stack traces\n- Vulnerabilities used only to enumerate or confirm the existence of users or tenants\n- Vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- DDoS vulnerabilities\n- Feature requests\n- Issues related to the frontend without concrete impact and PoC\n- Best practices issues without concrete impact and PoC\n- Vulnerabilities primarily caused by browser/plugin defects\n- Leakage of non sensitive api keys ex: etherscan, Infura, Alchemy, etc.\n- Any vulnerability exploit requiring browser bugs for exploitation. ex: CSP bypass\n\nThe following activities are prohibited by this bug bounty program:\n\n- Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
       "assetsBodyV2": "Though only the proxy implementation contracts are listed as in-scope, current implementation and any further updates to the implementation contracts are considered in scope. When reporting a bug, please make sure to select the relevant proxy implementation smart contract as the target.\n\nAll smart contracts of Swell can be found at [https://github.com/SwellNetwork/.](https://github.com/SwellNetwork/) However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n",
       "impactsBody": null,
@@ -337,7 +337,7 @@
         "smartcontract_rewards": [
           {
             "level": "Critical",
-            "payout": "Up to USD $100,000"
+            "payout": "Up to USD $250,000"
           },
           {
             "level": "High",
@@ -351,7 +351,7 @@
         "web_rewards": [
           {
             "level": "Critical",
-            "payout": "USD $10,000"
+            "payout": "USD $20,000"
           },
           {
             "level": "High",
