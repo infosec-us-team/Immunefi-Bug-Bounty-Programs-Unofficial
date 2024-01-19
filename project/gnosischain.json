@@ -6,28 +6,28 @@
       "slug": "gnosischain",
       "project": "Gnosis Chain",
       "maxBounty": 2000000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6ibSou9KOCjwRMOviQ4op0/bd40955a44009d5e7a35376fb4c0a248/Aatar_green_white.png",
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6ibSou9KOCjwRMOviQ4op0/76c3c2bda63a9c0c8c8432d71f234f8c/Aatar_green_white.png",
       "launchDate": "2022-02-10T21:00-07:00",
       "endDate": null,
-      "updatedDate": "2022-10-13T14:00:09.874Z",
+      "updatedDate": "2024-01-18T14:51:17.942Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
           "level": "critical",
-          "payout": "Up to USD $2,000,000",
+          "payout": "USD $2,000,000",
           "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "high",
-          "payout": "USD $10,000",
+          "payout": "USD $50,000",
           "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "medium",
-          "payout": "USD $1,000",
+          "payout": "USD $10,000",
           "pocRequired": true
         }
       ],
@@ -37,70 +37,158 @@
           "id": "39I4UubBcljARlt90OaRGQ",
           "type": "smart_contract",
           "url": "https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016",
-          "description": "DAI-xDAI TokenBridge contract on the Ethereum Mainnet",
+          "description": "XDaiForeignBridge: DAI-xDAI TokenBridge contract on the Ethereum Mainnet ",
           "isPrimacyOfImpact": null
         },
         {
           "id": "6VGumskpUySCP01OvbYYMn",
           "type": "smart_contract",
           "url": "https://blockscout.com/xdai/mainnet/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6",
-          "description": "DAI-xDAI OmniBridge contract on the xDai chain",
+          "description": "HomeBridgeErcToNative: DAI-xDAI TokenBridge contract on the Gnosis chain",
           "isPrimacyOfImpact": null
         },
         {
           "id": "4oQoN6nat7OLKqL8ib88eC",
           "type": "smart_contract",
           "url": "https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671",
-          "description": "ETH-xDAI OmniBridge contract on the Ethereum Mainnet",
+          "description": "ForeignOmnibridge: OmniBridge contract on the Ethereum Mainnet",
           "isPrimacyOfImpact": null
         },
         {
           "id": "1TEVjuzA8DmpOMImDZWzs3",
           "type": "smart_contract",
           "url": "https://blockscout.com/xdai/mainnet/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d",
-          "description": "ETH-xDAI OmniBridge contract on the xDai chain",
-          "isPrimacyOfImpact": null
-        },
-        {
-          "id": "3rTq6Vwuvy8fP9DfCDdWi",
-          "type": "smart_contract",
-          "url": "https://bscscan.com/address/0xf0b456250dc9990662a6f25808cc74a6d1131ea9",
-          "description": "BSC-xDAI OmniBridge contract on the Binance Smart Chain",
-          "isPrimacyOfImpact": null
-        },
-        {
-          "id": "4fWLXV2BOwatPreXdCLryj",
-          "type": "smart_contract",
-          "url": "https://blockscout.com/xdai/mainnet/address/0x59447362798334d3485c64D1e4870Fde2DDC0d75",
-          "description": "BSC-xDAI OmniBridge contract on the xDai chain",
+          "description": "HomeOmnibridge: OmniBridge contract on the Gnosis chain",
           "isPrimacyOfImpact": null
         }
       ],
       "impacts": [
         {
           "id": "3kBb7h2SWiqnPKcMEw38H6",
-          "title": "Critical smart contract impact",
+          "title": "Any governance voting result manipulation",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "2Ny1SOd3CaPHKJ4komtKS9",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "25CHqYy2SiYLDhZ0GjMU3n",
+          "title": "Direct theft of any user NFTs, whether at-rest or in-motion, other than unclaimed royalties",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "3spgJ3PfaMV85APNmuslaw",
+          "title": "Permanent freezing of funds",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "3r2YotXaZtVQDh5IhjWzHH",
+          "title": "Permanent freezing of NFTs",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "7xettUgOF9p40pTP4tizsB",
+          "title": "Unauthorized minting of NFTs",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "454Mv6eNwBCxU2D2ItUALA",
+          "title": "Predictable or manipulable RNG that results in abuse of the principal or NFT",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "1EoPAUUdV0scf4Yh0vCmUx",
+          "title": "Unintended alteration of what the NFT represents (e.g. token URI, payload, artistic content)",
           "type": "smart_contract",
           "severity": "critical"
         },
         {
           "id": "14OPd6vhBlHuCie7Si3Nn7",
-          "title": "High smart contract impact",
+          "title": "Theft of unclaimed yield",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "1A9Xl1bQ8gtCFw7s9LC2V8",
+          "title": "Theft of unclaimed royalties",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "2o3ImG2CAhekLhstI5vCgE",
+          "title": "Permanent freezing of unclaimed yield",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "4UCNLRQYCWFKX30o9hWaD3",
+          "title": "Permanent freezing of unclaimed royalties",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "2SMD2EWz9X5dmYdBOs5Rvp",
+          "title": "Temporary freezing of funds for at least  1 week",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "3MEoQwjW7jGu2zkXsVrIwV",
+          "title": "Temporary freezing NFTs for at least  1 week",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "3ojxkziyojPmE4yXOs6WPP",
+          "title": "Miner-extractable value (MEV)",
           "type": "smart_contract",
           "severity": "high"
         },
         {
           "id": "28bbOpS24jOLTYGKuXGDEw",
-          "title": "Medium smart contract impact",
+          "title": "Smart contract unable to operate due to lack of token funds",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "1UnfOPUIWrOClI07xzyQXQ",
+          "title": "Block stuffing for profit",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "2cTfFfBbtFrVOQaF6ZHMzc",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "7qDjcO596DaxzZ3gOIKknC",
+          "title": "Theft of gas",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "1FSed2Wbzlm0RmuWTCR1ob",
+          "title": "Unbounded gas consumption",
           "type": "smart_contract",
           "severity": "medium"
         }
       ],
-      "programOverview": "Gnosis chain, previously known as xDai, is a stable payments EVM (Ethereum Virtual Machine) blockchain designed for fast and inexpensive transactions. The chain uses a unique dual-token model; xDai is a stable token used for transactions, payments, and fees, and STAKE currently supports the underlying POSDAO Proof-of-Stake consensus.\n\nFor more information about Gnosis Chain, please visit [https://www.xdaichain.com/](https://www.xdaichain.com/) \n\nThis bug bounty program is focused on their smart contracts.\n",
+      "programOverview": "Gnosis Chain is an EVM compatible, community-owned network that prioritizes credible neutrality and resiliency, open to everyone without privilege or prejudice. Secured by over 165k validators around the world, Gnosis Chain has all the tooling you are used to and trust-minimized bridges to mainnet.\n\nFor more information about Gnosis Chain, please visit [https://www.gnosis.io/](https://www.gnosis.io/).\n\nThis bug bounty program is focused on the bridges smart contracts that move assets in between Mainnet and Gnosis chain. The xDai bridge is used to bridge DAI on mainnet and the native xDai coin on Gnosis chain. For more information see [https://docs.gnosischain.com/bridges/tokenbridge/xdai-bridge](https://docs.gnosischain.com/bridges/tokenbridge/xdai-bridge). The OmniBridge is a native token bridge that mints the canonical representation of bridged assets on Gnosis. For more information see [https://docs.gnosischain.com/bridges/tokenbridge/omnibridge](https://docs.gnosischain.com/bridges/tokenbridge/omnibridge).\n\n__Disclosure of Information relating to Bug Reports:__ Security researchers may not publish any information about their bug reports (even after any vulnerabilities have been fixed and the security researcher has been paid) unless Gnosis provides written consent in the bug report submission thread. \n",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the\nfollowing types:\n\n**Smart Contracts/Blockchain:**\n\n- Re-entrancy\n- Logic errors\n  - including user authentication errors\n- Solidity/EVM details not considered\n  - including integer over-/under-flow\n  - including unhandled exceptions\n- Trusting trust/dependency vulnerabilities\n  - including composability vulnerabilities\n- Oracle failure/manipulation\n- Novel governance attacks\n- Economic/financial attacks\n  - including flash loan attacks\n- Congestion and scalability\n  - including running out of gas\n  - including block stuffing\n  - including susceptibility to frontrunning\n- Consensus failures\n- Cryptography problems\n  - Signature malleability\n  - Susceptibility to replay attacks\n  - Weak randomness\n  - Weak encryption\n- Susceptibility to block timestamp manipulation\n- Missing access controls / unprotected internal or debugging interfaces",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll smart contract bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward.\n\nAll Critical smart contract vulnerabilities are further capped at 10% of economic damage, primarily taking into consideration the funds at risk. However, there is a minimum reward of __USD 50 000__.\n\nPayouts are handled by the Gnosis Chain team directly and are denominated in USD. However, payouts are done in USDT for payments up to USD 100 000. All remaining rewards are paid in STAKE.",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll smart contract bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward.\n\nCritical smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team.\n\nPayouts are handled by the __Gnosis Chain__ team directly and are denominated in __USD__. However, payouts are done in __USDC or xDAI__.",
       "outOfScopeAndRules": "**The following vulnerabilities are excluded from the rewards for this bug\nbounty program:**\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n\n**The following activities are prohibited by bug bounty program:**\n\n- Any testing with mainnet or public testnet contracts; all testing should be\n  done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees\n  and/or customers\n- Any testing with third party systems and applications (e.g. browser\n  extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": null,
+      "assetsBodyV2": "The smart contract regarding native xDAI bridging (XDaiForeignBridge and HomeBridgeErcToNative)  can be found at [https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge-upgrade-sda](https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge-upgrade-sda). The smart contracts regarding arbitrary ERC20 bridging (ForeignOmnibridge and HomeOmnibridge) can be found at [https://github.com/gnosischain/omnibridge/tree/master](https://github.com/gnosischain/omnibridge/tree/master).\n\nOnly those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf an impact can be caused to any other asset managed by Gnosis that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project. \n",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -132,15 +220,15 @@
         "smartcontract_rewards": [
           {
             "level": "Critical",
-            "payout": "Up to USD $2,000,000"
+            "payout": "USD $2,000,000"
           },
           {
             "level": "High",
-            "payout": "USD $10,000"
+            "payout": "USD $50,000"
           },
           {
             "level": "Medium",
-            "payout": "USD $1,000"
+            "payout": "USD $10,000"
           }
         ],
         "web_rewards": []
