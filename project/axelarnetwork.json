@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/50nSUkPKWY77vhNfAtPIXc/4200a486fe40455e51f74d3bd242d735/Axelar_Logo_Symbol_Black_3x.png",
       "launchDate": "2022-03-10T20:30-07:00",
       "endDate": null,
-      "updatedDate": "2022-10-24T16:23:30.334Z",
+      "updatedDate": "2024-01-25T08:41:46.793Z",
       "kyc": true,
       "rewards": [
         {
@@ -148,6 +148,27 @@
           "isPrimacyOfImpact": null
         },
         {
+          "id": "4zBKdOAjbRrpkgeoHdb61l",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0xB5FB4BE02232B1bBA4dC8f81dc24C26980dE9e3C",
+          "description": "Interchain Token Service contract address (all chains)",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "1nAbxArc1I6rwKVmkyAZrs",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x83a93500d23Fbc3e82B410aD07A6a9F7A0670D66",
+          "description": "Interchain Token Factory contract address proxy (all chains)",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "34TSJJREhpda5OPQV8dTEY",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/token/0x467719aD09025FcC6cF6F8311755809d45a5E5f3",
+          "description": "AXL token address",
+          "isPrimacyOfImpact": null
+        },
+        {
           "id": "54IZ8Pf3bSQBPyychNSAVy",
           "type": "blockchain_dlt",
           "url": "https://github.com/axelarnetwork/axelar-core",
@@ -173,6 +194,34 @@
           "type": "blockchain_dlt",
           "url": "https://github.com/axelarnetwork/axelarate-community",
           "description": "Axelar node spinup script for users and validators",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "DgTl5B5PYqDdFucLVPckg",
+          "type": "smart_contract",
+          "url": "https://github.com/axelarnetwork/interchain-token-service",
+          "description": "Interchain Token Service",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "7HHtbb7TBrTtvkV7GT5Mfa",
+          "type": "smart_contract",
+          "url": "https://github.com/axelarnetwork/axelar-cgp-solidity",
+          "description": "Infrastructure - Axelar EVM Gateway",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "1fhfM87uAM3iZtLIu4laOj",
+          "type": "smart_contract",
+          "url": "https://github.com/axelarnetwork/axelar-gmp-sdk-solidity",
+          "description": "Infrastructure - GMP SDK",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "rw0dltfOgBsc5ccqqEEJD",
+          "type": "smart_contract",
+          "url": "https://github.com/axelarnetwork/axelar-gmp-sdk-solidity/blob/main/contracts/governance/InterchainGovernance.sol",
+          "description": "Interchain Governance Contract",
           "isPrimacyOfImpact": null
         }
       ],
@@ -366,9 +415,9 @@
       ],
       "programOverview": "Axelar Network is a decentralized interoperability network connecting all blockchains, assets and apps through a universal set of protocols and APIs.\n\nFor more information about Axelar Network, please visit [https://axelar.network/](https://axelar.network/).  \n",
       "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table. Only impacts that cause severe network disruption or a loss of funds of over or equal to $2M is considered as Critical. \n\n__Blockchain/DLT__\n\n__Critical__\n  - Network not being able to confirm new transactions (Total network shutdown)\n  - Unintended permanent chain split requiring hard fork (Network partition requiring hard fork)\n  - Direct loss of funds\n  - Permanent freezing of funds (fix requires hardfork)\n  - Any governance voting result manipulation\n  - Non-determinism in the network and consensus failure\n  - Cryptographic vulnerabilities\n  - Vulnerabilities related to validator voting manipulation on external chain events\n\n__High__\n  - Unintended chain split (Network partition)\n  - Transient consensus failures\n  - Privilege escalation\n  - Theft or freezing of inflation rewards\n\n__Medium__\n  - High compute consumption by validator/mining nodes\n  - Attacks against thin clients\n  - DoS of greater than 30% of validator or miner nodes and does not shut down the network\n  - Miner-extractable value (MEV)\n\n__Low__\n  - DoS of greater than 10% but less than 30% of validator or miner nodes and does not shut down the network\n  - Underpricing transaction fees relative to computation time\n\n__Smart Contracts__\n\n__Critical__\n  - Direct theft of any user funds, whether at-rest or in-motion\n  - Permanent freezing of funds\n  - Insolvency\n  - Unauthorized mint/burn/transfer of wrapped assets\n  - Privilege escalation\n\n__High__\n  - Temporary freezing of funds for a minimum of 1 hour\n\n__Medium__\n  - Smart contract unable to operate due to lack of funds \n  - Block stuffing for profit\n  - Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)\n  - Theft of gas\n  - Unbounded gas consumption \n\n__Low__\n  - Smart contract fails to deliver promised returns, but doesn’t lose value\n\nIn case of discrepancy between [Immunefi Vulnerability Severity Classification System V2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2/) and Axelar Network’s classification above, Axelar Network’s classification will be followed.",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll Critical Blockchain/DLT and Smart Contract bug reports require a PoC to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nIn addition to Immunefi’s Vulnerability Severity Classification System, Axelar Network classifies the following vulnerabilities as follows. In case of discrepancy, the one below will be followed.\n\nCritical\n  - Loss of funds of over or equal to $500,000\n\nHigh\n  - Vulnerabilities that result in loss of funds of less than $500,000\n\nMedium\n  - Vulnerabilities that result in loss of funds of less than $50,000\n\nLow\n  - Vulnerabilities that result in loss of funds of less than $10,000\n\nAny vulnerabilities discussed within the github issues below are considered vulnerabilities already known to Axelar, and will not be eligible for a reward:\n\n  - [https://github.com/axelarnetwork/axelar-core/issues](https://github.com/axelarnetwork/axelar-core/issues) \n  - [https://github.com/axelarnetwork/axelar-cgp-solidity/issues](https://github.com/axelarnetwork/axelar-cgp-solidity/issues) \n  - [https://github.com/axelarnetwork/tofnd/issues](https://github.com/axelarnetwork/tofnd/issues)\n  - [https://github.com/axelarnetwork/tofn/issues](https://github.com/axelarnetwork/tofn/issues)\n  - [https://github.com/axelarnetwork/axelarate-community/issues ](https://github.com/axelarnetwork/axelarate-community/issues)\n\nCritical blockchain/ smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. There is no minimum reward for Critical smart contract vulnerabilities.  \n\nBug reports that are classified as High will be rewarded USD 10 000 and up to USD 50 000 at the Axelar team’s discretion. High impact rewards for the project bug bounty program are scaled based on an internally established team criteria, taking into account the exploitability of the bug, the impact it causes, and the likelihood of the vulnerability presenting itself, which is especially factored in with bug reports requiring multiple conditions to be met that are currently not in-place. However, there is a minimum reward of USD 10 000 for High severity level, rewards will be provided at the determined fair value by the team depending on these conditions, assuming that the bug report is in-scope of the bug bounty program. Only impacts that cause severe network disruption or a loss of funds of over or equal to $2M is considered as Critical \n\nAxelar Network requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. We use a service provider, Jumio, to collect this information and will send you a link to the KYC application if your report is deemed eligible for bounties. The information needed is\n\n  - A piece of government issued photo ID such as passport or driver’s license\n  - A live webcam facial recognition scan to match biometrics with submitted photo ID\n\nThe collection of this information will be done by the project team.\n\nPayouts are handled by the __Axelar Network__ team directly and are denominated in USD. However, payouts are done in __USDC__.\n",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll Critical Blockchain/DLT and Smart Contract bug reports require a PoC to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nIn addition to Immunefi’s Vulnerability Severity Classification System, Axelar Network classifies the following vulnerabilities as follows. In case of discrepancy, the one below will be followed.\n\nCritical\n  - Loss of funds of over or equal to $500,000\n\nHigh\n  - Vulnerabilities that result in loss of funds of less than $500,000\n\nMedium\n  - Vulnerabilities that result in loss of funds of less than $50,000\n\nLow\n  - Vulnerabilities that result in loss of funds of less than $10,000\n\nAny vulnerabilities discussed within the github issues below are considered vulnerabilities already known to Axelar, and will not be eligible for a reward:\n\n  - [https://github.com/axelarnetwork/axelar-core/issues](https://github.com/axelarnetwork/axelar-core/issues) \n  - [https://github.com/axelarnetwork/axelar-cgp-solidity/issues \n](https://github.com/axelarnetwork/axelar-cgp-solidity/issues) \n  - [https://github.com/axelarnetwork/tofnd/issues](https://github.com/axelarnetwork/tofnd/issues)\n  - [https://github.com/axelarnetwork/tofn/issues](https://github.com/axelarnetwork/tofn/issues)\n  - [https://github.com/axelarnetwork/axelarate-community/issues ](https://github.com/axelarnetwork/axelarate-community/issues)\n\nCritical blockchain/ smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. There is no minimum reward for Critical smart contract vulnerabilities.  \n\nBug reports that are classified as High will be rewarded USD 10 000 and up to USD 50 000 at the Axelar team’s discretion. High impact rewards for the project bug bounty program are scaled based on an internally established team criteria, taking into account the exploitability of the bug, the impact it causes, and the likelihood of the vulnerability presenting itself, which is especially factored in with bug reports requiring multiple conditions to be met that are currently not in-place. However, there is a minimum reward of USD 10 000 for High severity level, rewards will be provided at the determined fair value by the team depending on these conditions, assuming that the bug report is in-scope of the bug bounty program. Only impacts that cause severe network disruption or a loss of funds of over or equal to $2M is considered as Critical \n\nAxelar Network requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. We use a service provider, Jumio, to collect this information and will send you a link to the KYC application if your report is deemed eligible for bounties. The information needed is\n\n  - A piece of government issued photo ID such as passport or driver’s license\n  - A live webcam facial recognition scan to match biometrics with submitted photo ID\n\nThe collection of this information will be done by the project team.\n\nPayouts are handled by the __Axelar Network__ team directly and are denominated in USD. However, payouts are done in __USDC__.\n",
       "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n  - Third party dependencies, especially Cosmos SDK dependencies\n  - In the tofn repository, the only thing in scope is src/ecdsa/mod.rs and it’s project dependencies, excluding third-party dependencies\n  - In the tofnd repository, the only thing in scope is parts related to src/ecdsa/mod.rs in tofn repository\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "All smart contracts of Axelar Network can be found at [https://github.com/axelarnetwork/solidity-cgp-gateway/tree/main/src](https://github.com/axelarnetwork/solidity-cgp-gateway/tree/main/src). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program. In tofn, the only thing in scope is src/ecdsa/mod.rs and it’s project dependencies, excluding third-party dependencies. Only tofnd pieces relating to the mod.rs file in tofn is in scope. For the Axelar Gateway contracts, although only the proxy contracts are only listed as in-scope, the respective implementation contracts are also counted in scope. When reporting a bug, please make sure to select the relevant proxy smart contract as the target. \n\nThough only the proxy contracts are listed as in-scope, current implementation and any further updates to the implementation contracts are considered in scope. When reporting a bug, please make sure to select the relevant proxy smart contract as the target. \n",
+      "assetsBodyV2": "Only those contracts from the repos in the Assets in Scope table are considered as in-scope of the bug bounty program. In tofn, the only thing in scope is src/ecdsa/mod.rs and it’s project dependencies, excluding third-party dependencies. Only tofnd pieces relating to the mod.rs file in tofn is in scope. For the Axelar Gateway contracts, although only the proxy contracts are only listed as in-scope, the respective implementation contracts are also counted in scope. When reporting a bug, please make sure to select the relevant proxy smart contract as the target. \n\nThough only the proxy contracts are listed as in-scope, current implementation and any further updates to the implementation contracts are considered in scope. When reporting a bug, please make sure to select the relevant proxy smart contract as the target. \n",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
