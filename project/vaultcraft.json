@@ -2,6 +2,7 @@
   "pageProps": {
     "type": "bounty",
     "bounty": {
+      "contentfulId": "7xR5cor7K2mO0CaNLxQdo9",
       "id": "vaultcraft",
       "slug": "vaultcraft",
       "project": "VaultCraft",
@@ -9,19 +10,19 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2NPXVYtjmzJ1CVlLE4MSeB/88c1a0b4e70e47bfae1c79cdc1b98066/Popcorn_Symbol_RGB_White.png",
       "launchDate": "2022-01-26T20:30-07:00",
       "endDate": null,
-      "updatedDate": "2023-12-22T14:27:15.364Z",
+      "updatedDate": "2024-02-16T16:03:02.616Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
           "level": "critical",
-          "payout": "Up to USD $150,000",
+          "payout": "USD $25,000 - USD $150,000",
           "pocRequired": false
         },
         {
           "assetType": "smart_contract",
           "level": "high",
-          "payout": "USD $25,000",
+          "payout": "USD $1,000 - USD $25,000",
           "pocRequired": false
         },
         {
@@ -122,13 +123,6 @@
           "type": "smart_contract",
           "url": "https://etherscan.io/address/0xaFa52E3860b4371ab9d8F08E801E9EA1027C0CA2",
           "description": "oVCX",
-          "isPrimacyOfImpact": null
-        },
-        {
-          "id": "1R4ooMCjkKhgQYabqFibKy",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0xD0Cd466b34A24fcB2f87676278AF2005Ca8A78c4",
-          "description": "POP",
           "isPrimacyOfImpact": null
         },
         {
@@ -448,29 +442,11 @@
           "title": "Gas drainage / freezing of funds caused by gas overflow",
           "type": "smart_contract",
           "severity": "medium"
-        },
-        {
-          "id": "5XpaYFo1C52qLeMohX7f6m",
-          "title": "Smart contract fails to deliver promised returns",
-          "type": "smart_contract",
-          "severity": "low"
-        },
-        {
-          "id": "4rdAontMSwFaOrxxklVFnJ",
-          "title": "Bad slippage occurred by keeper",
-          "type": "smart_contract",
-          "severity": "low"
-        },
-        {
-          "id": "pWOpkhyYtzu5SEUq0GZif",
-          "title": "Change of contract address in registry",
-          "type": "smart_contract",
-          "severity": "low"
         }
       ],
       "programOverview": "VaultCraft is an on-chain, permissionless protocol where anyone can spin up a vault — an automated asset strategy that optimizes returns on user-deposited funds. This is the first open infrastructure allowing for the modularization of vaults using a protocol-endorsed VaultFactory that ensures the safety of the strategy and its contracts. Vaults can interact with a variety of protocols through the ERC4626-Wrapper and are also stackable in design, meaning you can stack on top of other vaults. \n\nFor more information about VaultCraft, please visit [https://www.vaultcraft.io/](https://www.vaultcraft.io/).   \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Thefts and freezing of principal of any amount\n  - Thefts and freezing of unclaimed yield of any amount\n  - Temporary freezing of funds\n  - Unable to call contract\n  - Gas drainage / freezing of funds caused by gas overflow\n  - Smart contract fails to deliver promised returns",
       "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Smart Contracts/Blockchain__\n\n  - Thefts and freezing of principal of any amount\n  - Thefts and freezing of unclaimed yield of any amount\n  - Temporary freezing of funds for at least 24 hours\n  - Unable to call contract\n  - Gas drainage / freezing of funds caused by gas overflow\n  - Smart contract fails to deliver promised returns\n  - Bad slippage occurred by keeper\n  - Access by unauthorized user\n  - Change of contract address in registry",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nCritical vulnerabilities are further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum of __USD 25 000__ for Critical bug reports.\n\nPayouts are handled by the __Popcorn Network__ team directly and are denominated in USD. However, payouts are done in __USDC__.",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nCritical and high vulnerabilities are further capped at __10%__ of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum reward of __USD 25 000__ for Critical bug reports, and __USD 1 000__ for high severity bug reports.\n\nPayouts are handled by the __Popcorn Network__ team directly and are denominated in USD. However, payouts are done in __USDC__.",
       "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
       "assetsBodyV2": "All smart contracts of Popcorn Network can be found at [https://github.com/popcorn-limited](https://github.com/popcorn-limited).  However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
       "impactsBody": null,
@@ -500,11 +476,11 @@
         "smartcontract_rewards": [
           {
             "level": "Critical",
-            "payout": "Up to USD $150,000"
+            "payout": "USD $25,000 - USD $150,000"
           },
           {
             "level": "High",
-            "payout": "USD $25,000"
+            "payout": "USD $1,000 - USD $25,000"
           },
           {
             "level": "Medium",

@@ -2,6 +2,7 @@
   "pageProps": {
     "type": "bounty",
     "bounty": {
+      "contentfulId": "5Pl7e4ZQsafCRm5GpyfptF",
       "id": "axiom",
       "slug": "axiom",
       "project": "Axiom",
@@ -9,7 +10,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/hWV91Kc2iSwCThJXoOXd8/63d2b2d650c01f98cf59bbf27c09ca52/Picture_Name_horizontal_Picture_Name_vertical_Vector_black.svg",
       "launchDate": "2023-07-24T12:00+02:00",
       "endDate": null,
-      "updatedDate": "2023-10-05T15:28:53.186Z",
+      "updatedDate": "2024-02-13T13:51:08.178Z",
       "kyc": true,
       "rewards": [
         {
@@ -36,36 +37,57 @@
         {
           "id": "4s2DX4PNkYc2DlC9u3pvrl",
           "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x33ea514cc54b641ad8b84e4a31d311f3722d1bb5",
-          "description": "AxiomV1 Proxy",
+          "url": "https://etherscan.io/address/0x69963768F8407dE501029680dE46945F838Fc98B",
+          "description": "AxiomV2Core Proxy",
           "isPrimacyOfImpact": null
         },
         {
           "id": "N1gJ4BZkNDnS6M9lR5bfC",
           "type": "smart_contract",
-          "url": "https://etherscan.io/address/0xd617ab7f787adf64c2b5b920c251ea10cd35a952",
-          "description": "AxiomV1Query Proxy",
+          "url": "https://etherscan.io/address/0x7844b7a3adb2dae5476a2263fdd8897ef5afa3a7",
+          "description": "AxiomV2Core Impl",
           "isPrimacyOfImpact": null
         },
         {
           "id": "c9nQJbdJ8TpNcsR99eOIb",
           "type": "smart_contract",
-          "url": "https://etherscan.io/address/0xc2d7e38a40808bbfc1834c79b5ba4b27bc4c462e",
-          "description": "AxiomV1 Verifier *",
+          "url": "https://etherscan.io/address/0xFE3DF6613BC21D74c1139218619d9094EF4D7049",
+          "description": "AxiomV2CoreVerifier",
           "isPrimacyOfImpact": null
         },
         {
           "id": "rnImqQoCvqkFLgUWMLa4w",
           "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x24623e2C87bdF420204e21a75A5B6921950872b8",
-          "description": "AxiomV1 Historical Verifier *",
+          "url": "https://etherscan.io/address/0x93B7410130ebECB500af16F378bD00cC0Ce9a994",
+          "description": "AxiomV2CoreHistoricalVerifier",
           "isPrimacyOfImpact": null
         },
         {
           "id": "1vrVk53k0UrO4UATNiQYxl",
           "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x1aae24E24bFeCEceE5337bCb8348e2C24d8809F1",
-          "description": "AxiomV1Query Verifier *",
+          "url": "https://etherscan.io/address/0x83c8c0B395850bA55c830451Cfaca4F2A667a983",
+          "description": "AxiomV2Query Proxy",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "3hSVKyvpKTkMB3dZqijpbt",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0xFFbBdAd0241D5eB38ccE77C4E21322B42b2D9212",
+          "description": "AxiomV2Query Impl",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "5ANGWV96FHrwYiPu9g5GYR",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0xB4F8aE14b37A11aeD8dDc2Bc1123C804a51a2b1F",
+          "description": "AxiomV2QueryVerifier",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "7j221SgtC5cBSCCs7n5NYP",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0xd9C75fD200C3bcD23D361aF00c74Db4597f7D583",
+          "description": "AxiomV2HeaderVerifier",
           "isPrimacyOfImpact": null
         },
         {
@@ -178,7 +200,7 @@
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 50 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 25 000 is to be rewarded in order to incentivize security researchers against withholding a bug report. \n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Restrictions on Security Researcher Eligibility__  \n\nSecurity researchers who fall under any of the following are ineligible for a reward\n- Citizens or residents of OFAC-sanctioned countries\n- Individuals on an OFAC sanctions list\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract - Critical\n- Smart Contract - High\n- Smart Contract - Medium\n- Smart Contract - Low\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules). Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Axiom team directly and are denominated in USD. However, payments are done in USDC. \n",
       "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Smart Contracts and Blockchain/DLT__ \n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n- Best practice recommendations\n\nThe following activities are prohibited by this bug bounty program:\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
-      "assetsBodyV2": "All code of Axiom can be found at [https://github.com/axiom-crypto/axiom-v1-contracts](https://github.com/axiom-crypto/axiom-v1-contracts) and [https://github.com/axiom-crypto/halo2-lib/releases/tag/v0.3.0 ](https://github.com/axiom-crypto/halo2-lib/releases/tag/v0.3.0)and [https://github.com/axiom-crypto/snark-verifier/releases/tag/v0.1.1](https://github.com/axiom-crypto/snark-verifier/releases/tag/v0.1.1) and [https://github.com/axiom-crypto/axiom-eth/releases/tag/v0.2.0 ](https://github.com/axiom-crypto/axiom-eth/releases/tag/v0.2.0)Documentation for the assets provided in the table can be found at [https://docs.axiom.xyz/](https://docs.axiom.xyz/)\n\n* These contracts are in Yul and cannot be verified on Etherscan.  We provide detailed reproducible instructions for producing bytecode here: [https://docs.axiom.xyz/transparency-and-security/on-chain-zk-verifiers](https://docs.axiom.xyz/transparency-and-security/on-chain-zk-verifiers)\n\nOther helpful links include:\n- Deployment commits - [https://docs.axiom.xyz/transparency-and-security/security](https://docs.axiom.xyz/transparency-and-security/security)\n",
+      "assetsBodyV2": "All code for Axiom V2 can be found at:\n[https://github.com/axiom-crypto/axiom-v2-contracts/releases/tag/v1.0.0](https://github.com/axiom-crypto/axiom-v2-contracts/releases/tag/v1.0.0)\n[https://github.com/axiom-crypto/halo2-lib/releases/tag/v0.4.1](https://github.com/axiom-crypto/halo2-lib/releases/tag/v0.4.1)\n[https://github.com/axiom-crypto/snark-verifier/releases/tag/v0.1.7](https://github.com/axiom-crypto/snark-verifier/releases/tag/v0.1.7)\n[https://github.com/axiom-crypto/axiom-eth/releases/tag/v2.0.14](https://github.com/axiom-crypto/axiom-eth/releases/tag/v2.0.14)\n\nDocumentation for the table assets can be found at [https://docs.axiom.xyz/](https://docs.axiom.xyz/). The deployed assets can be found at: [https://docs.axiom.xyz/docs/transparency-and-security/security](https://docs.axiom.xyz/docs/transparency-and-security/security).\n\nThe ZK verifiers AxiomV2CoreVerifier, AxiomV2CoreHistoricalVerifier, and AxiomV2QueryVerifier are generated via the procedure described here: [https://docs.axiom.xyz/docs/transparency-and-security/on-chain-zk-verifiers](https://docs.axiom.xyz/docs/transparency-and-security/on-chain-zk-verifiers)\n",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {

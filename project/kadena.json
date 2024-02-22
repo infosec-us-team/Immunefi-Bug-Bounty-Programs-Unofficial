@@ -2,14 +2,15 @@
   "pageProps": {
     "type": "bounty",
     "bounty": {
+      "contentfulId": "6YA16SAQ42bjTZiqI9CmHH",
       "id": "kadena",
       "slug": "kadena",
       "project": "Kadena",
       "maxBounty": 250000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4Jq2WmH6sJembH5iu4Bb7P/4e759adfca5079dcc7c45ca16ab0aa95/2023_Kadena_Logo.png",
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3YnTntB1H73pK9boqoyASc/495a191425b4154254f73e7434af0d2c/400x400_Twitter_PFP.jpg",
       "launchDate": "2022-01-08T16:00-06:00",
       "endDate": null,
-      "updatedDate": "2024-01-23T12:18:59.458Z",
+      "updatedDate": "2024-02-12T08:31:19.871Z",
       "kyc": true,
       "rewards": [
         {
@@ -72,14 +73,14 @@
         {
           "id": "4dEoQOB3PLEU0FWnOVlgya",
           "type": "smart_contract",
-          "url": "https://github.com/kadena-io/chainweb-node/tree/master/pact/coin-contract/v2",
+          "url": "https://balance.chainweb.com/modules.html?server=api.chainweb.com&module=coin&chain=1",
           "description": "Coin",
           "isPrimacyOfImpact": null
         },
         {
           "id": "7byRuoTTMIEEpZdPweVoC7",
           "type": "smart_contract",
-          "url": "https://github.com/kadena-io/chainweb-node/blob/master/pact/coin-contract/v2/fungible-v2.pact",
+          "url": "https://github.com/kadena-io/chainweb-node/blob/master/pact/coin-contract",
           "description": "Fungible",
           "isPrimacyOfImpact": null
         },
@@ -131,22 +132,9 @@
           "url": "https://chainweaver.kadena.network/",
           "description": "Chainweaver Web Wallet",
           "isPrimacyOfImpact": null
-        },
-        {
-          "id": "6dDsiru4FK0hyTVPtzXJAg",
-          "type": "websites_and_applications",
-          "url": "https://kadena-1.gitbook.io/welcome-to-gitbook/manage-your-kda/wallets",
-          "description": "Chainweaver Main App",
-          "isPrimacyOfImpact": null
         }
       ],
       "impacts": [
-        {
-          "id": "3wOsqCIoNVLJsairoWiYRH",
-          "title": "Network not being able to confirm new transactions (Total network shutdown)",
-          "type": "blockchain_dlt",
-          "severity": "critical"
-        },
         {
           "id": "2CiDNp0QDUNGghs26KcqWB",
           "title": "Unintended permanent chain split requiring hard fork (Network partition requiring hard fork)",
@@ -154,55 +142,37 @@
           "severity": "critical"
         },
         {
+          "id": "3wOsqCIoNVLJsairoWiYRH",
+          "title": "Permanent and total network shutdown or corruption, requiring significant rollback of history Arbitrary remote code execution",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
           "id": "5Bwx5iezUmxcFFVTmshGRk",
-          "title": "Direct loss of funds",
+          "title": "Arbitrary signature forging",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "3FmPeK50k9MeewtbdCAStx",
+          "title": "Arbitrary remote code execution",
           "type": "blockchain_dlt",
           "severity": "critical"
         },
         {
           "id": "hTWqziKrb1go66IOsw9JR",
-          "title": "Permanent freezing of funds (fix requires hardfork)",
-          "type": "blockchain_dlt",
-          "severity": "critical"
-        },
-        {
-          "id": "WTF4xt9FRdAZbm7yFY6oe",
-          "title": "Exploits via P2P API requests - Manipulating the content of the Pact (sqlite) database of a node such that those are not consistent with block validation results",
-          "type": "blockchain_dlt",
-          "severity": "critical"
-        },
-        {
-          "id": "2cOYOv9HfSet8arb0u9vO",
-          "title": "Exploits via P2P API requests - Causing permanent network forks of a larger number (>25%) of independent nodes in the network",
-          "type": "blockchain_dlt",
-          "severity": "critical"
-        },
-        {
-          "id": "2JW17wIMfc5IVUksReL3ro",
-          "title": "Network shut down where network stops processing blocks",
+          "title": "Permanent loss, freezing, or counterfeiting of a considerable amount of funds",
           "type": "blockchain_dlt",
           "severity": "critical"
         },
         {
           "id": "1WUKAw3hHAn2fRSWBQqL1k",
-          "title": "Any governance voting result manipulation",
+          "title": "Theft, permanent freezing, or counterfeiting of any considerable amount of funds, whether at-rest or in-motion, other than unclaimed yield",
           "type": "smart_contract",
           "severity": "critical"
         },
         {
-          "id": "59zhxmw9e3zZQ5afLXJsF2",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
-          "type": "smart_contract",
-          "severity": "critical"
-        },
-        {
-          "id": "2SpEhDD55SDhXpW18a2bW4",
-          "title": "Permanent freezing of funds",
-          "type": "smart_contract",
-          "severity": "critical"
-        },
-        {
-          "id": "1Hmpww8tbwrldn8Nz4xAOM",
+          "id": "4Va3iqWuRxRTy5S1CZBMle",
           "title": "Insolvency",
           "type": "smart_contract",
           "severity": "critical"
@@ -251,67 +221,55 @@
         },
         {
           "id": "4ihYgd5yA7m0YmXbzEiIuL",
-          "title": "Leak of unencrypted private keys controlling mainnet funds",
+          "title": "Leak of unencrypted Kadena-held private keys controlling mainnet funds",
           "type": "websites_and_applications",
           "severity": "critical"
         },
         {
           "id": "3eNQryH95xnfuEjfJcWJQe",
-          "title": "Unintended chain split (Network partition)",
+          "title": "Remotely manipulating the content of the chain database (rocksdb) of a node",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "4E6f1pj3SxIJQYDx50RfFt",
+          "title": "Remotely manipulating the content of the Pact (sqlite) database of a node such that it is not consistent with block validation results",
           "type": "blockchain_dlt",
           "severity": "high"
         },
         {
           "id": "5splyLSOC7QAUsjtqi6oEy",
-          "title": "Transient consensus failures",
+          "title": "Transaction consuming very little gas compared to node resources",
           "type": "blockchain_dlt",
           "severity": "high"
         },
         {
           "id": "7E2TMfX9KOpSBi83n3MCIp",
-          "title": "Exploits via P2P API requests - Manipulating the content of the chain database (rocksdb) of a node",
+          "title": "Permanently disabling all or most nodes in the network, requiring node software update",
           "type": "blockchain_dlt",
           "severity": "high"
         },
         {
           "id": "4Wf0m1gtCYHODkI66JDN36",
-          "title": "Exploits via P2P API requests - Deleting (or partially deleting) the content of the chain database (rocksdb) of a node",
+          "title": "Stopping block production across the network for a prolonged period, requiring node software update",
           "type": "blockchain_dlt",
           "severity": "high"
         },
         {
           "id": "210f4dTvQmrg8rPnRYKZiE",
-          "title": "Exploits via P2P API requests - Causing lasting (longer than several minutes) network partitions",
-          "type": "blockchain_dlt",
-          "severity": "high"
-        },
-        {
-          "id": "4y87icL7BhmT4Ys4Ke36B",
-          "title": "Exploits via P2P API requests - Preventing a larger number independent nodes from processing new valid blocks",
-          "type": "blockchain_dlt",
-          "severity": "high"
-        },
-        {
-          "id": "5lHT0N0wgQrYJ55a9dc74L",
-          "title": "Exploits via P2P API requests - Causing forks in the network that are supported by a larger number of independent nodes that persist longer than just a few dozen block in depths",
-          "type": "blockchain_dlt",
-          "severity": "high"
-        },
-        {
-          "id": "26uBmaJ0B7IIfLqemMR6dE",
-          "title": "Exploits via P2P API requests - Crashing a larger number of independent nodes",
+          "title": "Transaction censorship for a prolonged period, without block stuffing, requiring node software update",
           "type": "blockchain_dlt",
           "severity": "high"
         },
         {
           "id": "5gsArXQo9GxdOpil0NwAzD",
-          "title": "Theft of unclaimed yield",
+          "title": "Theft, permanent freezing, or counterfeiting of unclaimed yield",
           "type": "smart_contract",
           "severity": "high"
         },
         {
           "id": "5IdP94d5sH8TlRZyJzxsUW",
-          "title": "Permanent freezing of unclaimed yield",
+          "title": "Theft, freezing, or counterfeiting of any amount of funds",
           "type": "smart_contract",
           "severity": "high"
         },
@@ -334,14 +292,8 @@
           "severity": "high"
         },
         {
-          "id": "5gNptgYh7FEjHIn5ZpkGvU",
-          "title": "Improperly disclosing confidential user information such as email address, phone number, physical address, etc.",
-          "type": "websites_and_applications",
-          "severity": "high"
-        },
-        {
           "id": "2hydgAGwFD9UxE0nQA48qN",
-          "title": "Taking down the application/website",
+          "title": "Taking down the application",
           "type": "websites_and_applications",
           "severity": "high"
         },
@@ -353,73 +305,31 @@
         },
         {
           "id": "3dfAtXABqQjzQXV7CTwXlJ",
-          "title": "Leak of keys and/or credentials that allow access to private systems",
+          "title": "Leak of Kadena-held keys and/or credentials that allow access to private systems",
           "type": "websites_and_applications",
           "severity": "high"
         },
         {
           "id": "DtpDuXyN34fhnluiCyMXz",
-          "title": "High compute consumption by validator/mining nodes",
+          "title": "Transient consensus failures",
           "type": "blockchain_dlt",
           "severity": "medium"
         },
         {
           "id": "6yaZsr70aZWNvVpAKJxk2R",
-          "title": "DoS of greater than 30% of validator or miner nodes and does not shut down the network",
+          "title": "Denial of service for individual nodes via resource leak or improperly bounded query parameter",
           "type": "blockchain_dlt",
           "severity": "medium"
         },
         {
           "id": "44iKZhmk3lbbWcXUdmNkH",
-          "title": "Exploits via P2P API requests - Deleting (or partially deleting) the Pact (sqlite) data of a node",
+          "title": "Transaction consuming little gas compared to node resources",
           "type": "blockchain_dlt",
-          "severity": "medium"
-        },
-        {
-          "id": "328HKmCHbgJ6ycEsYEj9yI",
-          "title": "Exploits via P2P API requests - Permanently preventing nodes from processing any transactions",
-          "type": "blockchain_dlt",
-          "severity": "medium"
-        },
-        {
-          "id": "1hsrregoyv5U0si0sjDR64",
-          "title": "Exploits via P2P API requests - Preventing individual nodes from processing new valid blocks",
-          "type": "blockchain_dlt",
-          "severity": "medium"
-        },
-        {
-          "id": "2Kld8fbdC4Kj1ipzse3P4Y",
-          "title": "Exploits via P2P API requests - Permanently preventing mining nodes from including transactions into blocks",
-          "type": "blockchain_dlt",
-          "severity": "medium"
-        },
-        {
-          "id": "1o3TPINWQvxBWH9WGVAvM4",
-          "title": "Exploits via P2P API requests - Crashing individual nodes",
-          "type": "blockchain_dlt",
-          "severity": "medium"
-        },
-        {
-          "id": "2MrGYyPTjadUWHw6YtS2dD",
-          "title": "Smart contract unable to operate due to lack of funds",
-          "type": "smart_contract",
-          "severity": "medium"
-        },
-        {
-          "id": "6cUVC1qstuKLONoI0gbOgV",
-          "title": "Block stuffing for profit",
-          "type": "smart_contract",
           "severity": "medium"
         },
         {
           "id": "68aHNnzPR2EBvbNfDHx4WH",
           "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
-          "type": "smart_contract",
-          "severity": "medium"
-        },
-        {
-          "id": "6jZUKjImhWhDaNEnxkPK4I",
-          "title": "Theft of gas",
           "type": "smart_contract",
           "severity": "medium"
         },
@@ -430,13 +340,13 @@
           "severity": "medium"
         },
         {
-          "id": "3sZrBD7zCwL4FuMpF0vzUs",
-          "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as changing the first/last name of user, or en/disabling notification",
+          "id": "1Zo4Fi40HZumaqDLkRprzC",
+          "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as changing the name of user, or enabling/disabling notifications",
           "type": "websites_and_applications",
           "severity": "medium"
         },
         {
-          "id": "1Zo4Fi40HZumaqDLkRprzC",
+          "id": "3sZrBD7zCwL4FuMpF0vzUs",
           "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data",
           "type": "websites_and_applications",
           "severity": "medium"
@@ -450,9 +360,9 @@
       ],
       "programOverview": "Kadena was founded on the idea that blockchain could revolutionize how the world interacts and transacts. But to get to mass adoption, chain technology and the ecosystem connecting it to the business world needed to be reimagined from the ground up. Our founders built a proprietary chain architecture and created the tools to make blockchain work for business – at speed, scale, and energy efficiency previously thought unachievable.\n\nFor more information about Kadena, please visit [https://kadena.io/](https://kadena.io/). \n\nThis bug bounty program is focused on their smart contracts, blockchain, and chainweaver and is focused on preventing:\n\n  - Prolonged network shutdown\n  - Asset loss or theft\n",
       "prioritizedVulnerabilities": "Refer to __Impacts in Scope__ section above.",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll web/app bug reports must come with a PoC (Proof of Concept document) with an end result that impacts an asset-in-scope in order to be considered for a reward. All Medium, High and Critical Smart Contract bug reports require a PoC to be eligible for a reward. A valid PoC is demonstrated privately, for example using a private devnet, and must clearly communicate the nature of the flaw, how it was discovered, and how to exercise the flaw within that private environment. It must be sufficiently well documented to allow reproduction of the findings by a third party. Explanations and statements alone are not accepted as PoC: code is required. Any bug report that has already been run on a public facing network such as mainnet or testnet will not be eligible for payout.\n\nThe following vulnerabilities are not eligible for a reward:\n\n  - Congestion and scalability vulnerabilities\n\nPayouts are handled by the __Kadena team__ directly and are denominated in USD. However, payouts are done in __KDA and stablecoins__, with the choice of the ratio at the discretion of the team. In addition, as part of claiming a bug bounty, whitehats must complete a KYC process from SumSub and submit relevant tax documents requested by the Kadena team.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n\n__Websites and Apps__\n\n  - Theoretical vulnerabilities without any proof or demonstration\n  - Content spoofing / Text injection issues\n  - Self-XSS\n  - Captcha bypass using OCR\n  - CSRF with no security impact (logout CSRF, change language, etc.)\n  - Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”)\n  - Server-side information disclosure such as IPs, server names, and most stack traces\n  - Vulnerabilities used to enumerate or confirm the existence of users or tenants\n  - Vulnerabilities requiring unlikely user actions\n  - URL Redirects (unless combined with another vulnerability to produce a more severe vulnerability)\n  - Lack of SSL/TLS best practices\n  - DDoS vulnerabilities\n  - Attacks requiring privileged access from within the organization\n  - Feature requests\n  - Best practices\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private devnet\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "All smart contracts of Kadena can be found at https://github.com/kadena-io. However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nKadena’s API specification can be found at [https://api.chainweb.com/openapi/](https://api.chainweb.com/openapi/) \n",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll web/app bug reports must come with a PoC (Proof of Concept document) with an end result that impacts an asset-in-scope in order to be considered for a reward. All Medium, High and Critical Smart Contract bug reports require a PoC to be eligible for a reward. A valid PoC is demonstrated privately, for example using a private devnet, and must clearly communicate the nature of the flaw, how it was discovered, and how to exercise the flaw within that private environment. It must be sufficiently well documented to allow reproduction of the findings by a third party. Explanations and statements alone are not accepted as PoC: code is required. Any bug report that has already been run on a public facing network such as mainnet or testnet will not be eligible for payout.\n\nThe following vulnerabilities are not eligible for a reward:\n\n  - Congestion and scalability vulnerabilities\n  - Vulnerabilities requiring the use of the private service API of the node being attacked\n  - Distributed denial of service (DDoS) attacks\n\nPayouts are handled by the __Kadena team__ directly and are denominated in USD. However, payouts are done in __KDA and stablecoins__, with the choice of the ratio at the discretion of the team. In addition, as part of claiming a bug bounty, whitehats must complete a KYC process from SumSub and submit relevant tax documents requested by the Kadena team.",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n  - Attacks on a node requiring access to the node’s service API\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n\n__Websites and Apps__\n\n  - Theoretical vulnerabilities without any proof or demonstration\n  - Content spoofing / Text injection issues\n  - Self-XSS\n  - Captcha bypass using OCR\n  - CSRF with no security impact (logout CSRF, change language, etc.)\n  - Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”)\n  - Server-side information disclosure such as IPs, server names, and most stack traces\n  - Vulnerabilities used to enumerate or confirm the existence of users or tenants\n  - Vulnerabilities requiring unlikely user actions\n  - URL Redirects (unless combined with another vulnerability to produce a more severe vulnerability)\n  - Lack of SSL/TLS best practices\n  - DDoS vulnerabilities\n  - Attacks requiring privileged access from within the organization\n  - Feature requests\n  - Best practices\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any destructive testing with mainnet or public testnet contracts; all testing should be done on private devnet, with the exception of public bounty programs on testnet\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks against mainnet or testnet or other production services\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty\n  - Any threat to perform any of the above actions or cause otherwise damage to mainnet, testnet, or other production services\n",
+      "assetsBodyV2": "All smart contracts of Kadena can be found at https://github.com/kadena-io. However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nKadena’s API specification can be found at [https://api.chainweb.com/openapi/](https://api.chainweb.com/openapi/) However attacking a node via its Service API is out-of-scope of the bug bounty program\n",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {

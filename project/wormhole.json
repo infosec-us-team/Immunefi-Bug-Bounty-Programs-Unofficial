@@ -2,20 +2,21 @@
   "pageProps": {
     "type": "bounty",
     "bounty": {
+      "contentfulId": "7dinsrSGtw74CxvBuhYtkB",
       "id": "wormhole",
       "slug": "wormhole",
       "project": "Wormhole",
-      "maxBounty": 2500000,
+      "maxBounty": 5000000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6sgdaPC0JYg8aGLp02UuzY/7036e6ccdee00175633a7bdfcd6698e6/Wormhole_Logo-newest__1_.png",
       "launchDate": "2022-02-11T09:00-06:00",
       "endDate": null,
-      "updatedDate": "2023-12-17T19:18:11.216Z",
+      "updatedDate": "2024-02-08T20:28:26.966Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "blockchain_dlt",
           "level": "critical",
-          "payout": "Up to $2,500,000 USDC",
+          "payout": "Up to 20,000,000 W",
           "pocRequired": true
         },
         {
@@ -39,7 +40,7 @@
         {
           "assetType": "smart_contract",
           "level": "critical",
-          "payout": "Up to $2,500,000 USDC",
+          "payout": "Up to 10,000,000 W",
           "pocRequired": true
         },
         {
@@ -68,6 +69,13 @@
           "type": "blockchain_dlt",
           "url": "https://github.com/wormhole-foundation/wormhole/tree/main/node",
           "description": "Guardian Nodes",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "3fa3eTv6xHP50VvIliEgsk",
+          "type": "smart_contract",
+          "url": "https://github.com/wormhole-foundation/wormhole/tree/main/terra?utm_source=immunefi",
+          "description": "Terra",
           "isPrimacyOfImpact": null
         },
         {
@@ -181,7 +189,7 @@
         },
         {
           "id": "7BbMmu9Qopep15SJzDcwGt",
-          "title": "Exposure of production private keys and/or PII",
+          "title": "Exposure of production private keys",
           "type": "blockchain_dlt",
           "severity": "critical"
         },
@@ -277,7 +285,13 @@
         },
         {
           "id": "k5MbwlYSX24EzU2maPeEG",
-          "title": "Unrestricted bypass of the Governor module: The Governor module (https://github.com/wormhole-foundation/wormhole/tree/dev.v2/node/pkg/governor)",
+          "title": "Unrestricted bypass of the Governor module: (https://github.com/wormhole-foundation/wormhole/tree/dev.v2/node/pkg/governor)",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "73r34oBaDQszHaczxgSHOd",
+          "title": "Unrestricted bypass of the Integrity Checkers (https://github.com/wormhole-foundation/wormhole/blob/main/whitepapers/0011_accountant.md)",
           "type": "blockchain_dlt",
           "severity": "high"
         },
@@ -301,19 +315,13 @@
         },
         {
           "id": "unPSmacJpJ2IjJL0E5oR6",
-          "title": "Unrestricted bypass of the Governor module: The Governor module (https://github.com/wormhole-foundation/wormhole/tree/dev.v2/node/pkg/governor)",
+          "title": "Unrestricted bypass of the Governor module: (https://github.com/wormhole-foundation/wormhole/tree/dev.v2/node/pkg/governor)",
           "type": "smart_contract",
           "severity": "high"
         },
         {
-          "id": "Xw1vFHPKW4mt5T6IqH08m",
-          "title": "Unrestricted bypass of the Integrity Checkers (https://github.com/wormhole-foundation/wormhole/blob/main/whitepapers/0010_integrity_checkers.md) or Accountant",
-          "type": "blockchain_dlt",
-          "severity": "high"
-        },
-        {
           "id": "1yaWEztzcOvaU6aLoc03gP",
-          "title": "Unrestricted bypass of the Integrity Checkers (https://github.com/wormhole-foundation/wormhole/blob/main/whitepapers/0010_integrity_checkers.md) or Accountant",
+          "title": "Unrestricted bypass of the Integrity Checkers (https://github.com/wormhole-foundation/wormhole/blob/main/whitepapers/0010_integrity_checkers.md) or Accountant (https://github.com/wormhole-foundation/wormhole/blob/main/whitepapers/0011_accountant.md)",
           "type": "smart_contract",
           "severity": "high"
         },
@@ -385,7 +393,7 @@
         },
         {
           "id": "5WBZkFnNDHe0ZAEn5GtKFf",
-          "title": "Lack of defense-in-depth (must send PR with improvements and get it merged)",
+          "title": "Lack of defense-in-depth",
           "type": "blockchain_dlt",
           "severity": "low"
         },
@@ -421,15 +429,15 @@
         },
         {
           "id": "6MSZrM6a9OjsHyt4CYiZnR",
-          "title": "Denial of Service attacks against the Guardian network (excluding volumetric attacks) resulting in an extended degradation of performance",
+          "title": "Denial of Service attacks against the Guardian network (excluding volumetric attacks) resulting in a temporary degradation of performance",
           "type": "smart_contract",
           "severity": "low"
         }
       ],
-      "programOverview": "Wormhole is a generic cross-chain messaging protocol that allows smart contracts on various blockchains to communicate with each other. Messages are routed from chain to chain by a decentralised group of guardian nodes who sign attestations of on-chain state.\n\nFor more information about Wormhole, please visit [https://wormhole.com/](https://wormhole.com/).\n\nThis bug bounty program is focused on the prevention of negative impacts to Wormhole and the Portal Token Bridge, which currently covers their smart contracts, guardian nodes, and Wormhole integrations with blockchains.\n\n__Submission Requirements__\nAll reports must come with sufficient explanation and data to easily reproduce the bug, e.g. through a proof-of-concept code.\n\nFor a bug report to be paid, we do require the bug reporter to comply with our KYC requirements.\n\nThis includes the following:\n  - Wallet address where you’ll receive payment\n  - Proof of address (either a redacted bank statement with your address or a recent utility bill with your name, address, and issuer of the bill)\n  - If you are a U.S. person, please send us a filled-out and signed W-9 (https://www.irs.gov/pub/irs-pdf/fw9.pdf)\n  - If you are not a U.S. person, please send us a filled-out and signed W-8BEN (https://www.irs.gov/pub/irs-pdf/fw8ben.pdf)\n  - Copy of your passport will be required.\n",
+      "programOverview": "Wormhole is a generic cross-chain messaging protocol that allows smart contracts on various blockchains to communicate with each other. Messages are routed from chain to chain by a decentralised group of guardian nodes who sign attestations of on-chain state.\n\nFor more information about Wormhole, please visit [https://wormhole.com/](https://wormhole.com/).\n\nThis bug bounty program is focused on the prevention of negative impacts to Wormhole and the Portal Token Bridge, which currently covers their smart contracts, guardian nodes, and Wormhole integrations with blockchains.\n",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "__Tier 1:__ Ability to Extract the complete TVL of all chains: Up to $2,500,000 USDC\n__Tier 2:__ Ability to Extract the complete TVL of a single chain: Up to $1,000,000 USDC\n__Tier 3:__ Ability to Brick the complete TVL of one or many chains: Up to $500,000 USDC\n\nAll rewards are decided on a case-by-case basis, taking into account the exploitability of the bug, the impact it causes, and the likelihood of the vulnerability presenting itself if it is nondeterministic or some of the conditions are not present at the time. The rewards presented in the payout structure above are the maximum rewards and there are no minimum rewards.\n\nRewards for critical vulnerabilities are further capped at __10%__ of extractable value during a 24h period. Rewards for vulnerabilities resulting in the indefinite locking of funds are further capped at __1%__ of destroyable value. Rewards for critical vulnerabilities relating to NFTs are further capped at $200,000.\n\nValue is calculated based on the current market value and available liquidity for widely-used tokens in the Portal Token Bridge, e.g. ETH and SOL. \n\nIn cases where the report achieves more than one of the above objectives, rewards will be tiered to the higher of the two objectives and will not be aggregated (eg. if you have the ability to extract and brick a complete TVL for a chain, you will be awarded a bounty as if you were able to only extract the complete TVL for that chain).\n\nRewards for bugs in dependencies and third party code are at the discretion of the Wormhole team and will be based on the impact demonstrated on Wormhole. If the dependency has its own bug bounty program, your reward for submitting this vulnerability to Wormhole will be lowered by the expected payout of that other program. If the vulnerability is in a connected blockchain itself rather than the Wormhole code, the locked and wrapped assets on that chain are not included in the impact calculation.\n\nWormhole Foundation will maintain full discretion on the payouts for vulnerabilities. We do encourage bug reporters to submit issues outside of the above-mentioned payout structure, though we want to be clear that we’ll exercise discretion on a case-by-case basis -- whether an issue warrants a payout and what that ultimate payout would be.\n",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Network denial of service on Guardians is not eligible for bug bounty rewards\n  - Wormhole is an open source project with open development. We welcome feedback and PRs on features that are in development. Code that has not been deployed is generally out-of-scope.\n  - Reports regarding bugs that the Wormhole project was previously aware of are not eligible for a reward\n  - In scope assets with \"pre-release\" tag are exempt from the above mentioned deployed requirement and are aimed at allowing early access for white-hat community contribution.  Once the chain is deployed in mainnet, the new scope is whatever is deployed on chain, which is often what is present in dev.v2 branch.  Rewards for “pre-release” candidates will be eligible within the same reward structure as mainnet contracts.\n\nThe following person(s) are ineligible to receive bug bounty payout rewards: Staff, Auditors, Contractors, persons in possession of privileged information, and all associated parties.\n\n__Prohibited Activities__\n  - Any testing with mainnet or public testnets; all testing should be done on private nets\n  - Public disclosure of a vulnerability before an embargo has been lifted\n  - Any testing with third party smart contracts or infrastructure and websites\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any denial of service attacks\n  - Violating the privacy of any organization or individual\n  - Automated testing of services that generates significant amounts of traffic\n  - Any activity that violates any law or disrupts or compromises any data or property that is not your own.\n",
+      "rewardsBody": "  - __Tier 1:__ Ability to Extract the TVL of all chains: Up to 20,000,000 W\n  - __Tier 2:__ Ability to Extract the TVL of a single chain: Up to 10,000,000 W \n  - __Tier 3:__ Ability to permanently deny access to the TVL of one or many chains: Up to 5,000,000 W\n\nAll rewards are decided on a case-by-case basis, taking into account the exploitability of the bug, the impact it causes, and the likelihood of the vulnerability presenting itself if it is nondeterministic or some of the conditions are not present at the time. The rewards presented in the payout structure above are the maximum rewards and there are no minimum rewards.\n\nRewards for critical vulnerabilities are further capped at __10%__ of extractable value during a 24h period (see Governor mechanism: [https://github.com/wormhole-foundation/wormhole/blob/main/whitepapers/0007_governor.md)](https://github.com/wormhole-foundation/wormhole/blob/main/whitepapers/0007_governor.md). Rewards for vulnerabilities resulting in the indefinite locking of funds are further capped at __1%__ of destroyable value. Rewards for critical vulnerabilities relating to NFTs are further capped at 80,000 W.\n\nValue is calculated based on the current market value and available liquidity for widely-used tokens in the Portal Token Bridge, e.g. ETH and SOL. \n\nIn cases where the report achieves more than one of the above objectives, rewards will be tiered to the higher of the two objectives and will not be aggregated (eg. if you have the ability to extract and brick a complete TVL for a chain, you will be awarded a bounty as if you were able to only extract the complete TVL for that chain).\n\nRewards for bugs in dependencies and third party code are at the discretion of the Wormhole team and will be based on the impact demonstrated on Wormhole. If the dependency has its own bug bounty program, your reward for submitting this vulnerability to Wormhole will be lowered by the expected payout of that other program. If the vulnerability is in a connected blockchain itself rather than the Wormhole code, the locked and wrapped assets on that chain are not included in the impact calculation.\n\nWormhole Foundation will maintain full discretion on the payouts for vulnerabilities. We do encourage bug reporters to submit issues outside of the above-mentioned payout structure, though we want to be clear that we’ll exercise discretion on a case-by-case basis -- whether an issue warrants a payout and what that ultimate payout would be.\n",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Network denial of service on Guardians is not eligible for bug bounty rewards\n  - Wormhole is an open source project with open development. We welcome feedback and PRs on features that are in development. Code that has not been deployed is generally out-of-scope.\n  - Reports regarding bugs that the Wormhole project was previously aware of are not eligible for a reward\n  - In scope assets with \"pre-release\" tag are exempt from the above mentioned deployed requirement and are aimed at allowing early access for white-hat community contribution.  Once the chain is deployed in mainnet, the new scope is whatever is deployed on chain, which is often what is present in dev.v2 branch.  Rewards for “pre-release” candidates will be eligible within the same reward structure as mainnet contracts.\n\nThe following person(s) are ineligible to receive bug bounty payout rewards: Staff, Auditors, Contractors, persons in possession of privileged information, and all associated parties.\n\n__Prohibited Activities__\n  - Any testing with mainnet or public testnets; all testing should be done on private nets\n  - Public disclosure of a vulnerability before an embargo has been lifted\n  - Any testing with third party smart contracts or infrastructure and websites\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any denial of service attacks\n  - Violating the privacy of any organization or individual\n  - Automated testing of services that generates significant amounts of traffic\n  - Any activity that violates any law or disrupts or compromises any data or property that is not your own.\n\n__Submission Requirements__\nAll reports must come with sufficient explanation and data to easily reproduce the bug, e.g. through a proof-of-concept code.\n\nFor a bug report to be paid, we do require the bug reporter to comply with our KYC requirements.\n\nThis includes the following:\n  - Wallet address where you’ll receive payment\n  - Proof of address (either a redacted bank statement with your address or a recent utility bill with your name, address, and issuer of the bill)\n  - Copy of your passport will be required.\n  - W rewards are limited to those persons who are (a) not U.S. Person as defined in Rule 902(k) of Regulation S under the United States Securities Act of 1933, as amended (“Regulation S”) (b) is not domiciled in or has their principal place of business in the United States; (y) will conduct all transactions with the Tokens outside the United States and solely with non-US persons; and (z) is not acquiring the Tokens for the account or benefit of any U.S. Person and will not engage in any directed selling efforts in the United States.\n  - Any and all W to which you are entitled to receive as reward will only be granted and delivered to you upon the execution by you of a Restricted Token Grant Agreement in the form required by Wormhole Foundation and subject to the terms and conditions set forth therein, including a lock-up on the W token as set forth therein.\n  - You shall be responsible for reporting and paying any current and future taxes that it may incur resulting from the grant or delivery of any W or cash compensation\n  - If you report a critical bounty that has a reward denominated in W you may be entitled to receive the reward in USDC at 25% of the reward value if you are unable to receive the reward in W.\n",
       "assetsBodyV2": "All smart contracts of Wormhole can be found at [https://github.com/wormhole-foundation](https://github.com/wormhole-foundation). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\n([https://github.com/wormhole-foundation/wormhole/tree/dev.v2/node/pkg/governor](https://github.com/wormhole-foundation/wormhole/tree/dev.v2/node/pkg/governor)) is designed to limit the value that can be transferred out of one chain over time. Under the threat model of a compromised chain, the ability to transfer all tokens in unlimited amounts to any target chain would constitute a \"high\" severity vulnerability.\n",
       "impactsBody": "The Governor module ([https://github.com/wormhole-foundation/wormhole/tree/dev.v2/node/pkg/governor](https://github.com/wormhole-foundation/wormhole/tree/dev.v2/node/pkg/governor)) is designed to limit the value that can be transferred out of one chain over time. Assuming a smart contract compromise on one chain, the ability to transfer all tokens in unlimited amounts to any target chain would constitute a \"high\" severity vulnerability.\n\n([https://github.com/wormhole-foundation/wormhole/blob/main/whitepapers/0011_accountant.md](https://github.com/wormhole-foundation/wormhole/blob/main/whitepapers/0011_accountant.md)) module under the threat model of a fully compromised chain.",
       "immunefiStandard": true,
@@ -467,7 +475,7 @@
         "blockchain_rewards": [
           {
             "level": "Critical",
-            "payout": "Up to $2,500,000 USDC"
+            "payout": "Up to 20,000,000 W"
           },
           {
             "level": "High",
@@ -485,7 +493,7 @@
         "smartcontract_rewards": [
           {
             "level": "Critical",
-            "payout": "Up to $2,500,000 USDC"
+            "payout": "Up to 10,000,000 W"
           },
           {
             "level": "High",
