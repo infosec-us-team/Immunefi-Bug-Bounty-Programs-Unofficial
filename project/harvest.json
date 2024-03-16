@@ -8,34 +8,34 @@
       "project": "Harvest Finance",
       "maxBounty": 100000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6D2KOw280UzI3PrzjpsdD7/38eaf1bd703f4109b6795eaeebd210cf/Harvestfinance-logo.gif",
-      "launchDate": "2020-12-02T00:00-07:00",
+      "launchDate": "2020-12-02T07:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2023-12-17T20:41:56.467Z",
+      "updatedDate": "2024-03-15T13:38:19.633Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
           "level": "critical",
           "payout": "Up to USD $100,000",
-          "pocRequired": false
+          "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "high",
           "payout": "USD $10,000",
-          "pocRequired": false
+          "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "medium",
           "payout": "USD $5,000",
-          "pocRequired": false
+          "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "low",
           "payout": "USD $2,500",
-          "pocRequired": false
+          "pocRequired": true
         },
         {
           "assetType": "websites_and_applications",
@@ -80,6 +80,13 @@
           "isPrimacyOfImpact": null
         },
         {
+          "id": "4J5y3bzSPBdboitw7brs7l",
+          "type": "smart_contract",
+          "url": "https://github.com/harvestfi/harvest-strategy-arbitrum",
+          "description": null,
+          "isPrimacyOfImpact": null
+        },
+        {
           "id": "1vy2sqJoaBUUtGOFQIpZ9n",
           "type": "websites_and_applications",
           "url": "https://harvest.finance/",
@@ -96,7 +103,7 @@
         },
         {
           "id": "7y6RgRX1GTvL7pkTKVm0EI",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "title": "Direct theft of any user funds, whether at rest or in motion, other than unclaimed yield",
           "type": "smart_contract",
           "severity": "critical"
         },
@@ -192,7 +199,7 @@
         },
         {
           "id": "5HgAoo4dBMPLCD3j8t3CXE",
-          "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as email or password of the victim, etc",
+          "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as the email or password of the victim, etc",
           "type": "websites_and_applications",
           "severity": "high"
         },
@@ -210,7 +217,7 @@
         },
         {
           "id": "6iRSUGX1PAPC6HMADKGUly",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "title": "Smart contracts unable to operate due to a lack of token funds",
           "type": "smart_contract",
           "severity": "medium"
         },
@@ -252,7 +259,7 @@
         },
         {
           "id": "4M790DRCQ7egxkIx6oteNs",
-          "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as changing the name of user, or enabling/disabling notifications",
+          "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as changing the name of a user, or enabling/disabling notifications",
           "type": "websites_and_applications",
           "severity": "medium"
         },
@@ -293,10 +300,10 @@
           "severity": "low"
         }
       ],
-      "programOverview": "Harvest Finance automatically farms the highest yield available from the newest \nDeFi protocols, and optimizes the yields that are received using the latest farming techniques.\n\nHarvest Finance is primarily interested in securing their smart contracts, which can be found in the following repositories: [https://github.com/harvestfi/harvest-strategy](https://github.com/harvestfi/harvest-strategy), [https://github.com/harvestfi/harvest-strategy-polygon](https://github.com/harvestfi/harvest-strategy-polygon), [https://github.com/harvestfi/harvest-strategy-arbitrum](https://github.com/harvestfi/harvest-strategy-arbitrum). Primary areas of concern are anything that causes loss of user funds or frozen funds from a smart contract hack. Note that not all contracts in these repositories are deployed and in active use by the protocol. Only contracts in active use are within the scope of the bug bounty.\n\nHarvest Finance is secondarily interested in securing their website, which \ncan be found at [https://harvest.finance](https://harvest.finance/). Web vulnerability disclosures will be rewarded at a lower rate, relative to smart \ncontract vulnerability disclosures.",
+      "programOverview": "Harvest Finance automatically farms the highest yield available from the newest DeFi protocols and optimizes the yields that are received using the latest farming techniques.\n\nHarvest Finance is primarily interested in securing its smart contracts, which can be found in repositories of the following Github Organisation: https://github.com/harvestfi. Specific repositories that contain in-scope assets are listed in the table below. Primary areas of concern are anything that causes loss of user funds or frozen funds from a smart contract hack. Note that not all contracts in these repositories are deployed and in active use by the protocol. Only contracts in active use are within the scope of the bug bounty.\n\nHarvest Finance is secondarily interested in securing its website, which can be found at https://harvest.finance/. Web vulnerability disclosures will be rewarded at a lower rate, relative to smart contract vulnerability disclosures.",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n **Smart Contracts and Blockchain**\n\n- Re-entrancy\n- Logic errors\n  - including user authentication errors\n- Solidity/EVM details not considered\n  - including integer over-/under-flow\n  - including rounding errors\n  - including unhandled exceptions\n- Trusting trust/dependency vulnerabilities\n  - including composability vulnerabilities\n- Oracle failure/manipulation\n- Novel governance attacks\n- Economic/financial attacks\n  - including flash loan attacks\n- Congestion and scalability\n  - including running out of gas\n  - including block stuffing\n  - including susceptibility to frontrunning\n- Consensus failures\n- Cryptography problems\n- Signature malleability\n- Susceptibility to replay attacks\n- Weak randomness\n- Weak encryption\n- Susceptibility to block timestamp manipulation\n- Missing access controls / unprotected internal or debugging interfaces\n\n**Websites and Apps** \n\n- Remote Code Execution\n- Trusting trust/dependency vulnerabilities\n- Vertical Privilege Escalation\n- XML External Entities Injection\n- SQL Injection\n- LFI/RFI\n- Horizontal Privilege Escalation\n- Stored XSS\n- Reflective XSS with impact\n- CSRF with impact\n- Direct object reference\n- Internal SSRF\n- Session fixation\n- Insecure Deserialization\n- DOM XSS\n- SSL misconfigurations\n- SSL/TLS issues (weak crypto, improper setup)\n- URL redirect\n- Clickjacking (must be accompanied with PoC)\n- Misleading Unicode text (e.g. using right to left override characters)",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on\nthe [Immunefi Vulnerability Severity Classification System](/severity-system/). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nThe final reward amount of critical smart contract bugs is capped at 10% of \neconomic damage based on the vulnerability reported with a minimum payout of \n**USD 50 000**.\n\nTheft of yield/interest is considered as Medium for this bug bounty program.\n\nThe following table is used for the classification of web and app bug reports. In the event of conflict with the Immunefi Vulnerability Severity Classification System, the classification on this table will be what is considered.\n\n| Severity | Vulnerability |\n| :-- | :-: |\n| **Critical** | Deletion of site data, XSS/CSRF, ACE |\n| **High** | Denial of Service, DoS ampliciation |\n| **Medium** | Incorrect modification of user data, leaking user data |\n\nAll web and app bug reports must include a PoC in order to be accepted. All web and app bug reports without a PoC will be rejected and require the submitter to resubmit with a PoC. \n\nVulnerabilities that require moderator-approved access in order to be exploited will only receive a maximum of 20% of the advertised reward. For Critical Smart Contract and Blockchain vulnerability reports, this 20% is applied after the cap of 10% of economic damage.  \n\nPayouts are handled by the **Harvest Finance** team directly and are denominated in USD. Payouts up to **USD 100 000** are paid in **USDC**. ",
-      "outOfScopeAndRules": "**The following vulnerabilities are excluded from the rewards for this bug\nbounty program:**\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n\n**Smart Contracts and Blockchain**\n\n- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n\n**Websites and Apps**\n\n- Theoretical vulnerabilities without any proof or demonstration\n- Content spoofing / Text injection issues\n- Self-XSS\n- Captcha bypass using OCR\n- CSRF with no security impact (logout CSRF, change language, etc.)\n- Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”)\n- Server-side information disclosure such as IPs, server names, and most stack traces\n- Vulnerabilities used to enumerate or confirm the existence of users or tenants\n- Vulnerabilities requiring unlikely user actions\n- URL Redirects (unless combined with another vulnerability to produce a more severe vulnerability)\n- Lack of SSL/TLS best practices\n- DDoS vulnerabilities\n- Attacks requiring privileged access from within the organization\n- Feature requests\n- Best practices\n\n**The following activities are prohibited by bug bounty program:**\n\n- Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on\nthe [Immunefi Vulnerability Severity Classification System](/severity-system/). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from the consequence of exploitation to the privilege required to the likelihood of a successful exploit. \n\nThe final reward amount for critical smart contract bugs is capped at 10% of \neconomic damage based on the vulnerability reported with a minimum payout of \n**USD 50 000**.\n\nTheft of yield/interest is considered as Medium for this bug bounty program.\n\nAll smart contract reports must include a PoC to be accepted. The PoC should provide clear proof of the vulnerability in a locally forked blockchain environment. All bug reports without a PoC will be rejected and require the submitter to resubmit with a PoC. \n\nThe following table is used for the classification of web and app bug reports. In the event of conflict with the Immunefi Vulnerability Severity Classification System, the classification on this table will be what is considered.\n\n| Severity | Vulnerability |\n| :-- | :-: |\n| **Critical** | Deletion of site data, XSS/CSRF, ACE |\n| **High** | Denial of Service, DoS ampliciation |\n| **Medium** | Incorrect modification of user data, leaking user data |\n\nAll web and app bug reports must include a PoC to be accepted. All web and app bug reports without a PoC will be rejected and require the submitter to resubmit with a PoC. \n\nVulnerabilities that require moderator-approved access to be exploited will only receive a maximum of 20% of the advertised reward. For Critical Smart Contract and Blockchain vulnerability reports, this 20% is applied after the cap of 10% of economic damage.  \n\nPayouts are handled by the **Harvest Finance** team directly and are denominated in USD. Payouts up to **USD 100 000** are paid in **USDC**.",
+      "outOfScopeAndRules": "**The following vulnerabilities are excluded from the rewards for this bug\nbounty program:**\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n\n**Smart Contracts and Blockchain**\n\n- Incorrect data supplied by third-party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n\n**Websites and Apps**\n\n- Theoretical vulnerabilities without any proof or demonstration\n- Content spoofing / Text injection issues\n- Self-XSS\n- Captcha bypass using OCR\n- CSRF with no security impact (logout CSRF, change language, etc.)\n- Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”)\n- Server-side information disclosure such as IPs, server names, and most stack traces\n- Vulnerabilities used to enumerate or confirm the existence of users or tenants\n- Vulnerabilities requiring unlikely user actions\n- URL Redirects (unless combined with another vulnerability to produce a more severe vulnerability)\n- Lack of SSL/TLS best practices\n- DDoS vulnerabilities\n- Attacks requiring privileged access from within the organization\n- Feature requests\n- Best practices\n\n**The following activities are prohibited by the bug bounty program:**\n\n- Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generate significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
       "assetsBodyV2": null,
       "impactsBody": null,
       "immunefiStandard": true,
