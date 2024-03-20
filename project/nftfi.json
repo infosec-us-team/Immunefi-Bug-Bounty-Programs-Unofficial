@@ -7,10 +7,10 @@
       "slug": "nftfi",
       "project": "NFTfi",
       "maxBounty": 20000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/k66YpxgJFXVS91ugMK9kd/8031d257245e7807477fcf057e9d71af/20210622_NFTFi_logo_Mono_DARK_BG_v01.png",
-      "launchDate": "2023-08-25T16:00-05:00",
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7QcWk4sIEf6d5SiZ1LxUh/01a8a8cd58c1e51eeb6c5b20d68c4ec5/NFTfi_logo_copy.png",
+      "launchDate": "2023-08-25T21:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2023-10-16T16:25:45.404Z",
+      "updatedDate": "2024-03-20T13:41:32.363Z",
       "kyc": false,
       "rewards": [
         {
@@ -35,6 +35,62 @@
           "url": "https://etherscan.io/address/0xD0C6e59B50C32530C627107F50Acc71958C4341F",
           "description": "DirectLoanCollectionOffer",
           "isPrimacyOfImpact": null
+        },
+        {
+          "id": "CEwHutRSkLFXJerNDDajx",
+          "type": "smart_contract",
+          "url": "https://sepolia.etherscan.io/address/0xDc7866c27502F251a178f15cFcDaf5F2E086f267#code",
+          "description": "NFTfiToken",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "2oEugVSqaPE0o7VUXHz6D2",
+          "type": "smart_contract",
+          "url": "https://sepolia.etherscan.io/address/0x8282e8F6486bF4571c85212f7b663b7f3e364AA6#code",
+          "description": "DistributorRegistry",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "4rwwkYcrYJL6nm5o28FbFc",
+          "type": "smart_contract",
+          "url": "https://sepolia.etherscan.io/address/0x21B370B67ebA2013c8d9852D0353e607559b6312#code",
+          "description": "DistributorTokenLock",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "37GmfPig3syFN4kJbJ5xa",
+          "type": "smart_contract",
+          "url": "https://sepolia.etherscan.io/address/0x593647b3Af6d9A4ec733Aa61cb9465C1bc8c7f6f#code",
+          "description": "ExternalTokenLock",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "252oFxihwHv3718upK7gz3",
+          "type": "smart_contract",
+          "url": "https://sepolia.etherscan.io/address/0xe7f463877a15779e85cac25c3ff30b0038452418#code",
+          "description": "MerkleDistributor(OG)",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "6pR6yLMaptg519nvg4uwAO",
+          "type": "smart_contract",
+          "url": "https://sepolia.etherscan.io/address/0xbF09b56Fa38df4f5E34C84C513484B3E3ca4b661#code",
+          "description": "MerkleDistributor(S1)",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "5X44PKkHUch7isPByUKuLG",
+          "type": "smart_contract",
+          "url": "https://sepolia.etherscan.io/address/0x8e27f4D8b491401474BD4d1B32707816a803fabd#code",
+          "description": "MerkleDistributor(S2)",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "sJPEUbaygXawjpKMTD9Yu",
+          "type": "smart_contract",
+          "url": "https://sepolia.etherscan.io/address/0x26cf76A34195aC384a9DEA08746bC68F3d628aE8#code",
+          "description": "TokenUtilityAccounting",
+          "isPrimacyOfImpact": null
         }
       ],
       "impacts": [
@@ -43,13 +99,25 @@
           "title": "Direct theft of any user NFTs inside escrow in the loan contract",
           "type": "smart_contract",
           "severity": "critical"
+        },
+        {
+          "id": "6W08bMKB9oJEERZa3RJiJE",
+          "title": "MerkleDistributors should not allow claims to the locking contract for addresses and amounts not specified in the MerkleRoot (note: funds can be drained by the contract owner at any time)",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "3NKKO0lfbDmTMPtUqjfYld",
+          "title": "TokenLock contracts should not allow funds to be withdrawn to addresses  that did not lock the funds",
+          "type": "smart_contract",
+          "severity": "critical"
         }
       ],
-      "programOverview": "NFTfi is the leading liquidity protocol for NFTs. NFTfi allows NFT owners to use the assets (NFTs) they own to access the liquidity they need by receiving secured loans from liquidity providers, peer-to-peer, in a completely trustless manner.\n\nFor more information about NFTfi, please visit [https://www.nftfi.com/ ](https://www.nftfi.com/) \n\nNFTfi provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__Responsible Publication__\n\nNFTfi adheres to category 3: Approval Required. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nNFTfi adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms stated in this page.\n\n__Known Issue Assurance__\n\nNFTfi commits to providing Known Issue Assurance to bug submissions through their program. This means that NFTfi will either disclose known issues publicly or at the very least privately via a self-reported bug submission in order to allow for a more objective and streamlined mediation process to prove that an issue is known. Otherwise, assuming the bug report itself is valid, it would result in the bug report being considered in-scope and due 100% of the reward with respect to the bug bounty program terms. \n\n__Immunefi Standard Badge__\n\nNFTfi has satisfied the requirements for the [Immunefi Standard Badge,](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-) which is given to projects that adhere to our best practices. \n",
+      "programOverview": "NFTfi is the leading liquidity protocol for NFTs. NFTfi allows NFT owners to use the assets (NFTs) they own to access the liquidity they need by receiving secured loans from liquidity providers, peer-to-peer, in a completely trustless manner.\n\nFor more information about NFTfi, please visit [https://www.nftfi.com/ ](https://www.nftfi.com/) \n\nNFTfi provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__Responsible Publication__\n\nNFTfi adheres to category 3: Approval Required. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nNFTfi adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms stated in this page.\n\n__Known Issue Assurance__\n\nNFTfi commits to providing Known Issue Assurance to bug submissions through their program. This means that NFTfi will either disclose known issues publicly or at the very least privately via a self-reported bug submission in order to allow for a more objective and streamlined mediation process to prove that an issue is known. Otherwise, assuming the bug report itself is valid, it would result in the bug report being considered in-scope and due 100% of the reward with respect to the bug bounty program terms. \n\n__Immunefi Standard Badge__\n\nNFTfi has satisfied the requirements for the [Immunefi Standard Badge,](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-) which is given to projects that adhere to our best practices.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs acknowledged below are not eligible for any reward through the bug bounty program. \n\n- It is possible to create an offer with an editable bundle to steal customer's funds.\n\nThe `PermittedNFTsAndTypeRegistry` ([https://etherscan.io/address/0xadde73498902f61bfcb702e94c31c13c534879ac](https://etherscan.io/address/0xadde73498902f61bfcb702e94c31c13c534879ac)) defines which NFTs are permitted.\n\nThe following address is allowed: **0xf8CB0341563213BF33EaFFc7a6775Ed0Eb6c1401** (`NftfiBundler.sol`)\n\naddress bundle = hub.getContract(ContractKeys.NFTFI_BUNDLER);\nrequire(_loanTerms.nftCollateralContract != bundle, \"Collateral cannot be bundle\");\n\n[https://github.com/NFTfi-Genesis/nftfi.eth/blob/ae6625a0e9dbf4841bda279d0848d4b0512d6fb2/V2/contracts/loans/direct/loanTypes/DirectLoanFixedOffer.sol#L169C17-L169C17](https://github.com/NFTfi-Genesis/nftfi.eth/blob/ae6625a0e9dbf4841bda279d0848d4b0512d6fb2/V2/contracts/loans/direct/loanTypes/DirectLoanFixedOffer.sol#L169C17-L169C17)\n\nIn a practical scenario, the NFTfi frontend will not display offers from the `NftfiBundler.sol` collection but the deployed smart contracts do allow them to be created and accepted.\n\n- Create offers with a wrapped collateral (that can be unwrapped) to steal user funds\nThe `wrapCollateral(...)` function inside the new `DirectLoanFixedOffer.sol` will:\n\n1- Create an NFT that is wrapper for the asset in custody (which can be unwrapped and left empty)\n\n2- Approve the wrapper in the `PermittedNFTsAndTypeRegistry`.\n\n3- Update the loan and set this wrapper as the asset in escrow instead of the NFT.\n\nAfter this loan finishes, the wrapper can be used in other loans - attacker front-runs user calls to `acceptOffer(...)` to empty the wrapper and sends them an empty wrapper.\n\nIn practice the NFTfi front-end will not display offers from this collection (the wrapper) but the deployed smart contracts do allow them to be created and accepted.\n\n__Previous Audits__\n\nNFTfi has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [https://drive.google.com/file/d/1gKMFWlhyPxYICTpNgCHJS4cgFrgB-h05/view?usp=drive_link](https://drive.google.com/file/d/1gKMFWlhyPxYICTpNgCHJS4cgFrgB-h05/view?usp=drive_link)\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract - Critical\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules). Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the NFTfi team directly and are denominated in USD. However, payments are done in USDC. \n",
-      "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Smart Contracts and Blockchain/DLT__\n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n\nThe following activities are prohibited by this bug bounty program:\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
-      "assetsBodyV2": "All code of NFTfi can be found at [https://github.com/NFTfi-Genesis/nftfi.eth/tree/main/V2-3.](https://github.com/NFTfi-Genesis/nftfi.eth/tree/main/V2-3)\n",
+      "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs on testnet assets, the reward is paid as a flat amount of USD 20 000. This is because there are no actual funds at risk on the testnet, hence limits objective calculation. \n\n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs acknowledged below are not eligible for any reward through the bug bounty program. \n\n- It is possible to create an offer with an editable bundle to steal customer's funds.\n\nThe `PermittedNFTsAndTypeRegistry` ([https://etherscan.io/address/0xadde73498902f61bfcb702e94c31c13c534879ac](https://etherscan.io/address/0xadde73498902f61bfcb702e94c31c13c534879ac)) defines which NFTs are permitted.\n\nThe following address is allowed: **0xf8CB0341563213BF33EaFFc7a6775Ed0Eb6c1401** (`NftfiBundler.sol`)\n\naddress bundle = hub.getContract(ContractKeys.NFTFI_BUNDLER);\nrequire(_loanTerms.nftCollateralContract != bundle, \"Collateral cannot be bundle\");\n\n[https://github.com/NFTfi-Genesis/nftfi.eth/blob/ae6625a0e9dbf4841bda279d0848d4b0512d6fb2/V2/contracts/loans/direct/loanTypes/DirectLoanFixedOffer.sol#L169C17-L169C17](https://github.com/NFTfi-Genesis/nftfi.eth/blob/ae6625a0e9dbf4841bda279d0848d4b0512d6fb2/V2/contracts/loans/direct/loanTypes/DirectLoanFixedOffer.sol#L169C17-L169C17)\n\nIn a practical scenario, the NFTfi frontend will not display offers from the `NftfiBundler.sol` collection but the deployed smart contracts do allow them to be created and accepted.\n\n- Create offers with a wrapped collateral (that can be unwrapped) to steal user funds\nThe `wrapCollateral(...)` function inside the new `DirectLoanFixedOffer.sol` will:\n\n1- Create an NFT that is wrapper for the asset in custody (which can be unwrapped and left empty)\n\n2- Approve the wrapper in the `PermittedNFTsAndTypeRegistry`.\n\n3- Update the loan and set this wrapper as the asset in escrow instead of the NFT.\n\nAfter this loan finishes, the wrapper can be used in other loans - attacker front-runs user calls to `acceptOffer(...)` to empty the wrapper and sends them an empty wrapper.\n\nIn practice the NFTfi front-end will not display offers from this collection (the wrapper) but the deployed smart contracts do allow them to be created and accepted.\n\n- It is possible to have some NFTs change ownership (and state) while in escrow such that the loan cannot be resolved (repaid or liquidated) - for example ENS domain names expiring and being re-registered by a new owner while the loan is in progress.\n\n__Previous Audits__\n\nNFTfi has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [https://drive.google.com/file/d/1gKMFWlhyPxYICTpNgCHJS4cgFrgB-h05/view?usp=drive_link](https://drive.google.com/file/d/1gKMFWlhyPxYICTpNgCHJS4cgFrgB-h05/view?usp=drive_link)\n- Token audit - https://drive.google.com/file/d/1cJ6DAXcS_DqCJzeZ3w9CvdlWBiFvlBd0/view?usp=sharing\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract - Critical\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules). Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the NFTfi team directly and are denominated in USD. However, payments are done in USDC.",
+      "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Smart Contracts and Blockchain/DLT__\n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n\nThe following activities are prohibited by this bug bounty program:\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": "All code of NFTfi can be found at https://github.com/NFTfi-Genesis/nftfi.eth/tree/main/V2-3 and https://github.com/NFTfi-Genesis/nftfi.eth/tree/main/token",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
