@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get NEXT_DATA in JSON format
-NEXT_DATA=$(curl -s https://immunefi.com/explore/ | grep -o "<script id=\"__NEXT_DATA__\" type=\"application/json\">.*</script>" | grep -o "{.*}" | jq)
+NEXT_DATA=$(curl -s https://immunefi.com/bug-bounty/ | grep -o "<script id=\"__NEXT_DATA__\" type=\"application/json\">.*</script>" | grep -o "{.*}" | jq)
 
 # Get bounties in a variable
 projects=$(echo "$NEXT_DATA" | jq '.props.pageProps.bounties')

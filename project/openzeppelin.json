@@ -8,10 +8,10 @@
       "project": "OpenZeppelin",
       "maxBounty": 25000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4tl7aEnEwJyvmUxPKqR2KH/2ad9232b3e2e462c88aa27262ce93deb/OpenZeppelin_Logo.jpeg",
-      "launchDate": "2021-11-15T09:00-06:00",
+      "launchDate": "2021-11-15T15:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2022-10-13T14:02:20.258Z",
-      "kyc": false,
+      "updatedDate": "2024-03-25T11:54:46.209Z",
+      "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
@@ -28,6 +28,12 @@
         {
           "assetType": "smart_contract",
           "level": "medium",
+          "payout": "USD $2,500",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "low",
           "payout": "USD $1,000",
           "pocRequired": false
         }
@@ -134,17 +140,17 @@
           "severity": "medium"
         },
         {
-          "id": "2VW2iNlQrpDmlohevSMJsO",
-          "title": "Contract fails to deliver promised yield, but doesn't lose value",
+          "id": "pFgKpC5xef3YC18WZXF3P",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value",
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "low"
         }
       ],
-      "programOverview": "OpenZeppelin is the premier crypto cybersecurity technology and services company, trusted by the most used DeFi and NFT projects. Founded in 2015 with the mission to protect the open economy, OpenZeppelin provides a complete suite of security products to build, manage, and inspect all aspects of software development and operations for Ethereum projects.\n\nOpenZeppelin safeguards tens of billions of dollars in funds for leading crypto organizations including Coinbase, Ethereum Foundation, Compound, Aave, TheGraph, and many others.\n\nFor more information about OpenZeppelin, please visit [https://openzeppelin.com/](https://openzeppelin.com/).  \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Loss of funds by freezing or theft\n  - Denial of service (smart contract is made unable to operate)\n  - Access control is bypassed, including privilege escalation\n  - Smart contract does not behave as intended\n\nThis is an overlay bug bounty program for OpenZeppelin’s contracts library. A vulnerability in an OpenZeppelin library would likely affect many other projects and could trigger various other bounties. This program would be potentially additive to these cases. ",
+      "programOverview": "As the premier crypto cybersecurity technology and services company, we’ve built OpenZeppelin Contracts with our best [security practices](https://contracts.openzeppelin.com/security). We are committed to ensuring the utmost security in our community-vetted smart contracts, and our bounty program provides rewards of up to $25,000 USD for reporting critical vulnerabilities in our smart contracts library.\nThis bug bounty program is focused on OpenZeppelin Contracts and mainly intends to prevent:\n\nLoss of funds by freezing another user’s funds, or theft of another user’s funds\nPermanent denial of service (smart contract is made unable to operate)\nAccess control bypass, including privilege escalation\nSmart contract not behaving as intended\n\nThis is an overlay bug bounty program for OpenZeppelin’s Contracts library. A vulnerability in an OpenZeppelin contract would likely affect many other projects and could trigger various other bounties. This program would be potentially additive to those cases. \n\nOpenZeppelin may issue [GHSA/CVEs](https://cve.report/vendor/openzeppelin) for reported vulnerabilities and will offer to credit issue reports in those public reports.\n\n__KYC Requirements__\n\nOpenZeppelin’s bug bounty program requires an invoice to be submitted and a KYC screen to be performed prior to OpenZeppelin providing a bug bounty reward. Once a payout is confirmed, a member of OpenZeppelin will reach out to you directly to collect the necessary information, including:\n- Full Legal Name\n- Email Address\n- Mailing Address\n- Wallet Address (Ethereum Mainnet Only)",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n- Smart Contracts and Blockchain \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nThe rewards stated here are additive to any existing bug bounty programs hosted by projects that are currently using OpenZeppelin contracts. \n\nCritical severity bug reports must come with a PoC in order to be considered for a reward.\n\nBugs introduced by a release candidate version and reported during the review period - within three weeks of the version release in GitHub, will receive a 50% bonus.\n\nPayouts are handled by the __OpenZeppelin__ team directly and are denominated in USD. However, payouts are done in __ETH__ or __USDC__.",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nThe rewards stated here are additive to any existing bug bounty programs hosted by projects that are currently using OpenZeppelin contracts. \n\nBounty rewards are given according to an impact/likelihood matrix for assessing threat levels. Each issue is assessed considering the likelihood of the vulnerability being successfully exploited and the expected impact in scope to a single instance of the affected smart contract.\n\nCritical severity bug reports must come with a PoC in order to be considered for a reward.\n\nBugs introduced by a release candidate version and reported during the review period - within three weeks of the version release in GitHub, will receive a 50% bonus.\n\nPayouts are handled by the __OpenZeppelin__ team directly and are denominated in USD. However, payouts are done in __ETH__ or __USDC__.",
       "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Susceptibility to block timestamp manipulation\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "All smart contracts in the “contracts” directory are included in the bug bounty, except those under “contracts/mocks”, which are testing artifacts.\n",
+      "assetsBodyV2": "All smart contracts in the “contracts” directory are included in the bug bounty, except those under “contracts/mocks”, which are testing artifacts.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -176,6 +182,10 @@
           },
           {
             "level": "Medium",
+            "payout": "USD $2,500"
+          },
+          {
+            "level": "Low",
             "payout": "USD $1,000"
           }
         ],

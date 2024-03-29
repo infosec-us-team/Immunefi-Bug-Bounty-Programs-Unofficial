@@ -7,10 +7,10 @@
       "slug": "chainlink",
       "project": "Chainlink",
       "maxBounty": 3000000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/57PKzLtfnCqvrvVO9dQy4u/ad6c9e026b77cf59643680bd931ca5c1/Chainlink-logo.png",
-      "launchDate": "2021-05-11T00:00-05:00",
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2NbXmUd05dVTI4CddDDFEK/62bc8a522d1b1bf77183097a87ee45d7/1200px-Chainlink_Logo__1_.png",
+      "launchDate": "2021-05-11T05:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2023-02-16T15:47:15.377Z",
+      "updatedDate": "2024-03-27T13:19:51.774Z",
       "kyc": true,
       "rewards": [
         {
@@ -93,13 +93,6 @@
           "isPrimacyOfImpact": null
         },
         {
-          "id": "1azcBXCNy2hJCq7jukb0QG",
-          "type": "websites_and_applications",
-          "url": "https://explorer.chain.link/",
-          "description": "Explorer",
-          "isPrimacyOfImpact": null
-        },
-        {
           "id": "2Dnc2a5BhzXg1Mz9n1ZyIs",
           "type": "websites_and_applications",
           "url": "https://faucets.chain.link/",
@@ -119,6 +112,48 @@
           "url": "https://chain.link/",
           "description": "Main Web App",
           "isPrimacyOfImpact": null
+        },
+        {
+          "id": "O0gijIM00qr7R9XV7nMXb",
+          "type": "smart_contract",
+          "url": "https://github.com/smartcontractkit/ccip/tree/ccip-develop/contracts/src/v0.8/ccip",
+          "description": "CCIP",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "4BHmbpPhI9nz7ZG0w3mwAV",
+          "type": "smart_contract",
+          "url": "https://github.com/smartcontractkit/ccip-owner-contracts/tree/main",
+          "description": "CCIP Owner",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "7A3Dg7FMThs5Z2YAaNH1yO",
+          "type": "smart_contract",
+          "url": "https://github.com/smartcontractkit/external-adapters-js/",
+          "description": "External Adapters component of the Chainlink stack",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "3wPkKlG255ht5jMNxGmIqO",
+          "type": "websites_and_applications",
+          "url": "https://github.com/smartcontractkit/operator-ui",
+          "description": "Chainlink Core Node UI",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "6yr4fftS34OJtaWvLWe27n",
+          "type": "smart_contract",
+          "url": "https://github.com/smartcontractkit/ccip/tree/ccip-develop/core/services/ocr2/plugins/ccip",
+          "description": "CCIP Plugin",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "2zRHBhOyGw8wmpyRvpfXVp",
+          "type": "smart_contract",
+          "url": "https://immunefi.com",
+          "description": "Primacy of Impact",
+          "isPrimacyOfImpact": true
         }
       ],
       "impacts": [
@@ -155,6 +190,12 @@
         {
           "id": "3PZnld0DgxZ8xc7t668VGt",
           "title": "Misreporting of prices and/or data",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "3VRKUQZxTb1CakhmdUtbhz",
+          "title": "RMN bypass",
           "type": "smart_contract",
           "severity": "critical"
         },
@@ -213,6 +254,18 @@
           "severity": "high"
         },
         {
+          "id": "14zKtoXtuAXJ8QJ3KtnmJd",
+          "title": "Improperly disclosing confidential user information such as email address, phone number, physical address, etc",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "2gA1G65ZGyZK1rr4dGIpP5",
+          "title": "Taking down the application/website with methods other than DDoS",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
           "id": "5KZJLKRighpmxf5x9hRqZ1",
           "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
           "type": "smart_contract",
@@ -243,6 +296,12 @@
           "severity": "medium"
         },
         {
+          "id": "6GblnKw15EChGq8akpOPXT",
+          "title": "Subdomain takeover",
+          "type": "websites_and_applications",
+          "severity": "medium"
+        },
+        {
           "id": "pBauN9gGuzogG0Hf11hXY",
           "title": "Smart contract fails to deliver expected return(s) but doesn’t result in loss of value",
           "type": "smart_contract",
@@ -265,20 +324,14 @@
           "title": "Temporarily disabling user to access target site, such as locking up the victim from login, cookie bombing, etc",
           "type": "websites_and_applications",
           "severity": "low"
-        },
-        {
-          "id": "6bdYqhIJxe92Fbd2J4NKSE",
-          "title": "Temporarily disabling user to access target site, such as locking up the victim from login, cookie bombing, etc.",
-          "type": "websites_and_applications",
-          "severity": "low"
         }
       ],
-      "programOverview": "Chainlink is the industry standard for building, accessing, and selling oracle services needed to power hybrid smart contracts on any blockchain. Chainlink oracle networks provide smart contracts with a way to\nreliably connect to any external API and leverage secure off-chain computations for enabling feature-rich applications. Chainlink currently secures tens of billions of dollars across DeFi, insurance, gaming, and\nother major industries, and offers global enterprises and leading data providers a universal gateway to all Blockchains.\n\nLearn more about Chainlink by visiting [chain.link](https://chain.link/) or reading the developer documentation at [docs.chain.link](https://docs.chain.link/). To discuss an integration, [reach out to an expert](https://chainlinkcommunity.typeform.com/to/OYQO67EF?page=announcement&typeform-source=www.google.com).\n\nUnlike other bug bounty programs on Immunefi, all bug report submissions, including associated vulnerabilities, become the exclusive property of Chainlink Labs. By making a submission to this program and in consideration for a bounty, the bug submitter conveys all ownership rights, titles, and interests in the bug report to Chainlink Labs. Thus, the final decision on whether a postmortem will be written is at the sole discretion of Chainlink Labs.\n\nBy submitting a bug report, you agree to refrain from any public disclosure of the report and associated vulnerability unless explicit written consent is provided in advance by the Chainlink team.\n\nUse testnet oracles: [https://docs.chain.link/docs/any-api/testnet-oracles/#:~:text=test](https://docs.chain.link/docs/any-api/testnet-oracles/#:~:text=test) \n\nInstructions to setup your node: [https://docs.chain.link/chainlink-nodes/#:~:text=node ](https://docs.chain.link/chainlink-nodes/#:~:text=node)\n",
+      "programOverview": "__Program Overview__\n\nChainlink is the industry-standard Web3 services platform. It has enabled trillions of dollars in transaction volume across DeFi, on-chain finance, gaming, NFTs, and other major industries. As the leading decentralized oracle network, Chainlink empowers developers to build feature-rich Web3 applications with seamless access to real-world data and off-chain computation across any blockchain and provides global enterprises with a universal gateway to all blockchains.\n\nLearn more about Chainlink by visiting [chain.link](https://chain.link/) or reading the developer documentation at [docs.chain.link](https://docs.chain.link/). To discuss an integration, [reach out to an expert](https://chainlinkcommunity.typeform.com/to/OYQO67EF?page=announcement&typeform-source=www.google.com).\n\n__Responsible Publication__\n\nChainlink adheres to category 3. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page. \n\n__Primacy of Impact vs Primacy of Rules__\n\nChainlink adheres to the Primacy of Impact, meaning that if you believe you have found a bug that causes an “In-scope Impact”, even if the affected system is not strictly within the assets listed, we still encourage you to submit it to the program for consideration. Chainlink adheres to the Primacy of Impact for the following severity levels:\n- Smart Contract - Critical\n- Smart Contract - High\n- Websites and Applications - Critical\n- Websites and Applications - High\n\n__Known Issue Assurance__\n\nIf an issue is closed as a known issue (which Chainlink has never done), proof will be provided to Immunefi for them to validate the veracity of the claim. When this is provided and accepted by Immunefi, the bug will no longer be eligible for payout regardless of severity.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.  \n\nAll Smart Contracts bug reports require a PoC and a suggestion for a fix to be eligible for a reward. All Websites and Applications bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as\nPoC and code is required.\n\nRewards for “Critical” Smart Contract vulnerabilities are at the sole and exclusive discretion of Chainlink Labs, with a minimum reward of __USD $100,000__ and maximum reward of __USD $3,000,000__. Determination of the final reward amount may take into consideration, but is not limited to, the following factors: funds at risk, as well as public relations and branding aspects.\n\n__KYC requirement__\n\nTo ensure compliance with applicable law, Chainlink Labs requires Know-Your-Customer (KYC) information to be provided for all bug bounty hunters submitting a report and requesting a reward. \n\nThe information required:\n  - Full Legal Name (First, middle and last, plus any prefix, and/or suffix)\n  - City and Country of Residence\n  - Country of Citizenship\n  - Ethereum Wallet Address (for transfer of payment)\n\nThe collection and review of this information will be handled by the __Chainlink Labs__ team directly.\n\nPayouts are handled by the Chainlink Labs team directly, denominated in __USD, and sent in Ethereum (ETH), USD Coin (USDC), or Tether (USDT)__.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n  - Mentions of secrets, access tokens, API keys, private keys, etc. in Github, will be considered out of scope without proof that they are in-use in production\n\n__Smart Contracts__\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n\n__Websites and Apps__\n  - Theoretical vulnerabilities without any proof or demonstration\n  - Attacks requiring physical access to the victim device\n  - Attacks requiring access to the local network of the victim\n  - Reflected plain text injection ex: url parameters, path, etc.\n    - This does not exclude reflected HTML injection with or without javascript\n    - This does not exclude persistent plain text injection\n  - Self-XSS\n  - Captcha bypass using OCR without impact demonstration\n  - CSRF with no state modifying security impact (ex: logout CSRF)\n  - Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n  - Server-side non-confidential information disclosure such as IPs, server names, and most stack traces\n  - Vulnerabilities used only to enumerate or confirm the existence of users or tenants\n  - Vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n  - Lack of SSL/TLS best practices\n  - DDoS vulnerabilities\n  - Feature requests\n  - Issues related to the frontend without concrete impact and PoC\n  - Best practices issues without concrete impact and PoC\n  - Vulnerabilities primarily caused by browser/plugin defects\n  - Leakage of non sensitive api keys ex: etherscan, Infura, Alchemy, etc.\n  - Any vulnerability exploit requiring browser bugs for exploitation. ex: CSP bypass\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty\n  - Disclosure of vulnerabilities will require the approval of the Chainlink team\n",
-      "assetsBodyV2": "All EVM smart contracts of Chainlink can be found at [https://github.com/smartcontractkit/chainlink/tree/master/contracts](https://github.com/smartcontractkit/chainlink/tree/master/contracts). The list of all deployed contracts can be found at [https://docs.chain.link/docs/data-feeds/price-feeds/addresses/](https://docs.chain.link/docs/data-feeds/price-feeds/addresses/). However,\nonly those in the Assets in Scope table are considered to be in-scope of the bug bounty program.\n*.smartcontract.com assets, test code, files in dev folders, and files with XXX are out of scope for this bug bounty program.\n\nIf an impact can be caused to any other asset managed by Chainlink that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project. \n\nContracts or code present in dev/test directories or files with xxx in their name are not eligible for rewards.\n",
-      "impactsBody": null,
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.  \n\nAll Smart Contracts bug reports require a proof of concept (PoC) and a suggestion for a fix to be eligible for a reward. All Websites and Applications bug reports must come with a PoC with an end-effect impacting an asset in scope in order to be considered for a reward. Explanations and statements are not accepted as PoCs and code is required.\n\nRewards for Critical Smart Contract vulnerabilities are at the sole and exclusive discretion of Chainlink Labs, with maximum reward of USD $3,000,000.\n\nSpecific reward amounts are determined based on a number of factors, such as the impact of proposed issues, ease of exploitability, and how likely the exploit conditions might occur.\n\nAny supplementary reward beyond the minimum for the assigned criticality rating is at the discretion of Chainlink Labs.\n\n__KYC requirement__\n\nTo ensure compliance, Chainlink Labs requires Know-Your-Customer (KYC) information to be provided for all bug bounty reporters submitting a report and requesting a reward. \n\nThe information required:\n\n  - Color copy of passport\n    - Full Legal Name (First, middle, and last, plus any prefix, and/or suffix)\n\n  - Proof of current address (either a redacted bank statement with your address or a recent utility bill with your name, address, and issuer of the bill)\n\n  - If you are a U.S. citizen, permanent resident, partnership, LLC, corporation, estate or trust, please send a filled-out and signed W-9 ([https://www.irs.gov/pub/irs-pdf/fw9.pdf](https://www.irs.gov/pub/irs-pdf/fw9.pdf))\n\n  - If you are not a U.S. citizen or permanent resident, please send a filled-out and signed W-8BEN for individual and W-8 BEN-E for entities ([https://www.irs.gov/pub/irs-pdf/fw8ben.pdf](https://www.irs.gov/pub/irs-pdf/fw8ben.pdf); [https://www.irs.gov/pub/irs-pdf/fw8bene.pdf](https://www.irs.gov/pub/irs-pdf/fw8bene.pdf)), and provide statement to certify that all services are performed outside of the U.S. \n\n  - Ethereum Wallet Address (for transfer of payment)\n\nAll bug bounty reporters must pass the Office of Foreign Asset Control (OFAC) Specially Designated Nationals And Blocked Persons List (SDN) list screening. Rewards cannot be paid out if reporters are on the OFAC SDN list.\n\nThe collection and review of this information will be handled by the __Chainlink Labs__ team directly.\n\nPayouts are handled by the __Chainlink Labs__ team directly, denominated in __USD__, and sent in __Ethereum (ETH)__ or __USD Coin (USDC)__.\n\n__Feasibility Requirement and Limitations__\n\nChainlink will take the feasibility of an attack into consideration when determining if and how much a reported issue receives as a bounty. More information on feasibility limitations can be found under [Immunefi’s Feasibility Standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards).\n\n__Repeatable Attacks__\n\nIn the event a report applies to multiple contracts or can be triggered multiple times, if a contract or product can be paused (either through on or off-chain means) only the impact of the first usage will be considered. If a product is not pausable such that there is no realistic way to prevent repeated usage of the attack, the entire amount at risk will be considered when evaluating impact.",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n  - Mentions of secrets, access tokens, API keys, private keys, etc. in Github, will be considered out of scope without proof that they are in-use in production\n\n__Smart Contracts__\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n\n__Websites and Apps__\n  - Theoretical vulnerabilities without any proof or demonstration\n  - Attacks requiring physical access to the victim device\n  - Attacks requiring access to the local network of the victim\n  - Reflected plain text injection ex: url parameters, path, etc.\n    - This does not exclude reflected HTML injection with or without javascript\n    - This does not exclude persistent plain text injection\n  - Self-XSS\n  - Captcha bypass using OCR without impact demonstration\n  - CSRF with no state modifying security impact (ex: logout CSRF)\n  - Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n  - Server-side non-confidential information disclosure such as IPs, server names, and most stack traces\n  - Vulnerabilities used only to enumerate or confirm the existence of users or tenants\n  - Vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n  - Lack of SSL/TLS best practices\n  - DDoS vulnerabilities\n  - Feature requests\n  - Issues related to the frontend without concrete impact and PoC\n  - Best practices issues without concrete impact and PoC\n  - Vulnerabilities primarily caused by browser/plugin defects\n  - Leakage of non sensitive api keys ex: etherscan, Infura, Alchemy, etc.\n  - Any vulnerability exploit requiring browser bugs for exploitation. ex: CSP bypass\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty\n  - Disclosure of vulnerabilities will require the approval of the Chainlink team",
+      "assetsBodyV2": "The following are considered out of scope for the program:\n\n  - Any files in a dev folder\n  - Any contract with a `typeAndVersion` string which contains `-dev`\n  - Any files with XXX in their name\n  - Any *.smartcontract.com assets\n  - Any test code\n\nAlso, for any file to be in scope, it has to be part of a release, not including pre-releases.\n\nIf an impact can be caused to any other asset managed by Chainlink that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for consideration by the project.",
+      "impactsBody": "Only the following impacts are accepted within this bug bounty program. All other impacts are out of scope, even if they affect an in scope asset.",
       "immunefiStandard": null,
       "tags": {
         "productType": [
