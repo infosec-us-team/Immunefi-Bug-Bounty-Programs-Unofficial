@@ -6,59 +6,59 @@
       "id": "stacks",
       "slug": "stacks",
       "project": "Stacks",
-      "maxBounty": 1000000,
+      "maxBounty": 100000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5fyZtgehW9ECXFKLpiDvq6/7228d788a3497d71277099985eb83987/Stacks.png",
-      "launchDate": "2022-03-31T13:30-06:00",
+      "launchDate": "2022-03-31T19:30:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-04-08T18:51:52.929Z",
+      "updatedDate": "2024-04-15T11:57:06.624Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "blockchain_dlt",
           "level": "critical",
-          "payout": "Up to USD $1,000,000",
+          "payout": "Up to USD $100,000",
           "pocRequired": true
         },
         {
           "assetType": "blockchain_dlt",
           "level": "high",
-          "payout": "USD $50,000",
+          "payout": "USD $5,000",
           "pocRequired": true
         },
         {
           "assetType": "blockchain_dlt",
           "level": "medium",
-          "payout": "USD $10,000",
+          "payout": "USD $1,000",
           "pocRequired": true
         },
         {
           "assetType": "blockchain_dlt",
           "level": "low",
-          "payout": "USD $1,000",
+          "payout": "USD $100",
           "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "critical",
-          "payout": "Up to USD $1,000,000",
+          "payout": "Up to USD $100,000",
           "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "high",
-          "payout": "USD $50,000",
+          "payout": "USD $5,000",
           "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "medium",
-          "payout": "USD $10,000",
+          "payout": "USD $1,000",
           "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "low",
-          "payout": "USD $1,000",
+          "payout": "USD $100",
           "pocRequired": true
         }
       ],
@@ -67,7 +67,7 @@
         {
           "id": "21yykxBnBDpN6Q8HuV5TV2",
           "type": "blockchain_dlt",
-          "url": "https://github.com/stacks-network/stacks-blockchain/tree/master/src",
+          "url": "https://github.com/stacks-network/stacks-core/tree/master/stacks-common",
           "description": "Main Repository",
           "isPrimacyOfImpact": null
         },
@@ -81,7 +81,7 @@
         {
           "id": "cOg6GDCBuTBMg879ePnHa",
           "type": "smart_contract",
-          "url": "https://github.com/stacks-network/stacks-blockchain/blob/master/src/chainstate/stacks/boot/pox-3.clar",
+          "url": "https://github.com/stacks-network/stacks-blockchain/blob/master/src/chainstate/stacks/boot/pox-4.clar",
           "description": "POX contract",
           "isPrimacyOfImpact": null
         },
@@ -104,6 +104,13 @@
           "type": "blockchain_dlt",
           "url": "https://github.com/stacks-network/stacks-blockchain/tree/master/testnet/stacks-node/src",
           "description": "Node implementation",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "37fKz5pvitrjowoaqe7MrN",
+          "type": "smart_contract",
+          "url": "https://github.com/stacks-network/stacks-core/tree/master/stackslib",
+          "description": "Blockchain shared libraries",
           "isPrimacyOfImpact": null
         }
       ],
@@ -223,10 +230,10 @@
           "severity": "low"
         }
       ],
-      "programOverview": "Stacks is a Bitcoin layer for smart contracts; it enables smart contracts and decentralized applications to use Bitcoin as an asset and settle transactions on the Bitcoin blockchain. In the upcoming Nakamoto release of Stacks, Stacks will be secured by the entire hash power of Bitcoin, giving it Bitcoin finality.\n\nFor more information about Stacks, please visit [https://stacks.org/](https://stacks.org/) and [https://www.stacks.co/](https://www.stacks.co/). \n\nWe at the Stacks Foundation maintain essential components of the Stacks blockchain infrastructure. Our security team prioritizes the following attack vectors:\n\n  - Theft of funds\n  - Permanent freezing of funds\n  - Total network shutdown or denial-of-service vectors\n  - Chain split or deep fork vectors\n  - Invalid transactions processing successfully or confirming\n  - Consensus failures\n  - Remotely exploitable weaknesses (as triggered through standard Stacks     - RPC and P2P ports only)\n  - (In smart contracts) Vote manipulation\n  - (In smart contracts) Block stuffing attacks\n  - (In smart contracts) Theft or loss of unclaimed rewards\n",
+      "programOverview": "During a planned network upgrade, and with a 3 month window after the last hard fork is released, we’ve lowered the payouts for all classes of bug reports. This is a temporary measure as we work out any undiscovered bugs in our testing during this network transition. We still welcome reports during this transition, but be aware there will likely be a reduced payout until the network upgrade is finalized. \n\nStacks is a Bitcoin layer for smart contracts; it enables smart contracts and decentralized applications to use Bitcoin as an asset and settle transactions on the Bitcoin blockchain. In the upcoming Nakamoto release of Stacks, Stacks will be secured by the entire hash power of Bitcoin, giving it Bitcoin finality.\n\nFor more information about Stacks, please visit [https://stacks.org/](https://stacks.org/) and [https://www.stacks.co/](https://www.stacks.co/). \n\nWe at the Stacks Foundation maintain essential components of the Stacks blockchain infrastructure. Our security team prioritizes the following attack vectors:\n\n  - Theft of funds\n  - Permanent freezing of funds\n  - Total network shutdown or denial-of-service vectors\n  - Chain split or deep fork vectors\n  - Invalid transactions processing successfully or confirming\n  - Consensus failures\n  - Remotely exploitable weaknesses (as triggered through standard Stacks     - RPC and P2P ports only)\n  - (In smart contracts) Vote manipulation\n  - (In smart contracts) Block stuffing attacks\n  - (In smart contracts) Theft or loss of unclaimed rewards",
       "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Blockchain__\n\n__Critical__\n  - Network not being able to confirm new transactions (Total network shutdown)\n  - Trigger a deep fork without spending the requisite BTC.\n  - Direct loss of funds other than permanent or temporary freezing\n  - Chain split due to different nodes processing the same block or transaction with different results\n  - Invalid transaction confirmed (such as with an incorrect nonce)\n\n__High__\n  - Unintended chain split (Network partition)\n  - Transient consensus failures\n  - Remotely-exploitable denial of service in a node\n  - Remotely-exploitable memory or disk access, restricted to the Stacks Blockchain RPC/P2P ports\n\n__Medium__\n  - DoS of greater than 30% of miners and does not shut down the network\n\n__Low__\n  - DoS of greater than 10% but less than 30% of miners and does not shut down the network\n  - Underpricing transaction fees relative to computation time\n\n__Smart Contracts__\n\n__Critical__\n  - Loss of user funds by permanent freezing or theft\n  - Loss of governance funds (limited to `.cost-vote`)\n  - Governance vote manipulation\n\n__High__\n  - Theft of unclaimed reward\n  - Permanent freezing of unclaimed reward\n\n__Medium__\n  - Block stuffing without fund transfers blocked\n  - Block stuffing the Stacks chain such that smart contract calls can be blocked, but without paying the requisite higher transaction fees\n\n__Low__\n  - Smart contract fails to deliver promised returns, but doesn’t lose value\n  - A smart contract has certain operations underpriced or overpriced in ways that we don’t know about (i.e. that we don’t have open issues for).",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for each category, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. If there is any discrepancy with the classification in the Impacts in Scope section, the classification in the Impacts in Scope section will hold true.\n\nPlease note that Critical finding bounties are capped at 10% of the damage resulting from the finding. This mostly takes into account technical and financial damage but also includes the “human” impact, including reputational risk. We will guarantee a minimum payout of $50,000 USD for all valid Critical findings.\n\n__We agree to:__\n\n  - Respond meaningfully to all reported issues in a timely manner.\n  - Not pursue legal action against or “counter-hack” any researchers acting in good faith and abiding by this program’s rules.\n  - Consider theoretical attacks and findings without proof-of-concept code as long as technically meaningful, evidence-based arguments are provided.\n\n__You must:__\n\n  - Undergo full KYC. We are based in the United States and abide by all relevant law, including OFAC controls and sanctions.\n  - Not be based or test from an OFAC-sanctioned country or region or (be a sanctioned individual or organization) as defined here: [https://ofac.treasury.gov/sanctions-programs-and-country-information](https://ofac.treasury.gov/sanctions-programs-and-country-information)\n  - Report all bugs using this template. __All fields are required unless otherwise marked__. Fields with a star (*) must be encrypted with the security@stacks.org GPG key, fingerprint 8A8B 3C3B 803A 0603 8FB5  3F69 357C 80AB 0885 87A0.\n    - Executive summary of issue: \n    - Finding details: \n    - Repository, file, and line of code where finding is found:  \n    - Steps to replicate*: \n    - Proof-of-concept exploitation code*: \n    - Screenshots or video of finding being exploited using the PoC you have provided*:  \n    - Impact of finding (short term): \n    - Impact of finding (long term): \n    - Mitigation suggestions (short term):\n    - Mitigation suggestions (long term): \n    - (Optional) Suggested patch:\n    - (Optional) Any useful links or resources:\n    - (Optional) Do you want a shout-out on our Security Wall of Fame? \n    - (Optional, if approved) Do you want a cybersecurity-themed NFT sent to your Stacks wallet?\n  - Use a private testnet. Testing on mainnet or public testnets is forbidden.\n\nPayouts are handled by the __Stacks Foundation team__ directly and are denominated in __USD__. However, payments will be made in the __USD__ equivalent in the __Stacks__ token (STX).\n",
-      "outOfScopeAndRules": "__The following vulnerabilities are excluded from the rewards for this bug bounty program:__\n\n  - Any attacks that the reporter has already exploited themselves, leading to real-world damage.\n  - Any attacks requiring access to leaked keys or credentials.\n  - Any attacks requiring access to a privileged address, including but not limited to any governance or strategist addresses.\n  - Any attacks on 3rd party services, including but not limited to AWS or Datadog.\n  - Any sub-optimal default configuration changes.\n\n__The following activities and findings are explicitly out of scope of this bug bounty program:__\n\n  - Any phishing, social engineering, or related attacks against the Stacks ecosystem or any members or customers thereof.\n  - Any reporting of findings that are already public or known to us, including but not limited to: open Github PRs and issues; previous findings reported by other researchers; findings discovered during currently-active third-party security assessments; and duplicated results of concluded assessments as posted here: [https://stacks.org/audits](https://stacks.org/audits). Novel methods of attack leading to an already-documented impact are allowed.\n  - Any testing of third-party components. \n    - If it’s not listed as in-scope, it’s safe to assume you shouldn’t be testing or relying on it. \n    - If you disagree, feel free to explain why in your submission but DO NOT continue testing with our explicit written approval.\n  - (If applicable to funds) Any actual theft or freeze of funds.\n  - Any findings requiring access to or the cooperation of a Bitcoin miner.\n  - Any theoretical attacks without substantial evidence and supporting documentation.\n\n__The following activities will make you immediately ineligible for a reward, regardless of your report’s validity:__\n\n  - __Any failure to provide any information requested in the above reporting template__.\n  - __Any failure to use the given public GPG key to encrypt sensitive information__.\n  - Any negative or hostile behavior towards the Stacks ecosystem or members thereof, including but not limited to abuse of the ImmuneFi mediation process, initiation of direct contact with any Stacks ecosystem member via any communications method outside of ImmuneFi, and any form of coercion, harassment, threats, intimidation, stalking, or extortion. \n    - This also includes repeatedly asking for multiple status updates - we promise we have eyes on your report.\n  - Any automated scanner findings or fuzz test results without an associated functional proof-of-concept.\n  - Any testing on mainnet or public testnet beyond the absolute minimum required to prove that your finding exists on them.\n  - Any active exploitation of a reported vulnerability beyond the absolute minimum required to prove the validity of your proof-of-concept code.\n    - You must not attack any other users under any circumstances. Test on your own addresses or contracts.\n  - Any public disclosure of a reported issue, including via CVE number assignment.\n  - Any failure to abide by any rules, requirements, or obligations as detailed above.\n\n__The following activities are prohibited by this bug bounty program:__\n\n  - Any testing with mainnet or public testnet contracts.\n    - all testing should be done on private testnets.\n  - Any testing with pricing oracles or third party smart contracts.\n  - Any attempting of phishing or other social engineering attacks against any Stacks ecosystem member. \n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks).\n  - Any denial-of-service attacks.\n  - Any automated testing of services on mainnet that generates significant amounts of traffic.\n  - Any public disclosure of an unpatched vulnerability in an embargoed bounty.\n",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for each category, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. If there is any discrepancy with the classification in the Impacts in Scope section, the classification in the Impacts in Scope section will hold true.\n\nPlease note that Critical finding bounties are capped at 10% of the damage resulting from the finding. This mostly takes into account technical and financial damage but also includes the “human” impact, including reputational risk. We will guarantee a minimum payout of $25,000 USD for all valid Critical findings.\n\n__We agree to:__\n\n  - Respond meaningfully to all reported issues in a timely manner.\n  - Not pursue legal action against or “counter-hack” any researchers acting in good faith and abiding by this program’s rules.\n  - Consider theoretical attacks and findings without proof-of-concept code as long as technically meaningful, evidence-based arguments are provided.\n\n__You must:__\n\n  - Undergo full KYC. We are based in the United States and abide by all relevant law, including OFAC controls and sanctions.\n  - Not be based or test from an OFAC-sanctioned country or region or (be a sanctioned individual or organization) as defined here: [https://ofac.treasury.gov/sanctions-programs-and-country-information](https://ofac.treasury.gov/sanctions-programs-and-country-information)\n  - Report all bugs using this template. __All fields are required unless otherwise marked__. Fields with a star (*) must be encrypted with the security@stacks.org GPG key, fingerprint 8A8B 3C3B 803A 0603 8FB5  3F69 357C 80AB 0885 87A0.\n    - Executive summary of issue: \n    - Finding details: \n    - Repository, file, and line of code where finding is found:  \n    - Steps to replicate*: \n    - Proof-of-concept exploitation code*: \n    - Screenshots or video of finding being exploited using the PoC you have provided*:  \n    - Impact of finding (short term): \n    - Impact of finding (long term): \n    - Mitigation suggestions (short term):\n    - Mitigation suggestions (long term): \n    - (Optional) Suggested patch:\n    - (Optional) Any useful links or resources:\n    - (Optional) Do you want a shout-out on our Security Wall of Fame? \n    - (Optional, if approved) Do you want a cybersecurity-themed NFT sent to your Stacks wallet?\n  - Use a private testnet. Testing on mainnet or public testnets is forbidden.\n\nPayouts are handled by the __Stacks Foundation team__ directly and are denominated in __USD__. However, payments will be made in the __USD__ equivalent in the __Stacks__ token (STX).",
+      "outOfScopeAndRules": "__The following vulnerabilities are excluded from the rewards for this bug bounty program:__\n\n  - Any attacks that the reporter has already exploited themselves, leading to real-world damage.\n  - Any attacks requiring access to leaked keys or credentials.\n  - Any attacks requiring access to a privileged address, including but not limited to any governance or strategist addresses.\n  - Any attacks on 3rd party services, including but not limited to AWS or Datadog.\n  - Any sub-optimal default configuration changes.\n\n__The following activities and findings are explicitly out of scope of this bug bounty program:__\n\n  - Any phishing, social engineering, or related attacks against the Stacks ecosystem or any members or customers thereof.\n  - Any reporting of findings that are already public or known to us, including but not limited to: open Github PRs and issues; previous findings reported by other researchers; findings discovered during currently-active third-party security assessments; and duplicated results of concluded assessments as posted here: [https://stacks.org/audits](https://stacks.org/audits). Novel methods of attack leading to an already-documented impact are allowed.\n  - Any testing of third-party components. \n    - If it’s not listed as in-scope, it’s safe to assume you shouldn’t be testing or relying on it. \n    - If you disagree, feel free to explain why in your submission but DO NOT continue testing with our explicit written approval.\n  - (If applicable to funds) Any actual theft or freeze of funds.\n  - Any findings requiring access to or the cooperation of a Bitcoin miner.\n  - Any theoretical attacks without substantial evidence and supporting documentation.\n\n__The following activities will make you immediately ineligible for a reward, regardless of your report’s validity:__\n\n  - __Any failure to provide any information requested in the above reporting template__.\n  - __Any failure to use the given public GPG key to encrypt sensitive information__.\n  - Any negative or hostile behavior towards the Stacks ecosystem or members thereof, including but not limited to abuse of the ImmuneFi mediation process, initiation of direct contact with any Stacks ecosystem member via any communications method outside of ImmuneFi, and any form of coercion, harassment, threats, intimidation, stalking, or extortion. \n    - This also includes repeatedly asking for multiple status updates - we promise we have eyes on your report.\n  - Any automated scanner findings or fuzz test results without an associated functional proof-of-concept.\n  - Any testing on mainnet or public testnet beyond the absolute minimum required to prove that your finding exists on them.\n  - Any active exploitation of a reported vulnerability beyond the absolute minimum required to prove the validity of your proof-of-concept code.\n    - You must not attack any other users under any circumstances. Test on your own addresses or contracts.\n  - Any public disclosure of a reported issue, including via CVE number assignment.\n  - Any failure to abide by any rules, requirements, or obligations as detailed above.\n\n__The following activities are prohibited by this bug bounty program:__\n\n  - Any testing with mainnet or public testnet contracts.\n    - all testing should be done on private testnets.\n  - Any testing with pricing oracles or third party smart contracts.\n  - Any attempting of phishing or other social engineering attacks against any Stacks ecosystem member. \n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks).\n  - Any denial-of-service attacks.\n  - Any automated testing of services on mainnet that generates significant amounts of traffic.\n  - Any public disclosure of an unpatched vulnerability in an embargoed bounty.",
       "assetsBodyV2": "All smart contracts of Stacks can be found at [https://github.com/stacks-network/stacks-blockchain/blob/master/src/chainstate/stacks/boot](https://github.com/stacks-network/stacks-blockchain/blob/master/src/chainstate/stacks/boot).  However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nThough the Node implementation asset has “testnet” in the folder name, it is not a testnet node and is within the scope of the bug bounty program.",
       "impactsBody": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Please note that all variants of remote denial-of-service attacks will automatically have their impact set to “Low”, regardless of any further downstream impact.__\n\nPlease review open PRs before your submission as all duplicate attacks are considered “Out of Scope” as per below.",
       "immunefiStandard": true,
@@ -256,37 +263,37 @@
         "blockchain_rewards": [
           {
             "level": "Critical",
-            "payout": "Up to USD $1,000,000"
+            "payout": "Up to USD $100,000"
           },
           {
             "level": "High",
-            "payout": "USD $50,000"
+            "payout": "USD $5,000"
           },
           {
             "level": "Medium",
-            "payout": "USD $10,000"
+            "payout": "USD $1,000"
           },
           {
             "level": "Low",
-            "payout": "USD $1,000"
+            "payout": "USD $100"
           }
         ],
         "smartcontract_rewards": [
           {
             "level": "Critical",
-            "payout": "Up to USD $1,000,000"
+            "payout": "Up to USD $100,000"
           },
           {
             "level": "High",
-            "payout": "USD $50,000"
+            "payout": "USD $5,000"
           },
           {
             "level": "Medium",
-            "payout": "USD $10,000"
+            "payout": "USD $1,000"
           },
           {
             "level": "Low",
-            "payout": "USD $1,000"
+            "payout": "USD $100"
           }
         ],
         "web_rewards": []
