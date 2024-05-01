@@ -1,6 +1,5 @@
 {
   "pageProps": {
-    "type": "bounty",
     "bounty": {
       "contentfulId": "2gfVNO1Ri3B0zPGW7mPIMx",
       "id": "geniusyield",
@@ -10,19 +9,19 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6YFKEKWaLwdH1t6IXgJXBb/3c4e0d346b5a33d3a6018c3f8c6eb513/Green_GEN_with_logo.png",
       "launchDate": "2024-02-26T01:53:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-04-29T17:02:12.637Z",
+      "updatedDate": "2024-05-01T17:00:43.137Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
           "level": "critical",
-          "payout": "USD $25,000",
+          "payout": "USD $15,000 to USD $25,000",
           "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "high",
-          "payout": "USD $10,000",
+          "payout": "USD $6,000 to USD $10,000",
           "pocRequired": true
         },
         {
@@ -34,7 +33,7 @@
         {
           "assetType": "websites_and_applications",
           "level": "high",
-          "payout": "USD $4,000",
+          "payout": "USD $3,000",
           "pocRequired": true
         }
       ],
@@ -249,7 +248,7 @@
       ],
       "programOverview": "Genius Yield is the all-in-one DeFi platform, that combines an order-book decentralized exchange (DEX) with an AI-powered yield optimizer, built from the ground up on the Cardano blockchain and designed to take advantage of benefits provided by Cardano’s EUTxO smart contracts, such as security, determinism, parallelism, scalability, and composability.\n\nThe overarching objective is to democratize Decentralized Finance by providing an all-in-one, easy-to-use solution, and thus making this new domain accessible to everyone.\n\nGenius Yield aims to provide a high level of security for their users. This bug bounty program offers the possibility for whitehats to report their findings and help us secure our DEX.\n\nFor more information about Genius Yield, please visit [https://www.geniusyield.co/](https://www.geniusyield.co/).  \n\nGenius Yield provides rewards in GENS. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__Responsible Publication__\n\nGenius Yield adheres to category 3: __Approval Required__. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nGenius Yield adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms stated in this page.\n\n__Known Issue Assurance__\n\nGenius Yield commits to providing Known Issue Assurance to bug submissions through their program. This means that Genius Yield will either disclose known issues publicly or at the very least privately via a self-reported bug submission in order to allow for a more objective and streamlined mediation process to prove that an issue is known. Otherwise, assuming the bug report itself is valid, it would result in the bug report being considered in-scope and due 100% of the reward with respect to the bug bounty program terms.\n\n__Previous Audits__\n\nGenius Yield has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [https://github.com/geniusyield/dex-contracts-api/blob/main/geniusyield-onchain/src/GeniusYield/OnChain/DEX/Anastasia_Labs____Genius_Yield_Audit.pdf](https://github.com/geniusyield/dex-contracts-api/blob/main/geniusyield-onchain/src/GeniusYield/OnChain/DEX/Anastasia_Labs____Genius_Yield_Audit.pdf)",
       "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Smart Contracts__\n\n__Critical__\n  - Any governance voting result manipulation\n  - Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield\n  - Permanent freezing of funds\n  - Miner-extractable value (MEV)\n  - Insolvency\n  - Theft of unclaimed yield\n\n__High__\n  - Permanent freezing of unclaimed yield\n  - Temporary freezing of funds for a minimum period of 24 hours\n\n__Medium__\n  - Smart contract unable to operate due to lack of funds \n  - Block stuffing for profit\n  - Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)\n  - Theft of gas\n  - Unbounded gas consumption \n\n__Low__\n  - Smart contract fails to deliver promised returns, but doesn’t lose value\n\n__Websites and Applications__\n\n__Critical__\n  - Ability to execute system commands\n  - Extract Sensitive data/files from the server such as /etc/passwd\n  - Stealing User Cookies\n  - Signing transactions for other users\n  - Redirection of user deposits and withdrawals\n  - Subdomain takeover resulting in financial loss (applicable for subdomains with addresses published)\n  - Wallet interaction modification resulting in financial loss\n  - Direct theft of user funds \n  - Tampering with transactions submitted to the user’s wallet\n  - Submitting malicious transactions to an already-connected wallet\n\n__High__\n  - Spoofing content on the target application (Persistent)\n  - Users Confidential information disclosure such as Email\n  - Subdomain Takeover without financial loss (applicable for subdomains with no addresses published)\n  - Privilege escalation to access unauthorized functionalities\n\n__Medium__\n  - Changing details of other users without direct financial impact (CSRF)\n  - Third-Party API keys leakage that demonstrates loss of funds or modification on the website.\n  - Redirecting users to malicious websites (Open Redirect)\n  - Taking Down the application/website\n\n__Low__\n  - Framing sensitive pages leading to financial loss (ClickJacking)\n  - Any impact involving a publicly released CVE without a working PoC\n  - Broken Link Hijacking\n\nIn case of discrepancy between [Immunefi Vulnerability Severity Classification System V2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2/) and Lido on Polygon’s classification above, Lido on Polygon’s classification will be followed.",
-      "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nCritical website and application bug reports will be rewarded with USD 15,000, only if the impact leads to a direct loss in funds involving an attack that does not require any user action at all. An impact of minting tokens on-chain beyond intended activity without requiring any user action would also be rewarded this amount due to the undesired dilution of existing circulating tokens. All other impacts that would be classified as Critical, or an impact resulting in a theft of funds that does not fall under this definition, would be rewarded USD 10,000.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n\n- Website and Applications, Critical\n- Website and Applications, High\n- Smart Contract, Critical\n- Smart Contract, High\n\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules?utm_source=immunefi). Bug report submissions without a PoC, when a PoC is required, will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the __Genius Yield__ team directly and are denominated in __USD__. However, payments are done in __GENS__. \n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability. For avoidance of doubt, if the reward amount is USD 5,000 and the average price is USD 0.20 per token, then the reward will be 25,000 units of GENS token.",
+      "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD $25,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD $15,000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\nCritical website and application bug reports will be rewarded with USD 15,000, only if the impact leads to a direct loss in funds involving an attack that does not require any user action at all. An impact of minting tokens on-chain beyond intended activity without requiring any user action would also be rewarded this amount due to the undesired dilution of existing circulating tokens. All other impacts that would be classified as Critical, or an impact resulting in a theft of funds that does not fall under this definition, would be rewarded USD 10,000.\n\n__Reward Calculation for High Level Reports__\n \nFor high smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD $10,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD $6,000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk.\n\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n\n- Website and Applications, Critical\n- Website and Applications, High\n- Smart Contract, Critical\n- Smart Contract, High\n\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules?utm_source=immunefi). Bug report submissions without a PoC, when a PoC is required, will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the __Genius Yield__ team directly and are denominated in __USD__. However, payments are done in __GENS__. \n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability. For avoidance of doubt, if the reward amount is USD 5,000 and the average price is USD 0.20 per token, then the reward will be 25,000 units of GENS token.",
       "outOfScopeAndRules": "__All Categories:__\n\n  - Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n  - Impacts caused by attacks requiring access to leaked keys/credentials\n  - Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n  - Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n  - Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n  - Best practice recommendations\n  - Feature requests\n  - Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Websites and Apps__\n\n  - Theoretical impacts without any proof or demonstration\n  - Impacts involving attacks requiring physical access to the victim device\n  - Impacts involving attacks requiring access to the local network of the victim\n  - Reflected plain text injection (e.g. url parameters, path, etc.)\n    - This does not exclude reflected HTML injection with or without JavaScript\n    - This does not exclude persistent plain text injection\n  - Any impacts involving self-XSS\n  - Captcha bypass using OCR without impact demonstration\n  - CSRF with no state modifying security impact (e.g. logout CSRF)\n  - Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n  - Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n  - Impacts causing only the enumeration or confirmation of the existence of users or tenants\n  - Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n  - Lack of SSL/TLS best practices\n  - Impacts that only require DDoS\n  - UX and UI impacts that do not materially disrupt use of the platform\n  - Impacts primarily caused by browser/plugin defects\n  - Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n  - Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n  - SPF/DMARC misconfigured records\n  - Missing HTTP Headers without demonstrated impact\n  - Automated scanner reports without demonstrated impact\n  - UI/UX best practice recommendations\n  - Non-future-proof NFT rendering\n\n__Smart contracts__\n\n- Incorrect data supplied by third party oracles (Not to exclude oracle manipulation/flash loan attacks)\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n- Best practice recommendations\n\n__Prohibited Activities:__\n\n  - Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n  - Any testing with pricing oracles or third-party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks that are executed against project assets\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
       "assetsBodyV2": "Unless explicitly listed, only pages of the web/app assets in addition to the direct link are considered in-scope of the bug bounty program. Other subdomains are not considered as in-scope. However, for subdomain takeovers that lead to an impact on the in-scope asset, please refer to our page about [Reported Subdomain Takeovers.](https://immunefisupport.zendesk.com/hc/en-us/articles/14352199704593-Reported-Subdomain-Takeovers)",
       "impactsBody": null,
@@ -285,11 +284,11 @@
         "smartcontract_rewards": [
           {
             "level": "Critical",
-            "payout": "USD $25,000"
+            "payout": "USD $15,000 to USD $25,000"
           },
           {
             "level": "High",
-            "payout": "USD $10,000"
+            "payout": "USD $6,000 to USD $10,000"
           }
         ],
         "web_rewards": [
@@ -299,17 +298,14 @@
           },
           {
             "level": "High",
-            "payout": "USD $4,000"
+            "payout": "USD $3,000"
           }
         ]
       },
       "premiumTriaging": false
     },
-    "project": null,
-    "isBoosted": false,
-    "academyContent": null,
-    "layoutProps": {
-      "headerMarginBottom": null
+    "project": {
+      "premiumTriaging": false
     }
   },
   "__N_SSG": true
