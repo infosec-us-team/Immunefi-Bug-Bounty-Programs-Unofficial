@@ -7,27 +7,27 @@
       "project": "Arcade.xyz",
       "maxBounty": 50000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5dWtCbcKlsOSopSoefwWlC/28ab44ce13aff5731b8c55d3a731ea53/Arcade_logo.jpeg",
-      "launchDate": "2022-09-20T11:30-06:00",
+      "launchDate": "2022-09-20T17:30:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-04-08T18:56:40.083Z",
+      "updatedDate": "2024-05-06T11:33:07.969Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
           "level": "critical",
-          "payout": "Up to USD $50,000",
+          "payout": "USD $20,000 to USD $50,000",
           "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "high",
-          "payout": "USD $20,000",
+          "payout": "USD $5,000 to USD $20,000",
           "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "medium",
-          "payout": "USD $5,000",
+          "payout": "USD $2,500",
           "pocRequired": false
         },
         {
@@ -157,6 +157,20 @@
           "url": "https://etherscan.io/address/0x3c77269CA7f4AC42B6f0bFC10D9f44406351d396#code",
           "description": " V2ToV3RolloverWithItems",
           "isPrimacyOfImpact": null
+        },
+        {
+          "id": "1szvprdh699AHlOr1WaGry",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x80bDdd56b947c547Ab8964D80E98E42Ff77a5793#code",
+          "description": "ArcadeStakingRewards",
+          "isPrimacyOfImpact": null
+        },
+        {
+          "id": "4MEKIDV1hdmFZgOfhHohAr",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x72854FBb44d3dd87109D46a9298AEB0d018740f0#code",
+          "description": "AirdropSingleSidedStaking",
+          "isPrimacyOfImpact": null
         }
       ],
       "impacts": [
@@ -175,6 +189,18 @@
         {
           "id": "2e85ffPNc6szOrhYMLY3IB",
           "title": "Ability for an attacker to claim collateral for defaulted loans in which they are not a counterparty",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "EcAVgFWs2Y9TJ31mAzRmC",
+          "title": "Direct theft of any staking user funds, whether at-rest or in-motion",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "WApzyCgxfMizBicS82T02",
+          "title": "Permanent freezing of staked funds",
           "type": "smart_contract",
           "severity": "critical"
         },
@@ -221,6 +247,84 @@
           "severity": "high"
         },
         {
+          "id": "3kGxaaLQrqDwHNHqabuBaK",
+          "title": "Theft of unclaimed staking yield",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "ndXocWHe4I7VyIBsqt4qh",
+          "title": "Permanent freezing of unclaimed staking yield",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "68mWg8KszCL4ATKuBsXGF2",
+          "title": "Temporary freezing of staked funds",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "UhOAt1eC2XIWXAcyq8WWf",
+          "title": "The ability of a user to withdraw their staked tokens before the end of the lock period",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "4neJ5cOlyDhsbvrEjzi8P2",
+          "title": "The ability to force the issuance of a bonus multiplier incompatible with the chosen lock period",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "2IANPh7TayFM8GrzL1VgdE",
+          "title": "The ability to force the issuance of voting power incompatible with the properties of a user’s stake",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "6RqpwDMP40p9uP6gpmSZIQ",
+          "title": "The ability to prevent another staker from claiming their rewards",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "6kvqT28wqfMJEYKdv4bp4j",
+          "title": "The ability to prevent another staker from withdrawing their staked tokens",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "6Iv5ln0n6Eoy0nDfOLDIAF",
+          "title": "The ability to overdraw rewards",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "1i34OXQuQCqKIQma7QkTMb",
+          "title": "The ability to overdraw staking tokens",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "5NYFrMMtLkhcWyMpYw8tnX",
+          "title": "The alteration of a user's voting power",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "27OeHF2V1esQpyoWHT2QQJ",
+          "title": "Ability for an attacker to gain governance voting power for stakes in which they are not a participant",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "60snpIXsiTFOxC1WImIlI5",
+          "title": "Staking contract fails to deliver promised returns.",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
           "id": "5xu084xK0ETeyQMGCne5C2",
           "title": "Ability to freeze the protocol from originating new loans, without affecting currently open loans or locking assets",
           "type": "smart_contract",
@@ -251,17 +355,47 @@
           "severity": "medium"
         },
         {
+          "id": "2saS3R3GsMrENGCcPQOHXC",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol) and theft of gas",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "1PsUSMqLoCRBh2G0Rk87iH",
+          "title": "Unbounded gas consumption",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "458uYydH0FRRMtXcV6LS5x",
+          "title": "Ability to block the recoverERC20 functions in the staking contracts.",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
           "id": "1lFL613z7g87R9YXSKirHO",
           "title": "Any finding which impacts protocol logic without circumventing loan rules or stealing/freezing user funds",
           "type": "smart_contract",
           "severity": "low"
+        },
+        {
+          "id": "7uEEvU36DPyOjlSi2ASV99",
+          "title": "Staking contract fails to deliver promised rewards, but doesn't lose any tokens.",
+          "type": "smart_contract",
+          "severity": "low"
+        },
+        {
+          "id": "7EZ6tHOZjamDAmFqvBhOYc",
+          "title": "Any finding which impacts staking contract logic without circumventing staking rules or stealing/freezing user funds.",
+          "type": "smart_contract",
+          "severity": "low"
         }
       ],
-      "programOverview": "Arcade.xyz is the first of its kind Web3 platform to enable liquid lending markets for NFTs. At Arcade.xyz, we think all assets will eventually become digitized and that NFTs represent a 0 to 1 innovation in storing value and ownership attribution for unique digital assets.\n\nArcade.xyz's focus is on building primitives, infrastructure, and applications enabling the growth of NFTs as an asset class. As such, the first product we released is an innovative peer to peer lending marketplace that allows NFT owners to unlock liquidity on baskets of NFTs on Ethereum. Lenders that hold stablecoins or ERC20 tokens can participate in a new source of DeFi yield by underwriting term loans collateralized by borrowers' NFTs.\n\nArcade.xyz is our end user application that strives to become the premier liquidity venue for NFTs, via a protocol for NFT collateralized loans with flexible terms. Today NFTs are largely digital representations of artwork and media content, however, our belief is that in the not so distant future NFTs will encompass digital rights, metaverse assets, and digital identity.\n\nFor more information about Arcade.xyz, please visit [https://www.arcade.xyz/](https://www.arcade.xyz/).",
+      "programOverview": "Arcade.xyz is the first of its kind Web3 platform to enable liquid lending markets for NFTs. At Arcade.xyz, we think all assets will eventually become digitized and that NFTs represent a 0 to 1 innovation in storing value and ownership attribution for unique digital assets.\n\nArcade.xyz's focus is on building primitives, infrastructure, and applications enabling the growth of NFTs as an asset class. As such, the first product we released is an innovative peer to peer lending marketplace that allows NFT owners to unlock liquidity on baskets of NFTs on Ethereum. Lenders that hold stablecoins or ERC20 tokens can participate in a new source of DeFi yield by underwriting term loans collateralized by borrowers' NFTs.\n\nArcade.xyz is our end user application that strives to become the premier liquidity venue for NFTs, via a protocol for NFT collateralized loans with flexible terms. Today NFTs are largely digital representations of artwork and media content, however, our belief is that in the not so distant future NFTs will encompass digital rights, metaverse assets, and digital identity.\n\nFor more information about Arcade.xyz, please visit [https://docs.arcadedao.xyz](https://docs.arcadedao.xyz).\n\nOn October 24, 2023, ArcadeDAO was launched, featuring a [governance system](https://docs.arcadedao.xyz/docs/governance-source-code) that empowers members to actively influence both the technical and non-technical facets of the DAO and the Arcade Protocol. The $ARCD token functions as the governance token for ArcadeDAO.\n\nTo increase the utility of the $ARCD token and enhance user engagement in the Arcade ecosystem, ArcadeDAO introduced two staking strategies. These strategies offer users the chance to earn rewards while participating in DAO governance and providing liquidity.\n\nTo learn more, please visit [https://docs.arcadedao.xyz/docs/arcade-staking-documentation](https://docs.arcadedao.xyz/docs/arcade-staking-documentation).\n\n__Responsible Publication__\n\nArcade adheres to category 3 - Approval Required. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nArcade adheres to the Primacy of Impact for the following impacts:\n- Smart Contract - Critical\n- Smart Contract - High\n- \nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Known Issue Assurance__\n\nArcade commits to providing Known Issue Assurance to bug submissions through their program. This means that Arcade will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n- [https://github.com/arcadexyz/arcade-protocol/tree/main/audits](https://github.com/arcadexyz/arcade-protocol/tree/main/audits)\n- [https://github.com/arcadexyz/dao-contracts?tab=readme-ov-file#known-gotchas](https://github.com/arcadexyz/dao-contracts?tab=readme-ov-file#known-gotchas)\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Arcade has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll High and Critical Smart Contract bug reports require a PoC and a suggestion for a fix to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nCritical smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward o __USD 20 000__. \n\nAll vulnerabilities marked in the [https://github.com/arcadexyz/arcade-protocol/tree/main/audits](https://github.com/arcadexyz/arcade-protocol/tree/main/audits) are not eligible for a reward.\n\nPayouts are handled by the __Arcade.xyz__ team directly and are denominated in USD. However, payouts are done in __USDC__.",
-      "outOfScopeAndRules": "Within the defined scope above, the general rules are that \n\n  - The bug bounty is based on the following assumptions about token behavior:\n  - External token contracts (for collateral and principal currency) are assumed to follow relevant token standards (ERC20, ERC721, ERC1155).\n  - Any attack related to token upgradeability is out of scope.\nLost principal or fees related to fee-on-transfer tokens are out of scope.\n  - Attacks related to special admin permission of tokens (e.g. an ERC721 where admins can transfer any user’s tokens) are out of scope.\n  - Attacks related to explicitly malicious implementations of standard token functions (e.g. ERC20 tokens that consume the block gas limit on transfer) are out of scope.\n\nThe bug bounty assumes the following operational and trust models:\n  - For any contract which is Ownable or contains privileged operations for certain addresses (e.g. upgradeable contracts), the owner addresses are assumed to behave rationally and honestly.\n  - All contracts should be assumed to be deployed and configured correctly.\n  - Each counterparty in the loan process is assumed to act in their own financial self-interest.\n\nAny finding or impact which is derived from one of the above assumptions being broken (e.g., an ERC721 that does not revert on a failed transfer, or an upgradeable ERC20 that can be made to fail on transfer via upgrade) is out of scope for this program.\n\nAny finding based on one counterparty misleading the other as to the nature of the loan principal or collateral is out of scope. For instance, a borrower using a fake BAYC contract as collateral to trick a lender into giving favorable terms is an attack that is out of scope for this program.\n\nAny attack related to convincing lenders to lend against assets flagged as stolen on other platforms (e.g. OpenSea) is out of scope.\n\nAny phishing attack that requires social engineering in order to convince one counterparty to enter a loan under false pretenses (e.g. forcing them to sign loan terms differing from ones on a phishing UI), is considered out of scope for this program.\n\nThe following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n  - Any attack that has been previously reported, whether or not it has been publicly disclosed\n\n__Smart Contracts__\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n  - Non-protocol related attacks around signatures (e.g. phishing sites that entice users to sign signatures with unfavorable terms)\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "\nAll smart contracts of Arcade.xyz can be found at [https://github.com/arcadexyz/arcade-protocol/tree/main/contracts](https://github.com/arcadexyz/arcade-protocol/tree/main/contracts). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nThough only the proxy contract for AssetVault  is  listed as in-scope, current implementation and any further updates to the implementation contract are considered in scope. When reporting a bug, please make sure to select the proxy smart contract as the target. AssetVault is the only upgradeable contract in the protocol. \n\nIf an impact can be caused to any other asset managed by Arcade.xyz that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project. This only applies to Critical and High impacts. \n",
+      "outOfScopeAndRules": "Within the defined scope above, the general rules are that \n\nThe bug bounty is based on the following assumptions about token behavior:\n- External token contracts (for collateral and principal currency) are assumed to follow relevant token standards (ERC20, ERC721, ERC1155).\n- Any attack related to token upgradeability is out of scope.\n- Lost principal or fees related to fee-on-transfer tokens are out of scope.\n- Attacks related to special admin permission of tokens (e.g. an ERC721 or ERC20 where admins can transfer any user’s tokens) are out of scope.\n- Attacks related to explicitly malicious implementations of standard token functions (e.g. ERC20 tokens that consume the block gas limit on transfer) are out of scope.\n\nThe bug bounty assumes the following operational and trust models:\n- For any contract which is Ownable or contains privileged operations for certain addresses (e.g. upgradeable contracts), the owner addresses are assumed to behave rationally and honestly.\n- All contracts should be assumed to be deployed and configured correctly.\n- Each counterparty in the loan process is assumed to act in their own financial self-interest.\n- Users in the staking process are assumed to act in their own financial self-interest.\n- Any finding or impact which is derived from one of the above assumptions being broken (e.g., an upgradeable ERC20 that can be made to fail on transfer via upgrade) is out of scope for this program.\n\n\nAny finding or impact which is derived from one of the above assumptions being broken (e.g., an ERC721 that does not revert on a failed transfer, or an upgradeable ERC20 that can be made to fail on transfer via upgrade) is out of scope for this program.\n\nAny finding based on one counterparty misleading the other as to the nature of the loan principal or collateral is out of scope. For instance, a borrower using a fake BAYC contract as collateral to trick a lender into giving favorable terms is an attack that is out of scope for this program.\n\nAny attack related to convincing lenders to lend against assets flagged as stolen on other platforms (e.g. OpenSea) is out of scope.\n\nAny phishing attack that requires social engineering in order to convince one counterparty to enter a loan under false pretenses (e.g. forcing them to sign loan terms differing from ones on a phishing UI), is considered out of scope for this program.\n\nThe following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n  - Any attack that has been previously reported, whether or not it has been publicly disclosed\n\n__Smart Contracts__\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n  - Non-protocol related attacks around signatures (e.g. phishing sites that entice users to sign signatures with unfavorable terms)\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": "All smart contracts of Arcade.xyz can be found at [https://github.com/arcadexyz/arcade-protocol/tree/main/contracts](https://github.com/arcadexyz/arcade-protocol/tree/main/contracts) and [https://github.com/arcadexyz/dao-contracts/tree/main/src](https://github.com/arcadexyz/dao-contracts/tree/main/src). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nThough only the proxy contract for AssetVault  is  listed as in-scope, current implementation and any further updates to the implementation contract are considered in scope. When reporting a bug, please make sure to select the proxy smart contract as the target. AssetVault is the only upgradeable contract in the protocol. \n\nIf an impact can be caused to any other asset managed by Arcade.xyz that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project. This only applies to Critical and High impacts.",
       "impactsBody": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "immunefiStandard": true,
       "tags": {
@@ -291,15 +425,15 @@
         "smartcontract_rewards": [
           {
             "level": "Critical",
-            "payout": "Up to USD $50,000"
+            "payout": "USD $20,000 to USD $50,000"
           },
           {
             "level": "High",
-            "payout": "USD $20,000"
+            "payout": "USD $5,000 to USD $20,000"
           },
           {
             "level": "Medium",
-            "payout": "USD $5,000"
+            "payout": "USD $2,500"
           },
           {
             "level": "Low",
@@ -320,5 +454,5 @@
       "ogImg": "/api/bounty/og-image?project=Arcade.xyz"
     }
   },
-  "__N_SSP": true
+  "__N_SSG": true
 }
