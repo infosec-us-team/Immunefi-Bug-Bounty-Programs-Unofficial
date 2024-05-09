@@ -9,20 +9,20 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4tl7aEnEwJyvmUxPKqR2KH/2ad9232b3e2e462c88aa27262ce93deb/OpenZeppelin_Logo.jpeg",
       "launchDate": "2021-11-15T15:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-04-08T18:56:09.140Z",
+      "updatedDate": "2024-05-09T14:00:58.627Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
           "level": "critical",
-          "payout": "USD $25,000",
+          "payout": "USD $5,001 to USD $25,000",
           "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "high",
-          "payout": "USD $5,000",
-          "pocRequired": false
+          "payout": "USD $2,501 to USD $5,000",
+          "pocRequired": true
         },
         {
           "assetType": "smart_contract",
@@ -45,9 +45,58 @@
           "url": "https://github.com/OpenZeppelin/openzeppelin-contracts",
           "description": "Smart Contract",
           "isPrimacyOfImpact": null
+        },
+        {
+          "id": "6ETI0ohXTF3lFiZdx90vei",
+          "type": "smart_contract",
+          "url": "https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable",
+          "description": "Smart Contract",
+          "isPrimacyOfImpact": null
         }
       ],
       "impacts": [
+        {
+          "id": "6O80htQGt75ghk5HqIT9ei",
+          "title": "Direct theft of user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "3QNjpKPgwDyfpbjJmjS1j4",
+          "title": "Access control is bypassed, including privilege escalation",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "4DvYqdhsvQd3S5sAI52dTU",
+          "title": "Governance voting result manipulation",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "5S2wX6ddlp9P5THKY39NC8",
+          "title": "Permanent freezing of funds",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "GBLo2gFLrfsmRQ7C8jiRN",
+          "title": "Permanent denial of service (smart contract is made unable to operate)",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "6zlT44X1vSD9VIs0l755nu",
+          "title": "Theft of unclaimed yield / Permanent freezing of unclaimed yield - Impact severity is determined by potential yield lost",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "6uZPRPQQHJ0QguQbYasJi3",
+          "title": "Temporary freezing of funds - Impact severity depends on funds at risk",
+          "type": "smart_contract",
+          "severity": "high"
+        },
         {
           "id": "7ItZCLTskhMA1BTEyNF2zB",
           "title": "Smart contract unable to operate due to lack of token funds",
@@ -77,13 +126,25 @@
           "title": "Contract fails to deliver promised returns, but doesn't lose value",
           "type": "smart_contract",
           "severity": "low"
+        },
+        {
+          "id": "26wb3CaHikbWGeJMOl2212",
+          "title": "Temporary denial of service (smart contract is made unable to operate for one block, functionality is restored in the next block)",
+          "type": "smart_contract",
+          "severity": "low"
+        },
+        {
+          "id": "SJ8cyvypRe4XCNz1vtuBF",
+          "title": "Invalid events are emitted, potentially confusing indexers (internal storage is unaffected)",
+          "type": "smart_contract",
+          "severity": "low"
         }
       ],
-      "programOverview": "As the premier crypto cybersecurity technology and services company, we’ve built OpenZeppelin Contracts with our best [security practices](https://contracts.openzeppelin.com/security). We are committed to ensuring the utmost security in our community-vetted smart contracts, and our bounty program provides rewards of up to $25,000 USD for reporting critical vulnerabilities in our smart contracts library.\nThis bug bounty program is focused on OpenZeppelin Contracts and mainly intends to prevent:\n\nLoss of funds by freezing another user’s funds, or theft of another user’s funds\nPermanent denial of service (smart contract is made unable to operate)\nAccess control bypass, including privilege escalation\nSmart contract not behaving as intended\n\nThis is an overlay bug bounty program for OpenZeppelin’s Contracts library. A vulnerability in an OpenZeppelin contract would likely affect many other projects and could trigger various other bounties. This program would be potentially additive to those cases. \n\nOpenZeppelin may issue [GHSA/CVEs](https://cve.report/vendor/openzeppelin) for reported vulnerabilities and will offer to credit issue reports in those public reports.\n\n__KYC Requirements__\n\nOpenZeppelin’s bug bounty program requires an invoice to be submitted and a KYC screen to be performed prior to OpenZeppelin providing a bug bounty reward. Once a payout is confirmed, a member of OpenZeppelin will reach out to you directly to collect the necessary information, including:\n- Full Legal Name\n- Email Address\n- Mailing Address\n- Wallet Address (Ethereum Mainnet Only)",
-      "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n- Smart Contracts and Blockchain \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nThe rewards stated here are additive to any existing bug bounty programs hosted by projects that are currently using OpenZeppelin contracts. \n\nBounty rewards are given according to an impact/likelihood matrix for assessing threat levels. Each issue is assessed considering the likelihood of the vulnerability being successfully exploited and the expected impact in scope to a single instance of the affected smart contract.\n\nCritical severity bug reports must come with a PoC in order to be considered for a reward.\n\nBugs introduced by a release candidate version and reported during the review period - within three weeks of the version release in GitHub, will receive a 50% bonus.\n\nPayouts are handled by the __OpenZeppelin__ team directly and are denominated in USD. However, payouts are done in __ETH__ or __USDC__.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Susceptibility to block timestamp manipulation\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "All smart contracts in the “contracts” directory are included in the bug bounty, except those under “contracts/mocks”, which are testing artifacts.",
+      "programOverview": "As the premier crypto cybersecurity technology and services company, we’ve built OpenZeppelin Contracts with our best [security practices](https://contracts.openzeppelin.com/security). We are committed to ensuring the utmost security in our community-vetted smart contracts, and our bounty program provides rewards of up to $25,000 USD for reporting critical vulnerabilities in our smart contracts library.\nThis bug bounty program is focused on OpenZeppelin Contracts and mainly intends to prevent:\n\n- Loss of funds by freezing another user’s funds, or theft of another user’s funds\n- Permanent denial of service (smart contract is made unable to operate)\n- Access control bypass, including privilege escalation\n- Smart contract not behaving as intended\n\nThis is an overlay bug bounty program for OpenZeppelin’s Contracts library. A vulnerability in an OpenZeppelin contract would likely affect many other projects and could trigger various other bounties. This program would be potentially additive to those cases. \n\nOpenZeppelin may issue [GHSA/CVEs](https://cve.report/vendor/openzeppelin) for reported vulnerabilities and will offer to credit issue reports in those public reports.\n\n__Responsible Publication__\n\nOpenZeppelin adheres to category 1 - Transparent. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication ](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nOpenZeppelin adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page. \n\n__Known Issue Assurance__\n\nOpenZeppelin commits to providing Known Issue Assurance to bug submissions through their program. This means that OpenZeppelin will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n__Previous Audits__\n\nOpenZeppelin’s completed audit reports can be found at [OpenZeppelin Contracts’ Security Center](https://contracts.openzeppelin.com/security) while previous security advisories are available at [GHSA/CVEs](https://github.com/OpenZeppelin/openzeppelin-contracts/security/advisories). OpenZeppelin will offer to credit issue reports in those public reports. Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n__Feasibility Limitations__\n\nOpenZeppelin will assess likelihood depending on the complexity of the steps involved in its execution and the exposure created by the vulnerability, as well as impact depending on the assets or systems at risk, capped to the worst-case impacted instance using the affected code.\n\nOpenZeppelin will evaluate the vulnerability of the affected code considering whether the issue arises directly from the library code while used as provided or if it requires a custom user implementation. Determining the likelihood of exploit on custom implementations will depend on how likely a library user is to make such an implementation and how common is the pattern leading to it.\n\nFor example, if a data structure can be cleared by any caller of a smart contract, its likelihood will be **high** if it holds user balances, although, if the vulnerability allows overriding non-critical values such as an already executed governor proposal flag, its likelihood will be **low** but can escalate to **medium** if it comes with side effects that increase the incentives of exploitation (e.g. proposal re-execution).\n\nSimilarly, if an instance of an AccessManager can be made unusable, its impact will be **high** but could be lowered to **medium** if the attacker requires special permissions in the system, and finally, it will be considered **low** if the contract is frozen only during 1 block before a threshold is met.\n\nThe final threat level will be decided based on the matrix above. For a vulnerability with **low** impact, if its likelihood is **high** because the cost of exploiting a single instance is negligible, then its final threat level will be **medium severity**.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, OpenZeppelin has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).\n\n__KYC Requirements__\n\nOpenZeppelin’s bug bounty program requires an invoice to be submitted and a KYC screen to be performed prior to OpenZeppelin providing a bug bounty reward. Once a payout is confirmed, a member of OpenZeppelin will reach out to you directly to collect the necessary information, including:\n- Full Legal Name\n- Email Address\n- Mailing Address\n- Wallet Address (Ethereum Mainnet Only)",
+      "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. They refer to a regular impact rating in our likelihood/impact matrix (up to high severity) and will partially define the report’s final threat. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nThe rewards stated here are additive to any existing bug bounty programs hosted by projects that are currently using OpenZeppelin contracts. \n\nBounty rewards are given according to an impact/likelihood [matrix for assessing threat levels](https://github.com/OpenZeppelin/zpl.in/assets/33379285/f0a1de44-fec8-4556-b21c-c84282b2910c). Each issue is assessed considering the likelihood of the vulnerability being successfully exploited and the expected impact in scope to a single instance of the affected smart contract. Note that, as can be seen in the matrix, if the impact is Critical then the threat is always Critical, for other impacts the maximum reduction is one level only if the likelihood is low, and if the likelihood is high then the threat is increased one level above the impact. \n\n__Proof of Concept (PoC) Requirements__\n\nA PoC compliant with [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) is required for the following severity levels:\n- Smart Contract: Critical\n- Smart Contract: High\n\nBugs introduced by a release candidate version and reported during the review period, the dates for which will be declared by OpenZeppelin on each release, will receive a 50% bonus.\n\nPayouts are handled by the __OpenZeppelin__ team directly and are denominated in USD. However, payouts are done in __ETH__ or __USDC__.",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n- Attacks that the reporter has already exploited themselves\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Smart Contracts and Blockchain__\n\n- Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Susceptibility to block timestamp manipulation\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n- ERC mandated behaviors\n\nThe following activities are prohibited by this bug bounty program:\n\n- Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": "All smart contracts in the “contracts” directory are included in the bug bounty, except those under “contracts/mocks”, which are testing artifacts, and those under “contracts/vendor”.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -111,11 +172,11 @@
         "smartcontract_rewards": [
           {
             "level": "Critical",
-            "payout": "USD $25,000"
+            "payout": "USD $5,001 to USD $25,000"
           },
           {
             "level": "High",
-            "payout": "USD $5,000"
+            "payout": "USD $2,501 to USD $5,000"
           },
           {
             "level": "Medium",
