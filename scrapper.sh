@@ -48,7 +48,7 @@ for ((c = 0; c <= $bounties_length - 1; c++)); do
 		echo "$PROJECT_DATA" | jq 'del(.pageProps.project.vault)' >./project/$name.json
 		#Print DONE
 		echo "Scanned: $name [$c/$bounties_length]"
-		sleep .2
+		sleep .5
 
 	else
 		# PANIC!
