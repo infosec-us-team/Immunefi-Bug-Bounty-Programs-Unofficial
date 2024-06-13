@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5aOBSUu0V6jW0Op03W4NDF/beec6ccbe2927310dffb147f24fdb902/Twitter_profile_400x400.png",
       "launchDate": "2022-06-16T16:30:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-05-22T19:02:14.982Z",
+      "updatedDate": "2024-06-12T07:55:19.267Z",
       "kyc": false,
       "rewards": [
         {
@@ -28,6 +28,24 @@
           "assetType": "smart_contract",
           "level": "medium",
           "payout": "USD $1,000 to USD $5,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "critical",
+          "payout": "USD $5,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "high",
+          "payout": "USD $3,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "medium",
+          "payout": "USD $1,000",
           "pocRequired": true
         }
       ],
@@ -431,6 +449,48 @@
           "severity": "critical"
         },
         {
+          "id": "3HbQRyqJZ9e6HXXBzKSCgt",
+          "title": "Taking Down the application/website",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "2AVfPwcUcrORAzQW6CWFz",
+          "title": "Direct theft of user funds",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "5hqOcJbxraD4zz6GBZwZw",
+          "title": "Execute arbitrary system commands",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "4mWyGkJekTNIlQjjBmr3ls",
+          "title": "Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "53TK02cCKbmzUqVvsoUgda",
+          "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc.",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "2P0zj00XZ2ZlfmXD80ux29",
+          "title": "Subdomain takeover with already-connected wallet interaction",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
+          "id": "5RtjtGfUyROyESanDvJ6vk",
+          "title": "Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
           "id": "59iA6dtOLkacSbZKtHFU5W",
           "title": "Theft of unclaimed yield",
           "type": "smart_contract",
@@ -446,6 +506,30 @@
           "id": "1baixPeicLiwJNsTYsNgvN",
           "title": "Temporary freezing of funds for a minimum period of 30 days",
           "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "51iYcs8wSHbYvlLqCc1vvH",
+          "title": "Injecting/modifying the static content on the target application without Javascript (Persistent) such as HTML injection without Javascript, replacing existing text with arbitrary text, arbitrary file uploads, etc.",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "75tTkQikw4TeGJg7Ezz9p1",
+          "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as email or password of the victim, etc.",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "25lrvlFlGeXMHX1s70hNlp",
+          "title": "Improperly disclosing confidential user information such as email address, phone number, physical address, etc.",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "6mq3HxknmdHWAJhY3A636Q",
+          "title": "Subdomain takeover without already-connected wallet interaction",
+          "type": "websites_and_applications",
           "severity": "high"
         },
         {
@@ -477,12 +561,30 @@
           "title": "Unbounded gas consumption",
           "type": "smart_contract",
           "severity": "medium"
+        },
+        {
+          "id": "5pYPR2BqGwH8KFCYj70ph5",
+          "title": "Redirecting users to malicious websites (Open Redirect)",
+          "type": "websites_and_applications",
+          "severity": "medium"
+        },
+        {
+          "id": "6FXWiEELHZD6yAmcqmiLmd",
+          "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as changing the first/last name of user, or en/disabling notification",
+          "type": "websites_and_applications",
+          "severity": "medium"
+        },
+        {
+          "id": "2gp5HRVod0igQ13kUL3jmI",
+          "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data",
+          "type": "websites_and_applications",
+          "severity": "medium"
         }
       ],
       "programOverview": "Lista DAO, powered by the BNB Smart Chain, introduces an innovative integration of Liquid Staking and Staking services. Lista DAO's native CDP stablecoin is known as lisUSD, and it is over-collateralized against a variety of tokens such as BNB, ETH, wBETH and slisBNB. Upon borrowing lisUSD, users can opt to stake their holdings for long-term yield on affiliated partner DEXes, engage in trading activities, or utilize lisUSD as a form of monetary payment.\n\nLista DAO also offers simple and secure liquid staking solutions on the BNB Smart Chain, with users minting Lista Staked BNB, slisBNB, in exchange for staking their BNB. The staked BNB is held securely on BSC validator nodes providing attractive liquid staking yields on their staked BNB.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\n__Reward calculation of Critical bug reports__\n\nFor critical smart contract bugs, the reward amount is __10%__ of the funds directly affected up to a maximum of __USD 1 000 000 USD__, however there is a minimum of __USD 100 000__\n\n__Reward calculation of High bug reports__\t\n\nHigh severity vulnerabilities concerning theft of unclaimed yield, permanent freezing of unclaimed yield, and temporary freezing of funds for a minimum period of 30 days are considered at the full amount of funds at risk, capped at the maximum high reward. This is to incentivize security researchers to uncover and responsibly disclose vulnerabilities that may have not have significant monetary value today, but could still be damaging to the project if it goes unaddressed. \n\nAll vulnerabilities marked in the [Certik security review](https://drive.google.com/file/d/1A_iAbKkRyToXjFA25v8gLFfuSqFuIPEd/view?usp=sharing), [Peckshield security review](https://drive.google.com/file/d/1tyH5DAg0EE12TKOvucORw-kSsXpJFofu/view?usp=sharing), [Slowmist security review](https://drive.google.com/file/d/1ki1MrZcnkHReKuR5cMY40n2j-U9bnx25/view?usp=sharing), [Veridise security review](https://github.com/lista-dao/lista-dao-contracts/blob/master/audits/Veridise_270622.pdf) and https://github.com/lista-dao/synclub-contracts/tree/master/audit and https://github.com/lista-dao/lista-dao-contracts/tree/master/audits are not eligible for a reward.\n\nAll rewards for the Lista bug bounty program are scaled based on an internally established team criteria, taking into account the exploitability of the bug, the impact it causes, and the likelihood of the vulnerability presenting itself, which is especially factored in with bug reports requiring multiple conditions to be met that are currently not in-place. However, there is a minimum reward of __USD 1,000__ for each severity level, rewards will be provided at the determined fair value by the team depending on these conditions, assuming that the bug report is in-scope of the bug bounty program.\n\nPayouts are handled by the __Lista__ team directly and are denominated in __USD__. However, payouts are done in __USDT, USDC and lisUSD__, with the choice of the ratio at the discretion of the team.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n\n__Websites__\n- Theoretical vulnerabilities without any proof or demonstration\n- Content spoofing / Text injection issues without any security impact\n- Self-XSS (Self Cross-Site Scripting)\n- Captcha bypass using OCR\n- CSRF with no significant security impact (e.g., logout CSRF, change language, etc.)\n- Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”)\n- Server-side information disclosure such as IPs, server names, and most stack traces\n- Vulnerabilities used to enumerate or confirm the existence of users or tenants\n- Vulnerabilities requiring unlikely user actions or complex user interactions\n- URL Redirects (unless combined with another vulnerability to produce a more severe impact)\n- Lack of SSL/TLS best practices\n- Attacks requiring privileged access from within the organization\n- Feature requests or suggestions for best practices\n- Internal SSRF (Server-Side Request Forgery)\n- Path Traversal without real security impact\n- SPF/DKIM/DMARC Configuration Problems\n- Clickjacking without sensitive actions\n- Issues related to browser-specific behavior that do not pose a security threat\n- Denial of Service (DoS) attacks not explicitly allowed in scope\n- Vulnerabilities in third-party software or libraries without evidence of impact on our service\n- Issues with non-production environments (staging, testing, etc.)\n\n*XSS reports are restricted to those that have an impact of prompting a user to sign a transaction or a redirect.*\n\n__Backend Services__\n- Missing or misconfigured security headers that do not lead to direct security vulnerabilities\n- Information disclosure of non-sensitive data (e.g., stack traces, debug messages)\n- Issues related to outdated software versions unless they can be exploited in our context\n- Rate-limiting or brute-force attacks on non-critical endpoints\n- Vulnerabilities requiring extensive social engineering or phishing\n- Any issues that require physical access to our servers or network\n- Findings from automated scans without a proof of concept demonstrating security impact\n- Low-impact vulnerabilities that require unlikely attack scenarios\n- Directory listing on non-sensitive directories\n- Server configuration issues without a clear security impact\n- Cosmetic issues and text errors\n\n\n**The following activities are prohibited by this bug bounty program:**\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
       "assetsBodyV2": "All smart contracts of Lista can be found at https://github.com/lista-dao/lista-dao-contracts and https://github.com/lista-dao/synclub-contracts \nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nFor proxy contracts, both the current implementation and any further updates to the implementation contracts are considered in scope.\n\nIf an impact can be caused to any other asset managed by Lista that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.",
       "impactsBody": null,
       "immunefiStandard": true,
@@ -525,7 +627,20 @@
             "payout": "USD $1,000 to USD $5,000"
           }
         ],
-        "web_rewards": []
+        "web_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $5,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $3,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $1,000"
+          }
+        ]
       },
       "premiumTriaging": false
     },
