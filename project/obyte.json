@@ -7,28 +7,46 @@
       "project": "Obyte",
       "maxBounty": 50000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5Wy12MgPYWNvcH7ihgHVqT/684f80d914af4b26229e0109d7185145/Obyte-logo.svg",
-      "launchDate": "2020-12-01T00:00-07:00",
+      "launchDate": "2020-12-01T07:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2023-10-20T14:38:12.850Z",
+      "updatedDate": "2024-07-01T07:40:10.525Z",
       "kyc": false,
       "rewards": [
         {
+          "assetType": "blockchain_dlt",
+          "level": "critical",
+          "payout": "USD $2,500 to USD $50,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "high",
+          "payout": "USD $2,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "medium",
+          "payout": "USD $1,000",
+          "pocRequired": true
+        },
+        {
           "assetType": "smart_contract",
           "level": "critical",
-          "payout": "up to USD $50,000",
-          "pocRequired": false
+          "payout": "USD $2,500",
+          "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "high",
           "payout": "USD $2,000",
-          "pocRequired": false
+          "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "medium",
           "payout": "USD $1,000",
-          "pocRequired": false
+          "pocRequired": true
         },
         {
           "assetType": "websites_and_applications",
@@ -53,9 +71,9 @@
       "assets": [
         {
           "id": "1EuzDXtrPNaK0hyotdK7bR",
-          "type": "smart_contract",
+          "type": "blockchain_dlt",
           "url": "https://github.com/byteball/ocore",
-          "description": null,
+          "description": "Core Library",
           "isPrimacyOfImpact": null
         },
         {
@@ -119,146 +137,74 @@
         },
         {
           "id": "6Yf8W5arx72lBeH7p1XQ4v",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
-          "type": "smart_contract",
-          "severity": "critical"
-        },
-        {
-          "id": "1QniBpC6srG8qRTgu2o4Ju",
-          "title": "Any governance voting result manipulation",
+          "title": "Protocol Insolvency",
           "type": "smart_contract",
           "severity": "critical"
         },
         {
           "id": "3qtNDd3cmurDpkcEK60Hzg",
-          "title": "Ability to execute system commands",
+          "title": "Execute arbitrary system commands",
           "type": "websites_and_applications",
           "severity": "critical"
         },
         {
           "id": "4sQZJ4nGytKiWN0JHiu6T0",
-          "title": "Extract Sensitive data/files from the server",
+          "title": "Retrieve sensitive data/files from a running server, such as:         - database passwords usable from the open internet ,        - wallet private keys (this does not include non-sensitive environment variables, open source code, or usernames)",
           "type": "websites_and_applications",
           "severity": "critical"
         },
         {
           "id": "3cpKxs5hRavjUjXTMGZ5Cn",
-          "title": "Taking Down the application/website",
+          "title": "Taking state-modifying authenticated actions that lead to loss of funds on behalf of other users without any interaction by that user.",
           "type": "websites_and_applications",
           "severity": "critical"
         },
         {
           "id": "7MEvHGexkQy00NRh17bdHb",
-          "title": "Stealing User Cookies",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "1Bgl9RWKXx05VnAfWI4Jwe",
-          "title": "Bypassing Authentication",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "2Kg82noRT0U963EKFCgFIA",
-          "title": "Redirection of user deposits and withdrawals",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "2c66s95fS973AoDFp1Ojgz",
-          "title": "Signing transactions for other users",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "54coObPgzRlrgHDok01FzS",
-          "title": "Subdomain takeover resulting in financial loss (applicable for subdomains with addresses published)",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "EbkyAr65W04ZeZj4RR8pu",
-          "title": "Wallet interaction modification resulting in financial loss",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "7dTQhk6OiNA36bbcpG4McG",
           "title": "Direct theft of user funds",
           "type": "websites_and_applications",
           "severity": "critical"
         },
         {
-          "id": "2qIz46MVRPesC46m9cqkne",
-          "title": "Tampering with transactions submitted from the user’s wallet",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
           "id": "5BFOGvHFetAUDFlioZNEQj",
-          "title": "Unintended chain split (Network partition)",
+          "title": "Temporary freezing of network transactions by delaying adequate processing for at least 1 day",
           "type": "blockchain_dlt",
           "severity": "high"
         },
         {
           "id": "2lNt1vDT39OfUH4jbatAKH",
-          "title": "Transient consensus failures",
-          "type": "blockchain_dlt",
+          "title": "Temporary freezing of funds for at least 1 year",
+          "type": "smart_contract",
           "severity": "high"
         },
         {
           "id": "1s6wdULZa0CgniHbJ6dCos",
-          "title": "Theft of unclaimed yield",
-          "type": "smart_contract",
+          "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:         - HTML injection without JavaScript         - Replacing existing text with arbitrary text         - Arbitrary file uploads, etc.",
+          "type": "websites_and_applications",
           "severity": "high"
         },
         {
           "id": "ygzXiU17gRoPqXecwLoEm",
-          "title": "Permanent freezing of unclaimed yield",
-          "type": "smart_contract",
-          "severity": "high"
-        },
-        {
-          "id": "3ghpqjiMOWBKITPfd2QBML",
-          "title": "Temporary freezing of funds",
-          "type": "smart_contract",
-          "severity": "high"
-        },
-        {
-          "id": "3xqGGPQtd2DCiMuuhAdIxK",
-          "title": "Spoofing content on the target application (Persistent)",
-          "type": "websites_and_applications",
-          "severity": "high"
-        },
-        {
-          "id": "Ok7AIXre3nb5dwvEkKikW",
-          "title": "Users Confidential information disclosure such as Email",
-          "type": "websites_and_applications",
-          "severity": "high"
-        },
-        {
-          "id": "35rsiry15XqfMvTI7frRkk",
-          "title": "Privilege escalation to access unauthorized functionalities",
+          "title": "Improperly disclosing confidential user information, such as:         - Email address         - Phone number         - Physical address, etc.",
           "type": "websites_and_applications",
           "severity": "high"
         },
         {
           "id": "1mThQbnYVyGutEvdDCb0NE",
-          "title": "High compute consumption by full nodes",
+          "title": "Temporary freezing of network transactions by delaying adequate processing for at least 1 hour",
           "type": "blockchain_dlt",
           "severity": "medium"
         },
         {
           "id": "4PfsFGaVadKoOyLtqARiGL",
-          "title": "Attacks against thin clients",
+          "title": "A bug in the respective layer 1 network code that results in unintended smart contract behavior with no concrete funds at direct risk",
           "type": "blockchain_dlt",
           "severity": "medium"
         },
         {
           "id": "71gc1qIt2X0dNMVraYRX7P",
-          "title": "DoS of greater than 30% of order provider nodes and does not shut down the network",
-          "type": "blockchain_dlt",
+          "title": "Temporary freezing of funds",
+          "type": "smart_contract",
           "severity": "medium"
         },
         {
@@ -275,25 +221,7 @@
         },
         {
           "id": "6Mw0oZ2pIEgoMz8JZZyqap",
-          "title": "Theft of gas",
-          "type": "smart_contract",
-          "severity": "medium"
-        },
-        {
-          "id": "7MjYnBfTZ4nedJklcXCyqP",
-          "title": "Unbounded gas consumption",
-          "type": "smart_contract",
-          "severity": "medium"
-        },
-        {
-          "id": "2dy4OpOthWLpDe0jpsWQDj",
-          "title": "Changing details of other users without direct financial impact (CSRF)",
-          "type": "websites_and_applications",
-          "severity": "medium"
-        },
-        {
-          "id": "3KQ0rDOeHsV3ucAIy3kCYy",
-          "title": "Third-Party API keys leakage that demonstrates loss of funds or modification on the website",
+          "title": "Taking down the application/website without user interaction",
           "type": "websites_and_applications",
           "severity": "medium"
         },
@@ -304,52 +232,23 @@
           "severity": "medium"
         },
         {
-          "id": "1NJjYBWeoCvxZjIlBpb3Z5",
-          "title": "DoS of greater than 10% but less than 30% of order provider nodes and does not shut down the network",
-          "type": "blockchain_dlt",
-          "severity": "low"
-        },
-        {
-          "id": "2cy6qMHLIE0jQD6UxQARNQ",
-          "title": "Underpricing transaction fees relative to computation time",
-          "type": "blockchain_dlt",
-          "severity": "low"
-        },
-        {
-          "id": "3rObJu5v9JZVJ0IwkucOp4",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
-          "type": "smart_contract",
-          "severity": "low"
-        },
-        {
-          "id": "6SmCEcgJIAxoYTotMm9Won",
-          "title": "Framing sensitive pages leading to financial loss (ClickJacking)",
+          "id": "7MjYnBfTZ4nedJklcXCyqP",
+          "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:         - Reflected HTML injection         - Loading external site data",
           "type": "websites_and_applications",
-          "severity": "low"
-        },
-        {
-          "id": "1H1Gt8B36MKZ5u8yc4gFCe",
-          "title": "Any impact involving a publicly released CVE without a working PoC",
-          "type": "websites_and_applications",
-          "severity": "low"
-        },
-        {
-          "id": "45bjDetnjKXNPCEkZdBuQK",
-          "title": "Broken Link Hijacking",
-          "type": "websites_and_applications",
-          "severity": "low"
+          "severity": "medium"
         }
       ],
-      "programOverview": "Obyte is a distributed ledger based on directed acyclic graph **(DAG)** and is\nwithout middlemen. Unlike centralized ledgers and blockchains, access to the\nObyte ledger is decentralized, disintermediated, free (as in freedom), equal,\nand open.\n\nThe Obyte Foundation is interested in securing their network, their core\nlibrary, their GUI wallet, and one of their autonomous agents (smart\ncontract). Primary areas of concern are around loss of user funds, DoS, and\ntotal network shutdown.",
-      "prioritizedVulnerabilities": "Critical\t \nBlockchain/DLT\nNetwork not being able to confirm new transactions (Total network shutdown)\nUnintended permanent chain split requiring hard fork (Network partition requiring hard fork)\nDirect loss of funds\nPermanent freezing of funds (fix requires hardfork)\nRPC API crash\n\nSmart Contracts\nDirect theft of any user funds, whether at-rest or in-motion, other than unclaimed yield\nPermanent freezing of funds\nAny governance voting result manipulation\nDirect theft of any user funds, whether at-rest or in-motion, other than unclaimed yield\n\nWebsites and Apps\nAbility to execute system commands\nExtract Sensitive data/files from the server \nTaking Down the application/website\nStealing User Cookies \nBypassing Authentication \nSigning transactions for other users\nRedirection of user deposits and withdrawals\nSubdomain takeover resulting in financial loss (applicable for subdomains with addresses published)\nWallet interaction modification resulting in financial loss\nDirect theft of user funds\nTampering with transactions submitted from the user’s wallet\n\nHigh\nBlockchain/DLT\nUnintended chain split (Network partition)\nTransient consensus failures\n\nSmart Contracts\n\nTheft of unclaimed yield\nPermanent freezing of unclaimed yield\nTemporary freezing of funds\n\nWebsites and Apps \nSpoofing content on the target application (Persistent)\nUsers Confidential information disclosure such as Email\nPrivilege escalation to access unauthorized functionalities\n\nMedium\t\nBlockchain/DLT\nHigh compute consumption by full nodes\nAttacks against thin clients\nDoS of greater than 30% of order provider nodes and does not shut down the network\n\nSmart Contracts\nSmart contract unable to operate due to lack of token funds\n\nGriefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)\nTheft of gas\nUnbounded gas consumption\t\t\t\n\nWebsites and Apps\nChanging details of other users without direct financial impact (CSRF)\nThird-Party API keys leakage that demonstrates loss of funds or modification on the website\nRedirecting users to malicious websites (Open Redirect)\n\nLow\nBlockchain/ DLT\nDoS of greater than 10% but less than 30% of order provider nodes and does not shut down the network\nUnderpricing transaction fees relative to computation time\n\nSmart Contracts\t\nContract fails to deliver promised returns, but doesn't lose value\n\nWebsites and Apps \nFraming sensitive pages leading to financial loss (ClickJacking)\nAny impact involving a publicly released CVE without a working PoC\nBroken Link Hijacking\n",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, and in Obyte’s case, its DAG, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nIn order to qualify for the reward of USD 50 000, the bug reported must be able to cause unrecoverable total network shutdown of the entire Obyte network or allow the unpermitted execution of transactions from accounts of other users without their private keys. All other critical bug reports are capped at USD 2 500.\n\nTheft of yield/interest in this bug bounty program is considered Low.\n\nAll web and app bug reports must come with a PoC. All bug reports submitted without PoC will be rejected with instructions to provide PoC.\n\nThe web/app  impacts of “Stealing User Cookies” and “Bypassing Authentication” are only accepted if they result in a loss of at least USD 1 000. The web/app impact of “Ability to execute system commands” is only accepted if the actions are done as root. \n\nPayouts are handled by the __Obyte__ Foundation directly and are denominated in USD. The payout can be completed in __GBYTE__, __BTC__, or __OUSD__.",
-      "outOfScopeAndRules": "**The following vulnerabilities are excluded from the rewards for this bug bounty\nprogram:**\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n\n**Smart Contracts and DAG**\n\n- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n\n**Websites and Apps** \n\n- Theoretical vulnerabilities without any proof or demonstration\n- Content spoofing / Text injection issues\n- Self-XSS\n- Captcha bypass using OCR\n- CSRF with no security impact (logout CSRF, change language, etc.)\n- Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security\n  flags (such as “httponly”)\n- Server-side information disclosure such as IPs, server names, and most stack\n  traces\n- Vulnerabilities used to enumerate or confirm the existence of users or\n  tenants\n- Vulnerabilities requiring unlikely user actions\n- URL Redirects (unless combined with another vulnerability to produce a more\n  severe vulnerability)\n- Lack of SSL/TLS best practices\n- DDoS vulnerabilities\n- Attacks requiring privileged access from within the organization\n- Requests for new features\n- Bugs without proof-of-concept exploits showing impact\n\n**The following activities are prohibited by bug bounty program:**\n\n- Any testing with mainnet or public testnet contracts; all testing should be\n  done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees\n  and/or customers\n- Any testing with third party systems and applications (e.g. browser\n  extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "programOverview": "Obyte is a distributed ledger based on directed acyclic graph **(DAG)** and is without middlemen. Unlike centralized ledgers and blockchains, access to the Obyte ledger is decentralized, disintermediated, free (as in freedom), equal, and open.\n\nThe Obyte Foundation is interested in securing their network, their core library, their GUI wallet, and some of their autonomous agents (smart contracts that operate completely independently). Primary areas of concern are around loss of user funds, DoS(not DDoS), and total network shutdown.\n\n__Responsible Publication__\n\nObyte adheres to category 3. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to the [Responsible Publication ](https://immunefi.com/responsible-publication/)page.\n\n\n__Primacy of Impact vs Primacy of Rules__\n\nObyte adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms stated in this page.",
+      "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+      "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below.\n\n__Repeatable Attack Limitations__\n\nGiven that the reward for High is flat, there is no distinction between a one-time attack and an attack that is repeated and the reward stays the same. \n\n__Restrictions on Security Researcher Eligibility__\n\nSecurity researchers who fall under any of the following are ineligible for a reward:\n\n- Compensated team members of the Obyte Foundation\n- Employees and team members of third-party suppliers to an Obyte Foundation affiliate that operate in a technical capacity and have assets covered in this bug bounty program\n\n__Reward Calculation for Critical Level Reports__\n\nFor Blockchain/DLT bug reports, in order to qualify for the reward of USD 50 000, the bug reported must be able to cause unrecoverable total network shutdown of the entire Obyte network or allow the unpermitted execution of transactions from accounts of other users without their private keys. All other critical bug reports are capped at a flat rate of USD 2 500.\n\n__Other Restrictions__\n\nFor all impacts directly involving funds being lost, the minimum impact is USD 1 000. Anything below is considered out-of-scope. \n\nThe web/app  impacts of “Stealing User Cookies” and “Bypassing Authentication” are only accepted if they result in a loss of at least USD 1 000. The web/app impact of “Ability to execute system commands” is only accepted if the actions are done as root.\n\n\n__Poc Requirements__\nAll web and app bug reports must come with a PoC. All bug reports submitted without PoC will be rejected with instructions to provide PoC.\n\nPayouts are handled by the Obyte Foundation directly and are denominated in USD. The payout can be completed in GBYTE, BTC, or USDT.",
+      "outOfScopeAndRules": "**The following vulnerabilities are excluded from the rewards for this bug bounty\nprogram:**\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts with direct financial damage whereby the total is less than or equal to 200% of the total expense used by the attacker\n\n\n**Blockchain/DLT and Smart Contracts**\n\n- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n\n**Websites and Apps** \n\n- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n    - This does not exclude reflected HTML injection with or without JavaScript\n    - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering\n\n**The following activities are prohibited by bug bounty program:**\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO - providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
       "assetsBodyV2": null,
-      "impactsBody": null,
+      "impactsBody": "All Smart Contract impacts are only related to the Autonomous Agent assets.",
       "immunefiStandard": true,
       "tags": {
         "productType": [
-          "L1"
+          "L1",
+          "Wallet"
         ],
         "projectType": [
           "Blockchain"
@@ -359,7 +258,8 @@
         ],
         "programType": [
           "Smart Contract",
-          "Websites and Applications"
+          "Websites and Applications",
+          "Blockchain/DLT"
         ],
         "language": [
           "JavaScript"
@@ -368,13 +268,27 @@
       "legacy": {
         "technologies": [
           "Smart Contract",
-          "Websites and Applications"
+          "Websites and Applications",
+          "Blockchain/DLT"
         ],
-        "blockchain_rewards": [],
+        "blockchain_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $2,500 to USD $50,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $2,000"
+          },
+          {
+            "level": "Medium",
+            "payout": "USD $1,000"
+          }
+        ],
         "smartcontract_rewards": [
           {
             "level": "Critical",
-            "payout": "up to USD $50,000"
+            "payout": "USD $2,500"
           },
           {
             "level": "High",
