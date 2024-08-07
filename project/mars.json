@@ -7,35 +7,11 @@
       "project": "Mars Protocol",
       "maxBounty": 100000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2Wm7fq3LoYdiWGNxdZiKgy/9a9dda7803cd5218754fd4a5c303e36d/mars_logo_colored.svg",
-      "launchDate": "2023-01-13T10:00-05:00",
+      "launchDate": "2023-01-13T15:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-04-08T18:52:16.714Z",
+      "updatedDate": "2024-08-06T09:17:37.231Z",
       "kyc": false,
       "rewards": [
-        {
-          "assetType": "blockchain_dlt",
-          "level": "critical",
-          "payout": "USD $20,000 to USD $100,000",
-          "pocRequired": true
-        },
-        {
-          "assetType": "blockchain_dlt",
-          "level": "high",
-          "payout": "USD $20,000",
-          "pocRequired": true
-        },
-        {
-          "assetType": "blockchain_dlt",
-          "level": "medium",
-          "payout": "USD $5,000",
-          "pocRequired": true
-        },
-        {
-          "assetType": "blockchain_dlt",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
-        },
         {
           "assetType": "smart_contract",
           "level": "critical",
@@ -63,20 +39,6 @@
       ],
       "audits": null,
       "assets": [
-        {
-          "id": "4CDQvAAmYIxqOdlBUc0j2D",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/mars-protocol/hub/tree/main/x",
-          "description": "Mars Hub Appchain",
-          "isPrimacyOfImpact": null
-        },
-        {
-          "id": "2DuCCe95UJfyW4JXyCz5dS",
-          "type": "smart_contract",
-          "url": "https://github.com/mars-protocol/periphery",
-          "description": "Smart contracts that are deployed on Mars Hub",
-          "isPrimacyOfImpact": null
-        },
         {
           "id": "6AiHN8UaVw2HJtMrCSbRLi",
           "type": "smart_contract",
@@ -117,12 +79,6 @@
           "severity": "critical"
         },
         {
-          "id": "5ymPSLPZoTTSSX4DNhCfzV",
-          "title": "Direct loss of funds",
-          "type": "blockchain_dlt",
-          "severity": "critical"
-        },
-        {
           "id": "4yTMvVw31WfytuEpZd8Jc8",
           "title": "Theft of unclaimed royalties",
           "type": "smart_contract",
@@ -141,27 +97,9 @@
           "severity": "high"
         },
         {
-          "id": "3bRiH098ZXBgbgYloaZ2st",
-          "title": "Any governance voting result manipulation",
-          "type": "blockchain_dlt",
-          "severity": "high"
-        },
-        {
           "id": "6NupSzzVrVYKjZokObd39o",
           "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
           "type": "smart_contract",
-          "severity": "medium"
-        },
-        {
-          "id": "3KQ9IaexOlLa9he4ZdSQJL",
-          "title": "Network not being able to confirm new transactions (Total network shutdown)",
-          "type": "blockchain_dlt",
-          "severity": "medium"
-        },
-        {
-          "id": "pixwZztiEPbyt2IOIicFH",
-          "title": "Permanent freezing of funds (fix requires hardfork)",
-          "type": "blockchain_dlt",
           "severity": "medium"
         },
         {
@@ -177,29 +115,17 @@
           "severity": "medium"
         },
         {
-          "id": "1l6iYSjQ1BswMme1mrhC7M",
-          "title": "Underpricing transaction fees relative to computation time",
-          "type": "blockchain_dlt",
-          "severity": "low"
-        },
-        {
           "id": "3Mkb76NsA0oMoTRuURh7Hl",
           "title": "Unintended consequences from Maximal-extractable value (MEV) exploration",
           "type": "smart_contract",
           "severity": "low"
-        },
-        {
-          "id": "4C54C4AEY6G0F5J0uZLqdO",
-          "title": "High compute consumption by validator/mining nodes",
-          "type": "blockchain_dlt",
-          "severity": "low"
         }
       ],
-      "programOverview": "Mars Protocol consists of a money market, called Red Bank, and a generalized credit primitive called Credit Accounts. Mars Protocol utilizes a so-called hub and outpost topology, whereby its base, Mars Hub is the command center for Mars outposts. Each outpost can consist of instances of Red Bank and/or Credit Accounts. The first outpost containing both Red bank and Credit Accounts (dubbed Mars v2) is on Osmosis, and the second outpost which currently contains only the Red Bank is deployed to Neutron.\n\nBuilt for the Cosmos ecosystem, Mars Protocol is Built using the Cosmos SDK. Mars Hub will serve as the homebase for all of Mars’ outposts throughout the Cosmos galaxy. Each outpost consists of an instance of Red Bank and optionally Credit Accounts, which are deployed onto independent chains. Outposts are bound together by Mars Hub which is responsible for governance and treasury including protocol revenue distribution.\n\nA new MARS token was minted on Mars Hub and will circulate freely throughout the Cosmos ecosystem. \n\nFor more information about the Mars Protocol, please visit [whitepaper.marsprotocol.io](http://whitepaper.marsprotocol.io).  \n",
+      "programOverview": "Mars Protocol consists of a money market, called Red Bank, and a generalized credit primitive called Credit Accounts. Mars Protocol utilizes a so-called hub and outpost topology, whereby its base, Mars Hub is the command center for Mars outposts. Each outpost can consist of instances of Red Bank and/or Credit Accounts. The first outpost containing both Red bank and Credit Accounts (dubbed Mars v2) is on Osmosis, and the second outpost which currently contains only the Red Bank is deployed to Neutron.\n\nBuilt in the Cosmos ecosystem, Mars Protocol is Built using the CosmWasm. Mars Hub will serve as the homebase for all of Mars’ outposts throughout the Cosmos galaxy. Each outpost consists of an instance of Red Bank and optionally Credit Accounts, which are deployed onto independent chains. Outposts are bound together by Mars Hub which is responsible for governance and treasury including protocol revenue distribution.\n\nA new MARS token was minted Neutron using TokenFactory Cosmos SDK module and will circulate freely throughout the Cosmos ecosystem. \n\nFor more information about the Mars Protocol, please visit [whitepaper.marsprotocol.io](http://whitepaper.marsprotocol.io).",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [ImmuneFi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported. \n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nRewards for critical blockchain/DLT and critical smart contract vulnerabilities are further capped at 10% of mainnet economic damage potentially caused. However, there is a minimum reward of __USD 20 000__ and a maximum reward of __USD 100 000__. \n\nAll issues highlighted in the following audit reports are considered out of scope of the program: \n- [Audits reports for Mars Hub, Periphery contracts and the Mars outposts](https://github.com/mars-protocol/mars-audits)\n\n__Reward Payment Terms__\n\nPayouts are handled by the Mars Protocol Foundation and are denominated in USD. However, payouts are done in MARS.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.\n",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n- Attacks found in an underlying Cosmos SDK standard module dependency (vulnerabilities found in code that is not Mars Protocols code, but Mars Protocol has a dependency on through Cosmos SDK)\n\n__Smart Contracts and Blockchain__\n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n- Centralization risks\n- Lack of funding for contracts that require topping up from an external address e.g.contracts pertaining to incentives e.t.c. (where applicable)\n- DoS related attacks\n\nThe following activities are prohibited by this bug bounty program:\n\n- Any testing with mainnet contracts; all testing should be done on private testnets. Any testing on public testnets should be done with care to not disclose vulnerabilities to blackhats.\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
-      "assetsBodyV2": "Assets in scope are as follows: \n  - Mars Hub testnet\n  - Mars Hub mainnet\n  - Periphery contracts on Mars Hub testnet and mainnet\n  - Osmosis Mars Outpost contracts\n  - Neutron Mars Outpost contracts\n\nThe codebase associated with Mars Hub’s testnet and mainnet can be found at [https://github.com/mars-protocol/hub](https://github.com/mars-protocol/hub).  The smart contracts that are deployed on Mars Hub testnet and mainnet can be found at [https://github.com/mars-protocol/periphery](https://github.com/mars-protocol/periphery). \nMars Outposts related smart contracts deployed onto the Osmosis and Neutron blockchains can be found at [https://github.com/mars-protocol/contracts](https://github.com/mars-protocol/contracts).\n\nIf an impact can be caused to any other asset managed by Mars Hub or its Osmosis outpost,that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for consideration by the project.  ",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [ImmuneFi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported. \n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nRewards for critical smart contract vulnerabilities are further capped at 10% of mainnet economic damage potentially caused. However, there is a minimum reward of __USD 20 000__ and a maximum reward of __USD 100 000__. \n\nAll issues highlighted in the following audit reports are considered out of scope of the program: \n- [Audits reports for Mars Hub, Periphery contracts and the Mars outposts](https://github.com/mars-protocol/mars-audits)\n\n__Reward Payment Terms__\n\nPayouts are handled by the Mars Protocol Foundation and are denominated in USD. However, payouts are done in MARS.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n- Attacks found in an underlying Cosmos SDK standard module dependency (vulnerabilities found in code that is not Mars Protocols code, but Mars Protocol has a dependency on through Cosmos SDK)\n\n__Smart Contracts and Blockchain__\n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n- Centralization risks\n- Lack of funding for contracts that require topping up from an external address e.g.contracts pertaining to incentives e.t.c. (where applicable)\n- DoS related attacks\n\nThe following activities are prohibited by this bug bounty program:\n\n- Any testing with mainnet contracts; all testing should be done on private testnets. Any testing on public testnets should be done with care to not disclose vulnerabilities to blackhats.\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": "Assets in scope are as follows: \n  - Osmosis Mars Outpost contracts\n  - Neutron Mars Outpost contracts\n\nMars Outposts related smart contracts deployed onto the Osmosis and Neutron blockchains can be found at [https://github.com/mars-protocol/contracts](https://github.com/mars-protocol/contracts).\n\nIf an impact can be caused to any other asset managed by Mars Hub or its Osmosis outpost,that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for consideration by the project.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -216,7 +142,6 @@
           "Cosmos"
         ],
         "programType": [
-          "Blockchain/DLT",
           "Smart Contract"
         ],
         "language": [
@@ -226,27 +151,9 @@
       },
       "legacy": {
         "technologies": [
-          "Smart Contract",
-          "Blockchain/DLT"
+          "Smart Contract"
         ],
-        "blockchain_rewards": [
-          {
-            "level": "Critical",
-            "payout": "USD $20,000 to USD $100,000"
-          },
-          {
-            "level": "High",
-            "payout": "USD $20,000"
-          },
-          {
-            "level": "Medium",
-            "payout": "USD $5,000"
-          },
-          {
-            "level": "Low",
-            "payout": "USD $1,000"
-          }
-        ],
+        "blockchain_rewards": [],
         "smartcontract_rewards": [
           {
             "level": "Critical",
@@ -268,7 +175,7 @@
         "web_rewards": []
       },
       "websiteUrl": null,
-      "description": "Mars Protocol consists of a money market, called Red Bank, and a generalized credit primitive called Credit Accounts. Mars Protocol utilizes a so-called hub and outpost topology, whereby its base, Mars Hub is the command center for Mars outposts. Each outpost can consist of instances of Red Bank and/or Credit Accounts.",
+      "description": "Mars Protocol consists of a money market, called Red Bank, and a generalized credit primitive called Credit Accounts. Mars Protocol utilizes a so-called hub and outpost topology, whereby its base, Mars Hub - - which is an instance of DAO on Neutron is the command center for Mars outposts. Each outpost can consist of instances of Red Bank and/or Credit Accounts.",
       "githubUrl": null,
       "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
       "defaultProhibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
