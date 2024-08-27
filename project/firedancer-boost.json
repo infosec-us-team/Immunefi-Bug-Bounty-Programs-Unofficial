@@ -1,0 +1,181 @@
+{
+  "pageProps": {
+    "isAttackathon": false,
+    "academyContent": null,
+    "project": {
+      "premiumTriaging": true,
+      "isSafeHarborActive": false,
+      "performanceMetrics": {}
+    },
+    "bounty": {
+      "contentfulId": "3o5ukksdFvgFLMTKUGqRM5",
+      "id": "firedancer-boost",
+      "slug": "firedancer-boost",
+      "project": "Boost | Firedancer v0.1",
+      "maxBounty": 1000000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6abbRPq25ZJAZ0KbG5mgCL/42f2a899c65754988546c1f445f4f27f/image__16_.png",
+      "launchDate": "2024-07-10T17:00:00.000Z",
+      "endDate": "2024-08-21T08:00:00.000Z",
+      "updatedDate": "2024-08-21T09:32:26.070Z",
+      "kyc": true,
+      "rewards": [
+        {
+          "assetType": "blockchain_dlt",
+          "level": "critical",
+          "payout": "Portion of the Reward Pool",
+          "pocRequired": true
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "high",
+          "payout": "Portion of the Reward Pool",
+          "pocRequired": true
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "level": "medium",
+          "payout": "Portion of the Reward Pool",
+          "pocRequired": true
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "15iAOy1deWFKNbPdx2aypi",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/firedancer-io/firedancer/tree/e60d9a6206efaceac65a5a2c3a9e387a79d1d096",
+          "description": "Firedancer v0.1 Testnet (only directory and file listed in this file [https://asymmetric-assets.s3.amazonaws.com/fdctl-scope.txt?utm_source=immunefi] are within the scope)",
+          "isPrimacyOfImpact": null,
+          "addedAt": "2024-07-10T17:00:00.000Z"
+        }
+      ],
+      "impacts": [
+        {
+          "id": "YJo99tLKwmlspcXerVBtL",
+          "title": "Any sandbox escape",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "5J8BdWtxASewqz9imlGtoI",
+          "title": "Any bug leading to loss of funds or acceptance of forged / invalid signatures",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "4h0Whkjw4TIK4prDG1AVoc",
+          "title": "Key compromise/exfiltration exploit chain",
+          "type": "blockchain_dlt",
+          "severity": "critical"
+        },
+        {
+          "id": "7v7yqm5IBqLrUVY9v38kXP",
+          "title": "Process to process RCE between sandboxed tiles",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
+          "id": "5c5UXyNMtkkZTIcdmcUgPU",
+          "title": "Any bug leading Firedancer v0.1 to produce an invalid block or skip its leader slot",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        },
+        {
+          "id": "3FTwRkOhBjZiIUNDkSPvqP",
+          "title": "Consensus issues causing Firedancer v0.1 validators to fork",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        },
+        {
+          "id": "3I3vISk1Fq9NxzCh5kYWG8",
+          "title": "Liveness issues that cause Firedancer v0.1 validators to crash or be unavailable",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        }
+      ],
+      "programOverview": "Firedancer is a new validator client for Solana.\n\n- **Fast** - Designed from the ground up to be fast. The concurrency model is borrowed from the low-latency trading space, and the code contains many novel high-performance reimplementations of core Solana primitives.\n- **Secure** -The validator's architecture allows it to run with a highly restrictive sandbox and almost no system calls.\n- **Independent** - Firedancer is written from scratch. This brings client diversity to the Solana network and helps it stay resilient to supply chain attacks in building tooling or dependencies.\n\nFor more information about Firedancer, please visit [https://firedancer-io.github.io/firedancer/](https://firedancer-io.github.io/firedancer/)\n\nFiredancer provides rewards in USDC on Solana, which are denominated in USD.",
+      "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+      "rewardsBody": "The following reward terms are a summary; read our [Firedancer v0.1 Reward Distribution Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/26610998104465-Firedancer-v0-1-Boost-Reward-Terms) for the full details.\n\nThe reward pool will be entirely distributed among participants. The size depends on the bugs found:\n- If no valid bugs are found, the reward pool will be **$50,000 USD**\n- If no High or Critical severity bugs are found, the reward pool will be **$250,000 USD**\n- If one or more High severity bugs are found, the reward pool will be **$500,000 USD**\n- If 1 Critical severity bug is found, the reward pool will be **$700,000 USD**\n- If 2 Critical severity bugs are found, the reward pool will be **$800,000 USD**\n- If 3 or more Critical severity bugs are found, the reward pool will be **$1,000,000 USD**\n\nFor this Boost, duplicates are valid for a reward. Private known issues are **not** valid.\n\nRewards are distributed according to the impact of the vulnerability based on the Immunefi [Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Payment Terms__\n\nPayouts are handled by the Firedancer team directly and are denominated in USD. However, payments are done in USDC on Solana.\n\nAfter the event has concluded and the final bug reports have been resolved, rewards will be distributed all at once based on Immunefi’s distribution formula.\n\n__Insight Rewards Payment Terms__\n\nInsight Rewards: Portion of the Rewards Pool\n\nThe \"Insight\" severity was introduced on Boost & Attackathon programs to recognize contributions that extend beyond identifying immediate vulnerabilities. Currently, it's not an option to select the Insight severity when submitting a report. However, our team or program will designate it accordingly if applicable. \"Insights\" underscores our commitment to valuing all types of contributions that contribute to a more secure environment and will always be rewarded. [View more information about Insights](https://immunefisupport.zendesk.com/hc/en-us/articles/13333032674961-Severity-Classification-System?utm_source=immunefi).",
+      "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories:__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Websites and Apps__\n\n- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n    - This does not exclude reflected HTML injection with or without JavaScript\n    - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering\n\n__Blockchain/DLT & Smart Contract Specific:__\n\n- Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n\n__Prohibited Activities:__\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": "The Firedancer validator builds as a single binary: `fdctl`.  All code and functionality linked and reachable by the main function of this binary is in scope, including from the primary `run` command, but also `configure`, `monitor`, and others. Bugs in linked but unreachable code (for example: cryptography implementations that are behind a development flag or library utility code that is never called) are in scope but are not exploitable and will be considered informational (aka insight reports).\n\nThe Firedancer repository contains code for two validators:\n\n- Firedancer v0.1, lovingly nicknamed “Frankendancer”, a split between Firedancer and the existing Agave validator written in Rust\n- A full C-only Firedancer completely replacing the existing Agave validator.\n\nThe full Firedancer code is behind a development flag, and findings in code that is only reachable in full Firedancer will be considered informational (aka insight reports).\n\nThe Firedancer v0.1 validator interfaces with the existing Agave validator written in Rust via an FFI interface. This FFI interface and the modifications to Agave to support such FFI are in scope, but bugs in the Agave validator itself that would impact existing Solana validators should be reported to the [Agave bug bounty](https://github.com/anza-xyz/agave/security#bounty) and are not considered in scope for the contest.\n\nThe [directory and file listing](https://asymmetric-assets.s3.amazonaws.com/fdctl-scope.txt) are provided to help navigate the codebase and determine what is in scope. The ground truth for scope and impact will follow the production binary.\n\nThe Firedancer v0.1 sandbox (and machine model) are explicitly **in-scope**. This means that a researcher could **assume** a tile’s already been breached, and any findings downstream of that “contrived” tile breach are valid. As an example: Assume the “Net” tile has been breached, such that the researcher has full RCE within the sandbox of the Net tile. If the attacker is able to cause malicious effects in any of the “downstream” tiles or on the system itself, these findings would also be in scope.\n\n__Mid-Contest Code Updates__\n\nIn this contest bug fixes may be applied mid-contest.\n\nThe project is to keep changes private as far as possible. When changes need to be made public, then the changelog will be updated here & in the [Firedancer Boost Discord channel](https://discord.com/invite/immunefi?utm_source=immunefi). Publicly fixed bugs are invalid and the scope is updated to the new code.\n\nAll bug reports before the fix was public will earn a reward. All bug reports after are invalid. If a new bug is introduced by their fix then it is valid for a reward.\n\n__Mid-Contest Changelog__\n\n- July 16 :: improve balance between votes and non-votes https://github.com/firedancer-io/firedancer/pull/2404\n\nAsset in scope link updated from https://github.com/firedancer-io/firedancer/tree/v0.106.11814 to https://github.com/firedancer-io/firedancer/tree/e60d9a6206efaceac65a5a2c3a9e387a79d1d096\n\n__Asset Accuracy Assurance__\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n__Private Known Issues Reward Policy__\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are **not** valid for a reward.\n\n\n__Primacy of Impact vs Primacy of Rules__\n\nFiredancer adheres to the Primacy of Rules, meaning the whole bug bounty program is run strictly under the terms and conditions stated on this page.\n\n__KYC Requirement__\n\nImmunefi will be requesting KYC information to pay for successful bug submissions. The following information will be required:\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with the address or a recent utility bill)\n- Copy of Passport or other Government ID\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement outlined in this program and cannot be:\n- On OFAC SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Employees of Solana Foundation or any other Solana client project\n- Security auditors who directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this program and a leaderboard of the participants and their earnings.\n\n__Feasibility Limitations__\n\nThe project may receive valid reports (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the bug's impact, which are not feasible or would require unconventional action and, hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) that, by default, state what security researchers and projects can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Firedancer has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
+      "impactsBody": "__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Whitehat Educational Resources & Technical Info__\n\n- Documentation: [https://firedancer-io.github.io/firedancer/](https://firedancer-io.github.io/firedancer/)\n- Technical education: \n     - [https://github.com/firedancer-io/firedancer/blob/main/README.md](https://github.com/firedancer-io/firedancer/blob/main/README.md)\n     - [https://github.com/firedancer-io/firedancer/blob/main/src/disco/README.md](https://github.com/firedancer-io/firedancer/blob/main/src/disco/README.md)\n     - All header files contain sufficient documentation about each component's function\n- Non-technical education:\n     - Solana Docs: https://solana.com/docs\n\n__Is this an upgrade of an existing system? If so, which? And what are the main differences?__\n\nThis is a complete ground-up implementation of a Solana protocol client. It was based on the Agave client ([https://github.com/anza-xyz/agave](https://github.com/anza-xyz/agave)), which is written in Rust, but this implementation is written from scratch in C.\n\n__Where do you suspect there may be bugs? Valuable aspects of this question are:__\n\n**Which parts of the code are you most concerned about?**\n- Signing Tile ([https://github.com/firedancer-io/firedancer/tree/v0.106.11814/src/disco/keyguard](https://github.com/firedancer-io/firedancer/tree/v0.106.11814/src/disco/keyguard)) \n- QUIC Tile ([https://github.com/firedancer-io/firedancer/tree/v0.106.11814/src/waltz/quic](https://github.com/firedancer-io/firedancer/tree/v0.106.11814/src/waltz/quic)) \n- Sandbox ([https://github.com/firedancer-io/firedancer/tree/v0.106.11814/src/util/sandbox](https://github.com/firedancer-io/firedancer/tree/v0.106.11814/src/util/sandbox)) \n\n**What attack vectors are you most concerned about?**\n- Any attack vector that results in the loss of funds\n- Remote Code Execution, leading to compromise of validator key material or arbitrary transaction signing\n- Denial of Service, leading to degradation or loss of service availability\n- Global Denial of Service, leading to consensus failure, excessive forking, or chain halts\n\n**Which part(s) of the system do you want whitehats to attempt to break the most?**\n- Signature Verification Tile (Denial of Service / RCE / Arbitrary Signing)\n- Network and QUIC Tiles (Denial of Service / RCE)\n- Sandbox Escape or Violation (Abusing the sandbox or violation of sandbox policies for unexpected outcomes)\n- Inconsistencies between Firedancer / Agave behavior that lead to unsafe outcomes.\n\n**Are there any assumed invariants that you want whitehats to attempt to break?**\n- If any tile is compromised, the sandbox should contain its effects on that tile. It should not allow the compromise to significantly impact other tiles and/or the system.\n\n__Would you consider any bug report requiring their involvement to be out of scope as long as they operate within the privileges attributed to them?__\n\n- Any bug reports that assume a pre-existing compromise of the validator operating system, applications, or any administrative control over the operating system.\n- Any bug dependent on exploiting vulnerabilities in the agave client codebase. \n- Any bug reports that require social engineering or physical attack on a person or the system.\n- Any bug reports that assume a malicious operator or the like.\n- Any bug that is not exploitable on the latest stable and supported Linux distributions ([Ubuntu](https://ubuntu.com/about/release-cycle), [Debian](https://www.debian.org/releases/), [Fedora](https://docs.fedoraproject.org/en-US/releases/), or [Red Hat](https://access.redhat.com/support/policy/updates/errata) Distributions).\n- Any bug that is not focused on x86 architecture.\n- Any bug that is not exploitable on the latest stable and supported GCC versions.\n- Any bug that has an initial vector of compromise in a dependency.\n- Any bug in a dependency that is not exclusive to Firedancer should instead be reported to the upstream repo. (For example, If you find a bug in Agave that also affects Agave, you should report it to the [Agave bug bounty program](https://github.com/anza-xyz/agave/security#bounty) instead).\n\n__What external dependencies are there?__\n\n**Build Dependencies:** perl, autoconf, gettext, automake, autopoint, flex, bison, build-essential, gcc-multilib, protobuf-compiler, llvm, lcov, libgmp-dev, cmake.\n\n__Where might whitehats confuse out-of-scope code to be in-scope?__\n\nCode exists in the repository, which is in development but not yet executed by the validator, while it currently leverages the Agave client for these functions - for example, `src/flamenco/runtime/`, `src/ballet/sbpf/`.  Attempts have been made above to make this very clear in the file dump listing at the bottom of the scope table, but there may be some minor exceptions that we can clear up if there are questions.\n\n__Are there any unusual points about your protocol that may confuse whitehats?__\n\nTLS stack handwritten only contains the parts absolutely necessary for Firedancer\n\n__What is the test suite setup information?__\n\n- GitHub Actions: [https://github.com/firedancer-io/firedancer/tree/main/.github/workflows](https://github.com/firedancer-io/firedancer/tree/main/.github/workflows)\n- Additionally, M1 fuzzing harnesses do exist in the main repo, you can find them with this command: find . -type f -name 'fuzz_*.c' -path './src/*'\n- Fuzzing harnesses can be built with a modern Clang compiler (recommended: 17): `MACHINE=linux_clang_x86_64 EXTRAS=\"asan fuzz\" make -j fuzz-test`\n\n__How to build and run the node?__\n\n[https://firedancer-io.github.io/firedancer/guide/getting-started.html](https://firedancer-io.github.io/firedancer/guide/getting-started.html)\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix,” necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n- [https://github.com/firedancer-io/firedancer/issues](https://github.com/firedancer-io/firedancer/issues) (any public issues before submission)\n- [https://github.com/firedancer-io/firedancer](https://github.com/firedancer-io/firedancer) (any fixes in the main repo before submission)\n\n__Previous Audits__\n\nFiredancer v0.1 completed audit reports can be found at [https://github.com/firedancer-io/audits](https://github.com/firedancer-io/audits). Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.",
+      "immunefiStandard": true,
+      "tags": {
+        "general": [
+          "Immunefi Standard",
+          "KYC Required",
+          "PoC Required"
+        ],
+        "productType": [
+          "Validator"
+        ],
+        "projectType": [
+          "Infrastructure"
+        ],
+        "ecosystem": [
+          "Solana"
+        ],
+        "programType": [
+          "Blockchain/DLT"
+        ],
+        "language": [
+          "C/C++"
+        ]
+      },
+      "legacy": {
+        "technologies": [
+          "Blockchain/DLT"
+        ],
+        "blockchain_rewards": [
+          {
+            "level": "Critical",
+            "payout": "Portion of the Reward Pool"
+          },
+          {
+            "level": "High",
+            "payout": "Portion of the Reward Pool"
+          },
+          {
+            "level": "Medium",
+            "payout": "Portion of the Reward Pool"
+          }
+        ],
+        "smartcontract_rewards": [],
+        "web_rewards": []
+      },
+      "evaluationEndDate": "2024-09-11T08:00:00.000Z",
+      "boostedIntroStartingIn": "$1,000,000 USD in rewards is available for finding bugs on Firedancer v0.1 which is a new validator client for Solana.\n\nKYC is required.\n\nFiredancer v0.1 will respond within 24 hours on weekdays to all bug reports. Any technical questions can be asked directly to the Firedancer v0.1 technical team on [Immunefi’s Discord](https://discord.com/invite/immunefi) in the \"firedancer-v0.1-boost\" channel.\n\nWhen the Boost has ended, Immunefi will publish an event-specific leaderboard and bug reports from the event.\n\nIn a few days after the launch, Firedancer v0.1 will give a live technical walkthrough, hosted in the Immunefi Discord. \n\nJoin our Discord for more updates.",
+      "boostedIntroLive": "$1,000,000 USD is available in rewards for finding bugs in Firedancer v0.1 codebase of about 200,000 nSLOC. KYC is required.\n\nFiredancer v0.1 team will respond within 24 hours on weekdays to all bug reports. Any technical questions and support requests can be asked directly to Firedancer v0.1 or Immunefi in the [Firedancer v0.1 Boost Discord channel](https://discord.com/invite/immunefi).\n\nIn this contest bug fixes may be applied mid-contest. Further details are in the 'Assets In Scope' section.\n\nWhen the Boost has ended Immunefi will publish an event-specific leaderboard and bug reports from the event.",
+      "boostedIntroEvaluating": "",
+      "boostedIntroFinished": "",
+      "rewardsToken": "USDC",
+      "rewardsPool": 1000000,
+      "sourceLinesOfCode": 200000,
+      "boostedSummaryReport": null,
+      "inviteOnly": false,
+      "hideAssetsInScope": null,
+      "boostedLeaderboard": [],
+      "features": [
+        "Boost",
+        "Managed Triage: Time Saver"
+      ],
+      "websiteUrl": null,
+      "description": "Firedancer is a new validator client for Solana.",
+      "githubUrl": null,
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
+      "defaultProhibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
+      "premiumTriaging": true
+    },
+    "isBoostedBountiesV3Enabled": true,
+    "layoutProps": {
+      "headerMarginBottom": "mb-12 lg:mb-16"
+    },
+    "metaData": {
+      "title": "Boost | Firedancer v0.1 Bug Bounties | Immunefi",
+      "description": "Find bugs and vulnerabilities on Boost | Firedancer v0.1 and get paid up to $1,000,000.",
+      "url": "https://immunefi.com/boost/firedancer-boost",
+      "ogImg": "/api/bounty/og-image?project=Boost+%7C+Firedancer+v0.1"
+    }
+  },
+  "__N_SSG": true
+}
