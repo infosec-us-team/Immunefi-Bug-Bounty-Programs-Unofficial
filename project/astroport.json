@@ -5,29 +5,29 @@
       "id": "astroport",
       "slug": "astroport",
       "project": "Astroport",
-      "maxBounty": 100000,
+      "maxBounty": 20000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2Qwy7LtcelmPuSZnjGquW7/aeac853cef17939e914d63ed1eeebf98/EPpDQTZo_400x400__1_.jpg",
-      "launchDate": "2021-11-29T11:00-06:00",
+      "launchDate": "2021-11-29T17:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-04-08T18:50:25.911Z",
+      "updatedDate": "2024-09-11T20:38:15.963Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
           "level": "critical",
-          "payout": "Up to USD $100,000",
+          "payout": "Up to USD $20,000",
           "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "high",
-          "payout": "USD $50,000",
+          "payout": "USD $10,000",
           "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "medium",
-          "payout": "USD $20,000",
+          "payout": "USD $5,000",
           "pocRequired": true
         },
         {
@@ -296,12 +296,6 @@
           "severity": "critical"
         },
         {
-          "id": "5qRdVcmkCfcG0Wahy5VyMF",
-          "title": "Permanent freezing of funds",
-          "type": "smart_contract",
-          "severity": "critical"
-        },
-        {
           "id": "2bdXiGBY8JKnPB1pwSa1v6",
           "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results",
           "type": "smart_contract",
@@ -310,29 +304,23 @@
         {
           "id": "5WDtxQdHIUcDvFWw6x8snJ",
           "title": "Any governance voting result manipulation",
-          "type": "blockchain_dlt",
-          "severity": "critical"
-        },
-        {
-          "id": "44ETonEs3x7NtwdPwh2xyF",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
-          "type": "blockchain_dlt",
+          "type": "smart_contract",
           "severity": "critical"
         },
         {
           "id": "5UDGlWY557wynyc6kTbfjm",
           "title": "Permanent freezing of funds",
-          "type": "blockchain_dlt",
+          "type": "smart_contract",
           "severity": "critical"
         },
         {
           "id": "4rFhKDYlVhfCJqNIfCreuF",
           "title": "Loss of governance funds",
-          "type": "blockchain_dlt",
+          "type": "smart_contract",
           "severity": "critical"
         },
         {
-          "id": "4yAK7njWN14URWBqpbWzdt",
+          "id": "6oEx6BbuDqOpYT1j0oYOBl",
           "title": "Theft of unclaimed yield",
           "type": "smart_contract",
           "severity": "high"
@@ -344,15 +332,9 @@
           "severity": "high"
         },
         {
-          "id": "6oEx6BbuDqOpYT1j0oYOBl",
-          "title": "Theft of unclaimed yield",
-          "type": "blockchain_dlt",
-          "severity": "high"
-        },
-        {
           "id": "440HiPvMg8sHndrIwer2iv",
           "title": "Permanent freezing of unclaimed yield",
-          "type": "blockchain_dlt",
+          "type": "smart_contract",
           "severity": "high"
         },
         {
@@ -370,27 +352,21 @@
         {
           "id": "6pz2xPoBmPks3nKAAkr3vR",
           "title": "Smart contract unable to operate due to lack of token funds",
-          "type": "blockchain_dlt",
-          "severity": "medium"
-        },
-        {
-          "id": "7rVM6D1FsfkqwTBwgL1Bzy",
-          "title": "Unbounded gas consumption",
-          "type": "blockchain_dlt",
+          "type": "smart_contract",
           "severity": "medium"
         },
         {
           "id": "6hGsLMuIlmIPW0n2TiorqA",
           "title": "Smart contract fails to deliver promised returns, but doesn’t lose value",
-          "type": "blockchain_dlt",
+          "type": "smart_contract",
           "severity": "low"
         }
       ],
-      "programOverview": "Astroport is the central space station of the Terra solar system, where travelers from all over the galaxy (Mirrans, Terrans, Anchorians, and more) meet to trustlessly exchange assets. As a galactic public good, Astroport will be governed by the Astral Assembly, a council of cryptonauts representing all corners of the universe.\n\nThe design philosophy behind Astroport is simple: to enable decentralised, non-custodial liquidity and price discovery for any asset. To achieve this, Astroport prioritises flexibility above all else; combining various specialised pool types and routing seamlessly across them.\n\nFor more information about Astroport, please visit [https://astroport.fi/](https://astroport.fi/).  \n",
+      "programOverview": "Astroport is the central space station of the Terra solar system, where travelers from all over the galaxy (Mirrans, Terrans, Anchorians, and more) meet to trustlessly exchange assets. As a galactic public good, Astroport will be governed by the Astral Assembly, a council of cryptonauts representing all corners of the universe.\n\nThe design philosophy behind Astroport is simple: to enable decentralised, non-custodial liquidity and price discovery for any asset. To achieve this, Astroport prioritises flexibility above all else; combining various specialised pool types and routing seamlessly across them.\n\nFor more information about Astroport, please visit [https://astroport.fi/](https://astroport.fi/).",
       "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in the scope table.\n\n__Smart Contracts/Blockchain__\n\n  - Loss of user funds staked (principal) by freezing or theft\n  - Loss of governance funds\n  - Theft of unclaimed yield\n  - Freezing of unclaimed yield\n  - Temporary freezing of funds for at least 1 hour\n  - Unable to call smart contract\n  - Smart contract gas drainage\n  - Smart contract fails to deliver promised returns\n  - Vote manipulation\n  - Incorrect polling actions\n\nThese Smart Contract Targets include the Commit Links:\n\nSmart Contract - Core Contract: Factory ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: Pair (ASTRO-axlUSDC) ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: Stable Pair ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: Constant Product Pair ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: Router ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: ASTRO Token ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: Generator ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: Maker ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: xASTRO Staking ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: xASTRO Token ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: Generator Vesting ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nThe Astroport smart contracts covered by this bug bounty program can be found in several repositories: the core repository, the governance repository and the generator proxy repository. However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll smart contract bug reports must come with a PoC and a suggestion for a fix in order to be considered for a reward.\n\n__Every contract that’s in scope is also accompanied by a specific Github commit. Only the contract implementation that’s specified in the commit is relevant for the program.__\n\nCritical vulnerabilities are capped at 15% of mainnet economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum of __USD 80 000__ for Critical bug reports. \n\nPayouts are handled by the __Astroport__ team directly and are denominated in USD. However, payouts are done in __USDC__. All rewards above 50 000 USD are subjected to a unlock period of up to 18 months where tokens will be vested linearly on a monthly basis. The ASTRO price will be the TWAP price in USDC over the previous 30 days.",
       "outOfScopeAndRules": "__Out of Scope & Rules __\n\nThe following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "\nThe Astroport smart contracts covered by this bug bounty program can be found in several repositories: the [core](https://github.com/astroport-fi/astroport-core) repository, the [governance](https://github.com/astroport-fi/astroport-governance) repository, the [generator proxy](https://github.com/astroport-fi/astro-generator-proxy-contracts) repository and finally the [periphery](https://github.com/astroport-fi/astroport-periphery) repository. However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n",
+      "assetsBodyV2": "The Astroport smart contracts covered by this bug bounty program can be found in several repositories: the [core](https://github.com/astroport-fi/astroport-core) repository, the [governance](https://github.com/astroport-fi/astroport-governance) repository, the [generator proxy](https://github.com/astroport-fi/astro-generator-proxy-contracts) repository and finally the [periphery](https://github.com/astroport-fi/astroport-periphery) repository. However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -430,15 +406,15 @@
         "smartcontract_rewards": [
           {
             "level": "Critical",
-            "payout": "Up to USD $100,000"
+            "payout": "Up to USD $20,000"
           },
           {
             "level": "High",
-            "payout": "USD $50,000"
+            "payout": "USD $10,000"
           },
           {
             "level": "Medium",
-            "payout": "USD $20,000"
+            "payout": "USD $5,000"
           },
           {
             "level": "Low",
@@ -462,11 +438,10 @@
     },
     "metaData": {
       "title": "Astroport Bug Bounties | Immunefi",
-      "description": "Find bugs and vulnerabilities on Astroport and get paid up to $100,000.",
+      "description": "Find bugs and vulnerabilities on Astroport and get paid up to $20,000.",
       "url": "https://immunefi.com/bug-bounty/astroport",
       "ogImg": "/api/bounty/og-image?project=Astroport"
     },
-    "bbpPageV2Enabled": true,
     "layoutProps": {
       "headerMarginBottom": "mb-3 lg:mb-15",
       "footerMarginTop": "mt-0"
