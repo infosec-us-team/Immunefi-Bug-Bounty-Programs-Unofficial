@@ -9,60 +9,36 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1ORcP6RE6HcGhV4bTAv8AN/8ce035bee832701401c4576fda63117c/Ribbon-logo.svg",
       "launchDate": "2021-04-12T07:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-07-24T16:32:09.469Z",
+      "updatedDate": "2024-09-17T15:27:16.097Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
           "level": "critical",
           "payout": "USD $50,000 to USD $300,000",
-          "pocRequired": false
+          "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "high",
           "payout": "USD $10,000 to USD $50,000",
-          "pocRequired": false
+          "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "medium",
           "payout": "USD $5,000 USD $25,000",
-          "pocRequired": false
+          "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "low",
           "payout": "USD $1,000",
-          "pocRequired": false
+          "pocRequired": true
         }
       ],
       "audits": null,
       "assets": [
-        {
-          "id": "5XzsfBxClm7PffD5W7Ba7K",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x0FABaF48Bbf864a3947bdd0Ba9d764791a60467A",
-          "description": "ETH Theta Vault",
-          "isPrimacyOfImpact": null,
-          "addedAt": "2022-02-10T08:03:21.192Z"
-        },
-        {
-          "id": "3tWJabz0r3A14uFziKFfNK",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x8b5876f5B0Bf64056A89Aa7e97511644758c3E8c",
-          "description": "WBTC Theta Vault",
-          "isPrimacyOfImpact": null,
-          "addedAt": "2022-02-10T08:03:57.274Z"
-        },
-        {
-          "id": "4Tu9vKaxmU2CR9V1HentwL",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x16772a7f4a3ca291C21B8AcE76F9332dDFfbb5Ef",
-          "description": "USDC Put ETH Theta Vault",
-          "isPrimacyOfImpact": null,
-          "addedAt": "2022-02-10T08:04:37.010Z"
-        },
         {
           "id": "4d9zuvr1wnmjoERWH1CnzZ",
           "type": "smart_contract",
@@ -158,30 +134,100 @@
           "description": "OTC Margin Requirements",
           "isPrimacyOfImpact": null,
           "addedAt": "2023-05-26T16:58:38.561Z"
+        },
+        {
+          "id": "2kByIvctLMNAuAwWrRtuiG",
+          "type": "smart_contract",
+          "url": "https://arbiscan.io/address/0x80d40e32fad8be8da5c6a42b8af1e181984d137c",
+          "description": "Aevo Deposit Contract Arbitrum",
+          "isPrimacyOfImpact": null,
+          "addedAt": "2024-09-17T15:21:20.338Z"
+        },
+        {
+          "id": "4CXFz2CNif1kiWpFkhvOkz",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x4082C9647c098a6493fb499EaE63b5ce3259c574",
+          "description": "Aevo Deposit Contract Ethereum",
+          "isPrimacyOfImpact": null,
+          "addedAt": "2024-09-17T15:21:36.604Z"
         }
       ],
       "impacts": [
         {
           "id": "6LScq1xPbXfYKJ2VrU8Oza",
-          "title": "Critical Smart Contract Impact",
+          "title": "Any governance voting result manipulation",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "5MsByvWB7OSdowxpk42lpC",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "3ELiy7mHcBVN9N1yvkctSZ",
+          "title": "Permanent freezing of funds",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "6mvZdMG5xKPWBM2HCuB8LD",
+          "title": "Miner-extractable value (MEV)",
+          "type": "smart_contract",
+          "severity": "critical"
+        },
+        {
+          "id": "5KIOADCGCVaRzfmZ6Dkmox",
+          "title": "Protocol Insolvency",
           "type": "smart_contract",
           "severity": "critical"
         },
         {
           "id": "Ez5wAq65oylzynnNhJejZ",
-          "title": "High Smart Contract Impact",
+          "title": "Theft of unclaimed yield",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "5QlCNZcZs8fBDgNNRjmO5n",
+          "title": "Permanent freezing of unclaimed yield",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
+          "id": "2aztOM7YQidHanN2Bl9GCw",
+          "title": "Temporary freezing of funds",
           "type": "smart_contract",
           "severity": "high"
         },
         {
           "id": "4Gj5BOqmj9tkK1Iu5B6EcT",
-          "title": "Medium Smart Contract Impact",
+          "title": "Smart contract unable to operate due to lack of token funds",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "5rnrXMXmyqPumISpc7tvJR",
+          "title": "Block stuffing for profit",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "135Sfe5md9Qb5rioVtcOo3",
+          "title": "Theft of gas",
+          "type": "smart_contract",
+          "severity": "medium"
+        },
+        {
+          "id": "t7xMjUHsA7AW7CLzZkTX3",
+          "title": "Unbounded gas consumption",
           "type": "smart_contract",
           "severity": "medium"
         },
         {
           "id": "6XZhozzBv8KxqegdWn5bgP",
-          "title": "Low Smart Contract Impact",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value",
           "type": "smart_contract",
           "severity": "low"
         }
@@ -189,7 +235,7 @@
       "programOverview": "Aevo is a new protocol that creates crypto structured products for DeFi. Structured products are packaged financial instruments that use a\ncombination of derivatives to achieve some specific risk-return objective, such as betting on volatility, enhancing yields or principal protection.  \n\nOne of its products, Theta Vault, is a yield-focused strategy on ETH and WBTC. The first Theta Vault will run a covered call strategy, which earns yield on a weekly basis through writing out of the money covered calls and collecting the premiums.\n\nThe bug bounty program is focused around its smart contracts and is mostly concerned with the loss of user funds.\n\nFor more information about Aevo, please visit https://aevo.xyz",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the\nfollowing types:\n\n**Smart Contracts/Blockchain:**\n\n- Re-entrancy\n- Logic errors\n  - including user authentication errors\n- Solidity/EVM details not considered\n  - including integer over-/under-flow\n  - including unhandled exceptions\n- Trusting trust/dependency vulnerabilities\n  - including composability vulnerabilities\n- Economic/financial attacks\n  - including flash loan attacks\n- Susceptibility to block timestamp manipulation\n- Missing access controls / unprotected internal or debugging interfaces",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on\nthe [Immunefi Vulnerability Severity Classification System](/severity-system/). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nSmart Contracts Critical:\n  - Loss of user funds:\n    - 1% of all assets at risk, minimum __50 000 USD__, maximum __300 000 USD__\n  - Loss of non-user funds (e.g. treasury):\n    - 1% of assets at risk, minimum __50 000 USD__ , maximum __150 000 USD__\n\nSmart Contracts High:\n  - 1% of all assets at risk when attack persists for 1 month minimum __10 000 USD__, maximum of __50 000 USD__\n\nSmart Contracts Medium:\n  - 1% of all assets at risk when attack persists for 1 month minimum __5 000 USD__, maximum __25 000 USD__\n\nSmart Contracts Low:\n  - __2 000 USD__\n\nPayouts are handled by the **Aevo** team directly and are denominated in USD. However, payouts are done in **USDC**.",
-      "outOfScopeAndRules": "**The following vulnerabilities are excluded from the rewards for this bug\nbounty program:**\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n- Oracle failure/manipulation\n- Novel governance attacks \n- Congestion and scalability\n  - including running out of gas\n  - including block stuffing\n  - including susceptibility to frontrunning\n- Consensus failures\n- Cryptography problems\n  - Signature malleability\n  - Susceptibility to replay attacks\n  - Weak randomness\n- Weak encryption\n\n**The following activities are prohibited by bug bounty program:**\n\n- Any testing with mainnet or public testnet contracts; all testing should be\n  done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees\n  and/or customers\n- Any testing with third party systems and applications (e.g. browser\n  extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "outOfScopeAndRules": "**The following vulnerabilities are excluded from the rewards for this bug\nbounty program:**\n\n- Griefing or DoS attacks (e.g. no profit motive for an attacker, but damage to the users or the protocol)\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n- Oracle failure/manipulation\n- Novel governance attacks \n- Congestion and scalability\n  - including running out of gas\n  - including block stuffing\n  - including susceptibility to frontrunning\n- Consensus failures\n- Cryptography problems\n  - Signature malleability\n  - Susceptibility to replay attacks\n  - Weak randomness\n- Weak encryption\n\n**The following activities are prohibited by bug bounty program:**\n\n- Any testing with mainnet or public testnet contracts; all testing should be\n  done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees\n  and/or customers\n- Any testing with third party systems and applications (e.g. browser\n  extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
       "assetsBodyV2": null,
       "impactsBody": null,
       "immunefiStandard": true,
@@ -197,7 +243,7 @@
         "general": [
           "Immunefi Standard",
           "KYC Not Required",
-          "PoC Not Required"
+          "PoC Required"
         ],
         "productType": [
           "Derivatives",
