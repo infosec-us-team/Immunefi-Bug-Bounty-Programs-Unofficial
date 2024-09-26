@@ -9,20 +9,20 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4ZifqdIHOxX3ckxGAMiQc6/4158480f9932b5fe099a1236902cd588/starknet.png",
       "launchDate": "2022-10-19T06:30:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-08-19T04:38:27.229Z",
+      "updatedDate": "2024-09-25T14:14:46.033Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "blockchain_dlt",
           "level": "critical",
           "payout": "USD $40,000 to USD $500,000",
-          "pocRequired": false
+          "pocRequired": true
         },
         {
           "assetType": "blockchain_dlt",
           "level": "high",
           "payout": "USD $30,000",
-          "pocRequired": false
+          "pocRequired": true
         },
         {
           "assetType": "smart_contract",
@@ -34,6 +34,18 @@
           "assetType": "smart_contract",
           "level": "high",
           "payout": "USD $30,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "critical",
+          "payout": "USD $10,000 - USD $20,000",
+          "pocRequired": true
+        },
+        {
+          "assetType": "websites_and_applications",
+          "level": "high",
+          "payout": "USD $2,500 - USD $5,000",
           "pocRequired": true
         }
       ],
@@ -806,6 +818,14 @@
           "description": "StarkGate - starknet/std_contracts/upgradability_proxy/proxy_impl.cairo",
           "isPrimacyOfImpact": null,
           "addedAt": "2022-10-19T06:30:00.000Z"
+        },
+        {
+          "id": "2a7C0pwaSiNq9wkhyglRVS",
+          "type": "websites_and_applications",
+          "url": "https://starkgate.starknet.io/",
+          "description": "StarkGate main site",
+          "isPrimacyOfImpact": null,
+          "addedAt": "2024-09-25T14:11:44.566Z"
         }
       ],
       "impacts": [
@@ -840,6 +860,12 @@
           "severity": "critical"
         },
         {
+          "id": "3rXYAfKT7PMiwwoWfH7udT",
+          "title": "Execute arbitrary system commands",
+          "type": "websites_and_applications",
+          "severity": "critical"
+        },
+        {
           "id": "4cMqshhkv3eXyQQYrcsLNW",
           "title": "Temporary freezing of funds for at least 1 week",
           "type": "blockchain_dlt",
@@ -850,12 +876,18 @@
           "title": "Temporary freezing of funds for at least 1 week",
           "type": "smart_contract",
           "severity": "high"
+        },
+        {
+          "id": "3RHwMRn7VrlYb2DxSojNPm",
+          "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as: HTML injection without JavaScript, Replacing existing text with arbitrary text, Arbitrary file uploads, etc",
+          "type": "websites_and_applications",
+          "severity": "high"
         }
       ],
       "programOverview": "StarkNet is a validity rollup based on zk-STARK proofs. It operates as an L2 network over Ethereum, enabling any dApp to achieve scale for its computation – without compromising Ethereum's composability and security.\n\nStarkNet is currently still in “alpha” stage. For more information about StarkNet, please visit [https://starknet.io/](https://starknet.io/) and [https://docs.starknet.io/](https://docs.starknet.io/).",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll smart contract bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nRewards for critical Blockchain/DLT vulnerabilities are further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum reward of __USD 40 000__ and a maximum reward of __USD 500 000__.\n\nRewards for critical Smart Contract vulnerabilities are further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum reward of __USD 50 000__ and a maximum reward of __USD 1 000 000__.\n\nStarkNet requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed is a full legal name, residential address, date of birth and copy of national ID\\ passport. Bounty hunters must pass OFAC Screening. Rewards cannot be paid out if hunters are on the OFAC SDN list and/or do not complete the KYC.\n\nThe following person(s) are ineligible to receive bug bounty payout rewards: StarkWare Staff, Auditors and Contractors engaged by StarkWare, persons in possession of privileged information, and any other associated parties. \n\nPayouts are handled by the __StarkNet__ team directly and are denominated in USD. However, payouts are done in __USDC__.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risk\n  - Sequencer bugs \n  - Exploits as a result of a malicious operator\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risk\n  - Sequencer bugs \n  - Exploits as a result of a malicious operator, with the exception of malicious prover. Until Starknet is fully decentralized, malicious prover issues will be capped by 30K.\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
       "assetsBodyV2": "All code of StarkNet can be found at [https://github.com/starkware-libs](https://github.com/starkware-libs). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf an impact can be caused to any other asset managed by StarkWare that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.",
       "impactsBody": null,
       "immunefiStandard": true,
@@ -876,7 +908,8 @@
         ],
         "programType": [
           "Blockchain/DLT",
-          "Smart Contract"
+          "Smart Contract",
+          "Websites and Applications"
         ],
         "language": [
           "Cairo",
@@ -889,6 +922,7 @@
       "legacy": {
         "technologies": [
           "Smart Contract",
+          "Websites and Applications",
           "Blockchain/DLT"
         ],
         "blockchain_rewards": [
@@ -911,7 +945,16 @@
             "payout": "USD $30,000"
           }
         ],
-        "web_rewards": []
+        "web_rewards": [
+          {
+            "level": "Critical",
+            "payout": "USD $10,000 - USD $20,000"
+          },
+          {
+            "level": "High",
+            "payout": "USD $2,500 - USD $5,000"
+          }
+        ]
       },
       "websiteUrl": null,
       "description": "StarkNet is a validity rollup based on zk-STARK proofs. It operates as an L2 network over Ethereum, enabling any dApp to achieve scale for its computation – without compromising Ethereum's composability and security.",
