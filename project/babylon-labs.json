@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1uFhvCOin4EEx5EMqnIkF9/cfa80e20b68ae47bd84d813d25b584bc/72515ec2-1bc5-4bdf-b788-354949253625.png",
       "launchDate": "2024-09-16T15:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-04T13:12:46.534Z",
+      "updatedDate": "2024-10-15T11:00:29.854Z",
       "kyc": true,
       "rewards": [
         {
@@ -84,7 +84,7 @@
         {
           "id": "2LWWqS2AbqMwjJ3vUO1E4K",
           "type": "blockchain_dlt",
-          "url": "https://github.com/babylonlabs-io/staking-indexer/tree/v0.2.x",
+          "url": "https://github.com/babylonlabs-io/staking-indexer/tree/v0.3.x",
           "description": "Bitcoin Staking Indexer",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
@@ -129,7 +129,7 @@
         {
           "id": "2hBHxkVFioYAxYdv3z1OWE",
           "type": "blockchain_dlt",
-          "url": "https://github.com/babylonlabs-io/btc-staker/tree/v0.5.x/cmd/stakercli/transaction",
+          "url": "https://github.com/babylonlabs-io/btc-staker/tree/v0.6.x/cmd/stakercli/transaction",
           "description": "CLI Staking Program",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
@@ -156,7 +156,7 @@
         {
           "id": "45laDM8BLfK1lSGsBnP4kr",
           "type": "websites_and_applications",
-          "url": "https://github.com/babylonlabs-io/staking-api-service/tree/v0.2.x",
+          "url": "https://github.com/babylonlabs-io/staking-api-service/tree/v0.3.x",
           "description": "Staking API Service",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
@@ -165,7 +165,7 @@
         {
           "id": "1NhRTIhN0pqNUhO23IA11k",
           "type": "websites_and_applications",
-          "url": "https://github.com/babylonlabs-io/simple-staking/tree/v0.2.x",
+          "url": "https://github.com/babylonlabs-io/simple-staking/tree/v0.3.x",
           "description": "Staking dApp",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
@@ -265,13 +265,13 @@
         },
         {
           "id": "5l1f4o4uhBwh3GGjElg0v4",
-          "title": "Staking backend recognising staking, unbonding, and withdrawal transactions as valid when they are invalid and vice verca.",
+          "title": "Staking back-end recognizing a staking transaction as valid when it is invalid and vice versa.",
           "type": "blockchain_dlt",
           "severity": "high"
         },
         {
           "id": "Vb8zUaOXaQlu6W6FjDxf5",
-          "title": "Causing the staking backend to process staking, unbonding, or withdrawal transactions that do not conform to the set parameters and protocol.",
+          "title": "Staking back-end recognizing an unbonding transaction not signed by the staker as valid.",
           "type": "blockchain_dlt",
           "severity": "high"
         },
@@ -306,6 +306,12 @@
           "severity": "high"
         },
         {
+          "id": "3XLRNTd5mJLPfqPzFbiVnB",
+          "title": "Staking back-end not processing a valid unbonding request.",
+          "type": "blockchain_dlt",
+          "severity": "high"
+        },
+        {
           "id": "3VGvWNy6FkFmT3mQ2WLToh",
           "title": "Causing a temporary (more than 1 hour) inability to process unbonding requests",
           "type": "blockchain_dlt",
@@ -333,6 +339,18 @@
           "id": "1uM3HNqXmudjnD05pMXCVw",
           "title": "Redirecting users to malicious websites (open redirect)",
           "type": "websites_and_applications",
+          "severity": "medium"
+        },
+        {
+          "id": "39YVspuMMy5F6zw0G7Nsj8",
+          "title": "Staking back-end recognizing an invalid unbonding transaction signed by the staker as valid.",
+          "type": "blockchain_dlt",
+          "severity": "medium"
+        },
+        {
+          "id": "6RAsmCIAJ2XNinVINw9EKu",
+          "title": "Staking back-end recognizing a withdrawal transaction as valid when it is invalid and vice versa.",
+          "type": "blockchain_dlt",
           "severity": "medium"
         },
         {

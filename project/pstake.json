@@ -5,29 +5,29 @@
       "id": "pstake",
       "slug": "pstake",
       "project": "pStake",
-      "maxBounty": 300000,
+      "maxBounty": 2000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7d8BEERcy6p2UBcH08gYWI/63f57580f3b9a8526d1a899a3cb72a44/pstake.png",
-      "launchDate": "2022-08-11T21:00-06:00",
+      "launchDate": "2022-08-12T03:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-07-24T14:14:57.902Z",
+      "updatedDate": "2024-10-15T10:22:52.014Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
           "level": "critical",
-          "payout": "USD $25,000 to USD $300,000",
+          "payout": "USD $2,000",
           "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "high",
-          "payout": "USD $20,000 to USD $100,000",
+          "payout": "USD $1,500",
           "pocRequired": true
         },
         {
           "assetType": "smart_contract",
           "level": "medium",
-          "payout": "USD $10,000",
+          "payout": "USD $1,250",
           "pocRequired": true
         },
         {
@@ -39,19 +39,19 @@
         {
           "assetType": "websites_and_applications",
           "level": "critical",
-          "payout": "USD $20,000",
+          "payout": "USD $2,000",
           "pocRequired": true
         },
         {
           "assetType": "websites_and_applications",
           "level": "high",
-          "payout": "USD $5,000",
+          "payout": "USD $1,500",
           "pocRequired": true
         },
         {
           "assetType": "websites_and_applications",
           "level": "medium",
-          "payout": "USD $2,000",
+          "payout": "USD $1,250",
           "pocRequired": true
         },
         {
@@ -70,7 +70,7 @@
           "description": "AddressStore",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-08-11T21:00-06:00"
+          "addedAt": "2022-08-12T03:00:00.000Z"
         },
         {
           "id": "3Sut02L0ihfQFwrAALTgPu",
@@ -79,7 +79,7 @@
           "description": "FeeVault",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-08-11T21:00-06:00"
+          "addedAt": "2022-08-12T03:00:00.000Z"
         },
         {
           "id": "6xXxo7Xj0fNgvf4n3cG8r5",
@@ -88,7 +88,7 @@
           "description": "StakePool",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-08-11T21:00-06:00"
+          "addedAt": "2022-08-12T03:00:00.000Z"
         },
         {
           "id": "2MxZYt31HKxJdU4rIVFnYt",
@@ -97,7 +97,7 @@
           "description": "StakedBNBToken",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-08-11T21:00-06:00"
+          "addedAt": "2022-08-12T03:00:00.000Z"
         },
         {
           "id": "5DE0sVInKSYSvtgBVUHzmE",
@@ -106,7 +106,7 @@
           "description": "TimelockedAdmin",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-08-11T21:00-06:00"
+          "addedAt": "2022-08-12T03:00:00.000Z"
         },
         {
           "id": "1mKk6dLt7TY26mrg77oTZv",
@@ -115,7 +115,7 @@
           "description": "UndelegationHolder",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-08-11T21:00-06:00"
+          "addedAt": "2022-08-12T03:00:00.000Z"
         },
         {
           "id": "4ePskvvgZQUPvLzIzvt28Q",
@@ -124,7 +124,7 @@
           "description": "Web/App",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-08-11T21:00-06:00"
+          "addedAt": "2022-08-12T03:00:00.000Z"
         },
         {
           "id": "7wb9UMKAdS7qZyZww9aeCH",
@@ -133,7 +133,7 @@
           "description": "Web/App",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-08-11T21:00-06:00"
+          "addedAt": "2022-08-12T03:00:00.000Z"
         }
       ],
       "impacts": [
@@ -186,6 +186,12 @@
           "severity": "high"
         },
         {
+          "id": "6tE6kKEkyPNVhHKqHGybCS",
+          "title": "Permanent freezing of unclaimed yield",
+          "type": "smart_contract",
+          "severity": "high"
+        },
+        {
           "id": "15saYM2jJ9rJFPUystJkF4",
           "title": "Temporary freezing of funds",
           "type": "smart_contract",
@@ -194,6 +200,12 @@
         {
           "id": "I3tRC4v6t4olUgOQvkZ1O",
           "title": "Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys(this does not include non-sensitive environment variables, open source code, or usernames)",
+          "type": "websites_and_applications",
+          "severity": "high"
+        },
+        {
+          "id": "2Y5bjn49Kd6p1jJKC4Z3TR",
+          "title": "Improperly disclosing confidential user information such as email address, phone number, physical address, etc.",
           "type": "websites_and_applications",
           "severity": "high"
         },
@@ -282,9 +294,9 @@
           "severity": "low"
         }
       ],
-      "programOverview": "pSTAKE is a liquid staking protocol that unlocks liquidity for your staked assets. With pSTAKE, users can securely stake their Proof-of-Stake (PoS) assets, participate in protocol improvements and security to earn staking rewards, and receive staked underlying representative tokens (stkASSETs) which can be used to explore additional yield opportunities across DeFi.\n\nAt present, pSTAKE supports Binance (BNB), Cosmos (ATOM), Persistence (XPRT), and Ethereum (ETH) networks’ native tokens, with a view to support more chains and assets in the future (SOL, and AVAX).\n\nBinance Labs is [supporting pSTAKE](https://www.binance.com/en/blog/ecosystem/binance-labs-makes-a-strategic-investment-in-liquid-staking-protocol-pstake-421499824684903831) to develop a liquid staking solution for the Binance chain in order to unlock liquidity of staked BNB and boost the growth of DeFi. pSTAKE’s BNB liquid staking product allows holders of BNB to stake their assets using the pSTAKE staking interface. Users are then issued stkBNB that can be used in DeFi to generate high yields.\n\nFor more information about pStake’s liquid staking product for BNB, please visit [https://pstake.finance/bnb](https://pstake.finance/bnb)",
+      "programOverview": "pSTAKE is a liquid staking protocol that unlocks liquidity for your staked assets. With pSTAKE, users can securely stake their Proof-of-Stake (PoS) assets, participate in protocol improvements and security to earn staking rewards, and receive staked underlying representative tokens (stkASSETs) which can be used to explore additional yield opportunities across DeFi.\n\nBinance Labs is [supporting pSTAKE](https://www.binance.com/en/blog/ecosystem/binance-labs-makes-a-strategic-investment-in-liquid-staking-protocol-pstake-421499824684903831) to develop a liquid staking solution for the Binance chain in order to unlock liquidity of staked BNB and boost the growth of DeFi. pSTAKE’s BNB liquid staking product allows holders of BNB to stake their assets using the pSTAKE staking interface. Users are then issued stkBNB that can be used in DeFi to generate high yields.\n\nFor more information about pStake’s liquid staking product for BNB, please visit [https://pstake.finance/bnb](https://pstake.finance/bnb)\n\nFor the purposes of determining report validity, this is a **Primacy of Rules** program.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\n__Smart Contracts Rewards Breakdowns__\n\nSmart Contracts (Critical):\n  - Loss of user funds:\n    - 10% of assets at risk, minimum __USD 50 000__, maximum __USD 300 000__\n  - Loss of non-user funds (e.g. treasury):\n    - 10% of assets at risk, minimum __USD 25 000__, maximum __USD 200 000__\n\nSmart Contracts (High):\n  - 10% of assets at risk\n  - Minimum __USD 20 000__, maximum of __USD 100 000__\n\nPrevious issues highlighted in the following audit reports are considered out of scope: \n  - [PeckShield Audit Report](https://github.com/persistenceOne/pStake-auditReports/blob/main/stkBNB/pStake_stkBNB_Smart_Contract_Audit_Peckshield%20%5B04.07.2022%5D.pdf)\n  - [Halborn Audit Report](https://github.com/persistenceOne/pStake-auditReports/blob/main/stkBNB/pSTAKE_stkBNB_Smart_Contract_Audit_Halborn%20%5B05.08.2022%5D.pdf)\n\nIn addition, the following issues are known and considered out of scope of the program: \n\nThe gas consumed by claim __All()__ depends on the number of unstake requests made by the user calling the __claimAll()__ function. The higher the number of unstake requests made by the user, the higher the gas usage of the __claimAll()__ function will be. The more unstake requests they create, the more gas they will have to pay for __claimAll()__.\n  - The following contracts have Admin/Owner roles in them:\n    - AddressStore\n    - FeeVault\n    - stkBNB Token\n    - StakePool\n    - TimelockedAdmin\n\nPayouts are handled by the __pStake__ team directly and are denominated in USD. However, payouts are done in __PSTAKE__, __BUSD__ or __USDC__, at the discretion of the team.",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\n__Smart Contracts Rewards Breakdowns__\n\nSmart Contracts (Critical):\n  - Loss of user funds:\n    - 10% of assets at risk, minimum __USD 50 000__, maximum __USD 300 000__\n  - Loss of non-user funds (e.g. treasury):\n    - 10% of assets at risk, minimum __USD 25 000__, maximum __USD 200 000__\n\nSmart Contracts (High):\n  - 10% of assets at risk\n  - Minimum __USD 20 000__, maximum of __USD 100 000__\n\nPrevious issues highlighted in the following audit reports are considered out of scope: \n  - [PeckShield Audit Report](https://github.com/persistenceOne/pStake-auditReports/blob/main/stkBNB/pStake_stkBNB_Smart_Contract_Audit_Peckshield%20%5B04.07.2022%5D.pdf)\n  - [Halborn Audit Report](https://github.com/persistenceOne/pStake-auditReports/blob/main/stkBNB/pSTAKE_stkBNB_Smart_Contract_Audit_Halborn%20%5B05.08.2022%5D.pdf)\n\nIn addition, the following issue are known and considered out of scope of the program: \n\nThe gas consumed by claim __All()__ depends on the number of unstake requests made by the user calling the __claimAll()__ function. The higher the number of unstake requests made by the user, the higher the gas usage of the __claimAll()__ function will be. The more unstake requests they create, the more gas they will have to pay for __claimAll()__.\n\nPayouts are handled by the __pStake__ team directly and are denominated in USD. However, payouts are done in __PSTAKE__, __BUSD__ or __USDC__, at the discretion of the team.",
       "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n\n__Websites and Apps__\n  - Theoretical vulnerabilities without any proof or demonstration\n  - Attacks requiring physical access to the victim device\n  - Attacks requiring access to the local network of the victim\n  - Reflected plain text injection ex: url parameters, path, etc.\n    - This does not exclude reflected HTML injection with or without javascript\n    - This does not exclude persistent plain text injection\n  - Self-XSS\n  - Captcha bypass using OCR without impact demonstration\n  - CSRF with no state modifying security impact (ex: logout CSRF)\n  - Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n  - Server-side non-confidential information disclosure such as IPs, server names, and most stack traces\n  - Vulnerabilities used only to enumerate or confirm the existence of users or tenants\n  - Vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n  - Lack of SSL/TLS best practices\n  - DDoS vulnerabilities\n  - Feature requests\n  - Issues related to the frontend without concrete impact and PoC\n  - Best practices issues without concrete impact and PoC\n  - Vulnerabilities primarily caused by browser/plugin defects\n  - Leakage of non sensitive api keys ex: etherscan, Infura, Alchemy, etc.\n  - Any vulnerability exploit requiring browser bugs for exploitation. ex: CSP bypass\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
       "assetsBodyV2": "All smart contracts of pStake can be found at [https://github.com/persistenceOne/stkBNB-contracts/tree/main/contracts](https://github.com/persistenceOne/stkBNB-contracts/tree/main/contracts). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
       "impactsBody": null,
@@ -326,15 +338,15 @@
         "smartcontract_rewards": [
           {
             "level": "Critical",
-            "payout": "USD $25,000 to USD $300,000"
+            "payout": "USD $2,000"
           },
           {
             "level": "High",
-            "payout": "USD $20,000 to USD $100,000"
+            "payout": "USD $1,500"
           },
           {
             "level": "Medium",
-            "payout": "USD $10,000"
+            "payout": "USD $1,250"
           },
           {
             "level": "Low",
@@ -344,15 +356,15 @@
         "web_rewards": [
           {
             "level": "Critical",
-            "payout": "USD $20,000"
+            "payout": "USD $2,000"
           },
           {
             "level": "High",
-            "payout": "USD $5,000"
+            "payout": "USD $1,500"
           },
           {
             "level": "Medium",
-            "payout": "USD $2,000"
+            "payout": "USD $1,250"
           },
           {
             "level": "Low",
@@ -361,7 +373,7 @@
         ]
       },
       "websiteUrl": null,
-      "description": "pSTAKE is a liquid staking protocol that unlocks liquidity for your staked assets. With pSTAKE, users can securely stake their Proof-of-Stake (PoS) assets, participate in protocol improvements and security to earn staking rewards, and receive staked underlying representative tokens (stkASSETs) which can be used to explore additional yield opportunities across DeFi.",
+      "description": "pSTAKE is a liquid staking protocol that unlocks liquidity for your staked assets. With pSTAKE, users can securely stake their Proof-of-Stake (PoS) assets, participate in protocol improvements and security to earn staking rewards, and receive staked underlying representative tokens (stkASSETs) which can be used to explore additional yield opportunities across DeFi.\n\n\n**Note**: This product is in its deprecation phase and will be sunsetted by the end of 2024. As a result, bounty amounts have been adjusted accordingly and are lower than usual.",
       "githubUrl": null,
       "feasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
       "prohibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
@@ -395,7 +407,7 @@
     },
     "metaData": {
       "title": "pStake Bug Bounties",
-      "description": "Find bugs and vulnerabilities on pStake and get paid up to $300,000.",
+      "description": "Find bugs and vulnerabilities on pStake and get paid up to $2,000.",
       "url": "https://immunefi.com/bug-bounty/pstake",
       "ogImg": "/api/bounty/og-image?project=pStake"
     },
