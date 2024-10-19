@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7AcBUADA7IW95jTvkwxxF5/1b175e555e12b85bf5f6fb4c0ef3104c/tc_symbol_OnDark_color.jpg",
       "launchDate": "2022-11-03T18:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-09-13T08:00:58.397Z",
+      "updatedDate": "2024-10-18T12:15:17.002Z",
       "kyc": true,
       "rewards": [
         {
@@ -498,8 +498,8 @@
       "programOverview": "Toucan is building technology to finance climate action at scale. They are developing infrastructure to move carbon credits onto open blockchains, which helps make carbon markets more transparent, efficient, accessible, and scalable. \n\nToucans infrastructure is composed of four key modules:\n  1. The Carbon Bridge verifiably 1:1 tokenizes carbon credits from a supported registry and turns them into ERC-20 tokens that anyone can use. More than 20m carbon credits (or around 85 % of all on-chain carbon credits) have been tokenized using Toucans bridge\n  2. Their Carbon Pools are a way of grouping together tokens linked to credits with similar attributes. The result: standardized and deeply liquid carbon reference tokens (like NCT) that can be easily priced and traded on cryptocurrency exchanges.\n  3. Information about all tokenized carbon credits is stored on Toucan's Open Carbon Registry. This is a unified global ledger with consistent data standards to be used across organizations. On the Open Carbon Registry, everyone can view the project information, trading history and retirement details of all tokenized carbon credits. The Open Carbon Registry brings much-needed transparency into a previously opaque market.\n  4. The retirement module helps companies retire carbon credits with the full transparency of a public blockchain.\n\nFor more information about Toucan, please visit [https://toucan.earth/](https://toucan.earth/).",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nRewards for critical smart contract vulnerabilities are further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum reward of __USD 50 000__ and a maximum reward of __USD 200 000__.\n\nKnown issues highlighted in the following audit reports are considered out of scope: \n  - [https://byterocket.com/audit/toucan-protocol](https://byterocket.com/audit/toucan-protocol)\n  - [https://byterocket.com/audit/toucan-protocol-nct](https://byterocket.com/audit/toucan-protocol-nct)\n  - [https://byterocket.com/audit/toucan-protocol-retirement-certificates](https://byterocket.com/audit/toucan-protocol-retirement-certificates)\n\nPayouts are handled by the __Toucan__ team directly and are denominated in USD. However, payouts are done in __USDC (ERC20)__.  All payouts require invoice with email and crypto wallet address.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n  - Attacks involving functionality which is currently paused, e.g. the process of bridging credits from Verra, which includes:\n\n    - linking of batch NFTs in CarbonOffsetBatches contract with project vintages\n    - approval / rejection of batch NFTs in CarbonOffsetBatches contract\n\nNevertheless, any such attacks which are new discoveries may be eligible for discretionary payouts if they help harden future bridging when that resumes.\n\n__Smart Contracts and Blockchain__\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "Though only the proxy contracts are listed as in-scope, the current implementation when used via those proxies, and any further updates to the implementation contracts are also considered in scope. When reporting a bug, please make sure to select the relevant proxy smart contract as the target.\n\nAll smart contracts of Toucan can be found at the following repos:\n- [https://github.com/ToucanProtocol/contracts](https://github.com/ToucanProtocol/contracts)\n- [https://github.com/ToucanProtocol/dynamic-fee-pools](https://github.com/ToucanProtocol/dynamic-fee-pools)\n\nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
+      "outOfScopeAndRules": ".",
+      "assetsBodyV2": "Though only the proxy contracts are listed as in-scope, the current implementation when used via those proxies, and any further updates to the implementation contracts are also considered in scope. When reporting a bug, please make sure to select the relevant proxy smart contract as the target.\n\nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -508,7 +508,10 @@
           "KYC Required",
           "PoC Required"
         ],
-        "productType": [],
+        "productType": [
+          "Services",
+          "Token"
+        ],
         "projectType": [
           "Defi"
         ],
@@ -554,19 +557,38 @@
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
       "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
-      "customOutOfScopeInformation": null,
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+      "customOutOfScopeInformation": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n  - Attacks involving functionality which is currently paused, e.g. the process of bridging credits from Verra, which includes:\n\n    - linking of batch NFTs in CarbonOffsetBatches contract with project vintages\n    - approval / rejection of batch NFTs in CarbonOffsetBatches contract\n\nNevertheless, any such attacks which are new discoveries may be eligible for discretionary payouts if they help harden future bridging when that resumes.\n\n- Best practice critiques",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "ERC20",
       "rewardsToken": "USDC",
       "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
+      "programCodebases": [
+        {
+          "id": 3,
+          "programId": 2183,
+          "title": "Toucan Protocol Codebase",
+          "description": "Github codebase for Toucan",
+          "url": "https://github.com/ToucanProtocol/contracts",
+          "createdAt": "2024-10-18T09:40:16.709Z",
+          "updatedAt": "2024-10-18T09:40:16.709Z"
+        },
+        {
+          "id": 4,
+          "programId": 2183,
+          "title": "Toucan Protocol Codebase - Dynamic Fee Pools",
+          "description": "Github codebase for Toucan fee pools",
+          "url": "https://github.com/ToucanProtocol/dynamic-fee-pools",
+          "createdAt": "2024-10-18T09:41:30.295Z",
+          "updatedAt": "2024-10-18T09:41:30.295Z"
+        }
+      ],
       "programDocumentations": [],
       "premiumTriaging": false
     },
