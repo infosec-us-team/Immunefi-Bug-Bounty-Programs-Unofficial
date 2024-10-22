@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5jW460UDYEbPDo4PZAOuZE/dd602e17d4ff01851c727c387eeecc5a/KEBPir98_400x400.jpg",
       "launchDate": "2023-03-15T19:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-16T13:25:52.911Z",
+      "updatedDate": "2024-10-21T13:27:42.131Z",
       "kyc": true,
       "rewards": [
         {
@@ -192,7 +192,7 @@
       "programOverview": "Hathor is a digital platform for financial transactions and contracts with a unique combination of high scalability and high decentralization. It creates the perfect environment for multiple use cases where scale, efficiency, long-term security, and censorship-resistance through network distribution combined are needed or can drastically cut current costs and bureaucracy.\n\nFor more information about Hathor Network, please visit [https://hathor.network/  ](https://hathor.network/)",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the  [Immunefi Vulnerability Severity Classification System V2.3.](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/) This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported. \n\nAll Blockchain/DLT and Web/App bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required. Bug reports are required to include a runnable PoC in order to prove impact. Exceptions may be made in cases where the vulnerability is objectively evident from simply mentioning the vulnerability and where it exists. However, the bug reporter may be required to provide a PoC at any point in time.\n\nHathor Labs requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed is a government ID and proof of address.\n\nUnlike other bug bounty programs on Immunefi, all bug report submissions, including associated vulnerabilities, become the exclusive property of Hathor Labs. By making a submission to this program and in consideration for a bounty, the bug submitter conveys all ownership rights, titles, and interests in the bug report to Hathor Labs. Thus, the final decision on whether a postmortem will be written is at the sole discretion of Hathor Labs.\n\nPayouts are handled by the __Hathor Labs__ team directly and are denominated in USD. However, payouts are done in __HTR__.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n- Centralization risks\n\n__Websites and Apps__\n\n- Theoretical vulnerabilities without any proof or demonstration\n- Attacks requiring physical access to the victim device\n- Attacks requiring access to the local network of the victim\n- Reflected plain text injection ex: url parameters, path, etc.\n   - This does not exclude reflected HTML injection with or without javascript\n   - This does not exclude persistent plain text injection\n- Self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (ex: logout CSRF)\n- Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure such as IPs, server names, and most stack traces\n- Vulnerabilities used only to enumerate or confirm the existence of users or tenants\n- Vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- DDoS vulnerabilities\n- Feature requests\n- Issues related to the frontend without concrete impact and PoC\n- Best practices issues without concrete impact and PoC\n- Vulnerabilities primarily caused by browser/plugin defects\n- Leakage of non sensitive api keys ex: etherscan, Infura, Alchemy, etc.\n- Any vulnerability exploit requiring browser bugs for exploitation. ex: CSP bypass\n- Automated Scanner Reports without demonstrated impact\n- UI/UX best practices recommendations\n- Non-future-proof NFT rendering\n\nThe following activities are prohibited by this bug bounty program:\n\nAny testing with mainnet or public testnet contracts; all testing should be done on private testnets\nAny testing with pricing oracles or third party smart contracts\nAttempting phishing or other social engineering attacks against our employees and/or customers\nAny testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\nAny denial of service attacks\nAutomated testing of services that generates significant amounts of traffic\nPublic disclosure of an unpatched vulnerability in an embargoed bounty",
+      "outOfScopeAndRules": ".",
       "assetsBodyV2": "Only the latest release is in scope for Blockchain/DLT and Web/App assets. You can access the latest release for a repository by adding \"releases/latest\" to the end of a repository's URL.\n\nNever run tests on Hathor's production environments such as the mainnet. If you believe your attack would only work in our production environment, get in touch with us at security@hathor.network. \n\nAll config and test files are considered as out-of-scope of this bug bounty program. \n\nHathor-core/hathor/wallet is out-of-scope.  [https://github.com/HathorNetwork/hathor-core/tree/master/hathor/wallet](https://github.com/HathorNetwork/hathor-core/tree/master/hathor/wallet)\n\nAll code of Hathor Network can be found at [https://github.com/HathorNetwork.](https://github.com/HathorNetwork) However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nDocumentation and instruction for PoC can be found here:\n- [https://hathor.gitbook.io/hathor/](https://hathor.gitbook.io/hathor/)\n- [https://github.com/HathorNetwork/rfcs/blob/master/text/0033-private-network-guide.md](https://github.com/HathorNetwork/rfcs/blob/master/text/0033-private-network-guide.md)",
       "impactsBody": null,
       "immunefiStandard": true,
@@ -265,20 +265,49 @@
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
-      "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+      "defaultOutOfScopeWebAndApplications": "- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n  - This does not exclude reflected HTML injection with or without JavaScript\n  - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering",
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
       "customOutOfScopeInformation": null,
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "HTR",
       "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
-      "programDocumentations": [],
+      "programCodebases": [
+        {
+          "id": 8,
+          "programId": 1829,
+          "title": "Hathor Network Codebase",
+          "description": "Github Codebase",
+          "url": "https://github.com/HathorNetwork",
+          "createdAt": "2024-10-21T13:23:53.002Z",
+          "updatedAt": "2024-10-21T13:23:53.002Z"
+        }
+      ],
+      "programDocumentations": [
+        {
+          "id": 6,
+          "programId": 1829,
+          "title": "Hathor Network Documentation",
+          "description": "Gitbook Documentation",
+          "url": "https://hathor.gitbook.io/hathor/",
+          "createdAt": "2024-10-21T13:25:31.323Z",
+          "updatedAt": "2024-10-21T13:25:31.323Z"
+        },
+        {
+          "id": 7,
+          "programId": 1829,
+          "title": "Hathor Network Documentation",
+          "description": "Private Network Guide",
+          "url": "https://github.com/HathorNetwork/rfcs/blob/master/text/0033-private-network-guide.md",
+          "createdAt": "2024-10-21T13:27:27.424Z",
+          "updatedAt": "2024-10-21T13:27:27.424Z"
+        }
+      ],
       "premiumTriaging": false
     },
     "project": {
