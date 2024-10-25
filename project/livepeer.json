@@ -312,94 +312,94 @@
       ],
       "impacts": [
         {
-          "id": "1HAu8TAr38UOVCI17JIPrT",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 1930,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Smart contract has unexpected behavior but doesn’t lose value"
         },
         {
-          "id": "5hXt85cODDaCNKXcBr2pFj",
-          "title": "Permanent freezing of funds",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "2ubfAFykMijEZ1vFodHDaE",
-          "title": "Insolvency",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "nNQz9Z1UI3AQTRDZMF3Hy",
-          "title": "Unintended issuance of LPT on L1",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "2zEso8BuwCXpbyrdqBzqZI",
-          "title": "Unexpected calls to functions that should only be called by authorized addresses (i.e. Governor)",
+          "id": 1931,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Any unexpected balance inflation when transitioning between L1 and L2"
         },
         {
-          "id": "5QDf9ymNHamg6Ewj0yNig9",
-          "title": "Direct manipulation treasury voting that manipulate the outcome of the vote resulting in drained funds from the treasury",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "7cb94ROiFKXgSELkxVvvrc",
-          "title": "Theft of unclaimed yield",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "TAGEA8XHt5xLhfaZOMhtS",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 1932,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Unbounded gas consumption or any other gas drainage"
         },
         {
-          "id": "3ysXPgJ36rr9U4qko8WibO",
-          "title": "Temporary freezing of funds",
+          "id": 1933,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Manipulation of protocol governance vote or treasury voting that does not effect the result of the vote"
         },
         {
-          "id": "2ARjQNnfUAEMJvqNnxKxch",
-          "title": "Any unexpected balance inflation when transitioning between L1 and L2",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "2VWM5DcTctgwHOMHTiCEf8",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "79VgRSvKIaUFZHbnnxkzIq",
-          "title": "Theft of gas",
+          "id": 1934,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Insolvency"
         },
         {
-          "id": "1i2wTrYz0v55Fa3EJab1b7",
-          "title": "Unbounded gas consumption or any other gas drainage",
+          "id": 1935,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Unintended issuance of LPT on L1"
         },
         {
-          "id": "BlAOQ4pNQ9AR1xvq6LXIQ",
-          "title": "Manipulation of protocol governance vote or treasury voting that does not effect the result of the vote",
+          "id": 1936,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Unexpected calls to functions that should only be called by authorized addresses (i.e. Governor)"
         },
         {
-          "id": "2UzyfEDb835yNvJalZYb77",
-          "title": "Smart contract has unexpected behavior but doesn’t lose value",
+          "id": 1937,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Direct manipulation treasury voting that manipulate the outcome of the vote resulting in drained funds from the treasury"
         }
       ],
       "programOverview": "Livepeer is a decentralized video streaming network built on the Ethereum blockchain. The Livepeer network already includes over 70,000 GPUs, which is enough aggregated power to encode all of the video streaming through Twitch, YouTube and Facebook combined. Through the power of open source software, the harnessing of underutilized resources like compute and bandwidth, and the use of cryptoeconomic incentives for bootstrapping and participation, there is an opportunity to deliver an infrastructure that can power video streaming applications at a highly efficient price, and infinite scale.\n\nFor more information about Livepeer, please visit [https://livepeer.org/](https://livepeer.org/).  \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield\n  - Permanent freezing of funds\n  - Insolvency\n  - Unintended issuance of LPT on L1\n  - Unexpected calls to functions that should only be called by authorized addresses (i.e. Governor)",

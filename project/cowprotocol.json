@@ -207,70 +207,70 @@
       ],
       "impacts": [
         {
-          "id": "72CxOR04Wir0UDFuw5OXwu",
-          "title": "Changing the owner address of the authentication contract as well as adding a solver without authorization",
+          "id": 560,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Changing the order of a legitimate interaction, as well as skipping one, in a settlement"
         },
         {
-          "id": "7boUvgyM46EpGxSArHrejA",
-          "title": "Forgery of a user’s signature that would allow them to execute a funded trade without using the user’s private key",
+          "id": 561,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Removing a solver without authorization (also as a solver)"
         },
         {
-          "id": "37iGDJEPRzixOvb6KoGvtw",
-          "title": "Execute arbitrary settlements without being a solver",
+          "id": 562,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Making the contract unable to be operated by any solver, e.g., through self-destruction (also as a solver)"
         },
         {
-          "id": "xEFtE66sNmVBBkRJ6xOTi",
-          "title": "Executing a user’s trade that is expired or at a price worse than the limit price (also as a solver)",
+          "id": 563,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Freeing storage without being a solver"
         },
         {
-          "id": "7yksksPpj7OnffubObO7m9",
-          "title": "Transferring in tokens more than once for the same fill-or-kill order in the same settlement (also as a solver)",
+          "id": 564,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Invalidate an order without the permission of the user who created it"
         },
         {
-          "id": "7k2gMt0UZujWf46zHD3ZN2",
-          "title": "Access to user funds outside of a trade.",
+          "id": 565,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "critical",
+          "title": "Changing the owner address of the authentication contract as well as adding a solver without authorization"
         },
         {
-          "id": "RLuFesfg0re4E543w6tbU",
-          "title": "Changing the order of a legitimate interaction, as well as skipping one, in a settlement",
+          "id": 566,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Forgery of a user’s signature that would allow them to execute a funded trade without using the user’s private key"
         },
         {
-          "id": "5gK47m0YCiHN3GdSIxrAGj",
-          "title": "Removing a solver without authorization (also as a solver)",
+          "id": 567,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Execute arbitrary settlements without being a solver"
         },
         {
-          "id": "1zVW5euwoDOEG7TKJWbr8W",
-          "title": "Making the contract unable to be operated by any solver, e.g., through self-destruction (also as a solver)",
+          "id": 568,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Executing a user’s trade that is expired or at a price worse than the limit price (also as a solver)"
         },
         {
-          "id": "U9TYPQaRimsgqn0U9pEPu",
-          "title": "Freeing storage without being a solver",
+          "id": 569,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Transferring in tokens more than once for the same fill-or-kill order in the same settlement (also as a solver)"
         },
         {
-          "id": "7lCeBsNs0OWrYFBuk0EXw3",
-          "title": "Invalidate an order without the permission of the user who created it",
+          "id": 570,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Access to user funds outside of a trade."
         }
       ],
       "programOverview": "The CoW team, for and on behalf of and at the expense of [CoW DAO](https://forum.cow.fi/), is running a bug bounty program focused on CoW Protocol, a fully permissionless protocol that leverages batch auctions to provide MEV protection, plus integrates with on-chain liquidity sources to offer traders the best prices.\n\nFor background information, please refer to [the docs](https://docs.cow.fi/).\n\nThe bug bounty program is focused around the smart contracts and is mostly concerned with the loss of user funds. It is a seamless continuation of the bug bounty program formerly run by Gnosis.",

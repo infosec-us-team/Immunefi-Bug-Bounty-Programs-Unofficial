@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4r8fmQqm5emK0IceVDJtLF/1c5f298890761f6b5342c04aa0df8c63/Autonolas_logo.jpeg",
       "launchDate": "2022-08-10T17:30:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-08-19T12:34:07.154Z",
+      "updatedDate": "2024-10-24T18:29:58.581Z",
       "kyc": true,
       "rewards": [
         {
@@ -420,88 +420,88 @@
       ],
       "impacts": [
         {
-          "id": "pKx2g3ezuzN6vpTwqLZu4",
-          "title": "Any governance voting result manipulation",
+          "id": 3078,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Smart contract fails to deliver promised returns, but doesn’t lose value"
         },
         {
-          "id": "6jsRssKAAUvVaAwOkgYg6e",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "3pweAAjwksyItqLNx0ybkv",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "4J595C1S1GJoLo2TnsYl5t",
-          "title": "Protocol insolvency",
+          "id": 3079,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds for more that 7 days"
         },
         {
-          "id": "3pGh2Wan2w24kx5SE06DGX",
-          "title": "Theft of unclaimed yield",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "2SI8bN2FGfKHpGuPd0Q9KI",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 3080,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing for profit"
         },
         {
-          "id": "6ql7CuuhwYswQIq3oMcRP",
-          "title": "Temporary freezing of funds for more that 7 days",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "DLsT1baTPRzNXOxc6vvbc",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "1B2gYcVJVwFauABsGMXLFZ",
-          "title": "Block stuffing for profit",
+          "id": 3081,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption (Only governance related contracts are in scope for this kind of vulnerability, i.e. OLAS, Timelock, veOLAS, wveOLAS, Governor OLAS, Vote Weighting, FxGovernorTunnel, HomeMediator, OptimismMessenger, WormholeMessenger)"
         },
         {
-          "id": "7DjQhuqeva2aNMu1QBPSBz",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 3082,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Any governance voting result manipulation"
         },
         {
-          "id": "5rtdQmngOh6w3Pgafo4RnV",
-          "title": "Theft of gas",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "75qNoR5700wpYS1CGVmCFr",
-          "title": "Unbounded gas consumption (Only governance related contracts are in scope for this kind of vulnerability, i.e. OLAS, Timelock, veOLAS, wveOLAS, Governor OLAS, Vote Weighting, FxGovernorTunnel, HomeMediator, OptimismMessenger, WormholeMessenger)",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "1hJSSxx3g7ZTOFY6wgsdRB",
-          "title": "Smart contract fails to deliver promised returns, but doesn’t lose value",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "Autonolas enables DAOs to create, run and own autonomous services that power next-gen apps in DAO operations, treasury management, AI, and beyond. Autonolas protocol provides means to build, register, co-own, manage and secure autonomous services: off-chain services which run as a multi-agent-system (MAS) and are replicated on a temporary consensus gadget (blockchain) while being crypto-economically secured on a public blockchain, hence offering robustness, transparency and decentralization off-chain.\n\nFor more information about Autonolas, please visit [https://olas.network](https://olas.network).",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nCritical and high smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of __USD 6 000__ for high smart contract vulnerabilities and __12 000__ for critical ones.\n\nAll Critical, High, and Medium Smart Contract bug reports must come with a PoC, have an end-effect impact, and an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nThe following vulnerabilities are not eligible for a reward:\n\n  - All vulnerabilities mentioned in [https://github.com/valory-xyz/autonolas-governance/tree/main/audits](https://github.com/valory-xyz/autonolas-governance/tree/main/audits) \n  - All vulnerabilities mentioned in [https://github.com/valory-xyz/autonolas-governance/tree/main/docs](https://github.com/valory-xyz/autonolas-governance/tree/main/docs) \n  - All vulnerabilities mentioned in [https://github.com/valory-xyz/autonolas-governance/tree/main/test](https://github.com/valory-xyz/autonolas-governance/tree/main/test)\n  - All vulnerabilities mentioned in the comments on the contracts code [https://github.com/valory-xyz/autonolas-governance/tree/main/contracts](https://github.com/valory-xyz/autonolas-governance/tree/main/contracts)\n  - All vulnerabilities mentioned in [https://github.com/valory-xyz/autonolas-registries/tree/main/audits](https://github.com/valory-xyz/autonolas-registries/tree/main/audits) \n  - All vulnerabilities mentioned in [https://github.com/valory-xyz/autonolas-registries/tree/main/docs ](https://github.com/valory-xyz/autonolas-registries/tree/main/docs)\n  - All vulnerabilities mentioned in [https://github.com/valory-xyz/autonolas-registries/tree/main/test ](https://github.com/valory-xyz/autonolas-registries/tree/main/test)\n  - All vulnerabilities mentioned in the comments on the contracts code [https://github.com/valory-xyz/autonolas-registries/tree/main/contracts](https://github.com/valory-xyz/autonolas-registries/tree/main/contracts)\n  - All vulnerabilities mentioned in [https://github.com/valory-xyz/autonolas-tokenomics/tree/main/audits ](https://github.com/valory-xyz/autonolas-tokenomics/tree/main/audits)\n  - All vulnerabilities mentioned in [https://github.com/valory-xyz/autonolas-tokenomics/tree/main/docs ](https://github.com/valory-xyz/autonolas-tokenomics/tree/main/docs)\n  - All vulnerabilities mentioned in [https://github.com/valory-xyz/autonolas-tokenomics/tree/main/test ](https://github.com/valory-xyz/autonolas-tokenomics/tree/main/test)\n  - All vulnerabilities mentioned in the comments on the contracts code [https://github.com/valory-xyz/autonolas-tokenomics/tree/main/contracts](https://github.com/valory-xyz/autonolas-tokenomics/tree/main/contracts) \n  - All vulnerabilities found in the inherited source code from OpenZeppelin ([https://github.com/OpenZeppelin/openzeppelin-contracts](https://github.com/OpenZeppelin/openzeppelin-contracts)) and Solmate ([https://github.com/transmissions11/solmate](https://github.com/transmissions11/solmate))\n  - All vulnerabilities found in the inherited source code for the bridging contracts from [Polygon](https://github.com/maticnetwork), [Gnosis](https://docs.gnosischain.com/bridges/tokenbridge/amb-bridge), [Arbitrum](https://docs.arbitrum.io/), [Optimism](https://docs.optimism.io/), [Base](https://docs.base.org/), [Wormhole](https://docs.wormhole.com/) docs.\n  - All vulnerabilities found in code based on or inspired by Maple Finance ([https://github.com/maple-labs](https://github.com/maple-labs)) Curve DAO [https://github.com/curvefi/curve-dao-contracts](https://github.com/curvefi/curve-dao-contracts) Uniswap Labs [(https://github.com/Uniswap/v2-core)](https://github.com/Uniswap/v2-core), PaulRBerg [(https://github.com/paulrberg/prb-math)](https://github.com/paulrberg/prb-math), Jeiwan [(https://github.com/Jeiwan/zuniswapv2)](https://github.com/Jeiwan/zuniswapv2), Safe Ecosystem [(https://github.com/safe-global/safe-contracts)](https://github.com/safe-global/safe-contracts) and that are already reported to one of those projects.\n  - All vulnerabilities that arise from misconfigured registration from users (e.g. component owners, agent owners, service owners, agents operators) or misuse of the registration logic (e.g. accidental locking of funds, loss of keys to control services, etc.).  \n\nAutonolas requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed is an invoice with Name, Address, and Country of the hacker or a legal entity used for transactions. If the hacker is based in Switzerland they need to account for VAT in the invoice.\nThe collection of this information will be done by the Autonolas team. \n\nPayouts are handled by the __Autonolas__ team directly and are denominated in USD. However, payouts are done in __USDT and USDC__, with the choice of the ratio at the discretion of the team.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist, community multisig)\n  - Attacks building on already identified attacks\n\n__Smart Contracts and Blockchain__\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n  - Attacks that attempt to disrupt the protocol's availability, such as flooding the system with an excessive number of non-useful components or non-useful components within agents, resulting in gas resource exhaustion. Additionally, attacks that attempt to cause gas resource exhaustion issues by making minimal donations to a large number of services with numerous components.\n  - All vulnerabilities that arise from misconfigured registration from users (e.g. component owners, agent owners, service owners, agents operators) or misuse of the registration logic (e.g. accidental locking of funds, loss of keys to control services, etc.). \n  - Vulnerabilities that arise or are built upon the fact that GuardCM implies a reduction of the  community multisig functionalities as originally designed, such us self-calls within community multisig.\n  - The following are considered out of scope for “permanent freezing of funds” Critical Impact: when the freezing of funds is attributed to unintended use of the contracts: Component Registry, Agent Registry, Service Registry,  Service Registry Token Utility, Registries Manager, Service Manager Token, Operator Whitelist, Gnosis Safe Multisig, Gnosis Safe Multisig Same Address, Service Registry L2, Service Manager.\n  - The following contract are not in scope for “Griefing” Medium Impact: Component Registry, Agent Registry, Service Registry,  Service Registry Token Utility, Registries Manager, Service Manager Token, Operator Whitelist, Gnosis Safe Multisig, Gnosis Safe Multisig Same Address, Service Registry L2, Service Manager\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "outOfScopeAndRules": ".",
       "assetsBodyV2": "All smart contracts of Autonolas can be found at\n\n- [https://github.com/valory-xyz/autonolas-governance/tree/v1.2.2](https://github.com/valory-xyz/autonolas-governance/tree/v1.2.2)\n- [https://github.com/valory-xyz/autonolas-registries/tree/v1.2.2](https://github.com/valory-xyz/autonolas-registries/tree/v1.2.2) \n- [https://github.com/valory-xyz/autonolas-tokenomics/tree/v1.2.2](https://github.com/valory-xyz/autonolas-tokenomics/tree/v1.2.2) \n\nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
       "impactsBody": null,
       "immunefiStandard": true,
@@ -564,13 +564,13 @@
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
       "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
       "defaultFeasibilityLimitations": null,
-      "customOutOfScopeInformation": null,
+      "customOutOfScopeInformation": "  - Best practice critiques\n  - Attacks that attempt to disrupt the protocol's availability, such as flooding the system with an excessive number of non-useful components or non-useful components within agents, resulting in gas resource exhaustion. Additionally, attacks that attempt to cause gas resource exhaustion issues by making minimal donations to a large number of services with numerous components.\n  - All vulnerabilities that arise from misconfigured registration from users (e.g. component owners, agent owners, service owners, agents operators) or misuse of the registration logic (e.g. accidental locking of funds, loss of keys to control services, etc.). \n  - Vulnerabilities that arise or are built upon the fact that GuardCM implies a reduction of the  community multisig functionalities as originally designed, such us self-calls within community multisig.\n  - The following are considered out of scope for “permanent freezing of funds” Critical Impact: when the freezing of funds is attributed to unintended use of the contracts: Component Registry, Agent Registry, Service Registry,  Service Registry Token Utility, Registries Manager, Service Manager Token, Operator Whitelist, Gnosis Safe Multisig, Gnosis Safe Multisig Same Address, Service Registry L2, Service Manager.\n  - The following contract are not in scope for “Griefing” Medium Impact: Component Registry, Agent Registry, Service Registry,  Service Registry Token Utility, Registries Manager, Service Manager Token, Operator Whitelist, Gnosis Safe Multisig, Gnosis Safe Multisig Same Address, Service Registry L2, Service Manager",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "USDC, USDT",

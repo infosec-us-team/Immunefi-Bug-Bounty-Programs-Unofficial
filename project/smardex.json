@@ -285,94 +285,94 @@
       ],
       "impacts": [
         {
-          "id": "FjLnJIBYV9hy0qoq1Bbos",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "3qckoPJtKH5ghaD9YFRwXd",
-          "title": "Permanent freezing of funds",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "43wviTJcCc7utmMoetnAj3",
-          "title": "Predictable or manipulable RNG that results in abuse of the principal or NFT",
+          "id": 24,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed royalties"
         },
         {
-          "id": "4gucIHvTIcoob2FuHEcMKl",
-          "title": "Protocol insolvency",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "2Ix1tURKDvKIOXvmI34sGk",
-          "title": "Theft of unclaimed yield",
+          "id": 26,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed royalties"
         },
         {
-          "id": "ER1uL4fvXodadPLjGOVAk",
-          "title": "Theft of unclaimed royalties",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "3O7dAFSWpaphHwvWZW3vRI",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "4u9QjVXJpnIMZedYjxl97v",
-          "title": "Permanent freezing of unclaimed royalties",
+          "id": 30,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing"
         },
         {
-          "id": "7pOxQIweYI7vS797AKz7wO",
-          "title": "Temporary freezing of funds",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "11o9Qo5ZyVa3WUxHedRU13",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "2PSXUVAU3izcQZlYFAXv7Z",
-          "title": "Block stuffing",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "2cpXZzzr7MBJNCSgojh0Dy",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "4dbDyoSjdI1jJ15QU6jFPj",
-          "title": "Theft of gas",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "1ri85owPEc1HoWXKk783AZ",
-          "title": "Unbounded gas consumption",
+          "id": 20,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Predictable or manipulable RNG that results in abuse of the principal or NFT"
         },
         {
-          "id": "3AsSo9jlTqOkXFcGw0uTM8",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "SMARDEX is an Automated Market Maker (AMM) that addresses the issue of Impermanent Loss (IL) and in some cases transforms it into Impermanent Gain (IG). It is an open-source Smart Contract, which is a decentralized software that runs on compatible Ethereum Virtual Machine blockchains (such as Ethereum, Binance Smart Chain, Avalanche, Polygon, etc.). These blockchains are data exchange protocols that, similar to the Bitcoin blockchain, allow for the storage and transmission of information in a public, immutable, and decentralized manner. By using SMARDEX, users can exchange decentralized ERC20 tokens, which are digital assets.\n\nFor more information about SmarDex, please visit [https://smardex.io/ ](https://smardex.io/) \n\nSmarDex provides rewards in SDEX. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__\nThe provision of KYC is required to receive a reward for this bug bounty program where the following information will be required to be provided:\n\n  - name / surname\n  - country of residence\n  - ID\n\nKYC information is only required on confirmation of the validity of a bug report.   \n\n__Responsible Publication__\n\nSmarDex adheres to category 3: Approval Required. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication ](https://immunefi.com/responsible-publication/)page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nSmarDex adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms stated in this page.\n\n__Known Issue Assurance__\n\nSmarDex commits to providing Known Issue Assurance to bug submissions through their program. This means that SmarDex will either disclose known issues publicly or at the very least privately via a self-reported bug submission in order to allow for a more objective and streamlined mediation process to prove that an issue is known. Otherwise, assuming the bug report itself is valid, it would result in the bug report being considered in-scope and due 100% of the reward with respect to the bug bounty program terms. \n\n__Immunefi Standard Badge__\n\nSmarDex has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-), which is given to projects that adhere to our best practices.",

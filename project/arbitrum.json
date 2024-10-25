@@ -1392,88 +1392,88 @@
       ],
       "impacts": [
         {
-          "id": "57mzWFbOoM54BlTlpOESCp",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion",
+          "id": 917,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Smart contract fails to deliver promised returns, but doesn’t lose value"
         },
         {
-          "id": "rngAsrzJlGv5hwTJj3zfd",
-          "title": "Permanent freezing of funds (cannot be fixed by upgrade)",
+          "id": 918,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of funds (can be fixed by upgrade)"
         },
         {
-          "id": "8vQhUoG5jI6Y5HOCcsucu",
-          "title": "Insolvency",
+          "id": 919,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Bugs relating to reorgs"
         },
         {
-          "id": "6l96HXagPnqmXDyknU3Wqd",
-          "title": "Any inputs to the state transition function that trigger an unexpected result, and that affects the whole network, not limited to a single node (excluding RPC inputs)",
+          "id": 920,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Damage relating to withdrawing funds via fast bridges"
         },
         {
-          "id": "7w6cEPbcqSOfKP1HEys7MC",
-          "title": "Permanent freezing of funds (can be fixed by upgrade)",
+          "id": 921,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Denial of Service (DoS) Attacks that cause network-wide outages (attacks that only take down the RPC do not count)"
         },
         {
-          "id": "SI75LyMfsc23lKKqpQDs4",
-          "title": "Bugs relating to reorgs",
+          "id": 922,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of funds"
         },
         {
-          "id": "4PIhtRh0dBvEZNpZUAf4cS",
-          "title": "Damage relating to withdrawing funds via fast bridges",
+          "id": 923,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing for profit"
         },
         {
-          "id": "2Y4JM9NbRrbTVa5OQmElXN",
-          "title": "Denial of Service (DoS) Attacks that cause network-wide outages (attacks that only take down the RPC do not count)",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "6QSChC5B2WX7DsTcQSQ5Fk",
-          "title": "Smart contract unable to operate due to lack of funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "7cVDmVmJYBWDlFZvedQKNq",
-          "title": "Block stuffing for profit",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "5dppVpiO4eCvPhTEniMyZt",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 924,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion"
         },
         {
-          "id": "43mwQS6IIFS9VFsN4q48kq",
-          "title": "Theft of gas",
+          "id": 925,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds (cannot be fixed by upgrade)"
         },
         {
-          "id": "7ssdOwQvxVMSpliqrrSInB",
-          "title": "Unbounded gas consumption",
+          "id": 926,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Insolvency"
         },
         {
-          "id": "4qsJ61PXJPomkLjrQidDBN",
-          "title": "Smart contract fails to deliver promised returns, but doesn’t lose value",
+          "id": 927,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Any inputs to the state transition function that trigger an unexpected result, and that affects the whole network, not limited to a single node (excluding RPC inputs)"
         }
       ],
       "programOverview": "Arbitrum is a suite of scaling solutions for Ethereum developed by Offchain Labs that drastically reduces costs and latency. Arbitrum One is an \"Optimistic Rollup\", which instantly scales apps, reducing costs and increasing capacity, without sacrificing Ethereum's security. Arbitrum validators optimistically post updates to Ethereum, and the protocol uses an interactive fraud proof mechanism to resolve any disputes efficiently with a minimal on-chain footprint. Porting contracts to Arbitrum requires no code changes or downloads as Arbitrum is fully compatible with most existing Ethereum developer tooling. Arbitrum Nova, is another chain that relies on AnyTrust technology and posts calldata to a Data Availability Committee, further reducing costs while adding a small trust assumption.\n\nFor more information about Arbitrum and the related mainnet chains, please visit [https://developer.offchainlabs.com/](https://developer.offchainlabs.com/).\n\nThis bug bounty program is focused on the mainnet Arbitrum chains, Arbitrum One and Arbitrum Nova and their underlying technologies, Arbitrum Rollup and Arbitrum AnyTrust respectively. Any vulnerabilities unrelated to either of the two mainnet chains are not covered by this program. Issues that affect Arb1 and Nova will be treated as a single issue, and a report of the same issue with the only difference being the network will be treated as a duplicate. This program is focused on their smart contracts and is focused on preventing the following impacts:\n\nThis bug bounty program is focused on their smart contracts and is focused on preventing the following impacts:\n\n  - Loss of user funds by permanent freezing or direct theft\n  - Temporary freezing of funds\n  - Unable to call smart contract\n  - Network shutdown\n  - Smart contract gas drainage",

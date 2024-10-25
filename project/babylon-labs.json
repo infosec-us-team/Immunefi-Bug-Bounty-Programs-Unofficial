@@ -174,220 +174,220 @@
       ],
       "impacts": [
         {
-          "id": "1gWyk6wgURjGbjRWhzJLGa",
-          "title": "Direct loss of funds",
+          "id": 5112,
           "type": "blockchain_dlt",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Program crash leading to the inability to process and present information about the current state of the system."
         },
         {
-          "id": "4okFA7Ska6TwD6XWi02fnw",
-          "title": "Permanent freezing of funds",
+          "id": 5113,
           "type": "blockchain_dlt",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Invalid Calculation of TVL"
         },
         {
-          "id": "0wUlZ9BBEPZnUn1EOGAqm",
-          "title": "Retrieve the private key of a covenant committee member",
+          "id": 5114,
           "type": "blockchain_dlt",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Incorrectly identifying a staking/unbonding transaction as expired"
         },
         {
-          "id": "wux6YU6pcJCwxdXdZNYDa",
-          "title": "Leakage of EOTS private keys without the holder double-signing",
-          "type": "blockchain_dlt",
-          "severity": "critical"
-        },
-        {
-          "id": "4K8JRCX41zFU0G5By2AkgY",
-          "title": "Execute arbitrary system commands",
+          "id": 5115,
           "type": "websites_and_applications",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Changing details of users (including modifying browser local storage) without already-connected wallet interaction and with significant user interaction, such as: Iframing leading to modifying the backend/browser state (must demonstrate impact with PoC)"
         },
         {
-          "id": "3jNegqcuBaQKbXf5qc19BQ",
-          "title": "Retrieve sensitive data/files from a running server, such as:  `/etc/shadow`, database passwords, blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)",
+          "id": 5116,
           "type": "websites_and_applications",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Taking over broken or expired outgoing links, such as:  Social media handles, etc."
         },
         {
-          "id": "3nPVhH1quLb1Pzl1ZEwqxM",
-          "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:   Making trades",
+          "id": 5117,
           "type": "websites_and_applications",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Temporarily disabling user to access target site, such as: Locking up the victim from login, Cookie bombing etc."
         },
         {
-          "id": "XkeEZBZIf6LFNVZoSyoKi",
-          "title": "Subdomain takeover with already-connected wallet interaction",
+          "id": 5118,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Generation of invalid  EOTS keys"
+        },
+        {
+          "id": 5119,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Generation of invalid EOTS key signatures / Invalid verification of EOTS key signatures"
+        },
+        {
+          "id": 5120,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Inability for a non-malicious covenant signer to sign valid unbonding requests for more than 24h."
+        },
+        {
+          "id": 5121,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Generation of unbonding and withdrawal transactions that cannot be confirmed by the Bitcoin ledger"
+        },
+        {
+          "id": 5122,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Temporary freezing of funds for more than the staking timelock for a staking transaction or more than the unbonding timelock for an unbonding transaction."
+        },
+        {
+          "id": 5123,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Staking back-end recognizing a staking transaction as valid when it is invalid and vice versa."
+        },
+        {
+          "id": 5124,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Staking back-end recognizing an unbonding transaction not signed by the staker as valid."
+        },
+        {
+          "id": 5125,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Staking backend incorrectly identifying the status of a stake"
+        },
+        {
+          "id": 5126,
           "type": "websites_and_applications",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Taking down the API/website"
         },
         {
-          "id": "5Yi0fSAdYTt7qT5SaKZkwz",
-          "title": "Direct theft of user funds or causing their freezing",
+          "id": 5127,
           "type": "websites_and_applications",
-          "severity": "critical"
+          "severity": "high",
+          "title": "API unable to process unbonding requests"
         },
         {
-          "id": "2zYYiBoNHYW9Xy8NtawY6A",
-          "title": "Malicious interactions with an already-connected wallet, such as: Modifying transaction arguments or parameters, Submitting malicious transactions",
+          "id": 5128,
           "type": "websites_and_applications",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:  HTML injection without JavaScript, Replacing existing text with arbitrary text, Arbitrary file uploads etc"
         },
         {
-          "id": "32wh4vjNfsEuBs0lEoEP9Y",
-          "title": "Generation of invalid  EOTS keys",
-          "type": "blockchain_dlt",
-          "severity": "high"
-        },
-        {
-          "id": "4XRSGwgDSwoVclJpPJ9u58",
-          "title": "Generation of invalid EOTS key signatures / Invalid verification of EOTS key signatures",
-          "type": "blockchain_dlt",
-          "severity": "high"
-        },
-        {
-          "id": "7pcsUQBxaPRjn0UK3w4Iid",
-          "title": "Inability for a non-malicious covenant signer to sign valid unbonding requests for more than 24h.",
-          "type": "blockchain_dlt",
-          "severity": "high"
-        },
-        {
-          "id": "1WkxRhxJxvqvTp5LiSZm62",
-          "title": "Generation of unbonding and withdrawal transactions that cannot be confirmed by the Bitcoin ledger",
-          "type": "blockchain_dlt",
-          "severity": "high"
-        },
-        {
-          "id": "EyasaobPiUgMxJFDhZQUD",
-          "title": "Temporary freezing of funds for more than the staking timelock for a staking transaction or more than the unbonding timelock for an unbonding transaction.",
-          "type": "blockchain_dlt",
-          "severity": "high"
-        },
-        {
-          "id": "5l1f4o4uhBwh3GGjElg0v4",
-          "title": "Staking back-end recognizing a staking transaction as valid when it is invalid and vice versa.",
-          "type": "blockchain_dlt",
-          "severity": "high"
-        },
-        {
-          "id": "Vb8zUaOXaQlu6W6FjDxf5",
-          "title": "Staking back-end recognizing an unbonding transaction not signed by the staker as valid.",
-          "type": "blockchain_dlt",
-          "severity": "high"
-        },
-        {
-          "id": "3Efw9mNDbCXdsloGa4ph8f",
-          "title": "Staking backend incorrectly identifying the status of a stake",
-          "type": "blockchain_dlt",
-          "severity": "high"
-        },
-        {
-          "id": "1a3JzCXWze86rlA9jHRTm5",
-          "title": "Taking down the API/website",
+          "id": 49,
           "type": "websites_and_applications",
-          "severity": "high"
+          "severity": "high",
+          "title": "Subdomain takeover without already-connected wallet interaction"
         },
         {
-          "id": "2T7ybAveYG6GPHjPiMzPoe",
-          "title": "API unable to process unbonding requests",
-          "type": "websites_and_applications",
-          "severity": "high"
-        },
-        {
-          "id": "nPKXxECHpn8JwCNZiuzTG",
-          "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:  HTML injection without JavaScript, Replacing existing text with arbitrary text, Arbitrary file uploads etc",
-          "type": "websites_and_applications",
-          "severity": "high"
-        },
-        {
-          "id": "6N7CXllZ1alyHvZezBJAAh",
-          "title": "Subdomain takeover without already-connected wallet interaction",
-          "type": "websites_and_applications",
-          "severity": "high"
-        },
-        {
-          "id": "3XLRNTd5mJLPfqPzFbiVnB",
-          "title": "Staking back-end not processing a valid unbonding request.",
+          "id": 5129,
           "type": "blockchain_dlt",
-          "severity": "high"
+          "severity": "high",
+          "title": "Staking back-end not processing a valid unbonding request."
         },
         {
-          "id": "3VGvWNy6FkFmT3mQ2WLToh",
-          "title": "Causing a temporary (more than 1 hour) inability to process unbonding requests",
+          "id": 5130,
           "type": "blockchain_dlt",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Causing a temporary (more than 1 hour) inability to process unbonding requests"
         },
         {
-          "id": "5DV4UmMqV9Gzd6I4Z18Vhm",
-          "title": "Generation of staking transactions that cannot be confirmed by the Bitcoin ledger",
+          "id": 5131,
           "type": "blockchain_dlt",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Generation of staking transactions that cannot be confirmed by the Bitcoin ledger"
         },
         {
-          "id": "1x4RNbE05jYWqz9swGpjjw",
-          "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as their stored pending transactions.",
+          "id": 5132,
           "type": "websites_and_applications",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as their stored pending transactions."
         },
         {
-          "id": "2HXAdk1EC8UHgcJ5BczdZ4",
-          "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:  Reflected HTML injection, Loading external site data",
+          "id": 5133,
           "type": "websites_and_applications",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:  Reflected HTML injection, Loading external site data"
         },
         {
-          "id": "1uM3HNqXmudjnD05pMXCVw",
-          "title": "Redirecting users to malicious websites (open redirect)",
+          "id": 52,
           "type": "websites_and_applications",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Redirecting users to malicious websites (open redirect)"
         },
         {
-          "id": "39YVspuMMy5F6zw0G7Nsj8",
-          "title": "Staking back-end recognizing an invalid unbonding transaction signed by the staker as valid.",
+          "id": 5134,
           "type": "blockchain_dlt",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Staking back-end recognizing an invalid unbonding transaction signed by the staker as valid."
         },
         {
-          "id": "6RAsmCIAJ2XNinVINw9EKu",
-          "title": "Staking back-end recognizing a withdrawal transaction as valid when it is invalid and vice versa.",
+          "id": 5135,
           "type": "blockchain_dlt",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Staking back-end recognizing a withdrawal transaction as valid when it is invalid and vice versa."
         },
         {
-          "id": "3HbSxqDeGBR3h2l2ZqmZiP",
-          "title": "Program crash leading to the inability to process and present information about the current state of the system.",
+          "id": 3,
           "type": "blockchain_dlt",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Direct loss of funds"
         },
         {
-          "id": "6AA9VKm8Lkz8qBwNMlwv3w",
-          "title": "Invalid Calculation of TVL",
+          "id": 5136,
           "type": "blockchain_dlt",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "2LGOdDk6AWqYqboiyLdKqF",
-          "title": "Incorrectly identifying a staking/unbonding transaction as expired",
+          "id": 5137,
           "type": "blockchain_dlt",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Retrieve the private key of a covenant committee member"
         },
         {
-          "id": "69L1ZJMFovQc6ABPQ2QY0P",
-          "title": "Changing details of users (including modifying browser local storage) without already-connected wallet interaction and with significant user interaction, such as: Iframing leading to modifying the backend/browser state (must demonstrate impact with PoC)",
+          "id": 5138,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Leakage of EOTS private keys without the holder double-signing"
+        },
+        {
+          "id": 35,
           "type": "websites_and_applications",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Execute arbitrary system commands"
         },
         {
-          "id": "6P87Ye0yGvChNCV6w2ok4W",
-          "title": "Taking over broken or expired outgoing links, such as:  Social media handles, etc.",
+          "id": 5139,
           "type": "websites_and_applications",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Retrieve sensitive data/files from a running server, such as:  `/etc/shadow`, database passwords, blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
         },
         {
-          "id": "5li7eb81plUPy58xIx2Cy9",
-          "title": "Temporarily disabling user to access target site, such as: Locking up the victim from login, Cookie bombing etc.",
+          "id": 5140,
           "type": "websites_and_applications",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:   Making trades"
+        },
+        {
+          "id": 41,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Subdomain takeover with already-connected wallet interaction"
+        },
+        {
+          "id": 5141,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Direct theft of user funds or causing their freezing"
+        },
+        {
+          "id": 5142,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Malicious interactions with an already-connected wallet, such as: Modifying transaction arguments or parameters, Submitting malicious transactions"
         }
       ],
       "programOverview": "Babylon introduces a new major utility for Bitcoin: trustless and self-custodial staking. The Babylon Bitcoin staking protocol turns Bitcoin into a stakable and slashable asset for any Proof-of-Stake systems. This allows Bitcoin HODLERs to hold their Bitcoins while earning  staking rewards from the PoS systems for the slashable security they provide, in the same way as how native PoS token staking works.\n\nThis is a brand new significant protocol, and it is at its very early stage. Its success lies in its protection of the Bitcoin stakers. More specifically, as long as:\n\n- a Bitcoin staker manages its secret key properly, and\n- the Bitcoin staker or the delegatee of its PoS attestation power (called a finality provider)  does not act maliciously, then\n\nno one can steal or slash the staked Bitcoin, and the Bitcoin staker can safely unbond and/or withdraw the stake as per the protocol.\n\nAchieving such protection requires comprehensive security of the Bitcoin staking protocol at both the algorithm and implementation level. To this end, we have open-sourced all our code, and launched, on the 28th May 2024,  a public Bitcoin staking testnet that focused on the Bitcoin stakers’ interaction with the Signet Bitcoin chain and the staking web DApp developed by the Babylon team. No PoS chain and  staking reward is involved in this testnet.\n\nBased on the successful operation of the testnet and the associated security audits on the code deployed in it, we are now launching a public Bitcoin Staking mainnet. This mainnet contains a staking cap that limits the amount of Bitcoins that enter into the system, with the goal of gradually rolling out the protocol.\n\nFor more information about Babylon Labs Ltd. (“Babylon Labs”), please visit [https://babylonlabs.io](https://babylonlabs.io)\n\nBabylon Labs provides rewards in USDC on Ethereum, denominated in USD. For more details about the payment process, please view the __Rewards by Threat Level__ section.\n\nThis bug bounty program will have a hard cap of **USD $3,000,000**. If multiple bug reports are submitted that exceed this amount, the rewards will be provided on a first come first served basis until that cap is reached.\n\n__KYC Requirement__\n\nBabylon Labs will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\nAdditional or alternate KYC information may be required by Babylon Labs or its KYC services provider. If you are an entity, KYB information will be required. Security researchers will need to  provide accurate and complete information in response to each such KYC or KYB request. \t\n\n__Primacy of Impact vs Primacy of Rules__\n\nBabylon Labs adheres to the Primacy of Impact for the following impacts:\n\n- Blockchain/DLT - Critical\n- Web/App - Critical\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact) \n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n\n- Anything included as an open issue in the GitHub repositories.\n- The informational components of the system operate under the assumption that transactions with sufficient confirmations are irreversible. In the event that a re-org happens reversing more blocks than this confirmation delta, the system will have to be restarted and re-index  Bitcoin staking transactions. To combat this, the number of required confirmations defined in the global parameters is set to a high value based on historical Bitcoin data relating to re-orgs.\n- A staker intentionally setting a very low Bitcoin fee, might find their transaction stuck in the mempool or included in a Bitcoin block where different staking parameters apply.\n- Natural stake expiration (i.e. without on-demand unbonding) does not reduce the TVL amount the API service considers active. This design decision was made as the testnet and mainnet environments involve timelocks above a 15 month period (64000 blocks). All stake is expected to transition to the phase-2 PoS security system much earlier than that, so we do not expect naturally expiring stake for the lifespan of the phase-1 API service.\n\n__Previous Audits__\n\nBabylon Labs’ completed audit reports can be found in the following list. Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n- Coinspect Audit: [https://docs.babylonlabs.io/assets/files/coinspect-phase1-audit.pdf](https://docs.babylonlabs.io/assets/files/coinspect-phase1-audit.pdf)\n- Zellic Audit: [https://docs.babylonlabs.io/assets/files/zellic-phase1-audit.pdf](https://docs.babylonlabs.io/assets/files/zellic-phase1-audit.pdf)\n- Cantina Competition: [https://docs.babylonlabs.io/assets/files/cantina-phase1-competition.pdf](https://docs.babylonlabs.io/assets/files/cantina-phase1-competition.pdf) \n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Babylon Labs has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209).\n\n__Additional Terms__\n\nAs a condition of your participation in Babylon Labs Bug Bounty Programs, including the submission of bug reports, you agree to be bound by the following terms and conditions in addition to any other terms and conditions that govern your participation.  If you do not agree to these terms and conditions, you should not submit any bug report.\n  \n1. Babylon Labs will determine the severity level and impact for each submission, whether any submission is within scope and eligible for a reward, and the amount of a reward within a stated range, in its reasonable discretion.\n\n2. Babylon Labs is not liable or responsible for any costs, fees, or expenses incurred by you in connection with this Bug Bounty Program. You acknowledge and agree that you shall be solely and exclusively responsible for the payment of any and all taxes, levies, duties, or similar governmental charges (collectively, \"Taxes\") that may arise in connection with any reward payments made to you.  However, Babylon Labs may be required by applicable law to withhold or deduct any Taxes from payments.\n\n3. Babylon Labs is an express third-party beneficiary of the Security Researchers Terms & Conditions between you and Immunefi, and entitled to enforce the terms and conditions therein as if it were an original contracting party. Babylon Labs is the party designated to be the transferee of intellectual property rights under Section 7 of the Security Researchers Terms & Conditions.\n\n4. **Babylon Labs, its affiliates and licensors, and their respective directors, officers, and employees (collectively, “Babylon Parties”) will have no liability arising from or relating to your use of, or conduct in connection with this Bug Bounty Program or the Immunefi platform, other than Babylon Labs’ potential obligations to pay you a reward.  To the fullest extent permitted by applicable law, under no circumstances will any Babylon Parties be responsible or liable under any theory of liability, whether based in tort, contract, negligence, strict liability, warranty, or otherwise: (a) for any direct, indirect, exemplary, special, punitive, incidental, or consequential losses or damages of any kind, including without limitation, loss of profits arising from or relating to the bug bounty program or your use of the Immunefi platform.** The foregoing limitations apply even if Babylon Parties were advised of or should have known of the possibility of such losses or damages and notwithstanding any failure of essential purpose of any limited remedy. The foregoing limitations will apply even if the above stated remedy fails of its essential purpose. Some jurisdictions do not allow the limitation or exclusion of certain liabilities, and damages. Accordingly, some of the disclaimers and limitations set forth in this Agreement may not apply in full to you, but will apply to the fullest extent as permitted by applicable law.",

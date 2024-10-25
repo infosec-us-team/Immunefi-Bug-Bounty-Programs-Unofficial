@@ -126,58 +126,58 @@
       ],
       "impacts": [
         {
-          "id": "1OiL6GyJ47tRD18bY9IuOc",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "3ehmRdRWUozE2kFFG9ta99",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "QZ5HZZTFnzhW7GZ1iPHLm",
-          "title": "Protocol Insolvency",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "7LGXkEjZbYaAjgk6Io6DLq",
-          "title": "Miner-extractable value (MEV)",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "2lJBTfeSVINaTC3DzcHetD",
-          "title": "Theft of unclaimed yield",
+          "id": 1243,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing for profit"
         },
         {
-          "id": "ypz3OZFSixMmQhiE5VLor",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "6V42JSMmHnQmT65mZPHhDQ",
-          "title": "Temporary freezing of funds",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "3K8hzuZXPdTIuaEvluCWGk",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         },
         {
-          "id": "6w1AI1B3AvSaZeBOL5xybB",
-          "title": "Block stuffing for profit",
+          "id": 1244,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Miner-extractable value (MEV)"
         }
       ],
       "programOverview": "Angle is a decentralized, capital efficient and over-collateralized stablecoin protocol composed of smart contracts running on open blockchains.\n\nIt can be used to issue stablecoins, called agTokens, designed to mirror the value of an asset they are pegged to.\n\nThe protocol consists of several different modules, or sets of smart contracts, from which stablecoins can be issued or minted. While Angle launched its first stablecoin agEUR with a single minting module (the Core module - that was wound down in May 2023), a Borrowing module allowing to borrow Angle stablecoins against deposited collateral and a price stability module called Transmuter have then been introduced.\n\nThe protocol is also engaged into Direct Deposit Modules, also called Algorithmic Market Operations (AMOs), allowing it to boostrap liquidity for agTokens in other protocols.\n\nFor more information about Angle Protocol, please visit [https://www.angle.money/](https://www.angle.money/).  \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Thefts and freezing of principal of any amount\n  - Thefts and freezing of unclaimed yield of any amount\n  - Theft of governance funds\n  - Governance activity disruption",

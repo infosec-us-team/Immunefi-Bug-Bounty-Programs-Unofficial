@@ -393,88 +393,88 @@
       ],
       "impacts": [
         {
-          "id": "1DsGy7Me0T6DT8dvALKURw",
-          "title": "Any governance voting result manipulation",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "47Cfiy0r6N1lEHDHoIoXyi",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "1zeZke2IOPx4rp9Nh7hHNA",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "4ViXXOV9nU7M3FpqqLwLCc",
-          "title": "Miner-extractable value (MEV)",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "6GhWZq6gocJuhiXiq3YXiw",
-          "title": "Protocol Insolvency",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "6ZuDXUAOCYt9zjV9of0qZ4",
-          "title": "Theft of unclaimed yield",
+          "id": 1213,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing for profit"
         },
         {
-          "id": "6RzLnKEAlk3USf2BLqWeZn",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "54qVrls39EKiibLNqC6XIY",
-          "title": "Temporary freezing of funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "2IFVjqPwr3fYrWR1WBQpFL",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "xXaXHHdNDZwHamP4EA8rZ",
-          "title": "Block stuffing for profit",
+          "id": 1214,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Any governance voting result manipulation"
         },
         {
-          "id": "6KkjNfzLpNvB3zOE880XfN",
-          "title": "Unbounded gas consumption",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "5GMEgh57Om98MiEDwlQBXi",
-          "title": "Theft of gas",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "lsI7MmUArMdEWIfbwvg3X",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 1215,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Miner-extractable value (MEV)"
         },
         {
-          "id": "dM64kxi3eUwy6EHMqXncF",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "RAI is an ETH backed stable asset with a managed float regime. The RAI/USD exchange rate is determined by supply and demand while the protocol that issues RAI tries to stabilize its price by constantly de or revaluing it.\n\nFor more information about Rai, please visit [https://docs.reflexer.finance](https://reflexer.finance)   \n\nThis bug bounty program is focused on Rai's smart contracts and is focused on preventing:\n\n  - Loss of user funds staked (principal) by freezing or theft\n  - Incorrect accounting logic in the core protocol\n  - Theft of unclaimed yield\n  - Unable to shut down the protocol in the global settlement process\n  - Freezing of unclaimed yield\n  - Temporary freezing of funds\n  - Unable to call smart contract\n  - Smart contract fails to deliver promised returns",

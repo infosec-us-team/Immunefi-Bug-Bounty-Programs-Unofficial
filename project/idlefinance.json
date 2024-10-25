@@ -45,58 +45,58 @@
       ],
       "impacts": [
         {
-          "id": "5hTKRk9BW4evR8EbAIviQm",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "7KnU2B7m4Uiw0Zq0yvCqxt",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "qrnATW4i02iLF6CJMaLCY",
-          "title": "Miner-extractable value (MEV) if can freeze funds or cause protocol insolvency",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "3wbxLGCStKr2O5WqYXk3zS",
-          "title": "Protocol insolvency",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "3zvEgHm25i75TntTzXLWrx",
-          "title": "Theft of unclaimed yield",
+          "id": 183,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "4fi9Mwu8OCcR8eLYbpHcPb",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "FXabdALQS2FBvKbgRsmnM",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "6u9kXZ8yXb4sXV5SLs4MQE",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 184,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Miner-extractable value (MEV) if can freeze funds or cause protocol insolvency"
         },
         {
-          "id": "79m9WCOb18hIxqcpb1Mui0",
-          "title": "Temporary freezing of funds",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "Idle is a decentralized protocol dedicated to bringing automatic asset\nallocation and aggregation to the interest-bearing tokens economy. This\nprotocol bundles stable crypto-assets (stablecoins) into tokenized baskets that\nare programmed to automatically rebalance based on different management logics.\n\nThe Idle Protocol employs a strategy-token system. Every allocation strategy\nhas its own set of tokens that represent a pool of yield-generating assets\nspread across different DeFi protocols. These tokens represent the investor’s\nproportional ownership of the whole pool and the interest accrued over\ntime. This issuing method is similar to traditional mutual funds shares\nstructure, and it allows Idle to be non-custodial.\n\nCurrently, Idle uses this allocation strategy:\n\n- **Best-Yield**: this strategy combines multiple money markets to\nautomatically provide the highest interest rates, beating the best traditional\nofferings across interest-bearing tokens and DeFi protocols.\n\nConsequently, users can hold IdleTokens related to a specific strategy and a\nspecific stablecoin.\n\nIdle aims to unlock the power of decentralized finance for everyone by a single\nvehicle that automatically rebalances between underlying providers to always\nmaintain the highest rates or the optimal risk/return allocation.\n\nThe bug bounty program is focused around the Idle protocol V4 smart contracts and the prevention of loss of user funds. ",

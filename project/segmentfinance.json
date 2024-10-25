@@ -135,46 +135,46 @@
       ],
       "impacts": [
         {
-          "id": "6UC0Jrbx5n20l4rVH55Irl",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "5ySrfULCu14X6qREHveJFK",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "3a0WI9TRtMu01O6Z4GhJzT",
-          "title": "Protocol insolvency",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "6SN79B53A0X6qRojmk6BgM",
-          "title": "Theft of unclaimed yield",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "JpXUHX0mrNYg0oX4ZRR1E",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "atgC9JAW503pJxW7JeFcP",
-          "title": "Temporary freezing of funds",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "6pwDM6nXl8dW6Teejd0MUB",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "Segment Finance, as a decentralized lending and borrowing platform on the BNB and opBNB Chains, extends its functionalities beyond the framework of the initial Compound Protocol fork. It offers not only the default lending-borrowing pool but also features isolated pools. These isolated pools are designed to offer specialized lending and borrowing services for a variety of assets, enhancing the platform's flexibility and appeal to a diverse user base.\n\nThe platform's architecture ensures that these isolated pools operate with distinct risk parameters, allowing for tailored risk management strategies. This design is particularly beneficial for assets with varying risk profiles, ensuring that each pool can maintain its stability and security independently of the others.\n\nFurthermore, Segment Finance integrates advanced smart contract functionalities to automate many of the processes involved in lending and borrowing. This includes automatic interest rate adjustments based on supply and demand dynamics, as well as innovative collateral management systems to protect lenders' assets.\n\nIn addition, Segment Finance seeks to innovate in the DeFi space by exploring cross-chain functionalities. This would potentially allow users to lend and borrow assets across different blockchain networks, significantly expanding the platform's utility and reach.\n\nFor more information about Segment Finance, please visit [https://www.segment.finance/.](https://www.segment.finance/)\n\nSegment Finance provides rewards in USDT, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__ \n\nSegment Finance will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n- Full name;\n- Affiliated company (if any);\n- E-mail address.\n\n__Responsible Publication__\n\nSegment Finance adheres to category 3 - Approval Required. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nSegment Finance adheres to the Primacy of Impact for the following impacts:\n- Smart Contract - Critical\n- Smart Contract - High\n- Smart Contract - Medium \n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact ](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n__Known Issue Assurance__\n\nSegment Finance commits to providing Known Issue Assurance to bug submissions through their program. This means that Segment Finance will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n__Previous Audits__\n\nSegment Finance’s completed audit reports can be found at [https://github.com/verichains/public-audit-reports/blob/main/Verichains%20Public%20Audit%20Report%20-%20Segment%20Finance%20Pool%20Register%20-%20v1.0.pdf](https://github.com/verichains/public-audit-reports/blob/main/Verichains%20Public%20Audit%20Report%20-%20Segment%20Finance%20Pool%20Register%20-%20v1.0.pdf)\n\nAny unfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards ](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards)which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Segment Finance has satisfied the requirements for the [Immunefi Standard Badge.](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209)",

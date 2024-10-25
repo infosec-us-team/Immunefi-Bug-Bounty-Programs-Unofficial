@@ -129,28 +129,28 @@
       ],
       "impacts": [
         {
-          "id": "4QHUFo6p3IPmjpf6HSO1Av",
-          "title": "Drainage of all user funds",
+          "id": 1818,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds (reproducible)"
         },
         {
-          "id": "1GzOMcKt4Z8ivlJbomivBK",
-          "title": "Drainage of portion of user funds",
+          "id": 1819,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds (non-reproducible)"
         },
         {
-          "id": "5jerrnJvHO83kFavwGK9CV",
-          "title": "Temporary freezing of funds (reproducible)",
+          "id": 1820,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Drainage of all user funds"
         },
         {
-          "id": "5pppRWGRFt9LDK58SDX539",
-          "title": "Temporary freezing of funds (non-reproducible)",
+          "id": 1821,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Drainage of portion of user funds"
         }
       ],
       "programOverview": "Superfluid is an asset streaming protocol that has the power to describe cash flows and execute them automatically on-chain over time in a non-interactive way. Superfluid streams are programmable, composable, and modular. The first cash flow type allows constant streams of value and one-to-many distributions. All streams are settled at the same time, based on block timestamps. Almost no capital is locked up, and all inflows and outflows are netted in real-time, drastically increasing capital efficiency. With a single on-chain transaction, the money will flow from your wallet to the receiver in real-time! No further transactions are required.\n\nSuperfluid enables:\n  - Real money streaming - constant token flows on-chain with no capital lockups.\n  - Rewards distributions - Fixed cost distribution in a single transaction for any number of receivers.\n  - Anything you can imagine - Superfluid is a flexible developer toolbox to build entirely new applications.\n\nFor more information about Superfluid, please visit https://docs.superfluid.finance/.\n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Superfluid framework bugs\n  - Bugs in CFA/IDA/GDA (see https://docs.superfluid.finance/) in general\n    - Anything that would prevent streams from being closed\n    - Anything that would result in the sum of all account balances drifting significantly from the total supply\n  - Theft of tokens in third-party wrapper contracts \n  - Other unexpected behaviour in any of their token contracts",

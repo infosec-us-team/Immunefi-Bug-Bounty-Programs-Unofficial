@@ -177,76 +177,76 @@
       ],
       "impacts": [
         {
-          "id": "6Viz6DYTcBRpp3EpEX3BDj",
-          "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "7IDOEq9TZL5SLrbJmf5K1j",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "1UXVjKgsFt7UuzKpkET78Z",
-          "title": "Permanent freezing of funds",
+          "id": 4654,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds for more than 24 hours"
         },
         {
-          "id": "5JeoMa7V8IOB0NujNqrbcb",
-          "title": "Protocol Insolvency",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "5jaIQHh7rCwxjhJ1BEZutp",
-          "title": "Theft of unclaimed yield",
+          "id": 30,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing"
         },
         {
-          "id": "563Z9oW7AQx8XeESRVNdmE",
-          "title": "Temporary freezing of funds for more than 24 hours",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "1ACdoDCSPRytbc31GoWle4",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "4bIb0iU0Uw1c0NYS90pbAX",
-          "title": "Block stuffing",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "1ZtJ70DujaF99NHRagB1o3",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 14,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results"
         },
         {
-          "id": "2fHaZIpTcg4lGgBZ9Z4DVC",
-          "title": "Theft of gas",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "5wbU7lI8rEQf4avAWyaAtG",
-          "title": "Unbounded gas consumption",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "4KpzgedlvxVYY1U9o2AD48",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "The Uniswap Protocol is a decentralized cryptocurrency exchange that uses a set of smart contracts to execute trades. It is an open source project and falls into the category of a DeFi product because it uses smart contracts to facilitate trades.\n\nzkSync Era is a layer 2 rollup that uses zero-knowledge proofs to scale Ethereum without compromising on security or decentralization. Since it's EVM compatible (Solidity/Vyper), 99% of Ethereum projects can redeploy without refactoring or re-auditing a single line of code. zkSync Era also uses an LLVM-based compiler that will eventually let developers write smart contracts in C++, Rust and other popular languages.\n\nThis program is based on Uniswap V3 on zkSync. \n\nFor more information about the Uniswap Protocol,  please visit [https://docs.uniswap.org/](https://docs.uniswap.org/)\n\nThis project is being run by the Uniswap Foundation. The Foundation provides rewards in USDC, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \nThis bug bounty program is intended to identify and reward bugs in code specific to the zkSync deployment of Uniswap V3. It does not cover any issues related to the Ethereum network, the Uniswap Protocol, or any other third-party.\n\n__KYC Requirement__\n\nUniswap Foundation may request a government ID during the process.\n\n__Eligibility Requirement__ \n\nPer Uniswap Foundation’s guidelines to be eligible for a reward under this Program, you must:\n- Discover a previously-unreported, non-public vulnerability that is not previously known by the team and within the scope of this Program.\n- Be the first to disclose the unique vulnerability in compliance with the disclosure requirements.\n- Provide sufficient information to enable our engineers to reproduce\n- Not exploit the vulnerability in any way, including through making it public or by obtaining a profit (other than a reward under this Program).\n- Make a good faith effort to avoid privacy violations, destruction of data, interruption or degradation of any of the assets in scope.\n- Not submit a vulnerability caused by an underlying issue that is the same as an issue on which a reward has been paid under this Program.\n- Not engage in any unlawful conduct when disclosing the bug including through threats, demands, or any other coercive tactics.\n- Not be subject to US sanctions or reside in a US-embargoed country.\n- Not be one of our current or former employees, or a vendor or contractor who has been involved in the development of the code of the bug in question.\n- Comply with all the eligibility requirements of the Program.\n\n__Responsible Publication__\n\nUniswap Foundation adheres to category 2: Notice Required. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nUniswap Foundation adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms stated in this page.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n__Known Issue Assurance__\n\nUniswap Foundation commits to providing Known Issue Assurance to bug submissions through their program. This means that Uniswap Foundation will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards ](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards)which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Uniswap Foundation has satisfied the requirements for the [Immunefi Standard Badge.](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-)",

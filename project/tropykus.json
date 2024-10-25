@@ -312,88 +312,88 @@
       ],
       "impacts": [
         {
-          "id": "2c81LLp91Pjweo7UDgqh5t",
-          "title": "Any governance voting result manipulation",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "3cyEkpBbFvZODYrnRdjUyM",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "3PbmKKC1J2zio6gqkYk36i",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "6DpTQacaWajvNh3xUC74uZ",
-          "title": "Miner-extractable value (MEV)",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "4QC2kDXHzfoPkaeyh5FkMx",
-          "title": "Protocol Insolvency",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "5clhKGnTtXEv8AeLgtfBcG",
-          "title": "Theft of unclaimed yield",
+          "id": 1792,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing for profit"
         },
         {
-          "id": "7KgXsZFeeVB0QclQPRnwoi",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "4GXoBwsya7bbyhrXGo4H2T",
-          "title": "Temporary freezing of funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "2PTLYNcDc2C6Q3qsUylh8J",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "1ukf9rLslpxWshtBsZQhgt",
-          "title": "Block stuffing for profit",
+          "id": 1793,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Any governance voting result manipulation"
         },
         {
-          "id": "4FfDpwhhmgP1VeRumuvWfL",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "5TaebMjVYvyOCQ8cf0G2UM",
-          "title": "Theft of gas",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "4zqpOSo8FI0pB66D0axyjU",
-          "title": "Unbounded gas consumption",
+          "id": 1794,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Miner-extractable value (MEV)"
         },
         {
-          "id": "4b8YykJGEL1DOiYsm5Vye9",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "Tropykus is a decentralized lending protocol on top of Bitcoin (i.e. second layer compatible with the Ethereum Virtual Machine EVM: RSK) inspired by Compound and Aave protocols. These lending protocols provide a decentralized marketplace for suppliers and borrowers holding crypto assets. \n\nTropykus provides alternative deposit and lending smart contracts for users with different interests in terms of return expectations and investment horizons, with similar risk management features of other lending protocols (e.g. collateralization, liquidation incentives). It also provides markets and accepts as collateral alternative crypto assets such as rBTC, RIF, rUSDT, DOC.\n\nThe main objective of Tropykus is to provide better financial services to everyday people in developing countries by creating a bridge between the needs of these users and the advantages of DeFi.\n\nFor more information about Tropykus, please visit [https://tropykus.com/](https://tropykus.com/). \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Loss of user funds staked (principal) by freezing or theft\n  - Theft of unclaimed yield\n  - Freezing of unclaimed yield\n  - Temporary freezing of funds\n  - Smart contract gas drainage\n  - Block stuffing without fund transfers blocked\n  - Smart contract fails to deliver promised returns, but doesn’t lose value\n  - Informational issues",

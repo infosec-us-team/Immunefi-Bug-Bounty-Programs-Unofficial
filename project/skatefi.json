@@ -153,46 +153,46 @@
       ],
       "impacts": [
         {
-          "id": "6lv8vjrC5xGB99ocs07lps",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "42JXKBnjnjN2KNPXluJXYC",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "5fSV3EX76SOOkhFxhmS24v",
-          "title": "Protocol insolvency",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "5cuQtKy5z9t9oIbdDEJtJt",
-          "title": "Theft of unclaimed yield",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "jyB5pcJnfP7B1Cod6wqhF",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "3kx2GnvCVK4IZXB82Yd4JW",
-          "title": "Temporary freezing of funds",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "20b1UrLCvkAjUiGpc029cb",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "SkateFi is an infrastructure provider for on-chain money managers. This bug bounty program pertains to the SkateFi’s vaults smart contracts that are built on top of Uniswap V3-like concentrated liquidity AMMs for arbitrary liquidity provision: one-sided, lop-sided, and balanced. The vaults provide a Uniswap-V2 like interface which enables providing fungible liquidity.\n\nThe vaults have managers that operate them and liquidity providers that provide liquidity to the vaults. The managers are KYCed and trustful entities that can choose to deploy a vault’s liquidity across specific tick ranges in the pool, remove liquidity and perform swap of vault’s assets on the pool. The managers would operate a sophisticated off-chain strategy to decide when to add or remove liquidity from pool for maximum returns for the liquidity providers, and perform low slippage swaps on the pool when vault’s liquidity is out of the pool.\n\nThe architecture of the smart contracts code comprises factory and upgradeable vaults. A Factory can deploy new vaults or upgrade implementation of existing vaults by the factory owner. Ownership of the factory is with a Timelock contract, which is behind a multisig wallet for proposing a creation or upgrading of vaults. The Timelock contract currently has a 24 hours delay between proposal and execution of operations.\n\nFor more information about SkateFi, please visit [https://app.skatefi.org/](https://app.skatefi.org/)\n\nSkateFi provides rewards in USDT. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__Responsible Publication__\n\nSkateFi adheres to category 3. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nSkateFi adheres to the Primacy of Impact for the following impacts:\n- Smart Contract - Critical - Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield\n- Smart Contract - Critical - Permanent freezing of funds\n- Smart Contract - Critical - Protocol insolvency\n- Smart Contract - High - Theft of unclaimed yield\n- Smart Contract - High - Permanent freezing of unclaimed yield\n- Smart Contract - High - Temporary freezing of funds\n- Smart Contract - Medium - Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)\n\nIf an impact is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTestnet and mock files are not covered under the Primacy of Impact. \n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n__Known Issue Assurance__\n\nSkateFi commits to providing Known Issue Assurance to bug submissions through their program. This means that SkateFi will either disclose known issues publicly or at the very least privately via a self-reported bug submission in order to allow for a more objective and streamlined mediation process to prove that an issue is known. Otherwise, assuming the bug report itself is valid, it would result in the bug report being considered in-scope and due 100% of the reward with respect to the bug bounty program terms. \n\n__Immunefi Standard Badge__\n\nSkateFi has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-), which is given to projects that adhere to our best practices.",

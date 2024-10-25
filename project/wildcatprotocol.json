@@ -78,40 +78,40 @@
       ],
       "impacts": [
         {
-          "id": "3Oqs4OKsFTNUo6FMss8CIC",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "7My9xseMxK0A8xJnfPr0nQ",
-          "title": "Permanent freezing of funds",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "yQaLYfKVrAMZZfQ39ScAy",
-          "title": "Theft of unclaimed yield",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "JpXUHX0mrNYg0oX4ZRR1E",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "3uG7wzapxjvoWzg6KutpTK",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "7uHgtcA4rp75XIZNAQkC7t",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         }
       ],
       "programOverview": "The Wildcat Protocol is a hands-off credit facilitation protocol that enables the deployment of markets by pre-authorised (KYC’d through protocol) borrowers. Market parameters are arbitrarily parameterisable subject to these parameters falling within the bounds of controllers registered with the protocol registry. Borrowers must - at present - select their own lender lists explicitly. Participants in markets can optionally choose to sign a master loan agreement that dictates their behaviour. Wildcat markets make use of novel implementations of withdrawals, collateralisation and penalties for failure to maintain adequate reserves. Rebasing ‘market tokens’ are issued in exchange for deposits, inflating according to the active interest rate to ensure 1:1 parity for claiming underlying assets.\n\nFor more information about Wildcat Protocol, please visit [https://www.wildcat.finance/.  ](https://www.wildcat.finance/)\n\nWildcat Protocol provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below.  \n\n__KYC Requirement__\n\nThe provision of KYC is required to receive a reward for this bug bounty program where the following information will be required to be provided:\n- Full name\n- Address\n- Passport\n\nKYC information is only required on confirmation of the validity of a bug report.   \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 10 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 7 500 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Responsible Publication__\n\nWildcat Protocol adheres to category 2:Notice Required. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nWildcat Protocol adheres to the Primacy of Impact for the following severity levels:\n- Smart Contract, Critical\n- Smart Contract, High\n- Smart Contract, Medium\n- Smart Contract, Low\n\nIf a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTestnet and mock files are not covered under the Primacy of Impact.\n\nAll other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n__Known Issue Assurance__\n\nWildcat Protocol commits to providing Known Issue Assurance to bug submissions through their program. This means that Wildcat Protocol will either disclose known issues publicly or at the very least privately via a self-reported bug submission in order to allow for a more objective and streamlined mediation process to prove that an issue is known. Otherwise, assuming the bug report itself is valid, it would result in the bug report being considered in-scope and due 100% of the reward with respect to the bug bounty program terms. \n\n__Immunefi Standard Badge__\n\nWildcat Protocol has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-), which is given to projects that adhere to our best practices. \n\n__Invoicing Information__\n\nIf needed by the security researcher, Wildcat Protocol is able to provide the necessary information for the proper issuance of an invoice. This includes:\n- Company name and address\n- Registered company number (British Virgin Islands)\n",

@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4oI0gXaVamuG4KdqVG0LC1/fd67ba15a8d6811a385faa1c2a175bf0/Group__3_.png",
       "launchDate": "2023-11-22T09:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-08-27T09:00:41.482Z",
+      "updatedDate": "2024-10-24T14:50:37.813Z",
       "kyc": true,
       "rewards": [
         {
@@ -72,83 +72,83 @@
       ],
       "impacts": [
         {
-          "id": "7beR1BB1PW66mhVHKy6qr6",
-          "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results.",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "3U16KAIKWlUF6rFmwW4y9W",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield.",
+          "id": 24,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed royalties"
         },
         {
-          "id": "28fDxwHhqz1PpBOKjHlP41",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "RWY7mcUf1woi2AtkZg4gb",
-          "title": "Allow unauthorized actors to manipulate/publish any data entry",
+          "id": 26,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed royalties"
         },
         {
-          "id": "6qdLzbx1UbNJ3Av1Nh1bm4",
-          "title": "Theft of unclaimed yield",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "75hs5NJWFGEccIy3FAaRKj",
-          "title": "Theft of unclaimed royalties",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "1svnUiEdfVq1MIzhbgz1WK",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "5VtyL2HeiIZ6kISp9Q7c0W",
-          "title": "Permanent freezing of unclaimed royalties",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "67KMz3NquS3R0QlNkRiNuz",
-          "title": "Temporary freezing of funds",
+          "id": 4596,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results."
         },
         {
-          "id": "7quCEb71SOi0iMWcqx27rP",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 4597,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield."
         },
         {
-          "id": "7w5SRrhke7OzMauJSLUtgw",
-          "title": "Theft of gas",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "68I3117uyR8S5slA6WYp5p",
-          "title": "Unbounded gas consumption",
+          "id": 4598,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Allow unauthorized actors to manipulate/publish any data entry"
         }
       ],
-      "programOverview": "Pragma is the leading Oracle on StarkNet, recognised for providing the most reliable data feeds to its ecosystem. This network relies on three types of data sources: First Party, Third Party, and On-chain data.\n\nWhat sets the Pragma Oracle infrastructure apart is its entirely on-chain nature. This means that protocols using Pragma benefit from data that matches the verifiability, transparency, and security of the smart contracts they use.\n\nMoreover, Pragma is pioneering computational feeds. These feeds merge its high-quality, real-time market data in unique ways, ensuring that everything remains on-chain and verifiable through the use of zero-knowledge computation.\n\nPragma is the decentralized, transparent and composable oracle network, leveraging  zero-knowledge cryptography. We partner with the biggest market makers and the most liquid exchanges who sign and timestamp their own high quality, robust data and send it directly on-chain. Our feeds are live on StarkNet mainnet, where they are powering the next generation of ambitious protocols such as zkLend, Nostra, Carmine and more. \n\nFor more information about Pragma, please visit [pragma.build](https://www.pragma.build/)\n\nPragma provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__\n\nThe provision of KYC is required to receive a reward for this bug bounty program where the following information will be required to be provided:\n- Twitter\n- Email\n- Proof of identity (picture next to the Passport/ID)\n\nKYC information is only required on confirmation of the validity of a bug report.   \n\n__Responsible Publication__\n\nPragma adheres to category 3. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nPragma adheres to the Primacy of Impact for the following severity levels:\n- Smart Contract - Critical\n- Smart Contract - High\n- Smart Contract - Medium\n\nIf a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nAll other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n__Immunefi Standard Badge__\n\nPragma has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-), which is given to projects that adhere to our best practices.",
+      "programOverview": "Pragma is the leading Oracle on StarkNet, recognised for providing the most reliable data feeds to its ecosystem. This network relies on three types of data sources: First Party, Third Party, and On-chain data.\n\nWhat sets the Pragma Oracle infrastructure apart is its entirely on-chain nature. This means that protocols using Pragma benefit from data that matches the verifiability, transparency, and security of the smart contracts they use.\n\nMoreover, Pragma is pioneering computational feeds. These feeds merge its high-quality, real-time market data in unique ways, ensuring that everything remains on-chain and verifiable through the use of zero-knowledge computation.\n\nPragma is the decentralized, transparent and composable oracle network, leveraging  zero-knowledge cryptography. We partner with the biggest market makers and the most liquid exchanges who sign and timestamp their own high quality, robust data and send it directly on-chain. Our feeds are live on StarkNet mainnet, where they are powering the next generation of ambitious protocols such as zkLend, Nostra, Carmine and more. \n\nFor more information about Pragma, please visit [pragma.build](https://www.pragma.build/)\n\nPragma provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__\n\nThe provision of KYC is required to receive a reward for this bug bounty program where the following information will be required to be provided:\n- Twitter\n- Email\n- Proof of identity (picture next to the Passport/ID)\n\nKYC information is only required on confirmation of the validity of a bug report.   \n\n\n__Primacy of Impact vs Primacy of Rules__\n\nPragma adheres to the Primacy of Impact for the following severity levels:\n- Smart Contract - Critical\n- Smart Contract - High\n- Smart Contract - Medium\n\nIf a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nAll other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n__Immunefi Standard Badge__\n\nPragma has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-), which is given to projects that adhere to our best practices.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 50 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 5 000 is to be rewarded in order to incentivize security researchers against withholding a bug report.   \n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract + Critical + PoC Required\n- Smart Contract + High + PoC Required\n- Smart Contract + Medium + PoC Required\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs acknowledged below are not eligible for any reward through the bug bounty program. \n- [https://github.com/NethermindEth/PublicAuditReports/blob/main/NM0147-FINAL_PRAGMA.pdf](https://github.com/NethermindEth/PublicAuditReports/blob/main/NM0147-FINAL_PRAGMA.pdf)\n\n__Reward Payment Terms__\n\nPayouts are handled by the Pragma team directly and are denominated in USD. However, payments are done in USDC.",
-      "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Smart Contracts__\n\n- Incorrect data supplied by third party oracles:\n   - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n- Best practice recommendations\n\nThe following activities are prohibited by this bug bounty program:\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "All code of Pragma can be found at [https://github.com/Astraly-Labs/pragma-oracle](https://github.com/Astraly-Labs/pragma-oracle)\nand [https://github.com/Astraly-Labs/pragma. ](https://github.com/Astraly-Labs/pragma)Documentation for the assets provided in the table can be found at [docs.pragma.build](https://docs.pragma.build/)",
+      "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 50 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 5 000 is to be rewarded in order to incentivize security researchers against withholding a bug report.   \n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract + Critical + PoC Required\n- Smart Contract + High + PoC Required\n- Smart Contract + Medium + PoC Required\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs acknowledged below are not eligible for any reward through the bug bounty program. \n- [https://github.com/NethermindEth/PublicAuditReports/blob/main/NM0147-FINAL_PRAGMA.pdf](https://github.com/NethermindEth/PublicAuditReports/blob/main/NM0147-FINAL_PRAGMA.pdf)\n\n__Reward Payment Terms__\n\nPayouts are handled by the Pragma team directly and are denominated in USD. However, payments are done in USDC.",
+      "outOfScopeAndRules": ".",
+      "assetsBodyV2": ".",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -206,20 +206,49 @@
       "responsiblePublicationCategory": "category_3",
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
       "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
       "customOutOfScopeInformation": null,
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "USDC",
       "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
-      "programDocumentations": [],
+      "programCodebases": [
+        {
+          "id": 51,
+          "programId": 2036,
+          "title": "Pragma Oracle Codebase",
+          "description": "Github Codebase",
+          "url": "https://github.com/Astraly-Labs/pragma-oracle",
+          "createdAt": "2024-10-24T14:46:25.890Z",
+          "updatedAt": "2024-10-24T14:46:25.890Z"
+        },
+        {
+          "id": 52,
+          "programId": 2036,
+          "title": "Pragma Oracle Codebase",
+          "description": "Github Codebase",
+          "url": "https://github.com/Astraly-Labs/pragma",
+          "createdAt": "2024-10-24T14:46:49.995Z",
+          "updatedAt": "2024-10-24T14:46:49.995Z"
+        }
+      ],
+      "programDocumentations": [
+        {
+          "id": 40,
+          "programId": 2036,
+          "title": "Pragma Oracle Documentation",
+          "description": "Program Documentation",
+          "url": "https://docs.pragma.build/",
+          "createdAt": "2024-10-24T14:47:40.403Z",
+          "updatedAt": "2024-10-24T14:47:40.403Z"
+        }
+      ],
       "premiumTriaging": false
     },
     "project": {

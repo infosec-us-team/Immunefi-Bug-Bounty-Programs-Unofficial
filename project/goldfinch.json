@@ -348,88 +348,88 @@
       ],
       "impacts": [
         {
-          "id": "2z2elCnyJTbXiJbw52SbaY",
-          "title": "Loss of user funds",
+          "id": 969,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of user or governance funds"
         },
         {
-          "id": "299OO2xG2dvWK7MlbqAQPo",
-          "title": "Loss of governance funds",
+          "id": 970,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of yield equal to or below USD 200 000"
         },
         {
-          "id": "PmGU0mJv9XcyJeqnSc54r",
-          "title": "Loss of principle user funds",
+          "id": 971,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Failure of access controls"
         },
         {
-          "id": "2rfF9zR7i33570gOf4opKR",
-          "title": "Theft of yield",
-          "type": "smart_contract",
-          "severity": "critical"
-        },
-        {
-          "id": "5Kzr5yhT9DFXFznT1fSvkU",
-          "title": "Unintended behavior relating to money transfers (ie. user input is for 10 USDC, and we actually try to move 100 USDC)",
-          "type": "smart_contract",
-          "severity": "critical"
-        },
-        {
-          "id": "3amp5A8txaLu145KtCsbiY",
-          "title": "Logical bugs relating to calculation of interest or principal owed, or payment dates, etc.",
-          "type": "smart_contract",
-          "severity": "critical"
-        },
-        {
-          "id": "7dC7ESjjT1mZZ60fdcfhx",
-          "title": "Incorrect or unintended behavior relating to money. (ie. user input is for 10 USDC on the app, and we actually send 100 USDC to the smart contract)",
+          "id": 972,
           "type": "websites_and_applications",
-          "severity": "critical"
+          "severity": "high",
+          "title": "We are pointing to an incorrect smart contract"
         },
         {
-          "id": "gKrb2Ixm2PRSAmO2LOcBU",
-          "title": "Temporary freezing of user or governance funds",
+          "id": 973,
+          "type": "websites_and_applications",
+          "severity": "high",
+          "title": "Cross-site request forgery (CSRF)"
+        },
+        {
+          "id": 974,
+          "type": "websites_and_applications",
+          "severity": "high",
+          "title": "Cross-site scripting (XSS)"
+        },
+        {
+          "id": 975,
+          "type": "websites_and_applications",
+          "severity": "high",
+          "title": "“Clickjacking state-changing” that can result in any user losing funds or being tricked into unintended behavior involving money through Goldfinch’s front-ends (only if the total impact is equal to or greater than USD 10 000)"
+        },
+        {
+          "id": 976,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Loss of user funds"
         },
         {
-          "id": "4ZUgwTbDJ86QuGIEA9h0Yc",
-          "title": "Theft of yield equal to or below USD 200 000",
+          "id": 977,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Loss of governance funds"
         },
         {
-          "id": "2EdYrNxFxzbvZVgiSedeoP",
-          "title": "Failure of access controls",
+          "id": 978,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Loss of principle user funds"
         },
         {
-          "id": "5XOET5uobkBLlc4Th1RAV3",
-          "title": "We are pointing to an incorrect smart contract",
-          "type": "websites_and_applications",
-          "severity": "high"
+          "id": 979,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Theft of yield"
         },
         {
-          "id": "1YkwPHJmKV7JwVXSVkrw49",
-          "title": "Cross-site request forgery (CSRF)",
-          "type": "websites_and_applications",
-          "severity": "high"
+          "id": 980,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Unintended behavior relating to money transfers (ie. user input is for 10 USDC, and we actually try to move 100 USDC)"
         },
         {
-          "id": "3Bs5phmC6T8k2RdoVF5Jts",
-          "title": "Cross-site scripting (XSS)",
-          "type": "websites_and_applications",
-          "severity": "high"
+          "id": 981,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Logical bugs relating to calculation of interest or principal owed, or payment dates, etc."
         },
         {
-          "id": "2nEUbtr6ptO3fw0XBuRTwS",
-          "title": "“Clickjacking state-changing” that can result in any user losing funds or being tricked into unintended behavior involving money through Goldfinch’s front-ends (only if the total impact is equal to or greater than USD 10 000)",
+          "id": 982,
           "type": "websites_and_applications",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Incorrect or unintended behavior relating to money. (ie. user input is for 10 USDC on the app, and we actually send 100 USDC to the smart contract)"
         }
       ],
       "programOverview": "Goldfinch is a decentralized protocol that allows for crypto borrowing without crypto collateral. The Goldfinch protocol has four core participants: Borrowers, Backers, Liquidity Providers, and Auditors.\n\nBorrowers are participants who seek financing, and they propose Borrower Pools for the Backers to assess. Borrower Pools contain the terms a Borrower seeks, like the interest rate and repayment schedule.\n\nBackers assess the Borrower Pools and decide whether to supply first-loss capital. After Backers supply capital, Borrowers can borrow and repay through the Borrower Pool.\n\nLiquidity Providers supply capital to the Senior Pool in order to earn passive yield. The Senior Pool uses the Leverage Model to automatically allocate capital to the Borrower Pools, based on how many Backers are participating in them. When the Senior Pool allocates capital, a portion of its interest is reallocated to the Backers. This increases the Backers’ effective yield, which incentives them to both provide the higher-risk first-loss capital and do the work of assessing Borrower Pools.\n\nLastly, Auditors vote to approve Borrowers, which is required before they can borrow. Auditors are randomly selected by the protocol, and they provide a human-level check to guard against fraudulent activity.\n\nFor more information about Goldfinch, please visit [https://goldfinch.finance/](https://goldfinch.finance/).     \n\nThis bug bounty program is focused on their smart contracts and app and is focused on preventing the following impacts:\n\n  - Loss of user funds\n  - Loss of governance funds\n  - Incorrect or unintended behavior relating to money transfers (ie. user input is for 10 USDC, and we actually try to move 100 USDC)\n  - Logical bugs relating to calculation of interest or principal owed, or payment dates, etc.\n  - Temporary freezing of user or governance funds.\n  - Unable to call smart contract\n  - Pointing to an incorrect smart contract from our frontend",

@@ -213,220 +213,220 @@
       ],
       "impacts": [
         {
-          "id": "3Y6ajZ3yBCfAH34CKsS9ok",
-          "title": "Ability for an attacker to cause the entire protocol to freeze, including loans in which they are not a counterparty",
+          "id": 3172,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Any finding which impacts protocol logic without circumventing loan rules or stealing/freezing user funds"
         },
         {
-          "id": "1SfVW9013RKvd1fOOXa4ID",
-          "title": "Ability for an attacker to steal any asset held by the protocol, without limitation, including loans in which they are not a counterparty",
+          "id": 3173,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Staking contract fails to deliver promised rewards, but doesn't lose any tokens."
         },
         {
-          "id": "2e85ffPNc6szOrhYMLY3IB",
-          "title": "Ability for an attacker to claim collateral for defaulted loans in which they are not a counterparty",
+          "id": 3174,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Any finding which impacts staking contract logic without circumventing staking rules or stealing/freezing user funds."
         },
         {
-          "id": "EcAVgFWs2Y9TJ31mAzRmC",
-          "title": "Direct theft of any staking user funds, whether at-rest or in-motion",
+          "id": 3175,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "With the attacker as a borrower, the ability to regain control of collateral without repaying your loan"
         },
         {
-          "id": "WApzyCgxfMizBicS82T02",
-          "title": "Permanent freezing of staked funds",
+          "id": 3176,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "With the attacker as a borrower, the ability to force your lender to issue loan funding without placing collateral in escrow"
         },
         {
-          "id": "yxhI180UQGhhKp698DI1H",
-          "title": "With the attacker as a borrower, the ability to regain control of collateral without repaying your loan",
+          "id": 3177,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "With the attacker as a borrower, the ability to prevent a lender from claiming collateral when a loan is defaulted"
         },
         {
-          "id": "3DDGQbjdbEe4sUUbRqpsMf",
-          "title": "With the attacker as a borrower, the ability to force your lender to issue loan funding without placing collateral in escrow",
+          "id": 3178,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "With the attacker as a lender, the ability to claim collateral before your loan’s due date"
         },
         {
-          "id": "3F5KnMFGfJAtW2orNuPcOm",
-          "title": "With the attacker as a borrower, the ability to prevent a lender from claiming collateral when a loan is defaulted",
+          "id": 3179,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "With the attacker as a lender, the ability to prevent borrower repayments to force a default"
         },
         {
-          "id": "5Y5GxoJQGztlIM7Bal3f4R",
-          "title": "With the attacker as a lender, the ability to claim collateral before your loan’s due date",
+          "id": 3180,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "With the attacker as a lender, the ability to force a borrower to place collateral in escrow without issuing funding"
         },
         {
-          "id": "34DY1XJoFfxUlbDPqauY7l",
-          "title": "With the attacker as a lender, the ability to prevent borrower repayments to force a default",
+          "id": 3181,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "With the attacker as either counterparty, the ability to force another party to enter a loan under terms they did not consent to either via signature, or the other party submitting a function call"
         },
         {
-          "id": "3iSVM57v04CeJ0rKGmqwU9",
-          "title": "With the attacker as a lender, the ability to force a borrower to place collateral in escrow without issuing funding",
+          "id": 3182,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Theft of unclaimed staking yield"
         },
         {
-          "id": "2MEieCMku7ivwWWVt3JqDt",
-          "title": "With the attacker as either counterparty, the ability to force another party to enter a loan under terms they did not consent to either via signature, or the other party submitting a function call",
+          "id": 3183,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed staking yield"
         },
         {
-          "id": "3kGxaaLQrqDwHNHqabuBaK",
-          "title": "Theft of unclaimed staking yield",
+          "id": 3184,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Temporary freezing of staked funds"
         },
         {
-          "id": "ndXocWHe4I7VyIBsqt4qh",
-          "title": "Permanent freezing of unclaimed staking yield",
+          "id": 3185,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "The ability of a user to withdraw their staked tokens before the end of the lock period"
         },
         {
-          "id": "68mWg8KszCL4ATKuBsXGF2",
-          "title": "Temporary freezing of staked funds",
+          "id": 3186,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "The ability to force the issuance of a bonus multiplier incompatible with the chosen lock period"
         },
         {
-          "id": "UhOAt1eC2XIWXAcyq8WWf",
-          "title": "The ability of a user to withdraw their staked tokens before the end of the lock period",
+          "id": 3187,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "The ability to force the issuance of voting power incompatible with the properties of a user’s stake"
         },
         {
-          "id": "4neJ5cOlyDhsbvrEjzi8P2",
-          "title": "The ability to force the issuance of a bonus multiplier incompatible with the chosen lock period",
+          "id": 3188,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "The ability to prevent another staker from claiming their rewards"
         },
         {
-          "id": "2IANPh7TayFM8GrzL1VgdE",
-          "title": "The ability to force the issuance of voting power incompatible with the properties of a user’s stake",
+          "id": 3189,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "The ability to prevent another staker from withdrawing their staked tokens"
         },
         {
-          "id": "6RqpwDMP40p9uP6gpmSZIQ",
-          "title": "The ability to prevent another staker from claiming their rewards",
+          "id": 3190,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "The ability to overdraw rewards"
         },
         {
-          "id": "6kvqT28wqfMJEYKdv4bp4j",
-          "title": "The ability to prevent another staker from withdrawing their staked tokens",
+          "id": 3191,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "The ability to overdraw staking tokens"
         },
         {
-          "id": "6Iv5ln0n6Eoy0nDfOLDIAF",
-          "title": "The ability to overdraw rewards",
+          "id": 3192,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "The alteration of a user's voting power"
         },
         {
-          "id": "1i34OXQuQCqKIQma7QkTMb",
-          "title": "The ability to overdraw staking tokens",
+          "id": 3193,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Ability for an attacker to gain governance voting power for stakes in which they are not a participant"
         },
         {
-          "id": "5NYFrMMtLkhcWyMpYw8tnX",
-          "title": "The alteration of a user's voting power",
+          "id": 3194,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Staking contract fails to deliver promised returns."
         },
         {
-          "id": "27OeHF2V1esQpyoWHT2QQJ",
-          "title": "Ability for an attacker to gain governance voting power for stakes in which they are not a participant",
+          "id": 3195,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Ability to freeze the protocol from originating new loans, without affecting currently open loans or locking assets"
         },
         {
-          "id": "60snpIXsiTFOxC1WImIlI5",
-          "title": "Staking contract fails to deliver promised returns.",
+          "id": 3196,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Ability to drain protocol fees or block protocol fees"
         },
         {
-          "id": "5xu084xK0ETeyQMGCne5C2",
-          "title": "Ability to freeze the protocol from originating new loans, without affecting currently open loans or locking assets",
+          "id": 3197,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Ability to block protocol fees from being withdrawn by contract owners"
         },
         {
-          "id": "EDXnRNBSEkcWeZqyddVe7",
-          "title": "Ability to drain protocol fees or block protocol fees",
+          "id": 3198,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Ability to bypass whitelisting requirements for loan collateral, payable currencies, and allowed verifiers"
         },
         {
-          "id": "3ddXZOp6IUC7Lnc7vH88Ee",
-          "title": "Ability to block protocol fees from being withdrawn by contract owners",
+          "id": 3199,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Ability to manipulate whitelists for loan collateral, payable currencies, and allowed verifiers without the protocol-defined permissions (whitelist manager role)"
         },
         {
-          "id": "aAAY0D81zUBaA0GboIeeS",
-          "title": "Ability to bypass whitelisting requirements for loan collateral, payable currencies, and allowed verifiers",
+          "id": 3200,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol) and theft of gas"
         },
         {
-          "id": "5JPegCoQvu4dwuuj9UI0pf",
-          "title": "Ability to manipulate whitelists for loan collateral, payable currencies, and allowed verifiers without the protocol-defined permissions (whitelist manager role)",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "2saS3R3GsMrENGCcPQOHXC",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol) and theft of gas",
+          "id": 3201,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Ability to block the recoverERC20 functions in the staking contracts."
         },
         {
-          "id": "1PsUSMqLoCRBh2G0Rk87iH",
-          "title": "Unbounded gas consumption",
+          "id": 3202,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Ability for an attacker to cause the entire protocol to freeze, including loans in which they are not a counterparty"
         },
         {
-          "id": "458uYydH0FRRMtXcV6LS5x",
-          "title": "Ability to block the recoverERC20 functions in the staking contracts.",
+          "id": 3203,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Ability for an attacker to steal any asset held by the protocol, without limitation, including loans in which they are not a counterparty"
         },
         {
-          "id": "1lFL613z7g87R9YXSKirHO",
-          "title": "Any finding which impacts protocol logic without circumventing loan rules or stealing/freezing user funds",
+          "id": 3204,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Ability for an attacker to claim collateral for defaulted loans in which they are not a counterparty"
         },
         {
-          "id": "7uEEvU36DPyOjlSi2ASV99",
-          "title": "Staking contract fails to deliver promised rewards, but doesn't lose any tokens.",
+          "id": 3205,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Direct theft of any staking user funds, whether at-rest or in-motion"
         },
         {
-          "id": "7EZ6tHOZjamDAmFqvBhOYc",
-          "title": "Any finding which impacts staking contract logic without circumventing staking rules or stealing/freezing user funds.",
+          "id": 3206,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Permanent freezing of staked funds"
         }
       ],
       "programOverview": "Arcade.xyz is the first of its kind Web3 platform to enable liquid lending markets for NFTs. At Arcade.xyz, we think all assets will eventually become digitized and that NFTs represent a 0 to 1 innovation in storing value and ownership attribution for unique digital assets.\n\nArcade.xyz's focus is on building primitives, infrastructure, and applications enabling the growth of NFTs as an asset class. As such, the first product we released is an innovative peer to peer lending marketplace that allows NFT owners to unlock liquidity on baskets of NFTs on Ethereum. Lenders that hold stablecoins or ERC20 tokens can participate in a new source of DeFi yield by underwriting term loans collateralized by borrowers' NFTs.\n\nArcade.xyz is our end user application that strives to become the premier liquidity venue for NFTs, via a protocol for NFT collateralized loans with flexible terms. Today NFTs are largely digital representations of artwork and media content, however, our belief is that in the not so distant future NFTs will encompass digital rights, metaverse assets, and digital identity.\n\nFor more information about Arcade.xyz, please visit [https://docs.arcadedao.xyz](https://docs.arcadedao.xyz).\n\nOn October 24, 2023, ArcadeDAO was launched, featuring a [governance system](https://docs.arcadedao.xyz/docs/governance-source-code) that empowers members to actively influence both the technical and non-technical facets of the DAO and the Arcade Protocol. The $ARCD token functions as the governance token for ArcadeDAO.\n\nTo increase the utility of the $ARCD token and enhance user engagement in the Arcade ecosystem, ArcadeDAO introduced two staking strategies. These strategies offer users the chance to earn rewards while participating in DAO governance and providing liquidity.\n\nTo learn more, please visit [https://docs.arcadedao.xyz/docs/arcade-staking-documentation](https://docs.arcadedao.xyz/docs/arcade-staking-documentation).\n\n__Responsible Publication__\n\nArcade adheres to category 3 - Approval Required. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nArcade adheres to the Primacy of Impact for the following impacts:\n- Smart Contract - Critical\n- Smart Contract - High\n- \nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Known Issue Assurance__\n\nArcade commits to providing Known Issue Assurance to bug submissions through their program. This means that Arcade will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n- [https://github.com/arcadexyz/arcade-protocol/tree/main/audits](https://github.com/arcadexyz/arcade-protocol/tree/main/audits)\n- [https://github.com/arcadexyz/dao-contracts?tab=readme-ov-file#known-gotchas](https://github.com/arcadexyz/dao-contracts?tab=readme-ov-file#known-gotchas)\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Arcade has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",

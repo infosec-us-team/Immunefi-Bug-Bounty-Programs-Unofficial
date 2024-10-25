@@ -195,88 +195,88 @@
       ],
       "impacts": [
         {
-          "id": "2Iwfew3RP6uXAFjZGUlfjA",
-          "title": "Any governance voting result manipulation",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "2TBeqyVCbRgYEXkxllfeAw",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "6QEwMnwGS3Wn5fTw7B7tlt",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "5JC5RniVYupOYwd9gFnidt",
-          "title": "Miner-extractable value (MEV)",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "3L0BWBAZjsTdHUUnsksjkH",
-          "title": "Protocol Insolvency",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "3nH9o2VZGQiZ8LBmFHnFaX",
-          "title": "Theft of unclaimed yield",
+          "id": 251,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing for profit"
         },
         {
-          "id": "2pfJPhKTTpLWAtLSSw7Vej",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "3Idq6rPzZkm4RvyQR3IFZo",
-          "title": "Temporary freezing of funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "3MyIWe55aumAPfl44nzWxQ",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "5PCvsDtSUMu4xABT7HesU7",
-          "title": "Block stuffing for profit",
+          "id": 252,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Any governance voting result manipulation"
         },
         {
-          "id": "6tvkh8Znfl4GRdyG18Ymgr",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "3uhpODlMthAJligUMUE0HQ",
-          "title": "Theft of gas",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "4c8gSPit259b7lZLRdvkT0",
-          "title": "Unbounded gas consumption",
+          "id": 253,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Miner-extractable value (MEV)"
         },
         {
-          "id": "S1UIgFTo6xMf2tr8DbNEd",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "Perpetual protocol, formerly known as Strike, was created in 2019 inspired by emerging DeFi protocols such as Synthetix and Uniswap. The team sought to combine the merits of these protocols to create a decentralized perpetual contract trading protocol on Ethereum. The protocol is capable of supporting 10x leverage, short positions, and lower slippage compared to other AMMs thanks to its virtual AMM (vAMM) design.\n\nUnlike well known Automated Market Makers used for both token swaps and price discovery, the vAMM is solely used for price discovery to handle leverage and short positions. Similar to Uniswap, traders can trade with the vAMM without central authorities and is designed to be market neutral and fully collateralized.\n\nPERP is the protocol’s ERC-20 native token. PERP tokens allow community members to govern the protocol and stake their tokens for a fixed amount of time to the Staking Pool. In return, holders are rewarded with the staking incentive, which includes rewards in PERP and transaction fees.\n\nFurther resources regarding Perpetual can be found on their website, [https://v2docs.perp.fi/](https://v2docs.perp.fi/). ",

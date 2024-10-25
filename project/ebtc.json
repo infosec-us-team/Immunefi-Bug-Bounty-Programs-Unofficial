@@ -159,82 +159,82 @@
       ],
       "impacts": [
         {
-          "id": "7dUvb7Znw9eOz90pxzqQop",
-          "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "6r3Nkp3pgfjcHqxUQbXAt",
-          "title": "Direct theft of at least 2 stETH worth of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "5Xpu2F9y4b7hxvocTSb4KE",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "4ClI7LTWzL9vFyaHykiB7k",
-          "title": "Protocol insolvency",
+          "id": 4773,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds for at least 15 minutes"
         },
         {
-          "id": "77IlzrUXn1Zm3eulEdMX44",
-          "title": "Theft of unclaimed yield",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "22kZhFJUlbsuJedMpVAkVm",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 30,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing"
         },
         {
-          "id": "3NYb3yGHTpJ6awdyAGSuP2",
-          "title": "Temporary freezing of funds for at least 15 minutes",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "5tMESAvWhcg0oZHBHDuIVu",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "7vRW0EJkRtcdk7Kww6ZjK3",
-          "title": "Block stuffing",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "7nRwV8U0ZWXiD3DB15TqcS",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 14,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results"
         },
         {
-          "id": "3QkJdaJ9fdJDGBVSx5Os4t",
-          "title": "Theft of gas",
+          "id": 4774,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of at least 2 stETH worth of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "3A8pFawnGwNee5AqwTlOZR",
-          "title": "Unbounded gas consumption",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "2VhpzXjMXUO6hXzNibm1Wd",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "eBTC is a collateralized crypto asset soft pegged to the price of Bitcoin and built on the Ethereum network. It is based on the Liquity protocol and backed exclusively by Staked Ether (stETH). The protocol is designed with an immutable core with minimized counterparty reliance and governance.\n\nIt’s designed to be the most decentralized synthetic BTC in DeFi and offers the ability for anyone in the world to borrow BTC at no cost.\n\nAfter locking up stETH as collateral and creating an individual position called a CDP, the user can get instant liquidity by minting eBTC. Each CDP is required to be collateralized at a fixed minimum ratio determined by the protocol.\n\nThe redemption and liquidation mechanisms help ensure that stability is maintained through economically-driven user interactions and arbitrage, rather than through active governance or monetary interventions.\n\neBTC is built by [BadgerDAO](https://badger.com/). For more information about eBTC, please visit [twitter](https://twitter.com/eBTCprotocol) and the [docs](https://docs.ebtc.finance/ebtc).\n\nBadgerDAO provides rewards in USDC on Ethereum, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n\n__Responsible Publication__\n\nBadgerDAO adheres to category 2 - Notice Required. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nBadgerDAO adheres to the Primacy of Impact for all levels.\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact ](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n__Known Issue Assurance__\n\nBadgerDAO commits to providing Known Issue Assurance to bug submissions through their program. This means that BadgerDAO will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n\n- Account's stETH balance getting lower on 1 or 2 wei due to rounding down integer math: https://github.com/lidofinance/lido-dao/issues/442\n- Steal of shares using transferSharesFrom due to math rounding issues: https://github.com/lidofinance/lido-dao/issues/796\n- Redeem to change partial NICR in order to grief redemption, or, open a cdp that front-runs the redemption to grief the redemption: https://github.com/code-423n4/2023-10-badger-findings/issues/226\n- stETH upgrade risk is considered known\n- Unbounded gas is via poor hint selection\n- Chainlink misbehaviour and single privilege is considered known\n- End user risks tied to malicious PositionManagers are considered known\n- Known Rounding Behaviour: Debt Redistribution Precision Loss:\n   - Every time a Cdp updates with one or more pending debt redistribution events, it can possibly lose 1 wei of debt to rounding. This 1 wei of debt will still be accounted for in systemDebt. This is “rounding against the protocol” in the sense that the systemDebt will become 1 wei higher than the sum of all active\nCdp debt for each instance of this occuring. It’s unbounded. This leads to a theoretical maximum differential of 1 wei per Cdp per debt redistribution event between the sum of all active Cdp debt and the systemDebt.\n- Known Rounding Behaviour: Collateral Rebase Precision Loss:\n   - However, this rounding behavior also exists during collateral rebase events. In this case it “rounds against the user”. Each time a Cdp is updated with any pending rebases to apply, it can lose  wei of collateral versus what it would have mathematically speaking due to precision loss of division. The systemCollShares becomes 1 wei higher than the sum of all active Cdp collShares in this instance. This leads to a theoretical maximum differential of 1 wei per Cdp per rebase event between the systemCollShares and the sum of all active Cdp collShares.\n   - A Cdp can lose value due to precision loss of division versus the mathematically accurate expected result. Values up to a tolerance threshold of 1000 wei per Cdp update event will be considered known and acceptable. In addition the systemCollShares will become higher than the sum of all active Cdp collShares in this instance. This leads to a theoretical maximum differential of 1 wei per Cdp per rebase event between the systemCollShares and the sum of all active Cdp collShares.\n   - SortedCdps list can get out of order with debt redistribution. This is considered acceptable and does not affect liquidations, only redemption ordering.\n- Bugs tied to the system having a vast majority of CDPs being underwater\n   - Findings that are theoretical in nature should be downgraded or considered invalid\n   - As a general rule reports should assume that liquidators will prefer liquidations over redemptions as redemptions cause a monetary loss to the actor while liquidations cause a gain\n   - Also see known issues in the [eBTC Readme](https://github.com/ebtc-protocol/ebtc/tree/release-0.8?tab=readme-ov-file#known-issues-from-previous-audits) and [eBTC Cheatsheet](https://gist.github.com/GalloDaSballo/7b060bb97de09c539ec64c533dd352c6)\n\n__Previous Audits__\n\nBadgerDAO’s has provided these completed audit review reports for reference. Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n\n- RiskDAO: https://github.com/Risk-DAO/Reports/blob/main/eBTC.pdf\n- Trust: https://badger.com/images/uploads/trust-ebtc-audit-report.pdf\n- Spearbit: https://badger.com/images/uploads/ebtc-security-review-spearbit.pdf\n- Cantina: https://badger.com/images/uploads/ebtc-security-review-cantina.pdf\n- Code4rena: https://code4rena.com/reports/2023-10-badger\n- Shung: https://gist.github.com/Shungy/ebeb9366e970ecbf4da1eda296581e47\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards ](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, BadgerDAO has satisfied the requirements for the [Immunefi Standard Badge.](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209)",

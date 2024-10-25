@@ -150,70 +150,70 @@
       ],
       "impacts": [
         {
-          "id": "5frS58BtOB9QBdTNn8Gumi",
-          "title": "Network not being able to confirm new transactions (total network shutdown)",
+          "id": 4743,
           "type": "blockchain_dlt",
-          "severity": "critical"
+          "severity": "high",
+          "title": "RPC API crash affecting projects with greater than or equal to 25% of the market capitalization on top of the respective layer"
         },
         {
-          "id": "5Ujq6gf65l7WLf4JOTMEVd",
-          "title": "Direct loss of funds",
+          "id": 10,
           "type": "blockchain_dlt",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Shutdown of greater than or equal to 30% of network processing nodes without brute force actions, but does not shut down the network"
         },
         {
-          "id": "5GCctdNXcFBvjeVrTAACSJ",
-          "title": "Permanent freezing of funds (fix requires hardfork)",
+          "id": 11,
           "type": "blockchain_dlt",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "A bug in the respective layer 0/1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk"
         },
         {
-          "id": "1EtuiwyKxurucxsWCwCAol",
-          "title": "Execute arbitrary system commands",
+          "id": 1,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Network not being able to confirm new transactions (total network shutdown)"
+        },
+        {
+          "id": 3,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Direct loss of funds"
+        },
+        {
+          "id": 4,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Permanent freezing of funds (fix requires hardfork)"
+        },
+        {
+          "id": 35,
           "type": "websites_and_applications",
-          "severity": "critical"
+          "severity": "critical",
+          "title": "Execute arbitrary system commands"
         },
         {
-          "id": "6W8ZjmsiPrcRkLj6bJFO99",
-          "title": "Retrieve sensitive data/files from a running server, such as:   /etc/shadow, database passwords, blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)",
+          "id": 4744,
           "type": "websites_and_applications",
-          "severity": "critical"
+          "severity": "critical",
+          "title": "Retrieve sensitive data/files from a running server, such as:   /etc/shadow, database passwords, blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
         },
         {
-          "id": "5YSKkA0xhntScwhu1YF6c3",
-          "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:   Changing registration information, Commenting, Voting, Making trades, Withdrawals, etc.",
+          "id": 4745,
           "type": "websites_and_applications",
-          "severity": "critical"
+          "severity": "critical",
+          "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:   Changing registration information, Commenting, Voting, Making trades, Withdrawals, etc."
         },
         {
-          "id": "5BMBBfH4vaX7KKv0Ge1nw4",
-          "title": "Direct theft of user funds",
+          "id": 42,
           "type": "websites_and_applications",
-          "severity": "critical"
+          "severity": "critical",
+          "title": "Direct theft of user funds"
         },
         {
-          "id": "2oboGmzETw9ZdwxmKflokM",
-          "title": "Malicious interactions with an already-connected wallet, such as:  Modifying transaction arguments or parameters, Substituting contract addresses, Submitting malicious transactions",
+          "id": 4746,
           "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "3VWKwAr53baVcd3iVZm9tj",
-          "title": "RPC API crash affecting projects with greater than or equal to 25% of the market capitalization on top of the respective layer",
-          "type": "blockchain_dlt",
-          "severity": "high"
-        },
-        {
-          "id": "4nK97uVj6WXNvwY6exDsq0",
-          "title": "Shutdown of greater than or equal to 30% of network processing nodes without brute force actions, but does not shut down the network",
-          "type": "blockchain_dlt",
-          "severity": "medium"
-        },
-        {
-          "id": "45okyck8mXePeXQ1VNk8CL",
-          "title": "A bug in the respective layer 0/1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk",
-          "type": "blockchain_dlt",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Malicious interactions with an already-connected wallet, such as:  Modifying transaction arguments or parameters, Substituting contract addresses, Submitting malicious transactions"
         }
       ],
       "programOverview": "Oasis is a privacy layer for Web3 with native high performance and cross-chain interoperability.\n\nFor more information about Oasis, please visit https://oasisprotocol.org/\n\nOasis provides rewards in USDC, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__ \n\nOasis will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\n__Eligibility Criteria__ \n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n\n__Responsible Publication__\n\nOasis adheres to category 3 - Approval Required. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nOasis adheres to the Primacy of Impact for the following impacts:\n\n- Blockchain/DLT: Critical\n- Blockchain/DLT: High\n- Blockchain/DLT: Medium\n- Web/App: Critical\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact ](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. Github issues can be found here: https://github.com/oasisprotocol\n\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Oasis has satisfied the requirements for the [Immunefi Standard Badge.](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209)",

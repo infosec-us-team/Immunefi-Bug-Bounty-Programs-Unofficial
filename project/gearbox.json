@@ -78,88 +78,88 @@
       ],
       "impacts": [
         {
-          "id": "7gxCUkeboURMq8raEK6kcw",
-          "title": "Any governance voting result manipulation (unless related to Snapshot)",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "2leCSXcdTA4GQOIBg45aWk",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "6yZi3Q1rR12GNdWKV4YCbu",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "1MlCGIEu4WQDwvG9MZLmAA",
-          "title": "Miner-extractable value (MEV)",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "3BYUbmLhTu3tQAUHtFV7bl",
-          "title": "Protocol Insolvency",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "5xie8P9sBxiQM5vKlnDoPL",
-          "title": "Theft of unclaimed yield",
+          "id": 1807,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing for profit"
         },
         {
-          "id": "6w655aUGrkxt7v2D2oiMGb",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "4SqjwqKONWCKiVc2KIfNMw",
-          "title": "Temporary freezing of funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "15Tb3kmjhKgO3ojFo5CwHa",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "2fKPmsYLWopGxKp8SvgkOn",
-          "title": "Block stuffing for profit",
+          "id": 1808,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Any governance voting result manipulation (unless related to Snapshot)"
         },
         {
-          "id": "3kGip8JjVTfdSfcyC79TB1",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "xqsTnjPpZoMeFwJEdvwCv",
-          "title": "Theft of gas",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "1HR1toP705EdRu9KkVQ7SI",
-          "title": "Unbounded gas consumption",
+          "id": 1809,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Miner-extractable value (MEV)"
         },
         {
-          "id": "xsiSmnWT5Yr68pgludDrb",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "Gearbox is a generalized leverage protocol: it allows you to take leverage in one place and then use it across various DeFi protocols and platforms in a composable way. The protocol has two sides to it: passive liquidity providers who earn higher APY by providing liquidity; and active traders, farmers, or even other protocols who can borrow those assets to trade or farm with even x10 leverage.\n\nThe core vision is to become a backend composable leverage protocol that all kinds of users have but don’t even need to interact directly with any interface. \n\nFor more information about Gearbox, please visit: [https://docs.gearbox.finance/ ](https://docs.gearbox.finance/)\n\nDev docs are available at [https://dev.gearbox.fi/](https://dev.gearbox.fi/) \n\nTo see the dApp, please visit: [https://app.gearbox.fi/](https://app.gearbox.fi/). \n\nGearbox provides rewards denominated in __USD__, however payouts are done in __USDC__. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__Eligibility Criteria__ \n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n\n  - On OFACs SDN list \n  - Official contributor, both past or present\n  - Employees and/or individuals closely associated with the project \n  - Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nGearbox adheres to category RP - __category 3__. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nGearbox adheres to the Primacy of Impact for the following impacts:\n\n  - Smart Contract: Critical\n  - Smart Contract: High\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact ](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Primacy of Impact vs Primacy of Rules__\n\nGearbox adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page. \n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules). A suggestion for a fix is preferred but not compulsory for Low and Medium Smart Contract bug reports. Explanations and statements are not accepted as PoC and code is required. \n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n\n  - [https://github.com/Gearbox-protocol/core-v2/issues](https://github.com/Gearbox-protocol/core-v2/issues)\n  - [https://github.com/Gearbox-protocol/core-v3/issues](https://github.com/Gearbox-protocol/core-v3/issues)\n  - [https://github.com/Gearbox-protocol/integrations-v3/issues](https://github.com/Gearbox-protocol/integrations-v3/issues)\n  - [https://github.com/Gearbox-protocol/oracles-v3/issues](https://github.com/Gearbox-protocol/oracles-v3/issues)\n  - [https://github.com/Gearbox-protocol/bots-v3/issues](https://github.com/Gearbox-protocol/bots-v3/issues)\n  - [https://github.com/Gearbox-protocol/gearbox-contracts/issues](https://github.com/Gearbox-protocol/gearbox-contracts/issues)\n  - [https://github.com/Gearbox-protocol/integrations-v2/issues](https://github.com/Gearbox-protocol/integrations-v2/issues)\n  - [https://github.com/Gearbox-protocol/governance/issues](https://github.com/Gearbox-protocol/governance/issues)\n  - [https://github.com/Gearbox-protocol/security/tree/main/disclosures](https://github.com/Gearbox-protocol/security/tree/main/disclosure)\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Gearbox has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209).",

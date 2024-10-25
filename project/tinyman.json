@@ -51,82 +51,82 @@
       ],
       "impacts": [
         {
-          "id": "VHmvVNC6sk0dhQBqFndsh",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "5E6hJmYHNERZPMTK4aVYIm",
-          "title": "Permanent freezing of funds",
+          "id": 1701,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Bootstrapping a pool with incorrect Pool Token properties"
         },
         {
-          "id": "4qo5B4SHAxI8QA3LbSds7Z",
-          "title": "Protocol insolvency",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "5c98g8lZWS54vZWRfE5drm",
-          "title": "Modification/deletion of Validator App",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "2UhUpCXRlPCk8noQphMwHv",
-          "title": "Taking signer authority of pool accounts",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "1d3J7LbkJ1oeMTvqR5Za8S",
-          "title": "Theft of unclaimed yield",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "1ml8BTaoylCKBBspeFH7pD",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "78rmotJpBZKeZheLxMDte3",
-          "title": "Temporary freezing of funds",
+          "id": 1702,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Making pool accounts pay unnecessary fees"
         },
         {
-          "id": "3oscSsQLAp3ONpKa1gQfc9",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "6fz7pI2rUWkeubRx9nteLV",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "2KYF3IrFQBRwEQ4HzjcboX",
-          "title": "Making pool accounts pay unnecessary fees",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         },
         {
-          "id": "4qVa1r94J91szYRH2Mnf5I",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 1703,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Modification/deletion of Validator App"
         },
         {
-          "id": "6S2jbI7nfgB4yrAMVpDRxL",
-          "title": "Bootstrapping a pool with incorrect Pool Token properties",
+          "id": 1704,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Taking signer authority of pool accounts"
         }
       ],
       "programOverview": "Tinyman is a decentralised exchange (DEX) on Algorand. More specifically, it is an Automated Market Maker (AMM) exchange employing the Constant Product Market Maker algorithm.\n\nThe exchange is fully decentralized and non-custodial. Funds are held in permissionless smart contract accounts. This means the only methods to withdraw funds from the pool accounts are those encoded in the smart contract. At a high level this code only allows withdrawals in exchange for an appropriate amount of another asset or by the liquidity owners in exchange for their Pool Tokens.\n\nFurthermore the contracts are fully permissionless. This means that any account can create a pool by issuing the correct set of transactions. It means that no account has authority over the pool's assets or functionality. This also means there is no mechanism to revert or adjust transactions even if they are made in error.\n\nThe contracts are also fully immutable. This means no account has the authority to update or delete the contracts that control the pools. This means that funds cannot be stolen by an update to the contracts.\n\nFor more information about Tinyman, please visit [https://tinyman.org/](https://tinyman.org/).\n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Thefts and freezing of liquidity pools\n  - Unauthorized and fraudulent calls to Tinyman v1.1 smart contracts",

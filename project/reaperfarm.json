@@ -48,46 +48,46 @@
       ],
       "impacts": [
         {
-          "id": "3iHisW6DPZAlnqgK0ZL2L4",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 1216,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield of 10% or more"
         },
         {
-          "id": "5h3WZrpI67PgGJIDbkJ5b2",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "454PmWPpFjf8ZztRurvVRZ",
-          "title": "Miner-extractable value (MEV)",
+          "id": 1217,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds that cannot be mitigated by current smart contract"
         },
         {
-          "id": "6bT3QYUsCeIeCVI8p8yAVS",
-          "title": "Protocol Insolvency",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "5DwxVerLTtK4NFJ8xbQOf2",
-          "title": "Theft of unclaimed yield of 10% or more",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "1ifOM6a4d2Y289ldMzxLEj",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 1218,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Miner-extractable value (MEV)"
         },
         {
-          "id": "6r8gvPwO3EvezHob7Yl9RH",
-          "title": "Temporary freezing of funds that cannot be mitigated by current smart contract",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "Reaper is an auto-compounding yield farm which maximizes user's yields by leveraging the power of compound interest.\n\nSimply deposit your liquidity tokens with them and they will farm for you. Whenever a reward is emitted they swap it for more liquidity tokens and put them back to work.\n\nFor more information about Reaper Farm, please visit [https://docs.reaper.farm/reaper-farms/](https://docs.reaper.farm/reaper-farms/)\n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Thefts and freezing of principal of any amount\n  - Thefts and freezing of unclaimed yield of more than 10%",

@@ -87,88 +87,88 @@
       ],
       "impacts": [
         {
-          "id": "o2qkNykWTBkVQE1YT2wFg",
-          "title": "Any governance voting result manipulation",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "7nUOLUK8FoTvblHwf1AqI5",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "3GUkcQWVMT7VQc5r8p6AwE",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "7oAyfUzyxKnKbAHBSMVpvr",
-          "title": "Miner-extractable value (MEV)",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "5bBnv8wxb3l1YSwKUYQCY9",
-          "title": "Protocol Insolvency",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "71GxeSbn3MLgdftLp9yaR5",
-          "title": "Theft of unclaimed yield",
+          "id": 650,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing for profit"
         },
         {
-          "id": "402wxyL4ai69ElY8POcKM0",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "4ik9kkfVxBtA1KFsWfBKEE",
-          "title": "Temporary freezing of funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "2XPcmHHYZik8LAYWWwxTwT",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "4BN93oxmw6uQKfzmrhCJKU",
-          "title": "Block stuffing for profit",
+          "id": 651,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Any governance voting result manipulation"
         },
         {
-          "id": "50bpfQAAFfxRjpWXqAHC1x",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "67RMQbloWIci2MKAjwm7jX",
-          "title": "Theft of gas",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "HoHuImiy3EsQmnvEaxYkq",
-          "title": "Unbounded gas consumption",
+          "id": 652,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Miner-extractable value (MEV)"
         },
         {
-          "id": "68DdhFZx1VoaoJck5bGfXV",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "__B.Protocol runs a Backstopp AMM (BAMM) as a robust liquidation engine solution for DeFi lending platforms.__ \n\nB.Protocol’s BAMM is a novel DeFi primitive, providing better stability, and unlocking higher capital efficiency in the DeFi lending ecosystem. The protocol enables anyone to participate in the liquidation processes in DeFi, helping to maintain the supported platforms safe, while democratizing the process.\n\nB.Protocol pools users’ funds into Backstop pools. This liquidity is used for liquidations as they happen on integrated platforms. While the Backstop funds are sitting idle in the pools waiting for liquidation to occur, they gain either interest rates or liquidity mining rewards, or both, generating passive revenue for the Backstoppers - users who provide liquidity to the Backstop pools.\nOnce a liquidation takes place, the Backstop AMM (BAMM) smart contract pulls the needed funds from the backstop to facilitate the liquidation and automatically puts the seized collateral for sale. Once sold, the return is deposited back to the backstop pool, and profits are accrued.\n\nFor more information about BProtocol, please visit [https://www.bprotocol.org/](https://www.bprotocol.org/). \n\nThe bug bounty program covers its smart contracts and is focused on the prevention of the negative impacts stated in the Impacts in Scope section.\n",

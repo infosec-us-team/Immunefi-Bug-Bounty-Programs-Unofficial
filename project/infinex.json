@@ -105,64 +105,64 @@
       ],
       "impacts": [
         {
-          "id": "2bkQpLk7Pkb7QyLBoxmVD5",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "1U4nn539EL81z6jJVL7xQp",
-          "title": "Direct theft of any user NFTs, whether at-rest or in-motion, other than unclaimed royalties",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "7sRGGI2GHRPgk1vFRLvwS9",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "5BVw1PztKGJ0CaxIJHw3vV",
-          "title": "Protocol insolvency",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "577bm0OM12hPjWv6ORWx70",
-          "title": "Theft of unclaimed yield",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "76oTM5gmi0OrsZ7ojaaUsy",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "3AUstTNoyk4ZaYWLvqKk1j",
-          "title": "Temporary freezing of funds",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "1qHDqGofNwmxbbLDgQiCyy",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 16,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user NFTs, whether at-rest or in-motion, other than unclaimed royalties"
         },
         {
-          "id": "3n80CdqYwANeZHi4dtIlG3",
-          "title": "Unbounded gas consumption",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "4t9iXiuaXtVIhgQ7cnAQhP",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "Infinex is a secure cross-chain self-custodial wallet, secured with passkeys, which currently supports six EVM and non-EVM blockchains, including Ethereum and Solana.\n\nFor more information about Infinex, please visit infinex.xyz.\n\nInfinex provides rewards in USDC, denominated in USD, at the discretion of the team. For more details about the payment process, please view the Rewards by Threat Level section below. \n\n\n__Eligibility Criteria__ \n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n\n- On OFACs SDN list \n- Infinex Staff\n- Auditors and Contractors engaged by Infinex\n- Persons in possession of privileged information, and any other associated parties.\n\n\n__Responsible Publication__\n\nInfinex adheres to category 3 - Approval Required. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nInfinex adheres to the Primacy of Impact for the following impacts:\n\n- Smart Contract - Critical\n- Smart Contract - High\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: PoI.](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n__Known Issue Assurance__\n\nInfinex commits to providing Known Issue Assurance to bug submissions through their program. This means that Infinex will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n\n__Previous Audits__\n\nInfinex’s completed audit reports can be found at infinex.xyz and at the following links:\n\n- https://iosiro.com/audits/infinex-accounts-smart-account-smart-contract-audit\n- https://0xmacro.com/library/audits/infinex-1.html\n- https://0xmacro.com/library/audits/infinex-2.html \n- [OtterSec’s audit report](https://ottersec.notion.site/Infinex-68e26cdbdc7848b7992b80d5b7005063)\n\nAny unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards ](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Infinex has satisfied the requirements for the[ Immunefi Standard Badge.](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209)",

@@ -60,100 +60,100 @@
       ],
       "impacts": [
         {
-          "id": "6XsibiXBrAJaF2yJ6ZMHDn",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "5ySrfULCu14X6qREHveJFK",
-          "title": "Permanent freezing of funds",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "3a0WI9TRtMu01O6Z4GhJzT",
-          "title": "Protocol insolvency",
+          "id": 4696,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "AVL queue memory leak or pointer arithmetic error resulting in corrupted state that adversely affects smart contract functionality, where user is able to cancel affected order"
         },
         {
-          "id": "5jtCiV0ZvmqFLH3f6A58LU",
-          "title": "AVL queue memory leak or pointer arithmetic error resulting in corrupted state that adversely affects smart contract functionality, where user is unable to cancel affected order",
+          "id": 4697,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Market account access key memory leak or pointer arithmetic error resulting in corrupted state that adversely affects smart contract functionality, where user is able to cancel affected order"
         },
         {
-          "id": "7r1d2zh3a6bG2vacK14V4Y",
-          "title": "Market account access key memory leak or pointer arithmetic error resulting in corrupted state that adversely affects smart contract functionality, where user is unable to cancel affected order",
+          "id": 4698,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Operation resulting in a locked order book that will not process trades, where user can get funds out"
         },
         {
-          "id": "78R4gPIWlCeXwssKj4tYGE",
-          "title": "Matching or order placement operation that results in an accounting error",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "11gmZFonjewxldtHT3BlNY",
-          "title": "Operation resulting in a locked order book that will not process trades, where user can’t get funds out",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "5DFZpVQH7MGzK1MoiiFAw4",
-          "title": "Temporary freezing of funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "3OxWpu77h9Cf3YRB3trGEZ",
-          "title": "AVL queue memory leak or pointer arithmetic error resulting in corrupted state that adversely affects smart contract functionality, where user is able to cancel affected order",
+          "id": 4699,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Incorrect emission of events as defined at: https://econia.dev/off-chain/events"
         },
         {
-          "id": "4rc6KIaIMbU8SJzwG5ncsG",
-          "title": "Market account access key memory leak or pointer arithmetic error resulting in corrupted state that adversely affects smart contract functionality, where user is able to cancel affected order",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "6Wbtci5b1etavnkYz409DV",
-          "title": "Operation resulting in a locked order book that will not process trades, where user can get funds out",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "3nVYBTSg6A4pHIaLaAQzH",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         },
         {
-          "id": "6pwDM6nXl8dW6Teejd0MUB",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 4700,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "AVL queue memory leak or pointer arithmetic error resulting in corrupted state that adversely affects smart contract functionality, where user is unable to cancel affected order"
         },
         {
-          "id": "2Q4dq969xbjag9N8mVTlvk",
-          "title": "Theft of gas",
+          "id": 4701,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Market account access key memory leak or pointer arithmetic error resulting in corrupted state that adversely affects smart contract functionality, where user is unable to cancel affected order"
         },
         {
-          "id": "3J8yiVujPaF3pnDRBGL1uN",
-          "title": "Incorrect emission of events as defined at: https://econia.dev/off-chain/events",
+          "id": 4702,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Matching or order placement operation that results in an accounting error"
         },
         {
-          "id": "7gnV8iwPWdchDi03bQA5fd",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 4703,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Operation resulting in a locked order book that will not process trades, where user can’t get funds out"
         }
       ],
       "programOverview": "Econia is a back-end settlement layer built on Aptos's Block-STM execution engine. Econia's Move-native codebase leverages Aptos for composability and parallelism, providing integrating protocols and market makers with a suite of extensible features. Built by developers, for developers, and with developer feedback, Econia unlocks the base layer of Aptos DeFi.\n\nMore specifically, Econia is an order book, a fundamental financial tool utilized by financial institutions like stock markets, except unlike the New York Stock Exchange or the NASDAQ, Econia is open-source, permissionless, and fully on-chain.\n\nFor more information about the Econia protocol, please visit [https://econia.dev/](https://econia.dev/)\n\nEconia Labs provides rewards in USDC on any chain supported by the Circle app denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__ \n\nEconia Labs will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\n__Eligibility Criteria__ \n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nEconia Labs adheres to category 3 - Approval Required. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication ](https://immunefi.com/responsible-publication/)page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nEconia Labs adheres to the Primacy of Impact for the following impacts:\n- Smart Contract - Critical\n- Smart Contract - High\n- Smart Contract - Medium\n- Smart Contract - Low\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact ](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Known Issue Assurance__\n\nEconia Labs commits to providing Known Issue Assurance to bug submissions through their program. This means that Econia Labs will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n- Liquidity impacts instigated by adversarial eviction, or adversarially canceling someone else’s order using known eviction behavior: [https://econia.dev/overview/orders#adversarial-considerations](https://econia.dev/overview/orders#adversarial-considerations)\n- Integer truncation during fee calculation\n- View function execution errors resulting from attempting to read entire order book state (instead of paginating), or as a result of querying market account state view functions for users who have had thousands of open orders or excessive market accounts\n- Matching operations that result in an execution error but would not be a problem for a smaller match (e.g. matching 1000 orders at one time errors out but 999 does not)\n- Operations resulting from a malicious `&econia` signer\n- Unintuitive behavior or behavior not necessarily consistent with other order book implementations\n\n__Previous Audits__\n\nEconia Labs’ completed audit reports can be found at [https://econia-labs.notion.site/Econia-Audit-Reports-27634e9c7d1249228e2cbc3e705a59c9.](https://econia-labs.notion.site/Econia-Audit-Reports-27634e9c7d1249228e2cbc3e705a59c9) Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards ](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards)which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Econia Labs has satisfied the requirements for the [Immunefi Standard Badge.](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209)",

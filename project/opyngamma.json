@@ -87,82 +87,82 @@
       ],
       "impacts": [
         {
-          "id": "6ftUxB29KeHTFyYyPejtkk",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "3SzmQrIqn4S3z17zc5QzVA",
-          "title": "Permanent freezing of funds",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "3YuQ9y6S6Rzh4wkoAZZLO9",
-          "title": "Theft of unclaimed yield",
+          "id": 1777,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Freezing of unclaimed yield"
         },
         {
-          "id": "4xCzG7iMibsuQ3Wwi4vYH3",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 1778,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds for any amount of time"
         },
         {
-          "id": "efCq1CDPFYa1Dobf4RPgZ",
-          "title": "Theft of unclaimed yield",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "5vzVZLEPRvpfWzp96TuneY",
-          "title": "Freezing of unclaimed yield",
+          "id": 1779,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing for profit"
         },
         {
-          "id": "6j4rh6Kn96JH5Xh0t4PB1H",
-          "title": "Temporary freezing of funds for any amount of time",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "5AiGBbi3oVlSQcy6yu2k1h",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "3klG7WKflJK7Nx1hT7nGcE",
-          "title": "Block stuffing for profit",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "7ybjbQtkGsFrWGVz7ohgdk",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "WVVEyu3uhhQPLF4w93RHA",
-          "title": "Theft of gas",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "76vq1hvIlbCa5IOEmDLqDZ",
-          "title": "Unbounded gas consumption",
+          "id": 1780,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "3pLqbct3d2pXTrmGF6PREa",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 1781,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Permanent freezing of unclaimed yield"
         }
       ],
       "programOverview": "Opyn builds DeFi native derivatives and options infrastructure that allow users and protocols to buy, sell, and create options, and utilize brand new primitives like squeeth. DeFi enthusiasts and projects alike rely on Opyn’s smart contracts and interface to hedge themselves against DeFi risks and take positions on different cryptocurrencies.\n\nGamma is a capital efficient option protocol that enables sellers to create spreads and other combinations, trade atomically, flash loan mint oTokens, assign operators to roll over vaults, create perpetual instruments, and more.\n\nJust like Convexity Protocol(Opyn v1), Gamma protocol enables any user to create option tokens, that represent the right to buy or sell a certain asset at a predefined price (strike price) at expiry. \n\nFor more information about Opyn, please visit [https://www.opyn.co/](https://www.opyn.co/).   \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Loss of user funds staked (principal) by freezing or theft\n  - Theft of unclaimed yield\n  - Freezing of unclaimed yield",

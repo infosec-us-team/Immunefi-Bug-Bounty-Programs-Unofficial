@@ -39,40 +39,40 @@
       ],
       "impacts": [
         {
-          "id": "34CIChLr9ayXGA9XP5qqvI",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "6D9Wae0oaLj8cjKoUCfISB",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "MvrF18ZqGzVcMx5nf6PWr",
-          "title": "Protocol Insolvency",
+          "id": 1401,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds excluding DOS attacks"
         },
         {
-          "id": "2ZttCXifDnYtFEQw7KsiDe",
-          "title": "Theft of unclaimed yield",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "3ERyxfwTjB0QUxueiB9gJR",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "2nNudBPCQsri6LlsYg6LmC",
-          "title": "Temporary freezing of funds excluding DOS attacks",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "Marinade.Finance is the first non-custodial liquid staking protocol built on Solana. You can stake your SOL tokens with Marinade and receive \"marinated SOL\" tokens (mSOL) that you can use in decentralized finance (DeFi).\n\nThe price of mSOL goes up relative to SOL each epoch, with rewards being accrued into the underlying staked SOL. Marinade stakes in 400+ validators that are selected automatically by an open-source fair formula based on performance, commission and decentralization.\n\nMarinade includes mSOL->SOL swap, so you can “Unstake Now!” and receive your SOL immediately with a small fee. You can also directly exchange between mSOL and SOL on secondary markets at the current rate. Finally, you can unstake your SOL with zero-fee by waiting 4-6 days for the Solana cool-down period (delayed-unstake). \n\nAs of November 2021, Marinade’s TVL is around 1.5b USD\n\nFor more information about Marinade Finance, please visit [https://marinade.finance/](https://marinade.finance/) and [https://docs.marinade.finance](https://docs.marinade.finance) \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Loss of user funds staked (principal) by freezing or theft\n  - Loss of governance funds\n  - Theft of unclaimed yield\n  - Freezing of unclaimed yield\n  - Temporary freezing of funds\n  - Unable to call smart contract\n",

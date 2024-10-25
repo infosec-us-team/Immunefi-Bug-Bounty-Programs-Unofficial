@@ -60,88 +60,88 @@
       ],
       "impacts": [
         {
-          "id": "6O80htQGt75ghk5HqIT9ei",
-          "title": "Direct theft of user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "3QNjpKPgwDyfpbjJmjS1j4",
-          "title": "Access control is bypassed, including privilege escalation",
+          "id": 1325,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Temporary denial of service (smart contract is made unable to operate for one block, functionality is restored in the next block)"
         },
         {
-          "id": "4DvYqdhsvQd3S5sAI52dTU",
-          "title": "Governance voting result manipulation",
+          "id": 1326,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "low",
+          "title": "Invalid events are emitted, potentially confusing indexers (internal storage is unaffected)"
         },
         {
-          "id": "5S2wX6ddlp9P5THKY39NC8",
-          "title": "Permanent freezing of funds",
+          "id": 1327,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Governance voting result manipulation"
         },
         {
-          "id": "GBLo2gFLrfsmRQ7C8jiRN",
-          "title": "Permanent denial of service (smart contract is made unable to operate)",
+          "id": 1328,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "6zlT44X1vSD9VIs0l755nu",
-          "title": "Theft of unclaimed yield / Permanent freezing of unclaimed yield - Impact severity is determined by potential yield lost",
+          "id": 1329,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Permanent denial of service (smart contract is made unable to operate)"
         },
         {
-          "id": "6uZPRPQQHJ0QguQbYasJi3",
-          "title": "Temporary freezing of funds - Impact severity depends on funds at risk",
+          "id": 1330,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Theft of unclaimed yield / Permanent freezing of unclaimed yield - Impact severity is determined by potential yield lost"
         },
         {
-          "id": "7ItZCLTskhMA1BTEyNF2zB",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 1331,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "high",
+          "title": "Temporary freezing of funds - Impact severity depends on funds at risk"
         },
         {
-          "id": "6jEtFoqq3JTFggbjWT1gr7",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "d0XIilTKwMoQLQ0SeK3ot",
-          "title": "Theft of gas",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "3u6s3FNfckLLp4QrOt2VR6",
-          "title": "Unbounded gas consumption",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "pFgKpC5xef3YC18WZXF3P",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "26wb3CaHikbWGeJMOl2212",
-          "title": "Temporary denial of service (smart contract is made unable to operate for one block, functionality is restored in the next block)",
+          "id": 1332,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Direct theft of user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "SJ8cyvypRe4XCNz1vtuBF",
-          "title": "Invalid events are emitted, potentially confusing indexers (internal storage is unaffected)",
+          "id": 1333,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Access control is bypassed, including privilege escalation"
         }
       ],
       "programOverview": "As the premier crypto cybersecurity technology and services company, we’ve built OpenZeppelin Contracts with our best [security practices](https://contracts.openzeppelin.com/security). We are committed to ensuring the utmost security in our community-vetted smart contracts, and our bounty program provides rewards of up to $25,000 USD for reporting critical vulnerabilities in our smart contracts library.\nThis bug bounty program is focused on OpenZeppelin Contracts and mainly intends to prevent:\n\n- Loss of funds by freezing another user’s funds, or theft of another user’s funds\n- Permanent denial of service (smart contract is made unable to operate)\n- Access control bypass, including privilege escalation\n- Smart contract not behaving as intended\n\nThis is an overlay bug bounty program for OpenZeppelin’s Contracts library. A vulnerability in an OpenZeppelin contract would likely affect many other projects and could trigger various other bounties. This program would be potentially additive to those cases. \n\nOpenZeppelin may issue [GHSA/CVEs](https://cve.report/vendor/openzeppelin) for reported vulnerabilities and will offer to credit issue reports in those public reports.\n\n__Responsible Publication__\n\nOpenZeppelin adheres to category 1 - Transparent. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication ](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nOpenZeppelin adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page. \n\n__Known Issue Assurance__\n\nOpenZeppelin commits to providing Known Issue Assurance to bug submissions through their program. This means that OpenZeppelin will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n__Previous Audits__\n\nOpenZeppelin’s completed audit reports can be found at [OpenZeppelin Contracts’ Security Center](https://contracts.openzeppelin.com/security) while previous security advisories are available at [GHSA/CVEs](https://github.com/OpenZeppelin/openzeppelin-contracts/security/advisories). OpenZeppelin will offer to credit issue reports in those public reports. Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n__Feasibility Limitations__\n\nOpenZeppelin will assess likelihood depending on the complexity of the steps involved in its execution and the exposure created by the vulnerability, as well as impact depending on the assets or systems at risk, capped to the worst-case impacted instance using the affected code.\n\nOpenZeppelin will evaluate the vulnerability of the affected code considering whether the issue arises directly from the library code while used as provided or if it requires a custom user implementation. Determining the likelihood of exploit on custom implementations will depend on how likely a library user is to make such an implementation and how common is the pattern leading to it.\n\nFor example, if a data structure can be cleared by any caller of a smart contract, its likelihood will be **high** if it holds user balances, although, if the vulnerability allows overriding non-critical values such as an already executed governor proposal flag, its likelihood will be **low** but can escalate to **medium** if it comes with side effects that increase the incentives of exploitation (e.g. proposal re-execution).\n\nSimilarly, if an instance of an AccessManager can be made unusable, its impact will be **high** but could be lowered to **medium** if the attacker requires special permissions in the system, and finally, it will be considered **low** if the contract is frozen only during 1 block before a threshold is met.\n\nThe final threat level will be decided based on the matrix above. For a vulnerability with **low** impact, if its likelihood is **high** because the cost of exploiting a single instance is negligible, then its final threat level will be **medium severity**.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, OpenZeppelin has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).\n\n__KYC Requirements__\n\nOpenZeppelin’s bug bounty program requires an invoice to be submitted and a KYC screen to be performed prior to OpenZeppelin providing a bug bounty reward. Once a payout is confirmed, a member of OpenZeppelin will reach out to you directly to collect the necessary information, including:\n- Full Legal Name\n- Email Address\n- Mailing Address\n- Wallet Address (Ethereum Mainnet Only)",

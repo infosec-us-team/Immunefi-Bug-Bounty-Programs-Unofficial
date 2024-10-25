@@ -159,106 +159,106 @@
       ],
       "impacts": [
         {
-          "id": "6BJWOVtwXtiUL5uNeE2lID",
-          "title": "Any governance voting result manipulation",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "7HKJ2bf64PCMhsB0m7wYHB",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "44KBniDlPCm1EekCeTPUl6",
-          "title": "Miner-extractable value (MEV)",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "46Uo3LvU2n35CDWwLQtHJO",
-          "title": "Permanent freezing of funds",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "5L3Ld96YHQdt0pHQYsG1Ux",
-          "title": "Protocol Insolvency",
-          "type": "smart_contract",
-          "severity": "critical"
-        },
-        {
-          "id": "4urUpjedCCC1IYGNEFeuXN",
-          "title": "Critical Level - Direct economic damage",
+          "id": 807,
           "type": "websites_and_applications",
-          "severity": "critical"
+          "severity": "high",
+          "title": "High Level - Direct economic damage"
         },
         {
-          "id": "10bJw3SfrxCSnxKUlvgYyq",
-          "title": "Theft of unclaimed yield",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "xVqVx3h3rfLnRvkhzW5nx",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 808,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing for profit"
         },
         {
-          "id": "1Ev9YRibNHoRkOUMJvtwtk",
-          "title": "Temporary freezing of funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "46mODRMtlmaj4eNyfWM76o",
-          "title": "High Level - Direct economic damage",
+          "id": 31,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+        },
+        {
+          "id": 33,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
+        },
+        {
+          "id": 809,
           "type": "websites_and_applications",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Medium Level - Direct economic damage"
         },
         {
-          "id": "7yslorLCImjQbHBXjzSqn1",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 810,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Any governance voting result manipulation"
         },
         {
-          "id": "6RBzaL9UyiBjYxZvfVPc7i",
-          "title": "Block stuffing for profit",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "3KoEMYqI3EN0OvKeT1mA4h",
-          "title": "Theft of gas",
+          "id": 811,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Miner-extractable value (MEV)"
         },
         {
-          "id": "4AhYyDCzh8yU0ZqpjyCiTO",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "3f91RXpHBCDXyn70zSELUX",
-          "title": "Unbounded gas consumption",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         },
         {
-          "id": "2ogtkut5JDCEEzj9nii95V",
-          "title": "Medium Level - Direct economic damage",
+          "id": 812,
           "type": "websites_and_applications",
-          "severity": "medium"
-        },
-        {
-          "id": "3f0xapCLMWepRhguVv2sLF",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
-          "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Critical Level - Direct economic damage"
         }
       ],
       "programOverview": "Router is a cross chain liquidity infrastructure primitive that aims to seamlessly provide bridging infra between various current and emerging layer-1 and layer-2 blockchain solutions, such as Matic and Ethereum.\n\nThis is achieved with Router's Cross-Chain Liquidity Protocol, (XCLP) acts as a bridging infrastructure between these blockchain solutions to allow contract-level data flow across them, thus enabling asset-level data transfer with stablecoins being the medium of value transfer. Aside from connecting blockchains and enabling a free flow of information, Router will also make smart order-routing possible, enabling users to swap their assets from different networks seamlessly.\n\nFor more information about Router, please visit [https://routerprotocol.com/](https://routerprotocol.com/). \n\nThe bug bounty program covers its smart contracts and app and is focused on preventing the following impacts:\n\n  - Thefts and freezing of principal of any amount\n  - Thefts and freezing of unclaimed yield of any amount\n  - Theft of governance funds \n  - Governance activity disruption\n  - Product App goes down\n  - Access to sensitive pages without authorization\n  - Economic Attacks of any kind",

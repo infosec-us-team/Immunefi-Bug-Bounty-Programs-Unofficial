@@ -66,40 +66,40 @@
       ],
       "impacts": [
         {
-          "id": "3sS9jKiJG3pbA7mS9MJPMn",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "3CNxNzEgAu0FNtuy6pt9i",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "82vXDzoXJBPf8EYXJUnsQ",
-          "title": "Protocol insolvency",
+          "id": 3731,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds for any amount of time"
         },
         {
-          "id": "6DfiHAw31Ag79geeQrmB5u",
-          "title": "Theft of unclaimed yield",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "YKDlmcPyRBsXE29M4cLIM",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "2FaQeTN3aDgyAm29AOCxnD",
-          "title": "Temporary freezing of funds for any amount of time",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "@predyfinance, Hyper Gamma trading AMM with:\n  - Perp futures for ETH and Squart(ETH^0.5)\n  - composed with Uniswap V3 LP positions\n  - Oracle less\n  - path independent for LP range \n  - optimized for delta neutral Gamma trading\n\nIt is using the composability of Uniswap's LPT and adding ETH and USDC lending and borrowing to achieve each position and this can be done for all token pairs in Uniswap V3. Predy v3.2 is applicable to all existing Uniswap Pools, and Predy v5 is the embodiment of this. We've expanded the number of currency pairs and also made the lending pool required for leverage public.\n\nFor more information about Predy Finance, please visit [https://predy.gitbook.io/predy-v5/](https://predy.gitbook.io/predy-v5/)\n",

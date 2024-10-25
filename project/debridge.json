@@ -846,88 +846,88 @@
       ],
       "impacts": [
         {
-          "id": "4Molo66oOhNUUEdeXHFdaw",
-          "title": "Direct theft of any user funds",
+          "id": 1715,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of funds (<5% TVL impact)"
         },
         {
-          "id": "41ZFakCljap4m7x3FwDC1g",
-          "title": "Permanent freezing of funds",
+          "id": 1716,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "7IEZs3cbcPOjbFGps8BVB4",
-          "title": "Protocol Insolvency",
+          "id": 1717,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds (more than 1 day freeze)"
         },
         {
-          "id": "1OYi6l0LFhx6PNtbDGwhrc",
-          "title": "Forgery of the content of the cross-chain messages sent through the protocol",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "4QQwCxEbqFXn1G8BXny0Ht",
-          "title": "Forgery of the sender address or chain_id  of the cross-chain messages sent through the protocol",
+          "id": 1718,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Block stuffing for profit"
         },
         {
-          "id": "2yYOT40IETrQVvaoDUlo4r",
-          "title": "Unauthorized claim without valid signatures from deBridge validators",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "21vcQ62ObiW00kPCg6nGRg",
-          "title": "Unauthorized mint of the wrapped assets (deAssets)",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "1NnjaQOoPMhq3STjJGfPpL",
-          "title": "Theft of funds (<5% TVL impact)",
+          "id": 1719,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Direct theft of any user funds"
         },
         {
-          "id": "1IYE6C0ujaCOO5ParU98du",
-          "title": "Permanent freezing of funds",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "6LhTqxeezg3Q0X2frZYzIg",
-          "title": "Temporary freezing of funds (more than 1 day freeze)",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         },
         {
-          "id": "6bWrviG4MDPhLcrGBAPfdI",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 1720,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Forgery of the content of the cross-chain messages sent through the protocol"
         },
         {
-          "id": "yk3H6pvFyZJSf4byxLKxd",
-          "title": "Block stuffing for profit",
+          "id": 1721,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Forgery of the sender address or chain_id  of the cross-chain messages sent through the protocol"
         },
         {
-          "id": "2txgrxJm8Q30qU5A8cjxvj",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 1722,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Unauthorized claim without valid signatures from deBridge validators"
         },
         {
-          "id": "6R6OIT9KDRbXciF0z18XfS",
-          "title": "Unbounded gas consumption",
+          "id": 1723,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Unauthorized mint of the wrapped assets (deAssets)"
         }
       ],
       "programOverview": "[deBridge](https://debridge.finance/) __is a cross-chain interoperability and liquidity transfer protocol__ that allows decentralized transfer of data and assets between various blockchains. The deBridge protocol is an infrastructure platform and hooking service for:\n\n  - cross-chain composability of smart contracts\n  - cross-chain swaps\n  - bridging of any arbitrary asset and data\n  - interoperability and bridging of NFTs\n\nMore information about the project can be also found in the [documentation portal](https://docs.debridge.finance/) or at the website \n[https://debridge.finance/](https://debridge.finance/).\n\nExamples of how users can interact with the protocol from the command line can be found in the repository: [https://github.com/debridge-finance/debridge-contracts-v1/tree/main/examples](https://github.com/debridge-finance/debridge-contracts-v1/tree/main/examples).\n\nStatus of transactions can be tracked through the [deBridge explorer](https://mainnet-explorer.debridge.finance/).\n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Loss of user funds locked (principal) by freezing or theft\n  - Loss of governance funds\n  - Theft of unclaimed assets\n  - Permanent freezing of unclaimed assets\n  - Smart contract fails to deliver promised returns\n  - Unauthorized minting of wrapped assets that will lead them to loosing peg",

@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2Qwy7LtcelmPuSZnjGquW7/aeac853cef17939e914d63ed1eeebf98/EPpDQTZo_400x400__1_.jpg",
       "launchDate": "2021-11-29T17:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-09-11T20:38:15.963Z",
+      "updatedDate": "2024-10-24T09:35:05.999Z",
       "kyc": false,
       "rewards": [
         {
@@ -321,82 +321,82 @@
       ],
       "impacts": [
         {
-          "id": "4hD3lR1Qe8YprPOA5Q0e51",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 1387,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Smart contract fails to deliver promised returns, but doesn’t lose value"
         },
         {
-          "id": "2bdXiGBY8JKnPB1pwSa1v6",
-          "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "5WDtxQdHIUcDvFWw6x8snJ",
-          "title": "Any governance voting result manipulation",
+          "id": 1388,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds for at least 1 hour"
         },
         {
-          "id": "5UDGlWY557wynyc6kTbfjm",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "4rFhKDYlVhfCJqNIfCreuF",
-          "title": "Loss of governance funds",
+          "id": 1389,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds for at least 1 hour"
         },
         {
-          "id": "6oEx6BbuDqOpYT1j0oYOBl",
-          "title": "Theft of unclaimed yield",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "7dtCjkXj94QRhMicUMJGDt",
-          "title": "Temporary freezing of funds for at least 1 hour",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "440HiPvMg8sHndrIwer2iv",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "JCPgfnAxgfDn2hv80UiYZ",
-          "title": "Temporary freezing of funds for at least 1 hour",
+          "id": 14,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results"
         },
         {
-          "id": "3ruMKLdEsLmmam4lVyQwU8",
-          "title": "Unbounded gas consumption",
+          "id": 1390,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Any governance voting result manipulation"
         },
         {
-          "id": "6pz2xPoBmPks3nKAAkr3vR",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "6hGsLMuIlmIPW0n2TiorqA",
-          "title": "Smart contract fails to deliver promised returns, but doesn’t lose value",
+          "id": 1391,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Loss of governance funds"
         }
       ],
       "programOverview": "Astroport is the central space station of the Terra solar system, where travelers from all over the galaxy (Mirrans, Terrans, Anchorians, and more) meet to trustlessly exchange assets. As a galactic public good, Astroport will be governed by the Astral Assembly, a council of cryptonauts representing all corners of the universe.\n\nThe design philosophy behind Astroport is simple: to enable decentralised, non-custodial liquidity and price discovery for any asset. To achieve this, Astroport prioritises flexibility above all else; combining various specialised pool types and routing seamlessly across them.\n\nFor more information about Astroport, please visit [https://astroport.fi/](https://astroport.fi/).",
       "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in the scope table.\n\n__Smart Contracts/Blockchain__\n\n  - Loss of user funds staked (principal) by freezing or theft\n  - Loss of governance funds\n  - Theft of unclaimed yield\n  - Freezing of unclaimed yield\n  - Temporary freezing of funds for at least 1 hour\n  - Unable to call smart contract\n  - Smart contract gas drainage\n  - Smart contract fails to deliver promised returns\n  - Vote manipulation\n  - Incorrect polling actions\n\nThese Smart Contract Targets include the Commit Links:\n\nSmart Contract - Core Contract: Factory ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: Pair (ASTRO-axlUSDC) ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: Stable Pair ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: Constant Product Pair ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: Router ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: ASTRO Token ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: Generator ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: Maker ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: xASTRO Staking ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: xASTRO Token ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nSmart Contract - Core Contract: Generator Vesting ([Commit](https://github.com/astroport-fi/astroport-core/tree/c216ecd4f350113316be44d06a95569f451ac681))\n\nThe Astroport smart contracts covered by this bug bounty program can be found in several repositories: the core repository, the governance repository and the generator proxy repository. However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll smart contract bug reports must come with a PoC and a suggestion for a fix in order to be considered for a reward.\n\n__Every contract that’s in scope is also accompanied by a specific Github commit. Only the contract implementation that’s specified in the commit is relevant for the program.__\n\nCritical vulnerabilities are capped at 15% of mainnet economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum of __USD 80 000__ for Critical bug reports. \n\nPayouts are handled by the __Astroport__ team directly and are denominated in USD. However, payouts are done in __USDC__. All rewards above 50 000 USD are subjected to a unlock period of up to 18 months where tokens will be vested linearly on a monthly basis. The ASTRO price will be the TWAP price in USDC over the previous 30 days.",
-      "outOfScopeAndRules": "__Out of Scope & Rules __\n\nThe following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "outOfScopeAndRules": ".",
       "assetsBodyV2": "The Astroport smart contracts covered by this bug bounty program can be found in several repositories: the [core](https://github.com/astroport-fi/astroport-core) repository, the [governance](https://github.com/astroport-fi/astroport-governance) repository, the [generator proxy](https://github.com/astroport-fi/astro-generator-proxy-contracts) repository and finally the [periphery](https://github.com/astroport-fi/astroport-periphery) repository. However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
       "impactsBody": null,
       "immunefiStandard": true,
@@ -462,13 +462,13 @@
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
       "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
-      "customOutOfScopeInformation": null,
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+      "customOutOfScopeInformation": "  - Best practice critiques",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "USDC",

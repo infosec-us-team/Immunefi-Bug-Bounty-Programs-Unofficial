@@ -108,88 +108,88 @@
       ],
       "impacts": [
         {
-          "id": "2S1n1Q6tHAouPV5oTyP6Gu",
-          "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "1g2V6Hoojry7mUkflL9aac",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 24,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed royalties"
         },
         {
-          "id": "7aw9IQnp2TuHM0HLODsbeE",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "3b0MLzGYU4GV0c6XT8sPRY",
-          "title": "Protocol insolvency",
+          "id": 26,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed royalties"
         },
         {
-          "id": "1ToDEElk9WTmfVj62OTQT4",
-          "title": "Theft of unclaimed yield",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "1nOqzs18E4qagcl7oFGE69",
-          "title": "Theft of unclaimed royalties",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "4QI2VIKqoqbqfbKlGvTZ2b",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 30,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing"
         },
         {
-          "id": "2LZq14Cife15KviJBVVNSO",
-          "title": "Permanent freezing of unclaimed royalties",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "9TDLFcJrZR2Q8wvvpDpJq",
-          "title": "Temporary freezing of funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "4XBe8dE9tsW3MIwbgSXopp",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "2h4oivvr1xxBhoJAkhL7ax",
-          "title": "Block stuffing",
+          "id": 14,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results"
         },
         {
-          "id": "5fE3RpKz965QbNbP6DblL4",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "7JRDwC3SDPTnZhbQOdpp1s",
-          "title": "Theft of gas",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "2bumgOSuvdlnHy9HiSmOwB",
-          "title": "Unbounded gas consumption",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "The TruFin Protocol builds institutional-grade DeFi primitives that can be used as the foundational building blocks for complex digital asset strategies to reduce risk while generating rewards, securely on-chain.\n\nTruStake vaults provide access to liquid staking on a range of networks:\n\n- MATIC staking on the Ethereum network,\n- APT staking on the Aptos network,\n- NEAR staking on the NEAR network.\n\nThe TruStake vaults have custom functionality that enables the allocation of rewards to designated wallet addresses, as well as auto-restaking that compounds rewards for higher APY.\n\nIn exchange for depositing assets in a TruStake vault, users receive liquid staking tokens: TruMATIC, TruAPT and TruNEAR for MATIC, APT and NEAR, respectively.\n\nThis bug bounty program is focused around the TruStake smart contracts and whitelists and is primarily concerned with the loss of user funds.\n\nRewards are allocated based on the severity of the bug disclosed. The scope, terms and rewards are at the sole discretion of the TruFin Protocol.\n\nFor more information about TruFin, please visit [https://trufin.io.](https://trufin.io) \n\nTruFin provides rewards in __USDC__. For more details about the payment process, please view the __Rewards by Threat Level__ section. \n\n__Responsible Publication__\n\nTruFin adheres to category 3. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nTruFin adheres to the Primacy of Impact for the following impacts:\n- Smart Contract - Critical\n- Smart Contract - High\n- Smart Contract - Medium\n\nIf an impact is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTestnet and mock files are not covered under the Primacy of Impact. \n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\nIf a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTestnet and mock files are not covered under the Primacy of Impact.\n\nAll other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n__Immunefi Standard Badge__\n\nTruFin has satisfied the requirements for the [Immunefi Standard Badge,](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-) which is given to projects that adhere to our best practices.",

@@ -324,46 +324,46 @@
       ],
       "impacts": [
         {
-          "id": "6tqaV4ML1ooYaSFofjlpjf",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "6eAT0vY2db4jdWtpFvCm5d",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "7nhXBDYKXH8lqfpV1lwmTV",
-          "title": "Theft of unclaimed yield",
+          "id": 4434,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Temporary freezing of funds (> 2 days without taking into account possible oracle delay)"
         },
         {
-          "id": "47pB51ujuzL6iLxMHqyZM9",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 4435,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Direct theft of any commission, whether at-rest or in-motion"
         },
         {
-          "id": "6NCd7WS6TX1xxOgvf7zMYH",
-          "title": "Temporary freezing of funds (> 2 days without taking into account possible oracle delay)",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "4rCMnNGZamhw785JNqxjGT",
-          "title": "Direct theft of any commission, whether at-rest or in-motion",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "kp0L3oN7Yv57MMiTq7W8V",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         }
       ],
       "programOverview": "Kiln On-Chain (v2) enables non-custodial platforms to propose an ETH staking offer where users can stake any amount of ETH on operator pools while remaining the only one able to access their staked assets.\n\nThe goal of these Ethereum Smart Contracts is to enable:\n\n- Operator to register its validation keys deposit data on their operator vFactory Smart Contract\n- Operator to propose deposit services like pooling on top of their vFactory\n- Integrators to propose white-labelled staking offers on top of operator pools with their Smart Contract\n- Users to deposit any amount of ETH to be staked\n- Enable Integrators, Operators to have a performance fee dispatched on-chain\n\nThis Bug Bounty is focused on Kiln On-Chain v2 Smart Contracts only, all items regarding dApps or validation infrastructure are out of scope but can be submitted at security@kiln.fi. \n\nFor more information about Kiln On-Chain, please visit [https://www.kiln.fi/kiln-on-chain](https://www.kiln.fi/kiln-on-chain)\n\nAnother bug bounty program on [Kiln On-Chain v1](https://immunefi.com/bug-bounty/kiln/information/) (dedicated staking) is available here and under its own bug bounty scope, bounties and rules.\n\nKiln provides rewards in __USDC__ on __Ethereum__, denominated in __USD__. For more details about the payment process, please view the __Rewards by Threat Level__ section.\n\n__KYC Requirement__\n\nKiln will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n\n- **If the claim comes from an individual:**\n\n  - The first names, surnames, date and place of birth of the person concerned\n  - A Valid ID\n\n- **If the claim comes from a business:**\n\n  - Legal form, name, registration number and address of the registered office\n  - Valid certificate of incorporation\n- List of shareholders/directors\n- KYC information is only required on confirmation of the validity of a bug report.   \n\n\n__Primacy of Impact vs Primacy of Rules__\n\nKiln adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page. \n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Previous Audits__\n\nKiln’s completed audit reports can be found at [https://kilnfi.notion.site/EXTERNAL-AUDITS-479819dce90540d1a0800c0541d2352b](https://kilnfi.notion.site/EXTERNAL-AUDITS-479819dce90540d1a0800c0541d2352b). Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Kiln has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209).\n\n__Responsible Disclosure Clause__\n\nResearchers who submit valid vulnerability reports agree to adhere to the following responsible disclosure process:\n\n1. Upon confirmation of a valid vulnerability, Kiln will work diligently to develop and implement a fix.\n2. Once the fix is deployed to production, Kiln will notify the researcher and initiate a 1-month (30 calendar days) disclosure waiting period.\n3. During this waiting period, the researcher must maintain strict confidentiality regarding the vulnerability and shall not disclose any information about it to third parties or the public.\n4. After the 1-month period has elapsed following the production deployment of the fix, the researcher may publicly disclose the vulnerability, provided they have obtained written approval from Kiln regarding the content of the disclosure.\n5. The researcher agrees to coordinate with Kiln on the timing and content of any public disclosure to ensure all parties are prepared and to minimize potential risks to users.\n6. If the researcher discovers that the vulnerability has become publicly known before the end of the waiting period, they should immediately notify Kiln.\n7. Kiln reserves the right to request an extension of the waiting period in exceptional circumstances, which will be communicated to the researcher in writing.\n\nCompliance with this responsible disclosure clause is a condition for receiving the bug bounty reward. Failure to adhere to these terms may result in forfeiture of the reward and potential legal action.\n\n__Other Terms and Information__\n\n- This bug bounty program will have a hard cap of __USDC 1 000 000__. In the event that multiple bug reports are submitted that exceed this amount, the rewards will be provided on a first come first served basis. The last bounty will be paid up to the remaining amount of the program even if the bounty amount is larger.\n- The administrator roles (admin, proxy admin, hatcher admin, treasury, oracles etc.) are trusted to behave properly and in the best interest of the users. They should not be considered as malicious.  Reports taking this assumption will be considered invalid.",

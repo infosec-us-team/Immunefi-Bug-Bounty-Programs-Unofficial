@@ -243,94 +243,94 @@
       ],
       "impacts": [
         {
-          "id": "1FtQppohp9GnLwA7NW0gfY",
-          "title": "Loss of user funds by direct theft, other than unclaimed yield",
-          "type": "smart_contract",
-          "severity": "critical"
-        },
-        {
-          "id": "2ncJfIJ8A47ZhnyPa6yWFl",
-          "title": "Permanent freezing of funds",
-          "type": "smart_contract",
-          "severity": "critical"
-        },
-        {
-          "id": "yAgfzxBYIgeA3DTDrOShD",
-          "title": "Protocol Insolvency",
-          "type": "smart_contract",
-          "severity": "critical"
-        },
-        {
-          "id": "3u7mIr1kydgA9BWV51kv2I",
-          "title": "Direct loss of funds",
+          "id": 1659,
           "type": "blockchain_dlt",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Network not being able to confirm new transactions (Total network shutdown)"
         },
         {
-          "id": "6LunHa3FgkOvBcOS2MF3ev",
-          "title": "Issues in the dispute-mon service causing a failure to detect a resolved dispute game leading to permanent loss of user funds",
+          "id": 1660,
           "type": "blockchain_dlt",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Transient consensus failures"
         },
         {
-          "id": "4GSkSNpKVdyGTw9YG0pYNH",
-          "title": "Network not being able to confirm new transactions (Total network shutdown)",
+          "id": 1661,
           "type": "blockchain_dlt",
-          "severity": "high"
+          "severity": "high",
+          "title": "Freezing of funds (fix requires L2 hardfork)"
         },
         {
-          "id": "5WgEvGXo4fUNBch4aolfI",
-          "title": "Transient consensus failures",
-          "type": "blockchain_dlt",
-          "severity": "high"
-        },
-        {
-          "id": "6sqERJL0jxsRniAV90RJAF",
-          "title": "Freezing of funds (fix requires L2 hardfork)",
-          "type": "blockchain_dlt",
-          "severity": "high"
-        },
-        {
-          "id": "6l21ZEQaSr4wgoYMQiazTt",
-          "title": "Temporary freezing of funds (e.g. recoverable via an upgrade)",
+          "id": 1662,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Temporary freezing of funds (e.g. recoverable via an upgrade)"
         },
         {
-          "id": "3ePBqayKxME3n0qOxwAIRz",
-          "title": "Incorrectly resolved dispute game (mitigated by a delay)",
+          "id": 1663,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Incorrectly resolved dispute game (mitigated by a delay)"
         },
         {
-          "id": "5xzGE4BMANLS1GX0Y64LWe",
-          "title": "Incorrectly proven withdrawal (mitigated by a delay)",
+          "id": 1664,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Incorrectly proven withdrawal (mitigated by a delay)"
         },
         {
-          "id": "4qLdQeJPA0WRXm11Q9vENV",
-          "title": "Incorrectly initiated bond withdrawal (mitigated by a delay)",
+          "id": 1665,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Incorrectly initiated bond withdrawal (mitigated by a delay)"
         },
         {
-          "id": "3UQ4DRaLzWzsuTlhOmBfLq",
-          "title": "Denial of Service attacks targeting distinct users",
+          "id": 1666,
           "type": "blockchain_dlt",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Denial of Service attacks targeting distinct users"
         },
         {
-          "id": "4Ye9SH7nZ8SfqQJ56JAYTz",
-          "title": "Memory pool information leaks allowing for MEV searchers to read the list of pending transactions",
+          "id": 1667,
           "type": "blockchain_dlt",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Memory pool information leaks allowing for MEV searchers to read the list of pending transactions"
         },
         {
-          "id": "5LEHypYRhsMcsfsDnuGqv6",
-          "title": "Incorrectly resolved dispute game (mitigated by a delay AND requires calling FaultDisputeGame.step() against a claim at MAX_GAME_DEPTH or calling FaultDisputeGame.attack or FaultDisputeGame.defend against a claim at MAX_GAME_DEPTH-2).",
+          "id": 1668,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Incorrectly resolved dispute game (mitigated by a delay AND requires calling FaultDisputeGame.step() against a claim at MAX_GAME_DEPTH or calling FaultDisputeGame.attack or FaultDisputeGame.defend against a claim at MAX_GAME_DEPTH-2)."
+        },
+        {
+          "id": 1669,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Loss of user funds by direct theft, other than unclaimed yield"
+        },
+        {
+          "id": 17,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
+        },
+        {
+          "id": 22,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Protocol insolvency"
+        },
+        {
+          "id": 3,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Direct loss of funds"
+        },
+        {
+          "id": 1670,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Issues in the dispute-mon service causing a failure to detect a resolved dispute game leading to permanent loss of user funds"
         }
       ],
       "programOverview": "Optimism is a project dedicated to scaling Ethereum's technology and expanding its ability to coordinate people from across the world to build effective decentralized economies and governance systems. \n\nThe OP Stack is the modular, decentralized software stack that powers Optimism, forms the backbone of blockchains like OP Mainnet and Base, and is maintained by the Optimism Collective . \n\nThe first release of the OP Stack codebase is called Bedrock. The Bedrock release primarily consists of the core software required to run L2 blockchains and was originally designed to power an upgrade to the OP Mainnet network. Bedrock improves on its predecessor by reducing transaction fees using optimized batch compression and Ethereum as a data availability layer; shortening delays of including L1 transactions in rollups by handling L1 re-orgs more gracefully; enabling modular proof systems through code re-use; and improving node performance by removing technical debt.\n\nTo read more about Optimism, please visit [https://www.optimism.io/](https://www.optimism.io/). To learn about the OP Stack, please visit [https://stack.optimism.io/](https://stack.optimism.io/). \n\nThis bounty program is focused on preventing\n\n  - theft of assets held in their smart contracts;\n  - theft, freezing or other loss of funds due to vulnerabilities in the smart contracts’ or the critical blockchain client services (op-node and op-geth).",

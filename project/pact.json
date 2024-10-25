@@ -105,88 +105,88 @@
       ],
       "impacts": [
         {
-          "id": "6JeF0pdXiCJb1KCysCmW6C",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "PQ1SDcIVutQHvhEWH6vHv",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "7eaQW3Rgk3yXSvx7kZ2J4c",
-          "title": "Miner-extractable value (MEV)",
+          "id": 2247,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds for at least 24 hours"
         },
         {
-          "id": "4BHdq0dg43nLDW0Nj8B0HG",
-          "title": "Any governance voting result manipulation",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "2JwR82qNQoYHP0rWYeng7n",
-          "title": "Protocol Insolvency",
+          "id": 2248,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Block stuffing for profit"
         },
         {
-          "id": "5NZDCO3DH5HxEOhrqHEjyD",
-          "title": "Any bugs that lead to the direct and unequivocal loss to user funds, such as by spoofing transactions on the Pact interface",
+          "id": 31,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+        },
+        {
+          "id": 33,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
+        },
+        {
+          "id": 32,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Theft of gas"
+        },
+        {
+          "id": 15,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+        },
+        {
+          "id": 17,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
+        },
+        {
+          "id": 2249,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Miner-extractable value (MEV)"
+        },
+        {
+          "id": 2250,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Any governance voting result manipulation"
+        },
+        {
+          "id": 22,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Protocol insolvency"
+        },
+        {
+          "id": 2251,
           "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "5rtwYlm8whCWuXuwpoD2mX",
-          "title": "Theft of unclaimed yield",
-          "type": "smart_contract",
-          "severity": "high"
-        },
-        {
-          "id": "16FqCl4ooAyhNiezm0xHTm",
-          "title": "Permanent freezing of unclaimed yield",
-          "type": "smart_contract",
-          "severity": "high"
-        },
-        {
-          "id": "3gFltVVJregGI859Ka0nel",
-          "title": "Temporary freezing of funds for at least 24 hours",
-          "type": "smart_contract",
-          "severity": "high"
-        },
-        {
-          "id": "cc8HBIOpFa3ujRJ52No3R",
-          "title": "Smart contract unable to operate due to lack of token funds",
-          "type": "smart_contract",
-          "severity": "medium"
-        },
-        {
-          "id": "55we26H8YP5RvmiXpSHv03",
-          "title": "Block stuffing for profit",
-          "type": "smart_contract",
-          "severity": "medium"
-        },
-        {
-          "id": "6BU2nbKXxnRDWXz5UQlRF8",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
-          "type": "smart_contract",
-          "severity": "medium"
-        },
-        {
-          "id": "1GVKQgsTHAfGwVw9TzY0N5",
-          "title": "Unbounded gas consumption",
-          "type": "smart_contract",
-          "severity": "medium"
-        },
-        {
-          "id": "7lnxST17uO79wYYhJa1Z8z",
-          "title": "Theft of gas",
-          "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Any bugs that lead to the direct and unequivocal loss to user funds, such as by spoofing transactions on the Pact interface"
         }
       ],
       "programOverview": "The Home of Liquidity on Algorand. Pact is the decentralised AMM with a difference, giving 100% of liquidity pool fees back when you provide liquidity. \n\nAs one of the most user-friendly Algorand dApps, Pact is a mobile-first designed trading experience offering deep liquidity and low transaction fees. With accessible smart contract functionality, transactions on Pact are available to users of all levels of wealth and experience. \n\nPact delivers the seamless integration of financial assets on Algorand’s non-custodial, decentralised platform, where secure, safe, and reliable DeFi is available to its ecosystem. \n\nBacked by key strategic partnerships, Pact is securely built from the ground up with the technical sophistication and assurance of Algorand’s Pure Proof-of-Stake mechanism.\n\nStriving for a greener future, Pact is equally committed to environmentally sound innovation and product development, fully endorsing Algorand’s emissions initiatives towards a carbon-negative approach.\n\nFor more information about Pact, please visit [https://www.pact.fi/](https://www.pact.fi/). \n\nThis bug bounty program is focused on their smart contracts, website and app and is focused on preventing:\n\n  - Direct theft of any user funds, whether at rest or in motion, other than unclaimed yield\n  - Permanent freezing of funds\n  - Any governance voting result manipulation",

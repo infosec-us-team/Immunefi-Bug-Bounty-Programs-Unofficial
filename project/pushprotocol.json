@@ -78,88 +78,88 @@
       ],
       "impacts": [
         {
-          "id": "51J9cFC1Vt8kXrIcrWvb4H",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "56uH0s63i0FoOPtfokIvDv",
-          "title": "Permanent freezing of funds",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "2uwDmiOaGsh8GnWxOJTlGX",
-          "title": "Drain of Funds from contract",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "6rsuCuaT5svlxSD0uybF4",
-          "title": "Loss of funds due to bridging of tokens",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "gSWZLJFTtKbyeDW2ResjA",
-          "title": "Theft of unclaimed yield",
+          "id": 4299,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "User/Stakers being able to harvest more tokens than they should be able to."
         },
         {
-          "id": "5ehkAqBmHB7Rwarpbz5fCv",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 4300,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "User/Stakers being able to harvest without staking for at least 1 complete epoch."
         },
         {
-          "id": "7JFrUApKNoo8XAG9OR2F51",
-          "title": "Temporary freezing of funds",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "6RvgbAETgw25tvyDOG7Poh",
-          "title": "User/Stakers being able to harvest more tokens than they should be able to.",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "4RGu4SxA5aqBR04yIIWEJD",
-          "title": "User/Stakers being able to harvest without staking for at least 1 complete epoch.",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "6hQ3Khb2XlOsRg037wATBi",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 4301,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unfair reward distribution between users with equal staking details like token weight, stake duration etc."
         },
         {
-          "id": "32n6YWPgjbpI6yTfypJH6A",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "60LZCWBvuIl0y2mjAsZk24",
-          "title": "Unbounded gas consumption",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "6I5GJWqmPIgMjOPQFRmrGq",
-          "title": "Unfair reward distribution between users with equal staking details like token weight, stake duration etc.",
+          "id": 4302,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Drain of Funds from contract"
         },
         {
-          "id": "5f8RMQm8v1NygDs0dQDW2O",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 4303,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Loss of funds due to bridging of tokens"
         }
       ],
       "programOverview": "Push Protocol is the communication protocol of web3. Push enables cross-chain notifications (on chain / off chain), messaging, video for dapps, wallets, and services tied to wallet addresses in an open, gasless, and platform-agnostic fashion. The open communication layer allows any crypto wallet / frontend to tap into the network and get the communication across.\n\nFor more information about Push Protocol, please visit [https://push.org/.](https://push.org/) \n\nPush Protocol provides rewards in PUSH. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__\n\nThe provision of KYC is required to receive a reward for this bug bounty program where the following information will be required to be provided:\n\n- Push Protocol requires a signup on [https://epns.synaps.me/signup](https://epns.synaps.me/signup)\n\nKYC information is only required on confirmation of the validity of a bug report.   \n\n__Responsible Publication__\n\nPush Protocol adheres to category 2. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nPush Protocol adheres to the Primacy of Impact for the following severity levels:\n\n- Smart Contracts, Critical Severity Level\n- Smart Contracts, High Severity Level\n- Smart Contracts, Medium Severity Level\n- Smart Contracts, Low Severity Level\n\nIf a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTestnet and mock files are not covered under the Primacy of Impact. \n\nAll other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n__Known Issue Assurance__\n\nPush Protocol commits to providing Known Issue Assurance to bug submissions through their program. This means that Push Protocol will either disclose known issues publicly or at the very least privately via a self-reported bug submission in order to allow for a more objective and streamlined mediation process to prove that an issue is known. Otherwise, assuming the bug report itself is valid, it would result in the bug report being considered in-scope and due 100% of the reward with respect to the bug bounty program terms. \n\n__Immunefi Standard Badge__\n\nPush Protocol has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-), which is given to projects that adhere to our best practices. \n\n__Invoicing Information__\n\nIf needed by the security researcher, Push Protocol is able to provide the necessary information for the proper issuance of an invoice. This includes:\n- Legal Entity Name\n- Registered Address",

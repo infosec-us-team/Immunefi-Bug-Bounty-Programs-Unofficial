@@ -51,94 +51,94 @@
       ],
       "impacts": [
         {
-          "id": "43V7BsKmUXpA713Ux7BmOQ",
-          "title": "Any governance voting result manipulation",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "44p6RJ3u2VrN3VL4LRgVcG",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "1tvLaNJNjHw7yD7lINQFtf",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "kv6FcwzpTkiZpMDrYs5Bq",
-          "title": "Miner-extractable value (MEV)",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "4C37Ph4T6E4nlK7Zt4S0fi",
-          "title": "Protocol Insolvency",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "zmJ6dqpLwFCyE6dI4wLfW",
-          "title": "Oracle failure/manipulation",
+          "id": 1915,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Block stuffing for profit"
         },
         {
-          "id": "1q8e3mTS9T1DXE2MkYmTPW",
-          "title": "Theft of unclaimed yield",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "1i2C7xoQTzppQkhNHohpJ8",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "70RzmB70Jz0wPX02BhVznT",
-          "title": "Temporary freezing of funds",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "40PO5JRGasniQJ6KiOgUc6",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 1916,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Any governance voting result manipulation"
         },
         {
-          "id": "3iYocMnxI2ilkHf4ZivLl7",
-          "title": "Block stuffing for profit",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "1mRq1NuiFoRS6LdzwO1ukk",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "6KgsiylUOlTDEZCUTZoJkA",
-          "title": "Theft of gas",
+          "id": 1917,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Miner-extractable value (MEV)"
         },
         {
-          "id": "5TCzVDvygTmVInknf0Yhjn",
-          "title": "Unbounded gas consumption",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         },
         {
-          "id": "6hgTIaNL87HgLScOgSilnR",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 1918,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Oracle failure/manipulation"
         }
       ],
       "programOverview": "Drift Protocol is a decentralized, fully on-chain perpetual swap exchange built on Solana. Drift Protocol also is the first perpetual swap exchange to leverage a Dynamic AMM. A Dynamic AMM is based on a virtual AMM (vAMM), but its key innovative is that it introduces repegging and adjustable k mechanisms to recalibrate liquidity in a trading pool based on participant demand. DAMMs, as a result, have the ability to be more flexible than traditional vAMMs and AMMs, which lead to better capital efficiency and reduced slippage. Drift’s exchange gives traders the ability to take on cross-margined long or short positions with up to 5x leverage with minimal slippage thanks to the protocol’s Dynamic Automated Market Maker (DAMM). The exchange currently has 12 markets available:  SOL, BTC, ETH, MATIC, LUNA, AVAX, ATOM and BNB. Since inception, the exchange has traded $1B in cumulative volume as of a month after launch.\n\nFor more information about Drift Protocol, please visit [https://www.drift.trade/](https://www.drift.trade/). \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Thefts and freezing of principal of any amount\n  - Thefts and freezing of unclaimed yield of any amount\n  - Theft of governance funds ",

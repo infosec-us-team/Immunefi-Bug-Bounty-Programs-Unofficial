@@ -120,82 +120,82 @@
       ],
       "impacts": [
         {
-          "id": "1Y7eXb68JDvxRLfFa4PBN3",
-          "title": "Any governance voting result manipulation",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "1neQil6Sk2UIt3burDBDqx",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "5jFmsn1BITlr89jgIL51Wd",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "3CBo9dl0m4AEX59JAMzdCK",
-          "title": "Protocol Insolvency",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "2zTfyzRmwEdzHim6xJYAni",
-          "title": "Theft of unclaimed yield",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "4i7fXrytJv2a3jZsNEpNAb",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 1814,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing for profit"
         },
         {
-          "id": "22H5DJjAbE0Q9tjNKVfMNq",
-          "title": "Temporary freezing of funds",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "2mivaKExiM4ywoTtd933vD",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "79ntnrzjD4ktaWnpQppi1a",
-          "title": "Block stuffing for profit",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "7MGgyLgzVu0sclhkutIrCp",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 1815,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Any governance voting result manipulation"
         },
         {
-          "id": "2t9WkFEcYxfRhPaMxlFgk2",
-          "title": "Unbounded gas consumption",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "7y4mQtfWYqb3oOsPkKDGOT",
-          "title": "Theft of gas",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "2n4A4gD8mlCz5lAV2qprWb",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "rDEX V1 is an AMM DEX developed by StaFi that seeks to solve the liquidity problems associated with rTokens, the staking derivatives issued by StaFi. It will provide decentralized transaction services for all rTokens based on the StaFi Chain. Being an important part of the StaFi rToken ecosystem, rDEX V1 now is deployed on the StaFi chain, which is Substrate-based. Native rTokens minted by users can directly be traded through the rDEX for better liquidity.\n\nFor more information about rDEX, please visit [https://docs.rdex.finance/welcome-to-rdex/](https://docs.rdex.finance/welcome-to-rdex/). \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - The potential bugs or exploits in the slippage-based fee model and CLP liquidity pool model\n  - The potential bugs or exploits  in the liquidity mining contracts\n  - Loss of user funds staked (principal) by freezing or theft\n  - Theft of unclaimed yield\n  - Freezing of unclaimed yield\n  - Temporary freezing of funds for at least 2 days\n  - Smart contract gas drainage\n  - Block stuffing without fund transfers blocked",

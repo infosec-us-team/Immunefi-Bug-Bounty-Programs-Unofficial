@@ -132,76 +132,76 @@
       ],
       "impacts": [
         {
-          "id": "2EmsDKq2OCnVwhh0oEdLGo",
-          "title": "Sidechain not being able to confirm new transactions (total network shutdown)",
+          "id": 12,
           "type": "blockchain_dlt",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Shutdown of greater than 10% or equal to but less than 30% of network processing nodes without brute force actions, but does not shut down the network"
         },
         {
-          "id": "1cP7Qx1UE96iyEm2436wR8",
-          "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)",
+          "id": 13,
           "type": "blockchain_dlt",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Modification of transaction fees outside of design parameters"
         },
         {
-          "id": "1704UzNSgxDu8IAf2PwvHN",
-          "title": "Direct loss of funds",
+          "id": 4937,
           "type": "blockchain_dlt",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Unintended sidechain split (network partition)"
         },
         {
-          "id": "7mGQMbQE28mh3DudkzHeej",
-          "title": "Permanent freezing of funds (fix requires hardfork)",
+          "id": 6,
           "type": "blockchain_dlt",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments"
         },
         {
-          "id": "1pdh94AuamVeaTaMwRMVLk",
-          "title": "Unintended sidechain split (network partition)",
+          "id": 7,
           "type": "blockchain_dlt",
-          "severity": "high"
+          "severity": "high",
+          "title": "Causing network processing nodes to process transactions from the mempool beyond set parameters"
         },
         {
-          "id": "5KQa4ggHeGRhQgklcQIifP",
-          "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments",
+          "id": 4938,
           "type": "blockchain_dlt",
-          "severity": "high"
+          "severity": "high",
+          "title": "RPC API crash affecting projects with greater than or equal to 25% of the market capitalization on top of the respective layer"
         },
         {
-          "id": "57zO9cECHA4LgFsF3SN94C",
-          "title": "Causing network processing nodes to process transactions from the mempool beyond set parameters",
+          "id": 9,
           "type": "blockchain_dlt",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Increasing network processing node resource consumption by at least 30% without brute force actions, compared to the preceding 24 hours"
         },
         {
-          "id": "2jwLLbnGMRnrXvIEtpgwMZ",
-          "title": "RPC API crash affecting projects with greater than or equal to 25% of the market capitalization on top of the respective layer",
+          "id": 10,
           "type": "blockchain_dlt",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Shutdown of greater than or equal to 30% of network processing nodes without brute force actions, but does not shut down the network"
         },
         {
-          "id": "7FsVuWOft42iEdKoxM2CvH",
-          "title": "Increasing network processing node resource consumption by at least 30% without brute force actions, compared to the preceding 24 hours",
+          "id": 4939,
           "type": "blockchain_dlt",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Sidechain not being able to confirm new transactions (total network shutdown)"
         },
         {
-          "id": "3ZK7MoAzHjhT2qpzaGpDJO",
-          "title": "Shutdown of greater than or equal to 30% of network processing nodes without brute force actions, but does not shut down the network",
+          "id": 2,
           "type": "blockchain_dlt",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
         },
         {
-          "id": "3RcyWxNkeST8J8Qf9X1af9",
-          "title": "Shutdown of greater than 10% or equal to but less than 30% of network processing nodes without brute force actions, but does not shut down the network",
+          "id": 3,
           "type": "blockchain_dlt",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Direct loss of funds"
         },
         {
-          "id": "gT0vKisM3KPcvqCaC0AZc",
-          "title": "Modification of transaction fees outside of design parameters",
+          "id": 4,
           "type": "blockchain_dlt",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Permanent freezing of funds (fix requires hardfork)"
         }
       ],
       "programOverview": "Integritee is a highly scalable, privacy-enabling network in the Polkadot ecosystem with parachains on Polkadot and Kusama. We seek to become the leading Web3 privacy solution - a blockchain network for developers and relevant to enterprises to build (decentralized) applications that benefit from unrivaled speed, verifiable confidentiality/privacy, and interoperability. At scale.\n\nOur solution combines the security and trust of Polkadot, the scalability of second-layer solutions, and the confidentiality of Trusted Execution Environments (TEEs) - a special-purpose hardware inside which computations run securely, confidentially, and verifiably. Our technology is relevant to both Web3 developers and enterprises who would like to benefit from verifiable privacy and public auditability. \n\nFor more information about Integritee Network, please visit https://www.integritee.network/\n\nIntegritee Network provides rewards in TEER, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__Responsible Publication__\n\n- Integritee Network adheres to category 2 - Noticed Required. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\n- Integritee Network adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page. \n\n__Proof of Concept (PoC) Requirements__\n\n- A PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n__Known Issue Assurance__\n\n- Integritee Network commits to providing Known Issue Assurance to bug submissions through their program. This means that Integritee Network will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n- In a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n__Public Disclosure of Known Issues__\n\n-Bug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n\n- https://github.com/integritee-network/worker/labels/F1-security\n- https://github.com/integritee-network/pallets/labels/F1-security\n\n__Feasibility Limitations__\n\n- The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Integritee Network has satisfied the requirements for the [Immunefi Standard Badge.](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209)",

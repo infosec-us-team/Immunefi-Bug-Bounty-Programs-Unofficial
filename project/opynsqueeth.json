@@ -120,76 +120,76 @@
       ],
       "impacts": [
         {
-          "id": "28GJtu4kWtlzYIXgD8aOYs",
-          "title": "Loss of user funds staked (principal) by freezing or theft",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "2rv8txMSwlU6a4JjHF1Sw8",
-          "title": "Execute arbitrary system commands",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "2mvPUG2AComIaHrckPOnON",
-          "title": "Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys(this does not include non-sensitive environment variables, open source code, or usernames)",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "6hpdLTPfTtNbvmrhN7p7w2",
-          "title": "Taking down the application/website",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "pk4LsbMb3QTaWon63TZDd",
-          "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "13rWFgvuVx3oKUxiAYo6Pe",
-          "title": "Subdomain takeover with already-connected wallet interaction",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "3c6GCefJIGFvbZL5IWqOPT",
-          "title": "Direct theft of user funds",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "4v95Y630C3zDs42R1Zhhq",
-          "title": "Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions",
-          "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "5sr7JKaF9Z2UFZgUJrhj9s",
-          "title": "Theft of unclaimed yield",
+          "id": 1766,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Freezing of unclaimed yield"
         },
         {
-          "id": "4Xq5pJM2FyfOeoGBuxzDZ1",
-          "title": "Freezing of unclaimed yield",
+          "id": 1767,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Temporary freezing of funds for any amount of time"
         },
         {
-          "id": "7L513p8405SLKG54jU2QOZ",
-          "title": "Temporary freezing of funds for any amount of time",
+          "id": 1768,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Smart contract gas drainage"
         },
         {
-          "id": "3pTGq5gfgCslNhab1NXGzG",
-          "title": "Smart contract gas drainage",
+          "id": 1769,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Loss of user funds staked (principal) by freezing or theft"
+        },
+        {
+          "id": 35,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Execute arbitrary system commands"
+        },
+        {
+          "id": 1770,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys(this does not include non-sensitive environment variables, open source code, or usernames)"
+        },
+        {
+          "id": 37,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Taking down the application/website"
+        },
+        {
+          "id": 1771,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc"
+        },
+        {
+          "id": 41,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Subdomain takeover with already-connected wallet interaction"
+        },
+        {
+          "id": 42,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Direct theft of user funds"
+        },
+        {
+          "id": 1772,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions"
         }
       ],
       "programOverview": "Opyn builds DeFi native derivatives and options infrastructure that allow users and protocols to buy, sell, and create options, and utilize brand new primitives like squeeth. DeFi enthusiasts and projects alike rely on Opyn’s smart contracts and interface to hedge themselves against DeFi risks and take positions on different cryptocurrencies.\n\nSqueeth (squared ETH) is a new financial derivative. Squeeth is the first [Power Perpetual](https://www.paradigm.xyz/2021/08/power-perpetuals/) and gives traders perpetual exposure to ETH².\n\nMechanism-wise, Squeeth functions similar to a [perpetual swap](https://firefly.exchange/blog/primer-on-perpetual-swaps), tracking the index of ETH² rather than ETH. It provides global options-like exposure (pure [convexity](https://www.investopedia.com/terms/c/convexity.asp), pure [gamma](https://www.investopedia.com/terms/g/gamma.asp)) without the need for either strikes or expiries, effectively consolidating much of the options market liquidity into a single ERC20 token.\n\nIn short, Squeeth makes options perpetual and is a very effective hedge for Uniswap LPs, all ETH/USD options, and anything that has a curved payoff.\n\nFor more information about Opyn, please visit [https://www.opyn.co/](https://www.opyn.co/).   \n\nThis bug bounty program is focused on their smart contracts and app and is focused on preventing:\n\n  - Loss of user funds staked (principal) by freezing or theft\n  - Theft of unclaimed yield\n  - Freezing of unclaimed yield",

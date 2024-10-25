@@ -294,46 +294,46 @@
       ],
       "impacts": [
         {
-          "id": "5o6q1CC1mmX39LGzrcktfj",
-          "title": "Direct theft or permanent freezing of staked funds in Tokemak contracts",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "3Zk3zmrVIhLsMhI70SBdJ0",
-          "title": "Redirected funds by address modification",
+          "id": 862,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Freezing of staked funds in Tokemak contracts for more than 10 minutes"
+        },
+        {
+          "id": 863,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Freezing of unclaimed yield for a period of more than 10 minutes"
+        },
+        {
+          "id": 864,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Vote manipulation"
+        },
+        {
+          "id": 865,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Direct theft or permanent freezing of staked funds in Tokemak contracts"
+        },
+        {
+          "id": 866,
           "type": "websites_and_applications",
-          "severity": "critical"
+          "severity": "critical",
+          "title": "Redirected funds by address modification"
         },
         {
-          "id": "2yFKOwlPHVb3UxgeoAvpRt",
-          "title": "Users spoofing other users leading to loss of user funds",
+          "id": 867,
           "type": "websites_and_applications",
-          "severity": "critical"
-        },
-        {
-          "id": "7CoOT08wdlvAFgIipiqcXr",
-          "title": "Theft of unclaimed yield",
-          "type": "smart_contract",
-          "severity": "high"
-        },
-        {
-          "id": "3BFPuB8PDedBCw7E4Bcp18",
-          "title": "Freezing of staked funds in Tokemak contracts for more than 10 minutes",
-          "type": "smart_contract",
-          "severity": "high"
-        },
-        {
-          "id": "1nWrTrneksb6re6potM2mJ",
-          "title": "Freezing of unclaimed yield for a period of more than 10 minutes",
-          "type": "smart_contract",
-          "severity": "high"
-        },
-        {
-          "id": "6UjCljQSpIzurQmTjalKVF",
-          "title": "Vote manipulation",
-          "type": "smart_contract",
-          "severity": "high"
+          "severity": "critical",
+          "title": "Users spoofing other users leading to loss of user funds"
         }
       ],
       "programOverview": "Tokemak is a decentralized liquidity providing/market making protocol designed to create efficient, sustainable liquidity across DeFi.\n\nLiquidity providers deposit assets into their respective ”token reactors” (e.g. ALCX, SNX, FXS, etc.).  Tokemak’s native protocol token, TOKE, is used to direct liquidity for each asset into DeFi markets such as Uniswap, Sushiswap, Balancer and Curve. TOKE can be thought of as tokenized liquidity. When staking to a given asset’s token reactor, TOKE holders control not only where the liquidity gets directed, but also what market receives liquidity, pulling from Tokemak’s reserves of ETH and Stablecoins.\n\nFor more information about Tokemak, please visit [https://www.tokemak.xyz/](https://www.tokemak.xyz/) and [https://medium.com/tokemak](https://medium.com/tokemak)\n\nThis bug bounty program is focused on their smart contracts, website, and application, and is focused on preventing the following impacts:\n\n  - Thefts and freezing of principal of any amount\n  - Thefts and freezing of unclaimed yield of any amount\n  - Theft of governance funds \n  - Redirected funds by address modification\n  - Users spoofing other users",

@@ -69,82 +69,82 @@
       ],
       "impacts": [
         {
-          "id": "3UyMoRuE795aq78CeeezPK",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "66yk0ZJEqrkuLJKZADgU24",
-          "title": "Permanent freezing of funds",
+          "id": 1264,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Theft of gas"
         },
         {
-          "id": "1lbXWERnX0HERFEPf2SYjr",
-          "title": "Any smart contract code resulting directly in protocol Insolvency",
+          "id": 1265,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "6bjseBXyhcYsLeT6kLv88c",
-          "title": "Theft of unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "7tqGEHdoSX5oRGEb0cwZD",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "eRzDCfXwBCtuAXc9JlmyW",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "6QN8CMJYtQ3MAh2lTUpkFG",
-          "title": "Block stuffing for profit",
+          "id": 1266,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Block stuffing for profit"
         },
         {
-          "id": "272MDiEo25zNjTG9gem52f",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "4QYcy0p6iwU8M8r1xdUPrR",
-          "title": "Temporary freezing of fund",
+          "id": 1267,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Temporary freezing of fund"
         },
         {
-          "id": "2ANKyo2W76mALNoF3i3sRL",
-          "title": "Miner-extractable value (MEV)",
+          "id": 1268,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Miner-extractable value (MEV)"
         },
         {
-          "id": "3I6foc5xqLrf6tsmJyLB94",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "28wNJ4XI2JdrSwqsxdCKeI",
-          "title": "Theft of gas",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "2NZC5Q1XMxVypNqgLaRji7",
-          "title": "Unbounded gas consumption",
+          "id": 1269,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Any smart contract code resulting directly in protocol Insolvency"
         }
       ],
       "programOverview": "Notional is a protocol on Ethereum that facilitates fixed-rate, fixed-term crypto asset lending and borrowing through a novel financial instrument called fCash.\n\nfCash is a tokenized representation of a fCash flow. It represents the amount of tokens (i.e. Dai) that an account is either entitled to receive or obligated to pay at its designated maturity. For example, if an account holds +100 fCash tokens for a maturity on January 1, 2021, it is entitled to 100 Dai at any time greater than or equal to January 1, 2021. Similarly, -100 fCash tokens for the same maturity means that the account is obligated to pay 100 Dai at maturity.\n\nFor more information about Notional, please visit [https://notional.finance/](https://notional.finance/). \n\nThis bug bounty program is focused on their smart contracts and app and is focused on preventing the following impacts:\n\n  - Loss of funds \n  - Voting manipulation\n  - Any function that is outside the intended behavior of the smart contracts\n  - Redirection of funds\n  - Injection of text",

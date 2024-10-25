@@ -96,70 +96,70 @@
       ],
       "impacts": [
         {
-          "id": "1fZxcydNeachPoFIZXUxla",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "2rYBfkMqU5xIjafOXVS8bi",
-          "title": "Permanent freezing of funds",
+          "id": 322,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed inflation"
         },
         {
-          "id": "3frhfuLsBO8SaqX6wto7zc",
-          "title": "Protocol Insolvency",
+          "id": 323,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed inflation"
         },
         {
-          "id": "JnyEnSGrBoz1AsTX5cRWr",
-          "title": "Theft of unclaimed inflation",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "1KgYm7rJ6cEOpz6zS6gpWZ",
-          "title": "Permanent freezing of unclaimed inflation",
+          "id": 324,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing for profit"
         },
         {
-          "id": "5GRMrZvpzouQ3kLjBse7J3",
-          "title": "Temporary freezing of funds",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "7xyfNgxZ2uAsmAFsdug6t",
-          "title": "Block stuffing for profit",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "6i3sW7audGRmUmCWJSHZnH",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "6gPAVhU2k7eKJYDiDBHYsI",
-          "title": "Theft of gas",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "zYeurnoEUzJFwwrEekzxz",
-          "title": "Unbounded gas consumption",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "5qvb049omaeNC2QJIotb7b",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "SushiSwap is an automated market-making (AMM) decentralized exchange (DEX) that allows users to provide liquidity for token swaps.\n\nFurther resources regarding SushiSwap can be found on their website, [https://sushi.com](https://sushi.com) and [documentation](https://docs.sushi.com/).\n\nProgram focuses on three sets of contracts w/ majority of the contracts being built on top of BentoBox:\n  - SushiXSwap (Cross-chain swaps)\n  - Furo (Streams/Vesting contracts)\n  - Peripherals (Routers & Makers)\n\nThe bug bounty program is focused around it's smart contracts for the purpose of preventing the loss of user funds.",

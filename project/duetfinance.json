@@ -54,76 +54,76 @@
       ],
       "impacts": [
         {
-          "id": "ClwHKs8ZcQWWDHbmUbd9N",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "A7Gcc4Oe1nk1WK3q1WviL",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "5dxY3jaOue8bz3nS8QTPpv",
-          "title": "Miner-extractable value (MEV)",
+          "id": 27,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
-          "id": "1ijr6b7mgpz6JfV5gfvAjA",
-          "title": "Protocol Insolvency",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "4Zj2cyjXHwN8qBV1YSOxML",
-          "title": "Theft of unclaimed yield",
+          "id": 1816,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing for profit"
         },
         {
-          "id": "7x5yUwpyswulavhNoJpzak",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "2A4JQrRQfqumJNpjRWzTVA",
-          "title": "Temporary freezing of funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "2GrpehqDO1qTtv87MCVjPs",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "4IpSqkZZubxyWUecoQaSxT",
-          "title": "Block stuffing for profit",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "3jFaQY8MgTWCR5HGDOJNkj",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "6IHu4QfQrmKn83pLFBfZKQ",
-          "title": "Theft of gas",
+          "id": 1817,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Miner-extractable value (MEV)"
         },
         {
-          "id": "6QpGYGWJBNDpyCSrtW8yIC",
-          "title": "Unbounded gas consumption",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "Duet protocol (Duet) is a Multi-chain synthetic asset protocol that sharpens all assets for use in the blockchain world. A duet in music refers to a piece of music where two people play different parts or melodies. Similarly, Duet protocol allows traders to replicate the real-world tradable assets in a decentralised finance ecosystem.\n\nFor more information about Duet Finance, please visit [https://duet.finance/](https://duet.finance/). \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Loss of user funds staked (principal) by freezing or theft\n  - Loss of governance funds\n  - Theft of unclaimed yield\n  - Freezing of unclaimed yield\n  - Smart contract gas drainage\n  - Smart contract fails to deliver promised returns, but doesn’t lose value\n  - Incorrect polling actions\n  - Leak of user data\n  - Deletion of user data\n  - Access to sensitive pages without authorization",
