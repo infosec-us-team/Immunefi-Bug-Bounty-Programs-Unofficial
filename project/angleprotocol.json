@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/59aXkhYrZRUpce1eJfn9Eu/202ead0a74d522b3515398d049f5b142/NEW_Angle_Logo.svg",
       "launchDate": "2021-11-04T17:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-05-21T15:51:53.401Z",
+      "updatedDate": "2024-10-29T13:20:55.978Z",
       "kyc": false,
       "rewards": [
         {
@@ -183,8 +183,8 @@
       "programOverview": "Angle is a decentralized, capital efficient and over-collateralized stablecoin protocol composed of smart contracts running on open blockchains.\n\nIt can be used to issue stablecoins, called agTokens, designed to mirror the value of an asset they are pegged to.\n\nThe protocol consists of several different modules, or sets of smart contracts, from which stablecoins can be issued or minted. While Angle launched its first stablecoin agEUR with a single minting module (the Core module - that was wound down in May 2023), a Borrowing module allowing to borrow Angle stablecoins against deposited collateral and a price stability module called Transmuter have then been introduced.\n\nThe protocol is also engaged into Direct Deposit Modules, also called Algorithmic Market Operations (AMOs), allowing it to boostrap liquidity for agTokens in other protocols.\n\nFor more information about Angle Protocol, please visit [https://www.angle.money/](https://www.angle.money/).  \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Thefts and freezing of principal of any amount\n  - Thefts and freezing of unclaimed yield of any amount\n  - Theft of governance funds\n  - Governance activity disruption",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll Critical Smart Contract bug reports require a PoC and a suggestion for a fix to be eligible for a reward. All High and Medium Smart Contract bug reports require a PoC to be eligible for a reward.\n\nVulnerabilities marked as “Acknowledged”, “ Accepted Risk” or “Closed” in the [ChainSecurity security review](https://github.com/AngleProtocol/angle-core/blob/main/audits/Chainsecurity%20Audit%20Report%20July%2021.pdf) from July 2021, [the Sigma Prime security review](https://github.com/AngleProtocol/angle-core/blob/main/audits/Sigma%20Prime%20Audit%20Report%20July%2021.pdf) from July 21, [the ChainSecurity security review from December 2021, the ChainSecurity security review from April 22](https://docs.angle.money/resources/audits#chainsecurity-december-2021-january-2022), the [Code4rena security review from June 2023](https://code4rena.com/reports/2023-06-angle) are not eligible for a reward.\n\nCritical-level smart contract vulnerabilities that result in the loss of user funds will have rewards additionally capped at 10% of the funds potentially affected based on the vulnerability that was identified. These rewards are payable in USDC or in ANGLE at the discretion of the team. ANGLE rewards will have a vesting schedule lasting between 6-12 months with a minimum of 6 months for rewards up to USD 200 000, with an additional month added for every USD 50 000 tranche, rounded up. However, there is a minimum of __USD 50 000__ for Critical bug reports. \n\nPayouts are handled by the __Angle Protocol__ team directly and are denominated in USD. However, payouts are done in __ANGLE__ or __USDC__, with the choice of the ratio at the discretion of the team.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "All smart contracts of Angle Protocol can be found in the following repositories:\n- https://github.com/AngleProtocol/borrow-contracts: for the Borrowing module smart contractshttps://github.com/AngleProtocol/angle-router: for the routing contracts of the protocol\n- https://github.com/AngleProtocol/angle-transmuter: for the Transmuter smart contracts\n- https://github.com/AngleProtocol/angle-tokens: for all Angle tokens\n\nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nSome of the contracts in scope are upgradeable and you’ll see proxies at the given addresses, make sure to look at the corresponding implementation.",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": "Only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nSome of the contracts in scope are upgradeable and you’ll see proxies at the given addresses, make sure to look at the corresponding implementation.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -244,19 +244,56 @@
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
       "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
-      "customOutOfScopeInformation": null,
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+      "customOutOfScopeInformation": "  - Best practice critiques",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "ANGLE, USDC",
       "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
+      "programCodebases": [
+        {
+          "id": 119,
+          "programId": 54,
+          "title": "Angle Protocol smart contracts",
+          "description": "for the Borrowing module smart contracts",
+          "url": "https://github.com/AngleProtocol/borrow-contracts",
+          "createdAt": "2024-10-29T13:17:05.636Z",
+          "updatedAt": "2024-10-29T13:17:05.636Z"
+        },
+        {
+          "id": 121,
+          "programId": 54,
+          "title": "Angle Protocol smart contracts",
+          "description": "For the Transmuter smart contracts",
+          "url": "https://github.com/AngleProtocol/angle-transmuter",
+          "createdAt": "2024-10-29T13:18:19.939Z",
+          "updatedAt": "2024-10-29T13:18:19.939Z"
+        },
+        {
+          "id": 122,
+          "programId": 54,
+          "title": "Angle Protocol smart contracts",
+          "description": "For all Angle tokens",
+          "url": "https://github.com/AngleProtocol/angle-tokens",
+          "createdAt": "2024-10-29T13:18:52.363Z",
+          "updatedAt": "2024-10-29T13:18:52.363Z"
+        },
+        {
+          "id": 123,
+          "programId": 54,
+          "title": "Angle Protocol smart contracts",
+          "description": "For the routing contracts of the protocol",
+          "url": "https://github.com/AngleProtocol/angle-router",
+          "createdAt": "2024-10-29T13:19:28.268Z",
+          "updatedAt": "2024-10-29T13:19:28.268Z"
+        }
+      ],
       "programDocumentations": [],
       "premiumTriaging": false
     },
