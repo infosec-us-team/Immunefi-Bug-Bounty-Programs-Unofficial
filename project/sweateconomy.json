@@ -7,22 +7,24 @@
       "project": "Sweat Economy",
       "maxBounty": 2000000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4cIP56xUCfhgaqmMzDeCMD/03d7201e7ff61ab8816864799a459338/SWEAT_CIRCLE_LOGO.png",
-      "launchDate": "2023-03-31T13:00-05:00",
+      "launchDate": "2023-03-31T18:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-04-08T18:56:29.411Z",
+      "updatedDate": "2024-10-31T15:34:57.204Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD 50,000 to USD $2,000,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 2000000,
+          "minReward": 50000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $25,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 25000
         }
       ],
       "audits": null,
@@ -34,7 +36,7 @@
           "description": "FT Token",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-03-31T13:00-05:00"
+          "addedAt": "2023-03-31T18:00:00.000Z"
         },
         {
           "id": "1GaJXbZYqcZ1nr7QSvKvmU",
@@ -135,11 +137,11 @@
           "title": "Unintended alteration of what the NFT represents (e.g. token URI, payload, artistic content)"
         }
       ],
-      "programOverview": "With over 120M users, Sweat Economy is a global ecosystem designed to reward and inspire movement. The Sweat Wallet is a crypto app that rewards people with a cryptocurrency, SWEAT, for their steps, which are verified by a separate app, Sweatcoin. SWEAT is built on the NEAR blockchain, and the Sweat Wallet is by far the most used DApp on this network. The token has much utility; it can be used to access rewards, like BTC, USDT and Macbooks, or used in staking and DeFi functions like crypto swap, and as fuel for Sweat Hero, a peer-to-peer NFT game.\n\nFor more information, visit [https://sweateconomy.com/.](https://sweateconomy.com/)\n",
+      "programOverview": "With over 120M users, Sweat Economy is a global ecosystem designed to reward and inspire movement. The Sweat Wallet is a crypto app that rewards people with a cryptocurrency, SWEAT, for their steps, which are verified by a separate app, Sweatcoin. SWEAT is built on the NEAR blockchain, and the Sweat Wallet is by far the most used DApp on this network. The token has much utility; it can be used to access rewards, like BTC, USDT and Macbooks, or used in staking and DeFi functions like crypto swap, and as fuel for Sweat Hero, a peer-to-peer NFT game.\n\nFor more information, visit [https://sweateconomy.com/.](https://sweateconomy.com/)",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required. \n\nRewards for critical smart contract vulnerabilities are further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum reward of __USD 50 000__  for Critical smart contract bug reports.\n\nKnown issues highlighted in the following audit reports are considered out of scope: \n- [https://github.com/sweatco/sweat-near/security/policy](https://github.com/sweatco/sweat-near/security/policy)\n- [https://github.com/sweatco/sweat-jar/security/policy](https://github.com/sweatco/sweat-jar/security/policy)\n- [https://github.com/sweatco/sweat-claim/security/policy](https://github.com/sweatco/sweat-claim/security/policy)\n\nPayouts are handled by the __Sweat Foundation__ directly and are denominated in USD. However, payouts are done in __USDT__ (ERC20/NEP141) and __SWEAT__ (ERC20/NEP141), at the discretion of the project. \n",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n- Centralization risks\n\nThe following activities are prohibited by this bug bounty program:\n\n- Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
-      "assetsBodyV2": "The following assets can have their deployment addresses found at:\n- FT Token - [https://nearblocks.io/address/token.sweat ](https://nearblocks.io/address/token.sweat)\n- SWEAT DeFi Jars - [ https://nearblocks.io/address/jars.sweat]( https://nearblocks.io/address/jars.sweat)\n- SWEAT Claim - [https://nearblocks.io/address/claim.sweat](https://nearblocks.io/address/claim.sweat)\n\nAll smart contracts of Sweat Economy can be found at [https://github.com/sweatco](https://github.com/sweatco). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program. Only the master branch is in-scope\n\nIf an impact can be caused to any other asset managed by Sweat Foundation that isn’t on this table, but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for consideration by the project. \n",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required. \n\nRewards for critical smart contract vulnerabilities are further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum reward of __USD 50 000__  for Critical smart contract bug reports.\n\nKnown issues highlighted in the following audit reports are considered out of scope: \n- [https://github.com/sweatco/sweat-near/security/policy](https://github.com/sweatco/sweat-near/security/policy)\n- [https://github.com/sweatco/sweat-jar/security/policy](https://github.com/sweatco/sweat-jar/security/policy)\n- [https://github.com/sweatco/sweat-claim/security/policy](https://github.com/sweatco/sweat-claim/security/policy)\n\nPayouts are handled by the __Sweat Foundation__ directly and are denominated in USD. However, payouts are done in __USDT__ (ERC20/NEP141) and __SWEAT__ (ERC20/NEP141), at the discretion of the project.",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": "The following assets can have their deployment addresses found at:\n- FT Token - [https://nearblocks.io/address/token.sweat ](https://nearblocks.io/address/token.sweat)\n- SWEAT DeFi Jars - [ https://nearblocks.io/address/jars.sweat]( https://nearblocks.io/address/jars.sweat)\n- SWEAT Claim - [https://nearblocks.io/address/claim.sweat](https://nearblocks.io/address/claim.sweat)\n\nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program. Only the master branch is in-scope\n\nIf an impact can be caused to any other asset managed by Sweat Foundation that isn’t on this table, but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for consideration by the project.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -195,22 +197,32 @@
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
       "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
-      "customOutOfScopeInformation": null,
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+      "customOutOfScopeInformation": "- Best practice critiques",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "NEAR",
       "rewardsToken": "SWEAT",
       "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
+      "programCodebases": [
+        {
+          "id": 168,
+          "programId": 2145,
+          "title": "Sweat Economy Smart Contracts",
+          "description": "Program Smart Contracts",
+          "url": "https://github.com/sweatco",
+          "createdAt": "2024-10-31T15:33:13.939Z",
+          "updatedAt": "2024-10-31T15:33:13.939Z"
+        }
+      ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {
