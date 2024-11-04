@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5MjWJd5jcGHtNLtAZnYNN0/0c111c048c5b2452457756f172948bb9/pyth-network-pyth-logo.png",
       "launchDate": "2024-06-24T16:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-24T13:38:17.149Z",
+      "updatedDate": "2024-11-04T19:13:35.365Z",
       "kyc": true,
       "rewards": [
         {
@@ -137,6 +137,15 @@
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
           "addedAt": "2024-08-30T16:52:13.796Z"
+        },
+        {
+          "id": "4Au0xnuMSF5As3WXbw6SjW",
+          "type": "websites_and_applications",
+          "url": "https://staking.pyth.network/",
+          "description": "Pyth Staking",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2024-11-04T18:57:54.440Z"
         }
       ],
       "impacts": [
@@ -247,11 +256,89 @@
           "type": "smart_contract",
           "severity": "critical",
           "title": "Protocol insolvency"
+        },
+        {
+          "id": 35,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Execute arbitrary system commands"
+        },
+        {
+          "id": 36,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Retrieve sensitive data/files from a running server, such as:\n- /etc/shadow\n- database passwords\n- blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
+        },
+        {
+          "id": 39,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Taking and/modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:\n- Changing registration information\n- Commenting\n- Voting\n- Making trades\n- Withdrawals, etc."
+        },
+        {
+          "id": 41,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Subdomain takeover with already-connected wallet interaction"
+        },
+        {
+          "id": 42,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Direct theft of user funds"
+        },
+        {
+          "id": 43,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Malicious interactions with an already-connected wallet, such as:\n- Modifying transaction arguments or parameters\n- Substituting contract addresses\n- Submitting malicious transactions"
+        },
+        {
+          "id": 46,
+          "type": "websites_and_applications",
+          "severity": "high",
+          "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:\n- HTML injection without JavaScript\n- Replacing existing text with arbitrary text\n- Arbitrary file uploads, etc."
+        },
+        {
+          "id": 47,
+          "type": "websites_and_applications",
+          "severity": "high",
+          "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Email\n- Password of the victim etc."
+        },
+        {
+          "id": 49,
+          "type": "websites_and_applications",
+          "severity": "high",
+          "title": "Subdomain takeover without already-connected wallet interaction"
+        },
+        {
+          "id": 51,
+          "type": "websites_and_applications",
+          "severity": "medium",
+          "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:\n- Reflected HTML Injection\n- Loading external site data"
+        },
+        {
+          "id": 52,
+          "type": "websites_and_applications",
+          "severity": "medium",
+          "title": "Redirecting users to malicious websites (open redirect)"
+        },
+        {
+          "id": 53,
+          "type": "websites_and_applications",
+          "severity": "low",
+          "title": "Changing details of other users (including modifying browser local storage) without already-connected wallet interaction and with significant user interaction, such as:\n- Iframing leading to modifying the backend/browser state (must demonstrate impact with PoC)"
+        },
+        {
+          "id": 54,
+          "type": "websites_and_applications",
+          "severity": "low",
+          "title": "Taking over broken or expired outgoing links, such as:\n- Social media handles, etc."
         }
       ],
       "programOverview": "Pyth Network is the largest and fastest-growing first-party oracle network. Pyth delivers real-time market data to financial dApps across 50+ blockchains and provides 380+ low-latency price feeds across cryptocurrencies, equities, ETFs, FX pairs, and commodities.\n\nFor more information about Pyth Network, please visit https://pyth.network.  \n\nPyth Network provides rewards in USDC, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__ \n\nPyth Network will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n- If you are a U.S. person, please send us a filled-out and signed [W-9](https://www.irs.gov/pub/irs-pdf/fw9.pdf)\n- If you are not a U.S. person, please send us a filled-out and signed [W-8BEN](https://www.irs.gov/pub/irs-pdf/fw8ben.pdf)\n\n\nPyth Network adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page. \n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n__Known Issue Assurance__\n\nPyth Network commits to providing Known Issue Assurance to bug submissions through their program. This means that Pyth Network will either disclose known issues publicly, or at the very least, privately to reporters who we believe have discovered a duplicate bug report. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n\n__Previous Audits__\n\nPyth Network’s completed audit reports can be found at https://github.com/pyth-network/audit-reports. Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of 250 000 USDC. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted.  For the avoidance of doubt, directly affected funds calculation does not include downstream protocols or users of the Pyth protocol or any effects on the $PYTH token price.\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attacks within the first hour will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n\nFor critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Level Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded up to $50,000 USDC depending on the funds at risk, capped at the maximum high reward.  \n\n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Pyth Data Association directly and are denominated in USD. However, payments are done in USDC. \n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\n__Reward Calculation for Critical Smart Contract Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of 250 000 USDC. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted.  For the avoidance of doubt, directly affected funds calculation does not include downstream protocols or users of the Pyth protocol or any effects on the $PYTH token price.\n\n__Reward Calculation for Critical Websites and Applications Reports__\n\nFor Critical web/apps bug reports will be rewarded with **USD 50 000**, only if the impact leads to:\n\n- A loss of funds involving an attack that does not require any user action\n- Unauthorized minting of tokens on-chain\n- Private key or private key generation leakage leading to unauthorized access to user funds\n- The impact occurs on a user facing application, generally hosted under pyth.network\n\nAll other impacts that would be classified as **Critical** would be rewarded a flat amount of **USD 30 000**.\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attacks within the first hour will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n\nFor critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Smart Contract Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded up to $50,000 USDC depending on the funds at risk, capped at the maximum high reward.  \n\n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\n__Reward Calculation for High Websites and Applications Reports__\n\nFor High web/app impacts, the maximum reward of **USD 20 000** will only be paid out for issues that affect our main user-facing applications, generally hosted under pyth.network.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Pyth Data Association directly and are denominated in USD. However, payments are done in USDC. \n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
       "outOfScopeAndRules": ".",
       "assetsBodyV2": "Specific mainnet contract addresses can be found on [https://docs.pyth.network/price-feeds/contract-addresses](https://docs.pyth.network/price-feeds/contract-addresses) and [https://docs.pyth.network/entropy/contract-addresses](https://docs.pyth.network/entropy/contract-addresses).",
       "impactsBody": null,
@@ -270,7 +357,8 @@
         ],
         "ecosystem": [],
         "programType": [
-          "Smart Contract"
+          "Smart Contract",
+          "Websites and Applications"
         ],
         "language": [],
         "featured": [
@@ -279,7 +367,8 @@
       },
       "legacy": {
         "technologies": [
-          "Smart Contract"
+          "Smart Contract",
+          "Websites and Applications"
         ],
         "blockchain_rewards": [],
         "smartcontract_rewards": [

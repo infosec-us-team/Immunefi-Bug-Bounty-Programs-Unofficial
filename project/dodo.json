@@ -7,40 +7,35 @@
       "project": "DODO",
       "maxBounty": 100000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3gUM6wDJxYyzDVoWpLQX4o/b521d1e6620ff23b80cc0c439666a5d1/DODO.svg",
-      "launchDate": "2021-05-25T00:00-05:00",
+      "launchDate": "2021-05-25T05:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-04-08T18:52:56.667Z",
+      "updatedDate": "2024-11-04T15:22:21.963Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "Up to USD $100,000",
-          "pocRequired": false
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 100000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "Up to USD $10,000",
-          "pocRequired": false
+          "severity": "high",
+          "rewardModel": "up_to",
+          "maxReward": 10000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "Up to USD $5,000",
-          "pocRequired": false
+          "severity": "medium",
+          "rewardModel": "up_to",
+          "maxReward": 5000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "Up to USD $1,000",
-          "pocRequired": false
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "none",
-          "payout": "USD $500",
-          "pocRequired": false
+          "severity": "low",
+          "rewardModel": "up_to",
+          "maxReward": 1000
         }
       ],
       "audits": null,
@@ -159,12 +154,12 @@
           "title": "Protocol insolvency"
         }
       ],
-      "programOverview": "DODO is a decentralized exchange platform powered by the Proactive Market Maker (PMM) algorithm. It features highly capital-efficient liquidity pools that support single-token provision, reduce impermanent loss, and minimize slippage for traders. The trading platform also offers SmartTrade, a decentralized liquidity aggregation service that routes to and compares various liquidity sources to quote the optimal prices between any two tokens. In addition, DODO removed all roadblocks hindering liquidity pool creation for the issuance of new assets - asset ratios, liquidity depths, fee rates, and other parameters can all be freely customized and configured in real-time. Based on this breakthrough, DODO has developed Crowdpooling, a permissionless, equal opportunity liquidity offering mechanic, as well as customizable technical solutions geared towards professional on-chain market makers.\n\nMore information about DODO can be found on their website, [https://dodoex.io/](https://dodoex.io/).   \n\nThis bug bounty program is focused around its smart contracts and is mostly concerned with the prevention of the loss of user funds. ",
+      "programOverview": "DODO is a decentralized exchange platform powered by the Proactive Market Maker (PMM) algorithm. It features highly capital-efficient liquidity pools that support single-token provision, reduce impermanent loss, and minimize slippage for traders. The trading platform also offers SmartTrade, a decentralized liquidity aggregation service that routes to and compares various liquidity sources to quote the optimal prices between any two tokens. In addition, DODO removed all roadblocks hindering liquidity pool creation for the issuance of new assets - asset ratios, liquidity depths, fee rates, and other parameters can all be freely customized and configured in real-time. Based on this breakthrough, DODO has developed Crowdpooling, a permissionless, equal opportunity liquidity offering mechanic, as well as customizable technical solutions geared towards professional on-chain market makers.\n\nMore information about DODO can be found on their website, [https://dodoex.io/](https://dodoex.io/).   \n\nThis bug bounty program is focused around its smart contracts and is mostly concerned with the prevention of the loss of user funds.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards for Smart Contract vulnerabilities are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nThe calculation of the final reward amounts will be based on the economic impact of the discovered vulnerabilities, as well as the level of difficulty in discovering these vulnerabilities. As for the economic impact, this is capped at 10% of economic damage, which accounts for direct funds at risk as well as other aspects at the discretion of the DODO team. \n\nTo qualify for a reward, please include as much information about the vulnerability as possible in your report, including:\n\n  - The conditions on which reproducing the bug is contingent\n  - The steps needed to reproduce the bug or, preferably, a proof of concept\n  - The potential implications of the vulnerability being abused\n\n__Responsible Publication__\n\nDODO adheres to __category 3__. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our Responsible Publication page.\n\nPayouts up to __USD 100 000__ are handled by the __DODO__ team directly and are denominated in USD. However, payouts are done in __DODO__.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - FeeRouteProxy exclusions: FeeRouteProxy.sol won't left any tokens in normal swap, so we don't abandon using tokens in the proxy through specific swap method\n\nThe following contracts are out of scope and NO bounty will be paid:\n\n- contracts/CollateralVault/\n- contracts/DODODrops\n- contracts/Factory/Registries/DODONFTRegistry.sol\n- contracts/Factory/DODONFT.sol\n- contracts/Factory/DODONFT1155.sol\n- contracts/Factory/NFTTokenFactory.sol\n- contracts/GeneralizedFragment/\n- contracts/NFTPool/\n- contracts/SmartRoute/helper/DODONFTRouteHelper.sol\n- contracts/SmartRoute/proxies/DODODropsProxy.sol\n- contracts/SmartRoute/proxies/DODONFTPoolProxy.sol\n- contracts/SmartRoute/proxies/DODONFTProxy.sol\n- contracts/SmartRoute/DODONFTApprove.sol\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
+      "rewardsBody": "Rewards for Smart Contract vulnerabilities are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nThe calculation of the final reward amounts will be based on the economic impact of the discovered vulnerabilities, as well as the level of difficulty in discovering these vulnerabilities. As for the economic impact, this is capped at 10% of economic damage, which accounts for direct funds at risk as well as other aspects at the discretion of the DODO team. \n\nTo qualify for a reward, please include as much information about the vulnerability as possible in your report, including:\n\n  - The conditions on which reproducing the bug is contingent\n  - The steps needed to reproduce the bug or, preferably, a proof of concept\n  - The potential implications of the vulnerability being abused\n\n\nPayouts up to __USD 100 000__ are handled by the __DODO__ team directly and are denominated in USD. However, payouts are done in __DODO__.",
+      "outOfScopeAndRules": null,
       "assetsBodyV2": "The following smart contracts [DODOMemberSystem](https://github.com/DODOEX/contractV2/tree/main/contracts/DODOMemberSystem/) and [https://github.com/DODOEX/contractV2/tree/main/contracts/external](https://github.com/DODOEX/contractV2/tree/main/contracts/external) are not included in this bug bounty program.",
-      "impactsBody": "The following contracts are not included in this bug bounty program:\n- [https://github.com/DODOEX/contractV2/tree/main/contracts/DODOMemberSystem/](https://github.com/DODOEX/contractV2/tree/main/contracts/DODOMemberSystem/)\n- [https://github.com/DODOEX/contractV2/tree/main/contracts/external](https://github.com/DODOEX/contractV2/tree/main/contracts/external)\n",
+      "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
         "general": [
@@ -229,10 +224,6 @@
           {
             "level": "Low",
             "payout": "Up to USD $1,000"
-          },
-          {
-            "level": "Informational",
-            "payout": "USD $500"
           }
         ],
         "web_rewards": []
@@ -246,12 +237,12 @@
       "knownIssues": [],
       "knownIssueAssurance": false,
       "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
       "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
-      "customOutOfScopeInformation": null,
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+      "customOutOfScopeInformation": "The following contracts are out of scope and NO bounty will be paid:\n\n- contracts/CollateralVault/\n- contracts/DODODrops\n- contracts/Factory/Registries/DODONFTRegistry.sol\n- contracts/Factory/DODONFT.sol\n- contracts/Factory/DODONFT1155.sol\n- contracts/Factory/NFTTokenFactory.sol\n- contracts/GeneralizedFragment/\n- contracts/NFTPool/\n- contracts/SmartRoute/helper/DODONFTRouteHelper.sol\n- contracts/SmartRoute/proxies/DODODropsProxy.sol\n- contracts/SmartRoute/proxies/DODONFTPoolProxy.sol\n- contracts/SmartRoute/proxies/DODONFTProxy.sol\n- contracts/SmartRoute/DODONFTApprove.sol\n\n\n- Best practice critiques\n  - FeeRouteProxy exclusions: FeeRouteProxy.sol won't left any tokens in normal swap, so we don't abandon using tokens in the proxy through specific swap method\n",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum, Arbitrum",
       "rewardsToken": "DODO",
@@ -260,7 +251,7 @@
       "programCodebases": [],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

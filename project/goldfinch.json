@@ -7,34 +7,35 @@
       "project": "Goldfinch",
       "maxBounty": 500000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/arpDmjFKDdzJz5O1pgtwQ/37743b282dbdc711c4e1ce060fa16af0/Goldfinch.png",
-      "launchDate": "2021-09-10T13:00-05:00",
+      "launchDate": "2021-09-10T18:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-04-08T18:51:54.780Z",
+      "updatedDate": "2024-11-04T19:20:57.148Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "Up to USD $500,000",
-          "pocRequired": false
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 500000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "Up to USD $15,000",
-          "pocRequired": false
+          "severity": "high",
+          "rewardModel": "up_to",
+          "maxReward": 15000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "Up to USD $50,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 50000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "Up to USD $15,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "up_to",
+          "maxReward": 15000
         }
       ],
       "audits": null,
@@ -435,8 +436,8 @@
       "programOverview": "Goldfinch is a decentralized protocol that allows for crypto borrowing without crypto collateral. The Goldfinch protocol has four core participants: Borrowers, Backers, Liquidity Providers, and Auditors.\n\nBorrowers are participants who seek financing, and they propose Borrower Pools for the Backers to assess. Borrower Pools contain the terms a Borrower seeks, like the interest rate and repayment schedule.\n\nBackers assess the Borrower Pools and decide whether to supply first-loss capital. After Backers supply capital, Borrowers can borrow and repay through the Borrower Pool.\n\nLiquidity Providers supply capital to the Senior Pool in order to earn passive yield. The Senior Pool uses the Leverage Model to automatically allocate capital to the Borrower Pools, based on how many Backers are participating in them. When the Senior Pool allocates capital, a portion of its interest is reallocated to the Backers. This increases the Backers’ effective yield, which incentives them to both provide the higher-risk first-loss capital and do the work of assessing Borrower Pools.\n\nLastly, Auditors vote to approve Borrowers, which is required before they can borrow. Auditors are randomly selected by the protocol, and they provide a human-level check to guard against fraudulent activity.\n\nFor more information about Goldfinch, please visit [https://goldfinch.finance/](https://goldfinch.finance/).     \n\nThis bug bounty program is focused on their smart contracts and app and is focused on preventing the following impacts:\n\n  - Loss of user funds\n  - Loss of governance funds\n  - Incorrect or unintended behavior relating to money transfers (ie. user input is for 10 USDC, and we actually try to move 100 USDC)\n  - Logical bugs relating to calculation of interest or principal owed, or payment dates, etc.\n  - Temporary freezing of user or governance funds.\n  - Unable to call smart contract\n  - Pointing to an incorrect smart contract from our frontend",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces\n\n__Websites and Apps__\n\n  - Remote Code Execution\n  - Trusting trust/dependency vulnerabilities\n  - Vertical Privilege Escalation\n  - XML External Entities Injection\n  - SQL Injection\n  - LFI/RFI\n  - Horizontal Privilege Escalation\n  - Stored XSS\n  - Reflective XSS with impact\n  - CSRF with impact\n  - Direct object reference\n  - Internal SSRF\n  - Session fixation\n  - Insecure Deserialization\n  - DOM XSS\n  - SSL misconfigurations\n  - SSL/TLS issues (weak crypto, improper setup)\n  - URL redirect\n  - Clickjacking (must be accompanied with PoC)\n  - Misleading Unicode text (e.g. using right to left override characters)",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll web/app bug reports must come with a PoC in order to be considered for a reward.\n\n“Clickjacking state-changing” is considered “High” if it could result in greater than __USD 10 000__ worth of such damages. \n\nThe payout for critical and high severity bugs is calculated as the minimum of 10% of economic damage from the exploit and the maximum payout for the exploit’s severity level; however there is a minimum reward of __USD 5 000__ for valid critical bug reports, and a minimum reward of __USD 1 000__ for valid high severity bug reports.\n\nIn order to be eligible for a reward, the following terms and conditions must be met:\n\n  - Identify an original, previously unreported, non-public vulnerability within the scope of the Goldfinch bug bounty program as described.\n  - Include sufficient detail in your disclosure to enable our engineers to quickly reproduce, understand, and fix the vulnerability.\n  - Be at least 18 years of age.\n  - Be reporting in an individual capacity, or if employed by a company, reporting with the company’s written approval to submit a disclosure to Goldfinch.\n  - Not be subject to US sanctions or reside in a US-embargoed country.\n  - Not be a current or former Goldfinch employee, vendor, contractor, or employee of a Goldfinch vendor or contractor.\n\nVulnerabilities in contracts built on top of Goldfinch by third-party developers (such as smart contract wallets) are not in-scope, nor are vulnerabilities that require ownership of an admin key.\n\nKnown bugs found at the following link are considered out of scope for the program:\n\n[https://goldfinchfinance.notion.site/ImmuneFi-Publication-List-of-Known-Goldfinch-Protocol-Issues-2a222523415640f886d1bb8f10f622ef](https://goldfinchfinance.notion.site/ImmuneFi-Publication-List-of-Known-Goldfinch-Protocol-Issues-2a222523415640f886d1bb8f10f622ef)\n\nPayouts are handled by the __Goldfinch__ team directly and are denominated in USD. However, payouts are done in __USDC__.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist, borrowers, etc.)\n  - All known issues found here: [https://goldfinchfinance.notion.site/ImmuneFi-Publication-List-of-Known-Goldfinch-Protocol-Issues-2a222523415640f886d1bb8f10f622ef](https://goldfinchfinance.notion.site/ImmuneFi-Publication-List-of-Known-Goldfinch-Protocol-Issues-2a222523415640f886d1bb8f10f622ef)\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n\n__Websites and Apps__\n\n  - Theoretical vulnerabilities without any proof or demonstration\n  - Content spoofing / Text injection issues\n  - Self-XSS\n  - Captcha bypass using OCR\n  - CSRF with no security impact (logout CSRF, change language, etc.)\n  - Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”)\n  - Server-side information disclosure such as IPs, server names, and most stack traces\n  - Vulnerabilities used to enumerate or confirm the existence of users or tenants\n  - Vulnerabilities requiring unlikely user actions\n  - URL Redirects (unless combined with another vulnerability to produce a more severe vulnerability)\n  - Lack of SSL/TLS best practices\n  - DDoS vulnerabilities\n  - Attacks requiring privileged access from within the organization\n  - Feature requests\n  - Best practices\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "All smart contracts of Goldfinch can be found at [https://github.com/goldfinch-eng/goldfinch-contracts](https://github.com/goldfinch-eng/goldfinch-contracts). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": "However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\n - All known issues found here: [https://goldfinchfinance.notion.site/ImmuneFi-Publication-List-of-Known-Goldfinch-Protocol-Issues-2a222523415640f886d1bb8f10f622ef](https://goldfinchfinance.notion.site/ImmuneFi-Publication-List-of-Known-Goldfinch-Protocol-Issues-2a222523415640f886d1bb8f10f622ef)",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -502,22 +503,32 @@
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
-      "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
-      "customOutOfScopeInformation": null,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+      "defaultOutOfScopeWebAndApplications": "- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n  - This does not exclude reflected HTML injection with or without JavaScript\n  - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering",
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+      "customOutOfScopeInformation": "  - Best practice critiques",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "USDC",
       "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
+      "programCodebases": [
+        {
+          "id": 205,
+          "programId": 1816,
+          "title": "Goldfinch Smart Contracts",
+          "description": "Program Smart Contracts",
+          "url": "https://github.com/goldfinch-eng/goldfinch-contracts",
+          "createdAt": "2024-11-04T19:18:56.644Z",
+          "updatedAt": "2024-11-04T19:18:56.644Z"
+        }
+      ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {
