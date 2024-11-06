@@ -9,32 +9,64 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5MjWJd5jcGHtNLtAZnYNN0/0c111c048c5b2452457756f172948bb9/pyth-network-pyth-logo.png",
       "launchDate": "2024-06-24T16:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-11-04T19:13:35.365Z",
+      "updatedDate": "2024-11-05T12:02:54.917Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $50,000 to USD $250,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 250000,
+          "minReward": 50000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $10,000 to USD $50,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 50000,
+          "minReward": 10000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $2,500 to USD $10,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "range",
+          "maxReward": 10000,
+          "minReward": 2500
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $1,000 to USD $2,500",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "range",
+          "maxReward": 2500,
+          "minReward": 1000
+        },
+        {
+          "assetType": "websites_and_applications",
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 50000,
+          "minReward": 20000,
+          "otherImpactMaxReward": 30000
+        },
+        {
+          "assetType": "websites_and_applications",
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 20000,
+          "minReward": 5000
+        },
+        {
+          "assetType": "websites_and_applications",
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 2500
+        },
+        {
+          "assetType": "websites_and_applications",
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -439,7 +471,7 @@
         }
       ],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

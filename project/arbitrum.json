@@ -7,34 +7,35 @@
       "project": "Arbitrum",
       "maxBounty": 2000000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4R1H4ktLiQcp601gnixkJa/20dc4d9cf5229ae712f1413d9afced4f/Arbitrum.jpeg",
-      "launchDate": "2021-08-31T08:00-05:00",
+      "launchDate": "2021-08-31T13:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-04-08T18:50:54.797Z",
+      "updatedDate": "2024-11-05T13:59:09.736Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "Up to USD $2,000,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 2000000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $30,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 30000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $5,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -1479,9 +1480,9 @@
       "programOverview": "Arbitrum is a suite of scaling solutions for Ethereum developed by Offchain Labs that drastically reduces costs and latency. Arbitrum One is an \"Optimistic Rollup\", which instantly scales apps, reducing costs and increasing capacity, without sacrificing Ethereum's security. Arbitrum validators optimistically post updates to Ethereum, and the protocol uses an interactive fraud proof mechanism to resolve any disputes efficiently with a minimal on-chain footprint. Porting contracts to Arbitrum requires no code changes or downloads as Arbitrum is fully compatible with most existing Ethereum developer tooling. Arbitrum Nova, is another chain that relies on AnyTrust technology and posts calldata to a Data Availability Committee, further reducing costs while adding a small trust assumption.\n\nFor more information about Arbitrum and the related mainnet chains, please visit [https://developer.offchainlabs.com/](https://developer.offchainlabs.com/).\n\nThis bug bounty program is focused on the mainnet Arbitrum chains, Arbitrum One and Arbitrum Nova and their underlying technologies, Arbitrum Rollup and Arbitrum AnyTrust respectively. Any vulnerabilities unrelated to either of the two mainnet chains are not covered by this program. Issues that affect Arb1 and Nova will be treated as a single issue, and a report of the same issue with the only difference being the network will be treated as a duplicate. This program is focused on their smart contracts and is focused on preventing the following impacts:\n\nThis bug bounty program is focused on their smart contracts and is focused on preventing the following impacts:\n\n  - Loss of user funds by permanent freezing or direct theft\n  - Temporary freezing of funds\n  - Unable to call smart contract\n  - Network shutdown\n  - Smart contract gas drainage",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll bug reports must come with a PoC in order to be considered for a reward.\n\nCritical bug reports are capped at 10% of economic damage, primarily considering the funds at risk, and taking into account branding and PR issues, at the discretion of the team. However, rewards for Critical bug reports have a minimum reward of __USD 50 000__.\n\nPayouts are handled by the __Offchain Labs__ team directly and are denominated in USD. However, payouts are done in __USDC__.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (security council signers)\n  - Issues that affect Arbitrum One and Arbitrum Nova will be treated as a single issue, and a report of the same issue with the only difference being the network will be treated as a duplicate.\n\n__Smart Contracts__\n\n  - Incorrect data supplied by third party oracles\n      - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Denial of Service (DoS) Attacks that only affects some nodes, or cause only some nodes to crash\n  - Problems caused by L1 Gas Pricing\n  - Issues that affect geth and are not caused by changes made in the Nitro implementation\n\n__Informational__\n  - Changes or bugs found or related to Tutorials maintained by Offchain Labs\n  - Changes or bugs regarding the arbitrum-sdk\n  - Inconsistencies found between documentation and smart contracts and other blockchain code\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "All smart contracts of Arbitrum can be found at [https://github.com/OffchainLabs/nitro-contracts](https://github.com/OffchainLabs/nitro-contracts)\n[https://github.com/OffchainLabs/token-bridge-contracts](https://github.com/OffchainLabs/token-bridge-contracts)\n[https://github.com/ArbitrumFoundation/governance](https://github.com/ArbitrumFoundation/governance), and\n[https://github.com/OffchainLabs/fund-distribution-contracts](https://github.com/OffchainLabs/fund-distribution-contracts)\n\nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nAssets should be evaluated according to the their public, mainnet deployments; their deployed addresses are listed on the following pages:\n[\nhttps://developer.arbitrum.io/useful-addresses](https://developer.arbitrum.io/useful-addresses)\n[https://docs.arbitrum.foundation/deployment-addresses](https://docs.arbitrum.foundation/deployment-addresses)\n",
-      "impactsBody": "In addition to the versions of these smart contracts on GitHub, this bug bounty also covers the deployments of these contracts presently in use by the Arbitrum One and Arbitrum Nova networks to the extent that any vulnerability impacts said networks (e.g. if only Arbitrum One's deployment had out of date vulnerable code relating to the Data Availability Service which is not enabled on Arbitrum One and this made the vulnerability unusable to harm Arbitrum One, it would not be in scope). This bug bounty also covers any upgrades to those in scope deployments which have been scheduled by a passed on-chain constitutional DAO vote or the non-emergency security council multisig, as long as that action is currently waiting in the L2 governance timelock, the bridge to L1, or the L1 governance timelock (i.e. it has passed and is set to go through, and has not been canceled).\n",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": "However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nAssets should be evaluated according to the their public, mainnet deployments; their deployed addresses are listed on the following pages:\n[https://developer.arbitrum.io/useful-addresses](https://developer.arbitrum.io/useful-addresses)\n[https://docs.arbitrum.foundation/deployment-addresses](https://docs.arbitrum.foundation/deployment-addresses)",
+      "impactsBody": "In addition to the versions of these smart contracts on GitHub, this bug bounty also covers the deployments of these contracts presently in use by the Arbitrum One and Arbitrum Nova networks to the extent that any vulnerability impacts said networks (e.g. if only Arbitrum One's deployment had out of date vulnerable code relating to the Data Availability Service which is not enabled on Arbitrum One and this made the vulnerability unusable to harm Arbitrum One, it would not be in scope). This bug bounty also covers any upgrades to those in scope deployments which have been scheduled by a passed on-chain constitutional DAO vote or the non-emergency security council multisig, as long as that action is currently waiting in the L2 governance timelock, the bridge to L1, or the L1 governance timelock (i.e. it has passed and is set to go through, and has not been canceled).",
       "immunefiStandard": true,
       "tags": {
         "general": [
@@ -1543,21 +1544,58 @@
       "knownIssues": [],
       "knownIssueAssurance": false,
       "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
       "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
-      "customOutOfScopeInformation": null,
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+      "customOutOfScopeInformation": "__Informational__\n  - Changes or bugs found or related to Tutorials maintained by Offchain Labs\n  - Changes or bugs regarding the arbitrum-sdk\n  - Inconsistencies found between documentation and smart contracts and other blockchain code\n  - Best practice critiques\n  - Denial of Service (DoS) Attacks that only affects some nodes, or cause only some nodes to crash\n  - Problems caused by L1 Gas Pricing\n  - Issues that affect geth and are not caused by changes made in the Nitro implementation\n\n  - Issues that affect Arbitrum One and Arbitrum Nova will be treated as a single issue, and a report of the same issue with the only difference being \n    the network will be treated as a duplicate.",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "USDC",
       "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
+      "programCodebases": [
+        {
+          "id": 217,
+          "programId": 1976,
+          "title": "Arbitrum Smart Contracts",
+          "description": "Program Smart Contracts",
+          "url": "https://github.com/OffchainLabs/nitro-contracts",
+          "createdAt": "2024-11-05T13:49:51.963Z",
+          "updatedAt": "2024-11-05T13:49:51.963Z"
+        },
+        {
+          "id": 218,
+          "programId": 1976,
+          "title": "Arbitrum Smart Contracts",
+          "description": "Program Smart Contracts",
+          "url": "https://github.com/OffchainLabs/token-bridge-contracts",
+          "createdAt": "2024-11-05T13:50:22.538Z",
+          "updatedAt": "2024-11-05T13:50:22.538Z"
+        },
+        {
+          "id": 219,
+          "programId": 1976,
+          "title": "Arbitrum Smart Contracts",
+          "description": "Program Smart Contracts",
+          "url": "https://github.com/ArbitrumFoundation/governance",
+          "createdAt": "2024-11-05T13:50:42.610Z",
+          "updatedAt": "2024-11-05T13:50:42.610Z"
+        },
+        {
+          "id": 220,
+          "programId": 1976,
+          "title": "Arbitrum Smart Contracts",
+          "description": "Program Smart Contracts",
+          "url": "https://github.com/OffchainLabs/fund-distribution-contracts",
+          "createdAt": "2024-11-05T13:50:59.785Z",
+          "updatedAt": "2024-11-05T13:50:59.785Z"
+        }
+      ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {
