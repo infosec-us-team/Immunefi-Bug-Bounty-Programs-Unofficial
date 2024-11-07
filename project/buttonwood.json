@@ -7,34 +7,18 @@
       "project": "Buttonwood",
       "maxBounty": 500000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4KQLVXSS65vjjJRtqM1PbQ/85eeab1addc2bdf186d9f37032c21fe2/logo__black___1_.png",
-      "launchDate": "2021-10-28T04:15-05:00",
+      "launchDate": "2021-10-28T09:15:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-04-08T18:49:35.472Z",
+      "updatedDate": "2024-11-06T09:37:37.307Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $100,000 to USD $500,000",
-          "pocRequired": false
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $25,000 to USD $100,000",
-          "pocRequired": false
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $2,000 to USD $25,000",
-          "pocRequired": false
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "low",
-          "payout": "Up to USD $2,000",
-          "pocRequired": false
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 500000,
+          "minReward": 100000,
+          "rewardCalculationPercentage": 10
         }
       ],
       "audits": null,
@@ -249,9 +233,9 @@
       "programOverview": "Buttonwood is a DeFi project creating and implementing various DeFi protocols, including liquidity aggregation, price-stabilization wrappers, governance, peer-to-peer lending, and risk stratification.\n\nButtonwood’s approach to innovation focuses on composability—we believe the most useful smart contracts are building blocks, not walled gardens. They should be open-source and as minimal as possible—we seek to build primitives to be used by the entirety of digital finance, not platforms to extract value from the ecosystem. These protocols can be used and incorporated into any other protocol without restriction.\n\nFor more information about Buttonwood, please visit [https://button.foundation](https://button.foundation).\n\nThis bug bounty program is focused on their smart contracts and website and is focused on preventing the following impacts:\n\n  - Theft and freezing of principal\n  - Theft and freezing of unclaimed yield\n  - Theft and freezing of fees\n  - Griefing of core functionality",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nCritical smart contract bug reports are further capped at 10% of economic damage, primarily taking into consideration the funds at risk, but also considering other aspects such as PR and branding considerations, at the discretion of the team. However, there is a minimum reward of __USD 100 000__.\n\nBug reports of other severity levels will take into consideration the exploitability and impact of the bug reports had they been executed. Buttonwood reserves the right to make the final decision on the reward amount.\n\nPayouts are handled by the __Buttonwood__ team directly and are denominated in USD. However, payouts are done in  __ETH__ or __USDC__, at the discretion of the team.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third-party systems and applications (e.g., browser extensions) as well as websites (e.g., SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "All code of  Buttonwood can be found at [https://github.com/buttonwood-protocol](https://github.com/buttonwood-protocol). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nOnce deployed on mainnet, the smart contract addresses can be found at [https://docs.prl.one/buttonwood/developers/deployed-contracts/ethereum-mainnet](https://docs.prl.one/buttonwood/developers/deployed-contracts/ethereum-mainnet).\n\nOnly files in the parent \"contracts\" folder for both of the assets listed in this table are in scope.\n",
-      "impactsBody": "__Informational__\n  - Best practice critiques\n",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": "However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nOnce deployed on mainnet, the smart contract addresses can be found at [https://docs.prl.one/buttonwood/developers/deployed-contracts/ethereum-mainnet](https://docs.prl.one/buttonwood/developers/deployed-contracts/ethereum-mainnet).\n\nOnly files in the parent \"contracts\" folder for both of the assets listed in this table are in scope.",
+      "impactsBody": "__Informational__\n  - Best practice critiques",
       "immunefiStandard": true,
       "tags": {
         "general": [
@@ -313,22 +297,32 @@
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
       "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
-      "customOutOfScopeInformation": null,
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+      "customOutOfScopeInformation": "  - Best practice critiques",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "USDC or ETH",
       "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
+      "programCodebases": [
+        {
+          "id": 229,
+          "programId": 1669,
+          "title": "Buttonwood Smart Contract",
+          "description": "Program Smart Contract",
+          "url": "https://github.com/buttonwood-protocol",
+          "createdAt": "2024-11-06T09:27:04.707Z",
+          "updatedAt": "2024-11-06T09:27:04.707Z"
+        }
+      ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {
