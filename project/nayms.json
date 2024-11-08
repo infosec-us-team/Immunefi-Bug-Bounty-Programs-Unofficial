@@ -49,7 +49,98 @@
           "addedAt": "2023-09-18T12:00+03:00"
         }
       ],
-      "impacts": [],
+      "impacts": [
+        {
+          "id": 34,
+          "type": "smart_contract",
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
+        },
+        {
+          "id": 4472,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Manipulation of user roles inside the system via unvetted wallet or smart contract that may result in any high severity issue"
+        },
+        {
+          "id": 23,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
+        },
+        {
+          "id": 24,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Theft of unclaimed royalties"
+        },
+        {
+          "id": 25,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
+        },
+        {
+          "id": 26,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed royalties"
+        },
+        {
+          "id": 27,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Temporary freezing of funds"
+        },
+        {
+          "id": 31,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+        },
+        {
+          "id": 32,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Theft of gas"
+        },
+        {
+          "id": 33,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
+        },
+        {
+          "id": 14,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results"
+        },
+        {
+          "id": 4473,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield from an unvetted address"
+        },
+        {
+          "id": 4474,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Permanent freezing of funds from an unvetted address"
+        },
+        {
+          "id": 4475,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Protocol insolvency from an unvetted address"
+        },
+        {
+          "id": 4476,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Manipulation of user roles inside the system via unvetted wallet or smart contract that may result in any critical severity issue"
+        }
+      ],
       "programOverview": "The Nayms Platform is a single environment for insurtech brokers to run their operations. Brokers can connect to alternative capital and access underwriting not present in other markets, and by placing capital and risks for Segregated Accounts, new revenue streams are created where transaction rails are automated.\n\nFor more information about Nayms, please visit [https://nayms.com/.  ](https://nayms.com/)\n\nNayms provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__\n\nThe provision of KYC is required to receive a reward for this bug bounty program where the following information will be required to be provided:\n- Identity Document\n- Proof of Address \n\nKYC information is only required on confirmation of the validity of a bug report and will be handled by Sumsub (LINK).  Link to KYC submission is here: [https://in.sumsub.com/idensic/l/#/uni_5lU19AU1ouPfWGbI ](https://in.sumsub.com/idensic/l/#/uni_5lU19AU1ouPfWGbI)\n\n__Responsible Publication__\n\nNayms adheres to category 3: Approval Required. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nNayms adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms stated in this page.\n\n__Known Issue Assurance__\n\nNayms commits to providing Known Issue Assurance to bug submissions through their program. This means that Nayms will either disclose known issues publicly or at the very least privately via a self-reported bug submission in order to allow for a more objective and streamlined mediation process to prove that an issue is known. Otherwise, assuming the bug report itself is valid, it would result in the bug report being considered in-scope and due 100% of the reward with respect to the bug bounty program terms. \n",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 100,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 10,000 is to be rewarded in order to incentivize security researchers against withholding a bug report. For a bug to be deemed critical, the attack should happen from an unknown address. The setup in the poc may be done by admin accounts, but the attacking account must be unvetted.   \n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Previous Audits__\n\nNayms has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [2022-12-23 - Nayms - Quantstamp Report.pdf](https://drive.google.com/file/d/1_r2zX4e_8d_qussRdGbUWIdjTlWif2nC/view?usp=sharing)\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract, Critical Severity Level\n- Smart Contract, High Severity Level\n- Smart Contract, Medium Severity Level\n- Smart Contract, Low Severity Level\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Nayms team directly and are denominated in USD. However, payments are done in USDC. \n",
@@ -108,11 +199,11 @@
         "web_rewards": []
       },
       "websiteUrl": null,
-      "description": null,
+      "description": "The Nayms Platform is a single environment for insurtech brokers to run their operations. Brokers can connect to alternative capital and access underwriting not present in other markets, and by placing capital and risks for Segregated Accounts, new revenue streams are created where transaction rails are automated.",
       "githubUrl": null,
-      "feasibilityLimitations": null,
-      "prohibitedActivites": null,
-      "responsiblePublicationCategory": null,
+      "feasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
+      "prohibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
+      "responsiblePublicationCategory": "category_3",
       "knownIssues": [],
       "knownIssueAssurance": false,
       "defaultOutOfScopeBlockchain": null,
@@ -123,17 +214,21 @@
       "defaultFeasibilityLimitations": null,
       "customOutOfScopeInformation": null,
       "customProhibitedActivities": [],
-      "rewardsTokenNetwork": null,
-      "rewardsToken": null,
-      "eligibilityCriteria": null,
+      "rewardsTokenNetwork": "Ethereum",
+      "rewardsToken": "USDC",
+      "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [],
       "programDocumentations": [],
-      "primacy": null,
+      "primacy": "primacy_of_rules",
       "newProgramRewardsEnabled": false,
       "premiumTriaging": false
     },
-    "project": null,
+    "project": {
+      "premiumTriaging": false,
+      "isSafeHarborActive": false,
+      "performanceMetrics": {}
+    },
     "metaData": {
       "title": "Nayms Bug Bounties",
       "description": "Find bugs and vulnerabilities on Nayms and get paid up to $100,000.",
