@@ -7,34 +7,30 @@
       "project": "Nayms",
       "maxBounty": 100000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/707hmsddE43A2tZgQBimyD/54bd7ceb01e5193164cbf464c51d4957/nayms-logo.png",
-      "launchDate": "2023-09-18T12:00+03:00",
+      "launchDate": "2023-09-18T09:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-04-08T18:45:56.154Z",
+      "updatedDate": "2024-11-08T11:02:13.473Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $10,000 to USD $100,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 100000,
+          "minReward": 10000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $5,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $2,000",
-          "pocRequired": true
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 2000
         }
       ],
       "audits": null,
@@ -46,7 +42,7 @@
           "description": "Nayms",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-09-18T12:00+03:00"
+          "addedAt": "2023-09-18T09:00:00.000Z"
         }
       ],
       "impacts": [
@@ -141,11 +137,11 @@
           "title": "Manipulation of user roles inside the system via unvetted wallet or smart contract that may result in any critical severity issue"
         }
       ],
-      "programOverview": "The Nayms Platform is a single environment for insurtech brokers to run their operations. Brokers can connect to alternative capital and access underwriting not present in other markets, and by placing capital and risks for Segregated Accounts, new revenue streams are created where transaction rails are automated.\n\nFor more information about Nayms, please visit [https://nayms.com/.  ](https://nayms.com/)\n\nNayms provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__\n\nThe provision of KYC is required to receive a reward for this bug bounty program where the following information will be required to be provided:\n- Identity Document\n- Proof of Address \n\nKYC information is only required on confirmation of the validity of a bug report and will be handled by Sumsub (LINK).  Link to KYC submission is here: [https://in.sumsub.com/idensic/l/#/uni_5lU19AU1ouPfWGbI ](https://in.sumsub.com/idensic/l/#/uni_5lU19AU1ouPfWGbI)\n\n__Responsible Publication__\n\nNayms adheres to category 3: Approval Required. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nNayms adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms stated in this page.\n\n__Known Issue Assurance__\n\nNayms commits to providing Known Issue Assurance to bug submissions through their program. This means that Nayms will either disclose known issues publicly or at the very least privately via a self-reported bug submission in order to allow for a more objective and streamlined mediation process to prove that an issue is known. Otherwise, assuming the bug report itself is valid, it would result in the bug report being considered in-scope and due 100% of the reward with respect to the bug bounty program terms. \n",
+      "programOverview": "The Nayms Platform is a single environment for insurtech brokers to run their operations. Brokers can connect to alternative capital and access underwriting not present in other markets, and by placing capital and risks for Segregated Accounts, new revenue streams are created where transaction rails are automated.\n\nFor more information about Nayms, please visit [https://nayms.com/.  ](https://nayms.com/)\n\nNayms provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__\n\nThe provision of KYC is required to receive a reward for this bug bounty program where the following information will be required to be provided:\n- Identity Document\n- Proof of Address \n\nKYC information is only required on confirmation of the validity of a bug report and will be handled by Sumsub (LINK).  Link to KYC submission is here: [https://in.sumsub.com/idensic/l/#/uni_5lU19AU1ouPfWGbI ](https://in.sumsub.com/idensic/l/#/uni_5lU19AU1ouPfWGbI)\n\n\n__Primacy of Impact vs Primacy of Rules__\n\nNayms adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms stated in this page.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 100,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 10,000 is to be rewarded in order to incentivize security researchers against withholding a bug report. For a bug to be deemed critical, the attack should happen from an unknown address. The setup in the poc may be done by admin accounts, but the attacking account must be unvetted.   \n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Previous Audits__\n\nNayms has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [2022-12-23 - Nayms - Quantstamp Report.pdf](https://drive.google.com/file/d/1_r2zX4e_8d_qussRdGbUWIdjTlWif2nC/view?usp=sharing)\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract, Critical Severity Level\n- Smart Contract, High Severity Level\n- Smart Contract, Medium Severity Level\n- Smart Contract, Low Severity Level\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Nayms team directly and are denominated in USD. However, payments are done in USDC. \n",
-      "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Smart Contracts__\n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n- Best practice recommendations\n\nThe following activities are prohibited by this bug bounty program:\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
-      "assetsBodyV2": "All code of Nayms can be found at [https://github.com/nayms/contracts-v3. ](https://github.com/nayms/contracts-v3). Documentation for the assets provided in the table can be found at [https://nayms.gitbook.io/nayms-docs/.](https://nayms.gitbook.io/nayms-docs/)  \n\nMentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n",
+      "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 100,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 10,000 is to be rewarded in order to incentivize security researchers against withholding a bug report. For a bug to be deemed critical, the attack should happen from an unknown address. The setup in the poc may be done by admin accounts, but the attacking account must be unvetted.   \n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Previous Audits__\n\nNayms has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [2022-12-23 - Nayms - Quantstamp Report.pdf](https://drive.google.com/file/d/1_r2zX4e_8d_qussRdGbUWIdjTlWif2nC/view?usp=sharing)\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract, Critical Severity Level\n- Smart Contract, High Severity Level\n- Smart Contract, Medium Severity Level\n- Smart Contract, Low Severity Level\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Nayms team directly and are denominated in USD. However, payments are done in USDC.",
+      "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Smart Contracts__\n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n- Best practice recommendations\n\nThe following activities are prohibited by this bug bounty program:\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": "Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -207,21 +203,41 @@
       "knownIssues": [],
       "knownIssueAssurance": false,
       "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
       "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
       "customOutOfScopeInformation": null,
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "USDC",
       "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
-      "programDocumentations": [],
+      "programCodebases": [
+        {
+          "id": 237,
+          "programId": 1956,
+          "title": "Nayms Codebase",
+          "description": "Program Codebase",
+          "url": "ttps://github.com/nayms/contracts-v3",
+          "createdAt": "2024-11-08T10:56:01.383Z",
+          "updatedAt": "2024-11-08T10:56:01.383Z"
+        }
+      ],
+      "programDocumentations": [
+        {
+          "id": 137,
+          "programId": 1956,
+          "title": "Nayms Documentation",
+          "description": "Program Documentation",
+          "url": "https://nayms.gitbook.io/nayms-docs/",
+          "createdAt": "2024-11-08T10:56:30.297Z",
+          "updatedAt": "2024-11-08T10:56:30.297Z"
+        }
+      ],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {
