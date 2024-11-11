@@ -7,34 +7,37 @@
       "project": "Stellar",
       "maxBounty": 250000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3ayg1ykT9dYUXmROszIxTv/ad538cadc05e8f1a489e580df21b0373/Stellar_Stacked.png",
-      "launchDate": "2023-11-29T15:00+03:00",
+      "launchDate": "2023-11-29T12:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2023-12-06T15:19:15.208Z",
+      "updatedDate": "2024-11-10T13:06:18.636Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "blockchain_dlt",
-          "level": "critical",
-          "payout": "USD $50,000 to USD $250,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 250000,
+          "minReward": 50000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "high",
-          "payout": "USD $10,000 to USD $50,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 50000,
+          "minReward": 10000
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "medium",
-          "payout": "USD $5,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -46,7 +49,7 @@
           "description": "Stellar core node",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-29T15:00+03:00"
+          "addedAt": "2023-11-29T12:00:00.000Z"
         },
         {
           "id": "4UQtxpIqZC1tXGnqk2qPOb",
@@ -55,7 +58,7 @@
           "description": "Soroban Rust SDK",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-29T15:00+03:00"
+          "addedAt": "2023-11-29T12:00:00.000Z"
         },
         {
           "id": "1tbbJ8EiXqZ017rYMhDqPH",
@@ -64,7 +67,7 @@
           "description": "Soroban contract engine environment",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-29T15:00+03:00"
+          "addedAt": "2023-11-29T12:00:00.000Z"
         },
         {
           "id": "777nHb1Bb2fz3Npg7UbXfr",
@@ -73,7 +76,7 @@
           "description": "Soroban CLI and RPC server",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-29T15:00+03:00"
+          "addedAt": "2023-11-29T12:00:00.000Z"
         },
         {
           "id": "55OHbrE4HJTZSm8vKDt6BA",
@@ -82,7 +85,7 @@
           "description": "Soroban JS client",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-29T15:00+03:00"
+          "addedAt": "2023-11-29T12:00:00.000Z"
         },
         {
           "id": "ecDVnRM8bK1oLD8UZIrJB",
@@ -91,7 +94,7 @@
           "description": "Rust XDR library",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-29T15:00+03:00"
+          "addedAt": "2023-11-29T12:00:00.000Z"
         },
         {
           "id": "7AnUBCnAjcdqWVxYKdYJOS",
@@ -100,7 +103,7 @@
           "description": "Rust strkeys library",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-29T15:00+03:00"
+          "addedAt": "2023-11-29T12:00:00.000Z"
         },
         {
           "id": "3gXfNWvrROcs21KUgfsN9N",
@@ -109,7 +112,7 @@
           "description": "Rust crate git version management library",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-29T15:00+03:00"
+          "addedAt": "2023-11-29T12:00:00.000Z"
         },
         {
           "id": "5r54hboA7fwxn3HGbTcIjj",
@@ -118,7 +121,7 @@
           "description": "Bytes Array library",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-29T15:00+03:00"
+          "addedAt": "2023-11-29T12:00:00.000Z"
         },
         {
           "id": "3wOWwDuLgwbNBxnG7G64fb",
@@ -127,7 +130,7 @@
           "description": "Wasmi fork",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-29T15:00+03:00"
+          "addedAt": "2023-11-29T12:00:00.000Z"
         }
       ],
       "impacts": [
@@ -210,11 +213,11 @@
           "title": "Permanent freezing of funds (fix requires hardfork)"
         }
       ],
-      "programOverview": "Stellar is a layer-1 open-source, decentralized, peer-to-peer blockchain network that provides a framework for developers to create applications, issue assets, and connect to existing financial rails. Stellar is designed to enable creators, innovators, and developers to build projects on the network that can interoperate with each other.\n\nSoroban is a smart contracts platform that is designed to integrate with and work alongside the Stellar blockchain. It is currently live on Testnet.\n\nFor more information about Stellar, please visit [https://stellar.org/](https://stellar.org/) and [https://developers.stellar.org/](https://developers.stellar.org/)\n\nStellar provides rewards in XLM, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__ \n\nStellar will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n- Tax form (W-9/W-8BEN/W-8BEN-E)\n\n__Eligibility Criteria__ \n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nStellar adheres to category 3: Approval Required. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication ](https://immunefi.com/responsible-publication/)page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nStellar adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms stated in this page.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n__Known Issue Assurance__\n\nStellar commits to providing Known Issue Assurance to bug submissions through their program. This means that Stellar will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. Researchers should check the github repositories issues marked with a security label to make sure a vulnerability has not been published already.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards ](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards)which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Stellar has satisfied the requirements for the [Immunefi Standard Badge.](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209)\n",
+      "programOverview": "Stellar is a layer-1 open-source, decentralized, peer-to-peer blockchain network that provides a framework for developers to create applications, issue assets, and connect to existing financial rails. Stellar is designed to enable creators, innovators, and developers to build projects on the network that can interoperate with each other.\n\nSoroban is a smart contracts platform that is designed to integrate with and work alongside the Stellar blockchain. It is currently live on Testnet.\n\nFor more information about Stellar, please visit [https://stellar.org/](https://stellar.org/) and [https://developers.stellar.org/](https://developers.stellar.org/)\n\nStellar provides rewards in XLM, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__ \n\nStellar will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n- Tax form (W-9/W-8BEN/W-8BEN-E)\n\n\n__Primacy of Impact vs Primacy of Rules__\n\nStellar adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms stated in this page.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. Researchers should check the github repositories issues marked with a security label to make sure a vulnerability has not been published already.\n\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Stellar has satisfied the requirements for the [Immunefi Standard Badge.](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209)",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\nFor critical Blockchain/DLT bugs, the reward amount is 10% of the funds directly affected, capped at the maximum critical reward USD 250 000. However, a minimum reward of USD 50 000 is to be rewarded in order to incentivize security researchers against withholding on a bug report.\n\nFor critical Blockchain/DLT bugs with a  non-funds-at risk impact, the reward will be paid out as follows: \n- Network not being able to confirm new transactions (total network shutdown)\nUSD 50 000\n- Unintended permanent chain split requiring hard fork (network partition requiring hard fork)\nUSD 50 000\n- Permanent freezing of funds (fix requires hardfork)\nUSD 50 000\n\nFor high Blockchain/DLT impacts, the reward will be paid out as follows: \n- Unintended chain split (network partition)\nUSD 50 000 \n- Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments\nUSD 30 000\n- Causing network processing nodes to process transactions from the mempool beyond set parameters\nUSD 20 000\n- RPC API crash affecting projects with greater than or equal to 25% of the market capitalization on top of the respective layer\nUSD 30 000\n\n__Other term__\n\nFor the asset ([https://github.com/stellar/wasmi](https://github.com/stellar/wasmi)), Stellar uses a fork of parity wasmi with few patches for Soroban. We encourage researchers to submit vulnerabilities for wasmi but we retain the right to declare that a vulnerability is out of scope and should be reported to Parity Tech instead.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Stellar team directly and are denominated in USD. However, payments are done in XLM.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability. \n",
-      "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories:__\n\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Blockchain/DLT & Smart Contract Specific:__\n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n\n__Prohibited Activities:__\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
-      "assetsBodyV2": "Stellar’s codebase can be found at [https://github.com/orgs/stellar/repositories. ](https://github.com/orgs/stellar/repositories)Documentation and further resources can be found on [https://stellar.org/developers](https://stellar.org/developers) and [https://soroban.stellar.org/ ](https://soroban.stellar.org/)",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\nFor critical Blockchain/DLT bugs, the reward amount is 10% of the funds directly affected, capped at the maximum critical reward USD 250 000. However, a minimum reward of USD 50 000 is to be rewarded in order to incentivize security researchers against withholding on a bug report.\n\nFor critical Blockchain/DLT bugs with a  non-funds-at risk impact, the reward will be paid out as follows: \n- Network not being able to confirm new transactions (total network shutdown)\nUSD 50 000\n- Unintended permanent chain split requiring hard fork (network partition requiring hard fork)\nUSD 50 000\n- Permanent freezing of funds (fix requires hardfork)\nUSD 50 000\n\nFor high Blockchain/DLT impacts, the reward will be paid out as follows: \n- Unintended chain split (network partition)\nUSD 50 000 \n- Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments\nUSD 30 000\n- Causing network processing nodes to process transactions from the mempool beyond set parameters\nUSD 20 000\n- RPC API crash affecting projects with greater than or equal to 25% of the market capitalization on top of the respective layer\nUSD 30 000\n\n__Other term__\n\nFor the asset ([https://github.com/stellar/wasmi](https://github.com/stellar/wasmi)), Stellar uses a fork of parity wasmi with few patches for Soroban. We encourage researchers to submit vulnerabilities for wasmi but we retain the right to declare that a vulnerability is out of scope and should be reported to Parity Tech instead.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Stellar team directly and are denominated in USD. However, payments are done in XLM.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": null,
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -274,12 +277,12 @@
       "responsiblePublicationCategory": "category_3",
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
       "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
       "customOutOfScopeInformation": null,
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Stellar",
@@ -291,10 +294,30 @@
         "no_auditor"
       ],
       "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
-      "programDocumentations": [],
+      "programCodebases": [
+        {
+          "id": 266,
+          "programId": 2125,
+          "title": "Stellar’s Codebase",
+          "description": "Program Codebase",
+          "url": "https://github.com/orgs/stellar/repositories",
+          "createdAt": "2024-11-10T13:02:19.021Z",
+          "updatedAt": "2024-11-10T13:02:19.021Z"
+        }
+      ],
+      "programDocumentations": [
+        {
+          "id": 148,
+          "programId": 2125,
+          "title": "Stellar’s Documentation",
+          "description": "Documentation and Further Resources",
+          "url": "https://stellar.org/developers",
+          "createdAt": "2024-11-10T13:03:25.942Z",
+          "updatedAt": "2024-11-10T13:03:25.942Z"
+        }
+      ],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

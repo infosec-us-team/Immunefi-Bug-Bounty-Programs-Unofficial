@@ -6,29 +6,32 @@
       "slug": "mantlelsp",
       "project": "Mantle LSP",
       "maxBounty": 500000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/vtRUtB9ZpwHr7SECKaCWh/77fc8109b975a3fc368be61cffde6628/Screenshot_2023-11-20_at_9.49.06_PM.png",
-      "launchDate": "2023-11-28T17:00+03:00",
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2zhMGEztNqbnCt5LlxqcWl/ccaa4fb1144b4e482d6e7b9225680ff9/Screenshot_2023-11-20_at_9_Small.png",
+      "launchDate": "2023-11-28T14:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2023-11-28T13:26:16.835Z",
+      "updatedDate": "2024-11-10T19:45:42.747Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $100,000 to USD $500,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 500000,
+          "minReward": 100000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $20,000 to USD $100,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 100000,
+          "minReward": 20000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $5,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         }
       ],
       "audits": null,
@@ -40,7 +43,7 @@
           "description": "mETH Token L1",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-28T17:00+03:00"
+          "addedAt": "2023-11-28T14:00:00.000Z"
         },
         {
           "id": "37m98keRlNBTDXKyHueDfE",
@@ -49,7 +52,7 @@
           "description": "Staking",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-28T17:00+03:00"
+          "addedAt": "2023-11-28T14:00:00.000Z"
         },
         {
           "id": "4sRLIVbU6rER35yGjrd7Jt",
@@ -58,7 +61,7 @@
           "description": "UnstakeRequestsManager",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-28T17:00+03:00"
+          "addedAt": "2023-11-28T14:00:00.000Z"
         },
         {
           "id": "7JqZIEPDoK0coggJOZasoE",
@@ -67,7 +70,7 @@
           "description": "Oracle",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-28T17:00+03:00"
+          "addedAt": "2023-11-28T14:00:00.000Z"
         },
         {
           "id": "gYpPymDelDthKYa0SpJBf",
@@ -76,7 +79,7 @@
           "description": "OracleQuorumManager",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-28T17:00+03:00"
+          "addedAt": "2023-11-28T14:00:00.000Z"
         },
         {
           "id": "6Qt22htDNfYHPB0nH2Uqig",
@@ -85,7 +88,7 @@
           "description": "ReturnsAggregator",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-28T17:00+03:00"
+          "addedAt": "2023-11-28T14:00:00.000Z"
         },
         {
           "id": "EpkmvStN6u4CT2Cdb4GFx",
@@ -94,7 +97,7 @@
           "description": "ConsensusLayerReceiver",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-28T17:00+03:00"
+          "addedAt": "2023-11-28T14:00:00.000Z"
         },
         {
           "id": "5nKV3q03XTMkh84CuUM6Ho",
@@ -103,7 +106,7 @@
           "description": "ExecutionLayerReceiver",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-28T17:00+03:00"
+          "addedAt": "2023-11-28T14:00:00.000Z"
         },
         {
           "id": "4rfw9HXMp3IjbTp3dphBl8",
@@ -112,7 +115,7 @@
           "description": "Pauser",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-28T17:00+03:00"
+          "addedAt": "2023-11-28T14:00:00.000Z"
         },
         {
           "id": "6QXO4Eph31e37Ox1pvNMMR",
@@ -121,7 +124,7 @@
           "description": "mETH Token L2",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-11-28T17:00+03:00"
+          "addedAt": "2023-11-28T14:00:00.000Z"
         }
       ],
       "impacts": [
@@ -180,11 +183,11 @@
           "title": "Permanent freezing of staked funds"
         }
       ],
-      "programOverview": "Mantle Liquid Staking Protocol (LSP) is a permissionless, non-custodial ETH liquid staking protocol deployed on Ethereum L1 and[ governed by Mantle. ](https://docs.mantle.xyz/governance/introduction/overview)Mantle Staked Ether (mETH) serves as the value-accumulating receipt token.\n\nThe LSP Bug Bounty Program is a program designed to incentivize security researchers to identify and report vulnerabilities in the LSP protocol. The program is open to all security researchers, regardless of experience or affiliation.\n\nFor more information about Mantle LSP, please visit [https://docs.mantle.xyz/meth/introduction/overview](https://docs.mantle.xyz/meth/introduction/overview)\n\nMantle LSP provides rewards in USDC, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__Responsible Publication__\n\nMantle LSP adheres to category 3: Approval Required. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nMantle LSP adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms stated in this page.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n__Known Issue Assurance__\n\nMantle LSP commits to providing Known Issue Assurance to bug submissions through their program. This means that Mantle  LSP will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\nKnown issues:\n- [https://github.com/lidofinance/lido-dao/issues/803](https://github.com/lidofinance/lido-dao/issues/803)\n\n__Previous Audits__\n\nMantle LSP’s completed audit reports can be found at [https://docs.mantle.xyz/meth/security/audits.](https://docs.mantle.xyz/meth/security/audits) Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Mantle LSP has satisfied the requirements for the [Immunefi Standard Badge.](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209)\n",
+      "programOverview": "Mantle Liquid Staking Protocol (LSP) is a permissionless, non-custodial ETH liquid staking protocol deployed on Ethereum L1 and[ governed by Mantle. ](https://docs.mantle.xyz/governance/introduction/overview)Mantle Staked Ether (mETH) serves as the value-accumulating receipt token.\n\nThe LSP Bug Bounty Program is a program designed to incentivize security researchers to identify and report vulnerabilities in the LSP protocol. The program is open to all security researchers, regardless of experience or affiliation.\n\nFor more information about Mantle LSP, please visit [https://docs.mantle.xyz/meth/introduction/overview](https://docs.mantle.xyz/meth/introduction/overview)\n\nMantle LSP provides rewards in USDC, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n\n__Primacy of Impact vs Primacy of Rules__\n\nMantle LSP adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms stated in this page.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n__Known Issue Assurance__\n\nMantle LSP commits to providing Known Issue Assurance to bug submissions through their program. This means that Mantle  LSP will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\nKnown issues:\n- [https://github.com/lidofinance/lido-dao/issues/803](https://github.com/lidofinance/lido-dao/issues/803)\n\n__Previous Audits__\n\nMantle LSP’s completed audit reports can be found at [https://docs.mantle.xyz/meth/security/audits.](https://docs.mantle.xyz/meth/security/audits) Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Mantle LSP has satisfied the requirements for the [Immunefi Standard Badge.](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209)",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 500 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 100 000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attacks within the first hour will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n__Reward Calculation for High Level Reports__\n\n- High vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are considered at the full amount of funds at risk, capped at the maximum high reward. This is to incentivize security researchers to uncover and responsibly disclose vulnerabilities that may have not have significant monetary value today, but could still be damaging to the project if it goes unaddressed.   \n- In the event of temporary freezing, the reward increases at a multiplier of two from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lenghents, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.    \n\n__Reward Payment Terms__\n\nPayouts are handled by the Mantle LSP team directly and are denominated in USD. However, payments are done in USDC\n",
-      "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories:__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Any issues identified in Published Audits [https://docs.mantle.xyz/meth/security/audits](https://docs.mantle.xyz/meth/security/audits)\n\n__Blockchain/DLT & Smart Contract Specific:__\n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n- Impact of future improper configuration of contracts that are not deployed\n- Impacts from an assumption of a malicious majority of oracles\n- Best practice recommendations\n- Gas optimization\n\n__Prohibited Activities:__\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
-      "assetsBodyV2": "Mantle LSP’s codebase can be found at [https://github.com/mantle-lsp/. ](https://github.com/mantle-lsp/)Documentation and further resources can be found on [https://docs.mantle.xyz/meth/introduction/overview. ](https://docs.mantle.xyz/meth/introduction/overview)",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 500 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 100 000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attacks within the first hour will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n__Reward Calculation for High Level Reports__\n\n- High vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are considered at the full amount of funds at risk, capped at the maximum high reward. This is to incentivize security researchers to uncover and responsibly disclose vulnerabilities that may have not have significant monetary value today, but could still be damaging to the project if it goes unaddressed.   \n- In the event of temporary freezing, the reward increases at a multiplier of two from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lenghents, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.    \n\n__Reward Payment Terms__\n\nPayouts are handled by the Mantle LSP team directly and are denominated in USD. However, payments are done in USDC",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": null,
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -239,22 +242,42 @@
       "responsiblePublicationCategory": "category_3",
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
       "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
-      "customOutOfScopeInformation": null,
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+      "customOutOfScopeInformation": "- Any issues identified in Published Audits [https://docs.mantle.xyz/meth/security/audits](https://docs.mantle.xyz/meth/security/audits)\n- Impact of future improper configuration of contracts that are not deployed\n- Impacts from an assumption of a malicious majority of oracles\n- Gas optimization",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "USDC",
       "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
-      "programDocumentations": [],
+      "programCodebases": [
+        {
+          "id": 267,
+          "programId": 1911,
+          "title": "Mantle Codebase",
+          "description": "Program Codebase",
+          "url": "https://github.com/mantle-lsp/",
+          "createdAt": "2024-11-10T19:39:25.103Z",
+          "updatedAt": "2024-11-10T19:39:25.103Z"
+        }
+      ],
+      "programDocumentations": [
+        {
+          "id": 149,
+          "programId": 1911,
+          "title": "Mantle Documentation",
+          "description": "Program Documentation",
+          "url": "https://docs.mantle.xyz/meth/introduction/overview",
+          "createdAt": "2024-11-10T19:39:47.250Z",
+          "updatedAt": "2024-11-10T19:39:47.250Z"
+        }
+      ],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {
