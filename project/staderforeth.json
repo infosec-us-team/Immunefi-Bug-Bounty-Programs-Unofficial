@@ -9,26 +9,28 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1iQDInT514hzL2832OmJSQ/81275804e386d69c44048a90c690eecb/j-TUyZEq_400x400.jpg",
       "launchDate": "2023-07-08T11:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-24T09:51:07.561Z",
+      "updatedDate": "2024-11-11T13:55:14.406Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $100,000 to USD $1,000,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 1000000,
+          "minReward": 100000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $100,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 100000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $20,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 20000
         }
       ],
       "audits": null,
@@ -309,8 +311,8 @@
       "programOverview": "Stader is a non-custodial smart contract based staking platform that helps you conveniently discover and access staking solutions.\n\nStader has built liquid staking tokens on Polygon, BNB, Fantom, among others.\n\nFor more information about Stader for ETH, please visit [https://www.staderlabs.com/eth/](https://www.staderlabs.com/eth/)\n\nStader provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n\n__Primacy of Impact vs Primacy of Rules__\n\nStader adheres to the Primacy of Impact for the following severity levels:\n- Smart Contract - Critical\n- Smart Contract - High\n\nIf a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTestnet and mock files are not covered under the Primacy of Impact.\n\nAll other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n__Immunefi Standard Badge__\n\nStader has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-), which is given to projects that adhere to our best practices.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 1 000 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 100 000 is to be rewarded in order to incentivize security researchers against withholding a bug report.   \n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs acknowledged below are not eligible for any reward through the bug bounty program. \n- SD Auction final bid price can be gamed by MEV optimization. (This is intended)\n- Node Operator can avoid small portion of validator penalty by exiting at the right time. (This is limited to once per validator and cost of exiting and reactivation does not justify penalty saved)\n- ER update via chainlink may return incorrect or state data as it is not implemented yet, Currently ER data is submitted by oracle members.\n- Protocol will not benefit from slashing mechanism when remaining penalty bigger than minThreshold of SD \n\n__Previous Audits__\n\nStader has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [https://www.staderlabs.com/audits/ethereum/smartcontracts/ETHx_SmartContract_Audit_Report_by_Halborn_v2.pdf](https://www.staderlabs.com/audits/ethereum/smartcontracts/ETHx_SmartContract_Audit_Report_by_Halborn_v2.pdf)\n- [https://www.staderlabs.com/audits/ethereum/smartcontracts/ETHx_SmartContract_audit_report_by_SigmaPrime_v2.pdf](https://www.staderlabs.com/audits/ethereum/smartcontracts/ETHx_SmartContract_audit_report_by_SigmaPrime_v2.pdf)\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract - Critical\n- Smart Contract - High\n- Smart Contract - Medium\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules). Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Stader team directly and are denominated in USD. However, payments are done in USDC.",
-      "outOfScopeAndRules": ".",
-      "assetsBodyV2": ".",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": null,
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -402,8 +404,8 @@
           "updatedAt": "2024-10-24T09:43:43.483Z"
         }
       ],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_impact",
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

@@ -14,21 +14,24 @@
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $100,000 - USD $1,000,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 1000000,
+          "minReward": 100000
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $20,000 - USD $100,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 100000,
+          "minReward": 20000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $5,000 - USD $20,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "range",
+          "maxReward": 20000,
+          "minReward": 5000
         }
       ],
       "audits": null,
@@ -303,7 +306,7 @@
         }
       ],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

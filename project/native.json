@@ -9,26 +9,28 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5tYyP0VwW5SK1CfGEAdmj0/8214822c173633567e58ed96f24609f2/image__9_.png",
       "launchDate": "2024-07-01T01:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-25T19:26:38.098Z",
+      "updatedDate": "2024-11-11T13:22:51.879Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $20,000 - USD $50,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 50000,
+          "minReward": 20000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "Up to USD $2,500",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "up_to",
+          "maxReward": 2500
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "Up to USD $2,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "up_to",
+          "maxReward": 2000
         }
       ],
       "audits": null,
@@ -190,7 +192,7 @@
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 50 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 20 000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Repeatable Attack Limitations__\n\n- If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n- For critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Level Reports__\n\n- High vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of USD 10 000 to USD 20 000 depending on the funds at risk, capped at the maximum high reward.  \n- In the event of temporary freezing, the reward doubles from the full frozen value for every additional [24h] that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Native team directly and are denominated in USD. However, payments are done in USDC on Ethereum\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
       "outOfScopeAndRules": ".",
-      "assetsBodyV2": ".",
+      "assetsBodyV2": null,
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -282,8 +284,8 @@
           "updatedAt": "2024-10-25T19:23:07.510Z"
         }
       ],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_impact",
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

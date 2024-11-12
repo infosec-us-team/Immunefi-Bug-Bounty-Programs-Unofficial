@@ -9,32 +9,34 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/66mTctNPGQxwpoc8NxKOzc/db72f4f7f79f09e6b26198097ee59b76/ssv.png",
       "launchDate": "2023-09-11T16:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-25T10:38:20.928Z",
+      "updatedDate": "2024-11-11T13:35:59.530Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $50,000 to USD $1,000,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 1000000,
+          "minReward": 50000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $30,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 30000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $10,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 10000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $1,500",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1500
         }
       ],
       "audits": null,
@@ -132,8 +134,8 @@
       "programOverview": "The ssv.network is a fully decentralized, open-source, and trustless DVT Network that provides a reusable infrastructure solution for decentralizing Ethereum validators.\n\nThe protocol supports Ethereum’s validation layer by distributing validator operations to the network’s multiple non-trusting nodes (a.k.a Operators). Clusters of operator nodes operate validators on behalf of the staker and simultaneously help solve the fundamental issues of centralization, redundancy, and security that exist within Ethereum’s PoS consensus.\n\nFor more information about ssv.network, please visit [https://ssv.network/ ](https://ssv.network/) \n\nssv.network provides rewards in SSV. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__\n\nThe provision of KYC is required to receive a reward for this bug bounty program where the following information will be required to be provided:\n- Official government identification document (Passport, ID Card) of the bounty’s recipient \n- Up to date proof of address document (utility bill, Bank statement etc) \n\nKYC information is only required on confirmation of the validity of a bug report.   \n\n\n__Primacy of Impact vs Primacy of Rules__\n\nssv.network adheres to the Primacy of Impact for the following severity levels:\n- Smart Contract - Critical\n- Smart Contract - High\n- Smart Contract - Medium\n- Smart Contract - Low\n\nIf a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTestnet and mock files are not covered under the Primacy of Impact.\n\nAll other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n__Immunefi Standard Badge__\n\nssv.network has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-), which is given to projects that adhere to our best practices.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below.\n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 1 000 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 50 000 is to be rewarded in order to incentivize security researchers against withholding a bug report.  \n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Previous Audits__\n\nssv.network has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [https://github.com/bloxapp/ssv-network/tree/main/contracts/audits](https://github.com/bloxapp/ssv-network/tree/main/contracts/audits)\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract - Critical\n- Smart Contract - High\n- Smart Contract - Medium\n- Smart Contract - Low\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Other Terms and Information__\n\n- Disclosure of vulnerabilities will require the approval of the SSV DAO Grants committee\n- Payments for approved reports will be sent on the first half of the month following the report approval \n- Up to 150 000 SSV token are available as a total reward pool for this BBP\n\n__Reward Payment Terms__\n\nPayouts are handled by the ssv.network team directly and are denominated in USD. However, payments are done in SSV.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability. For avoidance of doubt, if the reward amount is USD 5 000 and the average price is USD 1.75 per token, then the reward will be 2857.142857 units of that token.",
-      "outOfScopeAndRules": ".",
-      "assetsBodyV2": ".",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": null,
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -241,8 +243,8 @@
           "updatedAt": "2024-10-25T10:36:00.438Z"
         }
       ],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_impact",
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

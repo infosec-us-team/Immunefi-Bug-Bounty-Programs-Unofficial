@@ -9,26 +9,28 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7AcBUADA7IW95jTvkwxxF5/1b175e555e12b85bf5f6fb4c0ef3104c/tc_symbol_OnDark_color.jpg",
       "launchDate": "2022-11-03T18:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-18T12:15:17.002Z",
+      "updatedDate": "2024-11-11T08:59:59.289Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $50,000 to USD $200,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 200000,
+          "minReward": 50000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $40,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 40000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $7,500",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 7500
         }
       ],
       "audits": null,
@@ -498,7 +500,7 @@
       "programOverview": "Toucan is building technology to finance climate action at scale. They are developing infrastructure to move carbon credits onto open blockchains, which helps make carbon markets more transparent, efficient, accessible, and scalable. \n\nToucans infrastructure is composed of four key modules:\n  1. The Carbon Bridge verifiably 1:1 tokenizes carbon credits from a supported registry and turns them into ERC-20 tokens that anyone can use. More than 20m carbon credits (or around 85 % of all on-chain carbon credits) have been tokenized using Toucans bridge\n  2. Their Carbon Pools are a way of grouping together tokens linked to credits with similar attributes. The result: standardized and deeply liquid carbon reference tokens (like NCT) that can be easily priced and traded on cryptocurrency exchanges.\n  3. Information about all tokenized carbon credits is stored on Toucan's Open Carbon Registry. This is a unified global ledger with consistent data standards to be used across organizations. On the Open Carbon Registry, everyone can view the project information, trading history and retirement details of all tokenized carbon credits. The Open Carbon Registry brings much-needed transparency into a previously opaque market.\n  4. The retirement module helps companies retire carbon credits with the full transparency of a public blockchain.\n\nFor more information about Toucan, please visit [https://toucan.earth/](https://toucan.earth/).",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nRewards for critical smart contract vulnerabilities are further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum reward of __USD 50 000__ and a maximum reward of __USD 200 000__.\n\nKnown issues highlighted in the following audit reports are considered out of scope: \n  - [https://byterocket.com/audit/toucan-protocol](https://byterocket.com/audit/toucan-protocol)\n  - [https://byterocket.com/audit/toucan-protocol-nct](https://byterocket.com/audit/toucan-protocol-nct)\n  - [https://byterocket.com/audit/toucan-protocol-retirement-certificates](https://byterocket.com/audit/toucan-protocol-retirement-certificates)\n\nPayouts are handled by the __Toucan__ team directly and are denominated in USD. However, payouts are done in __USDC (ERC20)__.  All payouts require invoice with email and crypto wallet address.",
-      "outOfScopeAndRules": ".",
+      "outOfScopeAndRules": null,
       "assetsBodyV2": "Though only the proxy contracts are listed as in-scope, the current implementation when used via those proxies, and any further updates to the implementation contracts are also considered in scope. When reporting a bug, please make sure to select the relevant proxy smart contract as the target.\n\nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
       "impactsBody": null,
       "immunefiStandard": true,
@@ -591,7 +593,7 @@
       ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

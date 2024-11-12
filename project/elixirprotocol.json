@@ -9,56 +9,61 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5ptXSinuDLyNs0ElTrYI1k/8a20af1c14e32d38d71940c16d78624f/Elixir.png",
       "launchDate": "2023-11-02T09:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-25T10:28:12.744Z",
+      "updatedDate": "2024-11-11T13:37:36.009Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $75,000 to USD $250,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 250000,
+          "minReward": 75000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $10,000 to USD $75,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 75000,
+          "minReward": 10000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $5,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $10,000 to USD $50,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 50000,
+          "minReward": 10000,
+          "otherImpactMaxReward": 10000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "USD $10,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 10000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "medium",
-          "payout": "USD $5,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -516,8 +521,8 @@
       "programOverview": "Elixir is building the industry’s decentralized, algorithmic market making protocol. Through the Elixir Protocol, anyone will be able to passively supply liquidity to orderbook pairs on spot and perp DEXes across the space, earning subsidized APYs from existing long term liquidity incentive programs offered by exchanges.\n\nElixir will serve as crucial infrastructure for decentralized (and eventually) centralized exchanges, enabling ecosystem participants to provide liquidity to orderbook pairs via a purpose-built, decentralized DPoS consensus protocol in development for over two years. Elixir utilizes the orderbook equivalent of x*y=k curves, similar to Uniswap v2, to build up order books and tighten the bid/ask spread, bringing a familiar delta-neutral risk/return profile for liquidity providers.\n\nFor more information about Elixir, please visit [elixir.finance ](https://elixir.finance/)\n\nElixir provides rewards in USDC, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n\n__Primacy of Impact vs Primacy of Rules__\n\nElixir adheres to the Primacy of Impact for the following categories and severity levels:\n- Smart Contract: Critical\n- Smart Contract: High\n- Smart Contract: Medium\n- Web/App:Critical\n- Web/App:High\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact) \n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n\n__Previous Audits__\n\nElixir Protocol  has provided these completed audit reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\nAll Audit reports for Elixir can be accessed on: \n- [https://drive.google.com/file/d/1t8XFGTkTUrh72vtZyiurJpgaXGHDtgaI/view](https://drive.google.com/file/d/1t8XFGTkTUrh72vtZyiurJpgaXGHDtgaI/view)\n- [https://drive.google.com/file/d/1HGVsbovH7PFOghiYvBP0BMkaPeoSSyL4/view](https://drive.google.com/file/d/1HGVsbovH7PFOghiYvBP0BMkaPeoSSyL4/view)\n\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Elixir has satisfied the requirements for the [Immunefi Standard Badge.](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-)",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD $250,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD $75,000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Repeatable Attack Limitations__\n\n- If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attacks within the first hour will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n- For critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Level Reports__\n\n- High vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are considered at the full amount of funds at risk, capped at the maximum high reward. This is to incentivize security researchers to uncover and responsibly disclose vulnerabilities that may have not have significant monetary value today, but could still be damaging to the project if it goes unaddressed.   \n- In the event of temporary freezing, the reward increases at a multiplier of two from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lenghents, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.    \n\nFor critical web/apps bug reports will be rewarded with $50,000, only if the impact leads to:\n- A loss of funds involving an attack that does not require any user action\n- Unauthorized minting of tokens on-chain\n- Private key or private key generation leakage leading to unauthorized access to user funds \n\nAll other impacts that would be classified as Critical would be rewarded a flat amount of $10,000. The rest of the severity levels are paid out according to the Impact in Scope table.  \n\n__Reward Payment Terms__\n\nPayouts are handled by the Elixir Protocol team directly and are denominated in USD. However, payments are done in $USDC.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
-      "outOfScopeAndRules": ".",
-      "assetsBodyV2": ".",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": null,
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -657,8 +662,8 @@
           "updatedAt": "2024-10-25T10:21:40.620Z"
         }
       ],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_impact",
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

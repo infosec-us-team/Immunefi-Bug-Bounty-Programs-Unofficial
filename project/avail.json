@@ -13,70 +13,75 @@
       "kyc": true,
       "rewards": [
         {
-          "assetType": "blockchain_dlt",
-          "level": "critical",
-          "payout": "USD $50,000 - USD $500,000",
-          "pocRequired": true
+          "assetType": "websites_and_applications",
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 2500
+        },
+        {
+          "assetType": "websites_and_applications",
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "high",
-          "payout": "USD $20,000 - USD $40,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 500000,
+          "minReward": 50000
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "medium",
-          "payout": "USD $5,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 40000,
+          "minReward": 20000
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
+        },
+        {
+          "assetType": "blockchain_dlt",
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         },
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $50,000 - USD $500,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 500000,
+          "minReward": 50000
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $5,000 - USD $40,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 40000,
+          "minReward": 5000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $4,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 4000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $6,000 - USD $20,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 20000,
+          "minReward": 6000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "USD $5,000",
-          "pocRequired": true
-        },
-        {
-          "assetType": "websites_and_applications",
-          "level": "medium",
-          "payout": "USD $2,500",
-          "pocRequired": true
-        },
-        {
-          "assetType": "websites_and_applications",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         }
       ],
       "audits": null,
@@ -535,7 +540,7 @@
         }
       ],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": true
     },
     "project": {

@@ -9,26 +9,30 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2rN68srCOESswyxdwjzdRM/90ac006b52d632dc6f51d60ea3122922/Kiln_Defi.png",
       "launchDate": "2024-09-25T18:09:33.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-22T15:19:04.312Z",
+      "updatedDate": "2024-11-11T14:10:42.728Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $100,000 - USD $500,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 500000,
+          "minReward": 100000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $20,000 - USD $50,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 50000,
+          "minReward": 20000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $5,000 - USD $20,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "range",
+          "maxReward": 20000,
+          "minReward": 5000
         }
       ],
       "audits": null,
@@ -402,8 +406,8 @@
       "programOverview": "Kiln DeFi enables non-custodial platforms to propose DeFi yield products (like lending supply or rwa distributor) where users can deposit any amount of ERC20 on a vault while remaining the only one able to access their staked assets.\n\nThe goal of these EVM Smart Contracts is to enable:\n\n- Users to deposit to supported protocols with a common 4626 interface\n- Enable Integrators, and any third parties enabled by the integrator to have a fee on the rewards generated or on the deposit, dispatched on-chain\n\nThis Bug Bounty is focused on Kiln DeFi Smart Contracts only, all items regarding dApps or indexing / reporting stacks are out of scope but can be submitted at security@kiln.fi. \n\nFor more information about Kiln DeFi, please visit [https://www.kiln.fi/defi](https://www.kiln.fi/defi)\n\nOther bug bounty programs on Kiln On-Chain v1 (dedicated staking), Kiln On-Chain v2 (pooled staking)  are available and under their own bug bounty scope, bounties and rules.\n\nKiln provides rewards in __USDC__ on __Ethereum__, denominated in __USD__. For more details about the payment process, please view the __Rewards by Threat Level__ section.\n\n__KYC Requirement__\n\nKiln will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n- If the claim comes from an individual:\n   - The first names, surnames, date and place of birth of the person concerned\n   - A Valid ID\n- If the claim comes from a business:\n   - Legal form, name, registration number and address of the registered office\n   - Valid certificate of incorporation\n   - List of shareholders/directors\n\nKYC information is only required on confirmation of the validity of a bug report.   \n\n__Primacy of Impact vs Primacy of Rules__\n\nKiln adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page. \n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n\n- that newly created vault can be griefed if they have a decimalOffset = 0 and attackers inflates the shares (can only happen on fresh instances so no real impact)\n- that it is theoritically possible to sandwich calls to claimAdditionalRewards() to capture the share value increase (prevented by private mempool + not really profitable)\n\n__Previous Audits__\n\nKiln’s completed audit reports can be found at [https://kilnfi.notion.site/EXTERNAL-AUDITS-479819dce90540d1a0800c0541d2352b](https://kilnfi.notion.site/EXTERNAL-AUDITS-479819dce90540d1a0800c0541d2352b). Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Kiln has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209).\n\n__Responsible Disclosure Clause:__\n\nResearchers who submit valid vulnerability reports agree to adhere to the following responsible disclosure process:\n\n1. Upon confirmation of a valid vulnerability, Kiln will work diligently to develop and implement a fix.\n2. Once the fix is deployed to production, Kiln will notify the researcher and initiate a 1-month (30 calendar days) disclosure waiting period.\n3. During this waiting period, the researcher must maintain strict confidentiality regarding the vulnerability and shall not disclose any information about it to third parties or the public.\n4. After the 1-month period has elapsed following the production deployment of the fix, the researcher may publicly disclose the vulnerability, provided they have obtained written approval from Kiln regarding the content of the disclosure.\n5. The researcher agrees to coordinate with Kiln on the timing and content of any public disclosure to ensure all parties are prepared and to minimize potential risks to users.\n6. If the researcher discovers that the vulnerability has become publicly known before the end of the waiting period, they should immediately notify Kiln.\n7. Kiln reserves the right to request an extension of the waiting period in exceptional circumstances, which will be communicated to the researcher in writing.\n\nCompliance with this responsible disclosure clause is a condition for receiving the bug bounty reward. Failure to adhere to these terms may result in forfeiture of the reward and potential legal action.\n\n__Other Terms and Information__\n\n- This bug bounty program will have a hard cap of __USDC 1 000 000__. In the event that multiple bug reports are submitted that exceed this amount, the rewards will be provided on a first come first served basis. The last bounty will be paid up to the remaining amount of the program even if the bounty amount is larger.\n- The administrator roles (admin, proxy admin, hatcher admin, treasury, oracles etc.) are trusted to behave properly and in the best interest of the users. They should not be considered as malicious.  Reports taking this assumption will be considered invalid.",
       "prioritizedVulnerabilities": "Vulnerabilities are prioritized based on severity and impact.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 500 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 100 000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Repeatable Attack Limitations__\n\n- If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n- For Critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Level Reports__\n\n- High vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of USD 20 000 to USD 50 000 depending on the funds at risk, capped at the maximum high reward.  \n\n- For High Smart Contract vulnerabilities that result in direct theft or permanent freezing of unclaimed yield, or the temporary freezing of unclaimed yield for more than 2 days (oracle timing should not be taken into account in this delay), the reward amount will be capped at 100% of the funds affected, up to a maximum of USD 50 000.  However, a minimum reward of USD 20 000 is to be rewarded in order to incentivize security researchers against withholding a bug report.   \n\n__Reward Calculation for Medium Level Reports__\n\nFor Medium Smart Contract bugs, the reward amount is 10% of the commission funds directly affected up to a maximum of USD 20 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 5 000 is to be rewarded in order to incentivize security researchers against withholding a bug report.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Kiln team directly and are denominated in __USD__. However, payments are done in __USDC__ on __Ethereum__",
-      "outOfScopeAndRules": ".",
-      "assetsBodyV2": ".",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": null,
       "impactsBody": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "immunefiStandard": true,
       "tags": {
@@ -491,7 +495,7 @@
         }
       ],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

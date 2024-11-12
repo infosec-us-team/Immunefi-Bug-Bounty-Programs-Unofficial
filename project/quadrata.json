@@ -7,22 +7,23 @@
       "project": "Quadrata",
       "maxBounty": 20000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2d34GKfB7A8pJ4TgjawG4I/f9ace5c2fe8dc506264f4f0569f2a362/x2HFJeB8_400x400.png",
-      "launchDate": "2023-08-07T16:00+02:00",
+      "launchDate": "2023-08-07T14:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2023-08-11T17:34:20.555Z",
+      "updatedDate": "2024-11-11T18:59:29.177Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $20,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "fixed",
+          "rewardCalculationPercentage": 10,
+          "fixedReward": 20000
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $3,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 3000
         }
       ],
       "audits": null,
@@ -34,7 +35,7 @@
           "description": "QuadPassport",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-08-07T16:00+02:00"
+          "addedAt": "2023-08-07T14:00:00.000Z"
         },
         {
           "id": "4rzSEBJGh5jgPbiavVZvSp",
@@ -43,7 +44,7 @@
           "description": "QuadGovernance",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-08-07T16:00+02:00"
+          "addedAt": "2023-08-07T14:00:00.000Z"
         },
         {
           "id": "1RkSAAPHEERZQlx6f6bnit",
@@ -52,7 +53,7 @@
           "description": "QuadReader",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-08-07T16:00+02:00"
+          "addedAt": "2023-08-07T14:00:00.000Z"
         },
         {
           "id": "3d8bEb8clAgluaG7Oyy67H",
@@ -61,7 +62,7 @@
           "description": "Timelock",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-08-07T16:00+02:00"
+          "addedAt": "2023-08-07T14:00:00.000Z"
         },
         {
           "id": "5c71O5eyO9TSNiToQ3tx1C",
@@ -70,7 +71,7 @@
           "description": "Multisig",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-08-07T16:00+02:00"
+          "addedAt": "2023-08-07T14:00:00.000Z"
         },
         {
           "id": "5kGrHZXkUDQjfSEDjSeDcz",
@@ -79,7 +80,7 @@
           "description": "QuadSoulbound",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-08-07T16:00+02:00"
+          "addedAt": "2023-08-07T14:00:00.000Z"
         },
         {
           "id": "1HWjcauaNrFCDF7q02WURl",
@@ -88,7 +89,7 @@
           "description": "Storage",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-08-07T16:00+02:00"
+          "addedAt": "2023-08-07T14:00:00.000Z"
         }
       ],
       "impacts": [
@@ -147,11 +148,11 @@
           "title": "Passport manipulation such as changing attribute values, minting on behalf of an issuer and burning of passports"
         }
       ],
-      "programOverview": "Quadrata Web3 Passport is a privacy-preserving, sybil-resistant technology that brings identity, compliance, and reputation to DApps built on public blockchains.\n\nFor more information about Quadrata, please visit [https://quadrata.com/. ](https://quadrata.com/)\n\n__KYC Requirement__\n\nThe provision of KYC is required to receive a reward for this bug bounty program where the following information will be required to be provided:\n- Government-issued ID or Passport\n- Proof of residency\n\nKYC information is only required on confirmation of the validity of a bug report.  \n",
+      "programOverview": "Quadrata Web3 Passport is a privacy-preserving, sybil-resistant technology that brings identity, compliance, and reputation to DApps built on public blockchains.\n\nFor more information about Quadrata, please visit [https://quadrata.com/. ](https://quadrata.com/)\n\n__KYC Requirement__\n\nThe provision of KYC is required to receive a reward for this bug bounty program where the following information will be required to be provided:\n- Government-issued ID or Passport\n- Proof of residency\n\nKYC information is only required on confirmation of the validity of a bug report.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the  [Immunefi Vulnerability Severity Classification System V2.3.](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/) This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported. \n\n__Reward Payment Terms__\n\nPayouts are handled by the Quadrata team directly and are denominated in USD. However, payouts are done in ETH or USDC, at the discretion of the team.\n\n__PoC Requirement and Guidelines__\n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\nFor the purposes of determining report validity, this is a Primacy of Rules Program. \n\nQuadrata adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms stated in this page.\n\nLearn more about report validity best practices here: [Best Practice - Primacy of Impact vs Primacy of Rules. ](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\n__Responsible Publication Policy__\n\nQuadrata adheres to category 3. This Policy determines what information whitehats are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Known Issue Assurance__\n\nQuadrata commits to providing Known Issue Assurance to bug submissions through their program. This means that Quadrata will either disclose known issues publicly or at the very least privately via a self-reported bug submission in order to allow for a more objective and streamlined mediation process to prove that an issue is known. Otherwise, assuming the bug report itself is valid, it would result in the bug report being considered in-scope and due 100% of the reward with respect to the bug bounty program terms.\n\n__Restrictions on Security Researcher Eligibility__\n\nSecurity researchers who fall under any of the following are ineligible for a reward\n- OFAC-sanctioned country or region\n- Does not pass Quadrata Identity Verification process (not able to mint a Quadrata Passport)\n\nKnown issues previously highlighted in the following audit reports are considered out of scope: \n- [Quantstamp](https://github.com/QuadrataNetwork/passport-contracts/blob/develop/audits/quantstamp-passport-final-2022-07.pdf)\n- [Certik](https://www.certik.com/projects/quadrata)\n",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Any vulnerabilities found in testnet contracts \n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n- Centralization risks\n- Theoretical vulnerabilities without any proof or demonstration\n- Old compiler version\n- The compiler version is not locked\n- Vulnerabilities in imported contracts\n- Code style guide violations\n- Redundant code\n- Gas optimizations\n- Best practice issues\n\n__Prohibited Activities__\n\n- Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n\n__Program Rules__\n\n- Avoid using web application scanners for automatic vulnerability searching which generates massive traffic\n- Make every effort not to damage or restrict the availability of products, services, or infrastructure\n- Avoid compromising any personal data, interruption, or degradation of any service\n- Don’t access or modify other user data, localize all tests to your accounts\n- Perform testing only within the scope\n- Don’t exploit any DoS/DDoS vulnerabilities, social engineering attacks, or spam\n- Don’t spam forms or account creation flows using automated scanners\n- In case you find chain vulnerabilities we’ll pay only for vulnerability with the highest severity.\n- Don’t break any law and stay in the defined scope\n- Any details of found vulnerabilities must not be communicated to anyone who is not an ImmuniFi employee without appropriate permission\n\n__Disclosure Guidelines__\n\n- Do not discuss this program or any vulnerabilities (even resolved ones) outside of the program without express consent from the organization\n- No vulnerability disclosure, including partial is allowed for the moment.\n- Do NOT publish/discuss bugs\n\n__Eligibility and Coordinated Disclosure__\n\nWe are happy to thank everyone who submits valid reports which help us improve the security. However, only those that meet the following eligibility requirements may receive a monetary reward:\n- You must be the first reporter of a vulnerability.\n- The vulnerability must be identified before it is discovered internally by the team.\n- The vulnerability must be a qualifying vulnerability\n- Any vulnerability found must be reported no later than 24 hours after discovery and exclusively to Immunefi Platform Dashboard\n- You must send a clear textual description of the report along with steps to reproduce the issue, including attachments such as screenshots or proof of concept code as necessary.\n- You must not be a former or current employee of us or one of its contractors.\n- Provide detailed but to-the point reproduction steps\n- Monetary rewards will not be provided to persons or organizations who violate the Program Rules and Disclosure Guidelines\n",
-      "assetsBodyV2": "Though only the proxy contracts are listed as in-scope, current implementation and any further updates to the implementation contracts are considered in scope. When reporting a bug, please make sure to select the relevant proxy smart contract as the target.\n\nOnly those listed in the Assets in Scope table are considered to be in-scope of the bug bounty program. \n\nBugs found in contracts across multiple chains will only count as a single vulnerability.\n\nAll smart contracts of Quadrata can be found at [https://github.com/QuadrataNetwork.](https://github.com/QuadrataNetwork) However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the  [Immunefi Vulnerability Severity Classification System V2.3.](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/) This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported. \n\n__Reward Payment Terms__\n\nPayouts are handled by the Quadrata team directly and are denominated in USD. However, payouts are done in ETH or USDC, at the discretion of the team.\n\n__PoC Requirement and Guidelines__\n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\nFor the purposes of determining report validity, this is a Primacy of Rules Program. \n\nQuadrata adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms stated in this page.\n\nLearn more about report validity best practices here: [Best Practice - Primacy of Impact vs Primacy of Rules. ](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\n__Restrictions on Security Researcher Eligibility__\n\nSecurity researchers who fall under any of the following are ineligible for a reward\n- OFAC-sanctioned country or region\n- Does not pass Quadrata Identity Verification process (not able to mint a Quadrata Passport)\n\nKnown issues previously highlighted in the following audit reports are considered out of scope: \n- [Quantstamp](https://github.com/QuadrataNetwork/passport-contracts/blob/develop/audits/quantstamp-passport-final-2022-07.pdf)\n- [Certik](https://www.certik.com/projects/quadrata)",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": "Though only the proxy contracts are listed as in-scope, current implementation and any further updates to the implementation contracts are considered in scope. When reporting a bug, please make sure to select the relevant proxy smart contract as the target.\n\nOnly those listed in the Assets in Scope table are considered to be in-scope of the bug bounty program. \n\nBugs found in contracts across multiple chains will only count as a single vulnerability.\n\nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -196,13 +197,13 @@
       "responsiblePublicationCategory": "category_3",
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
-      "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
-      "customOutOfScopeInformation": null,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+      "defaultOutOfScopeWebAndApplications": "- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n  - This does not exclude reflected HTML injection with or without JavaScript\n  - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering",
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+      "customOutOfScopeInformation": "__Program Rules__\n\n- Avoid using web application scanners for automatic vulnerability searching which generates massive traffic\n- Make every effort not to damage or restrict the availability of products, services, or infrastructure\n- Avoid compromising any personal data, interruption, or degradation of any service\n- Don’t access or modify other user data, localize all tests to your accounts\n- Perform testing only within the scope\n- Don’t exploit any DoS/DDoS vulnerabilities, social engineering attacks, or spam\n- Don’t spam forms or account creation flows using automated scanners\n- In case you find chain vulnerabilities we’ll pay only for vulnerability with the highest severity.\n- Don’t break any law and stay in the defined scope\n- Any details of found vulnerabilities must not be communicated to anyone who is not an ImmuniFi employee without appropriate permission\n\n\n__Disclosure Guidelines__\n\n- Do not discuss this program or any vulnerabilities (even resolved ones) outside of the program without express consent from the organization\n- No vulnerability disclosure, including partial is allowed for the moment.\n- Do NOT publish/discuss bugs\n\n__Eligibility and Coordinated Disclosure__\n\nWe are happy to thank everyone who submits valid reports which help us improve the security. However, only those that meet the following eligibility requirements may receive a monetary reward:\n- You must be the first reporter of a vulnerability.\n- The vulnerability must be identified before it is discovered internally by the team.\n- The vulnerability must be a qualifying vulnerability\n- Any vulnerability found must be reported no later than 24 hours after discovery and exclusively to Immunefi Platform Dashboard\n- You must send a clear textual description of the report along with steps to reproduce the issue, including attachments such as screenshots or proof of concept code as necessary.\n- You must not be a former or current employee of us or one of its contractors.\n- Provide detailed but to-the point reproduction steps\n- Monetary rewards will not be provided to persons or organizations who violate the Program Rules and Disclosure Guidelines\n \n\n - Best practice critiques\n- Theoretical vulnerabilities without any proof or demonstration\n- Old compiler version\n- The compiler version is not locked\n- Vulnerabilities in imported contracts\n- Code style guide violations\n- Redundant code\n- Gas optimizations",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "USDC, ETH",
@@ -210,10 +211,20 @@
         "no_ofac_sdn"
       ],
       "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
+      "programCodebases": [
+        {
+          "id": 278,
+          "programId": 2049,
+          "title": "Quadrata Smart Contracts",
+          "description": "Program Smart Contracts",
+          "url": "https://github.com/QuadrataNetwork",
+          "createdAt": "2024-11-11T18:46:33.497Z",
+          "updatedAt": "2024-11-11T18:46:33.497Z"
+        }
+      ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

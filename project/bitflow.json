@@ -9,38 +9,43 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5v5WoWDJbL1kJqoQV19w2o/62536ecf20441c84538a1c7bc6c7db1f/Asset_7bitflow-defillama_copy.png",
       "launchDate": "2024-04-08T04:27:33.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-23T08:37:10.859Z",
+      "updatedDate": "2024-11-11T14:06:46.450Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $20,000 to USD $100,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 100000,
+          "minReward": 20000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $2,500 to USD $20,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 20000,
+          "minReward": 2500
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $2,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 2000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $5,000 to USD $25,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 25000,
+          "minReward": 5000,
+          "otherImpactMaxReward": 5000
         }
       ],
       "audits": null,
@@ -360,8 +365,8 @@
       "programOverview": "BitFlow is a decentralized exchange (DEX) that enables users to trade and earn using their Bitcoin, eliminating the need for centralized intermediaries. It leverages technologies such as Partially Signed Bitcoin Transactions (PSBTs), Atomic Swaps, Layer-2 smart contracts, Stacks Bitcoin (sBTC), and decentralized liquidity pools — unlocking the full potential of Bitcoin.\n\nFor more information about BitFlow, please visit https://www.bitflow.finance/\n\nBitFlow provides rewards in USDC on ETH, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n\n__Primacy of Impact vs Primacy of Rules__\n\nBitFlow adheres to the Primacy of Impact for the following impacts:\n\n- Smart Contract - Critical\n- Smart Contract - High\n- Web/App - Critical\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact ](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTokens deployed from this address (SPQC38PW542EQJ5M11CR25P7BS1CA6QT4TBXGB3M) are within scope, and other tokens are not.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the[ Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n\n- Authentication via tx-sender \n- Unclaimed rewards cannot be claimed in earn contract if the user’s proportion of LP tokens is too small  \n- The D “constant” for the AMM is approximated, but always converges within the threshold constant\n- Excess LP token issuance when adding single-sided liquidity for whichever token is less common in the pool. \n- The D value in get-pair-data can deviate significantly from total-shares.\n- Ability to modify the configuration of an existing pool during the setup of a new pool if public pool creation is enabled\n\n__Previous Audits__\n\nBitFlow’s completed audit reports can be found at https://docs.bitflow.finance/bitflow-documentation/resources/audits. Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, BitFlow has satisfied the requirements for the [Immunefi Standard Badge.](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209)",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the[ Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 100 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 20 000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\nFor critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Level Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of USD 2 500 to USD 20 000 depending on the funds at risk, capped at the maximum high reward.  \n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional [24h] that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\nFor critical web/apps bug reports will be rewarded with USD 25 000, only if the impact leads to:\n\n- A loss of funds involving an attack that does not require any user action\n- Private key or private key generation leakage leading to unauthorized access to user funds \n\nAll other impacts that would be classified as Critical would be rewarded a flat amount of USD 5 000. The rest of the severity levels are paid out according to the Impact in Scope table.  \n\n__Reward Payment Terms__\n\nPayouts are handled by the BitFlow team directly and are denominated in USD. However, payments are done in USDC on Ethereum.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
-      "outOfScopeAndRules": ".",
-      "assetsBodyV2": ".",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": null,
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -467,8 +472,8 @@
           "updatedAt": "2024-10-23T08:30:47.897Z"
         }
       ],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_impact",
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

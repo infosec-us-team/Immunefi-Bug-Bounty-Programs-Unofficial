@@ -9,26 +9,28 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4oI0gXaVamuG4KdqVG0LC1/fd67ba15a8d6811a385faa1c2a175bf0/Group__3_.png",
       "launchDate": "2023-11-22T09:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-24T14:50:37.813Z",
+      "updatedDate": "2024-11-11T13:44:29.750Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $10,000 to USD $50,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 50000,
+          "minReward": 10000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $5,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $2,500",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 2500
         }
       ],
       "audits": null,
@@ -147,8 +149,8 @@
       "programOverview": "Pragma is the leading Oracle on StarkNet, recognised for providing the most reliable data feeds to its ecosystem. This network relies on three types of data sources: First Party, Third Party, and On-chain data.\n\nWhat sets the Pragma Oracle infrastructure apart is its entirely on-chain nature. This means that protocols using Pragma benefit from data that matches the verifiability, transparency, and security of the smart contracts they use.\n\nMoreover, Pragma is pioneering computational feeds. These feeds merge its high-quality, real-time market data in unique ways, ensuring that everything remains on-chain and verifiable through the use of zero-knowledge computation.\n\nPragma is the decentralized, transparent and composable oracle network, leveraging  zero-knowledge cryptography. We partner with the biggest market makers and the most liquid exchanges who sign and timestamp their own high quality, robust data and send it directly on-chain. Our feeds are live on StarkNet mainnet, where they are powering the next generation of ambitious protocols such as zkLend, Nostra, Carmine and more. \n\nFor more information about Pragma, please visit [pragma.build](https://www.pragma.build/)\n\nPragma provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__\n\nThe provision of KYC is required to receive a reward for this bug bounty program where the following information will be required to be provided:\n- Twitter\n- Email\n- Proof of identity (picture next to the Passport/ID)\n\nKYC information is only required on confirmation of the validity of a bug report.   \n\n\n__Primacy of Impact vs Primacy of Rules__\n\nPragma adheres to the Primacy of Impact for the following severity levels:\n- Smart Contract - Critical\n- Smart Contract - High\n- Smart Contract - Medium\n\nIf a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nAll other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n__Immunefi Standard Badge__\n\nPragma has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-), which is given to projects that adhere to our best practices.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 50 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 5 000 is to be rewarded in order to incentivize security researchers against withholding a bug report.   \n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract + Critical + PoC Required\n- Smart Contract + High + PoC Required\n- Smart Contract + Medium + PoC Required\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs acknowledged below are not eligible for any reward through the bug bounty program. \n- [https://github.com/NethermindEth/PublicAuditReports/blob/main/NM0147-FINAL_PRAGMA.pdf](https://github.com/NethermindEth/PublicAuditReports/blob/main/NM0147-FINAL_PRAGMA.pdf)\n\n__Reward Payment Terms__\n\nPayouts are handled by the Pragma team directly and are denominated in USD. However, payments are done in USDC.",
-      "outOfScopeAndRules": ".",
-      "assetsBodyV2": ".",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": null,
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -249,8 +251,8 @@
           "updatedAt": "2024-10-24T14:47:40.403Z"
         }
       ],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_impact",
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

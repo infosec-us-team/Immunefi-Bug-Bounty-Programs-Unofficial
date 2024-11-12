@@ -9,32 +9,35 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7cPAZ4QrnHqejjUgvieyXf/17653320455ff119207a568deb6b1129/oasis-network-rose-logo_copy.png",
       "launchDate": "2024-02-20T16:32:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-25T19:40:46.963Z",
+      "updatedDate": "2024-11-11T13:21:20.704Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "blockchain_dlt",
-          "level": "critical",
-          "payout": "USD $10,000 to USD $100,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 100000,
+          "minReward": 10000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "high",
-          "payout": "USD $10,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 10000
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "medium",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $10,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "fixed",
+          "otherImpactMaxReward": 0,
+          "fixedReward": 10000
         }
       ],
       "audits": null,
@@ -219,8 +222,8 @@
       "programOverview": "Oasis is a privacy layer for Web3 with native high performance and cross-chain interoperability.\n\nFor more information about Oasis, please visit https://oasisprotocol.org/\n\nOasis provides rewards in USDC, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__ \n\nOasis will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\n__Primacy of Impact vs Primacy of Rules__\n\nOasis adheres to the Primacy of Impact for the following impacts:\n\n- Blockchain/DLT: Critical\n- Blockchain/DLT: High\n- Blockchain/DLT: Medium\n- Web/App: Critical\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact ](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. Github issues can be found here: https://github.com/oasisprotocol\n\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Oasis has satisfied the requirements for the [Immunefi Standard Badge.](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209)",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Blockchain/DLT bugs, the reward amount is 10% of the funds directly affected, capped at the maximum critical reward USD 100 000. However, a minimum reward of USD 10 000 is to be rewarded in order to incentivize security researchers against withholding on a bug report.\n\nFor critical Blockchain/DLT bugs with a non-funds-at risk impact, the reward will be paid out as follows: \n\n- Network not being able to confirm new transactions (total network shutdown and does not include network level DDoS attack)\n[USD 10 000] \n- Unintended permanent chain split requiring hard fork (network partition requiring hard fork)\n[USD 10 000] \n- Permanent freezing of funds (fix requires hardfork)\n[USD 10 000] \n\n__Reward Payment Terms__\n\nPayouts are handled by the Oasis team directly and are denominated in USD. However, payments are done in USDC.",
-      "outOfScopeAndRules": ".",
-      "assetsBodyV2": ".",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": null,
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -318,8 +321,8 @@
           "updatedAt": "2024-10-25T19:34:32.601Z"
         }
       ],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_impact",
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {
