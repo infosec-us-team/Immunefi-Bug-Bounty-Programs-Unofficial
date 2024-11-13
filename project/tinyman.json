@@ -6,35 +6,36 @@
       "slug": "tinyman",
       "project": "Tinyman",
       "maxBounty": 100000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4UlrKSIPpMRMuGG06spCHw/c4470d0f4bf6ec163133669afffb41af/Tinyman_Logo.png",
-      "launchDate": "2022-01-21T11:00-06:00",
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7xP4R5DrqpXgXoHTEaMECK/9f6972e90c6e5f90cdbaee19a6e0959a/Tinyman_Logo_Small.png",
+      "launchDate": "2022-01-21T17:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2022-12-01T19:18:15.352Z",
+      "updatedDate": "2024-11-12T15:16:14.157Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $100,000",
-          "pocRequired": false
+          "severity": "critical",
+          "rewardModel": "fixed",
+          "rewardCalculationPercentage": 10,
+          "fixedReward": 100000
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $10,000",
-          "pocRequired": false
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 10000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $5,000",
-          "pocRequired": false
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": false
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -132,7 +133,7 @@
       "programOverview": "Tinyman is a decentralised exchange (DEX) on Algorand. More specifically, it is an Automated Market Maker (AMM) exchange employing the Constant Product Market Maker algorithm.\n\nThe exchange is fully decentralized and non-custodial. Funds are held in permissionless smart contract accounts. This means the only methods to withdraw funds from the pool accounts are those encoded in the smart contract. At a high level this code only allows withdrawals in exchange for an appropriate amount of another asset or by the liquidity owners in exchange for their Pool Tokens.\n\nFurthermore the contracts are fully permissionless. This means that any account can create a pool by issuing the correct set of transactions. It means that no account has authority over the pool's assets or functionality. This also means there is no mechanism to revert or adjust transactions even if they are made in error.\n\nThe contracts are also fully immutable. This means no account has the authority to update or delete the contracts that control the pools. This means that funds cannot be stolen by an update to the contracts.\n\nFor more information about Tinyman, please visit [https://tinyman.org/](https://tinyman.org/).\n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Thefts and freezing of liquidity pools\n  - Unauthorized and fraudulent calls to Tinyman v1.1 smart contracts",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System](https://immunefi.com/severity-updated). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nNo PoC is required, but all bug reports must be detailed with either step-by-step exploit instructions or pointers to specific lines of code in order to be considered for a reward. The Tinyman team may ask for further explanations for bug reports to prove validity. \n\nTinyman will also issue an NFT reward for valid High severity reports, and a single edition Tinyman NFT reward for valid Critical severity reports.\n\nThe following impacts are considered to be out of scope of this bug bounty program: \n  - Issues due to Freeze or Clawback of pooled assets\n  - Rounding issues when swapping/minting/burning with <1000 microunits of an asset\n  - Overflow errors when attempting to swap/mint/burn very large amounts \n  - Attacks against accounts not created from the Pool LogicSig Template\n  - MEV style attacks\n  - Pool ratio/price manipulation due to donations to the pool account\n\nAll known issues listed here are also considered as out-of-scope of the bug bounty program: [https://github.com/tinymanorg/docs/tree/main/known-issues](https://github.com/tinymanorg/docs/tree/main/known-issues).   \n\nPayouts are handled by the __Tinyman__ team directly and are denominated in USD. However, payouts are done in __USDC__ or __ALGO__, at the discretion of the team.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "outOfScopeAndRules": null,
       "assetsBodyV2": "This bug bounty program applies only for Tinyman v1.1 contracts which includes validator approval, validator clear state and pool logic sig (stateless) programs. The Pool accounts are LogicSignature Contract accounts. The unique LogicSignature contract for each is generated from [pool_logicsig.teal.tmpl](https://github.com/tinymanorg/tinyman-contracts-v1/blob/8be3e7f8005bb131c51e10e82885a8e764d7a336/contracts/pool_logicsig.teal.tmpl). It does not exist on-chain.",
       "impactsBody": null,
       "immunefiStandard": true,
@@ -193,13 +194,13 @@
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
       "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
-      "customOutOfScopeInformation": null,
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+      "customOutOfScopeInformation": "  - Best practice critiques",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Algorand",
       "rewardsToken": "USDC, ALGO",
@@ -208,7 +209,7 @@
       "programCodebases": [],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

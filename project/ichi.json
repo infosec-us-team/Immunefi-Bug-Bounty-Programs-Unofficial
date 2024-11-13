@@ -7,34 +7,35 @@
       "project": "Ichi",
       "maxBounty": 50000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4sIm0crvpmamzvcEeYiPf3/0b6dd39dc320f99744fb16f6cecf4f28/Ichi.jpeg",
-      "launchDate": "2021-06-17T10:00-05:00",
+      "launchDate": "2021-06-17T15:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2023-04-04T16:58:14.354Z",
+      "updatedDate": "2024-11-12T12:44:04.171Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $50,000",
-          "pocRequired": false
+          "severity": "critical",
+          "rewardModel": "fixed",
+          "rewardCalculationPercentage": 10,
+          "fixedReward": 50000
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $20,000",
-          "pocRequired": false
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 20000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $5,000",
-          "pocRequired": false
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": false
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -114,7 +115,7 @@
       "programOverview": "ICHI is a self-sustaining, community governed platform that enables any other cryptocurrency community to create and govern their own in-house, non-custodial oneToken (a stablecoin valued at $1). \n\nICHI is the governance token of the ichi.org community and platform. It is hard capped at 5M tokens.  Each ICHI is a vote on allowed oracles, collateral, investment strategies, etc in exchange for protocol governance rewards.\n\noneTokens are the governance tokens of specific oneToken systems.  Each oneToken is a vote on treasury allocations, specific stablecoins parameters (like minting and redeeming fees), and on adoption programs.\n\nMore information about Ichi can be found on their website, [https://www.ichi.org/](https://www.ichi.org/).  \n\nThis bug bounty program is focused around its smart contracts and is mostly concerned with the prevention of the loss of user funds.",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces",
       "rewardsBody": "Rewards for Smart Contract vulnerabilities are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nPayouts are handled by the __ICHI__ team directly and are denominated in USD. However, payouts are done in __USDC__ for rewards up to __USD 10 000__. For payouts greater, the reward is paid in __xICHI__. Critical payouts are done over a 6-month period distributed every month with the utilization of a Sablier contract",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "outOfScopeAndRules": null,
       "assetsBodyV2": "Vulnerabilities affecting the four listed smart contracts are prioritized over the other smart contracts found on the GitHub link. Testnet smart contracts and other assets that are not smart contracts are not included in this bug bounty program.",
       "impactsBody": null,
       "immunefiStandard": true,
@@ -177,12 +178,12 @@
       "knownIssues": [],
       "knownIssueAssurance": false,
       "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
       "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
-      "customOutOfScopeInformation": null,
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+      "customOutOfScopeInformation": "  - Best practice critiques",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "xICHI",
@@ -191,7 +192,7 @@
       "programCodebases": [],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

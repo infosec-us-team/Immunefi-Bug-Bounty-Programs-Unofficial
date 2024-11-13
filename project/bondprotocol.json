@@ -6,17 +6,18 @@
       "slug": "bondprotocol",
       "project": "Bond Protocol",
       "maxBounty": 75000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6NeM5rzjAZ7whG9ltWKLDO/c0d59b6abd17e8f7bf12c4f525d4af2d/Bond_Twitter.png",
-      "launchDate": "2022-12-09T12:00-05:00",
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/55X7cIdWyNPk0Oa3py4fxU/4bd6de7beff5161e7f42b053cc371672/Bond_Twitter_Small.png",
+      "launchDate": "2022-12-09T17:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2023-02-16T17:09:19.331Z",
+      "updatedDate": "2024-11-12T13:25:39.030Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD 75,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "fixed",
+          "rewardCalculationPercentage": 10,
+          "fixedReward": 75000
         }
       ],
       "audits": null,
@@ -28,7 +29,7 @@
           "description": "Roles Authority",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-12-09T12:00-05:00"
+          "addedAt": "2022-12-09T17:00:00.000Z"
         },
         {
           "id": "5e097uqHjMmIrd2lqRIhRN",
@@ -37,7 +38,7 @@
           "description": "Aggregator",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-12-09T12:00-05:00"
+          "addedAt": "2022-12-09T17:00:00.000Z"
         },
         {
           "id": "4DEV1PaG43JULRosIqcyjL",
@@ -46,7 +47,7 @@
           "description": "Fixed-Expiration Teller",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-12-09T12:00-05:00"
+          "addedAt": "2022-12-09T17:00:00.000Z"
         },
         {
           "id": "5nQc7GIrvZtzu0Yq0VcOxy",
@@ -55,7 +56,7 @@
           "description": "Fixed-Expiration Auctioneer",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-12-09T12:00-05:00"
+          "addedAt": "2022-12-09T17:00:00.000Z"
         },
         {
           "id": "7MrVw5K66suHSQ1aaRcdtr",
@@ -64,7 +65,7 @@
           "description": "ERC20 Bond Token Reference",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-12-09T12:00-05:00"
+          "addedAt": "2022-12-09T17:00:00.000Z"
         },
         {
           "id": "5QNdW4AH9s2QwUWA9hVIjZ",
@@ -73,7 +74,7 @@
           "description": "Fixed-Term Teller",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-12-09T12:00-05:00"
+          "addedAt": "2022-12-09T17:00:00.000Z"
         },
         {
           "id": "4aZEuChBKUNCYAeaZfpvDn",
@@ -82,7 +83,7 @@
           "description": "Fixed-Term Auctioneer",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-12-09T12:00-05:00"
+          "addedAt": "2022-12-09T17:00:00.000Z"
         }
       ],
       "impacts": [
@@ -105,11 +106,11 @@
           "title": "Protocol insolvency"
         }
       ],
-      "programOverview": "Bond Protocol is a permissionless marketplace for Olympus-style bonds.  Our mission is to bring capital raises on-chain and support protocols to acquire strategic assets including their own liquidity.\n\nFor more information about Bond Protocol, please visit [https://bondprotocol.finance/](https://bondprotocol.finance/)\n",
+      "programOverview": "Bond Protocol is a permissionless marketplace for Olympus-style bonds.  Our mission is to bring capital raises on-chain and support protocols to acquire strategic assets including their own liquidity.\n\nFor more information about Bond Protocol, please visit [https://bondprotocol.finance/](https://bondprotocol.finance/)",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported. \n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required..\n\nKnown Issues highlighted in their previous audit reports are considered out of scope:\n\n- [https://github.com/Bond-Protocol/bond-contracts/tree/master/audits](https://github.com/Bond-Protocol/bond-contracts/tree/master/audits)\n\nBond Protocol requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed is name and address.  If a hunter prefers to stay anonymous, one would need to sign an NDA provided by Bond Protocol’s legal counsel. \n\nPayouts are handled by the __Bond Protocol__ team directly and are denominated in USD. However, payouts are done in __USDC__.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials \n- Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n- Centralization risks\n\nThe following activities are prohibited by this bug bounty program:\n\n- Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
-      "assetsBodyV2": "All smart contracts of Bond Protocol can be found at [https://github.com/Bond-Protocol/bond-contracts](https://github.com/Bond-Protocol/bond-contracts). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf an impact can be caused to any other asset managed by Bond Protocol that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project. This only applies to Critical impacts. \n",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": "However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf an impact can be caused to any other asset managed by Bond Protocol that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project. This only applies to Critical impacts.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -156,22 +157,32 @@
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
       "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
-      "customOutOfScopeInformation": null,
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+      "customOutOfScopeInformation": "- Best practice critiques",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "USDC",
       "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
+      "programCodebases": [
+        {
+          "id": 286,
+          "programId": 1654,
+          "title": "Bond Protocol Smart Contracts",
+          "description": "Program Smart Contracts",
+          "url": "https://github.com/Bond-Protocol/bond-contracts",
+          "createdAt": "2024-11-12T13:23:43.630Z",
+          "updatedAt": "2024-11-12T13:23:43.630Z"
+        }
+      ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {
