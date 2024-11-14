@@ -9,56 +9,60 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/53Lo497dIPH3nrT78lr8qx/8009fbbcd62a15a011fa8c394e5c5c59/Gains_Network_logo.jpeg",
       "launchDate": "2022-03-10T20:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-26T11:30:32.692Z",
+      "updatedDate": "2024-11-13T19:46:26.479Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $25,000 to USD $400,000",
-          "pocRequired": false
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 400000,
+          "minReward": 25000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $10,000 to USD $25,000",
-          "pocRequired": false
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 25000,
+          "minReward": 10000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $10,000",
-          "pocRequired": false
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 10000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $2,500",
-          "pocRequired": false
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 2500
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $40,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "fixed",
+          "otherImpactMaxReward": 0,
+          "fixedReward": 40000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "USD $10,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 10000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "medium",
-          "payout": "USD $5,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -492,7 +496,7 @@
       "programOverview": "Gains Network is building the decentralized finance ecosystem of the future. Their first product, gTrade is a capital-efficient decentralized leveraged trading platform on Polygon and Arbitrum.\n\nFor more information about Gains Network, please visit [https://gains.trade/](https://gains.trade/).  \n\nThis bug bounty program is focused on their smart contracts, website and app and is focused on preventing:\n\n  - Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield\n  - Permanent freezing of user funds, other than unclaimed yield\n  - Insolvency\n  - Theft of unclaimed yield\n  - Permanent freezing of unclaimed yield",
       "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Smart Contracts__\n\n__Critical__\n  - Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield\n  - Permanent freezing of funds\n  - Insolvency\n\n__High__\n  - Theft of unclaimed yield\n  - Permanent freezing of unclaimed yield\n  - Temporary freezing of funds for at least 1 day\n\n__Medium__\n  - Miner-extractable value (MEV)\n  - Block stuffing for profit\n  - Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)\n  - Theft of gas\n  - Unbounded gas consumption \n\n__Low__\n  - Smart contract unable to operate due to lack of funds\n  - Smart contract fails to deliver promised returns, but doesn’t lose value\n\n__Websites and Applications__\n\n__Critical__\n  - Ability to execute system commands\n  - Extract Sensitive data/files from the server such as /etc/passwd\n  - Stealing User Cookies\n  - Taking Down the application/website\n  - Signing transactions for other users\n  - Redirection of user deposits and withdrawals\n  - Subdomain takeover resulting in financial loss (applicable for subdomains with addresses published)\n  - Wallet interaction modification resulting in financial loss\n  - Direct theft of user funds \n  - Tampering with transactions submitted to the user’s wallet\n  - Submitting malicious transactions to an already-connected wallet\n\n__High__\n  - Spoofing content on the target application (Persistent)\n  - Users Confidential information disclosure such as Email\n  - Subdomain Takeover without financial loss (applicable for subdomains with no addresses published)\n  - Privilege escalation to access unauthorized functionalities\n\n__Medium__\n  - Changing details of other users without direct financial impact (CSRF)\n  - Third-Party API keys leakage that demonstrates loss of funds or modification on the website.\n  - Redirecting users to malicious websites (Open Redirect)\n\n__Low__\n  - Framing sensitive pages leading to financial loss (ClickJacking)\n  - Any impact involving a publicly released CVE without a working PoC\n\nIn case of discrepancy between [Immunefi Vulnerability Severity Classification System V2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2/) and Gains Network’s classification above, Gains Network classification will be followed.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). This is a simplified 4-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nCritical smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of USD 50 000.\n\nVulnerabilities concerning temporary freezing of funds, where the impact affects more than one user, the reward increases at a multiplier of 1.5 from the Medium Reward category for every additional 24h that the funds are temporarily frozen, up until a max cap of the High Reward category. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature. \n\nPayouts are handled by the __Gains Network__ team directly and are denominated in USD. However, payouts are done in __GNS and DAI__, with the choice of the ratio at the discretion of the team.\n\n__Primacy of Impact vs Primacy of Rules__\n\nGains Network adheres to the Primacy of Impact for the following impacts:\n\nSmart Contract - Critical\nSmart Contract - High\nSmart Contract - Medium\nWebsites and Applications - Critical\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\nLearn more about report validity best practices here: [Best Practice - Primacy of Impact vs Primacy of Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact?utm_source=immunefi).",
-      "outOfScopeAndRules": ".",
+      "outOfScopeAndRules": null,
       "assetsBodyV2": "All of the smart contracts of Gains Network can be found at [https://github.com/GainsNetwork](https://github.com/GainsNetwork) and [https://github.com/GainsNetwork/GNS-ethereum](https://github.com/GainsNetwork/GNS-ethereum). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIn case of discrepancy between [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)I and Gains Network’s classification above, Gains Network classification will be followed. \n\nOur trading contracts use the diamond architecture. All facets of the diamond are considered in-scope for this bounty.\n\nMore generally, any active smart contract deployed by the Gains Network protocol containing or having the ability to impact significant Gains Network users funds (>$100k) is considered as in-scope. For example gDAI is listed above but we didn’t list every gToken (gETH, gUSDC, and any future gToken) for practical reasons.\n\nFor the same reasons, we also didn’t list every deprecated version of our previous NFTs (which can be redeemed for $GNS) to not clog up assets in scope, however if a vulnerability is found in these old contracts that can affect current Gains Network user funds, it will be considered in-scope.\n\nIn summary, if an impact can be caused to any other asset managed by Gains Network that isn’t on this table but for which the impact is in the Impacts in Scope section, you are encouraged to submit it for the consideration of the project.",
       "impactsBody": null,
       "immunefiStandard": true,
@@ -614,15 +618,15 @@
         }
       ],
       "programDocumentations": [],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_impact",
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {
       "premiumTriaging": false,
       "isSafeHarborActive": false,
       "performanceMetrics": {
-        "totalPaidAmount": 286500
+        "totalPaidAmount": 353280
       }
     },
     "metaData": {

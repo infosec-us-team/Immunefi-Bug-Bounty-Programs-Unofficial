@@ -9,44 +9,49 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/lyQiC5BZ6cB4x9bgGUFPi/dd8c99b13df7edf308ca678c0607ee48/dlhDYt89_400x400.png",
       "launchDate": "2024-07-30T16:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-25T14:46:01.879Z",
+      "updatedDate": "2024-11-13T19:36:32.355Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $100,000 to USD $1,000,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 1000000,
+          "minReward": 100000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $35,000 to USD $100,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 100000,
+          "minReward": 35000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $35,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 35000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $15,000 to USD $50,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 50000,
+          "minReward": 15000,
+          "otherImpactMaxReward": 0
         },
         {
           "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "USD $10,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 10000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "medium",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -228,8 +233,8 @@
       "programOverview": "0x is the trusted open source settlement layer for the permissionless global exchange of value.\n\nFor more information about 0x, please visit http://0x.org/\n\n0x provides rewards in USDC on Ethereum, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__\n\n0x will be requesting KYC information in order to pay the full reward for successful bug submissions. The following information will be required:\n\n- For US based individual(s)/team(s): https://www.irs.gov/pub/irs-pdf/fw9.pdf \n    - Full name \n    - Date of birth\n    - Address\n    - SSN (Social Security Number) or EIN (Employment Identification Number)\n- For non-US based individual(s)/team(s): https://www.irs.gov/pub/irs-prior/fw8ben--2021.pdf\n    - Full Name\n    - Country of citizenship\n    - Address\n    - FTIN (Foreign Tax Identifying Number)\n\nIf a security researcher chooses to not provide information for KYC, they will receive 70% of the reward that one can potentially earn. \n\n\n__Primacy of Impact__\n\n0x adheres to the Primacy of Impact for the following impacts:\n\n- Smart Contract / Critical\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact ](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n\n- Exploits resulting in the loss of the senders/signers own funds due to incorrect smart contract behavior that is introduced by incorrect encoding of actions, incorrect action sequencing, misuse of provided slippage fields, or making `BASIC` calls to attacker-controlled contracts; or that could be mitigated by an alternative encoding of actions, making use of provided actions, or making use of provided slippage fields. Or in plain English: using the contracts wrong and losing your own money isn't a bug.\n\n__Previous Audits__\n\n0x’s completed audit reports can be found at https://github.com/0xProject/0x-settler/tree/master/audits. Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, 0x has satisfied the requirements for the [Immunefi Standard Badge.](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209)",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 1 000 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 100 000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\nOnly the impact of direct theft of user funds **at-rest** is eligible for the maximum payout of USD 1 000 000; all other Critical-level smart contract reports are eligible for a maximum payout of USD 500 000.\n\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\nFor critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Level Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of USD 35 000 to USD 100 000 depending on the funds at risk, capped at the maximum high reward. \n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional [24h] that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\nFor critical web/apps bug reports will be rewarded with USD 50 000, only if the impact leads to:\n\n- A loss of funds involving an attack that does not require any user action\n- Malicious interactions with an already-connected wallet\n- Private key or private key generation leakage leading to unauthorized access to user funds \n\nAll other impacts that would be classified as Critical would be rewarded a flat amount of USD 15 000. The rest of the severity levels are paid out according to the Impact in Scope table.  \n\n__Reward Payment Terms__\n\nPayouts are handled by the 0x team directly and are denominated in USD. However, payments are done in USDC on Ethereum.",
-      "outOfScopeAndRules": ".",
-      "assetsBodyV2": "Documentation and further resources can be found on [https://0x.org/docs/](https://0x.org/docs/)\n\nFor brevity regarding Smart Contract Assets\n\n- the source tree on GitHub ([https://github.com/0xProject/0x-settler/tree/master/src](https://github.com/0xProject/0x-settler/tree/master/src)) \n- Deployer:\n    - 0x00000000000004533Fe15556B1E086BB1A72cEae\n    - any contract holding a \"Deployer\" ERC721 token (each a \"Settler\")\n- AllowanceHolder:\n    - 0x0000000000001fF3684f28c67538d4D072C22734\n    - 0x0000000000005E88410CcDFaDe4a5EfaE4b49562\n    - 0x000000000000175a8b9bC6d539B3708EEd92EA6c\n- Pauser Safe module\n    - 0x1CeC01DC0fFEE5eB5aF47DbEc1809F2A7c601C30\n \n\nThe scope is limited to these addresses, but *is not limited to any chain*. These contracts are deployed to many mainnet chains (the test-nets are not in scope). Presently the supported mainnet chains are: Ethereum mainnet, Arbitrum mainnet, Optimism mainnet, Polygon mainnet, Base mainnet, BNB Chain mainnet, Avalanche C-Chain mainnet, Blast mainnet, Linea mainnet, Scroll mainnet. There will be many new chains added in the near future.\n\nDocumentation will be available here, [https://0x.org/docs/developer-resources/settler](https://0x.org/docs/developer-resources/settler)",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": "Documentation and further resources can be found on [https://0x.org/docs/](https://0x.org/docs/)\n\nFor brevity regarding Smart Contract Assets\n\n- the source tree on GitHub ([https://github.com/0xProject/0x-settler/tree/master/src](https://github.com/0xProject/0x-settler/tree/master/src)) \n- Deployer:\n    - 0x00000000000004533Fe15556B1E086BB1A72cEae\n    - any contract holding a \"Deployer\" ERC721 token (each a \"Settler\")\n- AllowanceHolder:\n    - 0x0000000000001fF3684f28c67538d4D072C22734\n    - 0x0000000000005E88410CcDFaDe4a5EfaE4b49562\n    - 0x000000000000175a8b9bC6d539B3708EEd92EA6c\n- Pauser Safe module\n    - 0x1CeC01DC0fFEE5eB5aF47DbEc1809F2A7c601C30\n \n\nThe scope is limited to these addresses, but *is not limited to any chain*. These contracts are deployed to many mainnet chains (the test-nets are not in scope). Presently the supported mainnet chains are: Ethereum mainnet, Arbitrum mainnet, Optimism mainnet, Polygon mainnet, Base mainnet, BNB Chain mainnet, Avalanche C-Chain mainnet, Blast mainnet, Linea mainnet, Scroll mainnet. There will be many new chains added in the near future.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -353,8 +358,8 @@
           "updatedAt": "2024-10-25T14:43:28.812Z"
         }
       ],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_impact",
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": true
     },
     "project": {

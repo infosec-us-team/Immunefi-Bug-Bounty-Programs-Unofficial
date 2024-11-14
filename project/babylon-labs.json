@@ -9,56 +9,63 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1uFhvCOin4EEx5EMqnIkF9/cfa80e20b68ae47bd84d813d25b584bc/72515ec2-1bc5-4bdf-b788-354949253625.png",
       "launchDate": "2024-09-16T15:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-21T15:32:47.222Z",
+      "updatedDate": "2024-11-13T15:21:45.281Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "blockchain_dlt",
-          "level": "critical",
-          "payout": "USD $50,000 - USD $1,000,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 1000000,
+          "minReward": 50000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "high",
-          "payout": "USD $20,000 - USD $200,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 200000,
+          "minReward": 20000
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "medium",
-          "payout": "USD $5,000 - USD $20,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "range",
+          "maxReward": 20000,
+          "minReward": 5000
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "low",
-          "payout": "USD $1,000 - USD $5,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "range",
+          "maxReward": 5000,
+          "minReward": 1000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $10,000 - USD $100,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 100000,
+          "minReward": 10000,
+          "otherImpactMaxReward": 10000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "USD $10,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 10000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "medium",
-          "payout": "USD $5,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -393,7 +400,7 @@
       "programOverview": "Babylon introduces a new major utility for Bitcoin: trustless and self-custodial staking. The Babylon Bitcoin staking protocol turns Bitcoin into a stakable and slashable asset for any Proof-of-Stake systems. This allows Bitcoin HODLERs to hold their Bitcoins while earning  staking rewards from the PoS systems for the slashable security they provide, in the same way as how native PoS token staking works.\n\nThis is a brand new significant protocol, and it is at its very early stage. Its success lies in its protection of the Bitcoin stakers. More specifically, as long as:\n\n- a Bitcoin staker manages its secret key properly, and\n- the Bitcoin staker or the delegatee of its PoS attestation power (called a finality provider)  does not act maliciously, then\n\nno one can steal or slash the staked Bitcoin, and the Bitcoin staker can safely unbond and/or withdraw the stake as per the protocol.\n\nAchieving such protection requires comprehensive security of the Bitcoin staking protocol at both the algorithm and implementation level. To this end, we have open-sourced all our code, and launched, on the 28th May 2024,  a public Bitcoin staking testnet that focused on the Bitcoin stakers’ interaction with the Signet Bitcoin chain and the staking web DApp developed by the Babylon team. No PoS chain and  staking reward is involved in this testnet.\n\nBased on the successful operation of the testnet and the associated security audits on the code deployed in it, we are now launching a public Bitcoin Staking mainnet. This mainnet contains a staking cap that limits the amount of Bitcoins that enter into the system, with the goal of gradually rolling out the protocol.\n\nFor more information about Babylon Labs Ltd. (“Babylon Labs”), please visit [https://babylonlabs.io](https://babylonlabs.io)\n\nBabylon Labs provides rewards in USDC on Ethereum, denominated in USD. For more details about the payment process, please view the __Rewards by Threat Level__ section.\n\nThis bug bounty program will have a hard cap of **USD $3,000,000**. If multiple bug reports are submitted that exceed this amount, the rewards will be provided on a first come first served basis until that cap is reached.\n\n__KYC Requirement__\n\nBabylon Labs will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\nAdditional or alternate KYC information may be required by Babylon Labs or its KYC services provider. If you are an entity, KYB information will be required. Security researchers will need to  provide accurate and complete information in response to each such KYC or KYB request. \t\n\n__Primacy of Impact vs Primacy of Rules__\n\nBabylon Labs adheres to the Primacy of Impact for the following impacts:\n\n- Blockchain/DLT - Critical\n- Web/App - Critical\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact) \n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n\n- Anything included as an open issue in the GitHub repositories.\n- The informational components of the system operate under the assumption that transactions with sufficient confirmations are irreversible. In the event that a re-org happens reversing more blocks than this confirmation delta, the system will have to be restarted and re-index  Bitcoin staking transactions. To combat this, the number of required confirmations defined in the global parameters is set to a high value based on historical Bitcoin data relating to re-orgs.\n- A staker intentionally setting a very low Bitcoin fee, might find their transaction stuck in the mempool or included in a Bitcoin block where different staking parameters apply.\n- Natural stake expiration (i.e. without on-demand unbonding) does not reduce the TVL amount the API service considers active. This design decision was made as the testnet and mainnet environments involve timelocks above a 15 month period (64000 blocks). All stake is expected to transition to the phase-2 PoS security system much earlier than that, so we do not expect naturally expiring stake for the lifespan of the phase-1 API service.\n\n__Previous Audits__\n\nBabylon Labs’ completed audit reports can be found in the following list. Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n- Coinspect Audit: [https://docs.babylonlabs.io/assets/files/coinspect-phase1-audit.pdf](https://docs.babylonlabs.io/assets/files/coinspect-phase1-audit.pdf)\n- Zellic Audit: [https://docs.babylonlabs.io/assets/files/zellic-phase1-audit.pdf](https://docs.babylonlabs.io/assets/files/zellic-phase1-audit.pdf)\n- Cantina Competition: [https://docs.babylonlabs.io/assets/files/cantina-phase1-competition.pdf](https://docs.babylonlabs.io/assets/files/cantina-phase1-competition.pdf) \n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Babylon Labs has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209).\n\n__Additional Terms__\n\nAs a condition of your participation in Babylon Labs Bug Bounty Programs, including the submission of bug reports, you agree to be bound by the following terms and conditions in addition to any other terms and conditions that govern your participation.  If you do not agree to these terms and conditions, you should not submit any bug report.\n  \n1. Babylon Labs will determine the severity level and impact for each submission, whether any submission is within scope and eligible for a reward, and the amount of a reward within a stated range, in its reasonable discretion.\n\n2. Babylon Labs is not liable or responsible for any costs, fees, or expenses incurred by you in connection with this Bug Bounty Program. You acknowledge and agree that you shall be solely and exclusively responsible for the payment of any and all taxes, levies, duties, or similar governmental charges (collectively, \"Taxes\") that may arise in connection with any reward payments made to you.  However, Babylon Labs may be required by applicable law to withhold or deduct any Taxes from payments.\n\n3. Babylon Labs is an express third-party beneficiary of the Security Researchers Terms & Conditions between you and Immunefi, and entitled to enforce the terms and conditions therein as if it were an original contracting party. Babylon Labs is the party designated to be the transferee of intellectual property rights under Section 7 of the Security Researchers Terms & Conditions.\n\n4. **Babylon Labs, its affiliates and licensors, and their respective directors, officers, and employees (collectively, “Babylon Parties”) will have no liability arising from or relating to your use of, or conduct in connection with this Bug Bounty Program or the Immunefi platform, other than Babylon Labs’ potential obligations to pay you a reward.  To the fullest extent permitted by applicable law, under no circumstances will any Babylon Parties be responsible or liable under any theory of liability, whether based in tort, contract, negligence, strict liability, warranty, or otherwise: (a) for any direct, indirect, exemplary, special, punitive, incidental, or consequential losses or damages of any kind, including without limitation, loss of profits arising from or relating to the bug bounty program or your use of the Immunefi platform.** The foregoing limitations apply even if Babylon Parties were advised of or should have known of the possibility of such losses or damages and notwithstanding any failure of essential purpose of any limited remedy. The foregoing limitations will apply even if the above stated remedy fails of its essential purpose. Some jurisdictions do not allow the limitation or exclusion of certain liabilities, and damages. Accordingly, some of the disclaimers and limitations set forth in this Agreement may not apply in full to you, but will apply to the fullest extent as permitted by applicable law.",
       "prioritizedVulnerabilities": "Vulnerabilities are prioritized based on severity and impact.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Calculation for Blockchain/DLT Critical Level Reports__\n\nFor critical Blockchain/DLT bugs, the reward amount is 10% of the funds directly affected, capped at the maximum critical reward __USD 1 000 000__. However, a minimum reward of __USD 50 000__ is to be rewarded in order to incentivize security researchers against withholding on a bug report.\n\nAll other impacts that would be classified as Critical would be rewarded with a minimum of __USD 50 000__. The rest of the severity levels are paid out according to the Impact in Scope table.\n\n__Reward Calculation for Blockchain/DLT High Level Reports__\n\n- In the event of temporary freezing, the reward doubles from the full frozen value for every additional __24h__ that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\n__Reward Calculation for Web/Apps Critical Level Reports__\n\nFor critical web/apps bug reports will be rewarded with __USD 100 000__, only if the impact leads to:\n\n- A loss of funds involving an attack that does not require any user action\n- Users funds being permanently stuck involving an attack that does not require any user action\n- Private key or private key generation leakage leading to unauthorized access to user funds \n\nAll other impacts that would be classified as Critical would be rewarded with a minimum of __USD 10 000__. \n\nThe rest of the severity levels are paid out according to the Impact in Scope table.  \n\n__Reward Payment Terms__\n\nPayouts are handled by the **Babylon Labs** team directly and are denominated in __USD__. However, payments are done in __USDC__ on Ethereum",
-      "outOfScopeAndRules": ".",
+      "outOfScopeAndRules": null,
       "assetsBodyV2": "Babylon Labs’ codebase can be found at [https://github.com/babylonlabs-io](https://github.com/babylonlabs-io). Documentation and further resources can be found on [https://docs.babylonlabs.io](https://docs.babylonlabs.io).\n\n__High-level articles on how Bitcoin Staking works:__\n\n- https://babylonlabs.io/blog/what-is-bitcoin-staking \n- https://babylonlabs.io/blog/technical-preliminaries-of-bitcoin-staking \n- https://babylonlabs.io/blog/babylon-s-bitcoin-staking-contract \n\nBelow are general purpose technical documentations around the Bitcoin Staking Protocol and the lock-only system operated by the current testnet. Documentation on individual components of the system can be found in the component repositories.\n\n__Bitcoin Staking Protocol and Litepaper:__ \n- https://docs.babylonlabs.io/docs/introduction/btc-staking \n\n__Introductory reading:__ \n\nBitcoin staking 101 Series:\n\n- https://babylonlabs.io/blog/what-is-bitcoin-staking\n- https://babylonlabs.io/blog/technical-preliminaries-of-bitcoin-staking\n- https://babylonlabs.io/blog/babylon-s-bitcoin-staking-contract\n\n__Bitcoin Staking Scripts:__ \n- https://github.com/babylonlabs-io/babylon/blob/v0.9.x/docs/staking-script.md \n\n__Creating Bitcoin Staking Transactions:__ \n- https://github.com/babylonlabs-io/babylon/blob/v0.9.x/docs/transaction-impl-spec.md",
       "impactsBody": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__For the Unbonding Pipeline Process, the following code components and branches are in-scope:__\n\nEverything here [https://github.com/babylonlabs-io/cli-tools/blob/v0.2.x/](https://github.com/babylonlabs-io/cli-tools/blob/v0.2.x/), except the following test commands:\n- createStakingTxCmd https://github.com/babylonlabs-io/cli-tools/blob/v0.2.x/cmd/createStakingTxCmd.go \n- createUnbondingTxCmd https://github.com/babylonlabs-io/cli-tools/blob/v0.2.x/cmd/createUnbondingTxCmd.go \n- createWithdrawTxCmd https://github.com/babylonlabs-io/cli-tools/blob/v0.2.x/cmd/createWithdrawTxCmg.go \n\n__For the EOTS Manager program, the following code components and branches are in-scope:__\n\n[https://github.com/babylonlabs-io/finality-provider/tree/v0.4.x/eotsmanager](https://github.com/babylonlabs-io/finality-provider/tree/v0.4.x/eotsmanager) – only code associated with the eotsd init, eotsd keys add, eotsd sign-schnorr, and the eotsd verify-schnorr-sig commands is in scope. The EOTS manager daemon functionality is not in scope.",
       "immunefiStandard": true,
@@ -516,8 +523,8 @@
           "updatedAt": "2024-10-21T15:31:41.628Z"
         }
       ],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_impact",
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": true
     },
     "project": {

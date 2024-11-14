@@ -9,32 +9,36 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1ORcP6RE6HcGhV4bTAv8AN/8ce035bee832701401c4576fda63117c/Ribbon-logo.svg",
       "launchDate": "2021-04-12T07:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-23T21:33:35.027Z",
+      "updatedDate": "2024-11-13T15:56:48.163Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $50,000 to USD $300,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 300000,
+          "minReward": 50000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $10,000 to USD $50,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 50000,
+          "minReward": 10000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $5,000 USD $25,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "range",
+          "maxReward": 25000,
+          "minReward": 5000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -324,13 +328,13 @@
       "customOutOfScopeInformation": "- Best practice critiques\n \n-  Oracle failure/manipulation\n- Novel governance attacks \n- Congestion and scalability\n  - including running out of gas\n  - including block stuffing\n  - including susceptibility to frontrunning\n- Consensus failures\n- Cryptography problems\n  - Signature malleability\n  - Susceptibility to replay attacks\n  - Weak randomness\n- Weak encryption",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": null,
-      "rewardsToken": null,
+      "rewardsToken": "USDC",
       "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

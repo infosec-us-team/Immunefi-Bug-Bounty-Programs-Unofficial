@@ -9,14 +9,15 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7CCYGOBFsU41GSuxkFGa16/7e0eeb6ee440d7433975d3832e762a74/Tetu_Logo___1_.jpeg",
       "launchDate": "2021-11-30T18:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-25T09:50:13.235Z",
+      "updatedDate": "2024-11-13T19:30:35.058Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "Up to 2,000$",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 2000,
+          "rewardCalculationPercentage": 10
         }
       ],
       "audits": null,
@@ -285,8 +286,8 @@
       "programOverview": "TETU is a DeFi application built on Polygon that implements automated yield farming strategies in order to provide investors with a safe and secure method of receiving high and stable yield on their investments. Tetu's innovative solutions provide automated yield aggregation and distribution through xTETU.\n\nTetu's development focus is to build a self-sustaining yield management ecosystem that provides stable and attractive yields for users. Tetu aims to make the development of automated and decentralized Yield management solutions the main structure of the protocol.\n\nFor more information about Tetu, please visit [https://tetu.io/](https://tetu.io/).  \n\nThis bug bounty program is focused on their smart contracts and app and is focused on preventing:\n\n  - Thefts and freezing of principal of any amount\n  - Thefts and freezing of unclaimed yield of any amount\n  - Theft of governance funds \n  - Governance activity disruption",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nAll critical smart contract bug reports must come with a PoC and a suggestion for a fix in order to be considered for a reward. \n\nCritical smart contract vulnerabilities are further capped at 10% of economic damage, primarily taking into account the funds at risk. However, the maximum reward is capped at USD 2 000, even if 10% of the damage is greater than USD 2 000. \n\nVulnerabilities that require moderator-approved access in order to be exploited will only receive a maximum of 20% of the advertised reward. For Critical Smart Contract and Blockchain vulnerability reports, this 20% is applied after the cap of 10% of economic damage.  \n\nPayouts are handled by the Tetu team directly and are done in USDT.",
-      "outOfScopeAndRules": ".",
-      "assetsBodyV2": "All smart contracts of Tetu can be found at:\n\n  - [https://github.com/tetu-io/tetu-contracts](https://github.com/tetu-io/tetu-contracts)\n  - [https://github.com/tetu-io/tetu-contracts-v2](https://github.com/tetu-io/tetu-contracts-v2)\n  - [https://github.com/tetu-io/tetu-converter](https://github.com/tetu-io/tetu-converter)\n  - [https://github.com/tetu-io/tetu-liquidator](https://github.com/tetu-io/tetu-liquidator)\n  - [https://github.com/tetu-io/tetu-v2-strategies-polygon](https://github.com/tetu-io/tetu-v2-strategies-polygon)\n\nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": "However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -351,10 +352,56 @@
       "rewardsToken": "USDT",
       "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
+      "programCodebases": [
+        {
+          "id": 304,
+          "programId": 2163,
+          "title": "Tetu Smart Contracts",
+          "description": "Program Smart Contracts",
+          "url": "https://github.com/tetu-io/tetu-contracts",
+          "createdAt": "2024-11-13T19:28:50.774Z",
+          "updatedAt": "2024-11-13T19:28:50.774Z"
+        },
+        {
+          "id": 305,
+          "programId": 2163,
+          "title": "Tetu Smart Contracts",
+          "description": "Program Smart Contracts",
+          "url": "https://github.com/tetu-io/tetu-contracts-v2",
+          "createdAt": "2024-11-13T19:29:17.092Z",
+          "updatedAt": "2024-11-13T19:29:17.092Z"
+        },
+        {
+          "id": 306,
+          "programId": 2163,
+          "title": "Tetu Smart Contracts",
+          "description": "Program Smart Contracts",
+          "url": "https://github.com/tetu-io/tetu-converter",
+          "createdAt": "2024-11-13T19:29:31.787Z",
+          "updatedAt": "2024-11-13T19:29:31.787Z"
+        },
+        {
+          "id": 307,
+          "programId": 2163,
+          "title": "Tetu Smart Contracts",
+          "description": "Program Smart Contracts",
+          "url": "https://github.com/tetu-io/tetu-liquidator",
+          "createdAt": "2024-11-13T19:29:49.238Z",
+          "updatedAt": "2024-11-13T19:29:49.238Z"
+        },
+        {
+          "id": 308,
+          "programId": 2163,
+          "title": "Tetu Smart Contracts",
+          "description": "Program Smart Contracts",
+          "url": "https://github.com/tetu-io/tetu-v2-strategies-polygon",
+          "createdAt": "2024-11-13T19:30:05.610Z",
+          "updatedAt": "2024-11-13T19:30:05.610Z"
+        }
+      ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

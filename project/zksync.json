@@ -9,50 +9,53 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/BVBU3VYmZ7reZRrExTrGp/ba2e745ef785db7f3bae88ea8ba8523f/ZKTokenBlack.png",
       "launchDate": "2022-03-15T21:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-24T13:11:43.547Z",
+      "updatedDate": "2024-11-13T18:50:29.199Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "blockchain_dlt",
-          "level": "critical",
-          "payout": "USD $500,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "fixed",
+          "rewardCalculationPercentage": 10,
+          "fixedReward": 500000
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "high",
-          "payout": "USD $10,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 10000
         },
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "Up to USD $2,300,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 2300000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $50,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 50000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $5,000",
-          "pocRequired": false
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": false
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $25,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "fixed",
+          "otherImpactMaxReward": 0,
+          "fixedReward": 25000
         }
       ],
       "audits": null,
@@ -472,7 +475,7 @@
       "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\nThe Blockchain/DLT impacts are only applicable for the ZK-SNARK Circuits assets in scope.\n\n__Smart Contracts__\n\n__Critical__\n  - Loss of user funds by permanent burning, freezing or direct theft\n  - Network shutdown\n\n__High__\n  - Temporary freezing of funds for at least 24 hours\n  - Forceful activation of exodus mode\n  - Blocking of upgrade system\n\n__Medium__\n  - Smart contract gas drainage\n  - Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)\n\n__Low__\n  - Smart contract fails to deliver promised returns, but doesn’t lose value \n\n__Blockchain/DLT ZK-SNARK Circuits__\n\n__Critical__\n  - Double spending\n  - Inability to generate a block for a priority operation that is added through a smart contract\n  - Minting fungible tokens not through a deposit\n  - Ability to steal/burn/freeze other people's tokens\n\n__High__\n  - Ability to execute a transaction with changed signed parameters (e.g. sender/recipient/amount/tokenId/feeToken/...)\n  - Ability to create a block with public input information that is not enough to restore state transition\n\n__Web/App__\n\n__Critical__\n  - Leak of user data\n  - Redirected funds by address modification\n  - Site goes down",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.  For the ZK-SNARK Circuits, the classification will be based on the impacts listed on the Impacts in Scope section below\n\nAll critical and high severity bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nRewards for critical smart contract vulnerabilities are further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum reward of __USD 50 000__ for Critical bug reports. \n\nThe rewards for the Blockchain/DLT section is only for the ZK-SNARK Circuits assets and not any other blockchain/DLT section.\n\n__KYC__\n\nzkSync has a Know Your Customer (KYC) requirement for bug bounty payouts. Government identification is required for the KYC process.\n\nPayouts are handled by the __zkSync__ Lite team directly and are denominated in USD. However, payouts are done in __USDC__ via zkSync Lite.",
       "outOfScopeAndRules": ".",
-      "assetsBodyV2": "All smart contracts of zkSync Lite can be found at [https://github.com/matter-labs/zksync/tree/breaking/contracts](https://github.com/matter-labs/zksync/tree/breaking/contracts). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program. \n\n__Note__ that the bug bounty program includes contracts from the currently active version o zkSync target/governance target/additional zkSync.",
+      "assetsBodyV2": "However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program. \n\n__Note__ that the bug bounty program includes contracts from the currently active version o zkSync target/governance target/additional zkSync.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -568,18 +571,18 @@
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [
         {
-          "id": 45,
+          "id": 295,
           "programId": 154,
-          "title": "ZkSync Codebase",
-          "description": "Github Codebase",
+          "title": "ZkSync Smart Contracts",
+          "description": "Program Smart Contracts",
           "url": "https://github.com/matter-labs/zksync/tree/breaking/contracts",
-          "createdAt": "2024-10-24T12:55:52.640Z",
-          "updatedAt": "2024-10-24T12:55:52.640Z"
+          "createdAt": "2024-11-13T18:50:12.601Z",
+          "updatedAt": "2024-11-13T18:50:12.601Z"
         }
       ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

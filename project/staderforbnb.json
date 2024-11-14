@@ -9,26 +9,29 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1NI4MIRW8BjdYssCSmoQxy/57fe2db619cbb9c2ca3687f57ca5bc36/Stader.png",
       "launchDate": "2022-08-11T18:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-24T18:44:14.180Z",
+      "updatedDate": "2024-11-13T19:04:18.921Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $50,000 to $250,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 250000,
+          "minReward": 50000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $15,000 to USD $50,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 50000,
+          "minReward": 15000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "Up to USD $15,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "up_to",
+          "maxReward": 15000
         }
       ],
       "audits": null,
@@ -124,7 +127,7 @@
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the  [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nRewards for critical smart contract vulnerabilities are further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum reward of __USD 50 000__ for Critical smart contract bug reports. \n\nPrevious issues highlighted in the following audit reports are considered out of scope of this program: \n  - [https://github.com/stader-labs/audits/blob/main/peckshield/PeckShield-Audit-Report-Stader-Binance.pdf](https://github.com/stader-labs/audits/blob/main/peckshield/PeckShield-Audit-Report-Stader-Binance.pdf)\n  - [https://staderlabs-docs.s3.amazonaws.com/audits/binance/StaderLabs_BnbX_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf](https://staderlabs-docs.s3.amazonaws.com/audits/binance/StaderLabs_BnbX_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf)\n\nPayouts are handled by the __Stader__ team directly and are denominated in USD. However, payouts are done in __USDC__ or __ETH__, at the discretion of the team.",
       "outOfScopeAndRules": ".",
-      "assetsBodyV2": "Though only the proxy contracts are listed as in-scope, current implementation and any further updates to the implementation contracts are considered in scope. When reporting a bug, please make sure to select the relevant proxy smart contract as the target.\n\nAll smart contracts of Stader for BNB can be found at [https://github.com/stader-labs/bnbX](https://github.com/stader-labs/bnbX). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf any Critical/High severity impact can be caused to any other asset managed by Stader for BNB that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.",
+      "assetsBodyV2": "Though only the proxy contracts are listed as in-scope, current implementation and any further updates to the implementation contracts are considered in scope. When reporting a bug, please make sure to select the relevant proxy smart contract as the target.\n\nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf any Critical/High severity impact can be caused to any other asset managed by Stader for BNB that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -197,18 +200,18 @@
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [
         {
-          "id": 56,
+          "id": 301,
           "programId": 2117,
-          "title": "Stader Labs smart contract",
-          "description": "Github Codebase",
-          "url": "https://github.com/stader-labs/bnbX",
-          "createdAt": "2024-10-24T18:42:58.838Z",
-          "updatedAt": "2024-10-24T18:42:58.838Z"
+          "title": "Stader Labs Smart Contract",
+          "description": "Program Smart Contract",
+          "url": " https://github.com/stader-labs/bnbX",
+          "createdAt": "2024-11-13T19:04:03.780Z",
+          "updatedAt": "2024-11-13T19:04:03.780Z"
         }
       ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

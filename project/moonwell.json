@@ -14,33 +14,34 @@
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "Up to USD $250,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 250000
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $15,000 to USD $20,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 20000,
+          "minReward": 15000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "Up to USD $1,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "up_to",
+          "maxReward": 1000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "Up to USD $25,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 25000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "Up to USD $10,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "up_to",
+          "maxReward": 10000
         }
       ],
       "audits": null,
@@ -891,7 +892,7 @@
       "programCodebases": [],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

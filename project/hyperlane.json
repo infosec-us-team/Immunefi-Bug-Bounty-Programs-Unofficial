@@ -9,56 +9,60 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/32dUEjoP7WozWkfwxWEhK2/92b2a5020a729f64f689dfa47af55717/Hyperlane_logo.jpeg",
       "launchDate": "2023-01-10T21:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-25T18:57:12.342Z",
+      "updatedDate": "2024-11-13T19:40:31.089Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $20,000 to USD $2,500,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 2500000,
+          "minReward": 20000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $10,000 to USD $200,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 200000,
+          "minReward": 10000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $5,000",
-          "pocRequired": false
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $2,000",
-          "pocRequired": false
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 2000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $20,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "fixed",
+          "otherImpactMaxReward": 0,
+          "fixedReward": 20000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "USD $10,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 10000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "medium",
-          "payout": "USD $2,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 2000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -2356,7 +2360,7 @@
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Critical and High Smart Contract bug reports require a PoC to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nCritical smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of __USD 20 000__. High smart contract vulnerabilities are capped at 10% of economic damage as well, with a minimum reward of __USD 10 000__.\n\nHyperlane requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed are Name and Identity Proof (Passport, / Driving License / National ID). The collection of this information will be done by the project team.\n\nPayouts are handled by the __Hyperlane__ team directly and are denominated in USD. However, payouts are done in __USDC__.",
       "outOfScopeAndRules": ".",
-      "assetsBodyV2": "All smart contracts of Hyperlane can be found at [https://github.com/hyperlane-xyz](https://github.com/hyperlane-xyz). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nThough only the proxy contracts are listed as in-scope, current implementation and any further updates to the implementation contracts are considered in scope. When reporting a bug, please make sure to select the relevant proxy smart contract as the target. \n\nIf an impact can be caused to any other asset managed by Hyperlane that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project. The vulnerability will then be evaluated by Hyperlane core contributors in good faith to determine where it would lie on the vulnerability scale.",
+      "assetsBodyV2": "However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nThough only the proxy contracts are listed as in-scope, current implementation and any further updates to the implementation contracts are considered in scope. When reporting a bug, please make sure to select the relevant proxy smart contract as the target. \n\nIf an impact can be caused to any other asset managed by Hyperlane that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project. The vulnerability will then be evaluated by Hyperlane core contributors in good faith to determine where it would lie on the vulnerability scale.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -2459,18 +2463,18 @@
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [
         {
-          "id": 71,
+          "id": 309,
           "programId": 1844,
-          "title": "Hyperlane Codebase",
-          "description": "Program Codebase",
+          "title": "Hyperlane Smart Contracts",
+          "description": "Program Smart Contracts",
           "url": "https://github.com/hyperlane-xyz",
-          "createdAt": "2024-10-25T18:50:25.325Z",
-          "updatedAt": "2024-10-25T18:50:25.325Z"
+          "createdAt": "2024-11-13T19:40:12.788Z",
+          "updatedAt": "2024-11-13T19:40:12.788Z"
         }
       ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

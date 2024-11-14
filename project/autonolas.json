@@ -9,32 +9,33 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4r8fmQqm5emK0IceVDJtLF/1c5f298890761f6b5342c04aa0df8c63/Autonolas_logo.jpeg",
       "launchDate": "2022-08-10T17:30:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-24T18:29:58.581Z",
+      "updatedDate": "2024-11-13T19:00:44.005Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "Up to USD $50,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 50000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "Up to USD $20,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "up_to",
+          "maxReward": 20000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $5,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": false
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -502,7 +503,7 @@
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nCritical and high smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of __USD 6 000__ for high smart contract vulnerabilities and __12 000__ for critical ones.\n\nAll Critical, High, and Medium Smart Contract bug reports must come with a PoC, have an end-effect impact, and an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nThe following vulnerabilities are not eligible for a reward:\n\n  - All vulnerabilities mentioned in [https://github.com/valory-xyz/autonolas-governance/tree/main/audits](https://github.com/valory-xyz/autonolas-governance/tree/main/audits) \n  - All vulnerabilities mentioned in [https://github.com/valory-xyz/autonolas-governance/tree/main/docs](https://github.com/valory-xyz/autonolas-governance/tree/main/docs) \n  - All vulnerabilities mentioned in [https://github.com/valory-xyz/autonolas-governance/tree/main/test](https://github.com/valory-xyz/autonolas-governance/tree/main/test)\n  - All vulnerabilities mentioned in the comments on the contracts code [https://github.com/valory-xyz/autonolas-governance/tree/main/contracts](https://github.com/valory-xyz/autonolas-governance/tree/main/contracts)\n  - All vulnerabilities mentioned in [https://github.com/valory-xyz/autonolas-registries/tree/main/audits](https://github.com/valory-xyz/autonolas-registries/tree/main/audits) \n  - All vulnerabilities mentioned in [https://github.com/valory-xyz/autonolas-registries/tree/main/docs ](https://github.com/valory-xyz/autonolas-registries/tree/main/docs)\n  - All vulnerabilities mentioned in [https://github.com/valory-xyz/autonolas-registries/tree/main/test ](https://github.com/valory-xyz/autonolas-registries/tree/main/test)\n  - All vulnerabilities mentioned in the comments on the contracts code [https://github.com/valory-xyz/autonolas-registries/tree/main/contracts](https://github.com/valory-xyz/autonolas-registries/tree/main/contracts)\n  - All vulnerabilities mentioned in [https://github.com/valory-xyz/autonolas-tokenomics/tree/main/audits ](https://github.com/valory-xyz/autonolas-tokenomics/tree/main/audits)\n  - All vulnerabilities mentioned in [https://github.com/valory-xyz/autonolas-tokenomics/tree/main/docs ](https://github.com/valory-xyz/autonolas-tokenomics/tree/main/docs)\n  - All vulnerabilities mentioned in [https://github.com/valory-xyz/autonolas-tokenomics/tree/main/test ](https://github.com/valory-xyz/autonolas-tokenomics/tree/main/test)\n  - All vulnerabilities mentioned in the comments on the contracts code [https://github.com/valory-xyz/autonolas-tokenomics/tree/main/contracts](https://github.com/valory-xyz/autonolas-tokenomics/tree/main/contracts) \n  - All vulnerabilities found in the inherited source code from OpenZeppelin ([https://github.com/OpenZeppelin/openzeppelin-contracts](https://github.com/OpenZeppelin/openzeppelin-contracts)) and Solmate ([https://github.com/transmissions11/solmate](https://github.com/transmissions11/solmate))\n  - All vulnerabilities found in the inherited source code for the bridging contracts from [Polygon](https://github.com/maticnetwork), [Gnosis](https://docs.gnosischain.com/bridges/tokenbridge/amb-bridge), [Arbitrum](https://docs.arbitrum.io/), [Optimism](https://docs.optimism.io/), [Base](https://docs.base.org/), [Wormhole](https://docs.wormhole.com/) docs.\n  - All vulnerabilities found in code based on or inspired by Maple Finance ([https://github.com/maple-labs](https://github.com/maple-labs)) Curve DAO [https://github.com/curvefi/curve-dao-contracts](https://github.com/curvefi/curve-dao-contracts) Uniswap Labs [(https://github.com/Uniswap/v2-core)](https://github.com/Uniswap/v2-core), PaulRBerg [(https://github.com/paulrberg/prb-math)](https://github.com/paulrberg/prb-math), Jeiwan [(https://github.com/Jeiwan/zuniswapv2)](https://github.com/Jeiwan/zuniswapv2), Safe Ecosystem [(https://github.com/safe-global/safe-contracts)](https://github.com/safe-global/safe-contracts) and that are already reported to one of those projects.\n  - All vulnerabilities that arise from misconfigured registration from users (e.g. component owners, agent owners, service owners, agents operators) or misuse of the registration logic (e.g. accidental locking of funds, loss of keys to control services, etc.).  \n\nAutonolas requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed is an invoice with Name, Address, and Country of the hacker or a legal entity used for transactions. If the hacker is based in Switzerland they need to account for VAT in the invoice.\nThe collection of this information will be done by the Autonolas team. \n\nPayouts are handled by the __Autonolas__ team directly and are denominated in USD. However, payouts are done in __USDT and USDC__, with the choice of the ratio at the discretion of the team.",
       "outOfScopeAndRules": ".",
-      "assetsBodyV2": "All smart contracts of Autonolas can be found at\n\n- [https://github.com/valory-xyz/autonolas-governance/tree/v1.2.2](https://github.com/valory-xyz/autonolas-governance/tree/v1.2.2)\n- [https://github.com/valory-xyz/autonolas-registries/tree/v1.2.2](https://github.com/valory-xyz/autonolas-registries/tree/v1.2.2) \n- [https://github.com/valory-xyz/autonolas-tokenomics/tree/v1.2.2](https://github.com/valory-xyz/autonolas-tokenomics/tree/v1.2.2) \n\nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
+      "assetsBodyV2": "However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -576,10 +577,38 @@
       "rewardsToken": "USDC, USDT",
       "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
+      "programCodebases": [
+        {
+          "id": 298,
+          "programId": 2200,
+          "title": "Autonolas Smart Contacts",
+          "description": "Program Smart Contacts",
+          "url": "https://github.com/valory-xyz/autonolas-governance/tree/v1.2.2",
+          "createdAt": "2024-11-13T18:59:39.924Z",
+          "updatedAt": "2024-11-13T18:59:39.924Z"
+        },
+        {
+          "id": 299,
+          "programId": 2200,
+          "title": "Autonolas Smart Contacts",
+          "description": "Program Smart Contacts",
+          "url": "https://github.com/valory-xyz/autonolas-registries/tree/v1.2.2",
+          "createdAt": "2024-11-13T18:59:58.072Z",
+          "updatedAt": "2024-11-13T18:59:58.072Z"
+        },
+        {
+          "id": 300,
+          "programId": 2200,
+          "title": "Autonolas Smart Contacts",
+          "description": "Program Smart Contacts",
+          "url": "https://github.com/valory-xyz/autonolas-tokenomics/tree/v1.2.2",
+          "createdAt": "2024-11-13T19:00:18.343Z",
+          "updatedAt": "2024-11-13T19:00:18.343Z"
+        }
+      ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

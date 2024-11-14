@@ -14,45 +14,49 @@
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $20,000 to USD $100,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 100000,
+          "minReward": 20000
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $5,000 to USD $20,000",
-          "pocRequired": false
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 20000,
+          "minReward": 5000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $2,000 to USD $5,000",
-          "pocRequired": false
+          "severity": "medium",
+          "rewardModel": "range",
+          "maxReward": 5000,
+          "minReward": 2000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "Up to USD $2,000",
-          "pocRequired": false
+          "severity": "low",
+          "rewardModel": "up_to",
+          "maxReward": 2000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $7,500 to USD $15,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 15000,
+          "minReward": 7500
         },
         {
           "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "Up to USD $5,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "up_to",
+          "maxReward": 5000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "medium",
-          "payout": "Up to USD $1,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "up_to",
+          "maxReward": 1000
         }
       ],
       "audits": null,
@@ -411,7 +415,7 @@
       "programCodebases": [],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

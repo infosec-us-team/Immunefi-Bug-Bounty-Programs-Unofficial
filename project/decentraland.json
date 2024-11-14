@@ -9,50 +9,51 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/CXsZzmFYIOc6VRsmn4i4P/aa9602446e06cec6320bbab0f437ea98/decentraland-mana-logo_copy.png",
       "launchDate": "2022-07-05T16:30:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-24T14:19:06.860Z",
+      "updatedDate": "2024-11-13T18:52:30.964Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "Up to USD $500,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "up_to",
+          "maxReward": 500000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "Up to USD $20,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "up_to",
+          "maxReward": 20000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "Up to USD $16,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 16000,
+          "otherImpactMaxReward": 0
         },
         {
           "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "Up to USD $4,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "up_to",
+          "maxReward": 4000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "medium",
-          "payout": "Up to USD $2,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "up_to",
+          "maxReward": 2000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "low",
-          "payout": "USD $500",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 500
         }
       ],
       "audits": null,
@@ -760,7 +761,7 @@
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward.  All Smart Contract bug reports require a PoC and a suggestion for a fix to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nHigh smart contract vulnerabilities to be calculated as __0.1%__ of the economic damage and capped at USD 500,000, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of __USD 20,000__.\n\nAll other rewards for the bug bounty program are scaled based on an internally established team criteria, taking into account the exploitability of the bug, the impact it causes, and the likelihood of the vulnerability presenting itself, which is especially factored in with bug reports requiring multiple conditions to be met that are currently not in-place. However, there is a minimum reward of USD 1 000 for each severity level for smart contracts, rewards will be provided at the determined fair value by the team depending on these conditions, assuming that the bug report is in-scope of the bug bounty program.\n\nDecentraland has combined Critical and High Smart Contract impacts together, please refer to the High Smart Contract rewards and impacts respectively. \n\nThe following vulnerabilities are not eligible for a reward:\n\n  - Estate: The [getFingerprint](https://github.com/decentraland/land/blob/master/contracts/estate/EstateRegistry.sol#L317) function can run out of gas for Estates bigger than 4000 LANDs.\n  - Collections: Missing the ERC165 interface registration.\n  - All vulnerabilities marked in [https://github.com/decentraland/smart-contract-audits](https://github.com/decentraland/smart-contract-audits) \n\nDecentraland requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed are Name, Mailing Address and any ID. The collection of this information will be done by the Decentraland team.\n\nPayouts are handled by the __Decentraland__ team directly and are denominated in USD. However, payouts are done in __MANA and USDT__, with a minimum of 20% to be done in USDT.",
       "outOfScopeAndRules": ".",
-      "assetsBodyV2": "All smart contracts of Decentraland can be found at [https://github.com/decentraland](https://github.com/decentraland). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf an impact can be caused to any other asset managed by Decentraland that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.\n\nBug reports from compensated team members of any Decentraland core units will not be eligible for a reward.\n\nAll team members of the audit companies Decentraland works with, and its third-party suppliers, including Immunefi itself and its subsidiaries, are not eligible for a reward.\n\nBug reports from team members and third-party suppliers of businesses and organizations that are not a Decentraland Core Unit but have assets considered as critical infrastructure covered under the bug bounty program are also not eligible for the bug bounty program.\n\nEmployees and team members of Decentraland third-party suppliers \"to core units\" that operate in a technical capacity will also not be eligible for a reward if the bug is related to the work assigned or if the bug reporter is leveraging privileged information coming from the agreed services.",
+      "assetsBodyV2": "However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf an impact can be caused to any other asset managed by Decentraland that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.\n\nBug reports from compensated team members of any Decentraland core units will not be eligible for a reward.\n\nAll team members of the audit companies Decentraland works with, and its third-party suppliers, including Immunefi itself and its subsidiaries, are not eligible for a reward.\n\nBug reports from team members and third-party suppliers of businesses and organizations that are not a Decentraland Core Unit but have assets considered as critical infrastructure covered under the bug bounty program are also not eligible for the bug bounty program.\n\nEmployees and team members of Decentraland third-party suppliers \"to core units\" that operate in a technical capacity will also not be eligible for a reward if the bug is related to the work assigned or if the bug reporter is leveraging privileged information coming from the agreed services.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -852,18 +853,18 @@
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [
         {
-          "id": 49,
+          "id": 296,
           "programId": 37,
-          "title": "Decentraland Codebase",
-          "description": "Github Codebase",
-          "url": "https://github.com/decentraland)",
-          "createdAt": "2024-10-24T14:17:46.421Z",
-          "updatedAt": "2024-10-24T14:17:46.421Z"
+          "title": "Decentraland Smart Contracts",
+          "description": "Program Smart Contracts",
+          "url": " https://github.com/decentraland",
+          "createdAt": "2024-11-13T18:51:50.157Z",
+          "updatedAt": "2024-11-13T18:51:50.157Z"
         }
       ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

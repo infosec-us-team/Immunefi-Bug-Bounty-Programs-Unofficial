@@ -9,26 +9,29 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4gY4iTDSAUifg40yi4Gz3q/7fe15ea0abbf2ca6f57d0833284b77db/VaultCraft.png",
       "launchDate": "2022-01-27T03:30:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-24T14:54:45.590Z",
+      "updatedDate": "2024-11-13T18:54:56.603Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $25,000 - USD $150,000",
-          "pocRequired": false
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 150000,
+          "minReward": 25000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $1,000 - USD $25,000",
-          "pocRequired": false
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 25000,
+          "minReward": 1000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $1,000",
-          "pocRequired": false
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -256,7 +259,7 @@
       "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Smart Contracts/Blockchain__\n\n  - Thefts and freezing of principal of any amount\n  - Thefts and freezing of unclaimed yield of any amount\n  - Temporary freezing of funds for at least 24 hours\n  - Unable to call contract\n  - Gas drainage / freezing of funds caused by gas overflow\n  - Smart contract fails to deliver promised returns\n  - Bad slippage occurred by keeper\n  - Access by unauthorized user\n  - Change of contract address in registry",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nCritical and high vulnerabilities are further capped at __10%__ of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum reward of __USD 25 000__ for Critical bug reports, and __USD 1 000__ for high severity bug reports.\n\nPayouts are handled by the __VaultCraft__ team directly and are denominated in USD. However, payouts are done in __USDC__.",
       "outOfScopeAndRules": ".",
-      "assetsBodyV2": "All smart contracts of VaultCraft can be found at [https://github.com/popcorn-limited](https://github.com/popcorn-limited).  However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\n- \tWrapped Ether ARB = 0xC4bBbbAF12B1bE472E6E7B1A76d2756d5C763F95\n- \tTether USD = 0x8aD58FA719FDf6dc5B324Db9eE22E561377Fda69\n- \trsETH = 0x7CEbA0cAeC8CbE74DB35b26D7705BA68Cb38D725\n- \tUSD Coin ARB = 0xD3A17928245064B6DF5095a76e277fe441D538a4\n- \tUSD Coin OPT = 0x319121F8F39669599221A883Bb6d7d0Feef0E69c\n- \tWrapped BTC ARB = 0xd11A312a7d9745C62dfc014D72E7Bb2403DABf72\n- \tWrapped BTC OPT = 0x319121F8F39669599221A883Bb6d7d0Feef0E69c\n- \tDai Stablecoin = 0x6cE9c05E159F8C4910490D8e8F7a63e95E6CEcAF\n- \tVCX-LP = 0x99a53fAB6fBD1eacb59AE998dA2DbF130BE94C38\n- \tezETH LP = 0xd24844c1eb111C1385A311DeEc62533A09d4C86B\n- \trsETH Lend = 0xa48d49F63Dfc185cDD409B65f042955f509d9658\n- \teETH Lend = 0x434E7EA9BC77C93c3F4680862281603338c7aE02\n- \tWrapped Ether Mainnet = 0xe1489Af32c45c51f94Acdb3F36B7032A82F6f55D\n- \tUSD Coin Mainnet = 0x52Aef3ea0D3F93766D255A1bb0aA7F1C4885E622\n- \tPrime ETH = 0x59fD900cA80Bf914374AaFB1D16aB12aE1234F77",
+      "assetsBodyV2": "However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\n- \tWrapped Ether ARB = 0xC4bBbbAF12B1bE472E6E7B1A76d2756d5C763F95\n- \tTether USD = 0x8aD58FA719FDf6dc5B324Db9eE22E561377Fda69\n- \trsETH = 0x7CEbA0cAeC8CbE74DB35b26D7705BA68Cb38D725\n- \tUSD Coin ARB = 0xD3A17928245064B6DF5095a76e277fe441D538a4\n- \tUSD Coin OPT = 0x319121F8F39669599221A883Bb6d7d0Feef0E69c\n- \tWrapped BTC ARB = 0xd11A312a7d9745C62dfc014D72E7Bb2403DABf72\n- \tWrapped BTC OPT = 0x319121F8F39669599221A883Bb6d7d0Feef0E69c\n- \tDai Stablecoin = 0x6cE9c05E159F8C4910490D8e8F7a63e95E6CEcAF\n- \tVCX-LP = 0x99a53fAB6fBD1eacb59AE998dA2DbF130BE94C38\n- \tezETH LP = 0xd24844c1eb111C1385A311DeEc62533A09d4C86B\n- \trsETH Lend = 0xa48d49F63Dfc185cDD409B65f042955f509d9658\n- \teETH Lend = 0x434E7EA9BC77C93c3F4680862281603338c7aE02\n- \tWrapped Ether Mainnet = 0xe1489Af32c45c51f94Acdb3F36B7032A82F6f55D\n- \tUSD Coin Mainnet = 0x52Aef3ea0D3F93766D255A1bb0aA7F1C4885E622\n- \tPrime ETH = 0x59fD900cA80Bf914374AaFB1D16aB12aE1234F77",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -332,18 +335,18 @@
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [
         {
-          "id": 53,
+          "id": 297,
           "programId": 24,
-          "title": "VaultCraft Codebase",
-          "description": "Github Codebase",
-          "url": "https://github.com/popcorn-limited",
-          "createdAt": "2024-10-24T14:53:15.208Z",
-          "updatedAt": "2024-10-24T14:53:15.208Z"
+          "title": "VaultCraft Smart Contracts",
+          "description": "Program Smart Contracts",
+          "url": " https://github.com/popcorn-limited",
+          "createdAt": "2024-11-13T18:54:23.007Z",
+          "updatedAt": "2024-11-13T18:54:23.007Z"
         }
       ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

@@ -9,26 +9,30 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2Dpad2OkwlP4SAfEzsQk5j/9064a1846d23ecad7b306fe81d5bb501/Yearn.png",
       "launchDate": "2021-07-01T07:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-25T08:37:35.994Z",
+      "updatedDate": "2024-11-13T19:25:47.297Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $20,000 to USD $200,000",
-          "pocRequired": false
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 200000,
+          "minReward": 20000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $5,000 to USD $20,000",
-          "pocRequired": false
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 20000,
+          "minReward": 5000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $1,000 to USD $5,000",
-          "pocRequired": false
+          "severity": "medium",
+          "rewardModel": "range",
+          "maxReward": 5000,
+          "minReward": 1000
         }
       ],
       "audits": null,
@@ -414,10 +418,10 @@
           "title": "Indefinite losses due to Miner-extractable value (MEV) on user actions without any external factors."
         }
       ],
-      "programOverview": "Yearn Finance is a suite of products in Decentralized Finance (DeFi) that provides lending aggregation and yield generation on the Ethereum blockchain. The protocol is maintained by various independent developers and is governed by YFI holders. Their products include: \n\n__Vaults__\nCapital pools that automatically generate yield based on opportunities present in the market. Vaults benefit users by socializing gas costs, automating the yield generation and rebalancing process, and automatically shifting capital as opportunities arise. End users also do not need to have a proficient knowledge of the underlying protocols involved or DeFi, thus the Vaults represent a passive-investing strategy.\n\nFurther resources regarding Yearn Finance can be found on their website, [https://yearn.finance/](https://yearn.finance/) and [documentation](https://docs.yearn.finance/).  \n\nThe bug bounty program is focused on its smart contracts and is mostly concerned with the prevention of the loss of user funds.",
+      "programOverview": "Yearn Finance is a suite of products in Decentralized Finance (DeFi) that provides lending aggregation and yield generation on the Ethereum blockchain. The protocol is maintained by various independent developers and is governed by YFI holders. Their products include: \n\n__Vaults__\nCapital pools that automatically generate yield based on opportunities present in the market. Vaults benefit users by socializing gas costs, automating the yield generation and rebalancing process, and automatically shifting capital as opportunities arise. End users also do not need to have a proficient knowledge of the underlying protocols involved or DeFi, thus the Vaults represent a passive-investing strategy.\n\nFurther resources regarding Yearn Finance can be found on their website, [https://yearn.finance/](https://yearn.finance/).\n\nThe bug bounty program is focused on its smart contracts and is mostly concerned with the prevention of the loss of user funds.\n\n\n__Bug Bounty FAQ__\n\nQ: Is there a time limit for the Bug Bounty program?\nA: No. The Bug Bounty program currently has no end date, but this can be changed at any time at the discretion of Yearn.\n\nQ: Can I submit bugs anonymously and still receive payment?\nA: Yes. If you wish to remain anonymous you can do so and still be eligible for rewards as long as they are for valid bugs. Rewards will be sent to the valid Ethereum address that you provide.\n\nQ: Can I donate my reward to charity?\nA: Yes. You may donate your reward to a charity of your choosing, or to a gitcoin grant.",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n- Re-entrancy\n- Logic errors\n  - including user authentication errors\n- Solidity/EVM details not considered\n  - including integer over-/under-flow\n  - including unhandled exceptions\n- Trusting trust/dependency vulnerabilities\n  - including composability vulnerabilities\n- Oracle failure/manipulation\n- Novel governance attacks\n- Economic/financial attacks\n  - including flash loan attacks\n- Congestion and scalability\n  - including running out of gas\n  - including block stuffing\n  - including susceptibility to frontrunning\n- Consensus failures\n- Cryptography problems\n- Signature malleability\n- Susceptibility to replay attacks\n- Weak randomness\n- Weak encryption\n- Susceptibility to block timestamp manipulation\n- Missing access controls / unprotected internal or debugging interfaces",
       "rewardsBody": "Rewards for Smart Contract vulnerabilities are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nTo determine the final reward amount, the likelihood to have a meaningful impact on availability, integrity, and/or loss of funds is considered. The final decision on the payout amount will be determined by the Yearn Finance team at its discretion.\n\nPayouts are handled by the __Yearn Finance__ team directly and are denominated in USD. Payouts can be made in USDC, DAI, YFI, or their Yearn Vault counterparts.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist) This includes roles that potentially can be opened.\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Any report on contracts not actively/directly supported by Yearn Finance. E.g.: Ironbank.\n  - Any report for the following helper contracts are not valid for bounties or in scope:\n    - https://etherscan.io/address/0x5b4F3BE554a88Bd0f8d8769B9260be865ba03B4a\n    - https://etherscan.io/address/0x437758D475F70249e03EDa6bE23684aD1FC375F0\n    - https://etherscan.io/address/0xa0B57619A980DFEfD50f24F310EE1b55A40A9D46\n    - https://ftmscan.com/address/0x97D0bE2a72fc4Db90eD9Dbc2Ea7F03B4968f6938\n    - https://ftmscan.com/address/0x8ca27a3ab8917a033f278D20135d2467faA099bA\n    - https://ftmscan.com/address/0x5ABdfDfa0cF2d83c4755E0a2a782eF57FEd5c23B\n    - https://arbiscan.io/address/0x3a8efa2d87d60c0289f19b44a0928f4269c0f094\n    - https://arbiscan.io/address/0x66a1a27f4b22dcaa24e427dcffbf0cddd9d35e0f\n    - https://optimistic.etherscan.io/address/0xD63aB09ac2048a7eCac92f0fFad5F104edD0E032\n    - https://optimistic.etherscan.io/address/0xD3A93C794ee2798D8f7906493Cd3c2A835aa0074\n\n__Rules__\n\nThe rules of this bug bounty are as follows:\n\n- Bug has not been publicly disclosed.\n- The bug has not been submited on other bug bounty platforms.\n- Vulnerabilities that have been previously submitted by another contributor or already known by the Yearn development team are not eligible for rewards.\n- The size of the bounty payout depends on the assessment of the severity of the exploit. Please refer to the rewards section below for additional details.\n- Bugs must be reproducible in order for us to verify the vulnerability.\n- Rewards and the validity of bugs are determined by the Yearn security team and any payouts are made at their sole discretion.\n- Terms and conditions of the Bug Bounty program can be changed at any time at the discretion of Yearn.\n- Details of any valid bugs may be shared with complementary protocols utilized in the Yearn ecosystem in order to promote ecosystem cohesion and safety.\n\n__Bug Bounty FAQ__\n\nQ: Is there a time limit for the Bug Bounty program?\nA: No. The Bug Bounty program currently has no end date, but this can be changed at any time at the discretion of Yearn.\n\nQ: Can I submit bugs anonymously and still receive payment?\nA: Yes. If you wish to remain anonymous you can do so and still be eligible for rewards as long as they are for valid bugs. Rewards will be sent to the valid Ethereum address that you provide.\n\nQ: Can I donate my reward to charity?\nA: Yes. You may donate your reward to a charity of your choosing, or to a gitcoin grant.",
+      "outOfScopeAndRules": null,
       "assetsBodyV2": "__Finding More Assets in Scope__\nYearn adds and removes Vaults and Strategies from Production on an ongoing basis. Yearn provides helper contracts (see table below) to list the __actual contracts__ that are considered in scope for this bug bounty program. \n\nThe following functions can be called to obtain a list of smart contract addresses that are currently in Production and that are covered by the program:\n\n| Network     | Contracts     | Addresses (NOT IN SCOPE)     |\n| ---------- | ---------- | ---------- |\n| Ethereum       | StrategiesHelper AddressesGeneratorV2 Vaults       | 0x5b4F3BE554a88Bd0f8d8769B9260be865ba03B4a 0x437758D475F70249e03EDa6bE23684aD1FC375F0    |\n| Fantom       | StrategiesHelper AddressesGeneratorV2Vaults       | 0x97D0bE2a72fc4Db90eD9Dbc2Ea7F03B4968f6938 0x8ca27a3ab8917a033f278D20135d2467faA099bA       |\n| Optimism       | StrategiesHelper AddressesGeneratorV2Vaults       | 0xD3A93C794ee2798D8f7906493Cd3c2A835aa0074 0xD63aB09ac2048a7eCac92f0fFad5F104edD0E032       |\n| Arbitrum       | StrategiesHelper AddressesGeneratorV2Vaults       | 0x66a1a27f4b22dcaa24e427dcffbf0cddd9d35e0f 0x3a8efa2d87d60c0289f19b44a0928f4269c0f094       |\n\nFunctions to list bounty program contracts:\nStrategiesHelper - assetsStrategiesAddresses()\n\nAddressesGeneratorV2Vaults - assetsAddresses()\n\nOther contracts, outside of the ones mentioned here, might be considered on a case by case basis, as long as economic damage can be achieved. \n\nFor more further information about in-scope contracts from yearn refer to the following doc [https://github.com/yearn/yearn-security/blob/master/SECURITY.md](https://github.com/yearn/yearn-security/blob/master/SECURITY.md). For information about vaults and strategiesplease refer to their GitHub repository - [https://github.com/yearn/yearn-vaults](https://github.com/yearn/yearn-vaults). Additionally, you may refer to [https://seafood.yearn.watch](https://yearn.watch) and [https://yearn.watch/stats](https://yearn.watch/stats) for more information about each smart contract.  \n\n__Submission Requirements__\n\nIn order to be considered for a reward, all bug reports must contain the following:\n\n- Description of suspected vulnerability\n- Steps to reproduce the issue\n- A valid POC showing the attack where the outcome has clear economic damage for any of the contracts listed in scope.\n- Your name and/or colleagues if you wish to be later recognized\n- (Optional) A patch and/or suggestions to resolve the vulnerability\n\n__Ethical Behavior Requirements__\n\nResponsible disclosure is predicated on ethical behavior. These guidelines outline best practices for the community as whole, whether you are reporting, or the recipient of a report. By stating that you adhere to this policy, you’re claiming to handle vulnerability information ethically, and abide by the following:\n\n- Do not attempt to leverage a vulnerability, or information of its existence, as part of a financial trading strategy or otherwise for financial gain.\n- Do not attempt to compromise systems upon which development of a product relies; including but not limited to compromising development systems, accounts, domains, email etc..\n- Do not attempt to sell vulnerability information or exploits.\n- Do not ask for any form of compensation from an affected party.\nYou may compensate a disclosing party if you would like to after all known vulnerability details have been disclosed.\n- Do not disclose a bug or vulnerability on mailing lists, public boards, forums, social media or any other channel prior to Responsibly Disclosing to the organizations you have a published relationship with\n- Do not attempt any illegal acts, including phishing, physical attacks, DDoS, or any attempt to gain access without authorization\n\n__3rd Party Affected Projects__\n\nIn the case where we become aware of security issues affecting other projects that has never affected Yearn, our intention is to inform those projects of security issues on a best effort basis.\n\nIn the case where we fix a security issue in Yearn that also affects the following neighboring projects, our intention is to engage in responsible disclosures with them as described in the adopted standard, subject to the deviations described in the deviations section below.\n\n__Deviations from the Standard__\n\nIn the case of a counterfeiting or fund-stealing bug affecting Yearn, however, we might decide not to include those details with our reports to partners ahead of coordinated release, as long as we are sure that they are not vulnerable.",
       "impactsBody": null,
       "immunefiStandard": true,
@@ -480,29 +484,57 @@
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
       "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
-      "customOutOfScopeInformation": null,
-      "customProhibitedActivities": [],
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+      "customOutOfScopeInformation": "  - Best practice critiques\n - Any report on contracts not actively/directly supported by Yearn Finance. E.g.: Ironbank.\n  - Any report for the following helper contracts are not valid for bounties or in scope:\n    - https://etherscan.io/address/0x5b4F3BE554a88Bd0f8d8769B9260be865ba03B4a\n    - https://etherscan.io/address/0x437758D475F70249e03EDa6bE23684aD1FC375F0\n    - https://etherscan.io/address/0xa0B57619A980DFEfD50f24F310EE1b55A40A9D46\n    - https://ftmscan.com/address/0x97D0bE2a72fc4Db90eD9Dbc2Ea7F03B4968f6938\n    - https://ftmscan.com/address/0x8ca27a3ab8917a033f278D20135d2467faA099bA\n    - https://ftmscan.com/address/0x5ABdfDfa0cF2d83c4755E0a2a782eF57FEd5c23B\n    - https://arbiscan.io/address/0x3a8efa2d87d60c0289f19b44a0928f4269c0f094\n    - https://arbiscan.io/address/0x66a1a27f4b22dcaa24e427dcffbf0cddd9d35e0f\n    - https://optimistic.etherscan.io/address/0xD63aB09ac2048a7eCac92f0fFad5F104edD0E032\n    - https://optimistic.etherscan.io/address/0xD3A93C794ee2798D8f7906493Cd3c2A835aa0074\n",
+      "customProhibitedActivities": [
+        "The bug has not been submited on other bug bounty platforms.",
+        "Vulnerabilities that have been previously submitted by another contributor or already known by the Yearn development team are not eligible for rewards.",
+        "Vulnerabilities that have been previously submitted by another contributor or already known by the Yearn development team are not eligible for rewards.",
+        "Bugs must be reproducible in order for us to verify the vulnerability.",
+        "Rewards and the validity of bugs are determined by the Yearn security team and any payouts are made at their sole discretion.",
+        "Terms and conditions of the Bug Bounty program can be changed at any time at the discretion of Yearn.",
+        "Details of any valid bugs may be shared with complementary protocols utilized in the Yearn ecosystem in order to promote ecosystem cohesion and safety."
+      ],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "USDC, DAI, YFI",
       "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
-      "programDocumentations": [],
+      "programCodebases": [
+        {
+          "id": 303,
+          "programId": 2227,
+          "title": "Yearn Finance Smart Contracts",
+          "description": "Program Smart Contracts",
+          "url": "https://github.com/yearn/yearn-security/blob/master/SECURITY.md",
+          "createdAt": "2024-11-13T19:16:40.883Z",
+          "updatedAt": "2024-11-13T19:16:40.883Z"
+        }
+      ],
+      "programDocumentations": [
+        {
+          "id": 153,
+          "programId": 2227,
+          "title": "Yearn Finance Documentation",
+          "description": "Program Documentation",
+          "url": "https://docs.yearn.finance/",
+          "createdAt": "2024-11-13T19:14:30.510Z",
+          "updatedAt": "2024-11-13T19:14:30.510Z"
+        }
+      ],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {
       "premiumTriaging": false,
       "isSafeHarborActive": false,
       "performanceMetrics": {
-        "medianResponseTimeInMinutes": 200,
+        "medianResponseTimeInMinutes": 210,
         "totalPaidAmount": 217500
       }
     },
