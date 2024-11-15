@@ -9,44 +9,49 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2SCfByxtr2f7bf1Z8Vefzb/cea115652062b3f56441d4d63702fe22/download_copy.png",
       "launchDate": "2024-04-04T16:46:29.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-29T11:07:32.119Z",
+      "updatedDate": "2024-11-14T13:31:03.132Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $100,000 to USD $3,000,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 3000000,
+          "minReward": 100000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $10,000 to USD $75,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 75000,
+          "minReward": 10000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $10,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 10000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $2,500",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 2500
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $20,000 to USD $50,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 50000,
+          "minReward": 20000,
+          "otherImpactMaxReward": 0
         },
         {
           "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "USD $15,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 15000
         }
       ],
       "audits": null,
@@ -495,8 +500,8 @@
           "updatedAt": "2024-10-29T11:05:41.115Z"
         }
       ],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_impact",
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": true
     },
     "project": {

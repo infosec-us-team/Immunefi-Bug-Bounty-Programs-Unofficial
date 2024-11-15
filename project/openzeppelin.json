@@ -9,32 +9,35 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4tl7aEnEwJyvmUxPKqR2KH/2ad9232b3e2e462c88aa27262ce93deb/OpenZeppelin_Logo.jpeg",
       "launchDate": "2021-11-15T15:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-29T16:24:39.877Z",
+      "updatedDate": "2024-11-14T13:40:03.830Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $5,001 to USD $25,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 25000,
+          "minReward": 5000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $2,501 to USD $5,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 5000,
+          "minReward": 2500
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $2,500",
-          "pocRequired": false
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 2500
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": false
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -224,15 +227,15 @@
       "programCodebases": [],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {
       "premiumTriaging": false,
       "isSafeHarborActive": false,
       "performanceMetrics": {
-        "medianResponseTimeInMinutes": 292,
-        "totalPaidAmount": 27100
+        "medianResponseTimeInMinutes": 312,
+        "totalPaidAmount": 28100
       }
     },
     "metaData": {

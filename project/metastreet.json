@@ -9,20 +9,23 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2TjQM2yeBr29b9gN6zVGFV/7ea6cd630dd42e2e512efb0a17965058/metastreet.jpg",
       "launchDate": "2023-08-02T16:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-28T15:32:09.862Z",
+      "updatedDate": "2024-11-14T13:22:18.597Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $25,000 to USD $50,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 50000,
+          "minReward": 25000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $1,000 to USD $25,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 25000,
+          "minReward": 1000
         }
       ],
       "audits": null,
@@ -546,8 +549,8 @@
           "updatedAt": "2024-10-28T15:29:15.712Z"
         }
       ],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_impact",
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

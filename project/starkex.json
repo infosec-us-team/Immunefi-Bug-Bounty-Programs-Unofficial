@@ -14,27 +14,29 @@
       "rewards": [
         {
           "assetType": "blockchain_dlt",
-          "level": "critical",
-          "payout": "USD $40,000 to $500,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 500000,
+          "minReward": 40000
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "high",
-          "payout": "USD $30,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 30000
         },
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $50,000 to USD $1,000,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 1000000,
+          "minReward": 50000
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $30,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 30000
         }
       ],
       "audits": null,
@@ -865,7 +867,7 @@
         }
       ],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": true
     },
     "project": {

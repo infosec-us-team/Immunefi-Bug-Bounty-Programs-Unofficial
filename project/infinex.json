@@ -9,32 +9,35 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4REZQLdbs6K0irbIotWWrJ/2e9701b46b3e8119ddb1e2cf3bb0370c/Zkzg4kfY_400x400.png",
       "launchDate": "2024-05-15T03:31:17.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-29T13:29:24.367Z",
+      "updatedDate": "2024-11-14T13:36:22.232Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $50,000 to USD $1,000,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 1000000,
+          "minReward": 50000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $5,000 to USD $10,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 10000,
+          "minReward": 5000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $5,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -257,8 +260,8 @@
           "updatedAt": "2024-10-29T13:23:46.791Z"
         }
       ],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_impact",
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": true
     },
     "project": {

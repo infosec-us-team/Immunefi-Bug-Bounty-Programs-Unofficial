@@ -9,32 +9,35 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/36AfO1anvucweo4MCCseL7/8529432f760093f91cba7d78baed39ee/Black-Econia-Logo-Mark_copy.png",
       "launchDate": "2024-01-10T14:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-30T10:55:45.507Z",
+      "updatedDate": "2024-11-14T19:45:09.581Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $25,000 to USD $100,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 100000,
+          "minReward": 25000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $10,000 to USD $25,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 25000,
+          "minReward": 10000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $10,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 10000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $5,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         }
       ],
       "audits": null,
@@ -259,8 +262,8 @@
           "updatedAt": "2024-10-30T10:54:13.715Z"
         }
       ],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_impact",
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

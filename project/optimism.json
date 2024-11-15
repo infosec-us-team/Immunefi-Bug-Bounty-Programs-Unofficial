@@ -9,44 +9,46 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/iGySa7GVnISWqfSbIR9N4/2867df922f76c0f722543bdddd6e080b/Optimism_Logo.jpeg",
       "launchDate": "2022-01-14T07:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-27T19:43:21.519Z",
+      "updatedDate": "2024-11-14T13:02:24.057Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "blockchain_dlt",
-          "level": "critical",
-          "payout": "Up to USD $2,000,042",
-          "pocRequired": false
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 2000042,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "high",
-          "payout": "USD $50,000",
-          "pocRequired": false
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 50000
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "medium",
-          "payout": "USD $15,000",
-          "pocRequired": false
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 15000
         },
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "Up to USD $2,000,042",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 2000042,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $50,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 50000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $15,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 15000
         }
       ],
       "audits": null,
@@ -336,8 +338,8 @@
       "programOverview": "Optimism is a project dedicated to scaling Ethereum's technology and expanding its ability to coordinate people from across the world to build effective decentralized economies and governance systems. \n\nThe OP Stack is the modular, decentralized software stack that powers Optimism, forms the backbone of blockchains like OP Mainnet and Base, and is maintained by the Optimism Collective . \n\nThe first release of the OP Stack codebase is called Bedrock. The Bedrock release primarily consists of the core software required to run L2 blockchains and was originally designed to power an upgrade to the OP Mainnet network. Bedrock improves on its predecessor by reducing transaction fees using optimized batch compression and Ethereum as a data availability layer; shortening delays of including L1 transactions in rollups by handling L1 re-orgs more gracefully; enabling modular proof systems through code re-use; and improving node performance by removing technical debt.\n\nTo read more about Optimism, please visit [https://www.optimism.io/](https://www.optimism.io/). To learn about the OP Stack, please visit [https://stack.optimism.io/](https://stack.optimism.io/). \n\nThis bounty program is focused on preventing\n\n  - theft of assets held in their smart contracts;\n  - theft, freezing or other loss of funds due to vulnerabilities in the smart contracts’ or the critical blockchain client services (op-node and op-geth).",
       "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Smart Contracts/Blockchain__\n\n  - Loss of user funds by permanent freezing or direct theft\n  - Temporary freezing of funds for significantly longer than is enforced by the withdrawal delay.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System.](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/) This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nSince Optimism uses a fork of Geth, issues which are responsibly disclosed to upstream cannot be \"replayed\" against Optimism’s bug bounty program if the vulnerability has already been made public. If the vulnerability is disclosed to Optimism at the same time as upstream Geth, the vulnerability is eligible for the bug bounty program.\n\nAll smart contract bug reports must come with a PoC in order to be considered for a reward.\n\nFor KYC, OptimismPBC will request a W-9 if you reside in the US or a W-8 if you reside outside the US.\n\nCritical vulnerabilities are further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum of __USD 75 000__ for Critical bug reports.\n\nFor testing any exploits involving cross-domain transactions, we recommend working with our [dockerized services](https://github.com/ethereum-optimism/optimism/blob/6f8e432506a5f4ba094f091b22a0bb6acc53fdac/ops/README.md) and modifying our [integration tests](https://github.com/ethereum-optimism/optimism/blob/6f8e432506a5f4ba094f091b22a0bb6acc53fdac/integration-tests/test/bridged-tokens.spec.ts)\n\nThe following known issues are considered to be out of scope of this bug bounty program.\n\n__Known issues:__\n\n__Blockchain / DLT:__\n\nWhen running in non-archive mode, op-geth has difficulty executing deep reorgs. We are working on a fix.\n\n__Smart Contracts:__\n\n- [Proof of whale](https://ethresear.ch/t/fraud-proofs-are-broken/19234) based attacks on Fault Proofs.\n- There appears to be an obvious bug which would allow an attacker to withdraw a fake ERC20 token from L2 in exchange for a real ERC20 (such as WBTC) token on L1. There is no check in the L2StandardBridge, however the withdrawal is prevented from finalizing by a check in the L1StandardBridge. Naturally if you do find a way to circumvent our protections, then we would reward you.\n- A bug in ResolvedDelegateProxy.sol which could result in a storage slot key collision overwriting the address of the implementation. This bug is dependent on the layout of the implementation contract, and Optimism is not affected.\n- There is an edge case in which ETH deposited to the OptimismPortal by a contract can be irrecoverably stranded:\n   - When a deposit transaction fails to execute, the sender’s account balance is still credited with the mint value. However, if the deposit’s L1 sender is a contract, the tx.origin on L2 will be aliased, and this aliased address will receive the minted on L2. In general the contract on L1 will not be able to recover these funds. We have documented this risk and encourage users to take advantage of our CrossDomainMessenger contracts which provide additional safety measures.\n- Sending cross-chain messages with very large amounts of data, or very specific amounts of gas can open up griefing attacks causing the sender’s funds to be stuck and requiring an upgrade to release them.\n- Deposit transactions can be griefed at a cost to the attacker, by filling up the MAX_RESOURCE_LIMIT. This issue is mitigated by PR 5064, which does not completely resolve the issue but does increase the cost of a sustained griefing attack. A more complete fix will require architectural changes.\n- There are various ‘foot guns’ in the bridge which may arise from misconfiguration of a token. To minimize complexity our bridge design does not try to prevent all forms of developer and user error. \nExamples of such foot guns include:\n   - Having both (or neither of) the local and remote tokens be OptimismMintable. \n   - Tokens which dynamically alter the amount of a token held by an account, such as fee-on-transfer and rebasing tokens. \n\n\nPayouts are handled by the Optimism team directly and are denominated in USD. All payouts are done in USDC.",
-      "outOfScopeAndRules": ".",
-      "assetsBodyV2": "**Whenever the asset is a smart contract proxy, its implementation is also in scope.**\n\nAll smart contracts of Optimism can be found at [https://github.com/ethereum-optimism/optimism](https://github.com/ethereum-optimism/optimism).  However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": "**Whenever the asset is a smart contract proxy, its implementation is also in scope.**\n\nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -439,14 +441,14 @@
       ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {
       "premiumTriaging": false,
       "isSafeHarborActive": false,
       "performanceMetrics": {
-        "medianResponseTimeInMinutes": 3648,
+        "medianResponseTimeInMinutes": 3664,
         "totalPaidAmount": 2596965
       }
     },

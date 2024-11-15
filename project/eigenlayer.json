@@ -9,44 +9,52 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1fGXCRkOEb10n2rbNzZuEx/e1a710a7a3af9141424011913bbc58be/Eigenlayer_logo.jpeg",
       "launchDate": "2023-06-14T21:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-30T10:41:18.265Z",
+      "updatedDate": "2024-11-14T19:36:34.777Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $250,000 to USD $2,000,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 2000000,
+          "minReward": 250000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $50,000 to USD $250,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 250000,
+          "minReward": 50000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $10,000 to USD $30,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "range",
+          "maxReward": 30000,
+          "minReward": 10000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $50,000 to USD $100,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 100000,
+          "minReward": 50000,
+          "otherImpactMaxReward": 0
         },
         {
           "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "USD $10,000 to $25,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 25000,
+          "minReward": 10000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "medium",
-          "payout": "USD $2,000 to USD $5,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "range",
+          "maxReward": 5000,
+          "minReward": 2000
         }
       ],
       "audits": null,
@@ -342,8 +350,8 @@
         }
       ],
       "programDocumentations": [],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_impact",
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

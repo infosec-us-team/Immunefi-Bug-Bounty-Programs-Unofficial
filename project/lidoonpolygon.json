@@ -14,45 +14,49 @@
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $100,000 to $2,000,000",
-          "pocRequired": false
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 2000000,
+          "minReward": 100000
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $20,000 to $400,000",
-          "pocRequired": false
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 400000,
+          "minReward": 20000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $5,000 to $100,000",
-          "pocRequired": false
+          "severity": "medium",
+          "rewardModel": "range",
+          "maxReward": 100000,
+          "minReward": 5000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $40,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "fixed",
+          "fixedReward": 40000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "USD $7,500 to $40,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 40000,
+          "minReward": 7500
         },
         {
           "assetType": "websites_and_applications",
-          "level": "medium",
-          "payout": "USD $3,250",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 3250
         },
         {
           "assetType": "websites_and_applications",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -510,7 +514,7 @@
       ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

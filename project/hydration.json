@@ -14,45 +14,48 @@
       "rewards": [
         {
           "assetType": "blockchain_dlt",
-          "level": "critical",
-          "payout": "USD $25,000 to USD $1,000,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 1000000,
+          "minReward": 25000
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "high",
-          "payout": "USD $5,000 to USD $25,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 25000,
+          "minReward": 5000
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "medium",
-          "payout": "USD $5,000",
-          "pocRequired": false
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": false
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $5,000 to USD $25,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 25000,
+          "minReward": 5000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "USD $5,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "medium",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -902,7 +905,7 @@
       "programCodebases": [],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

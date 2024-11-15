@@ -9,32 +9,34 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/crJXSyRL6Phpmff7hq91J/cbd0406e1e8ddf23fa6a41837ef228e0/3174316_original.png",
       "launchDate": "2023-12-20T09:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-29T15:39:44.081Z",
+      "updatedDate": "2024-11-14T13:38:07.228Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "blockchain_dlt",
-          "level": "critical",
-          "payout": "USD $3,000 to USD $25,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 25000,
+          "minReward": 3000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "high",
-          "payout": "USD $3,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 3000
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "medium",
-          "payout": "USD $2,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 2000
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -233,8 +235,8 @@
           "updatedAt": "2024-10-29T15:28:08.473Z"
         }
       ],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_impact",
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

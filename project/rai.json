@@ -6,35 +6,36 @@
       "slug": "rai",
       "project": "Rai",
       "maxBounty": 100000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4DeaIbS9whSxx3zJehZqqL/cbb244a748772c62c3ecff36bdae4662/Reflexer_Logo.png",
-      "launchDate": "2021-11-02T08:00-05:00",
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4PwDM0UpG17NLwLfk2zAmy/43c95efcf64833d22328abc38684d677/Screenshot_2024-11-15_at_1.55.28___AM.png",
+      "launchDate": "2021-11-02T13:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-04-08T18:59:47.487Z",
+      "updatedDate": "2024-11-14T20:56:00.616Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "Up to USD $100,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 100000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $25,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 25000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $10,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 10000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $2,500",
-          "pocRequired": false
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 2500
         }
       ],
       "audits": null,
@@ -480,8 +481,8 @@
       "programOverview": "RAI is an ETH backed stable asset with a managed float regime. The RAI/USD exchange rate is determined by supply and demand while the protocol that issues RAI tries to stabilize its price by constantly de or revaluing it.\n\nFor more information about Rai, please visit [https://docs.reflexer.finance](https://reflexer.finance)   \n\nThis bug bounty program is focused on Rai's smart contracts and is focused on preventing:\n\n  - Loss of user funds staked (principal) by freezing or theft\n  - Incorrect accounting logic in the core protocol\n  - Theft of unclaimed yield\n  - Unable to shut down the protocol in the global settlement process\n  - Freezing of unclaimed yield\n  - Temporary freezing of funds\n  - Unable to call smart contract\n  - Smart contract fails to deliver promised returns",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nCritical, High and Medium severity bug reports must come with a PoC and a suggestion for a fix in order to be considered for a reward.\n\nCritical vulnerabilities are further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum of __USD 50 000__ for Critical bug reports.\n\nKnown issues from their previous audits are considered out-of-scope:\n\n[https://github.com/reflexer-labs/geb-audits/blob/master/open-zeppelin/core-contracts/oz-geb-protocol-audit.pdf](https://github.com/reflexer-labs/geb-audits/blob/master/open-zeppelin/core-contracts/oz-geb-protocol-audit.pdf)\n\n[https://github.com/reflexer-labs/geb-audits/tree/master/quantstamp/helper-contracts/first-audit](https://github.com/reflexer-labs/geb-audits/tree/master/quantstamp/helper-contracts/first-audit)\n\n[https://github.com/reflexer-labs/geb-audits/blob/master/quantstamp/helper-contracts/second-audit/Reflexer%20Second%20Engagement%20-%20Final%20Report.pdf](https://github.com/reflexer-labs/geb-audits/blob/master/quantstamp/helper-contracts/second-audit/Reflexer%20Second%20Engagement%20-%20Final%20Report.pdf)\n\n[https://github.com/reflexer-labs/geb-audits/blob/master/quantstamp/staking/Reflexer%20Staking%20and%20Auction%20House%20-%20Report.pdf](https://github.com/reflexer-labs/geb-audits/blob/master/quantstamp/staking/Reflexer%20Staking%20and%20Auction%20House%20-%20Report.pdf)\n\n[https://github.com/reflexer-labs/geb-audits/blob/master/solidified/helper-contracts/Solidified%20Audit%20Report%20-%20Reflexer%20%5B26.01.2021%5D.pdf](https://github.com/reflexer-labs/geb-audits/blob/master/solidified/helper-contracts/Solidified%20Audit%20Report%20-%20Reflexer%20%5B26.01.2021%5D.pdf)\n\nAdditionally, there is a known bug in the contract below where, if it does not have tokens anymore, it cannot compute a 0 reward. This does not affect the rest of the functionality of the system and would also be considered out-of-scope.\n\n[https://github.com/reflexer-labs/geb-lender-first-resort/blob/master/src/AutoRewardDripper.sol](https://github.com/reflexer-labs/geb-lender-first-resort/blob/master/src/AutoRewardDripper.sol) \n\nPayouts are handled by the Reflexer team directly and are denominated in USD. However, payouts are done in FLX, RAI or a combination of both at the discretion of the team.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "All smart contracts of Rai can be found at https://github.com/reflexer-labs. However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": "However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -569,7 +570,7 @@
       ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

@@ -6,35 +6,35 @@
       "slug": "driftprotocol",
       "project": "Drift Protocol",
       "maxBounty": 500000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6r4koNJ8VLDyXhmpDcr2RX/2c021a1c18cb1ee8ae9630ac3ce987c9/Drift_Logo_Circular__4_.png",
-      "launchDate": "2022-02-15T08:00-06:00",
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/295bRNp7R842rstlHYsEUq/5c7ed337835e630a209c547e3885a1fe/Drift_Logo_Circular__4__Small.png",
+      "launchDate": "2022-02-15T14:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-04-08T19:00:42.552Z",
+      "updatedDate": "2024-11-14T20:23:56.340Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "Up to USD $500,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 500000
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $50,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 50000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $25,000",
-          "pocRequired": false
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 25000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $5,000",
-          "pocRequired": false
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         }
       ],
       "audits": null,
@@ -141,10 +141,10 @@
           "title": "Oracle failure/manipulation"
         }
       ],
-      "programOverview": "Drift Protocol is a decentralized, fully on-chain perpetual swap exchange built on Solana. Drift Protocol also is the first perpetual swap exchange to leverage a Dynamic AMM. A Dynamic AMM is based on a virtual AMM (vAMM), but its key innovative is that it introduces repegging and adjustable k mechanisms to recalibrate liquidity in a trading pool based on participant demand. DAMMs, as a result, have the ability to be more flexible than traditional vAMMs and AMMs, which lead to better capital efficiency and reduced slippage. Drift’s exchange gives traders the ability to take on cross-margined long or short positions with up to 5x leverage with minimal slippage thanks to the protocol’s Dynamic Automated Market Maker (DAMM). The exchange currently has 12 markets available:  SOL, BTC, ETH, MATIC, LUNA, AVAX, ATOM and BNB. Since inception, the exchange has traded $1B in cumulative volume as of a month after launch.\n\nFor more information about Drift Protocol, please visit [https://www.drift.trade/](https://www.drift.trade/). \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Thefts and freezing of principal of any amount\n  - Thefts and freezing of unclaimed yield of any amount\n  - Theft of governance funds ",
+      "programOverview": "Drift Protocol is a decentralized, fully on-chain perpetual swap exchange built on Solana. Drift Protocol also is the first perpetual swap exchange to leverage a Dynamic AMM. A Dynamic AMM is based on a virtual AMM (vAMM), but its key innovative is that it introduces repegging and adjustable k mechanisms to recalibrate liquidity in a trading pool based on participant demand. DAMMs, as a result, have the ability to be more flexible than traditional vAMMs and AMMs, which lead to better capital efficiency and reduced slippage. Drift’s exchange gives traders the ability to take on cross-margined long or short positions with up to 5x leverage with minimal slippage thanks to the protocol’s Dynamic Automated Market Maker (DAMM). The exchange currently has 12 markets available:  SOL, BTC, ETH, MATIC, LUNA, AVAX, ATOM and BNB. Since inception, the exchange has traded $1B in cumulative volume as of a month after launch.\n\nFor more information about Drift Protocol, please visit [https://www.drift.trade/](https://www.drift.trade/). \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Thefts and freezing of principal of any amount\n  - Thefts and freezing of unclaimed yield of any amount\n  - Theft of governance funds",
       "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Smart Contracts/Blockchain__\n\n  - Loss of user funds staked (principal) by freezing or theft\n  - Loss of governance funds\n  - Theft of unclaimed yield\n  - Freezing of unclaimed yield\n  - Temporary freezing of funds for any amount of time\n  - Unable to call smart contract\n  - Smart contract gas drainage\n  - Smart contract fails to deliver promised returns",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System](https://immunefi.com/severity-updated/). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll Critical Smart Contract bug reports require a PoC and a suggestion for a fix to be eligible for a reward. All High Smart Contract bug reports require a PoC to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required. \n\nCritical smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of __USD 50 000__.\n\nPayouts are handled by the __Drift Protocol__ team directly and are denominated in USD. However, payouts are done in __USDC__. ",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts__\n\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n  - Centralization risks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System](https://immunefi.com/severity-updated/). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll Critical Smart Contract bug reports require a PoC and a suggestion for a fix to be eligible for a reward. All High Smart Contract bug reports require a PoC to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required. \n\nCritical smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of __USD 50 000__.\n\nPayouts are handled by the __Drift Protocol__ team directly and are denominated in USD. However, payouts are done in __USDC__.",
+      "outOfScopeAndRules": null,
       "assetsBodyV2": "Assets are Listed Below.",
       "impactsBody": null,
       "immunefiStandard": null,
@@ -223,7 +223,7 @@
       "programCodebases": [],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

@@ -9,56 +9,61 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/153M0ieVbcBBdWFp0BHaUd/0d63caf14d9fe1901c99e6606f90495c/6CJDOThO_400x400.png",
       "launchDate": "2024-05-27T02:57:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-10-29T10:47:41.777Z",
+      "updatedDate": "2024-11-14T13:28:29.689Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $20,000 to USD $50,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 50000,
+          "minReward": 20000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $2,000 to USD $5,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 5000,
+          "minReward": 2000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $2,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 2000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $6,000 to USD $20,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 20000,
+          "minReward": 6000,
+          "otherImpactMaxReward": 0
         },
         {
           "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "USD $5,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "medium",
-          "payout": "USD $2,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 2000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -537,8 +542,8 @@
           "updatedAt": "2024-10-29T10:45:30.579Z"
         }
       ],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_impact",
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": true
     },
     "project": {

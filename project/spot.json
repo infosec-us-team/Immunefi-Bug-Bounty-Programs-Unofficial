@@ -6,41 +6,41 @@
       "slug": "spot",
       "project": "SPOT",
       "maxBounty": 10000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/q7Elyme0pU01MOFrCVxhw/6c61788e17042d7dec56b1523fe88e68/SPOT_Symbol-06.svg",
-      "launchDate": "2022-12-22T18:00-05:00",
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6rCsA47lat2NRRvjQNB1cE/bd1a3c990aabecec1ea6ed43daf18b8d/Screenshot_2024-11-15_at_1.35.17___AM.png",
+      "launchDate": "2022-12-22T23:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-04-08T19:00:08.501Z",
+      "updatedDate": "2024-11-14T20:35:54.712Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $10,000",
-          "pocRequired": false
+          "severity": "critical",
+          "rewardModel": "fixed",
+          "fixedReward": 10000
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $5,000",
-          "pocRequired": false
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $1,000",
-          "pocRequired": false
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $2,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "fixed",
+          "fixedReward": 2000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -52,7 +52,7 @@
           "description": "SPOT ERC-20",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-12-22T18:00-05:00"
+          "addedAt": "2022-12-22T23:00:00.000Z"
         },
         {
           "id": "2dObx6d73jQk2tsqNupyNA",
@@ -61,7 +61,7 @@
           "description": "Router",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-12-22T18:00-05:00"
+          "addedAt": "2022-12-22T23:00:00.000Z"
         },
         {
           "id": "7AThHGnCj7iOaeQAEk30aV",
@@ -70,7 +70,7 @@
           "description": "Bond Factory",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-12-22T18:00-05:00"
+          "addedAt": "2022-12-22T23:00:00.000Z"
         },
         {
           "id": "1Wqs6AZM262jUCVatkxpi1",
@@ -79,7 +79,7 @@
           "description": "Bond Issuer",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-12-22T18:00-05:00"
+          "addedAt": "2022-12-22T23:00:00.000Z"
         },
         {
           "id": "2LXCIyQgiFnr6ofpAgnz1A",
@@ -88,7 +88,7 @@
           "description": "Web/App",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-12-22T18:00-05:00"
+          "addedAt": "2022-12-22T23:00:00.000Z"
         }
       ],
       "impacts": [
@@ -237,11 +237,11 @@
           "title": "Injection of malicious HTML or XSS through NFT metadata"
         }
       ],
-      "programOverview": "SPOT is a perpetual note backed by fully collateralized AMPL derivatives. SPOT can fulfill many properties of modern day stablecoins but is not pegged to any particular value. Its price will likely float within a range similar to AMPL and you can think of SPOT as a derivative that strips away most of AMPL's supply volatility.\n\nFor more information about SPOT, please visit [https://app.spot.cash  ](https://app.spot.cash)\n",
+      "programOverview": "SPOT is a perpetual note backed by fully collateralized AMPL derivatives. SPOT can fulfill many properties of modern day stablecoins but is not pegged to any particular value. Its price will likely float within a range similar to AMPL and you can think of SPOT as a derivative that strips away most of AMPL's supply volatility.\n\nFor more information about SPOT, please visit [https://app.spot.cash  ](https://app.spot.cash)",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nPayouts are handled by the __SPOT__ team directly and are denominated in USD. However, payouts are done in __AMPL, SPOT, ETH, USDC__, or __USDT__ at the choice of the whitehat.\n",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program: \n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n\n__Smart Contracts and Blockchain__\n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n- Centralization risks\n\n__Websites and Apps__\n\n- Theoretical vulnerabilities without any proof or demonstration\n- Attacks requiring physical access to the victim device\n- Attacks requiring access to the local network of the victim\n- Reflected plain text injection ex: url parameters, path, etc.\n   - This does not exclude reflected HTML injection with or without javascript\n   - This does not exclude persistent plain text injection\n- Self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (ex: logout CSRF)\n- Missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure such as IPs, server names, and most stack traces\n- Vulnerabilities used only to enumerate or confirm the existence of users or tenants\n- Vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- DDoS vulnerabilities\n- Feature requests\n- Issues related to the frontend without concrete impact and PoC\n- Best practices issues without concrete impact and PoC\n- Vulnerabilities primarily caused by browser/plugin defects\n- Leakage of non sensitive api keys ex: etherscan, Infura, Alchemy, etc.\n- Any vulnerability exploit requiring browser bugs for exploitation. ex: CSP bypass\n\nThe following activities are prohibited by this bug bounty program:\n\n- Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n- Any testing with pricing oracles or third party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n",
-      "assetsBodyV2": "All smart contracts of SPOT can be found at [https://github.com/ampleforth/spot/tree/main/spot-contracts](https://github.com/ampleforth/spot/tree/main/spot-contracts). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nKnown issues highlighted in the following audit reports are considered out of scope: \n\n- [https://github.com/ampleforth/ampleforth-audits/tree/master/spot/v1.0.0](https://github.com/ampleforth/ampleforth-audits/tree/master/spot/v1.0.0)\n\nThe following known issues are also considered out of scope of this program: \n\n- MEV around rebases\n- Insolvency\n\nIf an impact can be caused to any other asset managed by SPOT that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project. \n",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nPayouts are handled by the __SPOT__ team directly and are denominated in USD. However, payouts are done in __AMPL, SPOT, ETH, USDC__, or __USDT__ at the choice of the whitehat.",
+      "outOfScopeAndRules": null,
+      "assetsBodyV2": "However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nKnown issues highlighted in the following audit reports are considered out of scope: \n\n- [https://github.com/ampleforth/ampleforth-audits/tree/master/spot/v1.0.0](https://github.com/ampleforth/ampleforth-audits/tree/master/spot/v1.0.0)\n\nThe following known issues are also considered out of scope of this program: \n\n- MEV around rebases\n- Insolvency\n\nIf an impact can be caused to any other asset managed by SPOT that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -335,7 +335,7 @@
       ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {
