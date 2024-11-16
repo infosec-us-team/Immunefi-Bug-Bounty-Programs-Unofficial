@@ -9,26 +9,28 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/V5uJkzVDim5cy4syFWXHn/081f82c419fd83a700d15a8c80e46eb6/ognresized.png",
       "launchDate": "2021-11-22T07:15:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-11-04T16:18:22.459Z",
+      "updatedDate": "2024-11-15T12:57:38.133Z",
       "kyc": false,
       "rewards": [
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "Up to USD $1,000,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 1000000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $15,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 15000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $25,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "fixed",
+          "otherImpactMaxReward": 0,
+          "fixedReward": 25000
         }
       ],
       "audits": null,
@@ -52,42 +54,6 @@
           "addedAt": "2022-02-12T09:29:11.586Z"
         },
         {
-          "id": "3YHzJCLbbYQQwnu7eCZHF4",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0xa7695eED05094E28AA575CB0cCa3CF17848a7981",
-          "description": "Oracle Router",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": true,
-          "addedAt": "2022-02-12T09:29:07.715Z"
-        },
-        {
-          "id": "RTcE363oMeSHOudPI9cQr",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x5e3646A1Db86993f73E6b74A57D8640B69F7e259",
-          "description": "Aave Strategy",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": true,
-          "addedAt": "2022-02-12T09:30:02.188Z"
-        },
-        {
-          "id": "5abd8HMQpbPINqSvePosP4",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x9c459eeb3FA179a40329b81C1635525e9A0Ef094",
-          "description": "Compound Strategy",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": true,
-          "addedAt": "2022-02-12T09:30:05.504Z"
-        },
-        {
-          "id": "1ukSUUBOEM57jjtaK4LDYL",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0xea2ef2e2e5a749d4a66b41db9ad85a38aa264cb3",
-          "description": "Convex Strategy",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": true,
-          "addedAt": "2022-02-12T09:30:49.539Z"
-        },
-        {
           "id": "HCsqI6bpUhndviXBNvYBF",
           "type": "smart_contract",
           "url": "https://etherscan.io/address/0x89eb88fedc50fc77ae8a18aad1ca0ac27f777a90#code",
@@ -104,24 +70,6 @@
           "isPrimacyOfImpact": null,
           "isSafeHarbor": true,
           "addedAt": "2022-11-28T13:01:48.482Z"
-        },
-        {
-          "id": "7JTDxKivDN7R5OMlFJNPBk",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x9c354503c38481a7a7a51629142963f98ecc12d0",
-          "description": "OGV",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": true,
-          "addedAt": "2022-07-14T09:47:18.536Z"
-        },
-        {
-          "id": "4n1vGh7jcZIfbtKpNJJyPj",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x0c4576ca1c365868e162554af8e385dc3e7c66d9",
-          "description": "veOGV",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": true,
-          "addedAt": "2022-07-14T09:47:14.047Z"
         },
         {
           "id": "6sbeXi5HZhiyh6jMzmgexr",
@@ -151,15 +99,6 @@
           "addedAt": "2022-02-12T09:33:28.838Z"
         },
         {
-          "id": "5NTOzubKjCuk8dsnQ9FZS6",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0xcecaD69d7D4Ed6D52eFcFA028aF8732F27e08F70",
-          "description": "OUSD Swap",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": true,
-          "addedAt": "2022-02-12T09:33:26.316Z"
-        },
-        {
           "id": "6raEdX4tNnOa6HN07ZniUd",
           "type": "smart_contract",
           "url": "https://etherscan.io/address/0x21fb5812d70b3396880d30e90d9e5c1202266c89",
@@ -176,15 +115,6 @@
           "isPrimacyOfImpact": null,
           "isSafeHarbor": true,
           "addedAt": "2022-04-25T19:05:34.585Z"
-        },
-        {
-          "id": "2UH4y4SDWYdI9TaE6ku9kI",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x856c4Efb76C1D1AE02e20CEB03A2A6a08b0b8dC3",
-          "description": "OETH Token",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": true,
-          "addedAt": "2023-05-09T15:43:30.369Z"
         },
         {
           "id": "5xvdatsC4cqGtVXyTh7n5K",
@@ -338,6 +268,69 @@
           "isPrimacyOfImpact": null,
           "isSafeHarbor": true,
           "addedAt": "2024-06-04T08:02:45.983Z"
+        },
+        {
+          "id": "1EFKBjhSBsNmhJ9wRDEyG1",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x85b78aca6deae198fbf201c82daf6ca21942acc6#code",
+          "description": "ARM (stETH/WETH)",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": true,
+          "addedAt": "2024-11-15T12:54:35.080Z"
+        },
+        {
+          "id": "6whGnZwizA6gYqLnRBhr4N",
+          "type": "smart_contract",
+          "url": "https://basescan.org/address/0xdbfefd2e8460a6ee4955a68582f85708baea60a3#code",
+          "description": "SuperOETHb Token",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": true,
+          "addedAt": "2024-11-15T12:55:09.050Z"
+        },
+        {
+          "id": "7LF7jR70pGycDPCR3ZPMRx",
+          "type": "smart_contract",
+          "url": "https://basescan.org/address/0xdbfefd2e8460a6ee4955a68582f85708baea60a3#code",
+          "description": "Wrapped SuperOETHb",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": true,
+          "addedAt": "2024-11-15T12:55:23.295Z"
+        },
+        {
+          "id": "rtYpTsAgo9bVbVcWoIMAK",
+          "type": "smart_contract",
+          "url": "https://basescan.org/address/0x98a0cbef61bd2d21435f433be4cd42b56b38cc93",
+          "description": "SuperOETHb Vault",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": true,
+          "addedAt": "2024-11-15T12:55:44.354Z"
+        },
+        {
+          "id": "5bghQz7gn5u2YcRn80uoVd",
+          "type": "smart_contract",
+          "url": "https://basescan.org/address/0x80c864704DD06C3693ed5179190786EE38ACf835",
+          "description": "BridgedWOETHStrategy",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": true,
+          "addedAt": "2024-11-15T12:56:04.062Z"
+        },
+        {
+          "id": "1onoJioBhEowmWTs8pXjBm",
+          "type": "smart_contract",
+          "url": "https://basescan.org/address/0xF611cC500eEE7E4e4763A05FE623E2363c86d2Af",
+          "description": "AerodromeAMOStrategyProxy",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": true,
+          "addedAt": "2024-11-15T12:56:18.941Z"
+        },
+        {
+          "id": "6LVu8PO3OI20J9yudKuSkI",
+          "type": "smart_contract",
+          "url": "https://basescan.org/address/0xf817cb3092179083c48c014688d98b72fb61464f",
+          "description": "Timelock",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": true,
+          "addedAt": "2024-11-15T12:56:37.675Z"
         }
       ],
       "impacts": [
@@ -518,8 +511,8 @@
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [],
       "programDocumentations": [],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_impact",
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {

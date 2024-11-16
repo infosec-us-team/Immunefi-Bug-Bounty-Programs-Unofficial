@@ -9,80 +9,83 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2L62ScwrnMTV5zczetmm3N/3441bc33007755cf6d8865db69d0d50e/the-graph-grt-logo_copy.png",
       "launchDate": "2021-08-04T17:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-07-23T10:31:59.912Z",
+      "updatedDate": "2024-11-15T14:49:12.027Z",
       "kyc": true,
       "rewards": [
         {
           "assetType": "blockchain_dlt",
-          "level": "critical",
-          "payout": "USD $200,000  up to USD $2,500,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 2500000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "high",
-          "payout": "USD $20,000  up to USD $200,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "up_to",
+          "maxReward": 200000
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "medium",
-          "payout": "USD $5,000 up to USD $20,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "up_to",
+          "maxReward": 20000
         },
         {
           "assetType": "blockchain_dlt",
-          "level": "low",
-          "payout": "USD $1,000 up to USD $5,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "up_to",
+          "maxReward": 5000
         },
         {
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $200,000 up to USD $2,500,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 2500000,
+          "rewardCalculationPercentage": 10
         },
         {
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $20,000 up to USD $200,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "up_to",
+          "maxReward": 200000
         },
         {
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $5,000 up  to USD $20,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "up_to",
+          "maxReward": 20000
         },
         {
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $1,000 up to USD $5,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "up_to",
+          "maxReward": 5000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $20,000 up to USD $50,000",
-          "pocRequired": false
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 50000,
+          "otherImpactMaxReward": 0
         },
         {
           "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "USD $5,000 up to USD $20,000",
-          "pocRequired": false
+          "severity": "high",
+          "rewardModel": "up_to",
+          "maxReward": 20000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "medium",
-          "payout": "USD $1,000 up to USD $5,000",
-          "pocRequired": false
+          "severity": "medium",
+          "rewardModel": "up_to",
+          "maxReward": 5000
         },
         {
           "assetType": "websites_and_applications",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": false
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -714,7 +717,7 @@
       "programOverview": "The Graph is an indexing protocol for querying decentralized data from multiple blockchains and storage solutions such as IPFS. It is a decentralized network comprised of multiple stakeholders incentivized to build and offer an efficient and reliable open data marketplace, through GraphQL-based APIs.\n\nThe Graph learns what and how to index Blockchain data based on subgraph descriptions, known as the subgraph manifest. The subgraph description defines the smart contracts of interest for a subgraph, the events in those contracts to pay attention to, and how to map data to data that The Graph will index and store in its decentralized network, to be served by Indexers. Indexers are network participants responsible for running their own infrastructure capable of indexing subgraphs and subsequently serve such data.\n\nThe network is fully permissionless, meaning that every stakeholder can design, implement and deploy subgraphs, with Indexers choosing which subgraphs to index based on a number of factors such as Curators’ interest (signaling high-quality ones which may result in high query volume). Delegators are another key network participant in this open data economy, who delegate their stake towards Indexers, receiving, in turn, a portion of both network rewards and fees from subsequently served queries. Like Delegators, Curators also receive a portion of the query fees, when staking their own GRT in a subgraph’s bounding curve (signaling).\n\nFor more information about The Graph, please visit their website at [https://thegraph.com/](https://thegraph.com/). \n\nThe bug bounty program, managed and funded by The Graph Foundation, is focused on the prevention of negative impacts to the whole ecosystem, such as:\n\n  - Loss of user funds from the protocol smart contracts\n  - Exposure of private keys that may lead to changes on deployed smart contracts and/or drainage of user funds\n  - Determinism bugs that could lead to incorrect or inconsistent query results by Indexers in the network\n  - Vulnerabilities in the Indexer software (eg. Graph Node, Indexer CLI,    Indexer Agent, and Indexer Service) that could result in the Indexer being slashed or not running effectively\n  - Vulnerabilities that could degrade the indexing or querying service\n\nBug bounty hunters submit bug reports at their own risk of being rejected as a known issue.",
       "prioritizedVulnerabilities": "__Rules and Requirements__\n\nAll bounty hunters must abide by rules when reporting bugs to be eligible for rewards. We appreciate your cooperation.\n\n__Report Responsibly__\n\nReport vulnerabilities to The Graph first by submitting a bug report on Immunefi, to mitigate attacks and in the best interest of the network’s safety. Give reasonable time for The Graph to fix the bug before sharing publicly.\n\n__Don't Exploit Reported Bugs__\n\nDo not exploit bugs in the code to gain an advantage or conduct malicious activity in the network. No hacking or social engineering of other network users.\n\n__Don’t Violate Privacy__\n\nDo not violate the privacy of network users, other bounty hunters, or The Graph.\n\n__Don’t Attack or Defraud The Graph__\n\nDo not attack The Graph team, operations, or technology (eg. DDOS attack, spam, social engineering) or defraud The Graph team or network users.\n\n__Please also note reporting requirements:__\n\n  - Bugs will only be rewarded once for successful reporting and confirmation of fix to the first person to report the bug.\n\n  - Vulnerabilities must be reproducible by The Graph team (please include all relevant links, docs, and code)\n\n  - Single vulnerabilities can be submitted per report, multiple submissions for the same vulnerability will not be counted. In case the same vulnerability and/or exploit applies to different assets in scope, these must be mentioned in a single report.\n\n  - Bounty hunters can submit multiple bug reports\n\n  - Public disclosure of the vulnerability prior to resolution may cancel a pending reward. We reserve the right to disqualify individuals from the program for disrespectful or disruptive behavior.\n\n  - The Graph and affiliates will not negotiate in response to duress or threats (e.g., we will not negotiate the payout amount under threat of withholding the vulnerability or threat of releasing the vulnerability or any exposed data to the public).",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from the consequence of exploitation to privilege required to the likelihood of a successful exploit. \n\nA report will receive a single classification based on the vulnerability disclosed in the report which would yield the highest reward to the hacker.  So, for instance, if a report discloses a “Critical - Websites and Applications” vulnerability valued at the maximum $50,000 USD and a “High - Smart Contracts and Blockchain” vulnerability valued at the maximum $200,000 USD, the report will be given the classification of “High - Smart Contracts and Blockchain” because that will yield the highest reward.\n\nRewards for critical vulnerabilities are capped at 10% of the potential direct economic damage at the time the vulnerability is disclosed, primarily focusing on the USD value of Indexer, Delegator, or Curator assets in any impacted protocol smart contracts at the time of disclosure and the likelihood that such assets could be lost or stolen. The Graph Foundation may also in its discretion, but is not required to, take into consideration other potential economic harms such as potential damage to brand and goodwill. Indirect or speculative potential damage will not be considered.\n\nFinal reward amount for a valid report classified as High, Medium, and Low is in the sole discretion of The Graph Foundation. Though this bug bounty program considers the severity classification system, the primary baseline before further consideration is the Impacts in Scope and Assets in Scope tables, though that itself isn’t the final determinant.\n\nTo qualify for a reward, bug bounty hunters will need to provide KYC through https://thegraph.typeform.com/to/AXe74zc4 and provide all requested information and documents, including, without limitation:\n  - E-mail address;\n  - Name;\n  - Wallet address the GRT should be sent to. This address must correspond with the same listed in the report. \n\nAdditionally, all bug reports must come with log components, reproduction, and data about vulnerabilities to support learnings and bug fixes. This can be satisfied by providing relevant screenshots, docs, code, and steps to reproduce the issue.\n\n__Proof of Concept required for Smart Contracts and Blockchain__\nIn the case of smart contract bugs, sharing a valid reproducible script as Proof of Concept (PoC) is a strict requirement. All PoCs must be submitted complying with Immunefi’s PoC Guidelines and Rules. Failing to do so will result in a report being deemed invalid by The Graph Foundation, not eligible for any reward.\n\nPayouts are handled by __The Graph Foundation__ and are denominated in __USD__ and payable in __GRT__ based on the prevailing __USD/GRT__ conversion price at the time of payment.",
-      "outOfScopeAndRules": "There are known potential exploits on The Graph infrastructure and on blockchains where the protocol is deployed to: Ethereum and Arbitrum One. Bounty hunters will not be rewarded for reporting these:\n\n  - Frontrunning, including back running and sandwich attacks\n  - Known issues previously reported in security audits are out of scope. All protocol audits can be found here: [https://www.notion.so/thegraphfoundation/External-Protocol-Audits-95b73b22af3341b6933d74465f5f7059 ](https://www.notion.so/thegraphfoundation/External-Protocol-Audits-95b73b22af3341b6933d74465f5f7059)\n    - Specifically related to OpenZeppelin’s “The Graph Protocol Audit” (August 31, 2020), C01 and C02 have already been addressed by the core dev team. More on C02 can be found here: [https://forum.thegraph.com/t/openzeppelin-protocol-audit-prysm-groups-c02-economic-attack-resolution-summary/3280?u=pedro](https://forum.thegraph.com/t/openzeppelin-protocol-audit-prysm-groups-c02-economic-attack-resolution-summary/3280?u=pedro)\n  - Natural network activity like curation whose involved mechanisms could result in unprofitable actions for the particular stakeholder\n\nAdditionally, all of the following vulnerabilities and bug report types are considered out-of-scope in this bug bounty program (though, as noted above, The Graph Foundation may occasionally make an exception and issue a reward for a material, out-of-scope impact):\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks that rely on social engineering, including requiring victim to visit an out-of-scope url\n  - Attacks requiring access to victim’s machine\n  - Attacks requiring access to keys, passwords, or other credentials which were leaked \n  - Attacks of third-party service providers, which could have a negative impact on The Graph i.e. misconfigurations on 3rd-party services like CloudFlare etc.\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Indexer port configurations not aligned with [best practices](https://thegraph.com/docs/en/network/indexing/#what-are-some-basic-security-precautions-an-indexer-should-take)\n  - Sybil attacks\n  - Attacks that have the potential to impact token price\n  - Testnet assets\n  - “Man in the middle” attacks\n\n__Rules and Requirements__\nAll bounty hunters must abide by rules when reporting bugs to be eligible for rewards. We appreciate your cooperation.\n\n__Report Responsibly__\n\nReport vulnerabilities to The Graph first by submitting a bug report on Immunefi, to mitigate attacks and in the best interest of the network’s safety. Give reasonable time for The Graph to fix the bug before sharing publicly.\n\n__Don't Exploit Reported Bugs__\n\nDo not exploit bugs in the code to gain an advantage or conduct malicious activity in the network. No hacking or social engineering of other network users.\n\n__Don’t Violate Privacy__\n\nDo not violate the privacy of network users, other bounty hunters, or The Graph.\n\n__Don’t Attack or Defraud The Graph__\n\nDo not attack The Graph team, operations, or technology (eg. DDOS attack, spam, social engineering) or defraud The Graph team or network users.\n\nPlease also note reporting requirements:\n\n  - Bugs will only be rewarded once for successful reporting and confirmation of fix to the first person to report the bug.\n\n  - Vulnerabilities must be reproducible by The Graph team (please include all relevant links, docs, and code)\n\n  - Single vulnerabilities can be submitted per report, multiple submissions for the same vulnerability will not be counted. In case the same vulnerability and/or exploit applies to different assets in scope, these must be mentioned in a single report.\n\n  - Bounty hunters can submit multiple bug reports\n\n  - Public disclosure of the vulnerability prior to resolution may cancel a pending reward. We reserve the right to disqualify individuals from the program for disrespectful or disruptive behavior.\n\n  - The Graph and affiliates will not negotiate in response to duress or threats (e.g., we will not negotiate the payout amount under threat of withholding the vulnerability or threat of releasing the vulnerability or any exposed data to the public).",
+      "outOfScopeAndRules": null,
       "assetsBodyV2": "__Note on Smart Contracts:__\nThe Graph protocol is in the process of migrating to Arbitrum, as the preferred L2. For this reason, there are Smart Contracts deployed in multiple chains. Not all are equal, so bug bounty hunters are encouraged to check the code on both chains. Once fully migrated, this bug bounty program will be updated too, removing unnecessary ones. Assets in our testnet environment are intentionally excluded.\n\nOccasionally, the Graph Foundation may, but is not required to, make an exception and reward disclosure of an out-of-scope impact that would have a material negative impact on the brand or goodwill of The Graph.  Whether to make such an exception, as well as the size of the reward for such an exception, is in The Graph Foundation’s sole and final discretion.  \n\nBelow, “User” includes Indexers, Delegators, Curators, Data Consumers, and Gateway Operators.\n\nNotes related to the impact \"A bug related to data determinism when syncing subgraphs and Substreams-powered subgraphs, resulting in POI (Proof of Indexing) divergence on the network (different Indexers not reaching consensus for the same indexing work)\": \n   - The baseline reward for such valid bugs will always be $2.5k, up to $5k in GRT.\n   - In addition to the standard Proof of Concept mandatory with every report, Hackers must find the root cause of the issue (not just a reproducible PoC). \n   - This applies to the assets in the scope above (Graph Node, Firehose, and Substreams). Should the origin of the bug be external RPC clients Graph Node connects to during subgraph syncing (geth, Erigon, etc.), the report will still be considered valid, providing a well-detailed PoC, and root cause analysis is attached (\"Informational\").",
       "impactsBody": "Only the following impacts are accepted within this bug bounty program. All other impacts are considered out of scope and ineligible for rewards, even if they affect something in the assets in the scope table. Occasionally, the Graph Foundation may, but is not required to, make an exception and reward disclosure of an out-of-scope impact that would have a material negative impact on the brand or goodwill of The Graph.  Whether to make such an exception, as well as the size of the reward for such an exception, is in The Graph Foundation’s sole and final discretion.  \n\nBelow, “User” includes Indexers, Delegators, Curators, Data Consumers, and Gateway Operators.\n\nNotes related to the impact \"A bug related to data determinism when syncing subgraphs and Substreams-powered subgraphs, resulting in POI (Proof of Indexing) divergence on the network (different Indexers not reaching consensus for the same indexing work)\": \n   - The baseline reward for such valid bugs will always be $2.5k, up to $5k in GRT.\n   - In addition to the standard Proof of Concept mandatory with every report, Hackers must find the root cause of the issue (not just a reproducible PoC). \n   - This applies to the assets in the scope above (Graph Node, Firehose, and Substreams). Should the origin of the bug be external RPC clients Graph Node connects to during subgraph syncing (geth, Erigon, etc.), the report will still be considered valid, providing a well-detailed PoC, and root cause analysis is attached (\"Informational\").",
       "immunefiStandard": true,
@@ -821,13 +824,13 @@
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
-      "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
-      "customOutOfScopeInformation": null,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+      "defaultOutOfScopeWebAndApplications": "- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n  - This does not exclude reflected HTML injection with or without JavaScript\n  - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering",
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+      "customOutOfScopeInformation": "There are known potential exploits on The Graph infrastructure and on blockchains where the protocol is deployed to: Ethereum and Arbitrum One. Bounty hunters will not be rewarded for reporting these:\n\n  - Frontrunning, including back running and sandwich attacks\n  - Known issues previously reported in security audits are out of scope. All protocol audits can be found here: [https://www.notion.so/thegraphfoundation/External-Protocol-Audits-95b73b22af3341b6933d74465f5f7059 ](https://www.notion.so/thegraphfoundation/External-Protocol-Audits-95b73b22af3341b6933d74465f5f7059)\n    - Specifically related to OpenZeppelin’s “The Graph Protocol Audit” (August 31, 2020), C01 and C02 have already been addressed by the core dev team. More on C02 can be found here: [https://forum.thegraph.com/t/openzeppelin-protocol-audit-prysm-groups-c02-economic-attack-resolution-summary/3280?u=pedro](https://forum.thegraph.com/t/openzeppelin-protocol-audit-prysm-groups-c02-economic-attack-resolution-summary/3280?u=pedro)\n  - Natural network activity like curation whose involved mechanisms could result in unprofitable actions for the particular stakeholder\n\nAdditionally, all of the following vulnerabilities and bug report types are considered out-of-scope in this bug bounty program (though, as noted above, The Graph Foundation may occasionally make an exception and issue a reward for a material, out-of-scope impact):\n\n  - Attacks that rely on social engineering, including requiring victim to visit an out-of-scope url\n  - Attacks requiring access to victim’s machine\n  - Attacks of third-party service providers, which could have a negative impact on The Graph i.e. misconfigurations on 3rd-party services like CloudFlare etc.\n  - Best practice critiques\n  - Indexer port configurations not aligned with [best practices](https://thegraph.com/docs/en/network/indexing/#what-are-some-basic-security-precautions-an-indexer-should-take)\n  - Attacks that have the potential to impact token price\n  - Testnet assets\n  - “Man in the middle” attacks\n\n\n__Rules and Requirements__\nAll bounty hunters must abide by rules when reporting bugs to be eligible for rewards. We appreciate your cooperation.\n\n__Report Responsibly__\n\nReport vulnerabilities to The Graph first by submitting a bug report on Immunefi, to mitigate attacks and in the best interest of the network’s safety. Give reasonable time for The Graph to fix the bug before sharing publicly.\n\n__Don't Exploit Reported Bugs__\n\nDo not exploit bugs in the code to gain an advantage or conduct malicious activity in the network. No hacking or social engineering of other network users.\n\n__Don’t Violate Privacy__\n\nDo not violate the privacy of network users, other bounty hunters, or The Graph.\n\n__Don’t Attack or Defraud The Graph__\n\nDo not attack The Graph team, operations, or technology (eg. DDOS attack, spam, social engineering) or defraud The Graph team or network users.\n\nPlease also note reporting requirements:\n\n  - Bugs will only be rewarded once for successful reporting and confirmation of fix to the first person to report the bug.\n\n  - Vulnerabilities must be reproducible by The Graph team (please include all relevant links, docs, and code)\n\n  - Single vulnerabilities can be submitted per report, multiple submissions for the same vulnerability will not be counted. In case the same vulnerability and/or exploit applies to different assets in scope, these must be mentioned in a single report.\n\n  - Bounty hunters can submit multiple bug reports\n\n  - Public disclosure of the vulnerability prior to resolution may cancel a pending reward. We reserve the right to disqualify individuals from the program for disrespectful or disruptive behavior.\n\n  - The Graph and affiliates will not negotiate in response to duress or threats (e.g., we will not negotiate the payout amount under threat of withholding the vulnerability or threat of releasing the vulnerability or any exposed data to the public).",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Arbitrum",
       "rewardsToken": "GRT",
@@ -836,14 +839,14 @@
       "programCodebases": [],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "premiumTriaging": false
     },
     "project": {
       "premiumTriaging": false,
       "isSafeHarborActive": false,
       "performanceMetrics": {
-        "medianResponseTimeInMinutes": 2046,
+        "medianResponseTimeInMinutes": 1996,
         "totalPaidAmount": 1113979.42
       }
     },
