@@ -16,45 +16,45 @@
           "assetType": "blockchain_dlt",
           "severity": "critical",
           "rewardModel": "up_to",
-          "maxReward": 1000000,
+          "maxReward": 100000,
           "rewardCalculationPercentage": 10
         },
         {
           "assetType": "blockchain_dlt",
           "severity": "high",
           "rewardModel": "up_to",
-          "maxReward": 50000
+          "maxReward": 25000
         },
         {
           "assetType": "blockchain_dlt",
           "severity": "medium",
           "rewardModel": "up_to",
-          "maxReward": 20000
+          "maxReward": 15000
         },
         {
           "assetType": "blockchain_dlt",
           "severity": "low",
           "rewardModel": "up_to",
-          "maxReward": 5000
+          "maxReward": 2500
         },
         {
           "assetType": "websites_and_applications",
           "severity": "critical",
           "rewardModel": "up_to",
-          "maxReward": 15000,
+          "maxReward": 7500,
           "otherImpactMaxReward": 0
         },
         {
           "assetType": "websites_and_applications",
           "severity": "high",
           "rewardModel": "up_to",
-          "maxReward": 7500
+          "maxReward": 5000
         },
         {
           "assetType": "websites_and_applications",
           "severity": "medium",
           "rewardModel": "up_to",
-          "maxReward": 2500
+          "maxReward": 2000
         },
         {
           "assetType": "websites_and_applications",
@@ -68,7 +68,7 @@
         {
           "id": "5Uv4I8GXpfWeu9SX6b5Jhz",
           "type": "blockchain_dlt",
-          "url": "https://github.com/PureStake/moonbeam",
+          "url": "https://github.com/moonbeam-foundation/moonbeam",
           "description": "Blockchain - Moonbeam",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
@@ -77,7 +77,7 @@
         {
           "id": "4QoYqLXPt5aMblE2DWp0X3",
           "type": "blockchain_dlt",
-          "url": "https://github.com/PureStake/nimbus",
+          "url": "https://github.com/moonbeam-foundation/nimbus",
           "description": "Blockchain - Nimbus",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
@@ -86,7 +86,7 @@
         {
           "id": "53UYXcYlReNXtxDHUhTXq6",
           "type": "blockchain_dlt",
-          "url": "https://github.com/PureStake/crowdloan-rewards",
+          "url": "https://github.com/moonbeam-foundation/crowdloan-rewards",
           "description": "Blockchain - Crowdloan Rewards",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
@@ -95,7 +95,7 @@
         {
           "id": "2r4sLsZ2ZPAVt2R2uYiBay",
           "type": "blockchain_dlt",
-          "url": "https://github.com/paritytech/frontier",
+          "url": "https://github.com/moonbeam-foundation/frontier",
           "description": "Frontier",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
@@ -136,15 +136,6 @@
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
           "addedAt": "2022-05-13T15:12:45.799Z"
-        },
-        {
-          "id": "5NdpgBWYPy4IuzBk1H6KoE",
-          "type": "websites_and_applications",
-          "url": "https://crowdloan.moonbeam.foundation/",
-          "description": null,
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2022-05-13T15:12:47.005Z"
         },
         {
           "id": "47eAU3xGqtRd2VDuqCdAJ4",
@@ -455,7 +446,7 @@
       "defaultOutOfScopeWebAndApplications": "- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n  - This does not exclude reflected HTML injection with or without JavaScript\n  - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering",
       "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
       "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": "  - Broken link hijacking is out of scope \n  - Best practice critiques\n  - Attacks requiring privileged access from within the organization\n  - Feature requests",
+      "customOutOfScopeInformation": "The following vulnerabilities are **explicitly** excluded from the rewards for this bug bounty program:\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n- Attacks relying in whole or in part on  social engineering, deception or phishing attacks\n- Vulnerabilities in third-party dependencies not under Moonbeam Foundation's control, especially when no known fix exists at the time of the report. Such vulnerabilities should be reported to the respective third-party organizations responsible for the code. If we cannot fix the vulnerability, we will not pay a bounty.\n- Bugs or vulnerabilities in external services or platforms that Moonbeam Network uses but does not control.\n- Broken link hijacking is out of scope \n- Non-Production Code: Any code present in the in-scope repositories that has not yet been deployed to the production Moonbeam or Moonriver networks is out of scope.\n- Theoretical Vulnerabilities: Vulnerabilities that are purely theoretical without practical exploitability. This includes exploits requiring unrealistic scenarios, assumptions, or clear human error.\n- Excessive Investment Attacks: Attacks that require an impractically high investment beyond reasonable means (e.g., requiring more than $100 million USD to execute).\n- User Negligence: Issues that arise solely from user misconfiguration or negligence, where exploitation is possible only if users ignore standard security practices.\n- Low-Impact DoS Attacks: Denial-of-Service (DoS) attacks that are temporary and do not result in significant disruption or measurable financial loss.\n- Best Practice Suggestions: Code optimizations, style guidelines, or recommendations that do not have a direct security impact.\n- Cosmetic Issues: Aesthetic issues, including typos, branding inconsistencies, or minor UI glitches that do not lead to security vulnerabilities or exploitation.\n\n__Smart Contracts and Blockchain__\n\n- All smart contracts deployed on Moonbeam or Moonriver\n- Third-Party Oracle Data: Issues arising from incorrect data supplied by third-party oracles\n- Basic economic governance attacks (e.g. 51% attack)\n- Attacks relying on developers committing errors due to how Moonbeam’s EVM implementation differs from the standard EVM implementation\n- Liquidity Issues: Vulnerabilities or attacks that exploit a lack of liquidity.\n- Best Practice Critiques: Suggestions for improvements that do not address specific security vulnerabilities.\n- Sybil Attacks: Attacks involving the creation of multiple fake identities to gain disproportionate influence.\n- Centralization Risks: Risks associated with centralization that do not involve a specific vulnerability.\n- Any bugs or exploits in third party wallets\n\n__Websites and Apps__\n\n- Theoretical Vulnerabilities: Issues without a working proof of concept or demonstration of impact.\n- Content Spoofing/Text Injection: Content spoofing or text injection issues that do not lead to further exploitation.\n- Self-XSS: Cross-Site Scripting attacks that require the victim to self-execute malicious code.\n- Captcha Bypass via OCR: Automated Captcha solving using Optical Character Recognition without direct security impact.\n- Non-Impactful CSRF: Cross-Site Request Forgery vulnerabilities that do not lead to significant security impact (e.g., logout CSRF, changing user preferences).\n- Missing Security Headers: Absence of HTTP security headers or cookie flags that do not lead to an exploitable vulnerability.\n- Server Information Disclosure: Disclosure of server information like IPs, server names, or stack traces that do not reveal sensitive data.\n- User Enumeration: Ability to enumerate or confirm the existence of users or tenants without further impact.\n- Unlikely User Actions: Vulnerabilities that require unrealistic or unlikely actions by the user.\n- Open Redirects: URL redirects unless they can be combined with another vulnerability to escalate the impact.\n- SSL/TLS Best Practices: Recommendations for SSL/TLS improvements without a direct security impact.\n- Low-Impact DDoS: Denial-of-Service vulnerabilities that do not cause significant disruption or financial loss.\n- Internal Privileged Access: Attacks requiring privileged access from within the organization.\n- Email SPF Records: Issues related to SPF, DKIM, or DMARC records for email domains without direct security impact.\n- Feature Requests: Suggestions for new features or enhancements.\n- Best Practice Suggestions: Recommendations for best practices without identifying specific vulnerabilities.\n",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "USDC, USDT",
