@@ -9,23 +9,23 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1dkPI5NhB39YcEBvxMw1SO/8a6d4a07a6f58083af0df52ae2d63655/teahouse-meta-image_copy.png",
       "launchDate": "2024-01-10T09:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-11-11T13:47:07.917Z",
-      "kyc": true,
+      "updatedDate": "2024-12-03T18:20:21.659Z",
+      "kyc": false,
       "rewards": [
         {
-          "id": 3835,
+          "id": 9185,
+          "assetType": "smart_contract",
+          "severity": "critical",
+          "rewardModel": "fixed",
+          "rewardCalculationPercentage": 0,
+          "fixedReward": 15000
+        },
+        {
+          "id": 9186,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "fixed",
           "fixedReward": 5000
-        },
-        {
-          "id": 8124,
-          "assetType": "smart_contract",
-          "severity": "critical",
-          "rewardModel": "fixed",
-          "rewardCalculationPercentage": 10,
-          "fixedReward": 15000
         }
       ],
       "audits": null,
@@ -747,7 +747,7 @@
           "title": "Protocol insolvency"
         }
       ],
-      "programOverview": "Teahouse Finance is a multi-strategy DeFi investment platform dedicated to secure and flexible asset management.\n\nTeahouse Finance functions as a simplified layer above DeFi platforms such as Uniswap V3. This approach removes the complexities of managing liquidity and crypto assets, enabling users to deposit and entrust Teahouse Finance to generate passive income on their behalf.\n\nUsers can find a wide range of strategies on the Teahouse strategy platform. Teahouse Finance offers investment choices based on risk tolerance, selecting from low, medium, to high-risk strategies. Additionally, users have the flexibility to choose strategies aligned with their specific preferences and investment goals.\n\nFor more information about Teahouse Finance, please visit [https://teahouse.finance/](https://teahouse.finance/)\n\nTeahouse Finance provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n\n__Primacy of Impact vs Primacy of Rules__\n\nTeahouse Finance adheres to the Primacy of Impact for the following severity levels:\n- Smart Contract: Critical\n- Smart Contract: High\n\nIf a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTestnet and mock files are not covered under the Primacy of Impact.\n\nAll other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n__Known Issue Assurance__\n\nTeahouse Finance commits to providing Known Issue Assurance to bug submissions through their program. This means that Teahouse Finance will either disclose known issues publicly or at the very least privately via a self-reported bug submission in order to allow for a more objective and streamlined mediation process to prove that an issue is known. Otherwise, assuming the bug report itself is valid, it would result in the bug report being considered in-scope and due 100% of the reward with respect to the bug bounty program terms. \n\n__Immunefi Standard Badge__\n\nTeahouse Finance has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-), which is given to projects that adhere to our best practices.",
+      "programOverview": "Teahouse Finance is a multi-strategy DeFi investment platform dedicated to secure and flexible asset management.\n\nTeahouse Finance functions as a simplified layer above DeFi platforms such as Uniswap V3. This approach removes the complexities of managing liquidity and crypto assets, enabling users to deposit and entrust Teahouse Finance to generate passive income on their behalf.\n\nUsers can find a wide range of strategies on the Teahouse strategy platform. Teahouse Finance offers investment choices based on risk tolerance, selecting from low, medium, to high-risk strategies. Additionally, users have the flexibility to choose strategies aligned with their specific preferences and investment goals.\n\nFor more information about Teahouse Finance, please visit [https://teahouse.finance/](https://teahouse.finance/)\n\nTeahouse Finance provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n\n__Primacy of Impact vs Primacy of Rules__\n\nTeahouse Finance adheres to the Primacy of Impact for the following severity levels:\n- Smart Contract: Critical\n- Smart Contract: High\n\nIf a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTestnet and mock files are not covered under the Primacy of Impact.\n\nAll other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n__Restrictions on Security Researcher Eligibility__\n\nSecurity researchers who fall under any of the following are ineligible for a reward\n\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors who directly or indirectly participated in the audit review\n\n\n__Immunefi Standard Badge__\n\nTeahouse Finance has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-), which is given to projects that adhere to our best practices.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in the scope table.",
       "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack is considered if the smart contracts where the vulnerability exists can be upgraded, paused, or killed. If the attack impacts a smart contract directly holding funds that cannot be upgraded or paused, the amount of funds at risk will be calculated with the first attack being at 100% of the funds that could be stolen and then a reduction of 25% from the amount of the first attack for every 300 blocks the attack needs for subsequent attacks from the first attack, rounded down. For avoidance of doubt, if a second attack would happen at 600 blocks and then a third at 900 blocks, the funds at risk would be counted at 50% and 75% of the reward from the first attack, respectively.\n\n\n__Previous Audits__\n\nTeahouse Finance has provided these completed audit review reports for reference. Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n- [https://vault.teahouse.finance/Teahouse-Finance_audit_report_2023-06-14.pdf](https://vault.teahouse.finance/Teahouse-Finance_audit_report_2023-06-14.pdf)\n- https://omniscia.io/reports/teahouse-finance-portfolio-strategy-65ad01e4cd79e50018d6fa75/ \n\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract: Critical\n- Smart Contract: High\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Teahouse Finance team directly and are denominated in USD. However, payments are done in USDC.",
       "outOfScopeAndRules": null,
@@ -757,7 +757,7 @@
       "tags": {
         "general": [
           "Immunefi Standard",
-          "KYC Required",
+          "KYC Not Required",
           "PoC Required"
         ],
         "productType": [
@@ -817,12 +817,7 @@
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "USDC",
-      "eligibilityCriteria": [
-        "no_ofac_sdn",
-        "no_official_contributor",
-        "no_employee",
-        "no_auditor"
-      ],
+      "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [
         {
@@ -842,6 +837,7 @@
       ],
       "primacy": "primacy_of_impact",
       "newProgramRewardsEnabled": true,
+      "findingsUrl": null,
       "premiumTriaging": false
     },
     "project": {
