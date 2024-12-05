@@ -13,28 +13,19 @@
       "kyc": false,
       "rewards": [
         {
+          "id": 9329,
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "Up to USD $100,000",
-          "pocRequired": false
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 50000,
+          "rewardCalculationPercentage": 10
         },
         {
+          "id": 9330,
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "Up to USD $50,000",
-          "pocRequired": false
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "Up to USD $20,000",
-          "pocRequired": false
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "low",
-          "payout": "Up to USD $10,000",
-          "pocRequired": false
+          "severity": "high",
+          "rewardModel": "up_to",
+          "maxReward": 25000
         }
       ],
       "audits": null,
@@ -480,12 +471,6 @@
           "title": "Unintended chain split (network partition)"
         },
         {
-          "id": 1498,
-          "type": "blockchain_dlt",
-          "severity": "high",
-          "title": "Transient consensus failures"
-        },
-        {
           "id": 23,
           "type": "smart_contract",
           "severity": "high",
@@ -528,18 +513,6 @@
           "title": "Permanent freezing of funds (fix requires hardfork)"
         },
         {
-          "id": 1499,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "RPC API crash"
-        },
-        {
-          "id": 1500,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Any governance voting result manipulation"
-        },
-        {
           "id": 17,
           "type": "smart_contract",
           "severity": "critical",
@@ -552,16 +525,22 @@
           "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": 1501,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Miner-extractable value (MEV)"
-        },
-        {
           "id": 22,
           "type": "smart_contract",
           "severity": "critical",
           "title": "Protocol insolvency"
+        },
+        {
+          "id": 1500,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Any governance voting result manipulation"
+        },
+        {
+          "id": 1501,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Miner-extractable value (MEV)"
         }
       ],
       "programOverview": "Connext is a modular protocol for securely passing funds and data between chains. Developers can use Connext to build crosschain apps (__xApps__) - applications that interact with multiple domains (blockchains and/or rollups) simultaneously.\n\nFor more information about Connext, please visit [https://connext.network/](https://connext.network/).  \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Thefts and freezing of user funds\n  - Thefts and freezing of liquidity on the contract\n  - Network shutdown\n  - Abuse of auction process\n  - Abuse of AMM pricing\n  - Abuse of system to create fraudulent slashing conditions",
@@ -640,7 +619,7 @@
       "programCodebases": [],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "findingsUrl": null,
       "premiumTriaging": false
     },
