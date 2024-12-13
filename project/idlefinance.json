@@ -9,42 +9,51 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5VrN6pAefb3vpdjFPdDR4m/94d1a5806d123f8d9a26e7726b09ae71/Idle.png",
       "launchDate": "2021-03-25T07:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-11-11T15:51:15.083Z",
+      "updatedDate": "2024-12-12T11:54:52.118Z",
       "kyc": false,
       "rewards": [
         {
-          "id": 4190,
+          "id": 9812,
+          "assetType": "smart_contract",
+          "severity": "critical",
+          "rewardModel": "up_to",
+          "maxReward": 50000,
+          "rewardCalculationPercentage": 10
+        },
+        {
+          "id": 9813,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "up_to",
           "maxReward": 20000
         },
         {
-          "id": 4191,
+          "id": 9814,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "up_to",
           "maxReward": 5000
-        },
-        {
-          "id": 8144,
-          "assetType": "smart_contract",
-          "severity": "critical",
-          "rewardModel": "up_to",
-          "maxReward": 50000,
-          "rewardCalculationPercentage": 10
         }
       ],
       "audits": null,
       "assets": [
         {
-          "id": "15QmZWJqYsLvjAClv8qP10",
+          "id": "2J91J0Fz7AlXeSylq0C4EL",
           "type": "smart_contract",
-          "url": "https://docs.idle.finance/developers/best-yield/deployed-contracts#senior-best-yield",
-          "description": "Smart Contract",
+          "url": "https://docs.idle.finance/developers/best-yield/deployed-contracts/ethereum#best-yield",
+          "description": null,
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2022-12-01T20:23:50.088Z"
+          "addedAt": "2024-12-12T11:36:22.094Z"
+        },
+        {
+          "id": "78BeyyEf1qYkMkTl8yAl4N",
+          "type": "smart_contract",
+          "url": "https://docs.idle.finance/developers/yield-tranches/deployed-contracts",
+          "description": null,
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2024-12-12T11:36:31.719Z"
         }
       ],
       "impacts": [
@@ -103,11 +112,11 @@
           "title": "Protocol insolvency"
         }
       ],
-      "programOverview": "Idle is a decentralized protocol dedicated to bringing automatic asset\nallocation and aggregation to the interest-bearing tokens economy. This\nprotocol bundles stable crypto-assets (stablecoins) into tokenized baskets that\nare programmed to automatically rebalance based on different management logics.\n\nThe Idle Protocol employs a strategy-token system. Every allocation strategy\nhas its own set of tokens that represent a pool of yield-generating assets\nspread across different DeFi protocols. These tokens represent the investor’s\nproportional ownership of the whole pool and the interest accrued over\ntime. This issuing method is similar to traditional mutual funds shares\nstructure, and it allows Idle to be non-custodial.\n\nCurrently, Idle uses this allocation strategy:\n\n- **Best-Yield**: this strategy combines multiple money markets to\nautomatically provide the highest interest rates, beating the best traditional\nofferings across interest-bearing tokens and DeFi protocols.\n\nConsequently, users can hold IdleTokens related to a specific strategy and a\nspecific stablecoin.\n\nIdle aims to unlock the power of decentralized finance for everyone by a single\nvehicle that automatically rebalances between underlying providers to always\nmaintain the highest rates or the optimal risk/return allocation.\n\nThe bug bounty program is focused around the Idle protocol V4 smart contracts and the prevention of loss of user funds.",
+      "programOverview": "Idle DAO is a decentralized collective that built a set of products that aim to unlock the power of decentralized finance as a one-stop source of yield. It allows users to algorithmically optimize their digital asset allocation across leading DeFi protocols, whether they want to maximize it or keep tabs on their risk-return profile\n\nCurrently, Idle DAO product suite includes: \n\n - **Best-Yield**: this strategy combines multiple money markets to automatically provide the highest interest rates, beating the best traditional offerings across interest-bearing tokens and DeFi protocols.\n\n - **Yield Tranches**: this product allows users to deposit assets in a Defi protocol with two risk-adjusted investment profiles (Senior and Junior) with different risks/rewards ratio\n\n\n**The bug bounty program is focused around the Idle protocol Best Yield V4 and Yield Tranches smart contracts and the prevention of loss of user funds.**",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the\nfollowing types:\n\n**Smart Contracts/Blockchain:**\n\n- Re-entrancy\n- Logic errors\n  - including user authentication errors\n- Solidity/EVM details not considered\n  - including integer over-/under-flow\n  - including unhandled exceptions\n- Trusting trust/dependency vulnerabilities\n  - including composability vulnerabilities\n- Oracle failure/manipulation\n- Novel governance attacks\n- Economic/financial attacks\n  - including flash loan attacks\n- Congestion and scalability\n  - including running out of gas\n  - including block stuffing\n  - including susceptibility to frontrunning\n- Consensus failures\n- Cryptography problems\n  - Signature malleability\n  - Susceptibility to replay attacks\n  - Weak randomness\n  - Weak encryption\n- Susceptibility to block timestamp manipulation\n- Missing access controls / unprotected internal or debugging interfaces",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System 2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nThe final reward for critical bounty payouts is capped at 10% of the funds at risk based on the vulnerability reported.\n\nPoC is required for all levels.\n\nTheft of yield or interest is considered as Medium but may be considered High depending on the amount of funds at risk.\n\nBest practices critiques are not accepted under this program. \n\nThe likelihood of exploitability is also taken into consideration in the\ndetermination of the final payout amount based on the severity of the bug\nreported according to the table below:\n\n| | Medium | High | Critical |\n|  :-- | :-- | :-- | :-: |\n| Almost Certain | $5,000 | $20,000 | $50,000 |\n| Likely | $3,000 | $10,000 | $25,000 | \n| Possible | $1,000 | $5,000 | $10,000 |\n| Unlikely  | $500 | $1,000 | $5,000 |\n| Almost Possible | $100 | $500 | $1,000 |\n\nPayouts are handled by **Idle Finance** governance directly and are denominated\nin **USD**. Payouts under $10,000 are done in **USDC**. When payouts are over\n$10,000, the first $10,000 is paid in **USDC** and then the rest are paid in\n**IDLE** up to the total of $50 000.",
       "outOfScopeAndRules": null,
-      "assetsBodyV2": "Only Senior Best Yield contracts will be considered in scope. Governance and Utilities and ERC-4626 wrappers contracts are not covered under this bug bounty program. Paused contracts are not considered in scope.",
+      "assetsBodyV2": "Only Senior Best Yield contracts will be considered in scope for the Best Yield. Governance and Utilities and ERC-4626 wrappers contracts are not covered under this bug bounty program. **Paused** contracts and contract market as **Deprecated**/**Decommissioned** in doc are not considered in scope",
       "impactsBody": null,
       "immunefiStandard": null,
       "tags": {
@@ -156,7 +165,7 @@
         "web_rewards": []
       },
       "websiteUrl": null,
-      "description": "Idle is a decentralized protocol dedicated to bringing automatic asset allocation and aggregation to the interest-bearing tokens economy. This protocol bundles stable crypto-assets (stablecoins) into tokenized baskets that are programmed to automatically rebalance based on different management logics.",
+      "description": "Idle DAO is a decentralized collective that built a set of products that aim to unlock the power of decentralized finance as a one-stop source of yield. It allows users to algorithmically optimize their digital asset allocation across leading DeFi protocols, whether they want to maximize it or keep tabs on their risk-return profile",
       "githubUrl": null,
       "feasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
       "prohibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
@@ -169,7 +178,7 @@
       "defaultOutOfScopeWebAndApplications": "- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n  - This does not exclude reflected HTML injection with or without JavaScript\n  - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering",
       "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
       "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": "- Best practice critiques",
+      "customOutOfScopeInformation": "- Best practice critiques\n\nOnly Senior Best Yield contracts will be considered in scope for the Best Yield. Governance and Utilities and ERC-4626 wrappers contracts are not covered under this bug bounty program. **Paused** contracts and contract market as **Deprecated**/**Decommissioned** in doc are not considered in scope",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "USDC, IDLE",
