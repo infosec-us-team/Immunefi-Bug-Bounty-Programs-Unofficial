@@ -9,28 +9,28 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2Tl7DfY3q5JeEXIH9yDXHN/3ee91b3e0f42d42e83040eb3648cb7c1/Stader_Brand_Icon_Logo_Small.png",
       "launchDate": "2022-04-25T17:30:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-11-15T10:45:22.587Z",
+      "updatedDate": "2024-12-17T09:49:59.188Z",
       "kyc": false,
       "rewards": [
         {
-          "id": 8268,
+          "id": 9963,
           "assetType": "smart_contract",
           "severity": "critical",
           "rewardModel": "range",
           "maxReward": 250000,
-          "minReward": 100000,
+          "minReward": 50000,
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 5761,
+          "id": 9964,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "range",
-          "maxReward": 100000,
+          "maxReward": 50000,
           "minReward": 20000
         },
         {
-          "id": 5762,
+          "id": 9965,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "up_to",
@@ -56,6 +56,33 @@
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
           "addedAt": "2022-04-25T17:30:00.000Z"
+        },
+        {
+          "id": "6rP3loetR2aFbQT7kmOCh",
+          "type": "smart_contract",
+          "url": "https://finder.terra.money/mainnet/address/terra1xacqx447msqp46qmv8k2sq6v5jh9fdj37az898",
+          "description": "Staking",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2024-12-17T09:39:33.350Z"
+        },
+        {
+          "id": "6fTzhdCZH3mJ4jwNMPh6W0",
+          "type": "smart_contract",
+          "url": "https://finder.terra.money/mainnet/address/terra1d8cjkwxvrw8cmpyja3p8luag2hxsktersc0wez",
+          "description": "Reward",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2024-12-17T09:39:43.659Z"
+        },
+        {
+          "id": "oZs4iBs2UPCCHNRxAWi9T",
+          "type": "smart_contract",
+          "url": "https://finder.terra.money/mainnet/address/terra1vq83s69rykjypyqcqhc7hsqzups6p9fwzu0wre",
+          "description": "Airdrops Registry",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2024-12-17T09:39:58.259Z"
         }
       ],
       "impacts": [
@@ -72,46 +99,10 @@
           "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": 2478,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Temporary freezing of funds for at least 24 hours"
-        },
-        {
           "id": 29,
           "type": "smart_contract",
           "severity": "medium",
           "title": "Smart contract unable to operate due to lack of token funds"
-        },
-        {
-          "id": 2479,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Block stuffing for profit"
-        },
-        {
-          "id": 31,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-        },
-        {
-          "id": 33,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Unbounded gas consumption"
-        },
-        {
-          "id": 32,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Theft of gas"
-        },
-        {
-          "id": 2480,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Any governance voting result manipulation"
         },
         {
           "id": 15,
@@ -132,15 +123,21 @@
           "title": "Protocol insolvency"
         },
         {
-          "id": 2481,
+          "id": 33,
           "type": "smart_contract",
-          "severity": "critical",
-          "title": "Miner-extractable value (MEV)"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
+        },
+        {
+          "id": 5275,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Temporary freezing of funds for at least 48 hours"
         }
       ],
       "programOverview": "Stader for Polygon is a non-custodial smart contract based staking platform that helps you conveniently discover and access staking solutions.\n\nIn the short term, Stader for Polygon is building native staking smart contracts across multiple chains including Terra, Fantom, Polygon, Solana, among others, and building an economic ecosystem to grow and develop solutions like YFI-style farming with rewards, launchpads, gaming with rewards, liquid staking solutions, and more.\n\nIn the long term, Stader for Polygon is focused on unlocking the platform approach and nurturing third parties to develop several staking-related applications on top of Stader for Polygon infrastructure.\n\nFor more information about Stader for Polygon, please visit [https://staderlabs.com/](https://staderlabs.com/).",
-      "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Smart Contracts__\n\nCritical\n  - Any governance voting result manipulation\n  - Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield\n  - Permanent freezing of funds\n  - Miner-extractable value (MEV)\n  - Protocol Insolvency\n\nHigh\n  - Theft of unclaimed yield\n  - Permanent freezing of unclaimed yield\n  - Temporary freezing of funds for at least 24 hours\n\nMedium\n  - Smart contract unable to operate due to lack of token funds \n  - Block stuffing for profit\n  - Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)\n  - Theft of gas\n  - Unbounded gas consumption",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll  bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nRewards for critical smart contract vulnerabilities are further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum reward of __USD 100 000__ for Critical smart contract bug reports. \n\nPrevious issues highlighted in the following audit reports are considered out of scope of this program: \n  - [https://github.com/stader-labs/audits/blob/main/halborn/StaderLabs_MaticX_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf ](https://github.com/stader-labs/audits/blob/main/halborn/StaderLabs_MaticX_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf)\n  - [https://staderlabs-docs.s3.amazonaws.com/audits/polygon/StaderLabs_maticX_Audit_Report_Immunebytes.pdf](https://staderlabs-docs.s3.amazonaws.com/audits/polygon/StaderLabs_maticX_Audit_Report_Immunebytes.pdf)\n\nPayouts are handled by the __Stader for Polygon__ team directly and are denominated in USD. However, payouts are done in __USDC__ or __ETH__, at the discretion of the team.",
+      "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Smart Contracts__\n\nCritical\n  - Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield\n  - Permanent freezing of funds\n  - Protocol Insolvency\n\nHigh\n  - Theft of unclaimed yield\n  - Permanent freezing of unclaimed yield\n  - Temporary freezing of funds for at least 48 hours\n\nMedium\n  - Smart contract unable to operate due to lack of token funds \n  - Unbounded gas consumption",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll  bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nRewards for critical smart contract vulnerabilities are further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum reward of __USD 50 000__ for Critical smart contract bug reports. \n\nPrevious issues highlighted in the following audit reports are considered out of scope of this program: \n  - [https://github.com/stader-labs/audits/blob/main/halborn/StaderLabs_MaticX_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf ](https://github.com/stader-labs/audits/blob/main/halborn/StaderLabs_MaticX_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf)\n  - [https://staderlabs-docs.s3.amazonaws.com/audits/polygon/StaderLabs_maticX_Audit_Report_Immunebytes.pdf](https://staderlabs-docs.s3.amazonaws.com/audits/polygon/StaderLabs_maticX_Audit_Report_Immunebytes.pdf)\n\nPayouts are handled by the __Stader for Polygon__ team directly and are denominated in USD. However, payouts are done in __USDC__ or __ETH__, at the discretion of the team.",
       "outOfScopeAndRules": null,
       "assetsBodyV2": "For proxy contracts, only the current implementation and any further updates to the implementation contracts are considered in scope.\n\nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf any Critical or High severity impact can be caused to any other asset managed by Stader for Polygon that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.",
       "impactsBody": null,
