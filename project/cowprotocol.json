@@ -5,30 +5,37 @@
       "id": "cowprotocol",
       "slug": "cowprotocol",
       "project": "CoW Protocol",
-      "maxBounty": 54000,
+      "maxBounty": 1000000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2SCCBIzc5z3ZxUhwhW1NSK/c6616b0b6f3bbacfebd5a6ea18f929dd/CoW-Protocol-icon-circle-light-purple.png",
       "launchDate": "2021-06-15T17:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-12-04T18:11:56.481Z",
+      "updatedDate": "2024-12-20T09:27:05.373Z",
       "kyc": false,
       "rewards": [
         {
+          "id": 10041,
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $11,000 to USD $54,000",
-          "pocRequired": false
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 1000000,
+          "minReward": 50000,
+          "rewardCalculationPercentage": 10
         },
         {
+          "id": 10042,
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $2,000 to USD $10,000",
-          "pocRequired": false
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 50000,
+          "minReward": 10000
         },
         {
+          "id": 10043,
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $1,000",
-          "pocRequired": false
+          "severity": "medium",
+          "rewardModel": "range",
+          "maxReward": 10000,
+          "minReward": 1000
         }
       ],
       "audits": null,
@@ -275,7 +282,7 @@
       ],
       "programOverview": "The CoW team, for and on behalf of and at the expense of [CoW DAO](https://forum.cow.fi/), is running a bug bounty program focused on CoW Protocol, a fully permissionless protocol that leverages batch auctions to provide MEV protection, plus integrates with on-chain liquidity sources to offer traders the best prices.\n\nFor background information, please refer to [the docs](https://docs.cow.fi/).\n\nThe bug bounty program is focused around the smart contracts and is mostly concerned with the loss of user funds. It is a seamless continuation of the bug bounty program formerly run by Gnosis.",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including unhandled exceptions\n  - Misuse/wrong trust model for dependencies\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces\n\nExamples of desired vulnerabilities/exploits\n\n  - Take funds from users’ allowances outside of a trade.\n  - Steal funds from the settlement contract as an external user (but not as the owner or a solver).\n  - Add or remove solvers without being the owner.\n  - Execute trades that have not been authorized by a user (e.g., a forged signature).\n  - Execute trades with different parameters from what the user signed (e.g., as sell order instead of as buy order).\n  - Execute expired trades.\n  - Replay already executed fill-or-kill orders.\n  - Execute more, in total, than the maximum amount for a partially fillable order.\n  - Execute a settlement so that the limit price of an order is not respected.\n  - Execute an interaction from the settlement contract to the vault relayer.",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nThe CoW Protocol bounty program considers a number of variables in determining rewards. Determinations of eligibility, score, and all terms related to an award are at the sole and final discretion of the CoW team bug bounty panel, on behalf of CoW DAO.\n\nThe CoW core team (whether paid directly or indirectly, incl. Grant Core Contributor and including external auditors) including current and former team members, which includes anyone currently or formerly paid by CoW DAO or its Service Providers as well as Gnosis, are not eligible for rewards.\n\nIn order to be eligible for a reward, bug reports must include an explanation of how the bug can be reproduced, a failing test case, a valid scenario in which the bug can be exploited. Critical vulnerabilities with all of these have a maximum reward of __USD 50 000__. If a fix that makes the test case pass is provided, an additional __USD 4 000__ is provided for critical vulnerabilities, for a maximum reward of __USD 54 000__.\n\nPayouts are processed on behalf of and at the expense of CoW DAO and are denominated in __USD__. However, payouts are done in ETH, on Ethereum mainnet.\n\nOnce the CoW team bug bounty panel accepts an eligible bug, the team shall have the right to decide on and implement the mitigation and publishing steps of the eligible bug on their own terms and timeline.\nBy submitting a bug report on this platform, the submitter agrees to extend our timeline for resolving the issue (and to not disclose the report elsewhere or to any other party keeping the information confidential and without exploiting the vulnerability).",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nThe CoW Protocol bounty program considers a number of variables in determining rewards. Determinations of eligibility, score, and all terms related to an award are at the sole and final discretion of the CoW team bug bounty panel, on behalf of CoW DAO.\n\nThe CoW core team (whether paid directly or indirectly, incl. Grant Core Contributor and including external auditors) including current and former team members, which includes anyone currently or formerly paid by CoW DAO or its Service Providers as well as Gnosis, are not eligible for rewards.\n\nIn order to be eligible for a reward, bug reports must include an explanation of how the bug can be reproduced, a failing test case, a valid scenario in which the bug can be exploited. Critical vulnerabilities with all of these have a maximum reward of __USD 1 000 000__. \n\nPayouts are processed on behalf of and at the expense of CoW DAO and are denominated in __USD__. However, payouts are done in ETH, on Ethereum mainnet.\n\nOnce the CoW team bug bounty panel accepts an eligible bug, the team shall have the right to decide on and implement the mitigation and publishing steps of the eligible bug on their own terms and timeline.\nBy submitting a bug report on this platform, the submitter agrees to extend our timeline for resolving the issue (and to not disclose the report elsewhere or to any other party keeping the information confidential and without exploiting the vulnerability).",
       "outOfScopeAndRules": "Any vulnerabilities mentioned in CoW Swap’s official audits are considered out-of-scope. Audits can be found in the [official contracts repository](https://github.com/cowprotocol/contracts/tree/main/audits).\n\nAny vulnerability that has already been reported to the CoW team or the CoW DAO, whether publicly or privately, is not eligible for a bounty. We recommend checking if the reported vulnerability is discussed in the [issue tracker](https://github.com/cowprotocol/contracts/issues) of the CoW Swap contracts repository.\n\nSome known vulnerability may not (yet) have been publicly reported but are already privately known to the CoW team or have already been discovered by other parties and communicated to the CoW Team, but not yet fixed. Any such reports are not eligible.  \n\nThe decision of eligibility of any submitted bug reports and their assessment is at the sole discretion of the Cow Team.\n\nThe following are also considered as out-of-scope:\n\n- Migration methods.\n- Services that build and submit the settlement transaction (e.g., denial of service, exploiting settlement transactions to extract value via sandwich attacks).\n- Gas efficiency improvements.\n- Any issues relating to networks other than the Ethereum Mainnet.\n- Steal funds from the settlement contract as a solver.\n- Price manipulation from the solver, for example:\n    - Choosing the prices in a settlement so as to receive a premium from an order.\n    - Reusing the same token twice in a settlement to give different prices to different orders.\n\nThe following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n- Basic economic governance attacks (e.g. 51% attack)\n- Lack of liquidity\n- Best practice critiques\n- Sybil attacks\n- Running out of gas\n\nThe following activities are prohibited by bug bounty program:\n\n- Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n- Attempting phishing or other social engineering attacks against the CoW Team and/or customers\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
       "assetsBodyV2": "We only accept reports for issues that can be reproduced in the smart contracts deployed at the following addresses:\n0x9008d19f58aabd9ed0d60971565aa8510560ab41\n\n- Ethereum: https://etherscan.io/address/0x9008d19f58aabd9ed0d60971565aa8510560ab41#code\n- Gnosis Chain: https://gnosis.blockscout.com/address/0x9008d19f58aabd9ed0d60971565aa8510560ab41?tab=contract\n0x9e7ae8bdba9aa346739792d219a808884996db67\n\n- Ethereum: https://etherscan.io/address/0x9e7ae8bdba9aa346739792d219a808884996db67#code\n- Gnosis Chain: https://gnosis.blockscout.com/address/0x9e7ae8bdba9aa346739792d219a808884996db67?tab=contract\n0xc92e8bdf79f0507f65a392b0ab4667716bfe0110\n\n- Ethereum: https://etherscan.io/address/0xc92e8bdf79f0507f65a392b0ab4667716bfe0110#code\n- Gnosis Chain: https://gnosis.blockscout.com/address/0xc92e8bdf79f0507f65a392b0ab4667716bfe0110?tab=contract\n0x2c4c28ddbdac9c5e7055b4c863b72ea0149d8afe\n\n- Ethereum: https://etherscan.io/address/0x2c4c28ddbdac9c5e7055b4c863b72ea0149d8afe#code\n- Gnosis Chain: https://gnosis.blockscout.com/address/0x2c4c28ddbdac9c5e7055b4c863b72ea0149d8afe?tab=contract\n\nThis corresponds to commit 6ebbd810ff2da635fb6f88e9a15fde196f8c852a in the [official repository](https://github.com/cowprotocol/contracts/blob/6ebbd810ff2da635fb6f88e9a15fde196f8c852a/src/contracts/).\n\nFor the Initializable, ReentrancyGuard, SafeCast, SafeMath, IERC20, and IVault smart contracts, this bug bounty program only accepts bug reports for the changes that were performed compared to the original, as well as any improper use of them that leads to actual issues in the contracts previously mentioned to be in scope. Any bug that is reproducible in the original vendored contract is out of scope.\n\nAny vulnerabilities mentioned in this [audit report](https://github.com/gnosis/gp-v2-contracts/blob/main/audits/GnosisProtocolV2May2021.pdf) are considered as out-of-scope.",
       "impactsBody": "In addition to the Immunefi Severity Classification System, the following information is provided for each severity level. In case of discrepancies between this information and the Immunefi Severity Classification System, this information will prevail.",
@@ -351,7 +358,7 @@
       "programCodebases": [],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "findingsUrl": null,
       "premiumTriaging": false
     },
@@ -362,7 +369,7 @@
     },
     "metaData": {
       "title": "CoW Protocol Bug Bounties",
-      "description": "Find bugs and vulnerabilities on CoW Protocol and get paid up to $54,000.",
+      "description": "Find bugs and vulnerabilities on CoW Protocol and get paid up to $1,000,000.",
       "url": "https://immunefi.com/bug-bounty/cowprotocol",
       "ogImg": "/api/bounty/og-image?project=CoW+Protocol"
     },
