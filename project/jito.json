@@ -13,7 +13,7 @@
       "kyc": true,
       "rewards": [
         {
-          "id": 4585,
+          "id": 11209,
           "assetType": "blockchain_dlt",
           "severity": "critical",
           "rewardModel": "range",
@@ -22,7 +22,7 @@
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 4586,
+          "id": 11210,
           "assetType": "blockchain_dlt",
           "severity": "high",
           "rewardModel": "range",
@@ -30,7 +30,7 @@
           "minReward": 25000
         },
         {
-          "id": 4587,
+          "id": 11211,
           "assetType": "blockchain_dlt",
           "severity": "medium",
           "rewardModel": "range",
@@ -38,7 +38,7 @@
           "minReward": 5000
         },
         {
-          "id": 4588,
+          "id": 11212,
           "assetType": "blockchain_dlt",
           "severity": "low",
           "rewardModel": "range",
@@ -46,7 +46,16 @@
           "minReward": 1000
         },
         {
-          "id": 4590,
+          "id": 11213,
+          "assetType": "smart_contract",
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 250000,
+          "minReward": 100000,
+          "rewardCalculationPercentage": 10
+        },
+        {
+          "id": 11214,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "range",
@@ -54,21 +63,12 @@
           "minReward": 25000
         },
         {
-          "id": 4591,
+          "id": 11215,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "range",
           "maxReward": 25000,
           "minReward": 5000
-        },
-        {
-          "id": 8166,
-          "assetType": "smart_contract",
-          "severity": "critical",
-          "rewardModel": "range",
-          "maxReward": 250000,
-          "minReward": 100000,
-          "rewardCalculationPercentage": 10
         }
       ],
       "audits": null,
@@ -197,6 +197,12 @@
           "type": "smart_contract",
           "severity": "critical",
           "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+        },
+        {
+          "id": 5298,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Theft of Yield"
         }
       ],
       "programOverview": "__Jito-Solana__\n\nJito-Solana is standing on the shoulders of giants — Solana Labs. \n\nWe’ve modified the Solana Labs validator client to allow validators to efficiently collect and distribute MEV to their stakers. \n\nThe validator client supports lists of transactions (bundles) which gives searchers and high frequency traders the flexibility in expressing transaction ordering. It tightly integrates with the relayer and third party  block engines to improve the network performance for all.\n\nSetting it up is as simple as downloading our validator client and passing the closest Block Engine URL on the command line.\n\n__Relayer__\n\nThe relayer provides a layer of protection between your validator’s transaction processing unit and spam from the network. The relayer works seamlessly with QUIC and allows one to separate receiving and verification of packets from the transaction processing inside your validator. \n\nRun your own or use our hosted version.\n\n__Tip Payment & Distribution__\n\nThe tip payment and distribution smart contracts are responsible for enabling and distributing validator tips.\nFor more information about Jito Foundation, please visit [https://www.jito.network/](https://www.jito.network/).\n\nJito provides rewards in JTO on Solana, denominated in USD. For more details about the payment process, please view the __Rewards by Threat Level__ section further below.\n\n__KYC Requirement__\n\nJito Foundation will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nJito Foundation adheres to  Category 3: Approval Required . This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nJito Foundation adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Known Issue Guidelines__\n\nTo ensure fairness and transparency in the bug reporting process, Jito is prohibited from claiming that a bug report is a known or duplicate issue without providing clear and verifiable evidence. This measure is crucial to maintaining the integrity of the bug bounty program. Jito must present specific proof that an issue has been previously reported and acknowledged even if not disclosed publicly or privately as a known issue. Without such evidence, the bug report will be considered valid and eligible for the appropriate reward as per the bug bounty program terms. For detailed information as what qualifies as acceptable proof of known issues, refer to the article on Immunefi Support: [Report Closed for Known Issues](https://immunefisupport.zendesk.com/hc/en-us/articles/10644746170897-Report-Closed-for-Known-Issues).\n\n__Previous Audits__\n\nJito Foundation’s completed audit reports can be found at [https://jito-foundation.gitbook.io/mev/resources/audits](https://jito-foundation.gitbook.io/mev/resources/audits). Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Jito has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209).",
@@ -299,7 +305,7 @@
         "no_employee",
         "no_auditor"
       ],
-      "eligibilityCriteriaAdditionalInformation": null,
+      "eligibilityCriteriaAdditionalInformation": "Employees and/or individuals closely associated with the members of other Solana client teams are also not eligible to participate in this bug bounty program",
       "programCodebases": [
         {
           "id": 6,
@@ -322,6 +328,7 @@
       "premiumTriaging": false
     },
     "project": {
+      "features": [],
       "premiumTriaging": false,
       "isSafeHarborActive": false,
       "performanceMetrics": {}
