@@ -9,11 +9,11 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3MNDLo0J4LVTW2PgGVCsrb/1b8813ff88a37704386e3c81237dfbbc/GMX_logo.jpeg",
       "launchDate": "2021-10-20T12:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-11-18T16:16:23.501Z",
+      "updatedDate": "2025-01-31T12:00:33.588Z",
       "kyc": false,
       "rewards": [
         {
-          "id": 8371,
+          "id": 11860,
           "assetType": "smart_contract",
           "severity": "critical",
           "rewardModel": "up_to",
@@ -21,21 +21,21 @@
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 6912,
+          "id": 11861,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "fixed",
           "fixedReward": 25000
         },
         {
-          "id": 6913,
+          "id": 11862,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "fixed",
           "fixedReward": 10000
         },
         {
-          "id": 6914,
+          "id": 11863,
           "assetType": "websites_and_applications",
           "severity": "critical",
           "rewardModel": "fixed",
@@ -43,14 +43,14 @@
           "fixedReward": 50000
         },
         {
-          "id": 6915,
+          "id": 11864,
           "assetType": "websites_and_applications",
           "severity": "high",
           "rewardModel": "fixed",
           "fixedReward": 25000
         },
         {
-          "id": 6916,
+          "id": 11865,
           "assetType": "websites_and_applications",
           "severity": "medium",
           "rewardModel": "fixed",
@@ -2596,7 +2596,7 @@
       "defaultOutOfScopeWebAndApplications": "- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n  - This does not exclude reflected HTML injection with or without JavaScript\n  - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering",
       "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
       "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": "  - Best practice critiques\n  - If the GLP pool has a high utilization not all GLP tokens will be immediately redeemable, the borrowing fee should increase in this case and is \n    considered regular operation\n\n  - Attacks requiring privileged access from within the organization\n  - Feature requests\n  - Best practices\n  - Vulnerabilities primarily caused by browser/plugin defects\n  - Any vulnerability exploit requiring CSP bypass resulting from a browser bug\n  - Vulnerabilities that require compromise of the user’s machine / browser \n  - Community-developed applications such as those on the ecosystem page\n  - Clickjacking Vulnerabilities\n\n",
+      "customOutOfScopeInformation": "**Smart Contracts and Blockchain**\n  - Best practice critiques\n  - If the GLP pool has a high utilization not all GLP tokens will be immediately redeemable, the borrowing fee should increase in this case and is \n    considered regular operation\n  - Denial of service attacks are out of scope if the attack can be bypassed, for example, an attacker can front-run a user proposal with identical \n    parameters to ProtocolGovernor, this can be bypassed by ending the proposal with #proposer=0x…, these kinds of attacks are out of scope\n\n\n**Websites and Apps**\n  - Attacks requiring privileged access from within the organization\n  - Feature requests\n  - Best practices\n  - Vulnerabilities primarily caused by browser/plugin defects\n  - Any vulnerability exploit requiring CSP bypass resulting from a browser bug\n  - Vulnerabilities that require compromise of the user’s machine / browser \n  - Community-developed applications such as those on the ecosystem page\n  - Clickjacking Vulnerabilities\n  - Denial of service attacks on services used by the interface will be given a low classification unless the attack prevents trading or withdrawal of \n    liquidity using the interface\n",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Avalanche, Arbitrium",
       "rewardsToken": "ETH or USDC",
