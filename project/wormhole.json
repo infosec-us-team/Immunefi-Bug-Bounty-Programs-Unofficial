@@ -13,7 +13,7 @@
       "kyc": true,
       "rewards": [
         {
-          "id": 12533,
+          "id": 12837,
           "assetType": "blockchain_dlt",
           "severity": "critical",
           "rewardModel": "range",
@@ -22,7 +22,7 @@
           "rewardCalculationPercentage": 0
         },
         {
-          "id": 12534,
+          "id": 12838,
           "assetType": "blockchain_dlt",
           "severity": "high",
           "rewardModel": "range",
@@ -30,7 +30,7 @@
           "minReward": 10000
         },
         {
-          "id": 12535,
+          "id": 12839,
           "assetType": "blockchain_dlt",
           "severity": "medium",
           "rewardModel": "range",
@@ -38,14 +38,14 @@
           "minReward": 2000
         },
         {
-          "id": 12536,
+          "id": 12840,
           "assetType": "blockchain_dlt",
           "severity": "low",
           "rewardModel": "up_to",
           "maxReward": 2000
         },
         {
-          "id": 12537,
+          "id": 12841,
           "assetType": "smart_contract",
           "severity": "critical",
           "rewardModel": "range",
@@ -54,7 +54,7 @@
           "rewardCalculationPercentage": 0
         },
         {
-          "id": 12538,
+          "id": 12842,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "range",
@@ -62,7 +62,7 @@
           "minReward": 10000
         },
         {
-          "id": 12539,
+          "id": 12843,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "range",
@@ -70,7 +70,7 @@
           "minReward": 2000
         },
         {
-          "id": 12540,
+          "id": 12844,
           "assetType": "smart_contract",
           "severity": "low",
           "rewardModel": "up_to",
@@ -199,10 +199,10 @@
       ],
       "impacts": [
         {
-          "id": 1834,
+          "id": 5345,
           "type": "blockchain_dlt",
           "severity": "low",
-          "title": "Bugs that are unlikely to occur but would have a large impact if so, e.g. race conditions"
+          "title": "Bugs that are unlikely to occur but would have a significant impact if so, e.g. race conditions"
         },
         {
           "id": 1835,
@@ -211,28 +211,28 @@
           "title": "Lack of defense-in-depth"
         },
         {
-          "id": 1836,
+          "id": 5346,
           "type": "blockchain_dlt",
           "severity": "low",
-          "title": "Bugs that are likely to occur in future stages of development but do not manifest themselves yet"
+          "title": "Bugs that are not currently exploitable but may become exploitable in future stages of development. This could refer to a configuration setting change or a likely code change causing a bug. The WH team determines the feasibility and likelihood of this."
         },
         {
-          "id": 1837,
+          "id": 5347,
           "type": "blockchain_dlt",
           "severity": "low",
-          "title": "Denial of Service attacks against the Guardian network (excluding volumetric attacks) resulting in an extended degradation of performance"
+          "title": "Denial of Service attacks against the Guardian network (excluding volumetric attacks) that would result in an extended (24 hours) degradation of performance"
         },
         {
-          "id": 1838,
+          "id": 5353,
           "type": "smart_contract",
           "severity": "low",
-          "title": "Bugs that are unlikely to occur but would have a large impact if so, e.g. race conditions"
+          "title": "Bugs that are unlikely to occur but would have a significant impact if so, e.g. race conditions"
         },
         {
-          "id": 1839,
+          "id": 5354,
           "type": "smart_contract",
           "severity": "low",
-          "title": "Lack of defense-in-depth (must send PR with improvements and get it merged)"
+          "title": "Lack of defense-in-depth (submitter must send PR with improvements and get it merged)"
         },
         {
           "id": 1840,
@@ -241,16 +241,16 @@
           "title": "Bugs that are likely to occur in future stages of development but do not manifest themselves yet"
         },
         {
-          "id": 1841,
+          "id": 5355,
           "type": "smart_contract",
           "severity": "low",
-          "title": "Denial of Service attacks against the Guardian network (excluding volumetric attacks) resulting in a temporary degradation of performance"
+          "title": "Denial-of-service attacks against the Guardian network (excluding volumetric attacks) temporarily degrade performance."
         },
         {
-          "id": 1842,
+          "id": 5336,
           "type": "blockchain_dlt",
           "severity": "high",
-          "title": "Bugs that allow forging of wormhole messages (i.e. VAAs) or circumventing VAA verification logic in the smart contracts but are outside of the “critical” category"
+          "title": "Bugs that allow forging of wormhole messages (i.e. VAAs) or circumventing VAA verification logic in the smart contracts but are outside of the “critical” category. For example, it is possible to spoof a VAA without being able to control the sender's address."
         },
         {
           "id": 1843,
@@ -259,28 +259,28 @@
           "title": "Bugs that are very capital-intensive to carry out but could be critical"
         },
         {
-          "id": 1844,
+          "id": 5337,
           "type": "blockchain_dlt",
           "severity": "high",
-          "title": "Attacks that would be critical if a minority of Guardians was malicious."
+          "title": "Attacks that would be critical if a single Guardian were malicious."
         },
         {
-          "id": 1845,
+          "id": 5338,
           "type": "blockchain_dlt",
           "severity": "high",
-          "title": "Unrestricted bypass of the Governor module: (https://github.com/wormhole-foundation/wormhole/tree/dev.v2/node/pkg/governor)"
+          "title": "Unrestricted bypass of the Governor module:(https://github.com/wormhole-foundation/wormhole/tree/main/node/pkg/governor)"
         },
         {
-          "id": 1846,
+          "id": 5339,
           "type": "blockchain_dlt",
           "severity": "high",
-          "title": "Unrestricted bypass of the Integrity Checkers (https://github.com/wormhole-foundation/wormhole/blob/main/whitepapers/0011_accountant.md)"
+          "title": "Unrestricted bypass of the Integrity Checkers (https://github.com/wormhole-foundation/wormhole/blob/main/whitepapers/0010_integrity_checkers.md) or Accountant (https://github.com/wormhole-foundation/wormhole/blob/main/whitepapers/0011_accountant.md)"
         },
         {
-          "id": 1847,
+          "id": 5349,
           "type": "smart_contract",
           "severity": "high",
-          "title": "Bugs that allow forging of wormhole messages (i.e. VAAs) or circumventing VAA verification logic in the smart contracts but are outside of the “critical” category"
+          "title": "Bugs that allow the forging of wormhole messages (e.g., VAAs) or circumventing VAA verification logic in smart contracts are outside of the “critical” category."
         },
         {
           "id": 1848,
@@ -289,16 +289,16 @@
           "title": "Bugs that are very capital-intensive to carry out but could be critical"
         },
         {
-          "id": 1849,
+          "id": 5350,
           "type": "smart_contract",
           "severity": "high",
-          "title": "Attacks that would be critical if a minority of Guardians was malicious"
+          "title": "Attacks that would be critical if a minority of Guardians were malicious."
         },
         {
-          "id": 1850,
+          "id": 5351,
           "type": "smart_contract",
           "severity": "high",
-          "title": "Unrestricted bypass of the Governor module: (https://github.com/wormhole-foundation/wormhole/tree/dev.v2/node/pkg/governor)"
+          "title": "Unrestricted bypass of the Governor module (https://github.com/wormhole-foundation/wormhole/tree/main/node/pkg/governor)"
         },
         {
           "id": 1851,
@@ -307,16 +307,22 @@
           "title": "Unrestricted bypass of the Integrity Checkers (https://github.com/wormhole-foundation/wormhole/blob/main/whitepapers/0010_integrity_checkers.md) or Accountant (https://github.com/wormhole-foundation/wormhole/blob/main/whitepapers/0011_accountant.md)"
         },
         {
-          "id": 1852,
+          "id": 5340,
           "type": "blockchain_dlt",
           "severity": "medium",
-          "title": "Denial of Service attacks against the Guardian network (excluding volumetric attacks) resulting in an extended but not permanent total network shutdown"
+          "title": "Denial-of-service attacks against the entirety of the Guardian network (excluding volumetric attacks) resulted in an extended but not permanent total network shutdown."
         },
         {
-          "id": 1853,
+          "id": 5341,
           "type": "blockchain_dlt",
           "severity": "medium",
-          "title": "Exploit chains requiring user interaction"
+          "title": "Impacts of critical or high severity but require a feasible amount of Guardian or user interaction to exploit."
+        },
+        {
+          "id": 5342,
+          "type": "blockchain_dlt",
+          "severity": "medium",
+          "title": "Attacks that would be critical if a super minority (6 out of 19) Guardians were malicious, excluding denial of service vulnerabilities."
         },
         {
           "id": 1854,
@@ -331,28 +337,28 @@
           "title": "Cryptographic implementation flaws and flaws in random number generation with limited impact"
         },
         {
-          "id": 1856,
+          "id": 5343,
           "type": "blockchain_dlt",
           "severity": "medium",
-          "title": "Bugs that allow forging signed messages from a minority of Guardians"
+          "title": "Bugs that allow forging signed messages from a super-minority (6) of Guardians"
         },
         {
-          "id": 1857,
+          "id": 5344,
+          "type": "blockchain_dlt",
+          "severity": "medium",
+          "title": "Compromising a single guardian node"
+        },
+        {
+          "id": 5352,
           "type": "smart_contract",
           "severity": "medium",
-          "title": "Denial of Service attacks against the Guardian network (excluding volumetric attacks) resulting in an extended but not permanent total network shutdown"
+          "title": "Denial-of-service attacks against the Guardian network (excluding volumetric attacks) resulted in an extended but not permanent total network shutdown."
         },
         {
           "id": 1858,
           "type": "smart_contract",
           "severity": "medium",
           "title": "Exploit chains requiring user interaction"
-        },
-        {
-          "id": 1859,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Compromising a single guardian node"
         },
         {
           "id": 1860,
@@ -391,28 +397,22 @@
           "title": "Determinism bugs that could lead to inconsistent bridge states"
         },
         {
-          "id": 1866,
+          "id": 5333,
           "type": "blockchain_dlt",
           "severity": "critical",
-          "title": "Governance manipulation"
+          "title": "Unauthorized changes to protocol parameters through governance resulting in direct loss of funds"
         },
         {
-          "id": 1867,
+          "id": 5334,
           "type": "blockchain_dlt",
           "severity": "critical",
-          "title": "Exposure of production private keys"
+          "title": "Theft of funds from exposure of production private keys."
         },
         {
-          "id": 1868,
+          "id": 5335,
           "type": "blockchain_dlt",
           "severity": "critical",
-          "title": "Vulnerabilities in the node software resulting in invalid behavior"
-        },
-        {
-          "id": 1869,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Remote code execution"
+          "title": "Gaining control of multiple Guardian nodes by exploiting a vulnerability that leads to Remote Code Execution."
         },
         {
           "id": 1870,
@@ -451,22 +451,10 @@
           "title": "Governance manipulation"
         },
         {
-          "id": 1876,
+          "id": 5348,
           "type": "smart_contract",
           "severity": "critical",
-          "title": "Exposure of production private keys and/or PII"
-        },
-        {
-          "id": 1877,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Vulnerabilities in the node software resulting in invalid behavior"
-        },
-        {
-          "id": 1878,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Remote code execution"
+          "title": "Exposure of production private keys and/or other extremely sensitive information."
         },
         {
           "id": 1879,
@@ -603,7 +591,7 @@
       "defaultOutOfScopeWebAndApplications": null,
       "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
       "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Network denial of service on Guardians is not eligible for bug bounty rewards\n  - Wormhole is an open source project with open development. We welcome feedback and PRs on features that are in development. Code that has not been deployed is generally out-of-scope.\n  - Reports regarding bugs that the Wormhole project was previously aware of are not eligible for a reward\n  - In scope assets with \"pre-release\" tag are exempt from the above mentioned deployed requirement and are aimed at allowing early access for white-hat community contribution.  Once the chain is deployed in mainnet, the new scope is whatever is deployed on chain, which is often what is present in dev.v2 branch.  Rewards for “pre-release” candidates will be eligible within the same reward structure as mainnet contracts.\n\nThe following person(s) are ineligible to receive bug bounty payout rewards: Staff, Auditors, Contractors, persons in possession of privileged information, and all associated parties.\n\n__Prohibited Activities__\n\n  - Violating the privacy of any organization or individual\n  - Any activity that violates any law or disrupts or compromises any data or property that is not your own.",
+      "customOutOfScopeInformation": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Vulnerabilities that have been exploited, leading to damage.     \n  - Network denial of service on Guardians is not eligible for bug bounty rewards.\n  - Wormhole is an open source project with open development. We welcome feedback and PRs on features that are in development. Code that has not been deployed in production is generally out-of-scope.\n  - Reports regarding bugs that the Wormhole project was previously aware of are not eligible for a reward.\n  - In-scope assets with a \"pre-release\" tag are exempt from the above-mentioned deployed requirement and are aimed at allowing early access for white-hat community contribution. Once the chain is deployed in the mainnet, the new scope is whatever is deployed on the chain, which is often what is present in the main branch. Rewards for “pre-release” candidates will be eligible within the same reward structure as mainnet contracts.\n\nThe following person(s) are ineligible to receive bug bounty payout rewards: Staff, Auditors, Contractors, persons possessing privileged information, and all associated parties.\n\n__Prohibited Activities__\n\n  - Any testing with mainnet or public testnets; all testing should be done on private nets.\n  - Public disclosure of a vulnerability before an embargo has been lifted. Wormhole follows the category 3 requirements for Immunefi Disclosure, requiring all public disclosure of valid bugs to be approved for publication.\n  - Any testing with third-party smart contracts or infrastructure and websites.\n  - Attempting phishing or other social engineering attacks against our employees and/or customers.\n  - Any denial of service attacks.\n  - Violating the privacy of any organization or individual.\n  - Automated testing of services that generate significant amounts of traffic.\n  - Any activity that violates any law or disrupts or compromises any data or property that is not yours.\n",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": null,
       "rewardsToken": null,
