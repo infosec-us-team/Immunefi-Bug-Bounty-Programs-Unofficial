@@ -9,30 +9,33 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2yQpKoZm8AOR2wLqYzZa9j/fd4701886536ad5828e0ff05edd4771d/acala_logo.png",
       "launchDate": "2021-12-14T02:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-11-18T13:43:07.414Z",
+      "updatedDate": "2025-02-10T09:46:26.507Z",
       "kyc": false,
       "rewards": [
         {
-          "id": 6524,
+          "id": 13116,
           "assetType": "blockchain_dlt",
           "severity": "critical",
-          "rewardModel": "up_to",
-          "maxReward": 500000,
+          "rewardModel": "range",
+          "maxReward": 200000,
+          "minReward": 40000,
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 6525,
+          "id": 13117,
           "assetType": "blockchain_dlt",
           "severity": "high",
-          "rewardModel": "up_to",
-          "maxReward": 50000
+          "rewardModel": "range",
+          "maxReward": 40000,
+          "minReward": 5000
         },
         {
-          "id": 6526,
+          "id": 13118,
           "assetType": "blockchain_dlt",
           "severity": "medium",
-          "rewardModel": "up_to",
-          "maxReward": 10000
+          "rewardModel": "range",
+          "maxReward": 5000,
+          "minReward": 1000
         }
       ],
       "audits": null,
@@ -58,51 +61,75 @@
       ],
       "impacts": [
         {
-          "id": 1338,
+          "id": 1,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Network not being able to confirm new transactions (total network shutdown)"
+        },
+        {
+          "id": 2,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
+        },
+        {
+          "id": 3,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Direct loss of funds"
+        },
+        {
+          "id": 4,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Permanent freezing of funds (fix requires hardfork)"
+        },
+        {
+          "id": 5,
           "type": "blockchain_dlt",
           "severity": "high",
-          "title": "Blocking or modifying processes for governance or users from performing their tasks, generating not handled on-chain errors"
+          "title": "Unintended chain split (network partition)"
         },
         {
-          "id": 1339,
+          "id": 7,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Causing network processing nodes to process transactions from the mempool beyond set parameters"
+        },
+        {
+          "id": 8,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "RPC API crash affecting programs with greater than or equal to 25% of the market capitalization on top of the respective layer"
+        },
+        {
+          "id": 9,
           "type": "blockchain_dlt",
           "severity": "medium",
-          "title": "Putting on-chain data into an unexpected state without interrupting the system or users from performing their tasks, e.g. generating redundant events, logs, etc."
+          "title": "Increasing network processing node resource consumption by at least 30% without brute force actions, compared to the preceding 24 hours"
         },
         {
-          "id": 1340,
+          "id": 10,
           "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Transaction/consensus manipulation"
+          "severity": "medium",
+          "title": "Shutdown of greater than or equal to 30% of network processing nodes without brute force actions, but does not shut down the network"
         },
         {
-          "id": 1341,
+          "id": 11,
           "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Double-spending"
+          "severity": "medium",
+          "title": "A bug in the respective layer 0/1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk"
         },
         {
-          "id": 1342,
+          "id": 5357,
           "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Unauthorized token minting"
-        },
-        {
-          "id": 1343,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Getting access to an identity that can lead to unauthorized access to system’s or user’s assets"
-        },
-        {
-          "id": 1344,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Governance compromise"
+          "severity": "high",
+          "title": "Temporary freezing of network transactions by reducing number of blocks produced in an hour to be less than 60. I.e. average block time > 60s."
         }
       ],
-      "programOverview": "Acala is the decentralized finance network and liquidity hub of Polkadot. It’s a layer-1 smart contract platform that’s scalable, Ethereum-compatible, and optimized for DeFi with built-in liquidity and ready-made financial applications. With its trustless exchange, decentralized stablecoin (aUSD), DOT Liquid Staking (LDOT), and EVM+, Acala lets developers access the best of Ethereum and the full power of Substrate.\n\nFor more information about Acala, please visit [https://acala.network/](https://acala.network/).   \n\nThis bug bounty program is focused on Acala and is focused on preventing:\n\n- Transaction/consensus manipulation, \n  - Double-spending, \n  - Unauthorized token minting, \n  - Governance compromise, \n  - Getting access to an identity that can lead to unauthorized access to system’s or user’s assets. \n  - Blocking or modifying processes for governance or users from performing their tasks, generating not handled on-chain errors. \n  - Putting on-chain data into an unexpected state without interrupting the system or users from performing their tasks, e.g. generating redundant events, logs, etc.",
+      "programOverview": "Acala is the decentralized finance network and liquidity hub of Polkadot. It’s a layer-1 smart contract platform that’s scalable, Ethereum-compatible, and optimized for DeFi with built-in liquidity and ready-made financial applications. With its trustless exchange, decentralized stablecoin (aUSD), DOT Liquid Staking (LDOT), and EVM+, Acala lets developers access the best of Ethereum and the full power of Substrate.\n\nFor more information about Acala, please visit [https://acala.network/](https://acala.network/).",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\nAll those that lead to the impacts stated in the Impacts in Scope section",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the following severity scale:\n\n__Critical__: transaction/consensus manipulation, double-spending, unauthorized token minting, governance compromise, getting access to an identity that can lead to unauthorized access to system’s or user’s assets. \n\n__High__: blocking or modifying processes for governance or users from performing their tasks, generating not handled on-chain errors. These actions can lead to blocking users or governance from accessing their assets or performing system functions.\n\n__Medium__: Putting on-chain data into an unexpected state without interrupting the system or users from performing their tasks, e.g. generating redundant events, logs, etc.\n\nCritical vulnerabilities involving a direct loss of user funds, double spending, or the minting of tokens are capped at 10% of the economic damage, taking primarily into consideration the funds at risk or the amount of tokens that can be minted but also branding and PR considerations, at the discretion of the team. However, there is a minimum reward of __USD 50 000__. Consensus manipulation or governance compromise results in the full __USD 500 000__. \n\nPoC is required for all submissions. Suggestion for a fix is not required, but its addition may be grounds for a bonus provided by the team at its discretion.\n\nA reward can only be provided if:\n\n  - The Bug wasn't reported before.\n  - The Bounty Hunter does not disclose the Bug to other parties or publicity until it's fixed by the Acala Team.\n  - The Hunter didn't exploit the vulnerability or allow anyone else to profit from it.\n  - The Hunter reports a Bug without any additional conditions or threats.\n  - The investigation was NOT conducted with Ineligible methods or Prohibited Activities, defined in this document.\n  - The Hunter should reply to our additional questions regarding the reproduction of the reported bug (if they follow) within a reasonable time.\n  - When duplicate bug reports occur, we reward only the first one if it's provided with enough information for reproduction.\n  - When multiple vulnerabilities are caused by one underlying issue, we will reward only the first reported.\n  - The vulnerability is found in runtime pallet of Karura (no tests, or modules that aren’t in runtime, e.g. live, can be considered as vulnerability)\n\nPayouts are handled by the __Acala__ team directly in crypto tokens of their choices, valued at the US dollar market rates, e.g. __DOT, ACA, aUSD__.",
+      "rewardsBody": "__Reward Calculation for Critical Level Reports__\n\nFor critical Blockchain/DLT bugs, the reward amount is 10% of the funds directly affected, capped at the maximum critical reward USD $200,000. However, a minimum reward of USD USD $40,000 is to be rewarded in order to incentivize security researchers against withholding on a bug report.\n\nFor critical Blockchain/DLT bugs with a non-funds-at risk impact, the reward will be paid out as follows: \n- Network not being able to confirm new transactions (total network shutdown) - [50,000 USD] \n- Unintended permanent chain split requiring hard fork (network partition requiring hard fork) - [50,000 USD] \n- For critical Blockchain/DLT bugs, the reward is dependent on the ratio between the funds at risk, which includes all affected projects on top of the respective blockchain/DLT, and the market cap according to the average between CoinMarketCap.com and CoinGecko.com, calculated at the time the bug report is submitted. \n\n__Reward Calculation for High Level Reports__\n\nFor high Blockchain/DLT non-funds-at risk impacts, the reward will be paid out as follows: \n- Unintended chain split (network partition) - [20,000 USD]\n- Temporary freezing of network transactions by reducing number of blocks produced in an hour to be less than 60. I.e. average block time > 60s. - [10,000 USD] \n- Causing network processing nodes to process transactions from the mempool beyond set parameters - [10,000 USD]\n- RPC API crash affecting projects with greater than or equal to 25% of the market capitalization on top of the respective layer - [10,000 USD]\n\n\n__Reward Payment Terms__\n\nPayouts are handled by the Acala team directly in crypto tokens of their choices, valued at the US dollar market rates, e.g. DOT, ACA, USDT, USDC. \n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
       "outOfScopeAndRules": null,
       "assetsBodyV2": "Only code involving runtime pallets of Acala are considered as in-scope of the bug bounty program. Modules that are not in runtime pallets like tests, those under development, and those that are not live, are considered as out-of-scope of the bug bounty program. \n\nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
       "impactsBody": null,
@@ -111,7 +138,7 @@
         "general": [
           "Immunefi Standard",
           "KYC Not Required",
-          "PoC Not Required"
+          "PoC Required"
         ],
         "productType": [
           "Stablecoin",
@@ -157,11 +184,11 @@
         "web_rewards": []
       },
       "websiteUrl": null,
-      "description": "Acala is the decentralized finance network and liquidity hub of Polkadot. It’s a layer-1 smart contract platform that’s scalable, Ethereum-compatible, and optimized for DeFi with built-in liquidity and ready-made financial applications.",
+      "description": "Acala is the decentralized finance network and liquidity hub of Polkadot. It’s a layer-1 smart contract platform that’s scalable, Ethereum-compatible, and optimized for DeFi with built-in liquidity and ready-made financial applications. With its trustless exchange, DOT Liquid Staking (LDOT), and EVM+, Acala lets developers access the best of Ethereum and the full power of Substrate.",
       "githubUrl": null,
       "feasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
       "prohibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
-      "responsiblePublicationCategory": null,
+      "responsiblePublicationCategory": "category_3",
       "knownIssues": [],
       "knownIssueAssurance": false,
       "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
@@ -170,7 +197,7 @@
       "defaultOutOfScopeWebAndApplications": null,
       "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
       "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": "  - DDOS attack\n  - Denial of service attacks\n  - Spamming\n  - Any physical attacks against Karura property, or employees\n  - Phishing or other social engineering attacks against our Karura’s employees",
+      "customOutOfScopeInformation": null,
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "DOT, ACA, aUSD",
