@@ -9,11 +9,11 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2XQ4IvyqIZmE4ZUHl7vs01/8eccb04dee97cd402d3083997b8785dc/Logomark_Black_BG__1_.png",
       "launchDate": "2023-07-11T14:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-12-04T15:55:35.898Z",
+      "updatedDate": "2025-03-05T05:28:08.339Z",
       "kyc": true,
       "rewards": [
         {
-          "id": 9320,
+          "id": 14529,
           "assetType": "smart_contract",
           "severity": "critical",
           "rewardModel": "fixed",
@@ -21,14 +21,14 @@
           "fixedReward": 100000
         },
         {
-          "id": 9321,
+          "id": 14530,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "fixed",
           "fixedReward": 5000
         },
         {
-          "id": 9322,
+          "id": 14531,
           "assetType": "smart_contract",
           "severity": "low",
           "rewardModel": "fixed",
@@ -40,17 +40,8 @@
         {
           "id": "3VbMArIG72Wl69rNbum0Qi",
           "type": "smart_contract",
-          "url": "https://github.com/Consensys/linea-contracts/blob/b17e7c79b5647e47c175c6367dea30c3f1c66738/contracts/ZkEvmV2.sol",
+          "url": "https://github.com/Consensys/linea-monorepo/blob/a83412e247b7d352b905c906271138e97c1ee5a4/contracts/contracts/ZkEvmV2.sol",
           "description": "Rollup ZkEVMv2.sol",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2023-07-11T14:00:00.000Z"
-        },
-        {
-          "id": "57E2ANnb8y74FXM9Gk2CJJ",
-          "type": "smart_contract",
-          "url": "https://github.com/Consensys/linea-contracts/tree/b17e7c79b5647e47c175c6367dea30c3f1c66738/contracts/messageService",
-          "description": "MessageService",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
           "addedAt": "2023-07-11T14:00:00.000Z"
@@ -58,17 +49,8 @@
         {
           "id": "7K70pZ6znMGmIF2IRkt3cF",
           "type": "smart_contract",
-          "url": "https://github.com/Consensys/linea-contracts/tree/b17e7c79b5647e47c175c6367dea30c3f1c66738/contracts/tokenBridge",
-          "description": "Canonical Token Bridge (L1 & L2)",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2023-07-11T14:00:00.000Z"
-        },
-        {
-          "id": "6xtpBQlZyO6rvZ5qM4wesC",
-          "type": "smart_contract",
-          "url": "https://github.com/Consensys/linea-contracts/blob/b17e7c79b5647e47c175c6367dea30c3f1c66738/contracts/verifiers/PlonkVerifierForMultiTypeDataAggregation.sol",
-          "description": "PlonkVerifierForMultiTypeDataAggregation",
+          "url": "https://github.com/Consensys/linea-monorepo/blob/a83412e247b7d352b905c906271138e97c1ee5a4/contracts/contracts/LineaRollup.sol",
+          "description": "Rollup LineaRollup.sol",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
           "addedAt": "2023-07-11T14:00:00.000Z"
@@ -117,9 +99,9 @@
       ],
       "programOverview": "Linea is a type 2 zero knowledge Ethereum Virtual Machine (zkEVM). A zkEVM replicates the Ethereum environment as a rollup and allows developers to build on it as they would on Ethereum mainnet. Linea allows you to deploy any smart contract, use any tool, and develop as if you're building on Ethereum. For users, this enables the experience and security guarantees of Ethereum, but with lower transaction costs.\n\nLinea is a Consensys product. From the genesis block of Ethereum, Consensys was formed to be the strongest force for decentralization on the planet. We believe that through networks like Ethereum, humankind can achieve more. Our teams will steer the Linea project as we have other public goods, with an eye towards full decentralization and a commitment to open development.\n\nFor more information about Linea, please visit [https://linea.build/](https://linea.build/)\n\nConsensys provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__\n\nThe provision of KYC is required to receive a reward for this bug bounty program where the following information will be required to be provided:\n- Government ID\n\nKYC information is only required on confirmation of the validity of a bug report.   \n\n\n__Primacy of Impact vs Primacy of Rules__\n\nConsensys adheres to the Primacy of Impact for the following severity levels:\n- Smart Contract - Critical\n- Smart Contract - High\n- Smart Contract - Medium\n- Smart Contract - Low\n\nIf a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTestnet and mock files are not covered under the Primacy of Impact. \n\nAll other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n\n__Immunefi Standard Badge__\n\nConsensys has satisfied the requirements for the [Immunefi Standard Badge,](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-) which is given to projects that adhere to our best practices.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below.\n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks or attacks stemming from the same root cause, for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Previous Audits__\n\nConsensys has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n\n__First Audit Round__\n\n__Diligence:__\n\n- Plonk Verifier: [https://consensys.io/diligence/audits/2023/06/linea-plonk-verifier/](https://consensys.io/diligence/audits/2023/06/linea-plonk-verifier/)\n- Message Service & Rollup: [https://consensys.io/diligence/audits/2023/06/linea-message-service/](https://consensys.io/diligence/audits/2023/06/linea-message-service/)\n- Canonical Token Bridge:\n[https://consensys.io/diligence/audits/2023/06/linea-canonical-token-bridge/](https://consensys.io/diligence/audits/2023/06/linea-canonical-token-bridge/)\n\n__Open Zeppelin:__ \n\n  - Linea Bridge Audit: https://blog.openzeppelin.com/linea-bridge-audit-1\n  - Linea Verifier Audit: https://blog.openzeppelin.com/linea-verifier-audit-1 \n\n__Second Audit Round__\n\n__Diligence:__\n\n- Proof aggregation, data compression and message service updates audit: [https://consensys.io/diligence/audits/2024/01/linea-contracts-update/](https://consensys.io/diligence/audits/2024/01/linea-contracts-update/)\n\n__Open Zeppelin:__ \n\n- Proof aggregation, data compression and message service updates audit: [https://blog.openzeppelin.com/linea-v2-audit](https://blog.openzeppelin.com/linea-v2-audit)\n\n__Third Audit Round__\n\n__Open Zeppelin__ \n- Blob submission audit: [https://blog.openzeppelin.com/linea-blob-submission-audit](https://blog.openzeppelin.com/linea-blob-submission-audit) \n\n__Fourth Audit Round (Latest)__\n\n__Open Zeppelin__\n- Gas optimization and token bridge update audit: [https://blog.openzeppelin.com/linea-gas-optimizations-audit](https://blog.openzeppelin.com/linea-gas-optimizations-audit)  \n\n__Cyfrin__ \n- Full codebase audit including recent gas optimizations and TokenBridge updates: [https://github.com/Cyfrin/cyfrin-audit-reports/blob/main/reports/2024-05-24-cyfrin-linea-v2.0.pdf](https://github.com/Cyfrin/cyfrin-audit-reports/blob/main/reports/2024-05-24-cyfrin-linea-v2.0.pdf) \n\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract - Critical\n- Smart Contract - High\n- Smart Contract - Medium\n- Smart Contract - Low\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the ConsenSys team directly and are denominated in USDC.",
+      "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below.\n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks or attacks stemming from the same root cause, for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Previous Audits__\n\nConsensys has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n\n__1st Audit Round__\n\n__Diligence:__\n\n- Plonk Verifier: [https://consensys.io/diligence/audits/2023/06/linea-plonk-verifier/](https://consensys.io/diligence/audits/2023/06/linea-plonk-verifier/)\n- Message Service & Rollup: [https://consensys.io/diligence/audits/2023/06/linea-message-service/](https://consensys.io/diligence/audits/2023/06/linea-message-service/)\n- Canonical Token Bridge:\n[https://consensys.io/diligence/audits/2023/06/linea-canonical-token-bridge/](https://consensys.io/diligence/audits/2023/06/linea-canonical-token-bridge/)\n\n__Open Zeppelin:__ \n\n  - Linea Bridge Audit: https://blog.openzeppelin.com/linea-bridge-audit-1\n  - Linea Verifier Audit: https://blog.openzeppelin.com/linea-verifier-audit-1 \n\n__2nd Audit Round__\n\n__Diligence:__\n\n- Proof aggregation, data compression and message service updates audit: [https://consensys.io/diligence/audits/2024/01/linea-contracts-update/](https://consensys.io/diligence/audits/2024/01/linea-contracts-update/)\n\n__Open Zeppelin:__ \n\n- Proof aggregation, data compression and message service updates audit: [https://blog.openzeppelin.com/linea-v2-audit](https://blog.openzeppelin.com/linea-v2-audit)\n\n__3rd Audit Round__\n\n__Open Zeppelin__ \n- Blob submission audit: [https://blog.openzeppelin.com/linea-blob-submission-audit](https://blog.openzeppelin.com/linea-blob-submission-audit) \n\n__4th Audit Round__\n\n__Open Zeppelin__\n- Gas optimization and token bridge update audit: [https://blog.openzeppelin.com/linea-gas-optimizations-audit](https://blog.openzeppelin.com/linea-gas-optimizations-audit)  \n\n__Cyfrin__ \n- Full codebase audit including recent gas optimizations and TokenBridge updates: [https://github.com/Cyfrin/cyfrin-audit-reports/blob/main/reports/2024-05-24-cyfrin-linea-v2.0.pdf](https://github.com/Cyfrin/cyfrin-audit-reports/blob/main/reports/2024-05-24-cyfrin-linea-v2.0.pdf) \n\n__5th Audit Round (latest)__\n\n__Diligence__\n- LineaRollup, L2MessageService and TokenBridge Granular Role Updates: https://diligence.consensys.io/audits/2024/12/linea-rollup-update/\n\n__OpenZeppelin__\n- LineaRollup, L2MessageService and TokenBridge Granular Role Updates: https://blog.openzeppelin.com/linearollup-and-tokenbridge-role-upgrade\n\n__Cyfrin__\n- LineaRollup, L2MessageService and TokenBridge Granular Role Updates: https://github.com/Cyfrin/cyfrin-audit-reports/blob/642b409c207d0e31679467480c3d9b8797b98696/reports/2025-01-06-cyfrin-linea-v2.2.pdf\n\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract - Critical\n- Smart Contract - High\n- Smart Contract - Medium\n- Smart Contract - Low\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the ConsenSys team directly and are denominated in USDC.",
       "outOfScopeAndRules": null,
-      "assetsBodyV2": "Other helpful links include:\n- Infura docs - [https://docs.infura.io/networks/linea](https://docs.infura.io/networks/linea)\n- RPC [https://linea-goerli.infura.io/v3/](https://linea-goerli.infura.io/v3/)",
+      "assetsBodyV2": "All smart contract code of Linea can be found at https://github.com/Consensys/linea-monorepo/tree/a83412e247b7d352b905c906271138e97c1ee5a/ . Documentation for the assets provided in the table can be found at https://docs.linea.build/\n\nOther helpful links include:\n- Infura docs - [https://docs.infura.io/networks/linea](https://docs.infura.io/networks/linea)\n- RPC [https://linea-sepolia.infura.io/v3/](https://linea-sepolia.infura.io/v3/)",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -184,7 +166,7 @@
       "defaultOutOfScopeWebAndApplications": null,
       "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
       "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": null,
+      "customOutOfScopeInformation": "Impacts caused by incorrectly provided user data (e.g. wrong fees, values or addresses etc.)\n- Impacts caused by incorrectly provided user data (e.g. wrong fees, values or addresses etc.)\n- External 3rd party systems not maintained by Linea\n- Typographical errors\n- Gas optimizations\n\n",
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "USDC",

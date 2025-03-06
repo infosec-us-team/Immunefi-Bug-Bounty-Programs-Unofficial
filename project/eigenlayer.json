@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1fGXCRkOEb10n2rbNzZuEx/e1a710a7a3af9141424011913bbc58be/Eigenlayer_logo.jpeg",
       "launchDate": "2023-06-14T21:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-11-14T19:36:34.777Z",
+      "updatedDate": "2025-03-05T04:40:25.058Z",
       "kyc": false,
       "rewards": [
         {
@@ -86,20 +86,11 @@
         {
           "id": "2c6anFFU8K7luRLwLASaCy",
           "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x1BeE69b7dFFfA4E2d53C2a2Df135C388AD25dCD2",
+          "url": "https://etherscan.io/address/0x0ed6703C298d28aE0878d1b28e88cA87F9662fE9",
           "description": "StrategyBase.sol - Transparent Upgradeable Proxy - the current implementation is considered in-scope",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
           "addedAt": "2023-06-14T21:22:27.895Z"
-        },
-        {
-          "id": "2dvhockeQXi2FGDiLY7R2k",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x7Fe7E9CC0F274d2435AD5d56D5fa73E47F6A23D8",
-          "description": "DelayedWithdrawalRouter.sol - Transparent Upgradeable Proxy - the current implementation is considered in-scope",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2023-06-14T21:22:42.900Z"
         },
         {
           "id": "2b9xsQXGH7m2QKDNvPOxm8",
@@ -154,6 +145,15 @@
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
           "addedAt": "2024-04-10T12:27:45.678Z"
+        },
+        {
+          "id": "4CIZF537MEK5GThNg0InFO",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x7750d328b314EfFa365A0402CcfD489B80B0adda",
+          "description": "RewardsCoordinator.sol - Transparent Upgradeable Proxy - the current implementation is considered in-scope",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2025-03-05T04:38:58.048Z"
         }
       ],
       "impacts": [
@@ -252,6 +252,12 @@
           "type": "websites_and_applications",
           "severity": "critical",
           "title": "Malicious interactions with an already-connected wallet such as: Modifying transaction arguments or parameters, Substituting contract addresses, Submitting malicious transactions"
+        },
+        {
+          "id": 5392,
+          "type": "websites_and_applications",
+          "severity": "medium",
+          "title": "Taking down the application/website"
         }
       ],
       "programOverview": "EigenLayer is a protocol built on Ethereum that introduces restaking, a new primitive in cryptoeconomic security. This primitive enables the reuse of ETH on the consensus layer. Users that stake ETH natively or with a liquid staking token (LST) can opt-in to EigenLayer smart contracts to restake their ETH or LST and extend cryptoeconomic security to additional applications on the network to earn additional rewards. \n\nFor more information about EigenLayer, please visit [https://www.eigenlayer.xyz/.](https://www.eigenlayer.xyz/)  \n\nEigenLayer provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n\n__Primacy of Impact vs Primacy of Rules__\n\nEigenLayer adheres to the Primacy of Impact for the following severity levels:\n\n- Smart Contract, Critical Severity Level\n- Smart Contract, High Severity Level\n- Smart Contract, Medium Severity Level\n\nIf a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTestnet and mock files are not covered under the Primacy of Impact. Additionally, if the impact is primarily limited to code that is currently paused, EigenLayer reserves the right to downgrade or reject the report.\n\nAll other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n\n__Immunefi Standard Badge__\n\nEigenLayer has satisfied the requirements for the [Immunefi Standard Badge,](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-) which is given to projects that adhere to our best practices.",
