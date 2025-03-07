@@ -9,42 +9,42 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/14P174mW7atHe0iqI2UmE8/b47c08fa562ebe74aaff6b179e371d00/Astar_Network_logo.jpeg",
       "launchDate": "2022-05-31T16:30:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-11-18T11:15:26.861Z",
+      "updatedDate": "2025-03-06T07:09:37.077Z",
       "kyc": true,
       "rewards": [
         {
-          "id": 6090,
+          "id": 14584,
           "assetType": "blockchain_dlt",
           "severity": "critical",
           "rewardModel": "range",
           "maxReward": 250000,
-          "minReward": 50000,
+          "minReward": 7500,
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 6091,
+          "id": 14585,
           "assetType": "blockchain_dlt",
           "severity": "high",
           "rewardModel": "range",
           "maxReward": 50000,
-          "minReward": 10000
+          "minReward": 3000
         },
         {
-          "id": 6092,
+          "id": 14586,
           "assetType": "blockchain_dlt",
           "severity": "medium",
-          "rewardModel": "up_to",
-          "maxReward": 10000
+          "rewardModel": "fixed",
+          "fixedReward": 3000
         },
         {
-          "id": 6093,
+          "id": 14587,
           "assetType": "blockchain_dlt",
           "severity": "low",
-          "rewardModel": "up_to",
-          "maxReward": 5000
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         },
         {
-          "id": 6094,
+          "id": 14588,
           "assetType": "websites_and_applications",
           "severity": "critical",
           "rewardModel": "range",
@@ -53,26 +53,12 @@
           "otherImpactMaxReward": 0
         },
         {
-          "id": 6095,
+          "id": 14589,
           "assetType": "websites_and_applications",
           "severity": "high",
           "rewardModel": "range",
           "maxReward": 7500,
           "minReward": 2500
-        },
-        {
-          "id": 6096,
-          "assetType": "websites_and_applications",
-          "severity": "medium",
-          "rewardModel": "fixed",
-          "fixedReward": 2500
-        },
-        {
-          "id": 6097,
-          "assetType": "websites_and_applications",
-          "severity": "low",
-          "rewardModel": "fixed",
-          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -82,15 +68,6 @@
           "type": "blockchain_dlt",
           "url": "https://github.com/AstarNetwork/Astar",
           "description": "Mainnet Astar and Shiden (Included subfolders: runtime/)",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2022-05-31T16:30:00.000Z"
-        },
-        {
-          "id": "BweuVNy1epvMruM8SYBLA",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/AstarNetwork/astar-frame",
-          "description": "Astar pallets (Included subfolders: frame/ and precompiles/)",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
           "addedAt": "2022-05-31T16:30:00.000Z"
@@ -107,6 +84,30 @@
       ],
       "impacts": [
         {
+          "id": 4,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Permanent freezing of funds (fix requires hardfork)"
+        },
+        {
+          "id": 35,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Execute arbitrary system commands"
+        },
+        {
+          "id": 37,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Taking down the application/website"
+        },
+        {
+          "id": 2,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
+        },
+        {
           "id": 2695,
           "type": "blockchain_dlt",
           "severity": "low",
@@ -117,24 +118,6 @@
           "type": "blockchain_dlt",
           "severity": "low",
           "title": "Underpricing transaction fees relative to computation time"
-        },
-        {
-          "id": 2697,
-          "type": "websites_and_applications",
-          "severity": "low",
-          "title": "Changing details of other users (including modifying browser local storage) w/o already-connected wallet interaction and with significant user interaction such as: Iframing leading to modifying the backend/browser state (must demonstrate impact with PoC)"
-        },
-        {
-          "id": 2698,
-          "type": "websites_and_applications",
-          "severity": "low",
-          "title": "Any impact involving a publicly released CVE without a working PoC"
-        },
-        {
-          "id": 2699,
-          "type": "websites_and_applications",
-          "severity": "low",
-          "title": "Temporarily disabling user to access target site, such as: Locking up the victim from login, cookie bombing, etc."
         },
         {
           "id": 2700,
@@ -191,12 +174,6 @@
           "title": "Improperly disclosing confidential user information such as: Email address, phone number, physical address, etc."
         },
         {
-          "id": 49,
-          "type": "websites_and_applications",
-          "severity": "high",
-          "title": "Subdomain takeover without already-connected wallet interaction"
-        },
-        {
           "id": 2709,
           "type": "blockchain_dlt",
           "severity": "medium",
@@ -227,46 +204,10 @@
           "title": "Block stuffing"
         },
         {
-          "id": 2714,
-          "type": "websites_and_applications",
-          "severity": "medium",
-          "title": "Changing non-sensitive details of other users (including modifying browser local storage) w/o already-connected wallet interaction and with up to one click of user interaction, such as: Changing the first/last name of user, enabling/disabling notifications"
-        },
-        {
-          "id": 2715,
-          "type": "websites_and_applications",
-          "severity": "medium",
-          "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as: Reflected HTML injection, loading external site data"
-        },
-        {
-          "id": 2716,
-          "type": "websites_and_applications",
-          "severity": "medium",
-          "title": "Open Redirect in H2O production’s environment"
-        },
-        {
           "id": 2717,
           "type": "blockchain_dlt",
           "severity": "critical",
           "title": "Any network to shut down or otherwise not confirm new valid transactions for multiple blocks"
-        },
-        {
-          "id": 2,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
-        },
-        {
-          "id": 3,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Direct loss of funds"
-        },
-        {
-          "id": 4,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Permanent freezing of funds (fix requires hardfork)"
         },
         {
           "id": 2718,
@@ -299,58 +240,22 @@
           "title": "Empty or freeze the contract's holdings (e.g. economic attacks, flash loans, reentrancy, MEV, logic errors, integer over-/under-flow)"
         },
         {
-          "id": 2723,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Cryptographic flaws"
-        },
-        {
-          "id": 35,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Execute arbitrary system commands"
-        },
-        {
           "id": 2724,
           "type": "websites_and_applications",
           "severity": "critical",
           "title": "Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys(this does not include non-sensitive environment variables, open source code, or usernames)"
         },
         {
-          "id": 37,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Taking down the application/website"
-        },
-        {
-          "id": 2725,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as: Changing registration information, commenting, voting, making trades, withdrawals, etc."
-        },
-        {
-          "id": 2726,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Subdomain takeover without already-connected wallet interaction"
-        },
-        {
-          "id": 42,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Direct theft of user funds"
-        },
-        {
-          "id": 2727,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Malicious interactions with an already-connected wallet such as: Modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions"
-        },
-        {
           "id": 2728,
           "type": "websites_and_applications",
           "severity": "critical",
           "title": "GitHub misconfiguration leading to unauthorized change"
+        },
+        {
+          "id": 5394,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Direct theft or loss of any user or funds, whether at-rest or in-motion"
         }
       ],
       "programOverview": "[Astar Network](https://astar.network/) – __The Future of Multichain Smart Contracts__.\n\nAstar Network supports the building of dApps with EVM and WASM smart contracts and offers developers true interoperability with cross-consensus messaging and cross-virtual machines. Astar’s unique Build2Earn model empowers developers to get paid through a dApp staking mechanism for the code they write and dApps they build.\nAstar’s vibrant ecosystem has become Polkadot’s leading Parachain globally, supported by all major exchanges and Tier 1 VCs. Astar offers the flexibility of all Ethereum and WASM toolings for developers to start building their dApps\n\nFor more information about Astar, please visit [https://astar.network/](https://astar.network/).",
