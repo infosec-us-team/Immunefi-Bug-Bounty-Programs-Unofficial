@@ -9,35 +9,58 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6RvAn0eXVoZdyCg9bNkFXK/f86c8ae6a66353298cff60617734a793/Flare.png",
       "launchDate": "2025-02-10T03:45:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-02-12T07:01:26.890Z",
+      "updatedDate": "2025-03-13T14:43:47.086Z",
       "kyc": false,
       "rewards": [
         {
-          "id": 13343,
+          "id": 15037,
+          "assetType": "blockchain_dlt",
+          "severity": "critical",
+          "rewardModel": "fixed",
+          "rewardCalculationPercentage": 10,
+          "fixedReward": 50000
+        },
+        {
+          "id": 15038,
+          "assetType": "blockchain_dlt",
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 30000,
+          "minReward": 10000
+        },
+        {
+          "id": 15039,
+          "assetType": "blockchain_dlt",
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
+        },
+        {
+          "id": 15040,
           "assetType": "smart_contract",
           "severity": "critical",
           "rewardModel": "range",
           "maxReward": 250000,
-          "minReward": 100000,
+          "minReward": 50000,
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 13344,
+          "id": 15041,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "range",
-          "maxReward": 100000,
+          "maxReward": 50000,
           "minReward": 10000
         },
         {
-          "id": 13345,
+          "id": 15042,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "fixed",
           "fixedReward": 5000
         },
         {
-          "id": 13346,
+          "id": 15043,
           "assetType": "smart_contract",
           "severity": "low",
           "rewardModel": "fixed",
@@ -142,32 +165,23 @@
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
           "addedAt": "2025-02-10T03:45:00.000Z"
+        },
+        {
+          "id": "7JrFYGGUq7VkjxHuZNUIJL",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/flare-labs-ltd/fasset-bots",
+          "description": "https://github.com/flare-labs-ltd/fasset-bots",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2025-03-13T14:29:09.112Z"
         }
       ],
       "impacts": [
         {
-          "id": 5302,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Manipulation of redemption or minting processes, causing users to receive incorrect amounts"
-        },
-        {
-          "id": 15,
-          "type": "smart_contract",
+          "id": 5410,
+          "type": "blockchain_dlt",
           "severity": "critical",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-        },
-        {
-          "id": 34,
-          "type": "smart_contract",
-          "severity": "low",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value"
-        },
-        {
-          "id": 33,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Unbounded gas consumption"
+          "title": "Ability to exfiltrate agent bot’s private keys"
         },
         {
           "id": 31,
@@ -176,34 +190,100 @@
           "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": 5303,
-          "type": "smart_contract",
+          "id": 5411,
+          "type": "blockchain_dlt",
           "severity": "high",
-          "title": "Preventing participants from minting, redeeming or transferring FAsset tokens"
+          "title": "Stealing funds from any FAsset bot"
         },
         {
-          "id": 5304,
+          "id": 5412,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Bot fails to deliver expected functionality, leading to loss of funds (e.g. by entering full liquidation or defaulting redemptions)"
+        },
+        {
+          "id": 5413,
+          "type": "blockchain_dlt",
+          "severity": "medium",
+          "title": "Bot fails to deliver expected functionality, no funds at risk"
+        },
+        {
+          "id": 5414,
+          "type": "blockchain_dlt",
+          "severity": "medium",
+          "title": "Unintended shutdown of agent bot"
+        },
+        {
+          "id": 5415,
           "type": "smart_contract",
           "severity": "critical",
-          "title": "Protocol insolvency resulting in the inability to fulfill redemption requests or honor collateral guarantees"
+          "title": "Direct theft of any user/system funds, whether at-rest or in-motion (excluding attacks by agents)"
         },
         {
-          "id": 5305,
+          "id": 5416,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Protocol insolvency resulting in the inability to fulfill system-wide redemption requests or honor collateral guarantees."
+        },
+        {
+          "id": 5417,
           "type": "smart_contract",
           "severity": "critical",
           "title": "Unauthorized minting of FAssets or collateral tokens"
         },
         {
-          "id": 5306,
+          "id": 5418,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Theft of user/system funds by an agent, beyond their backed capacity."
+        },
+        {
+          "id": 5419,
           "type": "smart_contract",
           "severity": "high",
           "title": "Theft of unclaimed yield/rewards (e.g., rewards intended for FAsset holders, or collateral providers)"
         },
         {
-          "id": 5307,
+          "id": 5420,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Theft of user/system funds by an agent, within their backed capacity."
+        },
+        {
+          "id": 5421,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Protocol insolvency resulting in the inability to fulfill agent-bound redemption requests or honor collateral guarantees."
+        },
+        {
+          "id": 5422,
           "type": "smart_contract",
           "severity": "high",
           "title": "Unauthorized freezing of unclaimed yield"
+        },
+        {
+          "id": 5423,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Preventing participants from minting, redeeming or transferring FAsset tokens"
+        },
+        {
+          "id": 5424,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Manipulation of redemption or minting processes, causing users to receive incorrect amounts"
+        },
+        {
+          "id": 5425,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Unbounded gas consumption that could lead to denial of service or stalled transactions"
+        },
+        {
+          "id": 5426,
+          "type": "smart_contract",
+          "severity": "low",
+          "title": "Contract fails to deliver expected yield returns or rewards, but without resulting in a loss of principal funds"
         }
       ],
       "programOverview": "Flare is the blockchain for data. It is a layer-1, EVM smart contract platform designed to expand the utility of blockchain by delivering data certainty for dApp builders.\n\n\nFAssets is a trustless, over-collateralized bridge built on Flare that connects non smart contract networks to Flare/Songbird. It enables the creation of wrapped tokens (FAssets) for assets like BTC, DOGE and XRP. The original assets are deposited to the address of an agent and can later be redeemed. The minted FAssets are secured by collateral, which is in the form of ERC20 tokens on Flare/Songbird chain and native tokens (FLR on Flare, SGB on Songbird). \nThese tokens can participate in Flare's DeFi ecosystem. \n\nFor more information about Flare, please visit https://flare.network/\n\nThe FAsset system maintains security by ensuring every minted Fasset is backed by more value than it represents, creating a safeguard against volatility and protecting users from potential losses. \n\nTwo protocols, available on Flare and Songbird blockchains, enable the FAsset system to operate:\n- FTSO contracts which provide decentralised price feeds for multiple tokens.\n- Flare’s Flare data connector, which bridges payment data from any connected chain.\n\nFlare provides rewards in FLR, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below.",
@@ -223,7 +303,8 @@
         "projectType": [],
         "ecosystem": [],
         "programType": [
-          "Smart Contract"
+          "Smart Contract",
+          "Blockchain/DLT"
         ],
         "language": [],
         "featured": [
@@ -232,7 +313,8 @@
       },
       "legacy": {
         "technologies": [
-          "Smart Contract"
+          "Smart Contract",
+          "Blockchain/DLT"
         ],
         "blockchain_rewards": [],
         "smartcontract_rewards": [],
