@@ -5,15 +5,40 @@
       "id": "forta",
       "slug": "forta",
       "project": "Forta Network",
-      "maxBounty": 80000,
+      "maxBounty": 10000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7AbtICUyrsiNIzIHam91pr/3b36623100ca7d2a8307bbc0d4b6f040/Forta_logo.jpeg",
       "launchDate": "2022-06-28T16:30:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-11-18T14:18:49.662Z",
+      "updatedDate": "2025-03-21T12:30:13.674Z",
       "kyc": true,
       "rewards": [
         {
-          "id": 8345,
+          "id": 15492,
+          "assetType": "blockchain_dlt",
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 10000,
+          "minReward": 8000,
+          "rewardCalculationPercentage": 10
+        },
+        {
+          "id": 15493,
+          "assetType": "blockchain_dlt",
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 4000,
+          "minReward": 2000
+        },
+        {
+          "id": 15494,
+          "assetType": "blockchain_dlt",
+          "severity": "medium",
+          "rewardModel": "range",
+          "maxReward": 3000,
+          "minReward": 1000
+        },
+        {
+          "id": 15495,
           "assetType": "smart_contract",
           "severity": "critical",
           "rewardModel": "range",
@@ -22,39 +47,7 @@
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 6714,
-          "assetType": "blockchain_dlt",
-          "severity": "critical",
-          "rewardModel": "range",
-          "maxReward": 80000,
-          "minReward": 30000,
-          "rewardCalculationPercentage": 10
-        },
-        {
-          "id": 6715,
-          "assetType": "blockchain_dlt",
-          "severity": "high",
-          "rewardModel": "range",
-          "maxReward": 15000,
-          "minReward": 8000
-        },
-        {
-          "id": 6716,
-          "assetType": "blockchain_dlt",
-          "severity": "medium",
-          "rewardModel": "range",
-          "maxReward": 3000,
-          "minReward": 1000
-        },
-        {
-          "id": 6717,
-          "assetType": "blockchain_dlt",
-          "severity": "low",
-          "rewardModel": "fixed",
-          "fixedReward": 1000
-        },
-        {
-          "id": 6719,
+          "id": 15496,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "range",
@@ -62,7 +55,7 @@
           "minReward": 8000
         },
         {
-          "id": 6720,
+          "id": 15497,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "range",
@@ -70,14 +63,7 @@
           "minReward": 1000
         },
         {
-          "id": 6721,
-          "assetType": "smart_contract",
-          "severity": "low",
-          "rewardModel": "fixed",
-          "fixedReward": 1000
-        },
-        {
-          "id": 6722,
+          "id": 15498,
           "assetType": "websites_and_applications",
           "severity": "critical",
           "rewardModel": "range",
@@ -86,7 +72,7 @@
           "otherImpactMaxReward": 0
         },
         {
-          "id": 6723,
+          "id": 15499,
           "assetType": "websites_and_applications",
           "severity": "high",
           "rewardModel": "range",
@@ -94,19 +80,12 @@
           "minReward": 4000
         },
         {
-          "id": 6724,
+          "id": 15500,
           "assetType": "websites_and_applications",
           "severity": "medium",
           "rewardModel": "range",
           "maxReward": 3000,
           "minReward": 1000
-        },
-        {
-          "id": 6725,
-          "assetType": "websites_and_applications",
-          "severity": "low",
-          "rewardModel": "fixed",
-          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -267,64 +246,70 @@
       ],
       "impacts": [
         {
-          "id": 2818,
-          "type": "blockchain_dlt",
-          "severity": "low",
-          "title": "Reduction of capacity of the network by 10%"
-        },
-        {
-          "id": 2819,
-          "type": "blockchain_dlt",
-          "severity": "low",
-          "title": "Inability to deploy new detection bots or reassign detection bots; work around exist (e.g. deployment vis CLI if dapp deployment is disrupted)"
-        },
-        {
-          "id": 2820,
-          "type": "blockchain_dlt",
-          "severity": "low",
-          "title": "Inability to register new scan nodes; work around exists"
-        },
-        {
-          "id": 2821,
+          "id": 23,
           "type": "smart_contract",
-          "severity": "low",
-          "title": "Inability to register nodes/ detection bots"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": 2822,
+          "id": 49,
           "type": "websites_and_applications",
-          "severity": "low",
-          "title": "Changing details of other users (including modifying browser local storage) w/o already-connected wallet interaction and with significant user interaction such as iframing leading to modifying the backend/browser state (must demonstrate impact with PoC)"
+          "severity": "high",
+          "title": "Subdomain takeover without already-connected wallet interaction"
         },
         {
-          "id": 2823,
+          "id": 52,
           "type": "websites_and_applications",
-          "severity": "low",
-          "title": "Any impact involving a publicly released CVE without a working PoC"
+          "severity": "medium",
+          "title": "Redirecting users to malicious websites (open redirect)"
         },
         {
-          "id": 2824,
-          "type": "websites_and_applications",
-          "severity": "low",
-          "title": "Taking over broken or expired outgoing links such as social media handles, etc."
+          "id": 14,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results"
         },
         {
-          "id": 2825,
+          "id": 15,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+        },
+        {
+          "id": 17,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
+        },
+        {
+          "id": 22,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Protocol insolvency"
+        },
+        {
+          "id": 35,
           "type": "websites_and_applications",
-          "severity": "low",
-          "title": "Temporarily disabling user to access target site, such as locking up the victim from login, cookie bombing, etc."
+          "severity": "critical",
+          "title": "Execute arbitrary system commands"
+        },
+        {
+          "id": 41,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Subdomain takeover with already-connected wallet interaction"
+        },
+        {
+          "id": 42,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Direct theft of user funds"
         },
         {
           "id": 2826,
           "type": "blockchain_dlt",
           "severity": "high",
           "title": "Service wide disruption that impacts the ability of Forta to scan and analyze transactions. 5%+ of transaction of permanent scan failures"
-        },
-        {
-          "id": 23,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Theft of unclaimed yield"
         },
         {
           "id": 2827,
@@ -349,12 +334,6 @@
           "type": "websites_and_applications",
           "severity": "high",
           "title": "Improperly disclosing confidential user information such as email address, phone number, physical address, etc."
-        },
-        {
-          "id": 49,
-          "type": "websites_and_applications",
-          "severity": "high",
-          "title": "Subdomain takeover without already-connected wallet interaction"
         },
         {
           "id": 2831,
@@ -405,46 +384,10 @@
           "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data"
         },
         {
-          "id": 52,
-          "type": "websites_and_applications",
-          "severity": "medium",
-          "title": "Redirecting users to malicious websites (open redirect)"
-        },
-        {
           "id": 2839,
           "type": "blockchain_dlt",
           "severity": "critical",
           "title": "Service wide disruption that impacts the ability of Forta to scan and analyze transactions. 10%+ of transaction of permanent scan failures"
-        },
-        {
-          "id": 14,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results"
-        },
-        {
-          "id": 15,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-        },
-        {
-          "id": 17,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Permanent freezing of funds"
-        },
-        {
-          "id": 22,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Protocol insolvency"
-        },
-        {
-          "id": 35,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Execute arbitrary system commands"
         },
         {
           "id": 2840,
@@ -463,18 +406,6 @@
           "type": "websites_and_applications",
           "severity": "critical",
           "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc."
-        },
-        {
-          "id": 41,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Subdomain takeover with already-connected wallet interaction"
-        },
-        {
-          "id": 42,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Direct theft of user funds"
         },
         {
           "id": 2843,
@@ -634,7 +565,7 @@
     },
     "metaData": {
       "title": "Forta Network Bug Bounties",
-      "description": "Find bugs and vulnerabilities on Forta Network and get paid up to $80,000.",
+      "description": "Find bugs and vulnerabilities on Forta Network and get paid up to $10,000.",
       "url": "https://immunefi.com/bug-bounty/forta",
       "ogImg": "/api/bounty/og-image?project=Forta+Network"
     },
