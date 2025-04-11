@@ -9,11 +9,11 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6UezFvf3vSbzbQ9pomlLa7/f6e23a39129f6b419e16e52c12d32121/omni.png",
       "launchDate": "2025-01-21T01:10:18.000Z",
       "endDate": null,
-      "updatedDate": "2025-03-10T10:39:21.890Z",
+      "updatedDate": "2025-04-10T09:04:07.364Z",
       "kyc": true,
       "rewards": [
         {
-          "id": 14840,
+          "id": 26840,
           "assetType": "blockchain_dlt",
           "severity": "critical",
           "rewardModel": "range",
@@ -22,7 +22,7 @@
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 14841,
+          "id": 26841,
           "assetType": "blockchain_dlt",
           "severity": "high",
           "rewardModel": "range",
@@ -30,7 +30,7 @@
           "minReward": 5000
         },
         {
-          "id": 14842,
+          "id": 26842,
           "assetType": "blockchain_dlt",
           "severity": "medium",
           "rewardModel": "range",
@@ -38,14 +38,14 @@
           "minReward": 1000
         },
         {
-          "id": 14843,
+          "id": 26843,
           "assetType": "blockchain_dlt",
           "severity": "low",
           "rewardModel": "fixed",
           "fixedReward": 1000
         },
         {
-          "id": 14844,
+          "id": 26844,
           "assetType": "smart_contract",
           "severity": "critical",
           "rewardModel": "range",
@@ -54,7 +54,7 @@
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 14845,
+          "id": 26845,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "range",
@@ -62,7 +62,7 @@
           "minReward": 5000
         },
         {
-          "id": 14846,
+          "id": 26846,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "range",
@@ -70,14 +70,14 @@
           "minReward": 1000
         },
         {
-          "id": 14847,
+          "id": 26847,
           "assetType": "smart_contract",
           "severity": "low",
           "rewardModel": "fixed",
           "fixedReward": 1000
         },
         {
-          "id": 14848,
+          "id": 26848,
           "assetType": "websites_and_applications",
           "severity": "critical",
           "rewardModel": "range",
@@ -86,7 +86,7 @@
           "otherImpactMaxReward": 0
         },
         {
-          "id": 14849,
+          "id": 26849,
           "assetType": "websites_and_applications",
           "severity": "high",
           "rewardModel": "range",
@@ -94,7 +94,7 @@
           "minReward": 5000
         },
         {
-          "id": 14850,
+          "id": 26850,
           "assetType": "websites_and_applications",
           "severity": "medium",
           "rewardModel": "range",
@@ -102,7 +102,7 @@
           "minReward": 1000
         },
         {
-          "id": 14851,
+          "id": 26851,
           "assetType": "websites_and_applications",
           "severity": "low",
           "rewardModel": "fixed",
@@ -780,7 +780,7 @@
       "rewardsBody": "For critical Blockchain/DLT bugs, the reward amount is 10% of the funds directly affected, capped at the maximum critical reward [$500K]. However, a minimum reward of USD [$50,000] is to be rewarded in order to incentivize security researchers against withholding on a bug report.\n\nFor critical Blockchain/DLT bugs with a non-funds-at risk impact, the reward will be paid out as follows: \n\n- Network not being able to confirm new transactions (total network shutdown) - [$50,000] \n- Unintended permanent chain split requiring hard fork (network partition requiring hard fork) - [$50,000] \n- Permanent freezing of funds (fix requires hardfork) - [10% of the funds at risk or $50,000, whichever is lower] \n\nFor high Blockchain/DLT non-funds-at risk impacts, the reward will be paid out as follows: \n\n- Unintended chain split (network partition) - [$25,000] \n- Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments - [$25,000] \n- Causing network processing nodes to process transactions from the mempool beyond set parameters - [$15,000]\n- RPC API crash affecting projects with greater than or equal to 25% of the market capitalization on top of the respective layer - [$15,000]\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD [$500,000]. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD [$25,000] is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\nFor critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Level Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of [$5,000] to [$25,000] depending on the funds at risk, capped at the maximum high reward.  \n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional [24h] that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\nFor critical web/apps bug reports will be rewarded with [$50,000], only if the impact leads to:\nA loss of funds involving an attack that does not require any user action\nPrivate key or private key generation leakage leading to unauthorized access to user funds \n\nAll other impacts that would be classified as Critical would be rewarded a flat amount of [$25,000]. The rest of the severity levels are paid out according to the Impact in Scope table.\n\n__All Validators are trusted parties of Omni Network however if a vulnerability is reported for a malicious validator action, the severity will be Low__",
       "outOfScopeAndRules": null,
       "assetsBodyV2": null,
-      "impactsBody": null,
+      "impactsBody": "Only \"released\" code is in scope of the bug bounty program - https://github.com/omni-network/omni/releases/latest",
       "immunefiStandard": true,
       "tags": {
         "general": [
