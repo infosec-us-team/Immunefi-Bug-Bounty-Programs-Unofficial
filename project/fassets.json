@@ -9,11 +9,11 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6RvAn0eXVoZdyCg9bNkFXK/f86c8ae6a66353298cff60617734a793/Flare.png",
       "launchDate": "2025-02-10T03:45:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-03-13T14:43:47.086Z",
+      "updatedDate": "2025-04-17T15:36:38.203Z",
       "kyc": false,
       "rewards": [
         {
-          "id": 15037,
+          "id": 26966,
           "assetType": "blockchain_dlt",
           "severity": "critical",
           "rewardModel": "fixed",
@@ -21,7 +21,7 @@
           "fixedReward": 50000
         },
         {
-          "id": 15038,
+          "id": 26967,
           "assetType": "blockchain_dlt",
           "severity": "high",
           "rewardModel": "range",
@@ -29,14 +29,14 @@
           "minReward": 10000
         },
         {
-          "id": 15039,
+          "id": 26968,
           "assetType": "blockchain_dlt",
           "severity": "medium",
           "rewardModel": "fixed",
           "fixedReward": 5000
         },
         {
-          "id": 15040,
+          "id": 26969,
           "assetType": "smart_contract",
           "severity": "critical",
           "rewardModel": "range",
@@ -45,7 +45,7 @@
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 15041,
+          "id": 26970,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "range",
@@ -53,14 +53,14 @@
           "minReward": 10000
         },
         {
-          "id": 15042,
+          "id": 26971,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "fixed",
           "fixedReward": 5000
         },
         {
-          "id": 15043,
+          "id": 26972,
           "assetType": "smart_contract",
           "severity": "low",
           "rewardModel": "fixed",
@@ -288,7 +288,7 @@
       ],
       "programOverview": "Flare is the blockchain for data. It is a layer-1, EVM smart contract platform designed to expand the utility of blockchain by delivering data certainty for dApp builders.\n\n\nFAssets is a trustless, over-collateralized bridge built on Flare that connects non smart contract networks to Flare/Songbird. It enables the creation of wrapped tokens (FAssets) for assets like BTC, DOGE and XRP. The original assets are deposited to the address of an agent and can later be redeemed. The minted FAssets are secured by collateral, which is in the form of ERC20 tokens on Flare/Songbird chain and native tokens (FLR on Flare, SGB on Songbird). \nThese tokens can participate in Flare's DeFi ecosystem. \n\nFor more information about Flare, please visit https://flare.network/\n\nThe FAsset system maintains security by ensuring every minted Fasset is backed by more value than it represents, creating a safeguard against volatility and protecting users from potential losses. \n\nTwo protocols, available on Flare and Songbird blockchains, enable the FAsset system to operate:\n- FTSO contracts which provide decentralised price feeds for multiple tokens.\n- Flare’s Flare data connector, which bridges payment data from any connected chain.\n\nFlare provides rewards in FLR, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below.",
       "prioritizedVulnerabilities": "FAsset codebase can be found at https://github.com/flare-labs-ltd. \n\nDocumentation and further resources can be found at: https://dev.flare.network/fassets/overview/.",
-      "rewardsBody": "__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 250 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 100 000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the specific component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\nFor critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks to determine the reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High-Level Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of USD 10 000 to USD 100 000 depending on the funds at risk, capped at the maximum high reward.  \n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional [24h] that the funds are temporarily frozen, until it reaches the max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for disclosing bugs of this nature.\n\n\nFlare adheres to the Primacy of Impact for the following levels:\n\n- Smart Contract - Critical\n- Smart Contract - High\n\nPrimacy of Impact means that priority is given to impact rather than to a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope.",
+      "rewardsBody": "__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 250 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 50 000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the specific component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\nFor critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks to determine the reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High-Level Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of USD 10 000 to USD 100 000 depending on the funds at risk, capped at the maximum high reward.  \n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional [24h] that the funds are temporarily frozen, until it reaches the max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for disclosing bugs of this nature.\n\n\nFlare adheres to the Primacy of Impact for the following levels:\n\n- Smart Contract - Critical\n- Smart Contract - High\n\nPrimacy of Impact means that priority is given to impact rather than to a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope.",
       "outOfScopeAndRules": null,
       "assetsBodyV2": null,
       "impactsBody": null,

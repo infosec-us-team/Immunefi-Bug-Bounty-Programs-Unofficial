@@ -9,11 +9,11 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6UezFvf3vSbzbQ9pomlLa7/f6e23a39129f6b419e16e52c12d32121/omni.png",
       "launchDate": "2025-01-21T01:10:18.000Z",
       "endDate": null,
-      "updatedDate": "2025-04-10T09:04:07.364Z",
+      "updatedDate": "2025-04-17T10:07:04.579Z",
       "kyc": true,
       "rewards": [
         {
-          "id": 26840,
+          "id": 26951,
           "assetType": "blockchain_dlt",
           "severity": "critical",
           "rewardModel": "range",
@@ -22,7 +22,7 @@
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 26841,
+          "id": 26952,
           "assetType": "blockchain_dlt",
           "severity": "high",
           "rewardModel": "range",
@@ -30,7 +30,7 @@
           "minReward": 5000
         },
         {
-          "id": 26842,
+          "id": 26953,
           "assetType": "blockchain_dlt",
           "severity": "medium",
           "rewardModel": "range",
@@ -38,14 +38,14 @@
           "minReward": 1000
         },
         {
-          "id": 26843,
+          "id": 26954,
           "assetType": "blockchain_dlt",
           "severity": "low",
           "rewardModel": "fixed",
           "fixedReward": 1000
         },
         {
-          "id": 26844,
+          "id": 26955,
           "assetType": "smart_contract",
           "severity": "critical",
           "rewardModel": "range",
@@ -54,7 +54,7 @@
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 26845,
+          "id": 26956,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "range",
@@ -62,7 +62,7 @@
           "minReward": 5000
         },
         {
-          "id": 26846,
+          "id": 26957,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "range",
@@ -70,14 +70,14 @@
           "minReward": 1000
         },
         {
-          "id": 26847,
+          "id": 26958,
           "assetType": "smart_contract",
           "severity": "low",
           "rewardModel": "fixed",
           "fixedReward": 1000
         },
         {
-          "id": 26848,
+          "id": 26959,
           "assetType": "websites_and_applications",
           "severity": "critical",
           "rewardModel": "range",
@@ -86,7 +86,7 @@
           "otherImpactMaxReward": 0
         },
         {
-          "id": 26849,
+          "id": 26960,
           "assetType": "websites_and_applications",
           "severity": "high",
           "rewardModel": "range",
@@ -94,7 +94,7 @@
           "minReward": 5000
         },
         {
-          "id": 26850,
+          "id": 26961,
           "assetType": "websites_and_applications",
           "severity": "medium",
           "rewardModel": "range",
@@ -102,7 +102,7 @@
           "minReward": 1000
         },
         {
-          "id": 26851,
+          "id": 26962,
           "assetType": "websites_and_applications",
           "severity": "low",
           "rewardModel": "fixed",
@@ -475,12 +475,6 @@
           "title": "Unintended chain split (network partition)"
         },
         {
-          "id": 6,
-          "type": "blockchain_dlt",
-          "severity": "high",
-          "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments"
-        },
-        {
           "id": 7,
           "type": "blockchain_dlt",
           "severity": "high",
@@ -773,6 +767,12 @@
           "type": "websites_and_applications",
           "severity": "low",
           "title": "Temporarily disabling user to access target site, such as:\n- Locking up the victim from login\n- Cookie bombing, etc."
+        },
+        {
+          "id": 5508,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Temporary freezing of network transactions by delaying 10% or more of all blocks by 1000% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments. Only user activity will be considered. Validator activity is excluded due to the validator set being whitelisted."
         }
       ],
       "programOverview": "Omni is the abstraction layer for the Ethereum ecosystem, allowing developers to access all the users and liquidity across rollups without upgrading their contracts. With Omni, using Ethereum and all its rollup feels like a singular chain — no bridging, switching RPCs, or gas management. Omni achieves this through coordinating a network of solvers who handle all cross platform complexities.\n\nOmni’s V1 release in scope for this competition consists of 2 primary building blocks: xchain messaging and the Omni EVM. These building blocks are supported by 3 components that make up the Omni’s core network architecture:\n- Smart contracts on supported chains\n- Cosmos sdk client (halo) which acts as our consensus client for xchain messaging and for the EVM\n- Vanilla geth as the EVM execution client\n\nFor more information about Omni, please visit https://omni.network/.",
