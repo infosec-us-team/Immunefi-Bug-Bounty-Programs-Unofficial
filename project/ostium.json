@@ -13,7 +13,7 @@
       "kyc": true,
       "rewards": [
         {
-          "id": 28054,
+          "id": 28102,
           "assetType": "smart_contract",
           "severity": "critical",
           "rewardModel": "range",
@@ -22,7 +22,7 @@
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 28055,
+          "id": 28103,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "range",
@@ -30,7 +30,7 @@
           "minReward": 25000
         },
         {
-          "id": 28056,
+          "id": 28104,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "range",
@@ -38,7 +38,7 @@
           "minReward": 11000
         },
         {
-          "id": 28057,
+          "id": 28105,
           "assetType": "smart_contract",
           "severity": "low",
           "rewardModel": "range",
@@ -46,20 +46,26 @@
           "minReward": 1000
         },
         {
-          "id": 28058,
+          "id": 28106,
           "assetType": "websites_and_applications",
           "severity": "critical",
-          "rewardModel": "range",
-          "maxReward": 50000,
-          "minReward": 5000,
-          "otherImpactMaxReward": 0
+          "rewardModel": "fixed",
+          "otherImpactMaxReward": 0,
+          "fixedReward": 5000
         },
         {
-          "id": 28059,
+          "id": 28107,
           "assetType": "websites_and_applications",
           "severity": "high",
-          "rewardModel": "up_to",
-          "maxReward": 2500
+          "rewardModel": "fixed",
+          "fixedReward": 2500
+        },
+        {
+          "id": 28108,
+          "assetType": "websites_and_applications",
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -350,6 +356,24 @@
           "type": "websites_and_applications",
           "severity": "high",
           "title": "Subdomain takeover without already-connected wallet interaction"
+        },
+        {
+          "id": 50,
+          "type": "websites_and_applications",
+          "severity": "medium",
+          "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Changing the first/last name of user\n- Enabling/disabling notifications"
+        },
+        {
+          "id": 51,
+          "type": "websites_and_applications",
+          "severity": "medium",
+          "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:\n- Reflected HTML Injection\n- Loading external site data"
+        },
+        {
+          "id": 52,
+          "type": "websites_and_applications",
+          "severity": "medium",
+          "title": "Redirecting users to malicious websites (open redirect)"
         }
       ],
       "programOverview": "The Ostium Protocol is an open-sourced, decentralised exchange on Ethereum Layer 2 Arbitrum, enabling transparent and non-custodial perpetuals exposure to Real World Assets. Ostium is customized to support fractional onchain trading of assets like gold, oil, S&P, JPY and other traditional markets from a crypto wallet. \n\nFor more information about Ostium, please visit https://www.ostium.io/.\n\nOstium provides rewards in USDC on Arbitrum , denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below.\n\n__Primacy of Impact vs Primacy of Rules__\n\nOstium adheres to the Primacy of Impact for the following impacts:\nSmart Contract  —  Critical\nSmart Contract  —  High\nWebsite & Application  —  Critical\nWebsite & Application  —  High\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope.\n \nFor more information, please see Best Practices: [Primacy of Impact](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n\n__Proof of Concept (PoC) Requirements__\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the Immunefi PoC Guidelines and Rules.\n\n\n__Previous Audits__\nOstium’s completed audit reports can be found at https://ostium-labs.gitbook.io/ostium-docs/security/smart-contract-audits. Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.",
