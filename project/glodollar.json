@@ -13,33 +13,28 @@
       "kyc": true,
       "rewards": [
         {
-          "id": 9696,
           "assetType": "smart_contract",
-          "severity": "critical",
-          "rewardModel": "fixed",
-          "rewardCalculationPercentage": 0,
-          "fixedReward": 50000
+          "level": "critical",
+          "payout": "USD $50,000",
+          "pocRequired": true
         },
         {
-          "id": 9697,
           "assetType": "smart_contract",
-          "severity": "high",
-          "rewardModel": "fixed",
-          "fixedReward": 2500
+          "level": "high",
+          "payout": "USD $2,500",
+          "pocRequired": true
         },
         {
-          "id": 9698,
           "assetType": "smart_contract",
-          "severity": "medium",
-          "rewardModel": "fixed",
-          "fixedReward": 1250
+          "level": "medium",
+          "payout": "USD $1,250",
+          "pocRequired": false
         },
         {
-          "id": 9699,
           "assetType": "smart_contract",
-          "severity": "low",
-          "rewardModel": "fixed",
-          "fixedReward": 1000
+          "level": "low",
+          "payout": "USD $1,000",
+          "pocRequired": false
         }
       ],
       "audits": null,
@@ -81,80 +76,7 @@
           "addedAt": "2022-11-23T18:43:07.532Z"
         }
       ],
-      "impacts": [
-        {
-          "id": 3671,
-          "type": "smart_contract",
-          "severity": "low",
-          "title": "Smart contract fails to deliver promised returns, but doesn’t lose value"
-        },
-        {
-          "id": 3672,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Temporary freezing of funds for at least 1 hour"
-        },
-        {
-          "id": 29,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Smart contract unable to operate due to lack of token funds"
-        },
-        {
-          "id": 3673,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Block stuffing for profit"
-        },
-        {
-          "id": 31,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-        },
-        {
-          "id": 32,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Theft of gas"
-        },
-        {
-          "id": 33,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Unbounded gas consumption"
-        },
-        {
-          "id": 15,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-        },
-        {
-          "id": 17,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Permanent freezing of funds"
-        },
-        {
-          "id": 3674,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Miner-extractable value (MEV)"
-        },
-        {
-          "id": 3675,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Predictable or manipulable RNG that results in abuse of the principal"
-        },
-        {
-          "id": 22,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Protocol insolvency"
-        }
-      ],
+      "impacts": [],
       "programOverview": "Glo is a fully backed stablecoin pegged to the US dollar. We're non-profit. Like other stablecoin companies, we earn interest from our reserves. The difference: we give all of it away to reduce extreme poverty. You can generate basic income for people in extreme poverty simply by owning Glo. More Glo adoption means more basic income for more people.\n\nFor more information about Glo, please visit [https://www.glodollar.org/](https://www.glodollar.org/)",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll High and Critical Smart Contract bug  reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nGlo requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed are name, address, date and full amount you claim, clearly stated on an invoice. The collection of this information will be done by the project team.\n\nPayouts are handled by the __Glo__ team directly and are denominated in USD. However, payouts are done in __USDC__.",
@@ -213,36 +135,29 @@
         "web_rewards": []
       },
       "websiteUrl": null,
-      "description": "Glo is a fully backed stablecoin pegged to the US dollar. We're non-profit. Like other stablecoin companies, we earn interest from our reserves. The difference: we give all of it away to reduce extreme poverty. You can generate basic income for people in extreme poverty simply by owning Glo. More Glo adoption means more basic income for more people.",
+      "description": null,
       "githubUrl": null,
-      "feasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
-      "prohibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
+      "feasibilityLimitations": null,
+      "prohibitedActivites": null,
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+      "defaultOutOfScopeBlockchain": null,
+      "defaultOutOfScopeSmartContract": null,
+      "defaultOutOfScopeGeneral": null,
       "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": "  - Best practice critiques",
+      "defaultProhibitedActivities": null,
+      "defaultFeasibilityLimitations": null,
+      "customOutOfScopeInformation": null,
       "customProhibitedActivities": [],
-      "rewardsTokenNetwork": "Ethereum",
-      "rewardsToken": "USDC",
-      "eligibilityCriteria": [],
+      "rewardsTokenNetwork": null,
+      "rewardsToken": null,
+      "eligibilityCriteria": null,
       "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [
-        {
-          "id": 269,
-          "title": "Glo Dollar Smart Contracts",
-          "description": "Program Smart Contracts",
-          "url": "https://gitlab.com/global-income-coin/usdglo"
-        }
-      ],
+      "programCodebases": [],
       "programDocumentations": [],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": true,
+      "primacy": null,
+      "newProgramRewardsEnabled": false,
       "findingsUrl": null,
       "premiumTriaging": false
     },

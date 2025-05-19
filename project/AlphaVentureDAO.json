@@ -13,55 +13,46 @@
       "kyc": false,
       "rewards": [
         {
-          "id": 8322,
           "assetType": "smart_contract",
-          "severity": "critical",
-          "rewardModel": "up_to",
-          "maxReward": 500000,
-          "rewardCalculationPercentage": 10
+          "level": "critical",
+          "payout": "Up to USD $500,000",
+          "pocRequired": false
         },
         {
-          "id": 6498,
           "assetType": "smart_contract",
-          "severity": "high",
-          "rewardModel": "fixed",
-          "fixedReward": 20000
+          "level": "high",
+          "payout": "USD $20,000",
+          "pocRequired": false
         },
         {
-          "id": 6499,
           "assetType": "smart_contract",
-          "severity": "medium",
-          "rewardModel": "fixed",
-          "fixedReward": 5000
+          "level": "medium",
+          "payout": "USD $5,000",
+          "pocRequired": false
         },
         {
-          "id": 6500,
           "assetType": "smart_contract",
-          "severity": "low",
-          "rewardModel": "fixed",
-          "fixedReward": 1000
+          "level": "low",
+          "payout": "USD $1,000",
+          "pocRequired": false
         },
         {
-          "id": 6501,
           "assetType": "websites_and_applications",
-          "severity": "critical",
-          "rewardModel": "fixed",
-          "otherImpactMaxReward": 0,
-          "fixedReward": 20000
+          "level": "critical",
+          "payout": "USD $20,000",
+          "pocRequired": true
         },
         {
-          "id": 6502,
           "assetType": "websites_and_applications",
-          "severity": "high",
-          "rewardModel": "fixed",
-          "fixedReward": 10000
+          "level": "high",
+          "payout": "USD $10,000",
+          "pocRequired": true
         },
         {
-          "id": 6503,
           "assetType": "websites_and_applications",
-          "severity": "medium",
-          "rewardModel": "fixed",
-          "fixedReward": 1000
+          "level": "medium",
+          "payout": "USD $1,000",
+          "pocRequired": true
         }
       ],
       "audits": null,
@@ -130,176 +121,7 @@
           "addedAt": "2022-04-04T16:16:56.067Z"
         }
       ],
-      "impacts": [
-        {
-          "id": 34,
-          "type": "smart_contract",
-          "severity": "low",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value"
-        },
-        {
-          "id": 23,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Theft of unclaimed yield"
-        },
-        {
-          "id": 25,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Permanent freezing of unclaimed yield"
-        },
-        {
-          "id": 27,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Temporary freezing of funds"
-        },
-        {
-          "id": 66,
-          "type": "websites_and_applications",
-          "severity": "high",
-          "title": "Injecting/modifying the static content on the target application without Javascript (Persistent) such as HTML injection without Javascript, replacing existing text with arbitrary text, arbitrary file uploads, etc"
-        },
-        {
-          "id": 67,
-          "type": "websites_and_applications",
-          "severity": "high",
-          "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as email or password of the victim, etc"
-        },
-        {
-          "id": 68,
-          "type": "websites_and_applications",
-          "severity": "high",
-          "title": "Improperly disclosing confidential user information such as email address, phone number, physical address, etc"
-        },
-        {
-          "id": 49,
-          "type": "websites_and_applications",
-          "severity": "high",
-          "title": "Subdomain takeover without already-connected wallet interaction"
-        },
-        {
-          "id": 29,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Smart contract unable to operate due to lack of token funds"
-        },
-        {
-          "id": 69,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Block stuffing for profit"
-        },
-        {
-          "id": 31,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-        },
-        {
-          "id": 32,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Theft of gas"
-        },
-        {
-          "id": 33,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Unbounded gas consumption"
-        },
-        {
-          "id": 70,
-          "type": "websites_and_applications",
-          "severity": "medium",
-          "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as changing the user name, or enabling/disabling notifications"
-        },
-        {
-          "id": 71,
-          "type": "websites_and_applications",
-          "severity": "medium",
-          "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data"
-        },
-        {
-          "id": 52,
-          "type": "websites_and_applications",
-          "severity": "medium",
-          "title": "Redirecting users to malicious websites (open redirect)"
-        },
-        {
-          "id": 72,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Any governance voting result manipulation"
-        },
-        {
-          "id": 15,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-        },
-        {
-          "id": 17,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Permanent freezing of funds"
-        },
-        {
-          "id": 73,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Miner-extractable value (MEV)"
-        },
-        {
-          "id": 22,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Protocol insolvency"
-        },
-        {
-          "id": 35,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Execute arbitrary system commands"
-        },
-        {
-          "id": 74,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys(this does not include non-sensitive environment variables, open source code, or usernames)"
-        },
-        {
-          "id": 75,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Completely taking down the application/website e.g. remove all stored data in the database, self-destruct the server or the running vm"
-        },
-        {
-          "id": 76,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc"
-        },
-        {
-          "id": 41,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Subdomain takeover with already-connected wallet interaction"
-        },
-        {
-          "id": 42,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Direct theft of user funds"
-        },
-        {
-          "id": 77,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions"
-        }
-      ],
+      "impacts": [],
       "programOverview": "Alpha Venture DAO is building an ecosystem of DeFi products (the Alpha ecosystem), consisting of innovative building blocks that capture unaddressed demand in key pillars of the financial system. These building blocks will interoperate, creating the Alpha ecosystem that will be an innovative and more capital efficient way to banking in DeFi. \n\nWe explore and innovate at the fringes of Web3 and drive significant value to Web3 users, and ultimately, alpha returns to the Alpha community.\n\nHomora V2 is Alpha Venture DAO’s first product and DeFi’s first leveraged yield farming product that captures the market gap in lending, one of the key pillars of the financial system.\n\nFurther information about Alpha Venture DAO can be found here \n[https://docs.alphaventuredao.io/](https://docs.alphaventuredao.io/).",
       "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Smart Contracts/Blockchain__\n\n  - Loss of user funds staked (principal) by freezing or theft\n  - Loss of governance funds\n  - Undesirable flashloan/sandwich exploits\n  - Theft of unclaimed yield\n  - Freezing of unclaimed yield\n  - Smart contract gas drainage\n  - Block stuffing without fund transfers blocked\n  - Smart contract fails to deliver promised returns, but doesn’t lose value\n\n__Web/App__\n\n  - Redirected funds by address modification\n  - Accessing sensitive pages without authorization\n  - Persistent injection of text or script\n  - Users spoofing other users\n  - Shell access on server\n  - Loss of treasury funds\n  - Loss of user funds\n  - Incorrect calculations e.g. slippage control that can lead to funds loss",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nAll web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. For Smart Contract bug reports, PoCs and suggestions for a fix are not required but good to have and encouraged. Explanations and statements are not accepted as PoC and code is required.\n\nCritical smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. This includes a bounty of up to USD 500,000 from the Alpha Venture DAO team.\n\nPayouts are handled by the __Alpha Venture DAO__ team directly and are denominated in USD. However, payouts are done in __ALPHA__ for payouts up to USD 500,000. For critical level smart contract vulnerabilities, payouts of up to USD 500,000 will take place with an upfront payout of up to USD 100,000 and USD 50,000 monthly vesting thereafter. .",
@@ -380,29 +202,29 @@
         ]
       },
       "websiteUrl": null,
-      "description": "Alpha Venture DAO is building an ecosystem of DeFi products (the Alpha ecosystem), consisting of innovative building blocks that capture unaddressed demand in key pillars of the financial system. These building blocks will interoperate, creating the Alpha ecosystem that will be an innovative and more capital efficient way to banking in DeFi. ",
+      "description": null,
       "githubUrl": null,
-      "feasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
-      "prohibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
+      "feasibilityLimitations": null,
+      "prohibitedActivites": null,
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
-      "defaultOutOfScopeWebAndApplications": "- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n  - This does not exclude reflected HTML injection with or without JavaScript\n  - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering",
-      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": "  - Best practice critiques",
+      "defaultOutOfScopeBlockchain": null,
+      "defaultOutOfScopeSmartContract": null,
+      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeWebAndApplications": null,
+      "defaultProhibitedActivities": null,
+      "defaultFeasibilityLimitations": null,
+      "customOutOfScopeInformation": null,
       "customProhibitedActivities": [],
-      "rewardsTokenNetwork": "Ethereum, Base, AVALANCHE",
-      "rewardsToken": "ALPHA",
-      "eligibilityCriteria": [],
+      "rewardsTokenNetwork": null,
+      "rewardsToken": null,
+      "eligibilityCriteria": null,
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [],
       "programDocumentations": [],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": true,
+      "primacy": null,
+      "newProgramRewardsEnabled": false,
       "findingsUrl": null,
       "premiumTriaging": false
     },

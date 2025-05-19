@@ -13,19 +13,28 @@
       "kyc": false,
       "rewards": [
         {
-          "id": 9329,
           "assetType": "smart_contract",
-          "severity": "critical",
-          "rewardModel": "up_to",
-          "maxReward": 50000,
-          "rewardCalculationPercentage": 10
+          "level": "critical",
+          "payout": "Up to USD $100,000",
+          "pocRequired": false
         },
         {
-          "id": 9330,
           "assetType": "smart_contract",
-          "severity": "high",
-          "rewardModel": "up_to",
-          "maxReward": 25000
+          "level": "high",
+          "payout": "Up to USD $50,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "Up to USD $20,000",
+          "pocRequired": false
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "low",
+          "payout": "Up to USD $10,000",
+          "pocRequired": false
         }
       ],
       "audits": null,
@@ -463,86 +472,7 @@
           "addedAt": "2023-02-03T20:20:00.433Z"
         }
       ],
-      "impacts": [
-        {
-          "id": 5,
-          "type": "blockchain_dlt",
-          "severity": "high",
-          "title": "Unintended chain split (network partition)"
-        },
-        {
-          "id": 23,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Theft of unclaimed yield"
-        },
-        {
-          "id": 25,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Permanent freezing of unclaimed yield"
-        },
-        {
-          "id": 27,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Temporary freezing of funds"
-        },
-        {
-          "id": 1,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Network not being able to confirm new transactions (total network shutdown)"
-        },
-        {
-          "id": 2,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
-        },
-        {
-          "id": 3,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Direct loss of funds"
-        },
-        {
-          "id": 4,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Permanent freezing of funds (fix requires hardfork)"
-        },
-        {
-          "id": 17,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Permanent freezing of funds"
-        },
-        {
-          "id": 15,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-        },
-        {
-          "id": 22,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Protocol insolvency"
-        },
-        {
-          "id": 1500,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Any governance voting result manipulation"
-        },
-        {
-          "id": 1501,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Miner-extractable value (MEV)"
-        }
-      ],
+      "impacts": [],
       "programOverview": "Connext is a modular protocol for securely passing funds and data between chains. Developers can use Connext to build crosschain apps (__xApps__) - applications that interact with multiple domains (blockchains and/or rollups) simultaneously.\n\nFor more information about Connext, please visit [https://connext.network/](https://connext.network/).  \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Thefts and freezing of user funds\n  - Thefts and freezing of liquidity on the contract\n  - Network shutdown\n  - Abuse of auction process\n  - Abuse of AMM pricing\n  - Abuse of system to create fraudulent slashing conditions",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces\n  - All smart contract vulnerabilities\n  - Double-spends from faulty off-chain logic\n  - Creating fraudulent slashing conditions",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll Critical smart contract bug reports must come with a detailed written explanation in order to be considered for a reward. \n\nRewards for valid bug reports are paid at the dollar amount displayed in the rewards table or __10%__ of the USD value at risk, whichever of the two is less. \n\nVulnerabilities marked in the following audits are not eligible for a reward.\n  - [Consensys Diligence Audit ](https://consensys.net/diligence/audits/private/rrcm4t83gvyj6a/)\n  - [https://github.com/connext/audits](https://github.com/connext/audits)\n\nPayouts are handled by the __Connext__ team directly and are denominated in USD. However, payouts are done in __USDC__, __USDT__, __DAI__, with the choice of the ratio at the discretion of the team.",
@@ -598,10 +528,10 @@
         "web_rewards": []
       },
       "websiteUrl": null,
-      "description": "Connext is a modular protocol for securely passing funds and data between chains. Developers can use Connext to build crosschain apps (__xApps__) - applications that interact with multiple domains (blockchains and/or rollups) simultaneously.",
+      "description": null,
       "githubUrl": null,
-      "feasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
-      "prohibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
+      "feasibilityLimitations": null,
+      "prohibitedActivites": null,
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
@@ -614,13 +544,13 @@
       "customOutOfScopeInformation": null,
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": null,
-      "rewardsToken": "USDC, USDT, DAI",
-      "eligibilityCriteria": [],
+      "rewardsToken": null,
+      "eligibilityCriteria": null,
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [],
       "programDocumentations": [],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": true,
+      "primacy": null,
+      "newProgramRewardsEnabled": false,
       "findingsUrl": null,
       "premiumTriaging": false
     },
