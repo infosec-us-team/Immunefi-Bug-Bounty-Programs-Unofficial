@@ -13,28 +13,35 @@
       "kyc": true,
       "rewards": [
         {
+          "id": 15793,
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $5,001 to USD $25,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 25000,
+          "minReward": 5000,
+          "rewardCalculationPercentage": 10
         },
         {
+          "id": 15794,
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $2,501 to USD $5,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 5000,
+          "minReward": 2500
         },
         {
+          "id": 15795,
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $2,500",
-          "pocRequired": false
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 2500
         },
         {
+          "id": 15796,
           "assetType": "smart_contract",
-          "level": "low",
-          "payout": "USD $1,000",
-          "pocRequired": false
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -58,7 +65,92 @@
           "addedAt": "2024-04-21T11:53:30.807Z"
         }
       ],
-      "impacts": [],
+      "impacts": [
+        {
+          "id": 34,
+          "type": "smart_contract",
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
+        },
+        {
+          "id": 1325,
+          "type": "smart_contract",
+          "severity": "low",
+          "title": "Temporary denial of service (smart contract is made unable to operate for one block, functionality is restored in the next block)"
+        },
+        {
+          "id": 1326,
+          "type": "smart_contract",
+          "severity": "low",
+          "title": "Invalid events are emitted, potentially confusing indexers (internal storage is unaffected)"
+        },
+        {
+          "id": 1327,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Governance voting result manipulation"
+        },
+        {
+          "id": 1328,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Permanent freezing of funds"
+        },
+        {
+          "id": 1329,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Permanent denial of service (smart contract is made unable to operate)"
+        },
+        {
+          "id": 1330,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Theft of unclaimed yield / Permanent freezing of unclaimed yield - Impact severity is determined by potential yield lost"
+        },
+        {
+          "id": 1331,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Temporary freezing of funds - Impact severity depends on funds at risk"
+        },
+        {
+          "id": 29,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
+        },
+        {
+          "id": 31,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+        },
+        {
+          "id": 32,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Theft of gas"
+        },
+        {
+          "id": 33,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
+        },
+        {
+          "id": 1332,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Direct theft of user funds, whether at-rest or in-motion, other than unclaimed yield"
+        },
+        {
+          "id": 1333,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Access control is bypassed, including privilege escalation"
+        }
+      ],
       "programOverview": "As the premier crypto cybersecurity technology and services company, we’ve built OpenZeppelin Contracts with our best [security practices](https://contracts.openzeppelin.com/security). We are committed to ensuring the utmost security in our community-vetted smart contracts, and our bounty program provides rewards of up to $25,000 USD for reporting critical vulnerabilities in our smart contracts library.\nThis bug bounty program is focused on OpenZeppelin Contracts and mainly intends to prevent:\n\n- Loss of funds by freezing another user’s funds, or theft of another user’s funds\n- Permanent denial of service (smart contract is made unable to operate)\n- Access control bypass, including privilege escalation\n- Smart contract not behaving as intended\n\nThis is an overlay bug bounty program for OpenZeppelin’s Contracts library. A vulnerability in an OpenZeppelin contract would likely affect many other projects and could trigger various other bounties. This program would be potentially additive to those cases. \n\nOpenZeppelin may issue [GHSA/CVEs](https://cve.report/vendor/openzeppelin) for reported vulnerabilities and will offer to credit issue reports in those public reports.\n\n\n__Primacy of Impact vs Primacy of Rules__\n\nOpenZeppelin adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page. \n\n__Previous Audits__\n\nOpenZeppelin’s completed audit reports can be found at [OpenZeppelin Contracts’ Security Center](https://contracts.openzeppelin.com/security) while previous security advisories are available at [GHSA/CVEs](https://github.com/OpenZeppelin/openzeppelin-contracts/security/advisories). OpenZeppelin will offer to credit issue reports in those public reports. Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n__Feasibility Limitations__\n\nOpenZeppelin will assess likelihood depending on the complexity of the steps involved in its execution and the exposure created by the vulnerability, as well as impact depending on the assets or systems at risk, capped to the worst-case impacted instance using the affected code.\n\nOpenZeppelin will evaluate the vulnerability of the affected code considering whether the issue arises directly from the library code while used as provided or if it requires a custom user implementation. Determining the likelihood of exploit on custom implementations will depend on how likely a library user is to make such an implementation and how common is the pattern leading to it.\n\nFor example, if a data structure can be cleared by any caller of a smart contract, its likelihood will be **high** if it holds user balances, although, if the vulnerability allows overriding non-critical values such as an already executed governor proposal flag, its likelihood will be **low** but can escalate to **medium** if it comes with side effects that increase the incentives of exploitation (e.g. proposal re-execution).\n\nSimilarly, if an instance of an AccessManager can be made unusable, its impact will be **high** but could be lowered to **medium** if the attacker requires special permissions in the system, and finally, it will be considered **low** if the contract is frozen only during 1 block before a threshold is met.\n\nThe final threat level will be decided based on the matrix above. For a vulnerability with **low** impact, if its likelihood is **high** because the cost of exploiting a single instance is negligible, then its final threat level will be **medium severity**.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, OpenZeppelin has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).\n\n__KYC Requirements__\n\nOpenZeppelin’s bug bounty program requires an invoice to be submitted and a KYC screen to be performed prior to OpenZeppelin providing a bug bounty reward. Once a payout is confirmed, a member of OpenZeppelin will reach out to you directly to collect the necessary information, including:\n- Full Legal Name\n- Email Address\n- Mailing Address\n- Wallet Address (Ethereum Mainnet Only)",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. They refer to a regular impact rating in our likelihood/impact matrix (up to high severity) and will partially define the report’s final threat. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nThe rewards stated here are additive to any existing bug bounty programs hosted by projects that are currently using OpenZeppelin contracts. \n\nBounty rewards are given according to an impact/likelihood [matrix for assessing threat levels.](https://raw.githubusercontent.com/OpenZeppelin/immunefi-assets/main/impact-likelihood-matrix.png) Each issue is assessed considering the likelihood of the vulnerability being successfully exploited and the expected impact in scope to a single instance of the affected smart contract. Note that, as can be seen in the matrix, if the impact is Critical then the threat is always Critical, for other impacts the maximum reduction is one level only if the likelihood is low, and if the likelihood is high then the threat is increased one level above the impact. \n\n__Proof of Concept (PoC) Requirements__\n\nA PoC compliant with [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) is required for the following severity levels:\n- Smart Contract: Critical\n- Smart Contract: High\n\nBugs introduced by a release candidate version and reported during the review period, the dates for which will be declared by OpenZeppelin on each release, will receive a 50% bonus.\n\nPayouts are handled by the __OpenZeppelin__ team directly and are denominated in USD. However, payouts are done in __ETH__ or __USDC__.",
@@ -118,29 +210,29 @@
         "web_rewards": []
       },
       "websiteUrl": null,
-      "description": null,
+      "description": "As the premier crypto cybersecurity technology and services company, we’ve built OpenZeppelin Contracts with our best [security practices](https://contracts.openzeppelin.com/security).",
       "githubUrl": null,
-      "feasibilityLimitations": null,
-      "prohibitedActivites": null,
-      "responsiblePublicationCategory": null,
+      "feasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
+      "prohibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
+      "responsiblePublicationCategory": "category_1",
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
       "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
-      "customOutOfScopeInformation": null,
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+      "customOutOfScopeInformation": "- Best practice critiques\n- ERC mandated behaviors",
       "customProhibitedActivities": [],
-      "rewardsTokenNetwork": null,
-      "rewardsToken": null,
-      "eligibilityCriteria": null,
+      "rewardsTokenNetwork": "Ethereum",
+      "rewardsToken": "USDC",
+      "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [],
       "programDocumentations": [],
-      "primacy": null,
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_rules",
+      "newProgramRewardsEnabled": true,
       "findingsUrl": null,
       "premiumTriaging": false
     },

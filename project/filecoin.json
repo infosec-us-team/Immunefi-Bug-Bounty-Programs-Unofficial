@@ -9,11 +9,11 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3qI8wK3cAr9keSN6QLBCSE/6d1ca48363a4450ae1516814cc548c07/filecoin-logo.svg",
       "launchDate": "2023-04-14T20:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-05-13T13:08:06.400Z",
+      "updatedDate": "2025-05-19T08:40:02.167Z",
       "kyc": true,
       "rewards": [
         {
-          "id": 28716,
+          "id": 29011,
           "assetType": "blockchain_dlt",
           "severity": "critical",
           "rewardModel": "range",
@@ -22,7 +22,7 @@
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 28717,
+          "id": 29012,
           "assetType": "blockchain_dlt",
           "severity": "high",
           "rewardModel": "range",
@@ -30,7 +30,7 @@
           "minReward": 25000
         },
         {
-          "id": 28718,
+          "id": 29013,
           "assetType": "blockchain_dlt",
           "severity": "medium",
           "rewardModel": "range",
@@ -38,7 +38,7 @@
           "minReward": 10000
         },
         {
-          "id": 28719,
+          "id": 29014,
           "assetType": "blockchain_dlt",
           "severity": "low",
           "rewardModel": "range",
@@ -312,6 +312,24 @@
       ],
       "impacts": [
         {
+          "id": 2,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
+        },
+        {
+          "id": 3,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Direct loss of funds"
+        },
+        {
+          "id": 4,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Permanent freezing of funds (fix requires hardfork)"
+        },
+        {
           "id": 2562,
           "type": "blockchain_dlt",
           "severity": "low",
@@ -366,12 +384,6 @@
           "title": "Protocol-level bug rendering a single contract unusable after the exploit (i.e. contract bricked)"
         },
         {
-          "id": 2571,
-          "type": "blockchain_dlt",
-          "severity": "high",
-          "title": "Inability to propagate new transactions"
-        },
-        {
           "id": 2572,
           "type": "blockchain_dlt",
           "severity": "medium",
@@ -402,24 +414,6 @@
           "title": "Total Chain halt"
         },
         {
-          "id": 2,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
-        },
-        {
-          "id": 3,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Direct loss of funds"
-        },
-        {
-          "id": 4,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Permanent freezing of funds (fix requires hardfork)"
-        },
-        {
           "id": 2577,
           "type": "blockchain_dlt",
           "severity": "critical",
@@ -430,6 +424,12 @@
           "type": "blockchain_dlt",
           "severity": "critical",
           "title": "Protocol-level bug that enables tricking contracts into sending funds to arbitrary addresses"
+        },
+        {
+          "id": 5559,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Inability to propagate new transactions (limited to fraction of the network)"
         }
       ],
       "programOverview": "Filecoin is a decentralized storage network designed to store humanity's most important data. As such, security is of paramount importance to us.\n\nFor more information about Filecoin, please visit https://filecoin.io. For more information about the FVM, visit https://fvm.dev.\n\nFor Whitehats: It is highly recommended that you review the details of this program in full. Although many Bug Bounty programs have standard terms and conditions, each also has their own unique details that are critical to your success.  \n\nPrior to submitting a report please review the Immunefi Bug Report Template and Best Practices. \n\n__Note:__ The program is subject to all terms and conditions of this Bug Bounty Policy (”Policy”), and all submissions to this Program are governed by this Policy. \n\nBy submitting a vulnerability through this Program you are agreeing to the Policy.   \n\nFilecoin provides rewards in USD/USDC at the Filecoin Foundation’s sole discretion.For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__Payouts and Payout Requirements__\n\nThe Filecoin Security Team, which consists of core developers and contributors, evaluates the significance of reported vulnerabilities and the appropriate bounty award, if any, in its sole discretion. The Filecoin Security Team may also at its sole discretion increase the award, within the ranges above, for vulnerability reports that include quality written descriptions, test code, scripts and detailed instructions, and well-documented fixes.\n\nCurrent and former members of the Filecoin core development team, and current and former employees, contractors and others who have been paid by Protocol Labs or the Filecoin Foundation to work on the Filecoin project, indirectly or directly, are not eligible for bug bounty rewards.\n\nPayouts are handled by the Filecoin Foundation directly and are denominated in USD/USDC at the Filecoin Foundation’s sole discretion. Payouts will be distributed according to the terms set out in this Policy at the time of report submission.\n\nFor the purposes of determining report validity, this is a Primacy of Rules program. Learn more about this principle here: [Best Practice - Primacy of Impact vs Primacy of Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\nIn the event that a bounty award is assigned, the Filecoin Foundation will generate an invoice. Invoices will generally be paid on a net 30 basis, after the \nFilecoin Foundation has received all necessary information from the researcher, such as wallet details and KYC information. Any taxes and other costs associated with award acceptance are the sole responsibility of the award recipient. The researcher is responsible for resolving any local restrictions or requirements related to the award under the reporter’s local laws.\n\n\n__KYC Requirement__ \n\nFilecoin will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n\n- Full name \n- Country of residence\n- For US citizens: W9, W8BEN, or W8BENE forms, and any other forms reasonably requested by the Filecoin Foundation\n\nNote: KYC information is required only following confirmation of the validity of a bug report and bounty amount is decided, if any. \n\n\n__Primacy of Impact vs Primacy of Rules__\n\nFilecoin adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page. \n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the[ Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n__Report Quality__\n\nReports must be thorough and contain enough information that Filecoin Security Team can easily duplicate any findings. If specially-crafted files are required they should be submitted as attachments. Screenshots are encouraged while videos are discouraged, unless necessary. Submissions should not consist solely of a video.\n\nReports are welcome for issues that cannot be proven but still suggest a serious impact. Filecoin trusts researchers to make that determination and we will assist in clarifying impact and adjusting the severity as needed. It is encouraged to report a vulnerability early while Filecoin will help to determine the impact rather than waiting days or weeks to create a proof. \n\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n\n__Description of known issue/repository__\n\nAll issues, PRs and code comments that are already mentioned and listed in the In-Scope Assets - Related Impact-in-Scope: Issues created in the following repos:\n- https://github.com/filecoin-project/ \n- https://github.com/ipfs/ \n- https://github.com/whyrusleeping/cbor-gen\n- https://github.com/lurklab/neptune/ \n- https://github.com/lurklab/trition\n\n\n\n__Previous Audits__\n\nFilecoins’s completed audit reports can be found in Spec at https://spec.filecoin.io/. Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Filecoin has satisfied the requirements for the[ Immunefi Standard Badge.](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209)\n\n__Dev Environments and Documentation__\n\nFilecoin has included dev documentation and/or instructions to help in reviewing code and exploring for bugs:\n- [Filecoin virtual machine -  Docs](https://docs.filecoin.io/smart-contracts/fundamentals/the-fvm)\n- [Introduction to Filecoin](https://docs.filecoin.io/basics/what-is-filecoin)\n- [FVM website](https://fvm.filecoin.io/)\n- [Local Devnet](https://lotus.filecoin.io/lotus/developers/local-network/)\n- [FEVM Hardhat kit](https://github.com/filecoin-project/FEVM-Hardhat-Kit)\n- [FVM Hackathon Cheat Sheet](https://github.com/filecoin-project/awesome-filecoin/blob/main/fvm.md)\n- [Lotus Docs](https://lotus.filecoin.io/)\n- [Boost Docs](https://boost.filecoin.io/)\n- [Filecoin Calibration Testnet](https://docs.filecoin.io/networks/calibration)\n- [FVM Implementation FIP](https://github.com/filecoin-project/FIPs/blob/master/FIPS/fip-0030.md)",
@@ -505,7 +505,7 @@
       "defaultOutOfScopeWebAndApplications": null,
       "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
       "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": "We encourage good-faith security research. Reporters are required to follow this Policy in order to be eligible for an award. However, the Filecoin Foundation may, in its sole discretion, award a bounty when the researcher makes a good faith attempt to comply.\n\nThis is a discretionary award program. The Filecoin Foundation reserves the right to modify, restrict, suspend, or otherwise change any aspect of this Program at any time, and the decision as to whether or not to pay an award is at the sole discretion of the Filecoin Foundation. Any updated rules will be effective as of the time of posting, or upon such a later date as specified by the Filecoin Foundation.\n\nIf the Filecoin Foundation determines at any time in its sole discretion that a reporter or potential award recipient is ineligible, in violation of these rules or applicable laws, or engaging in behavior that it deems to violate our [Code of Conduct](https://github.com/filecoin-project/community/blob/master/CODE_OF_CONDUCT.md#), or that is obnoxious, deceptive, inappropriate, threatening, illegal or that is intended to annoy, abuse, or harass any other person, Filecoin Foundation reserves the right to disqualify that reporter or potential award recipient. Any such disqualified reporter or potential award recipient will then be ineligible for the award.\n\nPublic disclosure of the vulnerability must conform with the [Coordinated Disclosure Policy.](https://security.filecoin.io/responsible-disclosure/) The CDP is subject to change at any time.\n\nThe following activities are prohibited by this Program. Violation of these rules can result in a temporary suspension or permanent ban from the Immunefi platform at the sole discretion of the Immunefi team, which may also result in: \n- Any testing with mainnet or public testnet deployed code; all testing should be done on private testnets\n- Attempting phishing or other social engineering attacks against Filecoin Foundation, storage providers, Filecoin project contributors, ecosystem collaborators, or community members.\n- Active exploits against the Filecoin network or Filecoin miners and nodes.\n- Physical or electronic attempts to access offices where project contributors work or data centers where Filecoin nodes are located.\n- Violating the privacy of Filecoin users and community members, compromising or disrupting their systems, destroying data, stealing funds and/or harming the user experience. If a vulnerability provides unintended access to data, you must limit the amount of data you access to the minimum required for effectively demonstrating a Proof of Concept; and cease testing and submit a report immediately\n- Any denial of service attacks\n- Automated testing of services that generates significant amounts of traffic\n- Any other actions prohibited by the Immunefi Rules. These rules are subject to change at any time.  \n\nThe following impacts and attack vectors are also excluded from rewards:\n- Bugs that are in repositories other than those mentioned as in-Scope Assets or repositories that are not maintained by Filecoin Foundation.\n- Any impacts or attack vectors on third party systems and applications (e.g. browser extensions) or websites (e.g. websites and Infrastructure related to Filecoin, SSO providers, advertising networks)\n\nPlease note that Immunefi has no tolerance for spam/low-quality/incomplete bug reports, “beg bounty” behavior, and misrepresentation of assets and severity. Immunefi exists to protect the global crypto community, not facilitate grift.\n\n- Physical or electronic attempts to access offices where project contributors work or data centers where Filecoin nodes are located\n- Violating the privacy of Filecoin users and community members, compromising or disrupting their systems, destroying data, stealing funds and/or harming the user experience. If a vulnerability provides unintended access to data, you must limit the amount of data you access to the minimum required for effectively demonstrating a Proof of Concept; and cease testing and submit a report immediately\n\nPlay by the rules. This includes following the law, this Policy, and any other relevant agreements and policies, including abiding by the [Filecoin Community\nCode of Conduct](https://github.com/filecoin-project/community/blob/master/CODE_OF_CONDUCT.md#) in all communications, discussions, and/or posts related to this Program or your discovered vulnerability. Testing must not violate any law or compromise any data that is not yours. in all communications, discussions, and/or posts related to this Program or your discovered vulnerability. Testing must not violate any law or compromise any data that is not yours.\n\n",
+      "customOutOfScopeInformation": null,
       "customProhibitedActivities": [],
       "rewardsTokenNetwork": "Ethereum",
       "rewardsToken": "USDC",
