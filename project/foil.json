@@ -9,11 +9,11 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/oRE6rxG0ViPx7XVeUQqpy/45ea4203860d0c2643b4cdf7221b4c58/FOIL.png",
       "launchDate": "2025-04-23T11:11:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-05-20T17:22:25.584Z",
+      "updatedDate": "2025-05-21T16:50:19.081Z",
       "kyc": true,
       "rewards": [
         {
-          "id": 29099,
+          "id": 29405,
           "assetType": "smart_contract",
           "severity": "critical",
           "rewardModel": "range",
@@ -22,7 +22,7 @@
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 29100,
+          "id": 29406,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "range",
@@ -30,21 +30,21 @@
           "minReward": 2600
         },
         {
-          "id": 29101,
+          "id": 29407,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "up_to",
           "maxReward": 2500
         },
         {
-          "id": 29102,
+          "id": 29408,
           "assetType": "smart_contract",
           "severity": "low",
           "rewardModel": "fixed",
           "fixedReward": 1000
         },
         {
-          "id": 29103,
+          "id": 29409,
           "assetType": "websites_and_applications",
           "severity": "critical",
           "rewardModel": "range",
@@ -53,7 +53,7 @@
           "otherImpactMaxReward": 0
         },
         {
-          "id": 29104,
+          "id": 29410,
           "assetType": "websites_and_applications",
           "severity": "high",
           "rewardModel": "range",
@@ -61,14 +61,14 @@
           "minReward": 2600
         },
         {
-          "id": 29105,
+          "id": 29411,
           "assetType": "websites_and_applications",
           "severity": "medium",
           "rewardModel": "up_to",
           "maxReward": 2500
         },
         {
-          "id": 29106,
+          "id": 29412,
           "assetType": "websites_and_applications",
           "severity": "low",
           "rewardModel": "fixed",
@@ -103,6 +103,15 @@
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
           "addedAt": "2025-04-23T12:03:06.008Z"
+        },
+        {
+          "id": "5S4ook2VxhteWNwEHbSws1",
+          "type": "websites_and_applications",
+          "url": "https://www.sapience.xyz/",
+          "description": "Sapience",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2025-05-21T16:48:22.755Z"
         }
       ],
       "impacts": [
@@ -323,7 +332,7 @@
           "title": "Temporarily disabling user to access target site, such as:\n- Locking up the victim from login\n- Cookie bombing, etc."
         }
       ],
-      "programOverview": "Foil is a decentralized protocol for peer-to-peer trading of exposure to onchain resources like gas and blobspace. Using the Foil Protocol, users may supply ETH and offer to buy or sell exposure to a given period's average gas or blobs market at a price expressed via a Uniswap V3 position. When the period ends, position values are automatically fixed at the true average price.\n\nFor more information about Foil, please visit [https://www.foil.xyz/](https://www.foil.xyz/).\n\nFoil provides rewards in USDC on Ethereum, denominated in USD. For more details about the payment process, please view the **Rewards by Threat Level** section.\n\n__KYC Requirement__\n\nFoil will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nFoil adheres to  **Category 3: Approval Required** . This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nFoil adheres to the Primacy of Impact for the following impacts:\n\n- Website & Application  —  Critical\n- Smart Contract  —  Critical\n- Smart Contract  —  High\n- Smart Contract  —  Medium\n- Smart Contract  —  Low\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. \n\nFor more information, please see [Best Practices: Primacy of Impact](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact) \n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n\n- front run the creation of tokens or vaults in uni\n- preventing settlement by disputing uma forever Foil uses UMA as a settlement oracle. If a user would dispute the resolution, and this goes beyond the UMA liveness period into the DMV token holder vote process of UMA, the protocol needs to resubmit the settlement price for a given market. This new settlement submission could in turn be disputed again and result in the same issue once the dispute period is over, not permitting the protocol to settle a market.we believe that the loss of funds for the person griefing is a sufficient deterrent for the time being.\n\n__Previous Audits__\n\nFoil’s completed audit reports can be found at https://docs.foil.xyz/audit_reports. Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.",
+      "programOverview": "Foil is a decentralized protocol for peer-to-peer trading of exposure to onchain resources like gas and blobspace. Using the Foil Protocol, users may supply ETH and offer to buy or sell exposure to a given period's average gas or blobs market at a price expressed via a Uniswap V3 position. When the period ends, position values are automatically fixed at the true average price.\n\nFor more information about Foil, please visit [https://www.foil.xyz/](https://www.foil.xyz/).\n\nFoil provides rewards in USDC on Ethereum, denominated in USD. For more details about the payment process, please view the **Rewards by Threat Level** section.\n\nSapience is a prediction market built on top Foil protocol smart contracts. The website and the app can be found on [https://www.sapience.xyz/](https://www.sapience.xyz/).  \n\n__KYC Requirement__\n\nFoil will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nFoil adheres to  **Category 3: Approval Required** . This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nFoil adheres to the Primacy of Impact for the following impacts:\n\n- Website & Application  —  Critical\n- Smart Contract  —  Critical\n- Smart Contract  —  High\n- Smart Contract  —  Medium\n- Smart Contract  —  Low\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. \n\nFor more information, please see [Best Practices: Primacy of Impact](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact) \n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n\n- front run the creation of tokens or vaults in uni\n- preventing settlement by disputing uma forever Foil uses UMA as a settlement oracle. If a user would dispute the resolution, and this goes beyond the UMA liveness period into the DMV token holder vote process of UMA, the protocol needs to resubmit the settlement price for a given market. This new settlement submission could in turn be disputed again and result in the same issue once the dispute period is over, not permitting the protocol to settle a market.we believe that the loss of funds for the person griefing is a sufficient deterrent for the time being.\n\n__Previous Audits__\n\nFoil’s completed audit reports can be found at https://docs.foil.xyz/audit_reports. Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.",
       "prioritizedVulnerabilities": "Vulnerabilities are prioritized according to severity and/or impact.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD $10,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD $5,100 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\nFor critical smart contract bugs on testnet assets, the reward is paid as a flat amount of $1000. This is because there are no actual funds at risk on the testnet, hence limits objective calculation. \n\nFor critical web/apps bugs, reports will be rewarded with $10,000, only if the impact leads to:\n\n- A loss of funds involving an attack that does not require any user action\n- Private key or private key generation leakage leading to unauthorized access to user funds \n\nAll other impacts that would be classified as Critical would be rewarded a flat amount of $5,100. The rest of the severity levels are paid out according to the Impact in Scope table.  \n\n__Repeatable Attack Limitations__\n\n- If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n- For critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Level Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of $2,600 to $5,000 depending on the funds at risk, capped at the maximum high reward.  \n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Foil team directly and are denominated in USD. However, payments are done in USDC on Ethereum L1.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
       "outOfScopeAndRules": null,
@@ -397,6 +406,12 @@
           "title": "Documentation",
           "description": "Documentation and further resources",
           "url": "https://docs.foil.xyz/"
+        },
+        {
+          "id": 247,
+          "title": "Sapience Documentation",
+          "description": "Documentation and further resources for Sapience",
+          "url": "https://docs.sapience.xyz/"
         }
       ],
       "primacy": "primacy_of_rules",
