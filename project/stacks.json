@@ -9,11 +9,11 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7rDt9WPKt1aTDNVmrLDaZ9/e8474a103962162a8e704ac863984684/stacks__1_.png",
       "launchDate": "2022-03-31T19:30:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-05-20T11:18:59.878Z",
+      "updatedDate": "2025-05-28T16:17:30.490Z",
       "kyc": true,
       "rewards": [
         {
-          "id": 29202,
+          "id": 29725,
           "assetType": "blockchain_dlt",
           "severity": "critical",
           "rewardModel": "up_to",
@@ -21,28 +21,28 @@
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 29203,
+          "id": 29726,
           "assetType": "blockchain_dlt",
           "severity": "high",
           "rewardModel": "up_to",
           "maxReward": 25000
         },
         {
-          "id": 29204,
+          "id": 29727,
           "assetType": "blockchain_dlt",
           "severity": "medium",
           "rewardModel": "up_to",
           "maxReward": 5000
         },
         {
-          "id": 29205,
+          "id": 29728,
           "assetType": "blockchain_dlt",
           "severity": "low",
           "rewardModel": "fixed",
           "fixedReward": 1000
         },
         {
-          "id": 29206,
+          "id": 29729,
           "assetType": "smart_contract",
           "severity": "critical",
           "rewardModel": "up_to",
@@ -50,21 +50,21 @@
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 29207,
+          "id": 29730,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "up_to",
           "maxReward": 25000
         },
         {
-          "id": 29208,
+          "id": 29731,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "up_to",
           "maxReward": 5000
         },
         {
-          "id": 29209,
+          "id": 29732,
           "assetType": "smart_contract",
           "severity": "low",
           "rewardModel": "fixed",
@@ -300,7 +300,7 @@
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for each category, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. If there is any discrepancy with the classification in the Impacts in Scope section, the classification in the Impacts in Scope section will hold true.\n\n__Blockchain, Smart Contracts or sBTC__\n\n- Critical: USD 25 000 up to USD 250 000\n- High: USD 5 000 up to USD 25 000\n- Medium: USD 5 000\n- Low: USD 1 000\n- Informational: Only in exceptional circumstances and solely at our discretion\n\nPlease note that Critical finding bounties are capped at 10% of the damage resulting from the finding. This mostly takes into account technical and financial damage but also includes the “human” impact, including reputational risk. We will guarantee a minimum payout of $25,000 USD for all valid Critical findings.\n\n__For sBTC:__\n\n- Non-Criticals which can be objectively determined to only be able to affect <1% of users may be downgraded by 1 severity.\n- Non-Critical impacts that are dependent on execution to have a malicious signer involved, may be downgraded by 1 severity level.\n- Non-Critical impacts on availability (e.g., denial of services) that are dependent on execution to have a malicious signer involved, may be downgraded by 1 or more severity levels.\n- Vulnerabilities related to WSTS will only be considered in scope if they can be exploited in sBTC.\n\n\n__We agree to:__\n\n  - Respond meaningfully to all reported issues in a timely manner.\n  - Not pursue legal action against or “counter-hack” any researchers acting in good faith and abiding by this program’s rules.\n  - Consider theoretical attacks and findings without proof-of-concept code as long as technically meaningful, evidence-based arguments are provided.\n\n__You must:__\n\n  - Undergo full KYC. We are based in the United States and abide by all relevant law, including OFAC controls and sanctions.\n  - Not be based or test from an OFAC-sanctioned country or region or (be a sanctioned individual or organization) as defined here: [https://ofac.treasury.gov/sanctions-programs-and-country-information](https://ofac.treasury.gov/sanctions-programs-and-country-information)\n  - Report all bugs using this template. __All fields are required unless otherwise marked__. Fields with a star (*) must be encrypted with the security@stacks.org GPG key, fingerprint ABA3 7FA3 6DBB A591 B0E5  5949 0E94 D065 B32E C7E6.\n    - Executive summary of issue: \n    - Finding details: \n    - Repository, file, and line of code where finding is found:  \n    - Steps to replicate*: \n    - Proof-of-concept exploitation code*: \n    - Screenshots or video of finding being exploited using the PoC you have provided*:  \n    - Impact of finding (short term): \n    - Impact of finding (long term): \n    - Mitigation suggestions (short term):\n    - Mitigation suggestions (long term): \n    - (Optional) Suggested patch:\n    - (Optional) Any useful links or resources:\n    - (Optional) Do you want a shout-out on our Security Wall of Fame? \n    - (Optional, if approved) Do you want a cybersecurity-themed NFT sent to your Stacks wallet?\n  - Use a private testnet. Testing on mainnet or public testnets is forbidden.\n\nPayouts are handled by the __Stacks Foundation team__ directly and are denominated in __USD__. However, payments will be made in the __USD__ equivalent in the __Stacks__ token (STX).",
       "outOfScopeAndRules": ".",
       "assetsBodyV2": "All smart contracts of Stacks can be found at [https://github.com/stacks-network/stacks-blockchain/blob/master/src/chainstate/stacks/boot](https://github.com/stacks-network/stacks-blockchain/blob/master/src/chainstate/stacks/boot).  However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nThough the Node implementation asset has “testnet” in the folder name, it is not a testnet node and is within the scope of the bug bounty program.",
-      "impactsBody": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Please note that all variants of remote denial-of-service attacks will automatically have their impact set to “Low”, regardless of any further downstream impact.__\n\n__Blockchain__\n\n**Critical:**\n- Any network to shut down or otherwise not confirm new valid transactions for multiple blocks\n- Any triggering of a deep fork of 10 or more blocks without spending the requisite Bitcoin\n- Any direct loss of funds other than through any form of freezing\n- Any chain split caused by different nodes processing the same block or transaction and yielding different results\n- Any confirmation of an invalid transaction, such as with an incorrect nonce\n\n**High:**\n- Any unintended chain split or network partition\n- Any remotely-exploitable memory access, disk access, or persistent code execution\n- Attacks are restricted to the Stacks blockchain RPC/P2P ports\n\n**Medium:**\n- Any transient consensus failures\n\n**Low:**\n- Any remotely-exploitable denial of service in a node\n- Any network denial of service impacting more than 10% of miners that does not shut down the network \n\n__Smart Contracts__\n\n**Critical:**\n- Any loss of user funds by permanent freezing or theft\n- Any loss of governance funds (limited to `.cost-vote`)\n- Any governance vote manipulation\n\n**High:**\n- Any theft of an unclaimed reward\n- Any permanent freezing of an unclaimed reward\n\n**Medium:**\n- Any block stuffing without fund transfers being blocked\n- Any block stuffing such that smart contract calls can be blocked but without paying any requisite higher transaction fees\n\n**Low:**\n- Any in-scope smart contract fails to deliver promised returns, but doesn’t lose value\n- Any underpricing or overpricing of smart contract operations\n\nPlease review open PRs before your submission as all duplicate attacks are considered “Out of Scope” as per below.\n\n__sBTC__\n\n**Critical:**\n- Direct loss of funds\n- Permanent freezing of funds\n**High:**\n- sBTC not being able to confirm new transactions (total sBTC shutdown)\n\n**Medium:**\n- A bug in the respective layer 1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk\n- Shutdown of greater than or equal to 30% of sBTC signers without brute force actions, but does not shut down the network\n- Temporarily freezing sBTC transactions\n- API crash preventing correct processing of sBTC deposits/withdrawals\n\n**Low:**\n- Modification of transaction fees outside of design parameters\n- Shutdown of greater than 10% or equal to but less than 30% of sBTC signers without brute force actions, but does not shut down the network\n\nPlease review open PRs before your submission as all duplicate attacks are considered “Out of Scope” as per below.",
+      "impactsBody": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Please note that all variants of remote denial-of-service attacks will automatically have their impact set to “Low”, regardless of any further downstream impact.__\n\n__Blockchain__\n\n**Critical:**\n- Any network to shut down or otherwise not confirm new valid transactions for multiple blocks\n- Any triggering of a deep fork of 10 or more blocks without spending the requisite Bitcoin\n- Any direct loss of funds other than through any form of freezing\n- Any chain split caused by different nodes processing the same block or transaction and yielding different results\n- Any confirmation of an invalid transaction, such as with an incorrect nonce\n\n**High:**\n- Any unintended chain split or network partition\n- Any remotely-exploitable memory access, disk access, or persistent code execution\n- Attacks are restricted to the Stacks blockchain RPC/P2P ports\n\n**Medium:**\n- Any transient consensus failures\n\n**Low:**\n- Any remotely-exploitable denial of service in a node\n- Any network denial of service impacting more than 10% of miners that does not shut down the network \n\n__Smart Contracts__\n\n**Critical:**\n- Any loss of user funds by permanent freezing or theft\n- Any loss of governance funds (limited to `.cost-vote`)\n- Any governance vote manipulation\n\n**High:**\n- Any theft of an unclaimed reward\n- Any permanent freezing of an unclaimed reward\n\n**Medium:**\n- Any block stuffing without fund transfers being blocked\n- Any block stuffing such that smart contract calls can be blocked but without paying any requisite higher transaction fees\n\n**Low:**\n- Any in-scope smart contract fails to deliver promised returns, but doesn’t lose value\n- Any underpricing or overpricing of smart contract operations\n\nPlease review open PRs before your submission as all duplicate attacks are considered “Out of Scope” as per below.\n\n__sBTC__\n\n**Critical:**\n- Direct loss of funds\n- Permanent freezing of funds\n\n**High:**\n- sBTC not being able to confirm new transactions (total sBTC shutdown)\n\n**Medium:**\n- A bug in the respective layer 1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk\n- Shutdown of greater than or equal to 30% of sBTC signers without brute force actions, but does not shut down the network\n- Temporarily freezing sBTC transactions\n- API crash preventing correct processing of sBTC deposits/withdrawals\n\n**Low:**\n- Modification of transaction fees outside of design parameters\n- Shutdown of greater than 10% or equal to but less than 30% of sBTC signers without brute force actions, but does not shut down the network\n\nPlease review open PRs before your submission as all duplicate attacks are considered “Out of Scope” as per below.",
       "immunefiStandard": true,
       "tags": {
         "general": [
