@@ -11,7 +11,39 @@
       "endDate": null,
       "updatedDate": "2025-01-24T16:06:02.886Z",
       "kyc": true,
-      "rewards": [],
+      "rewards": [
+        {
+          "id": 11511,
+          "assetType": "smart_contract",
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 100000,
+          "minReward": 20000,
+          "rewardCalculationPercentage": 10
+        },
+        {
+          "id": 11512,
+          "assetType": "smart_contract",
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 25000,
+          "minReward": 10000
+        },
+        {
+          "id": 11513,
+          "assetType": "smart_contract",
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 2500
+        },
+        {
+          "id": 11514,
+          "assetType": "smart_contract",
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
+        }
+      ],
       "audits": [
         {
           "id": "4GFxn6JbaZjIcWuKTuW1Z8",
@@ -346,7 +378,86 @@
           "addedAt": "2024-12-20T14:39:36.066Z"
         }
       ],
-      "impacts": [],
+      "impacts": [
+        {
+          "id": 14,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results"
+        },
+        {
+          "id": 15,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+        },
+        {
+          "id": 17,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
+        },
+        {
+          "id": 22,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Protocol insolvency"
+        },
+        {
+          "id": 23,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
+        },
+        {
+          "id": 24,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Theft of unclaimed royalties"
+        },
+        {
+          "id": 25,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
+        },
+        {
+          "id": 27,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Temporary freezing of funds"
+        },
+        {
+          "id": 30,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Block stuffing"
+        },
+        {
+          "id": 31,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+        },
+        {
+          "id": 32,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Theft of gas"
+        },
+        {
+          "id": 33,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
+        },
+        {
+          "id": 34,
+          "type": "smart_contract",
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
+        }
+      ],
       "programOverview": "FBTC is a decentralized protocol that enables the seamless transfer and management of Bitcoin (BTC) across various blockchain networks. By leveraging advanced cryptographic techniques and decentralized governance, FBTC ensures the security, efficiency, and interoperability of BTC assets within the broader blockchain ecosystem.\n\nFor more information about FBTC, please visit https://fbtc.com/\n\nFBTC provides rewards in USDC/USDT on Ethereum, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below.\n\nFBTC’s completed audit reports can be found at https://github.com/fbtc-xyz/fbtc-contract/tree/main/audits. Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.",
       "prioritizedVulnerabilities": "FBTC’s codebase can be found at  https://github.com/fbtc-com. Documentation and further resources can be found on https://docs.fbtc.com/.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 100 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 20 000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Repeatable Attack Limitations__\n\n- If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack is eligible for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n- For critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Level Reports__\n\n- High vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of USD 10 000 to USD 25 000 depending on the funds at risk, capped at USD 25 000.  \n\n\n- In the event of temporary freezing, the reward doubles from the full frozen value for every additional [24h] that the funds are temporarily frozen, up to the maximum high reward cap of USD 25 000. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.",
@@ -382,30 +493,35 @@
         "smartcontract_rewards": [],
         "web_rewards": []
       },
-      "websiteUrl": null,
-      "description": null,
-      "githubUrl": null,
+      "websiteUrl": "https://fbtc.com/",
+      "description": "FBTC is a decentralized protocol that enables the seamless transfer and management of Bitcoin (BTC) across various blockchain networks. By leveraging advanced cryptographic techniques and decentralized governance, FBTC ensures the security, efficiency, and interoperability of BTC assets within the broader blockchain ecosystem.",
+      "githubUrl": "https://github.com/fbtc-com",
       "feasibilityLimitations": null,
       "prohibitedActivites": null,
-      "responsiblePublicationCategory": null,
+      "responsiblePublicationCategory": "category_3",
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
-      "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+      "defaultOutOfScopeWebAndApplications": "- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n  - This does not exclude reflected HTML injection with or without JavaScript\n  - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering",
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
       "customOutOfScopeInformation": null,
       "customProhibitedActivities": [],
-      "rewardsTokenNetwork": null,
-      "rewardsToken": null,
-      "eligibilityCriteria": null,
+      "rewardsTokenNetwork": "ETH",
+      "rewardsToken": "USDC/USDT",
+      "eligibilityCriteria": [
+        "no_ofac_sdn",
+        "no_official_contributor",
+        "no_employee",
+        "no_auditor"
+      ],
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [],
       "programDocumentations": [],
-      "primacy": null,
-      "newProgramRewardsEnabled": false,
+      "primacy": "primacy_of_rules",
+      "newProgramRewardsEnabled": true,
       "findingsUrl": null,
       "premiumTriaging": false
     },
