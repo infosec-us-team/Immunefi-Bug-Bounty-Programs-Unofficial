@@ -9,11 +9,11 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1zKAeSF82onOI6O9kgRTXQ/b63b1c51d20124370cc686a5e1bbcefc/Farcaster.png",
       "launchDate": "2025-06-18T16:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-06-18T17:42:25.118Z",
+      "updatedDate": "2025-06-23T16:00:35.201Z",
       "kyc": true,
       "rewards": [
         {
-          "id": 31024,
+          "id": 31052,
           "assetType": "websites_and_applications",
           "severity": "critical",
           "rewardModel": "range",
@@ -22,21 +22,21 @@
           "otherImpactMaxReward": 0
         },
         {
-          "id": 31025,
+          "id": 31053,
           "assetType": "websites_and_applications",
           "severity": "high",
           "rewardModel": "up_to",
           "maxReward": 5000
         },
         {
-          "id": 31026,
+          "id": 31054,
           "assetType": "websites_and_applications",
           "severity": "medium",
           "rewardModel": "up_to",
           "maxReward": 2500
         },
         {
-          "id": 31027,
+          "id": 31055,
           "assetType": "websites_and_applications",
           "severity": "low",
           "rewardModel": "fixed",
@@ -75,34 +75,16 @@
       ],
       "impacts": [
         {
-          "id": 52,
-          "type": "websites_and_applications",
-          "severity": "medium",
-          "title": "Redirecting users to malicious websites (open redirect)"
-        },
-        {
-          "id": 46,
-          "type": "websites_and_applications",
-          "severity": "high",
-          "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:\n- HTML injection without JavaScript\n- Replacing existing text with arbitrary text\n- Arbitrary file uploads, etc."
-        },
-        {
-          "id": 47,
-          "type": "websites_and_applications",
-          "severity": "high",
-          "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Email\n- Password of the victim etc."
-        },
-        {
-          "id": 49,
-          "type": "websites_and_applications",
-          "severity": "high",
-          "title": "Subdomain takeover without already-connected wallet interaction"
-        },
-        {
           "id": 50,
           "type": "websites_and_applications",
           "severity": "medium",
           "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Changing the first/last name of user\n- Enabling/disabling notifications"
+        },
+        {
+          "id": 52,
+          "type": "websites_and_applications",
+          "severity": "medium",
+          "title": "Redirecting users to malicious websites (open redirect)"
         },
         {
           "id": 51,
@@ -135,6 +117,12 @@
           "title": "Theft of a user session through a single user interaction."
         },
         {
+          "id": 49,
+          "type": "websites_and_applications",
+          "severity": "high",
+          "title": "Subdomain takeover without already-connected wallet interaction"
+        },
+        {
           "id": 41,
           "type": "websites_and_applications",
           "severity": "critical",
@@ -153,6 +141,18 @@
           "title": "Malicious interactions with an already-connected wallet, such as:\n- Modifying transaction arguments or parameters\n- Substituting contract addresses\n- Submitting malicious transactions"
         },
         {
+          "id": 46,
+          "type": "websites_and_applications",
+          "severity": "high",
+          "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:\n- HTML injection without JavaScript\n- Replacing existing text with arbitrary text\n- Arbitrary file uploads, etc."
+        },
+        {
+          "id": 47,
+          "type": "websites_and_applications",
+          "severity": "high",
+          "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Email\n- Password of the victim etc."
+        },
+        {
           "id": 5600,
           "type": "websites_and_applications",
           "severity": "critical",
@@ -165,12 +165,6 @@
           "title": "Sitewide Service Disruption: Intentional disruption of core services sitewide, affecting multiple users."
         },
         {
-          "id": 5602,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Improperly disclosing confidential user information, such as:  Email address Phone number Physical address, etc."
-        },
-        {
           "id": 5603,
           "type": "websites_and_applications",
           "severity": "low",
@@ -181,6 +175,12 @@
           "type": "websites_and_applications",
           "severity": "low",
           "title": "Taking over broken or expired outgoing links, such as:  Social media handles, etc."
+        },
+        {
+          "id": 5609,
+          "type": "websites_and_applications",
+          "severity": "medium",
+          "title": "Improperly disclosing confidential user information, such as: Email address Phone number Physical address, etc."
         }
       ],
       "programOverview": "Farcaster is a social media application built on top of the Farcaster protocol, a decentralized social network. Farcaster itself is a blockchain-based protocol that enables the creation and connection of social apps. Essentially, Farcaster is a specific social app that leverages the Farcaster protocol to offer a decentralized social experience.\n\nFor more information about Farcaster, please visit https://Farcaster.com/.\n\nFarcaster provides rewards in USDC on Ethereum, denominated in USD. For more details about the payment process, please view the **Rewards by Threat Level** section.\n\n__KYC Requirement__\n\nImmunefi will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nFarcaster adheres to  **Category 2: Notice Required** . This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our Responsible Publication page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nFarcaster adheres to the Primacy of Impact for the following impacts:\n\n- Website & Application  —  Critical \n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. \n\nFor more information, please see Best Practices: Primacy of Impact \n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the Immunefi PoC Guidelines and Rules.\n\n__Previous Audits__\n\nFarcaster’s completed audit reports can be found at Project's Audits URL. Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Rewards by Threat Level__\n\nRewards are distributed according to the impact of the vulnerability based on the Immunefi Vulnerability Severity Classification System V2.3. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical web/apps bugs, reports will be rewarded with USD 25 000, only if the impact leads to:\n\n- A loss of funds involving an attack that does not require any user action\n- Private key or private key generation leakage leading to unauthorized access to user funds \n- Improperly disclosing confidential user information, such as:\n- Email address\n- Phone number\n- Physical address, etc.\n\nAll other impacts that would be classified as Critical would be rewarded a flat amount of **USD 10 000**. The rest of the severity levels are paid out according to the Impact in Scope table.",
@@ -217,7 +217,7 @@
         "web_rewards": []
       },
       "websiteUrl": "https://farcaster.com/",
-      "description": "Farcaster is a social media application built on top of the Farcaster protocol, a decentralized social network. Farcaster itself is a blockchain-based protocol that enables the creation and connection of social apps. Essentially, Farcaster is a specific social app that leverages the Farcaster protocol to offer a decentralized social experience",
+      "description": "Farcaster is a social media application built on top of the Farcaster protocol, a decentralized social network. Farcaster itself is a blockchain-based protocol that enables the creation and connection of social apps. Essentially, Farcaster is a specific social app that leverages the Farcaster protocol to offer a decentralized social experience ",
       "githubUrl": null,
       "feasibilityLimitations": null,
       "prohibitedActivites": null,
