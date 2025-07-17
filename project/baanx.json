@@ -9,11 +9,11 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6fm8DZ0HNzCN0Ss4icDeEu/258076f96c08147d504ce11bebc5b2c2/pl8hkO4f_400x400.png",
       "launchDate": "2025-06-30T06:26:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-07-11T17:50:12.518Z",
+      "updatedDate": "2025-07-16T12:56:13.850Z",
       "kyc": true,
       "rewards": [
         {
-          "id": 31925,
+          "id": 32384,
           "assetType": "smart_contract",
           "severity": "critical",
           "rewardModel": "range",
@@ -22,7 +22,7 @@
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 31926,
+          "id": 32385,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "range",
@@ -30,37 +30,37 @@
           "minReward": 5000
         },
         {
-          "id": 31927,
+          "id": 32386,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "fixed",
           "fixedReward": 2500
         },
         {
-          "id": 31928,
+          "id": 32387,
           "assetType": "smart_contract",
           "severity": "low",
           "rewardModel": "fixed",
           "fixedReward": 1000
         },
         {
-          "id": 31929,
+          "id": 32388,
           "assetType": "websites_and_applications",
           "severity": "critical",
           "rewardModel": "range",
-          "maxReward": 25000,
+          "maxReward": 50000,
           "minReward": 5000,
           "otherImpactMaxReward": 0
         },
         {
-          "id": 31930,
+          "id": 32389,
           "assetType": "websites_and_applications",
           "severity": "high",
           "rewardModel": "fixed",
           "fixedReward": 2500
         },
         {
-          "id": 31931,
+          "id": 32390,
           "assetType": "websites_and_applications",
           "severity": "medium",
           "rewardModel": "fixed",
@@ -314,7 +314,7 @@
       ],
       "programOverview": "Baanx is a global leader in fintech payments and digital assets, specialising in crypto-as-a-service.\n\nFor more information about Baanx, please visit https://www.baanx.com/.\n\nBaanx provides rewards in USDT on ETH, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below.\n\n__Primacy of Impact vs Primacy of Rules__\n\nBaanx adheres to the Primacy of Impact for the following impacts:\n\n- Smart Contract  —  Critical\n- Smart Contract  —  High\n- Website & Application  —  Critical\n- Website & Application  —  High\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. \n\nFor more information, please see [Best Practices: Primacy of Impact](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact) \n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program(.",
       "prioritizedVulnerabilities": "_blank_",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the Immunefi Vulnerability Severity Classification System V2.3. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD $50,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD $10,000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\nFor critical web/apps bugs, reports will be rewarded with $25,000, only if the impact leads to:\n- A loss of funds involving an attack that does not require any user action\n- Private key or private key generation leakage leading to unauthorized access to user funds \n\nAll other impacts that would be classified as Critical would be rewarded a flat amount of $5,000. The rest of the severity levels are paid out according to the Impact in Scope table.\n\n__Repeatable Attack Limitations__\n\n- If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n- For critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Level Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of $5,000 to $10,000 depending on the funds at risk, capped at the maximum high reward.  \n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.",
+      "rewardsBody": "Infrastructure related to card processing includes many third-party vendors including Visa, Mastercard, processors, and fraud-risk engines which protect the related infrastructure.  \n\nAttacks on those third-party systems are out-of-scope, but any attack that bypasses fraud/risk checks, that are not caught by these fraud/risk systems, would be considered in-scope.\n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD $50,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD $10,000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\nFor critical web and applications vulnerabilities, reports will be eligible for a reward of up to $50,000.  Many card vulnerabilities are mitigated at daily settlement with merchant, so any and all attacks related to user spending and infrastructure must focus on impact and  must demonstrate:\n- loss of funds resulting from an attack that does not require user interaction or consent, collusion with a merchant or using that merchant to generate fraudulant transactions, and must result in unauthorized transfer of funds, misdirection of funds, unbounded spending beyond limits even following daily settlement, or exposure of transactional keys or encryption keys.\n\n- Infrastructure breaches exposing cryptographic secret keys, personally identifiable information (PII) of multiple users beyond the reporter's own record, or scenarios enabling unauthorized spend or loss of funds affecting the platform or a user other than the currently authenticated individual.\n\n- Unauthorized leakage of private keys or private key generation mechanisms, leading to direct access and compromise of user funds.\n\n- Unbounded loss/spend of funds resulting from transactions which bypass  internal controls , merchant controls, and card/processor controls which over-spend users unsettled funds beyond daily acceptable risk threadsholds that are not detected by fraud or risk systems.\n\nAll other impacts that would be classified as Critical would be rewarded a flat amount of $5,000. The rest of the severity levels are paid out according to the Impact in Scope table.\n\n__Repeatable Attack Limitations__\n\n- If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. \n- The amount of funds at risk will be calculated with the impact of the first attack being at 100% and then a reduction of 25% from the amount of the first attack for every [300 blocks] the attack needs for subsequent attacks from the first attack, rounded down.\n\n\n__Reward Calculation for High Level Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties - when available on the platform - are rewarded within a range of $5,000 to $10,000 with the reward calculated based on 100% of the funds at risk, though capped at the maximum high reward. \n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward.",
       "outOfScopeAndRules": null,
       "assetsBodyV2": null,
       "impactsBody": null,
@@ -353,7 +353,29 @@
       "feasibilityLimitations": null,
       "prohibitedActivites": null,
       "responsiblePublicationCategory": "category_2",
-      "knownIssues": [],
+      "knownIssues": [
+        {
+          "id": 65,
+          "description": "Theoretical vulnerability where a user could conduct a Card/POS payment and withdraw funds from their wallet during the same on-chain transaction window (1 block). Compensating controls are in place, including back-end processor and database post-chain verification, to mitigate any potential impact",
+          "link": "https://www.withcl.com/",
+          "lastUpdatedAt": "2025-01-01T00:00:00.000Z",
+          "relatedImpactInScope": "smart_contract"
+        },
+        {
+          "id": 64,
+          "description": "Email verification bypass during signup, allowing creation of accounts with unowned emails. This does not demonstrate taking or modifying authenticated actions on behalf of existing users without their interaction, such as changing registration information post-creation, making trades, withdrawals, or other in-scope impacts. Mitigating procedures are in place including back-end KYC and further verifications, and this is explicitly out of scope per program guidelines.",
+          "link": "https://withcl.com",
+          "lastUpdatedAt": "2025-01-01T00:00:00.000Z",
+          "relatedImpactInScope": "websites_and_applications"
+        },
+        {
+          "id": 63,
+          "description": "Known issue related to certain types of small transactions using aUSDC",
+          "link": "https://withcl.com",
+          "lastUpdatedAt": "2025-03-01T00:00:00.000Z",
+          "relatedImpactInScope": "websites_and_applications"
+        }
+      ],
       "knownIssueAssurance": false,
       "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
       "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
