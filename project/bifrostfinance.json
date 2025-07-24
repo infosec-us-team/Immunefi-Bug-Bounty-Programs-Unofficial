@@ -13,16 +13,16 @@
       "kyc": false,
       "rewards": [
         {
-          "id": 33440,
+          "id": 33576,
           "assetType": "blockchain_dlt",
           "severity": "critical",
           "rewardModel": "range",
           "maxReward": 500000,
           "minReward": 20000,
-          "rewardCalculationPercentage": 10
+          "rewardCalculationPercentage": 0
         },
         {
-          "id": 33441,
+          "id": 33577,
           "assetType": "blockchain_dlt",
           "severity": "high",
           "rewardModel": "range",
@@ -30,7 +30,15 @@
           "minReward": 5000
         },
         {
-          "id": 33442,
+          "id": 33578,
+          "assetType": "blockchain_dlt",
+          "severity": "medium",
+          "rewardModel": "range",
+          "maxReward": 5000,
+          "minReward": 1000
+        },
+        {
+          "id": 33579,
           "assetType": "websites_and_applications",
           "severity": "critical",
           "rewardModel": "range",
@@ -39,7 +47,7 @@
           "otherImpactMaxReward": 0
         },
         {
-          "id": 33443,
+          "id": 33580,
           "assetType": "websites_and_applications",
           "severity": "high",
           "rewardModel": "range",
@@ -47,7 +55,7 @@
           "minReward": 1000
         },
         {
-          "id": 33444,
+          "id": 33581,
           "assetType": "websites_and_applications",
           "severity": "medium",
           "rewardModel": "fixed",
@@ -85,7 +93,7 @@
         },
         {
           "id": "7CyW6BDbRITtYEr4nVhoY0",
-          "type": "websites_and_applications",
+          "type": "blockchain_dlt",
           "url": "https://github.com/bifrost-io/bifrost/tree/develop/pallets/leverage-staking",
           "description": "Bifrost",
           "isPrimacyOfImpact": null,
@@ -101,10 +109,58 @@
           "title": "Injecting/modifying the static content on the target application without Javascript (Persistent) such as HTML injection without Javascript, replacing existing text with arbitrary text, arbitrary file uploads, etc."
         },
         {
-          "id": 49,
-          "type": "websites_and_applications",
+          "id": 6,
+          "type": "blockchain_dlt",
           "severity": "high",
-          "title": "Subdomain takeover without already-connected wallet interaction"
+          "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments"
+        },
+        {
+          "id": 7,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Causing network processing nodes to process transactions from the mempool beyond set parameters"
+        },
+        {
+          "id": 8,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "RPC API crash affecting programs with greater than or equal to 25% of the market capitalization on top of the respective layer"
+        },
+        {
+          "id": 10,
+          "type": "blockchain_dlt",
+          "severity": "medium",
+          "title": "Shutdown of greater than or equal to 30% of network processing nodes without brute force actions, but does not shut down the network"
+        },
+        {
+          "id": 9,
+          "type": "blockchain_dlt",
+          "severity": "medium",
+          "title": "Increasing network processing node resource consumption by at least 30% without brute force actions, compared to the preceding 24 hours"
+        },
+        {
+          "id": 11,
+          "type": "blockchain_dlt",
+          "severity": "medium",
+          "title": "A bug in the respective layer 0/1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk"
+        },
+        {
+          "id": 35,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Execute arbitrary system commands"
+        },
+        {
+          "id": 36,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Retrieve sensitive data/files from a running server, such as:\n- /etc/shadow\n- database passwords\n- blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
+        },
+        {
+          "id": 37,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Taking down the application/website"
         },
         {
           "id": 52,
@@ -113,10 +169,10 @@
           "title": "Redirecting users to malicious websites (open redirect)"
         },
         {
-          "id": 41,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Subdomain takeover with already-connected wallet interaction"
+          "id": 5,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Unintended chain split (network partition)"
         },
         {
           "id": 2864,
@@ -137,12 +193,6 @@
           "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data"
         },
         {
-          "id": 2872,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys(this does not include non-sensitive environment variables, open source code, or usernames)"
-        },
-        {
           "id": 2873,
           "type": "websites_and_applications",
           "severity": "critical",
@@ -159,6 +209,24 @@
           "type": "blockchain_dlt",
           "severity": "high",
           "title": "Direct fund losses caused by non-vToken additional issuance"
+        },
+        {
+          "id": 5661,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Network not being able to confirm new transactions (Total network shutdown)"
+        },
+        {
+          "id": 5662,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Unintended permanent chain split requiring hard fork (Network partition requiring hard fork)"
+        },
+        {
+          "id": 5663,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Permanent freezing of funds (fix requires hardfork)"
         }
       ],
       "programOverview": "Bifrost is a Liquid Staking app-chain tailored for all blockchains, utilizing decentralized cross-chain interoperability to empower users to earn staking rewards and DeFi yields with flexibility, liquidity, and high security across multiple chains.\n\nFor more information about Bifrost, please visit https://bifrost.finance",
@@ -199,7 +267,6 @@
       },
       "legacy": {
         "technologies": [
-          "Websites and Applications",
           "Blockchain/DLT"
         ],
         "blockchain_rewards": [
