@@ -5,15 +5,15 @@
       "id": "horizen",
       "slug": "horizen",
       "project": "Horizen",
-      "maxBounty": 50000,
+      "maxBounty": 20000,
       "logo": "https://qn5bmgziiocgawpp.public.blob.vercel-storage.com/43562-DuC7v0DHS6PQwf4rZxZqc-AXDcBf217UD2Oh7CFoF8xcDZirbcQp.png",
       "launchDate": "2023-04-20T13:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-08-01T14:20:08.453Z",
+      "updatedDate": "2025-08-04T07:05:11.312Z",
       "kyc": true,
       "rewards": [
         {
-          "id": 33998,
+          "id": 34002,
           "assetType": "smart_contract",
           "severity": "critical",
           "rewardModel": "fixed",
@@ -21,21 +21,22 @@
           "fixedReward": 20000
         },
         {
-          "id": 33999,
+          "id": 34003,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "fixed",
           "fixedReward": 7500
         },
         {
-          "id": 34000,
+          "id": 34004,
           "assetType": "websites_and_applications",
           "severity": "critical",
           "rewardModel": "fixed",
+          "otherImpactMaxReward": 0,
           "fixedReward": 10000
         },
         {
-          "id": 34001,
+          "id": 34005,
           "assetType": "websites_and_applications",
           "severity": "high",
           "rewardModel": "fixed",
@@ -44,6 +45,15 @@
       ],
       "audits": null,
       "assets": [
+        {
+          "id": "4kNaaJbvzDtJXmrX4bsnBw",
+          "type": "smart_contract",
+          "url": "https://github.com/HorizenOfficial/horizen-migration/tree/main/erc20-migration/contracts",
+          "description": "Horizen Migration solidity smart contracts only, no Python Scripts are under scope.",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2025-08-04T07:00:44.043Z"
+        },
         {
           "id": "1UrX7J5HzH5NGN4I7yIpDg",
           "type": "websites_and_applications",
@@ -79,15 +89,6 @@
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
           "addedAt": "2025-07-18T18:52:19.921Z"
-        },
-        {
-          "id": "5zKF938EQGSkKVeMtQx3NM",
-          "type": "smart_contract",
-          "url": "https://github.com/HorizenOfficial/horizen-migration",
-          "description": "Migration Smart Contracts and Dump Scripts",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-07-18T18:53:38.407Z"
         }
       ],
       "impacts": [
@@ -142,7 +143,7 @@
       ],
       "programOverview": "Horizen technology offerings enable web3 developers to custom-build blockchains and dapps with a level of flexibility unmatched by others and help organizations leverage the blockchain to solve a broad range of complex use cases. Horizen’s public EVM-compatible sidechain, EON, is built with massive scalability in mind. With deep experience in the crypto space, our passionate and committed team of blockchain experts, solution architects, product managers, and developers are accelerating the adoption of blockchain technology by focusing on the critical components of security, confidentiality, speed, and innovation.\n\nFor more information about Horizen, please visit https://horizen.io/.\n\nHorizen provides rewards in ZEN on EON, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are considered out-of-scope and ineligible for payout.",
-      "rewardsBody": "__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 50000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 15000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\nFor critical web/apps bugs, reports will be rewarded with 15000, only if the impact leads to:\n- A loss of funds involving an attack that does not require any user action\n- Private key or private key generation leakage leading to unauthorized access to user funds \n\nAll other impacts that would be classified as Critical would be rewarded a flat amount of 10000.  \n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward.\n\nThe amount of funds at risk will be calculated with the impact of the first attack being at 100% and then a reduction of 25% from the amount of the first attack for every [300 blocks] the attack needs for subsequent attacks from the first attack, rounded down.\n\n\n__Reward Calculation for High Level Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of 2000 to 15000 with the reward calculated based on 100% of the funds at risk, though capped at the maximum high reward. \n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward.",
+      "rewardsBody": "__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 20000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 15000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\nFor critical web/apps bugs, reports will be rewarded with 15000, only if the impact leads to:\n- A loss of funds involving an attack that does not require any user action\n- Private key or private key generation leakage leading to unauthorized access to user funds \n\nAll other impacts that would be classified as Critical would be rewarded a flat amount of 10000.  \n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward.\n\nThe amount of funds at risk will be calculated with the impact of the first attack being at 100% and then a reduction of 25% from the amount of the first attack for every [300 blocks] the attack needs for subsequent attacks from the first attack, rounded down.\n\n\n__Reward Calculation for High Level Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of 2000 to 15000 with the reward calculated based on 100% of the funds at risk, though capped at the maximum high reward. \n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward.",
       "outOfScopeAndRules": null,
       "assetsBodyV2": null,
       "impactsBody": null,
@@ -249,7 +250,7 @@
     },
     "metaData": {
       "title": "Horizen Bug Bounties",
-      "description": "Find bugs and vulnerabilities on Horizen and get paid up to $50,000.",
+      "description": "Find bugs and vulnerabilities on Horizen and get paid up to $20,000.",
       "url": "https://immunefi.com/bug-bounty/horizen/",
       "ogImg": "/api/bounty/og-image/?project=Horizen&slug=horizen"
     },
