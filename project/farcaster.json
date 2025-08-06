@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1zKAeSF82onOI6O9kgRTXQ/b63b1c51d20124370cc686a5e1bbcefc/Farcaster.png",
       "launchDate": "2025-06-18T16:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-07-15T11:00:40.862Z",
+      "updatedDate": "2025-08-05T07:27:16.898Z",
       "kyc": true,
       "rewards": [
         {
@@ -55,6 +55,15 @@
           "addedAt": "2025-06-18T16:00:00.000Z"
         },
         {
+          "id": "331mOOy7CWpQyF2sxjZCAQ",
+          "type": "websites_and_applications",
+          "url": "https://immunefi.com",
+          "description": "Primacy of Impact",
+          "isPrimacyOfImpact": true,
+          "isSafeHarbor": null,
+          "addedAt": "2025-07-15T10:59:38.967Z"
+        },
+        {
           "id": "34cIupWqJYFbz0dodEpgAY",
           "type": "websites_and_applications",
           "url": "https://play.google.com/store/apps/details?id=com.farcaster.mobile&pcampaignid=web_share",
@@ -71,18 +80,39 @@
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
           "addedAt": "2025-06-18T16:00:00.000Z"
-        },
-        {
-          "id": "331mOOy7CWpQyF2sxjZCAQ",
-          "type": "websites_and_applications",
-          "url": "https://immunefi.com",
-          "description": "Primacy of Impact",
-          "isPrimacyOfImpact": true,
-          "isSafeHarbor": null,
-          "addedAt": "2025-07-15T10:59:38.967Z"
         }
       ],
       "impacts": [
+        {
+          "id": 52,
+          "type": "websites_and_applications",
+          "severity": "medium",
+          "title": "Redirecting users to malicious websites (open redirect)"
+        },
+        {
+          "id": 5599,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Theft of a user session through a single user interaction."
+        },
+        {
+          "id": 47,
+          "type": "websites_and_applications",
+          "severity": "high",
+          "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Email\n- Password of the victim etc."
+        },
+        {
+          "id": 49,
+          "type": "websites_and_applications",
+          "severity": "high",
+          "title": "Subdomain takeover without already-connected wallet interaction"
+        },
+        {
+          "id": 50,
+          "type": "websites_and_applications",
+          "severity": "medium",
+          "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Changing the first/last name of user\n- Enabling/disabling notifications"
+        },
         {
           "id": 51,
           "type": "websites_and_applications",
@@ -90,16 +120,10 @@
           "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:\n- Reflected HTML Injection\n- Loading external site data"
         },
         {
-          "id": 55,
-          "type": "websites_and_applications",
-          "severity": "low",
-          "title": "Temporarily disabling user to access target site, such as:\n- Locking up the victim from login\n- Cookie bombing, etc."
-        },
-        {
-          "id": 52,
+          "id": 5678,
           "type": "websites_and_applications",
           "severity": "medium",
-          "title": "Redirecting users to malicious websites (open redirect)"
+          "title": "Sitewide Service Disruption: Intentional disruption of core services sitewide, affecting multiple users."
         },
         {
           "id": 35,
@@ -120,18 +144,6 @@
           "title": "Taking and/modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:\n- Changing registration information\n- Commenting\n- Voting\n- Making trades\n- Withdrawals, etc."
         },
         {
-          "id": 5599,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Theft of a user session through a single user interaction."
-        },
-        {
-          "id": 50,
-          "type": "websites_and_applications",
-          "severity": "medium",
-          "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Changing the first/last name of user\n- Enabling/disabling notifications"
-        },
-        {
           "id": 41,
           "type": "websites_and_applications",
           "severity": "critical",
@@ -144,10 +156,10 @@
           "title": "Direct theft of user funds"
         },
         {
-          "id": 43,
+          "id": 44,
           "type": "websites_and_applications",
           "severity": "critical",
-          "title": "Malicious interactions with an already-connected wallet, such as:\n- Modifying transaction arguments or parameters\n- Substituting contract addresses\n- Submitting malicious transactions"
+          "title": "Direct theft of user NFTs"
         },
         {
           "id": 46,
@@ -156,34 +168,10 @@
           "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:\n- HTML injection without JavaScript\n- Replacing existing text with arbitrary text\n- Arbitrary file uploads, etc."
         },
         {
-          "id": 47,
-          "type": "websites_and_applications",
-          "severity": "high",
-          "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Email\n- Password of the victim etc."
-        },
-        {
-          "id": 49,
-          "type": "websites_and_applications",
-          "severity": "high",
-          "title": "Subdomain takeover without already-connected wallet interaction"
-        },
-        {
           "id": 5600,
           "type": "websites_and_applications",
           "severity": "critical",
           "title": "Bypassing the recovery process to gain control of the Farcaster wallet"
-        },
-        {
-          "id": 5601,
-          "type": "websites_and_applications",
-          "severity": "high",
-          "title": "Sitewide Service Disruption: Intentional disruption of core services sitewide, affecting multiple users."
-        },
-        {
-          "id": 5603,
-          "type": "websites_and_applications",
-          "severity": "low",
-          "title": "Changing details of other users with significant user interaction."
         },
         {
           "id": 5604,
