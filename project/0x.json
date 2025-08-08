@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/lyQiC5BZ6cB4x9bgGUFPi/dd8c99b13df7edf308ca678c0607ee48/dlhDYt89_400x400.png",
       "launchDate": "2024-07-30T16:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-07-24T14:53:20.559Z",
+      "updatedDate": "2025-08-07T07:49:02.211Z",
       "kyc": true,
       "rewards": [
         {
@@ -249,7 +249,7 @@
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 1 000 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 100 000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\nOnly the impact of direct theft of user funds **at-rest** is eligible for the maximum payout of USD 1 000 000; all other Critical-level smart contract reports are eligible for a maximum payout of USD 500 000.\n\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\nFor critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Level Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of USD 35 000 to USD 100 000 depending on the funds at risk, capped at the maximum high reward. \n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional [24h] that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\nFor critical web/apps bug reports will be rewarded with USD 50 000, only if the impact leads to:\n\n- A loss of funds involving an attack that does not require any user action\n- Malicious interactions with an already-connected wallet\n- Private key or private key generation leakage leading to unauthorized access to user funds \n\nAll other impacts that would be classified as Critical would be rewarded a flat amount of USD 15 000. The rest of the severity levels are paid out according to the Impact in Scope table.  \n\n__Reward Payment Terms__\n\nPayouts are handled by the 0x team directly and are denominated in USD. However, payments are done in USDC on Ethereum.",
       "outOfScopeAndRules": null,
-      "assetsBodyV2": "Documentation and further resources can be found on [https://0x.org/docs/](https://0x.org/docs/)\n\nFor brevity regarding Smart Contract Assets\n\n- the source tree on GitHub ([https://github.com/0xProject/0x-settler/tree/master/src](https://github.com/0xProject/0x-settler/tree/master/src)) \n- Deployer:\n    - 0x00000000000004533Fe15556B1E086BB1A72cEae\n    - any contract holding a \"Deployer\" ERC721 token (each a \"Settler\")\n- AllowanceHolder:\n    - 0x0000000000001fF3684f28c67538d4D072C22734\n    - 0x0000000000005E88410CcDFaDe4a5EfaE4b49562\n    - 0x000000000000175a8b9bC6d539B3708EEd92EA6c\n- Pauser Safe module\n    - 0x1CeC01DC0fFEE5eB5aF47DbEc1809F2A7c601C30\n \n\nThe scope is limited to these addresses, but *is not limited to any chain*. These contracts are deployed to many mainnet chains (the test-nets are not in scope). Presently the supported mainnet chains are: Ethereum mainnet, Arbitrum mainnet, Optimism mainnet, Polygon mainnet, Base mainnet, BNB Chain mainnet, Avalanche C-Chain mainnet, Blast mainnet, Linea mainnet, Scroll mainnet. There will be many new chains added in the near future.",
+      "assetsBodyV2": "Documentation and further resources can be found on [https://0x.org/docs/](https://0x.org/docs/)\n\nFor brevity regarding Smart Contract Assets\n\n- the source tree on GitHub ([https://github.com/0xProject/0x-settler/tree/master/src](https://github.com/0xProject/0x-settler/tree/master/src)) \n- Deployer:\n    - 0x00000000000004533Fe15556B1E086BB1A72cEae\n    - any contract holding a \"Deployer\" ERC721 token (each a \"Settler\")\n- AllowanceHolder:\n    - 0x0000000000001fF3684f28c67538d4D072C22734\n    - 0x0000000000005E88410CcDFaDe4a5EfaE4b49562\n    - 0x000000000000175a8b9bC6d539B3708EEd92EA6c\n- ERC2771 forwarding MultiCall\n    - 0x00000000000000CF9E3c5A26621af382fA17f24f\n- Cross-chain receiver factory\n    - 0x00000000000000304861c3aDfb80dd5ebeC96325\n- Pauser Safe module\n    - 0x1CeC01DC0fFEE5eB5aF47DbEc1809F2A7c601C30\n \n\nThe scope is limited to these addresses, but *is not limited to any chain*. These contracts are deployed to many mainnet chains (the test-nets are not in scope). Presently the supported mainnet chains are: Ethereum mainnet, Ethereum Sepolia, Polygon, Base, Optimism, Arbitrum, Blast, Bnb, Mode, World Chain, Gnosis, Fantom Sonic, Ink, Monad testnet, Avalanche, Unichain, Berachain, Scroll, HyperEvm, Katana, Mantle, Taiko, and Linea. There will be many new chains added in the near future.",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -268,9 +268,19 @@
         ],
         "ecosystem": [
           "Polygon",
-          "Harmony",
-          "Polkadot",
-          "Avalanche"
+          "Avalanche",
+          "Arbitrum",
+          "Base",
+          "Blast",
+          "BSC",
+          "ETH",
+          "Linea",
+          "Mantle",
+          "Mode",
+          "Optimism",
+          "Scroll",
+          "Solana",
+          "xDAI / Gnosis Chain"
         ],
         "programType": [
           "Smart Contract",
