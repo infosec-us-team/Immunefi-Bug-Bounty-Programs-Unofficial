@@ -2,7 +2,7 @@
 
 # Get NEXT_DATA in JSON format
 NEXT_DATA_BOUNTIES=$(curl -s https://immunefi.com/bug-bounty/ | grep -o "<script id=\"__NEXT_DATA__\" type=\"application/json\".*>.*</script>" | grep -o "{.*}" | jq)
-NEXT_DATA_BOOSTS=$(curl -s https://immunefi.com/boost/ | grep -o "<script id=\"__NEXT_DATA__\" type=\"application/json\".*>.*</script>" | grep -o "{.*}" | jq)
+NEXT_DATA_BOOSTS=$(curl -s https://immunefi.com/audit-competition/ | grep -o "<script id=\"__NEXT_DATA__\" type=\"application/json\".*>.*</script>" | grep -o "{.*}" | jq)
 
 # Get bounties in a variable
 projects=$(echo "$NEXT_DATA_BOUNTIES" | jq '.props.pageProps.bounties')
