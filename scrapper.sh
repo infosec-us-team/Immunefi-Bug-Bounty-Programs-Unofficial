@@ -91,8 +91,8 @@ for ((c = 0; c <= $boosts_length - 1; c++)); do
 	name=$(echo "$boosts" | jq -r .[$c].id)
 	echo "Scanning: $name [$c/$boosts_length]"
 	# Get project's data
-	PROJECT_DATA=$(curl -s "https://immunefi.com/_next/data/$buildId/boost/$name/scope.json")
-	echo "Calling: https://immunefi.com/_next/data/$buildId/boost/$name/scope.json"
+	PROJECT_DATA=$(curl -s "https://immunefi.com/_next/data/$buildId/audit-competition/$name/scope.json")
+	echo "Calling: https://immunefi.com/_next/data/$buildId/audit-competition/$name/scope.json"
 	echo "$PROJECT_DATA"
 	# There's no try/catch in batch, so this is our way to double check everything went right:
 	# Get name from JSON response
