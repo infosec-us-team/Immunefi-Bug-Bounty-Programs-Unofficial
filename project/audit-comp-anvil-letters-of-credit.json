@@ -1,0 +1,317 @@
+{
+  "pageProps": {
+    "isAttackathon": false,
+    "academyContent": null,
+    "ethereumAttackathonSponsors": null,
+    "project": {
+      "features": [
+        "Boost",
+        "Vault",
+        "Managed Triage: Time Saver"
+      ],
+      "premiumTriaging": true,
+      "isSafeHarborActive": false,
+      "performanceMetrics": {}
+    },
+    "bounty": {
+      "contentfulId": "2OGZujUy2wo1CzRkPqmXch",
+      "id": "audit-comp-anvil-letters-of-credit",
+      "slug": "audit-comp-anvil-letters-of-credit",
+      "project": "Audit Comp | Anvil: Letters of Credit",
+      "maxBounty": 30000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3Hr2T9A9pZCCS0Oj9fCzjH/f8f737c77bdfe9814708931dc16676c6/image__21_.png",
+      "launchDate": "2024-11-11T10:00:28.000Z",
+      "endDate": "2024-11-22T10:00:00.000Z",
+      "updatedDate": "2024-12-13T17:10:53.238Z",
+      "kyc": true,
+      "rewards": [
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "Portion of the Reward Pool",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "high",
+          "payout": "Portion of the Reward Pool",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "Portion of the Reward Pool",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "low",
+          "payout": "Portion of the Reward Pool",
+          "pocRequired": true
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "2COmkUGOjyG2lhmoRjITbG",
+          "type": "smart_contract",
+          "url": "https://github.com/AcronymFoundation/anvil-contracts/blob/main/contracts/LetterOfCredit.sol",
+          "description": "LetterOfCredit - 904 SLOC",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2024-11-11T10:00:28.000Z"
+        },
+        {
+          "id": "25haocmjtZpLLkyo7NX1kM",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x5d2725fdE4d7Aa3388DA4519ac0449Cc031d675f",
+          "description": "CollateralVault - 606 SLOC",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2024-11-11T10:00:28.000Z"
+        },
+        {
+          "id": "jUfsemLb5Axhhj1qfx2HQ",
+          "type": "smart_contract",
+          "url": "https://github.com/AcronymFoundation/anvil-contracts/blob/main/contracts/PythPriceOracle.sol",
+          "description": "Pyth Price Oracle - 112",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2024-11-11T10:00:28.000Z"
+        }
+      ],
+      "impacts": [
+        {
+          "id": 15,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+        },
+        {
+          "id": 22,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Protocol insolvency"
+        },
+        {
+          "id": 32,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Theft of gas"
+        },
+        {
+          "id": 33,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
+        },
+        {
+          "id": 5198,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Temporary freezing of funds within the CollateralVault for at least 48 hours"
+        },
+        {
+          "id": 5201,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Smart contract unable to operate due to lack of token funds"
+        },
+        {
+          "id": 5204,
+          "type": "smart_contract",
+          "severity": "low",
+          "title": "Temporary freezing of funds set to 48 hrs within the LetterOfCredit contract"
+        },
+        {
+          "id": 5205,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Permanent freezing of funds (note: if a LetterOfCredit proxy update may fix the issue, it is temporary)"
+        },
+        {
+          "id": 5206,
+          "type": "smart_contract",
+          "severity": "low",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+        }
+      ],
+      "programOverview": "Anvil is a decentralized finance (DeFi) protocol for the issuance of fully secured credit. The protocol's Ethereum-based smart contracts allow users to deposit collateral in a vault, issue letters of credit, and supply assets to staking pools. Anvil's mission is to provide flexible building blocks to bring efficient and transparent collateralized finance into an increasingly decentralized world.\n\nFor more information about Anvil, please visit https://anvil.xyz/ \n\nAnvil provides rewards in USDT on Ethereum, denominated in USD. \n\nThis Audit Competition is running on mainnet. The following conditions apply:\n\n1. Anvil team will freeze the in-scope codebase for the duration of the Audit Competition\n2. Duplicates are rewarded",
+      "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+      "rewardsBody": "The following reward terms are a summary. For the full details read our [Anvil: Letters of Credit Audit Competition Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/29954569847697-Anvil-Letters-Of-Credit-Audit-Competition-Reward-Terms)\n\nA reward pool of $30,000 USD will be distributed among participants, even if no valid bugs are found. \n\nDuplicates and private known issues are valid for a reward.\n\nRewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/).\n\nRewards will be distributed all at once based on Immunefi’s distribution formula after the event has concluded and the final bug reports have been resolved.\n\n__Insight Rewards Payment Terms__\n\n*Insight Rewards*: Portion of the Rewards Pool\n\n*The \"Insight\" severity was introduced on Boost (Audit Competitions) & Attackathon programs to recognize contributions that extend beyond identifying immediate vulnerabilities. Currently, it's not an option to select the Insight severity when submitting a report. However, our team or program will designate it accordingly if applicable. \"Insights\" underscores our commitment to valuing all types of contributions that contribute to a more secure environment and will always be rewarded. [View more information about Insights](https://immunefisupport.zendesk.com/hc/en-us/articles/13333032674961-Severity-Classification-System?utm_source=immunefi)\n\nDuplicates of Insight reports are not eligible for a reward.",
+      "outOfScopeAndRules": "To be determined",
+      "assetsBodyV2": "__Asset Accuracy Assurance__\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n__Private Known Issues Reward Policy__\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward.\n\n__Primacy of Impact vs Primacy of Rules__\n\nAnvil adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page.\n\n__KYC Requirement__\n\nAnvil will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\nSecurity researchers are required to submit KYC within 14 days of KYC being requested, else their rewards may be forfeited. Immunefi may make exceptions due to extenuating circumstances.\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this Audit Competition bug bounty and a leaderboard of the participants and their earnings.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Anvil has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
+      "impactsBody": "__Is this an upgrade of an existing system? If so, which? And what are the main differences?__\n\nNo. This is a new protocol. \n\n__Where do you suspect there may be bugs? Useful aspects of this question are:__\n\n**Which parts of the code are you most concerned about?**\n- Dynamic LOC calculations\n- Dynamic LOC liquidation mechanics\n- LOCs always being redeemable for their credited token value\n    - Note: ignore adverse market conditions as a concern\n\n**What attack vectors are you most concerned about?**\n- Tokens being stolen from the LetterOfCredit contract\n- Tokens being stuck in the LetterOfCredit contract\n- LOCs being created using an account’s collateral without that account’s permission\n\n**Which part(s) of the system do you want whitehats to attempt to break the most?**\n- LOC operations\n\n**Are there any assumed invariants that you want whitehats to attempt to break?**\n- LetterOfCredit\n    - LOCs should always be redeemable for their credited token amount (ignoring adverse market condition cases)\n    - Dynamic LOCs can only be converted by:\n        - The creator\n        - Any party presenting the creator’s signed authorization\n        - Anyone if the LOCs current CollateralFactor based on oracle price meets the LOC’s stored collateralFactorBasisPoints\n    - LOCs may only be redeemed by\n        - The LOC.beneficiary\n        - Any party presenting the beneficiary’s signed authorization\n    - The following LOC operations should always fail after a LOC’s expiration timestamp passes:\n        - redeemLOC()\n        - convertLOC()\n        - modifyLOCCollateral()\n        - extendLOC()\n    - A LOC may be canceled by:\n        - The LOC.beneficiary\n        - Any 3rd party presenting the beneficiary’s signed authorization\n        - Any party after the LOC is expired\n    - The result of cancelLOC() for a LOC with remaining collateral is always one of the following:\n        - The CollateralReservation is released in the CollateralVault, making any reserved collateral associated with the LOC available within the         LOC.creator’s vault account\n        - The collateral stored within the LOC contract for the converted LOC is sent directly to the LOC.creator’s address\n\n\n__What emergency actions may you want to use as a reason to invalidate or downgrade an otherwise valid bug report?__\n\nThis project is not a chain of its own and does not have the ability to rewrite history, so no emergency actions should be possible as a way to mitigate an otherwise possible theft. The `LetterOfCredit` contract is meant to be referenced by upgradeable proxies, so bug reports of “frozen” tokens that may be mitigated by a contract upgrade are less of a concern. Anvil will likely pay those out as low severity bugs.\n\n\n__What monitoring systems may you want to use as a reason to invalidate or downgrade an otherwise valid bug report?__\n\nNone to our knowledge. \n\nThere are possible admin actions in `CollateralVault` and `LetterOfCredit`, including contract upgrades for the latter, but those are only possible via governance, which is much slower than any attack and could not reasonably front-run an attack. \n\n__What addresses would you consider any bug report requiring their involvement to be out of scope, as long as they operate within the privileges attributed to them?__\n\nThere are various roles defined in the `CollateralVault` and `LetterOfCredit` contracts that should be assumed to act in any way explicitly permitted by that role, and that is a valid non-bug use case. That is to say that if accounts with an Admin/Owner role, for instance, may withdraw tokens from the contract, registering an attack of the Admin/Owner stealing tokens is invalid because that is not theft – that is an explicitly permitted action.\n\nThat said, in the `CollateralVault` for instance, the design of the contract is such that the contract Owner should not be able to take tokens that are earmarked for an individual account (it may only take `contract balance - SUM(user account balance`). If an attack were to be found such that the owner could take funds that were earmarked for one or more accounts, that would be a valid bug because it undermines the trust assumptions of the contract. \n\n__What addresses would you consider any bug report requiring their involvement be out of scope, even if they exceed the privileges attributed to them?__\n\nNone that we can think of.\n\n\n__What external dependencies are there?__\n\nThere are external dependencies on ERC-20 tokens. Governance attacks, such as the approval of a malicious ERC-20 token is out of scope. \n\nThe `LetterOfCredit` contract depends on a PriceOracle to give it valid prices. Market-based oracle attacks are out of scope for this competition. If the `LetterOfCredit` contract’s logic incorrectly uses oracle data, though, that would be in scope.\n\nThere are also dependencies on open source contracts such as OpenZeppelin. While those are 3rd party contracts, they are referenced from within Anvil’s contracts, so any vulnerabilities in Anvil contracts made possible by issues in dependency contracts such as OZ are in scope.\n\n__Where might whitehats confuse out-of-scope code to be in-scope?__\n\n- The code for the `LetterOfCredit` contract is meant to be referenced by proxies as their implementation. Any use case that requires deploying and directly using the LetterOfCredit contract rather than via a proxy would be out of scope. \n- Since the `LetterOfCredit` contract is meant to be referenced by upgradeable proxies, finding some loophole in contract logic such that tokens reserved by that contract become stuck would be a lower severity bug than it would be if the contract were not upgradeable. For that reason, token theft as a bug is very much in scope, whereas issues that could be solved via a successful contract upgrade are less critical and therefore low impact .\n- Precision loss is not a valid bug since it is impossible to divide without the possibility of precision loss.\n- Using a signature before someone else uses a signature (i.e. front-running) is not a valid bug. If the signature permits an operation, that operation is welcome and encouraged.\n- “If you were to upgrade the `LetterOfCredit` contract to a contract with a bug, then it would have a bug” is not a valid bug. If there is an issue with the upgrade process itself, that is valid, but simply using the proxy pattern is not a valid bug.\n- The ILiquidator interface is meant to be implemented by sophisticated liquidators external to the protocol / protocol team. An example implementation is included in the codebase as the “UniswapLiquidator” contract, but that contract is not in scope.\n- Avoiding the CollateralVault protocol fee by claiming / withdrawing extremely small amounts repeatedly is not a feasible attack on Ethereum mainnet so it is out of scope.\n\n__Are there any unusual points about your protocol that may confuse whitehats?__\n\n- The concept of CollateralFactors is a bit nuanced. The same concept is used in Compound and other DeFi protocols. In the context of a LOC, a CollateralFactor is the percentage of the collateral token amount that would be necessary to liquidate to receive the LOC’s credited token amount, ignoring all fees and slippage. \n- The maximum CollateralFactor for LOC creation and the CollateralFactor at which point LOCs become liquidatable is stored for each distinct asset-pair that supports dynamic LOCs. It is assumed that all fees are baked into that configuration and that the CollateralFactor is padded to handle trading slippage, liquidator incentive, claim fee, etc.\n\n__What is the test suite setup information?__\n\nNo tests have been made public at the moment.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n\n- The fee applied to CollateralVault claims and withdrawals is the same, but the amount the fee is relative to is different such that the absolute fee assessed via withdraw() is higher than claimCollateral() when the amount released by the CollateralVault is the same.\n- ERC165 calls within CollateralVault may prevent addition/removal of collateralizable contracts. Governance should verify this will not be an issue when collateralizable contact addition is proposed.\n\n\n__Previous Audits__\n\nAnvil’s completed audit reports can be found at [https://docs.anvil.xyz/contracts/audits](https://docs.anvil.xyz/contracts/audits). Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.",
+      "immunefiStandard": true,
+      "tags": {
+        "general": [
+          "Immunefi Standard",
+          "KYC Required",
+          "PoC Not Required",
+          "Step-by-step PoC Required"
+        ],
+        "productType": [],
+        "projectType": [],
+        "ecosystem": [],
+        "programType": [
+          "Smart Contract"
+        ],
+        "language": [
+          "Solidity"
+        ],
+        "featured": [
+          "Launched Recently"
+        ]
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract"
+        ],
+        "blockchain_rewards": [],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "Portion of the Reward Pool"
+          },
+          {
+            "level": "High",
+            "payout": "Portion of the Reward Pool"
+          },
+          {
+            "level": "Medium",
+            "payout": "Portion of the Reward Pool"
+          },
+          {
+            "level": "Low",
+            "payout": "Portion of the Reward Pool"
+          }
+        ],
+        "web_rewards": []
+      },
+      "evaluationEndDate": "2024-12-13T16:41:08.388Z",
+      "boostedIntroStartingIn": "$30,000 USD in rewards is available for finding bugs on Anvil LetterOfCredit contract. \n\nAnvil is a decentralized finance (DeFi) protocol for the issuance of fully secured credit. The protocol's Ethereum-based smart contracts allow users to deposit collateral in a vault, issue letters of credit, and supply assets to staking pools. Anvil's mission is to provide flexible building blocks to bring efficient and transparent collateralized finance into an increasingly decentralized world.\n\nFor more information about Anvil, please visit https://anvil.xyz/\n\n**KYC is required**\n\nAny technical questions can be asked directly to the Anvil technical team on Immunefi's [Immunefi’s Discord](https://discord.com/invite/immunefi) in the \"anvil-letters-of-credit\" channel.\n\nWhen the Audit Competition has ended, Immunefi will publish an event-specific leaderboard and bug reports from the event.\n\nA few days after the launch, Immunefi will publish Anvil's technical walkthrough on our official YouTube channel.",
+      "boostedIntroLive": "$30,000 USD is available in rewards for finding bugs in Anvil's Letters Of Credit contract of 1622 nSLOC. \n\nKYC is required.\n\nAny technical questions and support requests can be asked directly to Anvil or Immunefi in the [Anvil Letters Of Credit Audit Competition Discord channel](https://discord.com/invite/immunefi).\n\nWhen the Audit Competition has ended Immunefi will publish an event-specific leaderboard and bug reports from the event.\n\nFor more information about Anvil, please visit https://anvil.xyz/",
+      "boostedIntroEvaluating": "",
+      "boostedIntroFinished": "Audit Competition cards for security researchers with paid reports are available [here](https://drive.google.com/drive/folders/1fpYacM4YYH1AEYNIjbSvj8hv5A6f_ctn?usp=sharing)\n\nAll paid bug reports are available in original format [here](https://reports.immunefi.com/anvil-letters-of-credit)",
+      "rewardsToken": "USDT",
+      "rewardsPool": 30000,
+      "primaryPool": 30000,
+      "allStarsPool": 0,
+      "podiumPool": 0,
+      "sourceLinesOfCode": 1622,
+      "boostedSummaryReport": "https://drive.google.com/file/d/1pZrLOmiDyOSpJArm_tkvsQwJRe6PITn8/view?usp=sharing",
+      "inviteOnly": false,
+      "hideAssetsInScope": null,
+      "boostedLeaderboard": [
+        {
+          "high": 0,
+          "name": "perseverance",
+          "critical": 2,
+          "earnings": 19861,
+          "insights": 0,
+          "mediumLow": 0,
+          "totalValidBugs": 2
+        },
+        {
+          "high": 0,
+          "name": "max10afternoon",
+          "critical": 1,
+          "earnings": 7139,
+          "insights": 0,
+          "mediumLow": 0,
+          "totalValidBugs": 1
+        },
+        {
+          "high": 0,
+          "name": "FaisalAli19",
+          "critical": 0,
+          "earnings": 1875,
+          "insights": 1,
+          "mediumLow": 0,
+          "totalValidBugs": 0
+        },
+        {
+          "high": 0,
+          "name": "jovi",
+          "critical": 0,
+          "earnings": 1125,
+          "insights": 1,
+          "mediumLow": 0,
+          "totalValidBugs": 0
+        }
+      ],
+      "features": [
+        "Boost",
+        "Vault",
+        "Managed Triage: Time Saver"
+      ],
+      "academyStartDate": null,
+      "websiteUrl": "https://anvil.xyz",
+      "description": "Anvil is a decentralized finance (DeFi) protocol for the issuance of fully secured credit. The protocol's Ethereum-based smart contracts allow users to deposit collateral in a vault, issue letters of credit, and supply assets to staking pools. For more information about Anvil, please visit https://anvil.xyz/ ",
+      "githubUrl": null,
+      "feasibilityLimitations": null,
+      "prohibitedActivites": null,
+      "responsiblePublicationCategory": null,
+      "knownIssues": [],
+      "knownIssueAssurance": false,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+      "defaultOutOfScopeWebAndApplications": null,
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+      "customOutOfScopeInformation": null,
+      "customProhibitedActivities": [],
+      "rewardsTokenNetwork": null,
+      "eligibilityCriteria": [
+        "no_official_contributor",
+        "no_ofac_sdn",
+        "no_employee",
+        "no_auditor"
+      ],
+      "eligibilityCriteriaAdditionalInformation": null,
+      "programCodebases": [
+        {
+          "id": 235,
+          "title": "Anvil’s up to date codebase",
+          "description": "Codebase",
+          "url": "https://github.com/AcronymFoundation/anvil-contracts"
+        }
+      ],
+      "programDocumentations": [
+        {
+          "id": 132,
+          "title": "Technical education",
+          "description": "Whitepaper",
+          "url": " https://docs.anvil.xyz/whitepaper"
+        },
+        {
+          "id": 133,
+          "title": "Technical education 2",
+          "description": "README",
+          "url": "https://github.com/AcronymFoundation/anvil-contracts/blob/main/README.md"
+        },
+        {
+          "id": 134,
+          "title": "Educational Resources",
+          "description": "Documentation",
+          "url": " https://docs.anvil.xyz/"
+        }
+      ],
+      "primacy": "primacy_of_rules",
+      "newProgramRewardsEnabled": false,
+      "findingsUrl": "https://reports.immunefi.com/anvil-letters-of-credit",
+      "premiumTriaging": true
+    },
+    "layoutProps": {
+      "headerMarginBottom": "mb-12 lg:mb-16"
+    },
+    "metaData": {
+      "title": "Audit Comp | Anvil: Letters of Credit Bug Bounties",
+      "description": "Find bugs and vulnerabilities on Audit Comp | Anvil: Letters of Credit and get paid up to $30,000.",
+      "url": "https://immunefi.com/audit-competition/audit-comp-anvil-letters-of-credit/",
+      "ogImg": "/api/bounty/og-image/?project=Audit+Comp+%7C+Anvil%3A+Letters+of+Credit&slug=audit-comp-anvil-letters-of-credit"
+    }
+  },
+  "__N_SSG": true
+}

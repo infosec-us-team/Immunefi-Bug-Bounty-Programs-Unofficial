@@ -4,6 +4,10 @@
     "academyContent": null,
     "ethereumAttackathonSponsors": null,
     "project": {
+      "features": [
+        "Boost",
+        "Managed Triage: Time Saver"
+      ],
       "premiumTriaging": true,
       "isSafeHarborActive": false,
       "performanceMetrics": {}
@@ -12,12 +16,12 @@
       "contentfulId": "4r9b9Tcfnc9zLPttcKWqwu",
       "id": "ebtc-boost",
       "slug": "ebtc-boost",
-      "project": "Boost | eBTC",
+      "project": "Audit Comp | eBTC",
       "maxBounty": 200000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4l9J9IrYDQDKEKDRro6liJ/8f307a05a51e20350ce7e82dc207c109/ebtc.png",
       "launchDate": "2024-02-19T08:00:00.000Z",
       "endDate": "2024-03-04T08:00:00.000Z",
-      "updatedDate": "2024-05-30T10:01:55.260Z",
+      "updatedDate": "2024-10-15T13:38:06.461Z",
       "kyc": false,
       "rewards": [
         {
@@ -167,96 +171,97 @@
       ],
       "impacts": [
         {
-          "id": "Uqy1W3LeBRrMjrBUHJ7uM",
-          "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "7K6y4mbnS7mB0yypQMjWJh",
-          "title": "Direct theft of 2 stETH worth of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "d9EjHlWXHD2IM9fPfCk04",
-          "title": "Permanent freezing of funds",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "3jMAY0T0XpIyruiL96Wrps",
-          "title": "Protocol insolvency",
+          "id": 4748,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Temporary freezing of funds for at least 15 minutes"
         },
         {
-          "id": "5ecH5PJPb17qR0bjVya08I",
-          "title": "Theft of unclaimed yield",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "3hrFfKiXGr6kOxVYhoaAMx",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 30,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing"
         },
         {
-          "id": "6q6VZQCnwYO8KJx0XvvCfI",
-          "title": "Temporary freezing of funds for at least 15 minutes",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "2uc5Khotrri2H8dpP4Y2Bc",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "7ITs1nlnfIu9xhpt7tdwV5",
-          "title": "Block stuffing",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "68cr4Gn9h09lKtGyPKQlbz",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 14,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results"
         },
         {
-          "id": "2zZuANwPLxlP3FLfsti0rl",
-          "title": "Theft of gas",
+          "id": 4749,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of 2 stETH worth of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "TkWoxu8OANzalxQ0I2gtR",
-          "title": "Unbounded gas consumption",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "67fVhiQabL11KQqJ4bnbMN",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "eBTC is a collateralized crypto asset soft pegged to the price of Bitcoin and built on the Ethereum network. It is based on the Liquity protocol and backed exclusively by Staked Ether (stETH). The protocol is designed with an immutable core with minimized counterparty reliance and governance. \n\nIt’s designed to be the most decentralized synthetic BTC in DeFi and offers the ability for anyone in the world to borrow BTC at no cost.\n\n\nAfter locking up stETH as collateral and creating an individual position called a CDP, the user can get instant liquidity by minting eBTC. Each CDP is required to be collateralized at a fixed minimum ratio determined by the protocol.\n\nThe redemption and liquidation mechanisms help ensure that stability is maintained through economically-driven user interactions and arbitrage, rather than through active governance or monetary interventions.\n\neBTC is built by [BadgerDAO](https://badger.com/). For more information about eBTC, please visit [twitter](https://twitter.com/eBTCprotocol) and the [docs](https://docs.ebtc.finance/ebtc/).",
       "prioritizedVulnerabilities": "tbd",
-      "rewardsBody": "The reward pool will be fully distributed among participants. The size depends on the bugs found:\n\n- If no High or Critical severity bugs are found the reward pool will be $50,000 USD\n- If one or more High severity bugs are found the reward pool will be $100,000 USD\n- If one or more Critical severity bugs are found the reward pool will be $200,000 USD\n\n\nFor this boost, duplicates and private known issues are valid for a reward.\n\nThese reward terms are a summary, for the full details read our [eBTC Boost Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/22591362396689-eBTC-Boost-Reward-Terms).\n\nRewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n**Reward Payment Terms**\n\nPayouts are handled by the BadgerDAO team directly and are denominated in USD. However, payments are done in USDC.\n\nRewards will be distributed all at once based on Immunefi’s distribution terms after the event has concluded and the final bug reports have been resolved.",
+      "rewardsBody": "The reward pool will be fully distributed among participants. The size depends on the bugs found:\n\n- If no High or Critical severity bugs are found the reward pool will be $50,000 USD\n- If one or more High severity bugs are found the reward pool will be $100,000 USD\n- If one or more Critical severity bugs are found the reward pool will be $200,000 USD\n\n\nFor this audit competition, duplicates and private known issues are valid for a reward.\n\nThese reward terms are a summary, for the full details read our [eBTC Audit Competition Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/22591362396689-eBTC-Audit-Competition-Reward-Terms).\n\nRewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n**Reward Payment Terms**\n\nPayouts are handled by the BadgerDAO team directly and are denominated in USD. However, payments are done in USDC.\n\nRewards will be distributed all at once based on Immunefi’s distribution terms after the event has concluded and the final bug reports have been resolved.",
       "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n**All Categories:**\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n\n**Blockchain/DLT & Smart Contract Specific:**\n\n- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n\n\n**Prohibited Activities:**\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
       "assetsBodyV2": "All eBTC contracts will be deployed shortly and the assets in the ‘assets in scope’ table above will be updated with the live contracts. These will be fully identical with the code in the github links. \n\nBadgerDAO’s up to date codebase can be found at https://github.com/ebtc-protocol/ebtc/tree/release-0.7 \n\n**Whitehat Educational Resources & Technical Info**\n\n\n- [Read the changelog here](https://github.com/ebtc-protocol/ebtc/pull/766) to learn the differences between this release and the [previous Code4rena contest](https://code4rena.com/audits/2023-10-badger-ebtc-audit-certora-formal-verification-competition).\n- [Primary documentation](https://docs.ebtc.finance/ebtc/)\n- [Primary Readme](https://github.com/code-423n4/2023-10-badger/blob/main/README_EBTC.md)\n- [In-depth Introductory Video](https://www.youtube.com/watch?v=QWIB4avTkt4)\n- [eBTC Cheatsheet](https://gist.github.com/GalloDaSballo/7b060bb97de09c539ec64c533dd352c6) with additional videos and an up to date list of additional resources\n- Website: [ebtc.finance](https://www.ebtc.finance/)\n- Twitter: [eBTCProtocol](https://twitter.com/eBTCprotocol)\n- [JohnnyTime eBTC Overview](https://www.youtube.com/watch?v=f2numPMZFSI&t=1s)\n- [eBTC x Immunefi Technical Walkthrough](https://www.youtube.com/watch?v=0_Tb8GitY8w)\n\n\n\n\n**Is this an upgrade of an existing system? If so, which? And what are the main differences?**\n\nNo, this is a net new protocol with no relation to past BadgerDAO projects.\n\n\n\n**Where do you suspect there may be bugs?**\n\nWe are concerned around core accounting (yield split and debt redistribution), the ability to abuse or significantly DOS the liquidation or redemption mechanics, and significant rounding errors.\n\nHere is our [full list of invariants](https://github.com/ebtc-protocol/ebtc/blob/release-0.7/packages/contracts/contracts/TestContracts/invariants/PropertiesDescriptions.sol).\n\nCalling out accounting invariants:\n\n- Cdps have a pending accounting state that is only updated when that Cdp is interacted with. Cdps can stay out of sync for a long time, there is no way to force them to synchronize unless the owner or approved positionManager interacts with the Cdp. \n\n- For numerical exploits, the total stETH in existence or that could be in existence must be considered. \n \n- Loss of yield must be considered relative to other changes. For example, if a bunch of positive rebases happen and then there’s a slash, and the system is not updated until that point, those positive rebases will be lost.\n \n- Max 1 wei of unallocated debt per Cdp per debt redisttribution event is a theoretical maximum that can happen. This does not scale to a reasonable value with real-world values.\n \n- SortedCdps view functions are not for on-chain users.\n\n\n**What ERC20 / ERC721 / ERC777 / ERC1155 token standards are supported? Which are not?**\n\nstETH is supported as collateral, which is a rebasing token. The eBTC token is “standard” as far as these properties go.\n\n\n**What emergency actions may you want to use as a reason to invalidate or downgrade an otherwise valid bug report?**\n\nEmergency actions could involve:\n\n- pausing flashloans\n- pausing redemptions\n- switching between the stETH 1:1 fixed oracle to the stETH/ETH market rate oracle\n\n\n\n**What Roles are there, and what capacities do they have?**\n\nThere are a number of roles maintained by the Governor contract.\n\nIt has role-based access control that gates function signatures by role, based on [solmate RolesAuthority](https://github.com/transmissions11/solmate/blob/main/src/auth/authorities/RolesAuthority.sol).\n\n\nThe following roles exist in the system:\n\nRole 0: // The Admin, manages the setting of roles and associated properties\n\n- governor.setRoleName()\n- governor.setUserRole()\n- governor.setRoleCapability()\n- governor.setPublicCapability()\n- governor.burnCapability()\n- governor.transferOwnership()\n- governor.setAuthority()\n\n\nRole 1: // Extensible minter, can mint eBTC tokens at-will. Unused at the start.\n\n- ebtcToken.mint(address,uint256)\n\nRole 2: // Extensible burner, can burn eBTC tokens at will. Unused at the start.\n\n- ebtcToken.burn(address,uint256)\n- ebtcToken.burn(uint256)\n\nRole 3: // Redemption and yield split parameter manager\n\n- cdpManager.setStakingRewardSplit(uint256)\n- cdpManager.setRedemptionFeeFloor(uint256)\n- cdpManager.setMinuteDecayFactor(uint256)\n- cdpManager.setBeta(uint256)\n- cdpManager.setGracePeriod(uint256)\n\nRole 4: // Emergency pauser\n\n- cdpManager.setRedemptionsPaused(bool)\n- activePool.setFlashLoansPaused(bool)\n- borrowerOperations.setFlashLoansPaused(bool)\n\n5: // Flashloan fee parameter manager\n\n- borrowerOperations.setFeeBps(uint256)\n- activePool.setFeeBps(uint256)\n\n\n6: // Token sweeper. Note that the sweeping recipient is pre-set and members of this role can’t claim the tokens to themselves.\n\n- activePool.sweepToken(address,uint256)\n- collSurplusPool.sweepToken(address,uint256)\n\n7: // Fee recipient sweeper\n\n- activePool.claimFeeRecipientCollShares(uint256)\n\n8: // Primary oracle manager\n\n- ebtcFeed.setPrimaryOracle(address)\n\n9: // Secondary oracle manager\n\n- ebtcFeed.setSecondaryOracle(address)\n\n10: // Price Feed fallback manager\n\n- priceFeed.setFallbackCaller(address)\n\n11: // stETH 1:1 to market rate switcher, coupled with appropriate redemption rate change. Unused initially, but intended to give to a bot with security guardrails around conditions where sETH/ETH feed is appropriate.\n\n- priceFeed.setCollateralFeedSource(bool)\n- cdpManager.setRedemptionFeeFloor(uint256)\n\n\n**There are five permissioned contracts**\n\n1. High Security Timelock\n\nThe ultimate governance administrator also holds most permissions. The only permissions it doesn’t have are eBTC minting and burning (which no contract has in this configuration)\n\nRoles: [0, 3, 4, 5, 6, 7, 8, 9, 10]\n\n\n2. Low Security Timelock\n\nA faster timelock that can perform all but the most sensitive operations.\nIt notably doesn’t have admin capabilities on the Governor, or the ability to swap primary oracle.\n\nRoles: [3, 4, 5, 6, 7, 9, 10]\n\n\n3. Security Multisig\n\nThe higher security multisig. It can propose transactions into the high security and low security timelocks and call pausing functions directly\n\nRoles: [4]\n\n\n4. Tech Ops Multisig\n\nThe lower security multisig. It can propose transactions into the low security timelock and call pausing functions directly.\n\nRoles: [4]\n\n\n5. Fee Recipient Multisig\n\nManages the yield split fee collections serving as a destination for sweeping tokens.\n\nRoles: [6, 7]\n\n\n\n**What external dependencies are there?**\n\nWe’ve got a short list for eBTC.\n\n- Chainlink oracles\n- stETH token\n\n**Where might whitehats confuse out-of-scope code to be in-scope?**\n\nFiles in the repo that are not specifically in scope are the most likely source of confusion, such as test files. This project has a low number of external dependencies and doesn’t interact with much.\n\nAssume the PriceFeed.sol will never have the fallback oracle assigned, this will remain at zero. This governance capability can be permanently burned to enable this spec.\n \nUnbounded gas is effectively possible via poor hint selection, this is known and should not constitute an unbounded gas finding\n\n**Are there any unusual points about your protocol that may confuse whitehats?**\n\nThe rebasing nature of the stETH token and conversion between balances and shares.\n\n\n**What is the test suite setup information?**\n\nWe have several test suites, they can be found here:\n\n- [Hardhat test directory](https://github.com/ebtc-protocol/ebtc/tree/release-0.7/packages/contracts/test) \n- [Foundry test directory](https://github.com/ebtc-protocol/ebtc/tree/release-0.7/packages/contracts/foundry_test)\n- Several Echdina/Medusa configs\n\n\n**Public Disclosure of Known Issues**\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n\n- Account's stETH balance getting lower on 1 or 2 wei due to rounding down integer math: https://github.com/lidofinance/lido-dao/issues/442 \n\n- Steal of shares using transferSharesFrom due to math rounding issues: https://github.com/lidofinance/lido-dao/issues/796\n\n- Redeem to change partial NICR in order to grief redemption, or, open a cdp that front-runs the redemption to grief the redemption: https://github.com/code-423n4/2023-10-badger-findings/issues/226 \n\n- stETH upgrade risk is considered known\n\n- Unbounded gas is via poor hint selection\n\n- Chainlink misbehaviour and single privilege is considered known\n\n- Known Rounding Behaviour: Debt Redistribution Precision Loss:\n\n  - Every time a Cdp updates with one or more pending debt redistribution events, it can possibly lose 1 wei of debt to rounding. This 1 wei of debt will still be accounted for in systemDebt. This is “rounding against the protocol” in the sense that the systemDebt will become 1 wei higher than the sum of all active Cdp debt for each instance of this occuring. It’s unbounded. This leads to a theoretical maximum differential of 1 wei per Cdp per debt redistribution event between the sum of all active Cdp debt and the systemDebt.\n\n- Known Rounding Behaviour: Collateral Rebase Precision Loss:\n\n  - However, this rounding behavior also exists during collateral rebase events. In this case it “rounds against the user”. Each time a Cdp is updated with any pending rebases to apply, it can lose 1 wei of collateral versus what it would have mathematically speaking due to precision loss of division. The systemCollShares becomes 1 wei higher than the sum of all active Cdp collShares in this instance. This leads to a theoretical maximum differential of 1 wei per Cdp per rebase event between the systemCollShares and the sum of all active Cdp collShares.\n\n- SortedCdps list can get out of order with debt redistribution. This is considered acceptable and does not affect liquidations, only redemption ordering.\n\n**Previous Audits**\n\nBadgerDAO’s has provided these completed audit review reports for reference. Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n\n- RiskDAO: https://github.com/Risk-DAO/Reports/blob/main/eBTC.pdf\n- Trust: https://badger.com/images/uploads/trust-ebtc-audit-report.pdf\n- Spearbit: https://badger.com/images/uploads/ebtc-security-review-spearbit.pdf\n- Cantina: https://badger.com/images/uploads/ebtc-security-review-cantina.pdf\n- Code4rena: https://code4rena.com/reports/2023-10-badger\n- Shung: https://gist.github.com/Shungy/ebeb9366e970ecbf4da1eda296581e47\n\n### Asset In Scope Policies\n\n**Asset Accuracy Assurance**\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n**Private Known Issues Reward Policy**\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are considered valid, but will be downgraded by one severity.\n\n**Known Issue Assurance**\n\nBadgerDAO commits to providing Known Issue Assurance to bug submissions through their program. This means that BadgerDAO will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n**Primacy of Impact vs Primacy of Rules**\n\nBadgerDAO adheres to the Primacy of Impact for all impacts.\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact ](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.",
-      "impactsBody": "**Proof of Concept (PoC) Requirements**\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n**Impacts caused by exploiting external dependencies**\n\nCritical & High severity impacts caused by exploiting external dependencies (such as Chainlink oracles and OpenZepplin libraries) are considered valid and in-scope, however they will be downgraded to Medium severity from the assessed impact.\n\nMedium & Low severity impacts caused by exploiting external dependencies (such as Chainlink oracles and OpenZepplin libraries) are considered invalid and out-of-scope from the assessed impact.\n\n**Feasibility Limitations**\n\nFor a Critical or High severity impact related to Loss of Yield, Precision Loss or insolvency the issue needs to demonstrate a loss higher than $500 with a 2 stETH Cdp (which would be the minimal threshold for insolvency for eBTC).\n\nMagnitude matters when evaluating the validity of Critical & High severity impacts. Notably when discussing theft of funds, protocol insolvency, and theft of unclaimed yield. With this protocol, assume:\n\n- System TVL is between $1m and $1b at $2500 ETH. Meaning 400 stETH to 400,000 stETH total collateral\n- Absolute value of loss must be greater than 10% to qualify as protocol insolvency because any damage below 10% will not cause protocol insolvency in the worst case scenario due to the minimum Collateral Ratio being 110%.\n- 100,000 maximum Cdps \n- No more than 36,500 rebases and 10,000 bad debt redistribution events\n\nPOCs that demonstrate impacts with conditions outside of this range will be considered valid but downgraded to Medium severity due to practical infeasibility.\n\n### Miscellaneous Policies\n\n**Eligibility Criteria**\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributors that are currently involved (past contributors may participate)\n\n**Responsible Publication**\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this boosted bug bounty and a leaderboard of the participants and their earnings.\n\n**Feasibility Limitations**\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.",
+      "impactsBody": "**Proof of Concept (PoC) Requirements**\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n**Impacts caused by exploiting external dependencies**\n\nCritical & High severity impacts caused by exploiting external dependencies (such as Chainlink oracles and OpenZepplin libraries) are considered valid and in-scope, however they will be downgraded to Medium severity from the assessed impact.\n\nMedium & Low severity impacts caused by exploiting external dependencies (such as Chainlink oracles and OpenZepplin libraries) are considered invalid and out-of-scope from the assessed impact.\n\n**Feasibility Limitations**\n\nFor a Critical or High severity impact related to Loss of Yield, Precision Loss or insolvency the issue needs to demonstrate a loss higher than $500 with a 2 stETH Cdp (which would be the minimal threshold for insolvency for eBTC).\n\nMagnitude matters when evaluating the validity of Critical & High severity impacts. Notably when discussing theft of funds, protocol insolvency, and theft of unclaimed yield. With this protocol, assume:\n\n- System TVL is between $1m and $1b at $2500 ETH. Meaning 400 stETH to 400,000 stETH total collateral\n- Absolute value of loss must be greater than 10% to qualify as protocol insolvency because any damage below 10% will not cause protocol insolvency in the worst case scenario due to the minimum Collateral Ratio being 110%.\n- 100,000 maximum Cdps \n- No more than 36,500 rebases and 10,000 bad debt redistribution events\n\nPOCs that demonstrate impacts with conditions outside of this range will be considered valid but downgraded to Medium severity due to practical infeasibility.\n\n### Miscellaneous Policies\n\n**Eligibility Criteria**\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributors that are currently involved (past contributors may participate)\n\n**Responsible Publication**\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this audit competition and a leaderboard of the participants and their earnings.\n\n**Feasibility Limitations**\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.",
       "immunefiStandard": true,
       "tags": {
         "general": [
           "Immunefi Standard",
           "KYC Not Required",
-          "PoC Required",
+          "PoC Not Required",
+          "Step-by-step PoC Required",
           "Primacy of Impact"
         ],
         "productType": [
@@ -309,9 +314,12 @@
       "boostedIntroStartingIn": "$200,000 USD is available in rewards for finding bugs in eBTC’s codebase of about 5000 nSLOC. There is no KYC and anyone may participate, except for official contributors that are currently involved (past contributors may participate).\n\nBadgerDAO, the creators of eBTC, will respond within 24 hours on weekdays to all bug reports. Any technical questions and support requests can be asked directly to BadgerDAO or Immunefi in the [BadgerDAO Boost Discord channel](https://discord.com/channels/787092485969150012/1207523219880280104).\n\nWhen the Boost has ended Immunefi will publish an event-specific leaderboard and bug reports from the event.\n\nTo kick-off the launch BadgerDAO will be presenting a [live technical walkthrough and AMA](https://discord.com/events/787092485969150012/1207964956167897098), hosted by Immunefi. It starts Monday at 4:30pm UTC+0.\n\n[Sign up for the Boost here](https://docs.google.com/forms/d/e/1FAIpQLSf0lo3wkUsWPUMutcV1xliBEU9-c8Dcwh0YjAkROGak8bZtUw/viewform).",
       "boostedIntroLive": "$200,000 USD is available in rewards for finding bugs in eBTC’s codebase of about 5000 nSLOC. There is no KYC and anyone may participate, except for official contributors that are currently involved (past contributors may participate).\n\nBadgerDAO, the creators of eBTC, will respond within 24 hours on weekdays to all bug reports. Any technical questions and support requests can be asked directly to BadgerDAO or Immunefi in the [BadgerDAO Boost Discord channel](https://discord.com/channels/787092485969150012/1207523219880280104).\n\nWhen the Boost has ended Immunefi will publish an event-specific leaderboard and bug reports from the event. \n\nThe Boost is primarily concerned with the loss of user funds.",
       "boostedIntroEvaluating": "",
-      "boostedIntroFinished": "Boost cards for security researchers with paid reports are available [here](https://drive.google.com/drive/folders/1iULI4qlQkE6VCJFGdcnjw9TlBid7z6lQ?usp=sharing).\n\nAll paid bug reports are available in original format [here](https://github.com/immunefi-team/Bounty_Boosts/tree/main/BadgerDAO%20(eBTC).",
+      "boostedIntroFinished": "Audit Competition cards for security researchers with paid reports are available [here](https://drive.google.com/drive/folders/1iULI4qlQkE6VCJFGdcnjw9TlBid7z6lQ?usp=sharing).\n\nAll paid bug reports are available in original format [here](https://github.com/immunefi-team/Bounty_Boosts/tree/main/BadgerDAO%20(eBTC).",
       "rewardsToken": "USDC",
       "rewardsPool": 200000,
+      "primaryPool": 200000,
+      "allStarsPool": 0,
+      "podiumPool": 0,
       "sourceLinesOfCode": 5000,
       "boostedSummaryReport": "https://drive.google.com/file/d/1CrK9PWe8BhGmoWNb5NIjXqN50dF2mwJx/view?usp=sharing",
       "inviteOnly": false,
@@ -439,10 +447,6 @@
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "outOfScopeBlockchain": null,
-      "outOfScopeGeneral": null,
-      "outOfScopeSmartContract": null,
-      "outOfScopeWebAndApplications": null,
       "defaultOutOfScopeBlockchain": null,
       "defaultOutOfScopeSmartContract": null,
       "defaultOutOfScopeGeneral": null,
@@ -456,16 +460,19 @@
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [],
       "programDocumentations": [],
+      "primacy": "primacy_of_rules",
+      "newProgramRewardsEnabled": false,
+      "findingsUrl": null,
       "premiumTriaging": true
     },
     "layoutProps": {
       "headerMarginBottom": "mb-12 lg:mb-16"
     },
     "metaData": {
-      "title": "Boost | eBTC Bug Bounties",
-      "description": "Find bugs and vulnerabilities on Boost | eBTC and get paid up to $200,000.",
-      "url": "https://immunefi.com/boost/ebtc-boost",
-      "ogImg": "/api/bounty/og-image?project=Boost+%7C+eBTC"
+      "title": "Audit Comp | eBTC Bug Bounties",
+      "description": "Find bugs and vulnerabilities on Audit Comp | eBTC and get paid up to $200,000.",
+      "url": "https://immunefi.com/audit-competition/ebtc-boost/",
+      "ogImg": "/api/bounty/og-image/?project=Audit+Comp+%7C+eBTC&slug=ebtc-boost"
     }
   },
   "__N_SSG": true

@@ -4,6 +4,10 @@
     "academyContent": null,
     "ethereumAttackathonSponsors": null,
     "project": {
+      "features": [
+        "Boost",
+        "Managed Triage: Time Saver"
+      ],
       "premiumTriaging": true,
       "isSafeHarborActive": false,
       "performanceMetrics": {}
@@ -12,12 +16,12 @@
       "contentfulId": "5p6DwbodJ2UnAAEoqEya2U",
       "id": "boost-lido",
       "slug": "boost-lido",
-      "project": "Boost | Lido: Mellow Vault",
+      "project": "Audit Comp | Lido: Mellow Vault",
       "maxBounty": 100000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/aNleyqsTXYGXlLKwk8xXD/d5c618f76994d16da63dacec4112b48b/Lido-mellow-svg__1_.png",
       "launchDate": "2024-08-15T12:00:00.000Z",
       "endDate": "2024-09-05T08:00:00.000Z",
-      "updatedDate": "2024-10-07T09:43:26.590Z",
+      "updatedDate": "2024-10-22T15:05:08.030Z",
       "kyc": false,
       "rewards": [
         {
@@ -152,96 +156,97 @@
       ],
       "impacts": [
         {
-          "id": "1yjUZtrK5SMzJek1b2z2mX",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "1f149Sj38KIa88Oec4wNhi",
-          "title": "Permanent freezing of funds",
+          "id": 24,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed royalties"
         },
         {
-          "id": "7rjImmio32T9jgEEDQhWj",
-          "title": "Protocol insolvency",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "26WDTaiisJeTcKO8qRYYxZ",
-          "title": "Theft of unclaimed yield",
+          "id": 26,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed royalties"
         },
         {
-          "id": "6qzobynpXnblapCDAxLwno",
-          "title": "Theft of unclaimed royalties",
+          "id": 5055,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Temporary freezing of funds for at least 1 week"
         },
         {
-          "id": "kkqpw0AL59wKjEvBTCJL5",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "5hWf5cHEZnItFcGbawlCe9",
-          "title": "Permanent freezing of unclaimed royalties",
+          "id": 30,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing"
         },
         {
-          "id": "4B5z98NveROXuDqZ3r9ULX",
-          "title": "Temporary freezing of funds for at least 1 week",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "1SXkktDRouI2S4x6sXKtxK",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "5k8dp14yk4EV7bKn8dfSIX",
-          "title": "Block stuffing",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "6Z67EEkqyi4IzRmEjkhiAi",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "2QPd4RrTced1ifL7uDCz71",
-          "title": "Theft of gas",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "3ghqxBJwn8COVTQSpRV8EH",
-          "title": "Unbounded gas consumption",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "Lido is a liquid staking solution for Ethereum backed by industry-leading staking providers. Lido lets users stake their ETH - without locking assets or maintaining infrastructure - whilst participating in on-chain activities, e.g. lending.\n\nThe Decentralized Validator Vault, developed by Mellow, will be utilized to direct net-new stake to the Lido Simple DVT Module, furthering the decentralization of validators using the Lido protocol. The vault will empower solo and community stakers to run more validators via Lido along with professional node operators.\n\nStakers in the vault will receive points from the two major DVT providers, Obol & SSV Network, as well as points from Mellow. In addition, by staking in the vault, users will also hold a wstETH position within the vault, represented by an LP token.\n\nFor more information about Mellow Vault, please visit [https://app.mellow.finance/vaults/ethereum-dvsteth](https://app.mellow.finance/vaults/ethereum-dvsteth). \n\nFor more information about Lido, please visit [Lido.fi](https://lido.fi/). \n\nLido provides rewards in DAI, denominated in USD.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "The following reward terms are a summary, for the full details read our [Lido Boost Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/27551774731153-Lido-Boost-Reward-Terms). \n\nThe reward pool will be entirely distributed among participants. The size depends on the bugs found:\n- If one or more Critical severity bugs are found the reward pool will be - $100,000 USD\n- If one or more High severity bugs are found the reward pool will be - $75,000 USD\n- If one or more Medium severity bugs is found the reward pool will be - $20,000 USD\n\nFor this Boost, duplicates and private known issues are valid for a reward. \n\nPrivate known issues will unlock higher reward pools as though they were one severity level lower. For example, a Critical severity bug which was a private known issue would unlock the reward pool conditional on a High severity bug being found.\n\nThe severity level of private known issues remains unchanged and whitehats earn their portion of the reward pool and position on the leaderboard according to this unchanged severity level.\n\nRewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/).\n\n__Reward Payment Terms__\n\nPayouts are handled by the Lido team directly and are denominated in USD. However, payments are done in DAI.\n\nRewards will be distributed all at once based on Immunefi’s distribution formula after the event has concluded and the final bug reports have been resolved.\n\n__Insight Rewards Payment Terms__\n\nInsight Rewards: Portion of the Rewards Pool\n\n* The \"Insight\" severity was introduced on Boost & Attackathon programs to recognize contributions that extend beyond identifying immediate vulnerabilities. Currently, it's not an option to select the Insight severity when submitting a report. However, our team or program will designate it accordingly if applicable. \"Insights\" underscores our commitment to valuing all types of contributions that contribute to a more secure environment and will always be rewarded. View more information about Insights.",
+      "rewardsBody": "The following reward terms are a summary, for the full details read our [Lido Audit Competition Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/27551774731153-Lido-Audit-Competition-Reward-Terms). \n\nThe reward pool will be entirely distributed among participants. The size depends on the bugs found:\n- If one or more Critical severity bugs are found the reward pool will be - $100,000 USD\n- If one or more High severity bugs are found the reward pool will be - $75,000 USD\n- If one or more Medium severity bugs is found the reward pool will be - $20,000 USD\n\nFor this Audit Competition, duplicates and private known issues are valid for a reward. \n\nPrivate known issues will unlock higher reward pools as though they were one severity level lower. For example, a Critical severity bug which was a private known issue would unlock the reward pool conditional on a High severity bug being found.\n\nThe severity level of private known issues remains unchanged and whitehats earn their portion of the reward pool and position on the leaderboard according to this unchanged severity level.\n\nRewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/).\n\n__Reward Payment Terms__\n\nPayouts are handled by the Lido team directly and are denominated in USD. However, payments are done in DAI.\n\nRewards will be distributed all at once based on Immunefi’s distribution formula after the event has concluded and the final bug reports have been resolved.\n\n__Insight Rewards Payment Terms__\n\nInsight Rewards: Portion of the Rewards Pool\n\n* The \"Insight\" severity was introduced on Audit Competition & Attackathon programs to recognize contributions that extend beyond identifying immediate vulnerabilities. Currently, it's not an option to select the Insight severity when submitting a report. However, our team or program will designate it accordingly if applicable. \"Insights\" underscores our commitment to valuing all types of contributions that contribute to a more secure environment and will always be rewarded. View more information about Insights.",
       "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories:__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Blockchain/DLT & Smart Contract Specific:__\n\n- Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n\n__Prohibited Activities:__\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "Mellow Vault code commit: [https://github.com/mellow-finance/mellow-lrt/commit/1c885ad9a2964ca88ad3e59c3a7411fc0059aa3](https://github.com/mellow-finance/mellow-lrt/commit/1c885ad9a2964ca88ad3e59c3a7411fc0059aa3)\n\n__Whitehat Educational Resources & Technical Info__\n\n**Documentation & Resources**\n\n- [https://mellowprotocol.notion.site/Decentralized-Validator-Vault-a1ab952ae0a6499dbedfc45278aba5c5?pvs=74](https://mellowprotocol.notion.site/Decentralized-Validator-Vault-a1ab952ae0a6499dbedfc45278aba5c5?pvs=74) \n- [https://docs.mellow.finance/mellow-lrt-lst-primitive/dvsteth-vault-overview](https://docs.mellow.finance/mellow-lrt-lst-primitive/dvsteth-vault-overview)\n- [https://docs.mellow.finance/mellow-lrt-lst-primitive/contract-deployments#dvsteth-vault](https://docs.mellow.finance/mellow-lrt-lst-primitive/contract-deployments#dvsteth-vault)\n- [https://docs.mellow.finance/mellow-lrt-lst-primitive/user-tutorials](https://docs.mellow.finance/mellow-lrt-lst-primitive/user-tutorials)\n- [https://docs.mellow.finance/mellow-lrt-lst-primitive/security](https://docs.mellow.finance/mellow-lrt-lst-primitive/security)\n- [https://docs.mellow.finance/mellow-lrt-lst-primitive/lrt-contracts](https://docs.mellow.finance/mellow-lrt-lst-primitive/lrt-contracts)\n- Mellow DVT Vault Boost scope: [https://hackmd.io/@lido/BkTgoRz90](https://hackmd.io/@lido/BkTgoRz90)\n- Lido docs: [https://docs.lido.fi/](https://docs.lido.fi/)\n\n**Is this an upgrade of an existing system? If so, which? And what are the main differences?**\n\nNo, it’s a new Mellow project\n\n**Where do you suspect there may be bugs?**\n\nMost important parts: SimpleDVTStakingStrategy and deposit and withdraw flows, ACLs and ManagedValidator. \nInvariants: LP token price in ETH is strictly not decreasing.\n\n**What ERC20 / ERC721 / ERC777 / ERC1155 token standards are supported? Which are not?**\n\nDeposit and withdrawals support only ERC20 tokens. System internally can use rebasing tokens such as stETH. \nTokens used: wstETH, stETH and wETH \n\n**What emergency actions may you want to use as a reason to invalidate or downgrade an otherwise valid bug report?**\n\nPossible actions:\nDisable deposits (Enable deposit locks)\n\n**What addresses would you consider any bug report requiring their involvement to be out of scope, as long as they operate within the privileges attributed to them?**\n\nTrusted actors:\n- VaultAdmin: 0x9437B2a8cF3b69D782a61f9814baAbc172f72003 (Lido+Mellow multisig)\n- ProxyVaultAdmin: 0x81698f87C6482bF1ce9bFcfC0F103C4A0Adf0Af0 (Lido+Mellow multisig (ProxyVaultAdmin can change the vault implementation.)\n- CuratorAdmin: 0x2E93913A796a6C6b2bB76F41690E78a2E206Be54 (Steakhouse multisig)\n- CuratorOperator: 0x2afc096981c2CFe3501bE4054160048718F6C0C8 (Steakhouse EOA)\n\n**What addresses would you consider any bug report requiring their involvement be out of scope, even if they exceed the privileges attributed to them?**\n\nTrusted actors:\n- VaultAdmin: 0x9437B2a8cF3b69D782a61f9814baAbc172f72003, (Lido+Mellow multisig)\n- ProxyVaultAdmin: 0x81698f87C6482bF1ce9bFcfC0F103C4A0Adf0Af0 (Lido+Mellow multisig (ProxyVaultAdmin can change the vault implementation.))\n- CuratorAdmin: 0x2E93913A796a6C6b2bB76F41690E78a2E206Be54 (Steakhouse multisig)\n- CuratorOperator: 0x2afc096981c2CFe3501bE4054160048718F6C0C8 (Steakhouse EOA)\n\n**What external dependencies are there?**\n\nOpen Zeppelin 5.0.2, Lido\n\n**Where might whitehats confuse out-of-scope code to be in-scope?**\n\nLido contracts\n\n**Are there any unusual points about your protocol that may confuse whitehats?**\n\nIn emergency withdrawal we calculate amounts based on ERC20 balances of tokens and not based on baseTvl function (Vault) return values\n\n**Which chains are the smart contracts going to be deployed to?**\n\nEthereum Mainnet \nDocs: [https://docs.mellow.finance/mellow-lrt-lst-primitive/contract-deployments#dvsteth-vault](https://docs.mellow.finance/mellow-lrt-lst-primitive/contract-deployments#dvsteth-vault)\n\n**What is the test suite setup information?**\n\n[https://github.com/mellow-finance/mellow-lrt/tree/fixes/audit-sherlock-fixes/tests/obol](https://github.com/mellow-finance/mellow-lrt/tree/fixes/audit-sherlock-fixes/tests/obol)\n\n**Public Disclosure of Known Issues**\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n- From Sherlock contest:\n      - We consider the price of 1 steth == 1 eth.\n      - In emergencyWithdraw, we process withdrawals not through the values from baseTvl but through regular ERC20 balances (this is a design decision).\n      - In the SimpleDVTStakingStrategy, the convertAndDeposit function can be front-run by anyone.\n\n- From ChainSecurity:\n      - The StakingModule may not deposit into the Simple DVT module (due to MinFirstAllocationStrategy in Lido).\n      - Emergency withdrawal (the same second point from Sherlock).\n      - All updates of important parameters can be front-run (this is 5.6 from ChainSecurity).\n\n**Previous Audits**\n\nMellow’s completed audit reports can be found at [https://github.com/mellow-finance/mellow-lrt/tree/fixes/audit-sherlock-fixes/audits](https://github.com/mellow-finance/mellow-lrt/tree/fixes/audit-sherlock-fixes/audits). Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n__Asset In Scope Policies__\n\n**Asset Accuracy Assurance**\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n**Private Known Issues Reward Policy**\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward.\n\n**Known Issue Assurance**\n\nLido commits to providing Known Issue Assurance to bug submissions through their program. This means that Lido will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n**Primacy of Impact vs Primacy of Rules**\n\nLido adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page.",
-      "impactsBody": "**Proof of Concept (PoC) Requirements**\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n**Eligibility Criteria**\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this boosted bug bounty and a leaderboard of the participants and their earnings.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Ionic has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
+      "assetsBodyV2": "Mellow Vault code commit: [https://github.com/mellow-finance/mellow-lrt/commit/1c885ad9a2964ca88ad3e59c3a7411fc0059aa3](https://github.com/mellow-finance/mellow-lrt/commit/1c885ad9a2964ca88ad3e59c3a7411fc0059aa3)\n\n__Whitehat Educational Resources & Technical Info__\n\n**Documentation & Resources**\n\n- [https://mellowprotocol.notion.site/Decentralized-Validator-Vault-a1ab952ae0a6499dbedfc45278aba5c5?pvs=74](https://mellowprotocol.notion.site/Decentralized-Validator-Vault-a1ab952ae0a6499dbedfc45278aba5c5?pvs=74) \n- [https://docs.mellow.finance/mellow-lrt-lst-primitive/dvsteth-vault-overview](https://docs.mellow.finance/mellow-lrt-lst-primitive/dvsteth-vault-overview)\n- [https://docs.mellow.finance/mellow-lrt-lst-primitive/contract-deployments#dvsteth-vault](https://docs.mellow.finance/mellow-lrt-lst-primitive/contract-deployments#dvsteth-vault)\n- [https://docs.mellow.finance/mellow-lrt-lst-primitive/user-tutorials](https://docs.mellow.finance/mellow-lrt-lst-primitive/user-tutorials)\n- [https://docs.mellow.finance/mellow-lrt-lst-primitive/security](https://docs.mellow.finance/mellow-lrt-lst-primitive/security)\n- [https://docs.mellow.finance/mellow-lrt-lst-primitive/lrt-contracts](https://docs.mellow.finance/mellow-lrt-lst-primitive/lrt-contracts)\n- Mellow DVT Vault Audit Competition scope: [https://hackmd.io/@lido/BkTgoRz90](https://hackmd.io/@lido/BkTgoRz90)\n- Lido docs: [https://docs.lido.fi/](https://docs.lido.fi/)\n\n**Is this an upgrade of an existing system? If so, which? And what are the main differences?**\n\nNo, it’s a new Mellow project\n\n**Where do you suspect there may be bugs?**\n\nMost important parts: SimpleDVTStakingStrategy and deposit and withdraw flows, ACLs and ManagedValidator. \nInvariants: LP token price in ETH is strictly not decreasing.\n\n**What ERC20 / ERC721 / ERC777 / ERC1155 token standards are supported? Which are not?**\n\nDeposit and withdrawals support only ERC20 tokens. System internally can use rebasing tokens such as stETH. \nTokens used: wstETH, stETH and wETH \n\n**What emergency actions may you want to use as a reason to invalidate or downgrade an otherwise valid bug report?**\n\nPossible actions:\nDisable deposits (Enable deposit locks)\n\n**What addresses would you consider any bug report requiring their involvement to be out of scope, as long as they operate within the privileges attributed to them?**\n\nTrusted actors:\n- VaultAdmin: 0x9437B2a8cF3b69D782a61f9814baAbc172f72003 (Lido+Mellow multisig)\n- ProxyVaultAdmin: 0x81698f87C6482bF1ce9bFcfC0F103C4A0Adf0Af0 (Lido+Mellow multisig (ProxyVaultAdmin can change the vault implementation.)\n- CuratorAdmin: 0x2E93913A796a6C6b2bB76F41690E78a2E206Be54 (Steakhouse multisig)\n- CuratorOperator: 0x2afc096981c2CFe3501bE4054160048718F6C0C8 (Steakhouse EOA)\n\n**What addresses would you consider any bug report requiring their involvement be out of scope, even if they exceed the privileges attributed to them?**\n\nTrusted actors:\n- VaultAdmin: 0x9437B2a8cF3b69D782a61f9814baAbc172f72003, (Lido+Mellow multisig)\n- ProxyVaultAdmin: 0x81698f87C6482bF1ce9bFcfC0F103C4A0Adf0Af0 (Lido+Mellow multisig (ProxyVaultAdmin can change the vault implementation.))\n- CuratorAdmin: 0x2E93913A796a6C6b2bB76F41690E78a2E206Be54 (Steakhouse multisig)\n- CuratorOperator: 0x2afc096981c2CFe3501bE4054160048718F6C0C8 (Steakhouse EOA)\n\n**What external dependencies are there?**\n\nOpen Zeppelin 5.0.2, Lido\n\n**Where might whitehats confuse out-of-scope code to be in-scope?**\n\nLido contracts\n\n**Are there any unusual points about your protocol that may confuse whitehats?**\n\nIn emergency withdrawal we calculate amounts based on ERC20 balances of tokens and not based on baseTvl function (Vault) return values\n\n**Which chains are the smart contracts going to be deployed to?**\n\nEthereum Mainnet \nDocs: [https://docs.mellow.finance/mellow-lrt-lst-primitive/contract-deployments#dvsteth-vault](https://docs.mellow.finance/mellow-lrt-lst-primitive/contract-deployments#dvsteth-vault)\n\n**What is the test suite setup information?**\n\n[https://github.com/mellow-finance/mellow-lrt/tree/fixes/audit-sherlock-fixes/tests/obol](https://github.com/mellow-finance/mellow-lrt/tree/fixes/audit-sherlock-fixes/tests/obol)\n\n**Public Disclosure of Known Issues**\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n- From Sherlock contest:\n      - We consider the price of 1 steth == 1 eth.\n      - In emergencyWithdraw, we process withdrawals not through the values from baseTvl but through regular ERC20 balances (this is a design decision).\n      - In the SimpleDVTStakingStrategy, the convertAndDeposit function can be front-run by anyone.\n\n- From ChainSecurity:\n      - The StakingModule may not deposit into the Simple DVT module (due to MinFirstAllocationStrategy in Lido).\n      - Emergency withdrawal (the same second point from Sherlock).\n      - All updates of important parameters can be front-run (this is 5.6 from ChainSecurity).\n\n**Previous Audits**\n\nMellow’s completed audit reports can be found at [https://github.com/mellow-finance/mellow-lrt/tree/fixes/audit-sherlock-fixes/audits](https://github.com/mellow-finance/mellow-lrt/tree/fixes/audit-sherlock-fixes/audits). Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n__Asset In Scope Policies__\n\n**Asset Accuracy Assurance**\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n**Private Known Issues Reward Policy**\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward.\n\n**Known Issue Assurance**\n\nLido commits to providing Known Issue Assurance to bug submissions through their program. This means that Lido will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n**Primacy of Impact vs Primacy of Rules**\n\nLido adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page.",
+      "impactsBody": "**Proof of Concept (PoC) Requirements**\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n**Eligibility Criteria**\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this audit competition and a leaderboard of the participants and their earnings.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Ionic has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
       "immunefiStandard": true,
       "tags": {
         "general": [
           "Immunefi Standard",
           "KYC Not Required",
-          "PoC Required"
+          "PoC Not Required",
+          "Step-by-step PoC Required"
         ],
         "productType": [
           "DAO",
@@ -285,18 +290,31 @@
         ],
         "web_rewards": []
       },
-      "evaluationEndDate": "2024-10-14T08:00:00.000Z",
+      "evaluationEndDate": "2024-10-22T15:00:00.000Z",
       "boostedIntroStartingIn": "$100,000 USD in rewards is available for finding bugs on Mellow Decentralized Validator Vault.\n\nThe Decentralized Validator Vault, developed by Mellow, will be utilized to direct net-new stake to the Lido Simple DVT Module, furthering the decentralization of validators using the Lido protocol. The vault will empower solo and community stakers to run more validators via Lido along with professional node operators.\n\nStakers in the vault will receive points from the two major DVT providers, Obol & SSV Network, as well as points from Mellow. In addition, by staking in the vault, users will also hold a wstETH position within the vault, represented by an LP token.\n\nNo KYC is required.\n\nAny technical questions can be asked directly to the Mellow-Lido technical team on Immunefi's [Immunefi’s Discord](https://discord.com/invite/immunefi) in the \"lido-boost\" channel.\n\nWhen the Boost has ended, Immunefi will publish an event-specific leaderboard and bug reports from the event.\n\nIn a few days after the launch, Mellow & Lido will give a live technical walkthrough.",
       "boostedIntroLive": "",
       "boostedIntroEvaluating": "",
-      "boostedIntroFinished": "",
+      "boostedIntroFinished": "All paid bug reports are available in original format [here](https://github.com/immunefi-team/Bounty_Boosts/tree/main)",
       "rewardsToken": "DAI",
       "rewardsPool": 100000,
+      "primaryPool": 100000,
+      "allStarsPool": 0,
+      "podiumPool": 0,
       "sourceLinesOfCode": 1281,
-      "boostedSummaryReport": null,
+      "boostedSummaryReport": "https://drive.google.com/file/d/1L1OK7_NmMl8IRaViao8JEjY1gTVPSPvK/view?usp=sharing",
       "inviteOnly": false,
       "hideAssetsInScope": null,
-      "boostedLeaderboard": [],
+      "boostedLeaderboard": [
+        {
+          "high": 0,
+          "name": "marchev",
+          "critical": 0,
+          "earnings": 1500,
+          "insights": 1,
+          "mediumLow": 0,
+          "totalValidBugs": 0
+        }
+      ],
       "features": [
         "Boost",
         "Managed Triage: Time Saver"
@@ -310,10 +328,6 @@
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "outOfScopeBlockchain": null,
-      "outOfScopeGeneral": null,
-      "outOfScopeSmartContract": null,
-      "outOfScopeWebAndApplications": null,
       "defaultOutOfScopeBlockchain": null,
       "defaultOutOfScopeSmartContract": null,
       "defaultOutOfScopeGeneral": null,
@@ -327,16 +341,19 @@
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [],
       "programDocumentations": [],
+      "primacy": "primacy_of_rules",
+      "newProgramRewardsEnabled": false,
+      "findingsUrl": null,
       "premiumTriaging": true
     },
     "layoutProps": {
       "headerMarginBottom": "mb-12 lg:mb-16"
     },
     "metaData": {
-      "title": "Boost | Lido: Mellow Vault Bug Bounties",
-      "description": "Find bugs and vulnerabilities on Boost | Lido: Mellow Vault and get paid up to $100,000.",
-      "url": "https://immunefi.com/boost/boost-lido",
-      "ogImg": "/api/bounty/og-image?project=Boost+%7C+Lido%3A+Mellow+Vault"
+      "title": "Audit Comp | Lido: Mellow Vault Bug Bounties",
+      "description": "Find bugs and vulnerabilities on Audit Comp | Lido: Mellow Vault and get paid up to $100,000.",
+      "url": "https://immunefi.com/audit-competition/boost-lido/",
+      "ogImg": "/api/bounty/og-image/?project=Audit+Comp+%7C+Lido%3A+Mellow+Vault&slug=boost-lido"
     }
   },
   "__N_SSG": true

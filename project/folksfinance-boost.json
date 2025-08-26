@@ -4,6 +4,10 @@
     "academyContent": null,
     "ethereumAttackathonSponsors": null,
     "project": {
+      "features": [
+        "Boost",
+        "Managed Triage: Time Saver"
+      ],
       "premiumTriaging": true,
       "isSafeHarborActive": false,
       "performanceMetrics": {}
@@ -12,12 +16,12 @@
       "contentfulId": "1ppxFzjfXI5IeBx7MpIlIN",
       "id": "folksfinance-boost",
       "slug": "folksfinance-boost",
-      "project": "Boost | Folks Finance",
+      "project": "Audit Comp | Folks Finance",
       "maxBounty": 100000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6J3xxAowY0ZlOFTEciL88K/752c37cc0e37232a1f9075df7609c79c/Folks_Finance_logo.png",
       "launchDate": "2024-07-16T08:00:00.000Z",
       "endDate": "2024-08-06T08:00:00.000Z",
-      "updatedDate": "2024-09-27T12:50:21.970Z",
+      "updatedDate": "2024-10-15T13:45:38.226Z",
       "kyc": false,
       "rewards": [
         {
@@ -473,96 +477,97 @@
       ],
       "impacts": [
         {
-          "id": "9BkMCDrlvXADD9gWTYR3I",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "7jutqloSb3D1RR8rrSuAfk",
-          "title": "Permanent freezing of funds",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "2kJLQMFWJuiV7txNP2Mupc",
-          "title": "Protocol insolvency",
+          "id": 24,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed royalties"
         },
         {
-          "id": "z8Er724iSy4ojmegOZJq8",
-          "title": "Theft of unclaimed yield",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "21aWRgaME4THZtM09bUpjF",
-          "title": "Theft of unclaimed royalties",
+          "id": 26,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed royalties"
         },
         {
-          "id": "9fkQcn5xcXQvkSksPgvgm",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 4941,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Temporary freezing of funds of at least 24h"
         },
         {
-          "id": "41M7NP4zXxjPVoacidd1b",
-          "title": "Permanent freezing of unclaimed royalties",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "1X4T9d1hmUzRvmMpApFhU4",
-          "title": "Temporary freezing of funds of at least 24h",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "2M4J0wfkrr6S9tA2VtfF4m",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "7IsxvrXR1brZD4GXpjSTSz",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "2XB0hCeFWMIw0kgHhFa6w8",
-          "title": "Theft of gas",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "1MHfimXt5CFXRnX3HUSJCK",
-          "title": "Unbounded gas consumption",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "23Toy9BgefqvFNhkBuFCAC",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
       "programOverview": "Folks Finance is a leading DeFi platform providing innovative tools for lending, borrowing, trading and managing digital assets, all in one place.\n\nFolks Finance are expanding with a new cross-chain lending protocol using a hub and spoke model. The hub chain, Avalanche, contains the main logic and state of the lending protocol. The spoke chains, initially EVM, act as an entry point for a user to interact with the protocol.\n\nChainlink CCIP and Wormhole Messaging are used to communicate between the spoke chains and hub chain. Circle CCTP is used for native cross chain transfers of USDC.\n\nFor more information about Folks Finance and their existing products, please visit https://folks.finance. \nFolks Finance provides rewards in USDC, denominated in USD.",
       "prioritizedVulnerabilities": "In general all parts of the code should be checked and attack vectors explored. We write here some areas to look at in particular but this is not to discount any other areas.\n\nOne area to explore is the communication between chains. Messages are relayed between the spoke chain and the hub chain via Chainlink CCIP and Wormhole Messaging. In addition, Circle CCTP is used for USDC transfers. It is important to verify that we are using these protocols as intended and have correctly reasoned about the lifecycle of a message. \n\nWe have a contract named “HubAdapter” which mimics the behaviour of the Chainlink CCIP and Wormhole messaging, without actually relaying anything. Its purpose is to have a common interface for interacting with the protocol through the spoke contracts regardless of whether on the hub chain or not.\n\nWe also have a new process for liquidations which should be checked both economically and codewise. The oracle integration is also new and should be checked for resistance against tampering.\n\nOne invariant to ensure that there is sufficient funds such that if all borrowers repaid their loans, all depositors can withdraw their tokens. Not an invariant, but the average stable interest rate should be closely tracking the weighted average of all the stable borrows for a given pool.",
-      "rewardsBody": "The following reward terms are a summary, for the full details read our [Folks Finance Boost Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/26758465696785-Folks-Finance-Boost-Reward-Terms)\n\nThe reward pool will be entirely distributed among participants. The size depends on the bugs found:\nIf no High or Critical severity bugs are found the reward pool will be **$50,000 USD**\nIf one or more High severity bugs are found the reward pool will be **$75,000 USD**\nIf one or more Critical severity bugs are found the reward pool will be **$100,000 USD**\n\n\nFor this boost, duplicates and private known issues are valid for a reward.\n\nRewards are distributed according to the impact of the vulnerability based on the Immunefi [Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Payment Terms__\n\nPayouts are handled by the Folks Finance team directly and are denominated in USD. However, payments are done in USDC\n\nRewards will be distributed all at once based on Immunefi’s distribution formula after the event has concluded and the final bug reports have been resolved.\n\nFolks Finance’s up to date codebase can be found at https://github.com/Folks-Finance/folks-finance-xchain-contracts.",
+      "rewardsBody": "The following reward terms are a summary, for the full details read our [Folks Finance Audit Competition Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/26758465696785-Folks-Finance-Audit-Competition-Reward-Terms)\n\nThe reward pool will be entirely distributed among participants. The size depends on the bugs found:\nIf no High or Critical severity bugs are found the reward pool will be **$50,000 USD**\nIf one or more High severity bugs are found the reward pool will be **$75,000 USD**\nIf one or more Critical severity bugs are found the reward pool will be **$100,000 USD**\n\n\nFor this audit competition, duplicates and private known issues are valid for a reward.\n\nRewards are distributed according to the impact of the vulnerability based on the Immunefi [Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Payment Terms__\n\nPayouts are handled by the Folks Finance team directly and are denominated in USD. However, payments are done in USDC\n\nRewards will be distributed all at once based on Immunefi’s distribution formula after the event has concluded and the final bug reports have been resolved.\n\nFolks Finance’s up to date codebase can be found at https://github.com/Folks-Finance/folks-finance-xchain-contracts.",
       "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program\n\n__All Categories:__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Blockchain/DLT & Smart Contract Specific:__\n\n- Incorrect data supplied by third party oracles\n- Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n\n__Prohibited Activities:__\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "__Asset Accuracy Assurance__\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n__Private Known Issues Reward Policy__\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward.\n\n__Known Issue Assurance__\n\nFolks Finance commits to providing Known Issue Assurance to bug submissions through their program. This means that Folks Finance will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n__Primacy of Impact vs Primacy of Rules__\n\nFolks Finance adheres to the Primacy of Impact for all impacts.\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see Best Practices: Primacy of Impact \nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this boosted bug bounty and a leaderboard of the participants and their earnings.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Folks Finance has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
+      "assetsBodyV2": "__Asset Accuracy Assurance__\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n__Private Known Issues Reward Policy__\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward.\n\n__Known Issue Assurance__\n\nFolks Finance commits to providing Known Issue Assurance to bug submissions through their program. This means that Folks Finance will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n__Primacy of Impact vs Primacy of Rules__\n\nFolks Finance adheres to the Primacy of Impact for all impacts.\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see Best Practices: Primacy of Impact \nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this audit competition and a leaderboard of the participants and their earnings.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Folks Finance has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
       "impactsBody": "__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the Immunefi PoC Guidelines and Rules.\n\n__Whitehat Educational Resources & Technical Info__\n\n1. Design Overview for Cross-chain Lending Protocol: [Link to Google Docs](https://docs.google.com/document/d/19HjdYSmSxoXf7b0RIjiv8cff7jwdGZ1lkFrjqRrogiE/edit?usp=sharing)\n\n2. Operation lifecycle in cross-chain lending protocol: [Link to Google Docs](https://docs.google.com/document/d/1UEV2JHpW23ChARUp_AcHJjuuq6A9T-n85T3FDYQTuGM/edit?usp=sharing)\n\n3. Formulae Used in Cross-chain Lending Protocol: [Link to Google Docs](https://docs.google.com/document/d/1UU-zhy-Ik6h-EhKS2TvcIsd0Q377H7HKF6MGP5WdwAk/edit?usp=sharing)\n\n4. Testnet for Cross-chain Lending Protocol:\n   [Link to Testnet](https://testnet.xapp.folks.finance/)\n\n5. Smart Contract README for Cross-chain Lending Protocol:\n   [Link to GitHub README](https://github.com/Folks-Finance/folks-finance-xchain-contracts/blob/main/README.md)\n\n6. Docs for Existing Folks Finance Products:\n   [Link to Folks Finance Docs](https://docs.folks.finance/)\n\n7. Medium Articles:\n   [Link to Medium Articles](https://folksfinance.medium.com/)\n\n__Is this an upgrade of an existing system? If so, which? And what are the main differences?__\n\nThis is a new cross chain lending protocol that follows a similar model to our existing Algorand lending protocol. The loans and economic structure are the same with the only difference being how liquidations work. All the cross chain infrastructure is new. \n\nThe cross chain lending protocol also uses an oracle design from Synthetix which takes up less than 5% of the total codebase. The codebase language is fully Solidity. \n\n\n__Where do you suspect there may be bugs? Useful aspects of this question are:__\n\nWhich parts of the code are you most concerned about?\nWhat attack vectors are you most concerned about?\nWhich part(s) of the system do you want whitehats to attempt to break the most?\nAre there any assumed invariants that you want whitehats to attempt to break?\n\nIn general all parts of the code should be checked and attack vectors explored. We write here some areas to look at in particular but this is not to discount any other areas.\n\nOne area to explore is the communication between chains. Messages are relayed between the spoke chain and the hub chain via Chainlink CCIP and Wormhole Messaging. In addition, Circle CCTP is used for USDC transfers. It is important to verify that we are using these protocols as intended and have correctly reasoned about the lifecycle of a message. \n\nWe have a contract named “HubAdapter” which mimics the behaviour of the Chainlink CCIP and Wormhole messaging, without actually relaying anything. Its purpose is to have a common interface for interacting with the protocol through the spoke contracts regardless of whether on the hub chain or not.\n\nWe also have a new process for liquidations which should be checked both economically and codewise. The oracle integration is also new and should be checked for resistance against tampering.\n\nOne invariant to ensure that there is sufficient funds such that if all borrowers repaid their loans, all depositors can withdraw their tokens. Not an invariant, but the average stable interest rate should be closely tracking the weighted average of all the stable borrows for a given pool.\n\n__What ERC20 / ERC721 / ERC777 / ERC1155 token standards are supported? Which are not?__\n\nERC20 and ERC777 are the only two supported. The modular design allows ERC1155 to be supported in the future too if needed.\n\n__What emergency actions may you want to use as a reason to invalidate or downgrade an otherwise valid bug report?__\n\nWe have rate limiting which sets the maximum amount which can be withdrawn or deposited. If the limit is consumed through a denial of service attack, we have the ability to temporarily boost the capacity.\n\nOther mitigating actions we can take involve removing/adding an adapter, lowering rate limits, lowering pool caps and deprecating a pool. If the bug report’s impact is small in the scope of the protocol as a whole, considering the possible mitigations, then that could be reason to invalidate or downgrade the severity.\n\n\n__What addresses would you consider any bug report requiring their involvement to be out of scope, as long as they operate within the privileges attributed to them?__\n\nE.g An ‘Operator’ address with the ability to pause smart contracts who could use their privileged functions to exploit a bug and steal funds\n\nAll admin and role addresses, as well as 3rd party infrastructure the project relies on. \n\n\n__What external dependencies are there?__\n\n- Chainlink Price Feeds\n- Pyth Price Feeds\n- Folks Finance Centralised Fallback Oracle\n- Wormhole’s Messaging\n- Chainlink’s CCIP\n- Circle’s CCTP\n\n__Where might whitehats confuse out-of-scope code to be in-scope?__\n\nThe external services such as the WormholeRelayer, Chainlink CCIP RouterClient and external oracle services. \n\n\n__Are there any unusual points about your protocol that may confuse whitehats?__\n\nWe have our own standard of sending and receiving messages. Certain operations require finality as they involve a value transfer while the others can be immediately relayed. There is the “HubAdapter” too which is mentioned above.\n\nWe split tokens into two categories in our lending protocol. The first are tokens which are not bridged and remain on the spoke chain e.g. ETH, Link. The second are tokens which are bridged and reside on the hub chain e.g. USDC.\n\nOur lending protocol also is different from others in that a user can have multiple loans, and that a loan can have multiple collaterals and borrows within it. We also define various loan types which have their own respective parameters. One of these is the “deposit” loan type which has borrow caps of zero for every token.\n\n\n__What is the test suite setup information?__\n\nIf this is already provided in Github, then linking that resource is enough.\n\nIt will be in the GitHub report with the rest of the code. \n\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n- Griefing through consuming external rate limits of tokens e.g. Circle CCTP rate limits for USDC\n- Griefing through consuming internal rate limits where we have the ability to respond by temporarily boosting capacity\n\n__Previous Audits__\n\nFolks Finance’s completed audit reports can be found at https://github.com/Folks-Finance/audits/blob/13f8d8307902e8ff7018fe9b6df0b5668c638863/OtterSec%20-%20Audit%20of%20XChain%20Lending%20-%20May%202024.pdf. Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.",
       "immunefiStandard": true,
       "tags": {
         "general": [
           "Immunefi Standard",
           "KYC Not Required",
-          "PoC Required",
+          "PoC Not Required",
+          "Step-by-step PoC Required",
           "Primacy of Impact"
         ],
         "productType": [],
@@ -607,9 +612,12 @@
       "boostedIntroStartingIn": "$100,000 USD in rewards is available for finding bugs on Folks Finance. to assess whether the set of fixes from the original Folks Finance Boost both fully resolve the reported vulnerabilities and do not introduce new ones. Hunting on a Mitigation Audit involves understanding the root cause of the issues and verifying that the patches or mitigations directly address the causes.\n\n\nFolks Finance is a leading DeFi platform providing innovative tools for lending, borrowing, trading and managing digital assets, all in one place.\n\nFolks Finance are expanding with a new cross-chain lending protocol using a hub and spoke model. The hub chain, Avalanche, contains the main logic and state of the lending protocol. The spoke chains, initially EVM, act as an entry point for a user to interact with the protocol.\n\nNo KYC is required.\n\nFolks Finance will respond within 24 hours on weekdays to all bug reports. Any technical questions can be asked directly to the Folks Finance technical team on Immunefi's [Immunefi’s Discord](https://discord.com/invite/immunefi) in the \"folks-finance-boost\" channel.\n\nWhen the Boost has ended, Immunefi will publish an event-specific leaderboard and bug reports from the event.\n\nOn July 18th, Folks Finance will give a live technical walkthrough, hosted in the Immunefi Discord. Sign up below to be notified with more details.",
       "boostedIntroLive": "",
       "boostedIntroEvaluating": "",
-      "boostedIntroFinished": "Boost cards for security researchers with paid reports are available [here](https://drive.google.com/drive/folders/1fOTfJxylAg5YnFkbf8jOiASuAatopinO).\n\nAll paid bug reports are available in original format [here](https://github.com/immunefi-team/Bounty_Boosts/tree/main/Boost%20%7C%20Folks%20Finance).",
+      "boostedIntroFinished": "Audit Competition cards for security researchers with paid reports are available [here](https://drive.google.com/drive/folders/1fOTfJxylAg5YnFkbf8jOiASuAatopinO).\n\nAll paid bug reports are available in original format [here](https://github.com/immunefi-team/Bounty_Boosts/tree/main/Boost%20%7C%20Folks%20Finance).",
       "rewardsToken": "USDC",
       "rewardsPool": 100000,
+      "primaryPool": 100000,
+      "allStarsPool": 0,
+      "podiumPool": 0,
       "sourceLinesOfCode": 4956,
       "boostedSummaryReport": "https://drive.google.com/file/d/1NI_O0_lJ6w9emEJlDogF5M_BCLkf8mNX/view?usp=sharing",
       "inviteOnly": false,
@@ -908,10 +916,6 @@
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "outOfScopeBlockchain": null,
-      "outOfScopeGeneral": null,
-      "outOfScopeSmartContract": null,
-      "outOfScopeWebAndApplications": null,
       "defaultOutOfScopeBlockchain": null,
       "defaultOutOfScopeSmartContract": null,
       "defaultOutOfScopeGeneral": null,
@@ -925,16 +929,19 @@
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [],
       "programDocumentations": [],
+      "primacy": "primacy_of_rules",
+      "newProgramRewardsEnabled": false,
+      "findingsUrl": null,
       "premiumTriaging": true
     },
     "layoutProps": {
       "headerMarginBottom": "mb-12 lg:mb-16"
     },
     "metaData": {
-      "title": "Boost | Folks Finance Bug Bounties",
-      "description": "Find bugs and vulnerabilities on Boost | Folks Finance and get paid up to $100,000.",
-      "url": "https://immunefi.com/boost/folksfinance-boost",
-      "ogImg": "/api/bounty/og-image?project=Boost+%7C+Folks+Finance"
+      "title": "Audit Comp | Folks Finance Bug Bounties",
+      "description": "Find bugs and vulnerabilities on Audit Comp | Folks Finance and get paid up to $100,000.",
+      "url": "https://immunefi.com/audit-competition/folksfinance-boost/",
+      "ogImg": "/api/bounty/og-image/?project=Audit+Comp+%7C+Folks+Finance&slug=folksfinance-boost"
     }
   },
   "__N_SSG": true

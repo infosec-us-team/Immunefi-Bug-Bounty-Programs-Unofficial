@@ -4,6 +4,11 @@
     "academyContent": null,
     "ethereumAttackathonSponsors": null,
     "project": {
+      "features": [
+        "Boost",
+        "Managed Triage: Time Saver",
+        "Vault"
+      ],
       "premiumTriaging": true,
       "isSafeHarborActive": false,
       "performanceMetrics": {}
@@ -12,12 +17,12 @@
       "contentfulId": "3ONlvASRd4Xbfx0ZfQ9fBp",
       "id": "shardeum-core-ii-boost",
       "slug": "shardeum-core-ii-boost",
-      "project": "Boost | Shardeum: Core II",
+      "project": "Audit Comp | Shardeum: Core II",
       "maxBounty": 150000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3pQP9TMw0MizXDfwmOSf40/40fec7480d34cc54384000dd1045ab00/Shardeum_Logo_Icon_Light_-_Square__1_.png",
       "launchDate": "2024-09-04T12:00:00.000Z",
       "endDate": "2024-10-16T12:00:00.000Z",
-      "updatedDate": "2024-09-27T07:05:09.394Z",
+      "updatedDate": "2024-11-27T12:09:54.757Z",
       "kyc": false,
       "rewards": [
         {
@@ -77,84 +82,85 @@
       ],
       "impacts": [
         {
-          "id": "2V1W5RtgQ5CAt36AYAjYhh",
-          "title": "Network not being able to confirm new transactions (total network shutdown)",
+          "id": 13,
           "type": "blockchain_dlt",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Modification of transaction fees outside of design parameters"
         },
         {
-          "id": "4PFvKJeJ3LKPdr9hB9brDn",
-          "title": "Direct loss of funds",
+          "id": 12,
           "type": "blockchain_dlt",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Shutdown of greater than 10% or equal to but less than 30% of network processing nodes without brute force actions, but does not shut down the network"
         },
         {
-          "id": "1omEmYmcrhnzHuhm6lyQlS",
-          "title": "Permanent freezing of funds (fix requires hardfork)",
+          "id": 5059,
           "type": "blockchain_dlt",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Blocking Specific Transactions"
         },
         {
-          "id": "gBVfuphisOUqgmZcDC12i",
-          "title": "Bypassing Staking Requirements",
+          "id": 5060,
           "type": "blockchain_dlt",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Causing network processing nodes to process transactions from the transaction queue beyond set parameters"
         },
         {
-          "id": "5AhyocHinZJLYwHTgTJQrM",
-          "title": "Bypassing Slashing",
+          "id": 9,
           "type": "blockchain_dlt",
-          "severity": "critical"
+          "severity": "medium",
+          "title": "Increasing network processing node resource consumption by at least 30% without brute force actions, compared to the preceding 24 hours"
         },
         {
-          "id": "MpkAHul8FpgYanonXu0yV",
-          "title": "Blocking Specific Transactions",
+          "id": 10,
           "type": "blockchain_dlt",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Shutdown of greater than or equal to 30% of network processing nodes without brute force actions, but does not shut down the network"
         },
         {
-          "id": "49Dnl3DcIuMAy8VTPb8UqS",
-          "title": "Causing network processing nodes to process transactions from the transaction queue beyond set parameters",
+          "id": 1,
           "type": "blockchain_dlt",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Network not being able to confirm new transactions (total network shutdown)"
         },
         {
-          "id": "22RTt0eokERdDVQtwSuJ8r",
-          "title": "Increasing network processing node resource consumption by at least 30% without brute force actions, compared to the preceding 24 hours",
+          "id": 3,
           "type": "blockchain_dlt",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct loss of funds"
         },
         {
-          "id": "1iQkPQwazGvX57hNKPYT5W",
-          "title": "Shutdown of greater than or equal to 30% of network processing nodes without brute force actions, but does not shut down the network",
+          "id": 4,
           "type": "blockchain_dlt",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds (fix requires hardfork)"
         },
         {
-          "id": "5vza4v3z3HxDLFnCjfEJ7b",
-          "title": "Modification of transaction fees outside of design parameters",
+          "id": 5061,
           "type": "blockchain_dlt",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Bypassing Staking Requirements"
         },
         {
-          "id": "6jWPtVzRta1RaPytvOx1UG",
-          "title": "Shutdown of greater than 10% or equal to but less than 30% of network processing nodes without brute force actions, but does not shut down the network",
+          "id": 5062,
           "type": "blockchain_dlt",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Bypassing Slashing"
         }
       ],
-      "programOverview": "Shardeum is an EVM-based, linearly scalable network offering low gas fees forever while maintaining true decentralization and (hopefully) solid security. Shardeum is a large project and as such, will be split over two concurrent boosts. This boost, called Core II, will cover the Web3 aspects of the project. This will cover two components: Shardus Core Protocol and Shardeum Validator Nodes.\n\nFor more information about Shardeum, please visit [https://shardeum.org/](https://shardeum.org/).\n\nShardeum provides rewards in USDC, denominated in USD.",
+      "programOverview": "Shardeum is an EVM-based, linearly scalable network offering low gas fees forever while maintaining true decentralization and (hopefully) solid security. Shardeum is a large project and as such, will be split over two concurrent audit competitions. This audit competition, called Core II, will cover the Web3 aspects of the project. This will cover two components: Shardus Core Protocol and Shardeum Validator Nodes.\n\nFor more information about Shardeum, please visit [https://shardeum.org/](https://shardeum.org/).\n\nShardeum provides rewards in USDC, denominated in USD.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "The following reward terms are a summary, for the full details read our [Shardeum Core II Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/28077659023505-Shardeum-Core-II-Boost-Reward-Terms)\n\nThe reward pool will be entirely distributed among participants. The size depends on the bugs found:\n- If one or more Critical severity bugs are found, **the reward pool will be 100% of the respective reward pool, $150,000 USD**\n- If one or more High severity bugs are found, **the reward pool will be 75% of the respective reward pool, $112,500 USD**\n- If one or more Medium severity bugs are found, **the reward pool will be 50% of the respective reward pool, $75,000 USD**\n- If Low severity bugs or no bugs are found, **the reward pool will be 25% of the respective reward pool, $37,500 USD**\n\n**Duplicates of Insight reports are not eligible for a reward.**\n\nFor this Boost, duplicates and private known issues are valid for a reward. \n\nPrivate known issues will unlock higher reward pools according to their severity level without any downgrade. For example, a Critical severity bug which was a private known issue would unlock the reward pool conditional on a Critical severity bug being found.\n\nRewards are distributed according to the impact of the vulnerability based on the Immunefi [Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Payment Terms__\n\nPayouts are handled by the Shardeum team directly and are denominated in USD. However, payments are done in USDC.\n\nRewards will be distributed all at once based on Immunefi’s distribution formula after the event has concluded and the final bug reports have been resolved.\n\n__Insight Rewards Payment Terms__\n\nInsight Rewards: Portion of the Rewards Pool\n\nThe \"Insight\" severity was introduced on Boost & Attackathon programs to recognize contributions that extend beyond identifying immediate vulnerabilities. Currently, it's not an option to select the Insight severity when submitting a report. However, our team or program will designate it accordingly if applicable. \"Insights\" underscores our commitment to valuing all types of contributions that contribute to a more secure environment and will always be rewarded. [View more information about Insights](https://immunefisupport.zendesk.com/hc/en-us/articles/13333032674961-Severity-Classification-System?utm_source=immunefi).",
+      "rewardsBody": "The following reward terms are a summary, for the full details read our [Shardeum Core II Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/28077659023505-Shardeum-Core-II-Audit-Competition-Reward-Terms)\n\nThe reward pool will be entirely distributed among participants. The size depends on the bugs found:\n- If one or more Critical severity bugs are found, **the reward pool will be 100% of the respective reward pool, $150,000 USD**\n- If one or more High severity bugs are found, **the reward pool will be 75% of the respective reward pool, $112,500 USD**\n- If one or more Medium severity bugs are found, **the reward pool will be 50% of the respective reward pool, $75,000 USD**\n- If Low severity bugs or no bugs are found, **the reward pool will be 25% of the respective reward pool, $37,500 USD**\n\n**Duplicates of Insight reports are not eligible for a reward.**\n\nFor this Audit Competition, duplicates and private known issues are valid for a reward. \n\nPrivate known issues will unlock higher reward pools according to their severity level without any downgrade. For example, a Critical severity bug which was a private known issue would unlock the reward pool conditional on a Critical severity bug being found.\n\nRewards are distributed according to the impact of the vulnerability based on the Immunefi [Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Payment Terms__\n\nPayouts are handled by the Shardeum team directly and are denominated in USD. However, payments are done in USDC.\n\nRewards will be distributed all at once based on Immunefi’s distribution formula after the event has concluded and the final bug reports have been resolved.\n\n__Insight Rewards Payment Terms__\n\nInsight Rewards: Portion of the Rewards Pool\n\nThe \"Insight\" severity was introduced on Audit Competition & Attackathon programs to recognize contributions that extend beyond identifying immediate vulnerabilities. Currently, it's not an option to select the Insight severity when submitting a report. However, our team or program will designate it accordingly if applicable. \"Insights\" underscores our commitment to valuing all types of contributions that contribute to a more secure environment and will always be rewarded. [View more information about Insights](https://immunefisupport.zendesk.com/hc/en-us/articles/13333032674961-Severity-Classification-System?utm_source=immunefi).",
       "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories:__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Blockchain/DLT & Smart Contract Specific:__\n\n- Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n\n__Prohibited Activities:__\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "Shardeum’s up to date codebase can be found at [https://github.com/shardeum/](https://github.com/shardeum/).\n\nA note on Shardeum and Shardus Core scope: the default config in the dev branch is in scope. Whitehats are free to configure, patch, and modify their own malicious nodes however they want. However, target nodes must be running the default config in dev. This is to prevent the whitehats from wasting time reporting things we specifically allow in debug mode. The only exception is minNodes and maxNodes settings, which allow different size networks to be created. Certain vulnerabilities may only exist in certain network sizes, and we do not wish to limit Whitehat activity and participation for lack of computing power attempting to run a large local network. However, network-wide attacks that only work under 128 nodes may be rejected or reduced in severity at our discretion. If the researchers can enable debug mode options remotely then that is valid and can be paid out.\n\nAttacks that require the network to still be initializing/bootstrapping are out of scope. Wait until the network mode reaches “processing” + 15 cycles after startup before launching attacks. The rules for staking/join are a little different and the network will not be public during this time. Attacks on a network that is repairing itself (was once in “processing” mode but has since degraded to “safety” or “recovery”) are in scope.\n\nAttacks that require lots of network traffic, large messages, or many connections are at risk of being degraded to insight.\n\n0day vulnerabilities in dependencies will have a max impact of insight. Any other vuln in dependencies is out of scope.\n\nAny report based on unit tests, simulations, or anything not a fully functioning network, will have a max impact of low.\n\nSmart contracts are out of scope\n\nFinally, the more nodes that are required to launch an attack, the more at risk the vuln is of being downgraded. If it takes 33% (for example) of the nodes in the network being malicious to cause damage, then it becomes difficult to distinguish the impact from a brute-force/51% attack, which is completely out of scope.\n\n__Mid-Contest Code Updates__\n\nIn this contest bug fixes may be applied mid-contest. This is required for Shardeum to test changes on their beta networks in preparation for an imminent mainnet launch.\n\nThe project is to keep changes private as far as possible. When changes need to be made public, then the changelog will be updated here & in the [Shardeum Boost Discord channel](https://discord.com/invite/immunefi?utm_source=immunefi). Publicly fixed bugs are invalid and the scope is updated to the new code.\n\nAll bug reports before the fix was public will earn a reward. All bug reports after are invalid. If a new bug is introduced by their fix then it is valid for a reward.\n\n__Mid-Contest Changelog__\n\n**Shardeum**\n- fix: subtracting slashing penalty twice - [#158](https://github.com/shardeum/shardeum/pull/158/commits/22f537f277962a6379bb49b60f504a03332129b5)\n- Remove unused method getDebugString - [#281](https://github.com/shardeum/shardus-core/pull/281/commits/2b42c2f4d8e68c70aa2d712f4778a539e436f596)\n\n**Shardus Core**\n- add cycle to unjoin request - [#279](https://github.com/shardeum/shardus-core/pull/279/commits/46e437bc54537a835534f497d37775ae391cfda0)\n- getStoredCycleByTimestamp() adjusted slightly to return exclusive lower bound and inclusive upper bound - [d1a3507](https://github.com/shardeum/shardus-core/commit/d1a350783ce2f72ec51129643e7290b4de2500d7)\n- comment out deprecated and unused \"gossip-final-state\" handler - [#272](https://github.com/shardeum/shardus-core/pull/272/commits/30e43d4c4a8a2282b11d1476f70a2f80681affdf)\n- added signature verification to gossipValidJoinRequests handler - [#280](https://github.com/shardeum/shardus-core/pull/280/commits/ef57a48ee9bf7332844360b3d6c7fdac8f4bcceb)\n- Improved error handling and input validation around join routes - [#286](https://github.com/shardeum/shardus-core/pull/286/commits/e18d7bd080f18311bf98024d5573d4cc5769f423)\n- fix: foreign socket stream unsubscribing archiver on behalf of another socket stream - [#264](https://github.com/shardeum/shardus-core/pull/264/commits/7f75e01a85dc89bb21c5798ef15b288cca5787bb)\n- fix(api): added account limit to get_account_data_with_queue_hints - [#283](https://github.com/shardeum/shardus-core/pull/283/commits/14d4b483e21b41151110971323bf71dfa82d6aa0)\n\nPOCs should be tested against the most recent changes on the /tree/dev github repo.\n\n__Asset Accuracy Assurance__\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n__Private Known Issues Reward Policy__\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward equal to that of a bug one severity lower.\n\n__Known Issue Assurance__\n\nShardeum commits to providing Known Issue Assurance to bug submissions through their program. This means that Shardeum will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n__Primacy of Impact vs Primacy of Rules__\n\nShardeum adheres to the Primacy of Impact for all impacts.\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact). \n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this boosted bug bounty and a leaderboard of the participants and their earnings.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Shardeum has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
-      "impactsBody": "__Proof of Concept (PoC) Requirements__\n\nPOCs should be tested against the most recent changes on the /tree/dev github repo.\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Whitehat Educational Resources & Technical Info__\n\n- Shardeum’s up to date codebase can be found at [https://github.com/shardeum/](https://github.com/shardeum/)\n- Shardeum’s youtube page: [https://www.youtube.com/@Shardeum](https://www.youtube.com/@Shardeum)\n- Previous tech walkthroughs: [https://www.youtube.com/watch?v=U2ZHqQchBgA](https://www.youtube.com/watch?v=U2ZHqQchBgA), [https://www.youtube.com/watch?v=Lt-jI8FAQcQ](https://www.youtube.com/watch?v=Lt-jI8FAQcQ)\n- Whitepaper: [https://docs.shardeum.org/docs/whitepaper](https://docs.shardeum.org/docs/whitepaper)\n- Documentation: [https://docs.shardeum.org/](https://docs.shardeum.org/)\n\n__Where do you suspect there may be bugs?__\n\n- **Which parts of the code are you most concerned about?**\n\nWe are concerned with the web3 and business logic within both repositories in this boost. Things like transaction queuing, slashing, and consensus. This includes any internal transactions or things involving the global account.\n\n- **What attack vectors are you most concerned about?**\n\nParsing/signature errors, cheating the rotation system, cheating the slashing, and transaction processing. We received quite a few message parsing and signature related reports in the previous boosts and feel like there may still be some vulns to find.\n\n- **Which part(s) of the system do you want whitehats to attempt to break the most?**\n\nTransaction queuing, slashing, and consensus.\n\n- **Are there any assumed invariants that you want whitehats to attempt to break?**\n\nSum of EOA account balances before attack == Sum of EOA account balances after attack + transaction fees. This should cover SHM disappearing from the network or being created out of thin ai\n\n__Where might whitehats confuse out-of-scope code to be in-scope?__\n\nA note on Shardeum and Shardus Core scope: the default config in the dev branch is in scope. Whitehats are free to configure, patch, and modify their own malicious nodes however they want. However, target nodes must be running the default config in dev. This is to prevent the whitehats from wasting time reporting things we specifically allow in debug mode. The only exception is minNodes and maxNodes settings, which allow different size networks to be created. Certain vulnerabilities may only exist in certain network sizes, and we do not wish to limit Whitehat activity and participation for lack of computing power attempting to run a large local network. However, network-wide attacks that only work under 128 nodes may be rejected or reduced in severity at our discretion. If the researchers can enable debug mode options remotely then that is valid and can be paid out.\n\nAttacks that require the network to still be initializing/bootstrapping are out of scope. Wait until the network mode reaches “processing” + 15 cycles after startup before launching attacks. The rules for staking/join are a little different and the network will not be public during this time. Attacks on a network that is repairing itself (was once in “processing” mode but has since degraded to “safety” or “recovery”) are in scope.\n\nAttacks that require lots of network traffic, large messages, or many connections are at risk of being degraded to insight.\n\n0day vulnerabilities in dependencies will have a max impact of insight. Any other vuln in dependencies is out of scope.\n\nAny report based on unit tests, simulations, or anything not a fully functioning network, will have a max impact of low.\n\nSmart contracts are out of scope\n\nFinally, the more nodes that are required to launch an attack, the more at risk the vuln is of being downgraded. If it takes 33% (for example) of the nodes in the network being malicious to cause damage, then it becomes difficult to distinguish the impact from a brute-force/51% attack, which is completely out of scope.\n\n__Are there any unusual points about your protocol that may confuse whitehats?__\n\nPlease consider how your vulnerability will behave on a network with a shard size of 128 nodes. We will accept reports with a PoC on a smaller network, but the severity may be affected if the impact is less feasible on network with a shard size of 128 nodes.\n\n__What is the test suite setup information?__\n\n[https://gist.github.com/kun6fup4nd4/162d491e07d0a84344abbf33bc602502](https://gist.github.com/kun6fup4nd4/162d491e07d0a84344abbf33bc602502)\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n- [List of Known Issues for Shardeum | Core II and Shardeum | Ancillaries II Boosts](https://immunefisupport.zendesk.com/hc/en-us/articles/28112833600401-List-of-Known-Issues-for-Shardeum-Core-II-and-Shardeum-Ancillaries-II-Boosts)\n- The list of previously discovered vulnerabilities will be published in a few days.\n\n__Previous Audits__\n\nShardeum’s completed audit reports can be found here: [Arcadia (draft)](https://docs.google.com/document/d/1OlmijVY2ga_7QEe8DYU-NTEXfAqMRpuwlduIofjmEwA/edit#heading=h.5uoc4mfz7mn4), [HashCloack](https://docs.google.com/document/d/1n11d40JZYgL33-F-Lw6FMuBP9AJSXvyg-xBpJhwOkUE/edit). Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.",
+      "assetsBodyV2": "Shardeum’s up to date codebase can be found at [https://github.com/shardeum/](https://github.com/shardeum/).\n\nA note on Shardeum and Shardus Core scope: the default config in the dev branch is in scope. Whitehats are free to configure, patch, and modify their own malicious nodes however they want. However, target nodes must be running the default config in dev. This is to prevent the whitehats from wasting time reporting things we specifically allow in debug mode. The only exception is minNodes and maxNodes settings, which allow different size networks to be created. Certain vulnerabilities may only exist in certain network sizes, and we do not wish to limit Whitehat activity and participation for lack of computing power attempting to run a large local network. However, network-wide attacks that only work under 128 nodes may be rejected or reduced in severity at our discretion. If the researchers can enable debug mode options remotely then that is valid and can be paid out.\n\nAttacks that require the network to still be initializing/bootstrapping are out of scope. Wait until the network mode reaches “processing” + 15 cycles after startup before launching attacks. The rules for staking/join are a little different and the network will not be public during this time. Attacks on a network that is repairing itself (was once in “processing” mode but has since degraded to “safety” or “recovery”) are in scope.\n\nAttacks that require lots of network traffic, large messages, or many connections are at risk of being degraded to insight.\n\n0day vulnerabilities in dependencies will have a max impact of insight. Any other vuln in dependencies is out of scope.\n\nAny report based on unit tests, simulations, or anything not a fully functioning network, will have a max impact of low.\n\nSmart contracts are out of scope\n\nFinally, the more nodes that are required to launch an attack, the more at risk the vuln is of being downgraded. If it takes 33% (for example) of the nodes in the network being malicious to cause damage, then it becomes difficult to distinguish the impact from a brute-force/51% attack, which is completely out of scope.\n\n__Mid-Contest Code Updates__\n\nIn this contest bug fixes may be applied mid-contest. This is required for Shardeum to test changes on their beta networks in preparation for an imminent mainnet launch.\n\nThe project is to keep changes private as far as possible. When changes need to be made public, then the changelog will be updated here & in the [Shardeum Audit Competition Discord channel](https://discord.com/invite/immunefi?utm_source=immunefi). Publicly fixed bugs are invalid and the scope is updated to the new code.\n\nAll bug reports before the fix was public will earn a reward. All bug reports after are invalid. If a new bug is introduced by their fix then it is valid for a reward.\n\n__Mid-Contest Changelog__\n\n**Shardeum**\n- fix: subtracting slashing penalty twice - [#158](https://github.com/shardeum/shardeum/pull/158/commits/22f537f277962a6379bb49b60f504a03332129b5)\n- Remove unused method getDebugString - [#281](https://github.com/shardeum/shardus-core/pull/281/commits/2b42c2f4d8e68c70aa2d712f4778a539e436f596)\n\n**Shardus Core**\n- add cycle to unjoin request - [#279](https://github.com/shardeum/shardus-core/pull/279/commits/46e437bc54537a835534f497d37775ae391cfda0)\n- getStoredCycleByTimestamp() adjusted slightly to return exclusive lower bound and inclusive upper bound - [d1a3507](https://github.com/shardeum/shardus-core/commit/d1a350783ce2f72ec51129643e7290b4de2500d7)\n- comment out deprecated and unused \"gossip-final-state\" handler - [#272](https://github.com/shardeum/shardus-core/pull/272/commits/30e43d4c4a8a2282b11d1476f70a2f80681affdf)\n- added signature verification to gossipValidJoinRequests handler - [#280](https://github.com/shardeum/shardus-core/pull/280/commits/ef57a48ee9bf7332844360b3d6c7fdac8f4bcceb)\n- Improved error handling and input validation around join routes - [#286](https://github.com/shardeum/shardus-core/pull/286/commits/e18d7bd080f18311bf98024d5573d4cc5769f423)\n- fix: foreign socket stream unsubscribing archiver on behalf of another socket stream - [#264](https://github.com/shardeum/shardus-core/pull/264/commits/7f75e01a85dc89bb21c5798ef15b288cca5787bb)\n- fix(api): added account limit to get_account_data_with_queue_hints - [#283](https://github.com/shardeum/shardus-core/pull/283/commits/14d4b483e21b41151110971323bf71dfa82d6aa0)\n\nPOCs should be tested against the most recent changes on the /tree/dev github repo.\n\n__Asset Accuracy Assurance__\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n__Private Known Issues Reward Policy__\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward equal to that of a bug one severity lower.\n\n__Known Issue Assurance__\n\nShardeum commits to providing Known Issue Assurance to bug submissions through their program. This means that Shardeum will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n__Primacy of Impact vs Primacy of Rules__\n\nShardeum adheres to the Primacy of Impact for all impacts.\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact). \n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this audit competition and a leaderboard of the participants and their earnings.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Shardeum has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
+      "impactsBody": "__Proof of Concept (PoC) Requirements__\n\nPOCs should be tested against the most recent changes on the /tree/dev github repo.\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Whitehat Educational Resources & Technical Info__\n\n- Shardeum’s up to date codebase can be found at [https://github.com/shardeum/](https://github.com/shardeum/)\n- Shardeum’s youtube page: [https://www.youtube.com/@Shardeum](https://www.youtube.com/@Shardeum)\n- Previous tech walkthroughs: [https://www.youtube.com/watch?v=U2ZHqQchBgA](https://www.youtube.com/watch?v=U2ZHqQchBgA), [https://www.youtube.com/watch?v=Lt-jI8FAQcQ](https://www.youtube.com/watch?v=Lt-jI8FAQcQ)\n- Whitepaper: [https://docs.shardeum.org/docs/whitepaper](https://docs.shardeum.org/docs/whitepaper)\n- Documentation: [https://docs.shardeum.org/](https://docs.shardeum.org/)\n\n__Where do you suspect there may be bugs?__\n\n- **Which parts of the code are you most concerned about?**\n\nWe are concerned with the web3 and business logic within both repositories in this audit competition. Things like transaction queuing, slashing, and consensus. This includes any internal transactions or things involving the global account.\n\n- **What attack vectors are you most concerned about?**\n\nParsing/signature errors, cheating the rotation system, cheating the slashing, and transaction processing. We received quite a few message parsing and signature related reports in the previous audit competitions and feel like there may still be some vulns to find.\n\n- **Which part(s) of the system do you want whitehats to attempt to break the most?**\n\nTransaction queuing, slashing, and consensus.\n\n- **Are there any assumed invariants that you want whitehats to attempt to break?**\n\nSum of EOA account balances before attack == Sum of EOA account balances after attack + transaction fees. This should cover SHM disappearing from the network or being created out of thin ai\n\n__Where might whitehats confuse out-of-scope code to be in-scope?__\n\nA note on Shardeum and Shardus Core scope: the default config in the dev branch is in scope. Whitehats are free to configure, patch, and modify their own malicious nodes however they want. However, target nodes must be running the default config in dev. This is to prevent the whitehats from wasting time reporting things we specifically allow in debug mode. The only exception is minNodes and maxNodes settings, which allow different size networks to be created. Certain vulnerabilities may only exist in certain network sizes, and we do not wish to limit Whitehat activity and participation for lack of computing power attempting to run a large local network. However, network-wide attacks that only work under 128 nodes may be rejected or reduced in severity at our discretion. If the researchers can enable debug mode options remotely then that is valid and can be paid out.\n\nAttacks that require the network to still be initializing/bootstrapping are out of scope. Wait until the network mode reaches “processing” + 15 cycles after startup before launching attacks. The rules for staking/join are a little different and the network will not be public during this time. Attacks on a network that is repairing itself (was once in “processing” mode but has since degraded to “safety” or “recovery”) are in scope.\n\nAttacks that require lots of network traffic, large messages, or many connections are at risk of being degraded to insight.\n\n0day vulnerabilities in dependencies will have a max impact of insight. Any other vuln in dependencies is out of scope.\n\nAny report based on unit tests, simulations, or anything not a fully functioning network, will have a max impact of low.\n\nSmart contracts are out of scope\n\nFinally, the more nodes that are required to launch an attack, the more at risk the vuln is of being downgraded. If it takes 33% (for example) of the nodes in the network being malicious to cause damage, then it becomes difficult to distinguish the impact from a brute-force/51% attack, which is completely out of scope.\n\n__Are there any unusual points about your protocol that may confuse whitehats?__\n\nPlease consider how your vulnerability will behave on a network with a shard size of 128 nodes. We will accept reports with a PoC on a smaller network, but the severity may be affected if the impact is less feasible on network with a shard size of 128 nodes.\n\n__What is the test suite setup information?__\n\n[https://gist.github.com/kun6fup4nd4/162d491e07d0a84344abbf33bc602502](https://gist.github.com/kun6fup4nd4/162d491e07d0a84344abbf33bc602502)\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n- [List of Known Issues for Shardeum | Core II and Shardeum | Ancillaries II Audit Competitions](https://immunefisupport.zendesk.com/hc/en-us/articles/28112833600401-List-of-Known-Issues-for-Shardeum-Core-II-and-Shardeum-Ancillaries-II-Audit-Competitions)\n- The list of previously discovered vulnerabilities will be published in a few days.\n\n__Previous Audits__\n\nShardeum’s completed audit reports can be found here: [Arcadia (draft)](https://docs.google.com/document/d/1OlmijVY2ga_7QEe8DYU-NTEXfAqMRpuwlduIofjmEwA/edit#heading=h.5uoc4mfz7mn4), [HashCloack](https://docs.google.com/document/d/1n11d40JZYgL33-F-Lw6FMuBP9AJSXvyg-xBpJhwOkUE/edit). Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.",
       "immunefiStandard": true,
       "tags": {
         "general": [
           "Immunefi Standard",
           "KYC Not Required",
-          "PoC Required",
+          "PoC Not Required",
+          "Step-by-step PoC Required",
           "Primacy of Impact"
         ],
         "productType": [
@@ -201,21 +207,89 @@
         "smartcontract_rewards": [],
         "web_rewards": []
       },
-      "evaluationEndDate": "2024-10-30T12:00:00.000Z",
+      "evaluationEndDate": "2024-11-27T10:00:00.000Z",
       "boostedIntroStartingIn": "$150,000 USD in rewards is available for finding bugs on Shardeum Core II. This Boost is a successor of Shardeum's Core Boost and will cover two components: Shardus Core Protocol and Shardeum Validator Nodes.\n\nNo KYC is required.\n\nAny technical questions can be asked directly to the Shardeum technical team on [Immunefi’s Discord](https://discord.com/invite/immunefi) in the \"shardeum-core-boost\" channel.\n\nWhen the Boost has ended, Immunefi will publish an event-specific leaderboard and bug reports from the event.\n\nIn a few days after the launch, Shardeum will give a live technical walkthrough, hosted in the Immunefi Discord. \n\nJoin our Discord for more updates.",
-      "boostedIntroLive": "$150,000 USD is available in rewards for finding bugs in Shardeum's codebase of about 75000 nSLOC. There is no KYC required.\n\nAny technical questions and support requests can be asked directly to Shardeum or Immunefi in the [Shardeum Boost Discord channel](https://discord.com/invite/immunefi).\n\nIn this contest bug fixes may be applied mid-contest. Further details are in the 'Assets In Scope' section.\n\nWhen the Boost has ended Immunefi will publish an event-specific leaderboard and bug reports from the event.",
+      "boostedIntroLive": "$150,000 USD is available in rewards for finding bugs in Shardeum's codebase of about 75000 nSLOC. There is no KYC required.\n\nAny technical questions and support requests can be asked directly to Shardeum or Immunefi in the [Shardeum Audit Competition Discord channel](https://discord.com/invite/immunefi).\n\nIn this contest bug fixes may be applied mid-contest. Further details are in the 'Assets In Scope' section.\n\nWhen the Audit Competition has ended Immunefi will publish an event-specific leaderboard and bug reports from the event.",
       "boostedIntroEvaluating": "",
-      "boostedIntroFinished": "",
+      "boostedIntroFinished": "Audit Competition cards for security researchers with paid reports are available [here](https://drive.google.com/drive/folders/1pNu7kiBqxRl_H7Ouqcy4qXF8MG8o5M6Y)\n\nAll paid bug reports are available in original format [here](https://reports.immunefi.com/shardeum-core-ii)",
       "rewardsToken": "USDC",
       "rewardsPool": 150000,
+      "primaryPool": 150000,
+      "allStarsPool": 0,
+      "podiumPool": 0,
       "sourceLinesOfCode": 75000,
-      "boostedSummaryReport": null,
+      "boostedSummaryReport": "https://drive.google.com/file/d/10Pk2wYk1AUEq69RnmhBTeikYtHTHoSZo/view?usp=sharing",
       "inviteOnly": false,
       "hideAssetsInScope": null,
-      "boostedLeaderboard": [],
+      "boostedLeaderboard": [
+        {
+          "high": 0,
+          "name": "Merkle_Bonsai",
+          "critical": 3,
+          "earnings": 59735,
+          "insights": 3,
+          "mediumLow": 0,
+          "totalValidBugs": 3
+        },
+        {
+          "high": 0,
+          "name": "periniondon630",
+          "critical": 3,
+          "earnings": 51401,
+          "insights": 0,
+          "mediumLow": 0,
+          "totalValidBugs": 3
+        },
+        {
+          "high": 0,
+          "name": "throwing5tone7",
+          "critical": 2,
+          "earnings": 32197,
+          "insights": 0,
+          "mediumLow": 0,
+          "totalValidBugs": 2
+        },
+        {
+          "high": 0,
+          "name": "gln",
+          "critical": 0,
+          "earnings": 1667,
+          "insights": 1,
+          "mediumLow": 0,
+          "totalValidBugs": 0
+        },
+        {
+          "high": 0,
+          "name": "Ouabala",
+          "critical": 0,
+          "earnings": 1667,
+          "insights": 1,
+          "mediumLow": 0,
+          "totalValidBugs": 0
+        },
+        {
+          "high": 0,
+          "name": "gladiator111",
+          "critical": 0,
+          "earnings": 1667,
+          "insights": 1,
+          "mediumLow": 0,
+          "totalValidBugs": 0
+        },
+        {
+          "high": 0,
+          "name": "dldLambda",
+          "critical": 0,
+          "earnings": 1667,
+          "insights": 1,
+          "mediumLow": 0,
+          "totalValidBugs": 0
+        }
+      ],
       "features": [
         "Boost",
-        "Managed Triage: Time Saver"
+        "Managed Triage: Time Saver",
+        "Vault"
       ],
       "academyStartDate": null,
       "websiteUrl": null,
@@ -226,10 +300,6 @@
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "outOfScopeBlockchain": null,
-      "outOfScopeGeneral": null,
-      "outOfScopeSmartContract": null,
-      "outOfScopeWebAndApplications": null,
       "defaultOutOfScopeBlockchain": null,
       "defaultOutOfScopeSmartContract": null,
       "defaultOutOfScopeGeneral": null,
@@ -243,16 +313,19 @@
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [],
       "programDocumentations": [],
+      "primacy": "primacy_of_rules",
+      "newProgramRewardsEnabled": false,
+      "findingsUrl": null,
       "premiumTriaging": true
     },
     "layoutProps": {
       "headerMarginBottom": "mb-12 lg:mb-16"
     },
     "metaData": {
-      "title": "Boost | Shardeum: Core II Bug Bounties",
-      "description": "Find bugs and vulnerabilities on Boost | Shardeum: Core II and get paid up to $150,000.",
-      "url": "https://immunefi.com/boost/shardeum-core-ii-boost",
-      "ogImg": "/api/bounty/og-image?project=Boost+%7C+Shardeum%3A+Core+II"
+      "title": "Audit Comp | Shardeum: Core II Bug Bounties",
+      "description": "Find bugs and vulnerabilities on Audit Comp | Shardeum: Core II and get paid up to $150,000.",
+      "url": "https://immunefi.com/audit-competition/shardeum-core-ii-boost/",
+      "ogImg": "/api/bounty/og-image/?project=Audit+Comp+%7C+Shardeum%3A+Core+II&slug=shardeum-core-ii-boost"
     }
   },
   "__N_SSG": true

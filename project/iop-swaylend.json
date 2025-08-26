@@ -4,6 +4,10 @@
     "academyContent": null,
     "ethereumAttackathonSponsors": null,
     "project": {
+      "features": [
+        "IOP (Invite Only Program)",
+        "Managed Triage: Time Saver"
+      ],
       "premiumTriaging": true,
       "isSafeHarborActive": false,
       "performanceMetrics": {}
@@ -17,7 +21,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1MwMoCPG00myFl6Ks1kTss/424500da4b09dc12b04927d2752c2960/Swaylend_logo.png",
       "launchDate": "2024-10-01T08:00:00.000Z",
       "endDate": "2024-10-22T12:00:00.000Z",
-      "updatedDate": "2024-10-03T13:36:56.071Z",
+      "updatedDate": "2024-11-18T11:48:17.205Z",
       "kyc": false,
       "rewards": [
         {
@@ -57,7 +61,7 @@
         {
           "id": "5iqc8uxyY2Vy6msXTFODrS",
           "type": "smart_contract",
-          "url": "https://github.com/Swaylend/swaylend-monorepo/blob/develop/abis/market_abi/src/abi.sw",
+          "url": "https://github.com/Swaylend/swaylend-monorepo/blob/9132747331188b86dd8cbf9a1ca37b811d08dddb/abis/market_abi/src/abi.sw",
           "description": "Market ABI ~ 300",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
@@ -66,7 +70,7 @@
         {
           "id": "11px6An4Ju8HYYJMHxbAfs",
           "type": "smart_contract",
-          "url": "https://github.com/Swaylend/swaylend-monorepo/blob/develop/contracts/market/src/main.sw",
+          "url": "https://github.com/Swaylend/swaylend-monorepo/blob/9132747331188b86dd8cbf9a1ca37b811d08dddb/contracts/market/src/main.sw",
           "description": "Market ~ 1700",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
@@ -75,7 +79,7 @@
         {
           "id": "2vnEWvSYgiMmjO5G1jy8p1",
           "type": "smart_contract",
-          "url": "https://github.com/Swaylend/swaylend-monorepo/blob/develop/contracts/src-20/src/main.sw",
+          "url": "https://github.com/Swaylend/swaylend-monorepo/blob/9132747331188b86dd8cbf9a1ca37b811d08dddb/contracts/src-20/src/main.sw",
           "description": "SRC-20 ~ 160",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
@@ -84,102 +88,103 @@
       ],
       "impacts": [
         {
-          "id": "1Y0npPFWrZ3ca0qPzDrgDr",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield",
+          "id": 34,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "low",
+          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         },
         {
-          "id": "2SUHTTeNAKPFUqHwjZHyc",
-          "title": "Permanent freezing of funds",
+          "id": 23,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
         },
         {
-          "id": "77CE0kWXdFSivzhuUzT2jj",
-          "title": "Predictable or manipulable RNG that results in abuse of the principal or NFT",
+          "id": 25,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
-          "id": "15aHyK1RbhxBJkJAINajXv",
-          "title": "Protocol insolvency",
+          "id": 26,
           "type": "smart_contract",
-          "severity": "critical"
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed royalties"
         },
         {
-          "id": "7IlkvuJFOouQQEtFerRP5R",
-          "title": "Theft of unclaimed yield",
+          "id": 5093,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "high",
+          "title": "Temporary (1 hr) freezing of funds"
         },
         {
-          "id": "76asJTdHcEKbgpW9gCM1gZ",
-          "title": "Permanent freezing of unclaimed yield",
+          "id": 29,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": "B4t0viWg4QmGx4ZFKqgKt",
-          "title": "Permanent freezing of unclaimed royalties",
+          "id": 30,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Block stuffing"
         },
         {
-          "id": "5vsAdOrdYZzP4Euf58a4bW",
-          "title": "Temporary (1 hr) freezing of funds",
+          "id": 31,
           "type": "smart_contract",
-          "severity": "high"
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": "2XFBSIAY3XTKlRj6PMHTfg",
-          "title": "Smart contract unable to operate due to lack of token funds",
+          "id": 32,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Theft of gas"
         },
         {
-          "id": "60jvUkZBwE2OsKQFGSG0dc",
-          "title": "Block stuffing",
+          "id": 33,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
         },
         {
-          "id": "2WctlGQXeyJFG5S8EPKrfM",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)",
+          "id": 15,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
         },
         {
-          "id": "1UHikkPi4Mpl9IDUXOCLFf",
-          "title": "Theft of gas",
+          "id": 17,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
         },
         {
-          "id": "55CGr1YJPPttn9ukV2Dcq4",
-          "title": "Unbounded gas consumption",
+          "id": 20,
           "type": "smart_contract",
-          "severity": "medium"
+          "severity": "critical",
+          "title": "Predictable or manipulable RNG that results in abuse of the principal or NFT"
         },
         {
-          "id": "5Et2bmZ2t8QUvIjVloKpAd",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value",
+          "id": 22,
           "type": "smart_contract",
-          "severity": "low"
+          "severity": "critical",
+          "title": "Protocol insolvency"
         }
       ],
-      "programOverview": "Swaylend is a leading lending protocol on the Fuel network. It is a fork of Compound V3.\n\nFor more information about  Swaylend, please visit https://swaylend.com/.\n\nSwaylend provides rewards in UDSC, denominated in USD.",
+      "programOverview": "Swaylend is a leading lending protocol on the Fuel network. It is a fork of Compound V3.\n\nFor more information about  Swaylend, please visit https://swaylend.com/.\n\nSwaylend provides rewards in UDSC, denominated in USD.\n\nPOCs should be tested against the most recent changes / fixes at this link, so https://github.com/Swaylend/swaylend-monorepo/tree/9132747331188b86dd8cbf9a1ca37b811d08dddb\n\nPlease refer to this changelog page: https://immunefisupport.zendesk.com/hc/en-us/articles/29137422160657-Swaylend-IOP-Code-Update-Changelog",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "The following reward terms are a summary, for the full details read our [Swaylend IOP Reward Distribution Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/28665038043025-Swaylend-IOP-Audit-Competition-Reward-Terms). \n\nA reward pool of $45,000 USD will be distributed among participants, even if no valid bugs are found. \n\nDuplicates and private known issues are valid for a reward.\n\nRewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/).\n\nRewards will be distributed all at once based on Immunefi’s distribution formula after the event has concluded and the final bug reports have been resolved.\n\n__Insight Rewards Payment Terms__\n\nInsight* Rewards: Portion of the Rewards Pool\n\n*The \"Insight\" severity was introduced on Boost & Attackathon programs to recognize contributions that extend beyond identifying immediate vulnerabilities. Currently, it's not an option to select the Insight severity when submitting a report. However, our team or program will designate it accordingly if applicable. \"Insights\" underscores our commitment to valuing all types of contributions that contribute to a more secure environment and will always be rewarded. [View more information about Insights](https://immunefisupport.zendesk.com/hc/en-us/articles/13333032674961-Severity-Classification-System?utm_source=immunefi)",
+      "rewardsBody": "The following reward terms are a summary, for the full details read our [Swaylend IOP Reward Distribution Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/28665038043025-Swaylend-IOP-Audit-Competition-Reward-Terms). \n\nA reward pool of $45,000 USD will be distributed among participants, even if no valid bugs are found. \n\nDuplicates and private known issues are valid for a reward.\n\nRewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/).\n\nRewards will be distributed all at once based on Immunefi’s distribution formula after the event has concluded and the final bug reports have been resolved.\n\n__Insight Rewards Payment Terms__\n\nInsight* Rewards: Portion of the Rewards Pool\n\n*The \"Insight\" severity was introduced on Audit Competition & Attackathon programs to recognize contributions that extend beyond identifying immediate vulnerabilities. Currently, it's not an option to select the Insight severity when submitting a report. However, our team or program will designate it accordingly if applicable. \"Insights\" underscores our commitment to valuing all types of contributions that contribute to a more secure environment and will always be rewarded. [View more information about Insights](https://immunefisupport.zendesk.com/hc/en-us/articles/13333032674961-Severity-Classification-System?utm_source=immunefi)",
       "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories:__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Blockchain/DLT & Smart Contract Specific:__\n\n- Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n\n__Prohibited Activities:__\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "__Whitehat Educational Resources & Technical Info__\n\nDocumentation can be found at: https://docs.swaylend.com/ \n\n**Is this an upgrade of an existing system? If so, which? And what are the main differences?**\n\nSwaylend is the port of Compound V3 lending protocol and architecture in the Sway programming language for the Fuel Network.\n\n**What ERC20 / ERC721 / ERC777 / ERC1155 token standards are supported? Which are not?**\n\nThe lending market smart contract supports Fuel's native assets - SRC-20 tokens. Both base assets and collateral assets are SRC-20.\n\n**Where do you suspect there may be bugs? Useful aspects of this question are:**\n\n- **Which parts of the code are you most concerned about?**\n- **What attack vectors are you most concerned about?**\n- **Which part(s) of the system do you want whitehats to attempt to break the most?**\n- **Are there any assumed invariants that you want whitehats to attempt to break?**\n\nSwaylend is the lending protocol that offers functionalities like other lending protocols, i.e., supplying base assets (in our case, USDC) and borrowing base assets in exchange for providing collateral assets. The most critical things that should be tested are:\n- Withdrawing only assets that you supplied\n- Borrowing only the amount you're allowed (based on supplied collateral asset and collateral factor)\n- Repaying the borrowed amount before withdrawing collateral asset\n\n\n**What external dependencies are there?**\n\nThere is one external dependency, which is an oracle that provides up-to-date prices for the tokens. In the current version, we use the Pyth oracle network to provide this data. Pyth oracle smart contract can be found at https://github.com/pyth-network/pyth-crosschain/blob/main/target_chains/fuel/contracts/pyth-contract/src/main.sw \n\n**Where might whitehats confuse out-of-scope code to be in-scope?**\n\nThere are additional smart contracts in the GitHub repository used for internal testing, but they are not within the scope. The only assets within scope are listed in the table above. External dependencies, such as the actual core implementation of the Pyth oracle, are also not in scope for this IOP.\n\n**Are there any unusual points about your protocol that may confuse whitehats?**\n\nSwaylend is a monolithic lending protocol, meaning all functionalities are encompassed in a single smart contract. The lending positions of users are directly recorded in the smart contract, with no derivative tokens minted, as seen in some other lending protocols.\n\nLiquidations of undercollateralized positions occur through two steps: first, absorbing the collateral assets into the protocol, and then, in the next step, purchasing the collateral assets from the protocol in exchange for the market's base asset.\n\n\n**What is the test suite setup information?**\n\nThe test suite for the smart contracts is included in the GitHub repo (https://github.com/Swaylend/swaylend-contracts/tree/main/contracts/market/tests   ). Tests are written in Rust, and they should cover all functionalities of the lending protocol. \n\n**Public Disclosure of Known Issues**\n\nThere are no known open issues at the moment\n\n**Previous Audits**\n\nSwaylend’s completed audit reports can be found at https://www.halborn.com/audits/swaylend  .USD. Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n**Asset Accuracy Assurance**\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n**Private Known Issues Reward Policy**\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward.\n\n**Known Issue Assurance**\n\nSwaylend commits to providing Known Issue Assurance to bug submissions through their program. This means that Swaylend will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n**Primacy of Impact vs Primacy of Rules**\n\nSwaylend adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page.",
-      "impactsBody": "**Proof of Concept (PoC) Requirements**\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n**Eligibility Criteria**\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this boosted bug bounty and a leaderboard of the participants and their earnings.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Ionic has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
+      "assetsBodyV2": "__Mid-Contest Changelog__\n\nThese are new known issues added during the audit competition. \n\nThe fixes listed below are deployed for these known issues, which will be considered out of scope. However, if a fix can be bypassed it will no longer be considered a known issues and will be brought back into scope.\n\n- Decrease Pyth confidence interval: [https://github.com/Swaylend/swaylend-monorepo/commit/9d6e0d85641d7237f340e1f5d164638478591637](https://github.com/Swaylend/swaylend-monorepo/commit/9d6e0d85641d7237f340e1f5d164638478591637)\n- Move Pyth params outside of configurables: [https://github.com/Swaylend/swaylend-monorepo/commit/4f1491b86b10121b0ffa7ca68149cf4e3c641684](https://github.com/Swaylend/swaylend-monorepo/commit/4f1491b86b10121b0ffa7ca68149cf4e3c641684)\n- Fix is_liquitable_internal calculation, present value calculated wrongly: [https://github.com/Swaylend/swaylend-monorepo/commit/2805b3e437d61a128e7e12a359217ef6efaf3deb](https://github.com/Swaylend/swaylend-monorepo/commit/2805b3e437d61a128e7e12a359217ef6efaf3deb)\n- Improve how the confidence interval is handled in lending protocols, use lower and upper bounds: [https://github.com/Swaylend/swaylend-monorepo/commit/46f29d0ffb852747c8971280f38651ea8eee2f00](https://github.com/Swaylend/swaylend-monorepo/commit/46f29d0ffb852747c8971280f38651ea8eee2f00)\n- Withdraw collateral can now also be paused: [https://github.com/Swaylend/swaylend-monorepo/commit/5b1e37743d19166a8aa34b13272e2828af155971](https://github.com/Swaylend/swaylend-monorepo/commit/5b1e37743d19166a8aa34b13272e2828af155971)\n- Use present value with interest in absorb and when check if user is liquitable: [https://github.com/Swaylend/swaylend-monorepo/commit/46fca2145111df359ed3177be41c464cf592d406](https://github.com/Swaylend/swaylend-monorepo/commit/46fca2145111df359ed3177be41c464cf592d406)\n- Fix conversion from USD to base asset in available_to_borrow: [https://github.com/Swaylend/swaylend-monorepo/commit/a348934f6e1f621d3a4379963deb7762eacb9e93](https://github.com/Swaylend/swaylend-monorepo/commit/a348934f6e1f621d3a4379963deb7762eacb9e93)\n- Log set pyth contract id event: [https://github.com/Swaylend/swaylend-monorepo/commit/c8f2cb1be7635c37b3b8917721752a0eb72bdda7](https://github.com/Swaylend/swaylend-monorepo/commit/c8f2cb1be7635c37b3b8917721752a0eb72bdda7)\n- Fix available_to_borrow should return base asset amount: [https://github.com/Swaylend/swaylend-monorepo/commit/ba27e5994f92ff100de3965f9664e0ce2a755365](https://github.com/Swaylend/swaylend-monorepo/commit/ba27e5994f92ff100de3965f9664e0ce2a755365)\n- Add check for base_borrow_min in supply_base: [https://github.com/Swaylend/swaylend-monorepo/commit/d4c2d1f78ab00624841e4644cae055439b302125](https://github.com/Swaylend/swaylend-monorepo/commit/d4c2d1f78ab00624841e4644cae055439b302125)\n- Fix wrong check in src-20 burn function: [https://github.com/Swaylend/swaylend-monorepo/commit/070de40f9092cad1f50321b7a9c63e32fbde54e6](https://github.com/Swaylend/swaylend-monorepo/commit/070de40f9092cad1f50321b7a9c63e32fbde54e6)\n\n__Whitehat Educational Resources & Technical Info__\n\nDocumentation can be found at: https://docs.swaylend.com/ \n\n**Is this an upgrade of an existing system? If so, which? And what are the main differences?**\n\nSwaylend is the port of Compound V3 lending protocol and architecture in the Sway programming language for the Fuel Network.\n\n**What ERC20 / ERC721 / ERC777 / ERC1155 token standards are supported? Which are not?**\n\nThe lending market smart contract supports Fuel's native assets - SRC-20 tokens. Both base assets and collateral assets are SRC-20.\n\n**Where do you suspect there may be bugs? Useful aspects of this question are:**\n\n- **Which parts of the code are you most concerned about?**\n- **What attack vectors are you most concerned about?**\n- **Which part(s) of the system do you want whitehats to attempt to break the most?**\n- **Are there any assumed invariants that you want whitehats to attempt to break?**\n\nSwaylend is the lending protocol that offers functionalities like other lending protocols, i.e., supplying base assets (in our case, USDC) and borrowing base assets in exchange for providing collateral assets. The most critical things that should be tested are:\n- Withdrawing only assets that you supplied\n- Borrowing only the amount you're allowed (based on supplied collateral asset and collateral factor)\n- Repaying the borrowed amount before withdrawing collateral asset\n\n\n**What external dependencies are there?**\n\nThere is one external dependency, which is an oracle that provides up-to-date prices for the tokens. In the current version, we use the Pyth oracle network to provide this data. Pyth oracle smart contract can be found at https://github.com/pyth-network/pyth-crosschain/blob/main/target_chains/fuel/contracts/pyth-contract/src/main.sw \n\n**Where might whitehats confuse out-of-scope code to be in-scope?**\n\nThere are additional smart contracts in the GitHub repository used for internal testing, but they are not within the scope. The only assets within scope are listed in the table above. External dependencies, such as the actual core implementation of the Pyth oracle, are also not in scope for this IOP.\n\n**Are there any unusual points about your protocol that may confuse whitehats?**\n\nSwaylend is a monolithic lending protocol, meaning all functionalities are encompassed in a single smart contract. The lending positions of users are directly recorded in the smart contract, with no derivative tokens minted, as seen in some other lending protocols.\n\nLiquidations of undercollateralized positions occur through two steps: first, absorbing the collateral assets into the protocol, and then, in the next step, purchasing the collateral assets from the protocol in exchange for the market's base asset.\n\n\n**What is the test suite setup information?**\n\nThe test suite for the smart contracts is included in the GitHub repo (https://github.com/Swaylend/swaylend-contracts/tree/main/contracts/market/tests   ). Tests are written in Rust, and they should cover all functionalities of the lending protocol. \n\n**Public Disclosure of Known Issues**\n\nThere are no known open issues at the moment\n\n**Previous Audits**\n\nSwaylend’s completed audit reports can be found at https://www.halborn.com/audits/swaylend  .USD. Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n**Asset Accuracy Assurance**\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n**Private Known Issues Reward Policy**\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward.\n\n**Known Issue Assurance**\n\nSwaylend commits to providing Known Issue Assurance to bug submissions through their program. This means that Swaylend will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n**Primacy of Impact vs Primacy of Rules**\n\nSwaylend adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page.",
+      "impactsBody": "**Proof of Concept (PoC) Requirements**\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n**Eligibility Criteria**\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this audit competition and a leaderboard of the participants and their earnings.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Ionic has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
       "immunefiStandard": true,
       "tags": {
         "general": [
           "Immunefi Standard",
           "KYC Not Required",
-          "PoC Required"
+          "PoC Not Required",
+          "Step-by-step PoC Required"
         ],
         "productType": [],
         "projectType": [],
@@ -221,35 +226,80 @@
         ],
         "web_rewards": []
       },
-      "evaluationEndDate": "2024-11-19T18:40:00.000Z",
+      "evaluationEndDate": "2024-11-18T11:38:53.502Z",
       "boostedIntroStartingIn": "$45,000 USD in rewards is available for finding bugs on Swaylend which is lending protocol on Fuel Network. **For this Invite-Only Program, all whitehats who found at least 1 valid report in Fuel's Attackathon are invited.**\n\nNo KYC is required.\n\nAny technical questions can be asked directly to the Swaylend technical team on [Immunefi’s Discord](https://discord.com/invite/immunefi) in the \"swaylend-iop\" channel.\n\nWhen the Boost has ended, Immunefi will publish an event-specific leaderboard and bug reports from the event.\n\nIn a few days after the launch, Swaylend will give a live technical walkthrough.\n\nJoin our Discord for more updates.",
       "boostedIntroLive": "$45,000 USD is available in rewards for finding bugs in Swaylend's codebase of 2400 nSLOC. There is no KYC required.\n\nAny technical questions and support requests can be asked directly to Swaylend or Immunefi in the [Swaylend | IOP - Discord channel](https://discord.com/invite/immunefi?utm_source=immunefi).\n\nWhen the Boost has ended Immunefi will publish an event-specific leaderboard and bug reports from the event.",
       "boostedIntroEvaluating": "",
-      "boostedIntroFinished": "",
+      "boostedIntroFinished": "Audit Competition cards for security researchers with paid reports are available [here](https://drive.google.com/drive/folders/1VgdUm6pKoeeb5wdDBgYnIYVThMGkRwAr?usp=sharing)\n\nAll paid bug reports are available in original format [here](https://reports.immunefi.com/swaylend_iop)",
       "rewardsToken": "USDC",
       "rewardsPool": 45000,
+      "primaryPool": 45000,
+      "allStarsPool": 0,
+      "podiumPool": 0,
       "sourceLinesOfCode": 2400,
-      "boostedSummaryReport": null,
+      "boostedSummaryReport": "https://drive.google.com/file/d/1s6DrkneOU3E4D0bUL8RhxOK-0rQsWe1j/view?usp=sharing",
       "inviteOnly": true,
       "hideAssetsInScope": false,
-      "boostedLeaderboard": [],
+      "boostedLeaderboard": [
+        {
+          "high": 2,
+          "name": "SeveritySquad",
+          "critical": 1,
+          "earnings": 20383,
+          "insights": 1,
+          "mediumLow": 4,
+          "totalValidBugs": 7
+        },
+        {
+          "high": 1,
+          "name": "jasonxiale",
+          "critical": 1,
+          "earnings": 15462,
+          "insights": 5,
+          "mediumLow": 3,
+          "totalValidBugs": 5
+        },
+        {
+          "high": 0,
+          "name": "ret2happy",
+          "critical": 1,
+          "earnings": 5530,
+          "insights": 0,
+          "mediumLow": 0,
+          "totalValidBugs": 1
+        },
+        {
+          "high": 1,
+          "name": "SimaoAmaro",
+          "critical": 0,
+          "earnings": 1895,
+          "insights": 0,
+          "mediumLow": 3,
+          "totalValidBugs": 4
+        },
+        {
+          "high": 1,
+          "name": "savi0ur",
+          "critical": 0,
+          "earnings": 1730,
+          "insights": 1,
+          "mediumLow": 0,
+          "totalValidBugs": 1
+        }
+      ],
       "features": [
         "IOP (Invite Only Program)",
         "Managed Triage: Time Saver"
       ],
       "academyStartDate": null,
       "websiteUrl": "https://swaylend.com/",
-      "description": "**Swaylend's Invite-Only Program is a form of Boost which is exclusively accessible to a select group of security researchers who have submitted at least 1 valid report during Fuel Attackathon event. These researchers will share a flat reward pool for every valid bug found.**\n",
+      "description": "**Swaylend's Invite-Only Program is a form of Audit Competition which is exclusively accessible to a select group of security researchers who have submitted at least 1 valid report during Fuel Attackathon event. These researchers will share a flat reward pool for every valid bug found.**\n",
       "githubUrl": null,
       "feasibilityLimitations": null,
       "prohibitedActivites": null,
       "responsiblePublicationCategory": null,
       "knownIssues": [],
       "knownIssueAssurance": false,
-      "outOfScopeBlockchain": null,
-      "outOfScopeGeneral": null,
-      "outOfScopeSmartContract": null,
-      "outOfScopeWebAndApplications": null,
       "defaultOutOfScopeBlockchain": null,
       "defaultOutOfScopeSmartContract": null,
       "defaultOutOfScopeGeneral": null,
@@ -258,11 +308,14 @@
       "defaultFeasibilityLimitations": null,
       "customOutOfScopeInformation": null,
       "customProhibitedActivities": [],
-      "rewardsTokenNetwork": null,
+      "rewardsTokenNetwork": "Ethereum",
       "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [],
       "programDocumentations": [],
+      "primacy": "primacy_of_rules",
+      "newProgramRewardsEnabled": false,
+      "findingsUrl": null,
       "premiumTriaging": true
     },
     "layoutProps": {
@@ -271,8 +324,8 @@
     "metaData": {
       "title": "IOP | Swaylend Bug Bounties",
       "description": "Find bugs and vulnerabilities on IOP | Swaylend and get paid up to $45,000.",
-      "url": "https://immunefi.com/boost/iop-swaylend",
-      "ogImg": "/api/bounty/og-image?project=IOP+%7C+Swaylend"
+      "url": "https://immunefi.com/audit-competition/iop-swaylend/",
+      "ogImg": "/api/bounty/og-image/?project=IOP+%7C+Swaylend&slug=iop-swaylend"
     }
   },
   "__N_SSG": true

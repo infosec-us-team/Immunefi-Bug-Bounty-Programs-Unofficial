@@ -1,0 +1,416 @@
+{
+  "pageProps": {
+    "isAttackathon": false,
+    "academyContent": null,
+    "ethereumAttackathonSponsors": null,
+    "project": {
+      "features": [
+        "Boost",
+        "Managed Triage: Time Saver"
+      ],
+      "premiumTriaging": true,
+      "isSafeHarborActive": false,
+      "performanceMetrics": {}
+    },
+    "bounty": {
+      "contentfulId": "XG79UeGqk1U64NC6aFa3J",
+      "id": "audit-comp-anvil",
+      "slug": "audit-comp-anvil",
+      "project": "Audit Comp | Anvil",
+      "maxBounty": 50000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2mGK0eYVaDmJRa9glTW4z7/f9526c17f5faa6b5007c29f6caf1226f/4D0J2eDi_500x500-3.png",
+      "launchDate": "2024-10-16T08:00:00.000Z",
+      "endDate": "2024-11-06T08:00:00.000Z",
+      "updatedDate": "2024-12-13T07:19:07.234Z",
+      "kyc": true,
+      "rewards": [
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "Portion of the Reward Pool",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "high",
+          "payout": "Portion of the Reward Pool",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "Portion of the Reward Pool",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "low",
+          "payout": "Portion of the Reward Pool",
+          "pocRequired": true
+        }
+      ],
+      "audits": [
+        {
+          "id": "6MyR9a29PegqH8KIXLWDam",
+          "url": "https://blog.openzeppelin.com/anvil-protocol-audit",
+          "auditor": "OpenZeppelin Audit # 2",
+          "date": "2024-10-11"
+        },
+        {
+          "id": "71NlSunghGfxExpKqimarO",
+          "url": "https://blog.openzeppelin.com/anvil-audit",
+          "auditor": "OpenZeppelin Audit # 1",
+          "date": "2024-10-11"
+        },
+        {
+          "id": "7bjB0FDqn65945QChaN5sY",
+          "url": "https://github.com/trailofbits/publications/blob/master/reviews/2023-12-acronym-foundation-securityreview.pdf",
+          "auditor": "Trail Of Bits Audit",
+          "date": "2023-12-23"
+        }
+      ],
+      "assets": [
+        {
+          "id": "1YkHqUbfnxAnca3Yundei6",
+          "type": "smart_contract",
+          "url": "https://immunefi.com/",
+          "description": "Primacy of Impact",
+          "isPrimacyOfImpact": true,
+          "isSafeHarbor": null,
+          "addedAt": "2024-10-16T08:00:00.000Z"
+        },
+        {
+          "id": "5TT3o4uJyHjAqCdEYYtz2B",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x5d2725fdE4d7Aa3388DA4519ac0449Cc031d675f",
+          "description": "CollateralVault.sol - 606 SLOC",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2024-10-16T08:00:00.000Z"
+        },
+        {
+          "id": "4ywmkFrGN0DbBu2QrknIoS",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0xd042C267758eDDf34B481E1F539d637e41db3e5a",
+          "description": "TimeBasedCollateralPool.sol - 778 SLOC",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2024-10-16T08:00:00.000Z"
+        }
+      ],
+      "impacts": [
+        {
+          "id": 5172,
+          "type": "smart_contract",
+          "severity": "low",
+          "title": "Temporary freezing of funds within the TimeBasedCollateralPool for at least 48 hours"
+        },
+        {
+          "id": 5173,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Temporary freezing of funds within the CollateralVault for at least 48 hours"
+        },
+        {
+          "id": 31,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+        },
+        {
+          "id": 32,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Theft of gas"
+        },
+        {
+          "id": 33,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
+        },
+        {
+          "id": 29,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
+        },
+        {
+          "id": 15,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+        },
+        {
+          "id": 17,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
+        },
+        {
+          "id": 22,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Protocol insolvency"
+        }
+      ],
+      "programOverview": "Anvil is a decentralized finance (DeFi) protocol for the issuance of fully secured credit. The protocol's Ethereum-based smart contracts allow users to deposit collateral in a vault, issue letters of credit, and supply assets to staking pools. Anvil's mission is to provide flexible building blocks to bring efficient and transparent collateralized finance into an increasingly decentralized world.\n\nFor more information about Anvil, please visit https://anvil.xyz/ \n\nAnvil provides rewards in USDT on Ethereum, denominated in USD.\n\nKYC is required.\n\nThis Audit Competition is running on mainnet. The following conditions apply:\n\n1. Anvil team will freeze the codebase during the duration of the Audit Competition:\n2. Duplicates are rewarded",
+      "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+      "rewardsBody": "The following reward terms are a summary. For the full details read our [Anvil Audit Competition Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/29281157644689-Anvil-Audit-Competition-Reward-Terms)\n\nA reward pool of $50,000 USD will be distributed among participants, even if no valid bugs are found. \n\nDuplicates and private known issues are valid for a reward.\n\nRewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/).\n\nRewards will be distributed all at once based on Immunefi’s distribution formula after the event has concluded and the final bug reports have been resolved.\n\n__Insight Rewards Payment Terms__\n\n*Insight Rewards*: Portion of the Rewards Pool\n\n*The \"Insight\" severity was introduced on Boost (Audit Competitions) & Attackathon programs to recognize contributions that extend beyond identifying immediate vulnerabilities. Currently, it's not an option to select the Insight severity when submitting a report. However, our team or program will designate it accordingly if applicable. \"Insights\" underscores our commitment to valuing all types of contributions that contribute to a more secure environment and will always be rewarded. [View more information about Insights](https://immunefisupport.zendesk.com/hc/en-us/articles/13333032674961-Severity-Classification-System?utm_source=immunefi)\n\nDuplicates of Insight reports are not eligible for a reward.",
+      "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories:__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Blockchain/DLT & Smart Contract Specific:__\n\n- Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n\n__Prohibited Activities:__\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
+      "assetsBodyV2": "__Asset Accuracy Assurance__\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n__Private Known Issues Reward Policy__\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward.\n\n__Known Issue Assurance__\n\nAnvil commits to providing Known Issue Assurance to bug submissions through their program. This means that Anvil will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n__Primacy of Impact vs Primacy of Rules__\n\nAnvil adheres to the Primacy of Impact for all impacts.\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see Best Practices: Primacy of Impact \nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__KYC Requirement__\n\nAnvil will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\nSecurity researchers are required to submit KYC within 14 days of KYC being requested, else their rewards may be forfeited. Immunefi may make exceptions due to extenuating circumstances.\n\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this Audit Competition bug bounty and a leaderboard of the participants and their earnings.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Anvil has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
+      "impactsBody": "__Is this an upgrade of an existing system? If so, which? And what are the main differences?__\n\nNo. This is a new protocol. \n\n__Where do you suspect there may be bugs? Useful aspects of this question are:__\n\n\n- Which parts of the code are you most concerned about?\n\nTimeBasedCollateralPool accounting\n- What attack vectors are you most concerned about?\nTokens being stuck in the CollateralVault or stolen from the TimeBasedCollateralPool or CollateralVault\n- Which part(s) of the system do you want whitehats to attempt to break the most?\nTimeBasedCollateralPool accounting\n- Are there any assumed invariants that you want whitehats to attempt to break?\n\n- **CollateralVault**\n\n1. Owner cannot take tokens associated with account balances, only balances that are not associated with accounts (max withdrawable by owner is - -- \n2. CollateralVault balance - SUM(accountBalances))\n3. Collateralizable contracts can only reserve & claim account tokens up to their account allowance, which decreases on reservation\n4. CollateralReservations may not be changed, claimed, or released by any party other than the reserving collateralizable contract\n5. CollateralReservations are resilient to contract governance actions (e.g. disabling the CollateralToken being used, changing the withdrawal fee, etc.)\n6. Account balances for distinct ERC-20 tokens will be accounted for separately at all times (never mixed up)\n\n- **TimeBasedCollateralPool**\n\n1. - Accounts always receive units proportional to their staked tokens for staking operations and receive tokens proportional to their pool units for unstaking operations\n2. - Tokens being unstaked are still claimable for at least 1 epoch after initiating unstaking\n3. - Tokens being unstaked are never claimable after the end of the epoch following the epoch in which unstaking was initiated\n4. - Units and balances for distinct ERC-20 tokens will be accounted for separately at all times (never mixed up)\n\n__What ERC20 / ERC721 / ERC777 / ERC1155 token standards are supported? Which are not?__\n\nERC-20 tokens that are subject to governance review ahead of support. That is to say that attacks that stem from malicious code within a token contract should be out of scope for this program, as any complex / non-standard ERC-20 token will be restricted by governance until proven safe. Fee-on-Transfer tokens, rebasing tokens, and tokens with upgradeable contracts should assume to never be supported, as well as other tokens that could present a security risk.  \n\n\n__What emergency actions may you want to use as a reason to invalidate or downgrade an otherwise valid bug report?__\n\n\n- For each emergency action, how does it work, how would it affect a bug report, and when would you utilize it?\n\nIf this is listed in your documentation, then a link to that part of the documentation would suffice.\n\n- Note that normally, not all emergency actions are accepted as a valid reason to invalidate or downgrade an otherwise valid bug report, such as chain rollbacks.\n\nThis project is not a chain of its own and does not have the ability to rewrite history, so no emergency actions should be possible as a way to mitigate an otherwise possible theft. The TimeBasedCollateralPool contract is meant to be referenced by upgradeable proxies, so bug reports of “frozen” tokens that may be mitigated by a contract upgrade are less of a concern and therefore out of scope. Anvil will likely pay those out as low severity bugs reported via our forthcoming bug bounty program, but not as a part of this Audit Competition. \n\n\n__What monitoring systems may you want to use as a reason to invalidate or downgrade an otherwise valid bug report?__\n\nNone to our knowledge. \n\nThere are possible admin actions in CollateralVault and TimeBasedCollateralPool, including contract upgrades for the latter, but those are only possible via governance, which is much slower than any attack and could not reasonably front-run an attack. \n\n__What addresses would you consider any bug report requiring their involvement to be out of scope, as long as they operate within the privileges attributed to them?__\n\nThere are various roles defined in the CollateralVault and TimeBasedCollateralPool contracts that should be assumed to act in any way explicitly permitted by that role, and that is a valid non-bug use case. That is to say that if accounts with an Admin/Owner role, for instance, may withdraw tokens from the contract, registering an attack of the Admin/Owner stealing tokens is invalid because that is not theft – that is an explicitly permitted action.\n\nThat said, in the CollateralVault for instance, the design of the contract is such that the contract Owner should not be able to take tokens that are earmarked for an individual account (it may only take contract balance - SUM(user account balance). If an attack were to be found such that the owner could take funds that were earmarked for one or more accounts, that would be a valid bug because it undermines the trust assumptions of the contract. \n\n\n__What external dependencies are there?__\n\nThere are external dependencies on ERC-20 tokens. Governance attacks, such as the approval of a malicious ERC-20 token is out of scope. \n\nThere are also dependencies on open source contracts such as OpenZeppelin. While those are 3rd party contracts, they are referenced from within Anvil’s contracts, so any vulnerabilities in Anvil contracts made possible by issues in dependency contracts such as OZ are in scope.\n\n__Where might whitehats confuse out-of-scope code to be in-scope?__\n\nThe code for the TimeBasedCollateralPool contract is meant to be referenced by proxies as their implementation. A TimeBasedCollateralPool contract could be deployed and not initialized, since it is not meant to be called directly, leaving it open to some 3rd party initializing it. If that happens, it is not a valid attack on the contract, as it is not meant to be used directly.  \nSince the TimeBasedCollateralPool contract is meant to be referenced by upgradeable proxies, finding some loophole in contract logic such that tokens reserved by that contract become stuck would be a lower severity bug than it would be if the contract were not upgradeable. For that reason, token theft as a bug is very much in scope, whereas issues that could be solved via a successful contract upgrade are less critical and therefore out of scope.\n\n__Are there any unusual points about your protocol that may confuse whitehats?__\n\nThere is rather complicated accounting in TimeBasedCollateralPool to allow for permissionless time-based unstaking. While that design may be hard to understand on first read, contract-, function-, and code-level comments should provide useful context to help interpret the logic \nIn TimeBasedCollateralPool, the term “units” is used to represent an account’s proportional involvement in the pool. If not immediately apparent, please note units imply a percentage (account units / total pool units).\n\n\n__What is the test suite setup information?__\n\nNo tests have been made public at the moment.\n\n__Public Disclosure of Known Issues__\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n\nThere are no known issues that fall within the defined scope of this program\n\n__Previous Audits__\nAnvil’s completed audit reports can be found at [https://docs.anvil.xyz/contracts/audits]. Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.",
+      "immunefiStandard": true,
+      "tags": {
+        "general": [
+          "Immunefi Standard",
+          "KYC Required",
+          "PoC Not Required",
+          "Step-by-step PoC Required",
+          "Primacy of Impact"
+        ],
+        "productType": [],
+        "projectType": [],
+        "ecosystem": [],
+        "programType": [
+          "Smart Contract"
+        ],
+        "language": [
+          "Solidity"
+        ],
+        "featured": [
+          "Launched Recently"
+        ]
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract"
+        ],
+        "blockchain_rewards": [],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "Portion of the Reward Pool"
+          },
+          {
+            "level": "High",
+            "payout": "Portion of the Reward Pool"
+          },
+          {
+            "level": "Medium",
+            "payout": "Portion of the Reward Pool"
+          },
+          {
+            "level": "Low",
+            "payout": "Portion of the Reward Pool"
+          }
+        ],
+        "web_rewards": []
+      },
+      "evaluationEndDate": "2024-12-09T08:00:00.000Z",
+      "boostedIntroStartingIn": "$50,000 USD in rewards is available for finding bugs on Anvil Vault\n\nAnvil is a decentralized finance (DeFi) protocol for the issuance of fully secured credit. The protocol's Ethereum-based smart contracts allow users to deposit collateral in a vault, issue letters of credit, and supply assets to staking pools. Anvil's mission is to provide flexible building blocks to bring efficient and transparent collateralized finance into an increasingly decentralized world.\n\n\nFor more information about Anvil, please visit https://anvil.xyz/\n\n**KYC is required**\n\nAny technical questions can be asked directly to the Anvil technical team on Immunefi's [Immunefi’s Discord](https://discord.com/invite/immunefi) in the \"anvil-audit-competition\" channel.\n\nWhen the Audit Competition has ended, Immunefi will publish an event-specific leaderboard and bug reports from the event.\n\nThe day after the launch, Anvil will give a live technical walkthrough.",
+      "boostedIntroLive": "",
+      "boostedIntroEvaluating": "",
+      "boostedIntroFinished": "Audit Competition cards for security researchers with paid reports are available [here](https://drive.google.com/drive/folders/17Wj9-nOE6kuMsw3D8Yvy85B0AoadMbkH?usp=sharing)\n\nAll paid bug reports are available in original format [here](https://reports.immunefi.com/anvil)",
+      "rewardsToken": "USDT",
+      "rewardsPool": 50000,
+      "primaryPool": 50000,
+      "allStarsPool": 0,
+      "podiumPool": 0,
+      "sourceLinesOfCode": 1384,
+      "boostedSummaryReport": "https://drive.google.com/file/d/1T0yw5_D8hQJcC0259lEcDJbYh-tYkA0b/view?usp=sharing",
+      "inviteOnly": false,
+      "hideAssetsInScope": null,
+      "boostedLeaderboard": [
+        {
+          "high": 0,
+          "name": "niroh",
+          "critical": 1,
+          "earnings": 40282,
+          "insights": 1,
+          "mediumLow": 0,
+          "totalValidBugs": 1
+        },
+        {
+          "high": 0,
+          "name": "gladiator111",
+          "critical": 0,
+          "earnings": 3322,
+          "insights": 1,
+          "mediumLow": 0,
+          "totalValidBugs": 0
+        },
+        {
+          "high": 0,
+          "name": "perseverance",
+          "critical": 0,
+          "earnings": 2096,
+          "insights": 1,
+          "mediumLow": 2,
+          "totalValidBugs": 2
+        },
+        {
+          "high": 0,
+          "name": "max10afternoon",
+          "critical": 0,
+          "earnings": 1107,
+          "insights": 0,
+          "mediumLow": 1,
+          "totalValidBugs": 1
+        },
+        {
+          "high": 0,
+          "name": "Blockian",
+          "critical": 0,
+          "earnings": 694,
+          "insights": 1,
+          "mediumLow": 0,
+          "totalValidBugs": 0
+        },
+        {
+          "high": 0,
+          "name": "ox9527",
+          "critical": 0,
+          "earnings": 626,
+          "insights": 0,
+          "mediumLow": 1,
+          "totalValidBugs": 1
+        },
+        {
+          "high": 0,
+          "name": "MrMorningstar",
+          "critical": 0,
+          "earnings": 417,
+          "insights": 1,
+          "mediumLow": 0,
+          "totalValidBugs": 0
+        },
+        {
+          "high": 0,
+          "name": "zhuying",
+          "critical": 0,
+          "earnings": 294,
+          "insights": 0,
+          "mediumLow": 1,
+          "totalValidBugs": 1
+        },
+        {
+          "high": 0,
+          "name": "Hoverfly9132",
+          "critical": 0,
+          "earnings": 294,
+          "insights": 0,
+          "mediumLow": 1,
+          "totalValidBugs": 1
+        },
+        {
+          "high": 0,
+          "name": "trtrth",
+          "critical": 0,
+          "earnings": 294,
+          "insights": 0,
+          "mediumLow": 1,
+          "totalValidBugs": 1
+        },
+        {
+          "high": 0,
+          "name": "savi0ur",
+          "critical": 0,
+          "earnings": 294,
+          "insights": 0,
+          "mediumLow": 1,
+          "totalValidBugs": 1
+        },
+        {
+          "high": 0,
+          "name": "ProfitableFrog6412",
+          "critical": 0,
+          "earnings": 139,
+          "insights": 1,
+          "mediumLow": 0,
+          "totalValidBugs": 0
+        },
+        {
+          "high": 0,
+          "name": "ihtishamsudo",
+          "critical": 0,
+          "earnings": 139,
+          "insights": 1,
+          "mediumLow": 0,
+          "totalValidBugs": 0
+        }
+      ],
+      "features": [
+        "Boost",
+        "Managed Triage: Time Saver"
+      ],
+      "academyStartDate": null,
+      "websiteUrl": "https://anvil.xyz",
+      "description": "Anvil is a decentralized finance (DeFi) protocol for the issuance of fully secured credit. The protocol's Ethereum-based smart contracts allow users to deposit collateral in a vault, issue letters of credit, and supply assets to staking pools. For more information about Anvil, please visit https://anvil.xyz/ \n",
+      "githubUrl": null,
+      "feasibilityLimitations": null,
+      "prohibitedActivites": null,
+      "responsiblePublicationCategory": null,
+      "knownIssues": [],
+      "knownIssueAssurance": true,
+      "defaultOutOfScopeBlockchain": null,
+      "defaultOutOfScopeSmartContract": null,
+      "defaultOutOfScopeGeneral": null,
+      "defaultOutOfScopeWebAndApplications": null,
+      "defaultProhibitedActivities": null,
+      "defaultFeasibilityLimitations": null,
+      "customOutOfScopeInformation": null,
+      "customProhibitedActivities": [],
+      "rewardsTokenNetwork": null,
+      "eligibilityCriteria": [
+        "no_ofac_sdn",
+        "no_official_contributor",
+        "no_employee",
+        "no_auditor"
+      ],
+      "eligibilityCriteriaAdditionalInformation": null,
+      "programCodebases": [
+        {
+          "id": 2,
+          "title": "Anvil’s up to date codebase",
+          "description": "Codebase",
+          "url": "https://github.com/AcronymFoundation/anvil-contracts"
+        }
+      ],
+      "programDocumentations": [
+        {
+          "id": 1,
+          "title": "Technical education",
+          "description": "Whitepaper",
+          "url": "https://docs.anvil.xyz/whitepaper"
+        },
+        {
+          "id": 2,
+          "title": "Technical education 2",
+          "description": "README",
+          "url": "https://github.com/AcronymFoundation/anvil-contracts/blob/main/README.md"
+        },
+        {
+          "id": 3,
+          "title": "Educational Resources",
+          "description": "Documentation",
+          "url": "https://docs.anvil.xyz/ "
+        }
+      ],
+      "primacy": "primacy_of_rules",
+      "newProgramRewardsEnabled": false,
+      "findingsUrl": "https://reports.immunefi.com/anvil",
+      "premiumTriaging": true
+    },
+    "layoutProps": {
+      "headerMarginBottom": "mb-12 lg:mb-16"
+    },
+    "metaData": {
+      "title": "Audit Comp | Anvil Bug Bounties",
+      "description": "Find bugs and vulnerabilities on Audit Comp | Anvil and get paid up to $50,000.",
+      "url": "https://immunefi.com/audit-competition/audit-comp-anvil/",
+      "ogImg": "/api/bounty/og-image/?project=Audit+Comp+%7C+Anvil&slug=audit-comp-anvil"
+    }
+  },
+  "__N_SSG": true
+}

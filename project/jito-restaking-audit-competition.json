@@ -1,0 +1,315 @@
+{
+  "pageProps": {
+    "isAttackathon": false,
+    "academyContent": null,
+    "ethereumAttackathonSponsors": null,
+    "project": {
+      "features": [
+        "Boost",
+        "Managed Triage: Time Saver",
+        "Vault"
+      ],
+      "premiumTriaging": true,
+      "isSafeHarborActive": false,
+      "performanceMetrics": {}
+    },
+    "bounty": {
+      "contentfulId": "3Pof1CKJjUboVnNdVCnB7h",
+      "id": "jito-restaking-audit-competition",
+      "slug": "jito-restaking-audit-competition",
+      "project": "Audit Comp | Jito Restaking",
+      "maxBounty": 150000,
+      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/59ZugNbGcWjZC9Vk2UvLSW/cab63d1c9033e2935a66537128cb37dc/image__18_.png",
+      "launchDate": "2024-11-04T10:00:41.000Z",
+      "endDate": "2024-12-02T10:00:00.000Z",
+      "updatedDate": "2025-01-14T15:59:15.254Z",
+      "kyc": true,
+      "rewards": [
+        {
+          "assetType": "smart_contract",
+          "level": "critical",
+          "payout": "Portion of the Reward Pool",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "high",
+          "payout": "Portion of the Reward Pool",
+          "pocRequired": true
+        },
+        {
+          "assetType": "smart_contract",
+          "level": "medium",
+          "payout": "Portion of the Reward Pool",
+          "pocRequired": true
+        }
+      ],
+      "audits": null,
+      "assets": [
+        {
+          "id": "2txcdHJh31vEpTJMJgVEI2",
+          "type": "smart_contract",
+          "url": "https://github.com/jito-foundation/restaking/tree/master/restaking_core",
+          "description": "Restaking Core [1009]",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2024-11-04T10:00:41.000Z"
+        },
+        {
+          "id": "1FCy4bgRb52ybWj9g6eWds",
+          "type": "smart_contract",
+          "url": "https://github.com/jito-foundation/restaking/tree/master/restaking_program",
+          "description": "Restaking Program [1370]",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2024-11-04T10:00:41.000Z"
+        },
+        {
+          "id": "1sQxZZYIFp1uZW3spcXZtB",
+          "type": "smart_contract",
+          "url": "https://github.com/jito-foundation/restaking/tree/master/vault_core",
+          "description": "Vault Core [3356]",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2024-11-04T10:00:41.000Z"
+        },
+        {
+          "id": "5gZofwMN0kBZO5jzkWJr26",
+          "type": "smart_contract",
+          "url": "https://github.com/jito-foundation/restaking/tree/master/vault_program",
+          "description": "Vault Program [2660]",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2024-11-04T10:00:41.000Z"
+        }
+      ],
+      "impacts": [
+        {
+          "id": 17,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
+        },
+        {
+          "id": 15,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+        },
+        {
+          "id": 23,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
+        },
+        {
+          "id": 5176,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Theft of protocol revenue"
+        },
+        {
+          "id": 25,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
+        },
+        {
+          "id": 29,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
+        },
+        {
+          "id": 31,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+        }
+      ],
+      "programOverview": "Jito (Re)staking is a multi-asset staking protocol for node consensus networks. The protocol tokenizes staked assets as vault receipt tokens for enhanced liquidity and composability. Node consensus networks can use Jito Restaking to easily customize staking parameters, slashing conditions, and economic incentives to tailor their security and tokenomics.\n\nFor more information about Jito, please visit [https://www.jito.network/](https://www.jito.network/). \n\nJito provides rewards in JTO, denominated in USD.\n\n**This Audit Competition is running on mainnet. The following conditions apply:**\n- **Bug fixes may be applied mid-contest. Any public changes will be documented in the Mid-Contest Changelog section.**\n- **Duplicates are rewarded.**",
+      "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+      "rewardsBody": "The following reward terms are a summary, for the full details read our [Jito Restaking Audit Competition Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/29877415850769-Jito-Restaking-Audit-Competition-Reward-Terms)\n\nThe reward pool will be entirely distributed among participants. The size depends on the bugs found:\n- If one or more Critical severity bugs are found, **the reward pool will be 100% of the respective reward pool, $150,000 USD**\n- If one or more High severity bugs are found, **the reward pool will be 75% of the respective reward pool, $112,500 USD**\n- If one or more Medium severity bugs are found, **the reward pool will be 50% of the respective reward pool, $75,000 USD**\n- If Low severity bugs or no bugs are found, **the reward pool will be 25% of the respective reward pool, $37,500 USD**\n\n**Duplicates of Insight reports are not eligible for a reward.**\n\nFor this Audit Competition, duplicates and private known issues are valid for a reward. \n\nPrivate known issues will unlock higher reward pools according to their severity level without any downgrade. For example, a Critical severity bug which was a private known issue would unlock the reward pool conditional on a Critical severity bug being found.\n\nRewards are distributed according to the impact of the vulnerability based on the Immunefi [Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/).\n\n__Reward Payment Terms__\n\nPayouts are handled by the Jito team directly and are denominated in USD. However, payments are done in JTO on Solana.\n\nThe calculation of the net amount rewarded is based on the 7-day [TWAP](https://en.wikipedia.org/wiki/Time-weighted_average_price) of JTO at the time of settlement. No adjustments are made based on liquidity availability.\n\n__Insight Rewards Payment Terms__\n\nInsight Rewards: Portion of the Rewards Pool\n\nThe \"Insight\" severity was introduced on Audit Competition & Attackathon programs to recognize contributions that extend beyond identifying immediate vulnerabilities. Currently, it's not an option to select the Insight severity when submitting a report. However, our team or program will designate it accordingly if applicable. \"Insights\" underscores our commitment to valuing all types of contributions that contribute to a more secure environment and will always be rewarded. [View more information about Insights](https://immunefisupport.zendesk.com/hc/en-us/articles/13333032674961-Severity-Classification-System?utm_source=immunefi).",
+      "outOfScopeAndRules": "To be determined",
+      "assetsBodyV2": "Jito’s up-to-date codebase can be found at [https://github.com/jito-foundation/restaking](https://github.com/jito-foundation/restaking). Documentation and further resources can be found at [https://docs.restaking.jito.network](https://docs.restaking.jito.network).\n\n__Mid-Contest Code Updates__\n\nIn this contest bug fixes may be applied mid-contest. \n\nThe project is to keep changes private as far as possible. When changes need to be made public, then the changelog will be updated here & in the Jito Restaking Audit Competition Discord channel. Publicly fixed bugs are invalid and the scope is updated to the new code.\n\nAll bug reports before the fix was public will earn a reward. All bug reports after are invalid. If a new bug is introduced by their fix then it is valid for a reward.\n\n__Mid-Contest Changelog__\n\nNone\n\n__KYC Requirement__\n\nJito will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\nSecurity researchers are required to submit KYC within 14 days of KYC being requested, else their rewards may be forfeited. Immunefi may make exceptions due to extenuating circumstances.\n\n__Asset Accuracy Assurance__\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n__Private Known Issues Reward Policy__\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward equal to that of a bug one severity lower.\n\n__Primacy of Impact vs Primacy of Rules__\n\nJito adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page.\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this audit competition and a leaderboard of the participants and their earnings.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Jito has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
+      "impactsBody": "__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Whitehat Educational Resources & Technical Info__\n\nThe documentation for the restaking programs is located at [https://docs.restaking.jito.network/](https://docs.restaking.jito.network/).\n\n__Is this an upgrade of an existing system? If so, which? And what are the main differences?__\n\nThis will be the maiden deployment of Jito’s restaking protocol. This is a new codebase, not a fork. Slashing will not be enabled at launch, as an initial guardrail, but the protocol otherwise resembles existing restaking protocols.\n\n__Where do you suspect there may be bugs?__\n\nAs previously mentioned, slashing will not be implemented at launch. However, any bug which might allow an operator to avoid or frontrun being slashed would be an interesting insight. Rounding issues around vault shares would be interesting. There might be bugs around fees and rewards, allowing an attacker to either avoid fees or collect a larger share of rewards. There is some complexity around validating, tracking, and updating vault state, so any issues involving out-of-date/out-of-sync vault state would be interesting. \n\n__What ERC20 / ERC721 / ERC777 / ERC1155 token standards are supported? Which are not?__\n\nThe Vault and Restaking programs support the SPL Token and SPL Token 2022 standards \n\n__What emergency actions may you want to use as a reason to invalidate or downgrade an otherwise valid bug report?__\n\nNone that are relevant. There is an `admin` role which can be used to pause vault accounts. However, we’re interested in any impact which could deny or impair functionality, or lead to loss of funds or adverse outcomes for either the protocol or its users;These would still be valid findings even if they can be partially mitigated by pausing+migrating to a new vault.\n\n__What addresses would you consider any bug report requiring their involvement be out of scope, even if they exceed the privileges attributed to them?__\n\nWe’re still interested in impacts involving permissioned roles in the protocol (malicious NCN operators, malicious slashers, malicious delegates). However, any report involving compromise of the private keys of any Jito Foundation-associated account would be out of scope.\n\n__What external dependencies are there?__\n\nExternal dependencies are pretty minimal. The programs depend on the Solana Program Library, and the SPL ATA, SPL Token, and SPL Token 2022 programs.\n\n__Where might whitehats confuse out-of-scope code to be in-scope?__\n\nAll the client code is in the same git repository as the assets-in-scope, but it’s not particularly interesting. The code for the frontend clients is generated using kinobi, and the IDLs for the client are generated with shank. Since it is all auto-generated and simply represents an interface for interacting with the underlying protocol, it is not included in the contest scope.\n\n__Are there any unusual points about your protocol that may confuse whitehats?__\n\nSlashing is not implemented at present, as the protocol is in its initial phase. \n\n__What is the test suite setup information?__\n\nIt is recommended to use cargo nextest. The instructions for running tests can be found here: [https://github.com/jito-foundation/restaking/blob/master/README.md](https://github.com/jito-foundation/restaking/blob/master/README.md)\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n- VRTs are tokenized shares of a vault’s underlying deposits. Vault deposits are calculated by getting the total amount of assets held by the vault token account. An attacker could inflate the exchange rate of shares to underlying assets by “donating” directly to a vault. If the attacker is the first depositor to a vault, they could deprive subsequent depositors of shares relative to their amount of deposited assets. This can be mitigated by requiring or suggesting that integrators mint some small amount of shares in the same transaction in which the vault is initialized. Relevant PRs: [https://github.com/jito-foundation/restaking/pull/150](https://github.com/jito-foundation/restaking/pull/150)\n- The amount of fees charged can change between the time when a withdrawal ticket is enqueued and when the withdrawal ticket is burned. Withdrawals should account for the difference. The issue hasn’t been resolved yet but a mitigation is in the works.\n- In the case where an operator’s state has been updated but a vault update epoch was missed or close_vault_update_state_tracker has not been called, the vault should be updated to reflect the operator’s new state. Otherwise, the amount reserved for cooldown can be too large. Relevant PRs: [https://github.com/jito-foundation/restaking/pull/163/](https://github.com/jito-foundation/restaking/pull/163/)\n\n__Previous Audits__\n\nJito’s completed audit reports can be found at [https://jito-foundation.gitbook.io/mev/resources/audits](https://jito-foundation.gitbook.io/mev/resources/audits). Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.",
+      "immunefiStandard": true,
+      "tags": {
+        "general": [
+          "Immunefi Standard",
+          "KYC Required",
+          "PoC Not Required",
+          "Step-by-step PoC Required"
+        ],
+        "productType": [
+          "Staking"
+        ],
+        "projectType": [
+          "Defi",
+          "Infrastructure"
+        ],
+        "ecosystem": [
+          "Solana"
+        ],
+        "programType": [
+          "Smart Contract"
+        ],
+        "language": [],
+        "featured": [
+          "Launched Recently"
+        ]
+      },
+      "legacy": {
+        "technologies": [
+          "Smart Contract"
+        ],
+        "blockchain_rewards": [],
+        "smartcontract_rewards": [
+          {
+            "level": "Critical",
+            "payout": "Portion of the Reward Pool"
+          },
+          {
+            "level": "High",
+            "payout": "Portion of the Reward Pool"
+          },
+          {
+            "level": "Medium",
+            "payout": "Portion of the Reward Pool"
+          }
+        ],
+        "web_rewards": []
+      },
+      "evaluationEndDate": "2025-01-14T16:01:04.053Z",
+      "boostedIntroStartingIn": "$150,000 USD in rewards is available for finding bugs on Jito restaking protocol built on Solana.\n\nKYC is required.\n\nJito will respond within 24 hours on weekdays to all bug reports. Any technical questions can be asked directly to the Jito technical team on [Immunefi’s Discord](https://discord.com/invite/immunefi) in the \"jito-restaking-audit-competition\" channel.\n\nJito will give a live technical walkthrough which will then be uploaded to Immunefi's YouTube channel, so stay tuned!\n\nWhen the Audit Competition has ended, Immunefi will publish an event-specific leaderboard and bug reports from the event.\n\nJoin our Discord for more updates.",
+      "boostedIntroLive": "$150,000 USD is available in rewards for finding bugs in Jito's Restaking codebase of about 14000 nSLOC. KYC is required.\n\nAny technical questions and support requests can be asked directly to Jito or Immunefi in the [Jito Restaking Audit Competition Discord channel](https://discord.com/invite/immunefi).\n\nIn this contest bug fixes may be applied mid-contest. Further details are in the 'Assets In Scope' section.\n\nWhen the Audit Competition has ended Immunefi will publish an event-specific leaderboard and bug reports from the event.",
+      "boostedIntroEvaluating": "",
+      "boostedIntroFinished": "Audit Competition cards for security researchers with paid reports are available [here](https://drive.google.com/drive/folders/1MGBrzXcCGAa7DwIrpfeOk8mnVPGQtKK0?usp=drive_link)\n\nAll paid bug reports are available in original format [here](https://reports.immunefi.com/jito-restaking)",
+      "rewardsToken": "JTO",
+      "rewardsPool": 150000,
+      "primaryPool": 150000,
+      "allStarsPool": 0,
+      "podiumPool": 0,
+      "sourceLinesOfCode": 14000,
+      "boostedSummaryReport": "https://drive.google.com/file/d/1IS2I-GncvFUAwItI8wHMAFRbn7Y7toOi/view?usp=sharing",
+      "inviteOnly": false,
+      "hideAssetsInScope": null,
+      "boostedLeaderboard": [
+        {
+          "high": 2,
+          "name": "niroh",
+          "critical": 0,
+          "earnings": 44487,
+          "insights": 0,
+          "mediumLow": 0,
+          "totalValidBugs": 2
+        },
+        {
+          "high": 1,
+          "name": "Hoverfly9132",
+          "critical": 0,
+          "earnings": 38386,
+          "insights": 1,
+          "mediumLow": 0,
+          "totalValidBugs": 1
+        },
+        {
+          "high": 1,
+          "name": "Emmanuel001",
+          "critical": 0,
+          "earnings": 12276,
+          "insights": 0,
+          "mediumLow": 0,
+          "totalValidBugs": 1
+        },
+        {
+          "high": 1,
+          "name": "GlitchLens",
+          "critical": 0,
+          "earnings": 8697,
+          "insights": 0,
+          "mediumLow": 0,
+          "totalValidBugs": 1
+        },
+        {
+          "high": 0,
+          "name": "shanb1605",
+          "critical": 0,
+          "earnings": 4327,
+          "insights": 1,
+          "mediumLow": 0,
+          "totalValidBugs": 0
+        },
+        {
+          "high": 0,
+          "name": "NinetyNineCrits",
+          "critical": 0,
+          "earnings": 4327,
+          "insights": 1,
+          "mediumLow": 0,
+          "totalValidBugs": 0
+        }
+      ],
+      "features": [
+        "Boost",
+        "Managed Triage: Time Saver",
+        "Vault"
+      ],
+      "academyStartDate": null,
+      "websiteUrl": null,
+      "description": "The Jito Foundation",
+      "githubUrl": null,
+      "feasibilityLimitations": null,
+      "prohibitedActivites": null,
+      "responsiblePublicationCategory": null,
+      "knownIssues": [],
+      "knownIssueAssurance": true,
+      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+      "defaultOutOfScopeWebAndApplications": null,
+      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+      "customOutOfScopeInformation": null,
+      "customProhibitedActivities": [],
+      "rewardsTokenNetwork": "Jito Network",
+      "eligibilityCriteria": [
+        "no_ofac_sdn",
+        "no_official_contributor",
+        "no_employee",
+        "no_auditor"
+      ],
+      "eligibilityCriteriaAdditionalInformation": null,
+      "programCodebases": [
+        {
+          "id": 63,
+          "title": "Jito's Codebase",
+          "description": "Jito's up-to-date codebase",
+          "url": "https://github.com/jito-foundation"
+        }
+      ],
+      "programDocumentations": [
+        {
+          "id": 50,
+          "title": "Jito's Documentation",
+          "description": "Jito's documentation and further resources",
+          "url": "https://jito-foundation.gitbook.io/mev"
+        }
+      ],
+      "primacy": "primacy_of_rules",
+      "newProgramRewardsEnabled": false,
+      "findingsUrl": "https://reports.immunefi.com/jito-restaking",
+      "premiumTriaging": true
+    },
+    "layoutProps": {
+      "headerMarginBottom": "mb-12 lg:mb-16"
+    },
+    "metaData": {
+      "title": "Audit Comp | Jito Restaking Bug Bounties",
+      "description": "Find bugs and vulnerabilities on Audit Comp | Jito Restaking and get paid up to $150,000.",
+      "url": "https://immunefi.com/audit-competition/jito-restaking-audit-competition/",
+      "ogImg": "/api/bounty/og-image/?project=Audit+Comp+%7C+Jito+Restaking&slug=jito-restaking-audit-competition"
+    }
+  },
+  "__N_SSG": true
+}
