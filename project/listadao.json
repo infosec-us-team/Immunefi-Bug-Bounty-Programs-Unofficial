@@ -13,40 +13,51 @@
       "kyc": false,
       "rewards": [
         {
+          "id": 9905,
           "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "USD $100,000 to $1,000,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 1000000,
+          "minReward": 100000,
+          "rewardCalculationPercentage": 10
         },
         {
+          "id": 9906,
           "assetType": "smart_contract",
-          "level": "high",
-          "payout": "USD $5,000 to USD $10,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 10000,
+          "minReward": 5000
         },
         {
+          "id": 9907,
           "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "USD $1,000 to USD $5,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "range",
+          "maxReward": 5000,
+          "minReward": 1000
         },
         {
+          "id": 9908,
           "assetType": "websites_and_applications",
-          "level": "critical",
-          "payout": "USD $5,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "fixed",
+          "otherImpactMaxReward": 0,
+          "fixedReward": 5000
         },
         {
+          "id": 9909,
           "assetType": "websites_and_applications",
-          "level": "high",
-          "payout": "USD $3,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "fixed",
+          "fixedReward": 3000
         },
         {
+          "id": 9910,
           "assetType": "websites_and_applications",
-          "level": "medium",
-          "payout": "USD $1,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
       "audits": null,
@@ -1491,7 +1502,7 @@
       "programCodebases": [],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "findingsUrl": null,
       "premiumTriaging": false
     },

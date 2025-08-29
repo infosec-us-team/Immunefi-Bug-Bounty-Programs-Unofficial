@@ -9,32 +9,40 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2O0QVg3wfx8rp3u3rzgqUg/4df69f867867b9c6b65a0cc30533e0b4/Firedancer_Transparent.png",
       "launchDate": "2024-09-18T13:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-08-05T10:38:26.540Z",
+      "updatedDate": "2025-08-28T13:41:36.014Z",
       "kyc": true,
       "rewards": [
         {
+          "id": 34615,
           "assetType": "blockchain_dlt",
-          "level": "critical",
-          "payout": "USD $100,000 - USD $500,000",
-          "pocRequired": true
+          "severity": "critical",
+          "rewardModel": "range",
+          "maxReward": 500000,
+          "minReward": 100000,
+          "rewardCalculationPercentage": 0
         },
         {
+          "id": 34616,
           "assetType": "blockchain_dlt",
-          "level": "high",
-          "payout": "USD $50,000 - USD $100,000",
-          "pocRequired": true
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 100000,
+          "minReward": 50000
         },
         {
+          "id": 34617,
           "assetType": "blockchain_dlt",
-          "level": "medium",
-          "payout": "USD $5,000 - USD $25,000",
-          "pocRequired": true
+          "severity": "medium",
+          "rewardModel": "range",
+          "maxReward": 50000,
+          "minReward": 5000
         },
         {
+          "id": 34618,
           "assetType": "blockchain_dlt",
-          "level": "low",
-          "payout": "USD $5,000",
-          "pocRequired": true
+          "severity": "low",
+          "rewardModel": "fixed",
+          "fixedReward": 5000
         }
       ],
       "audits": null,
@@ -187,8 +195,8 @@
       "prioritizedVulnerabilities": "Vulnerabilities are prioritized based on severity and impact.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n\n__Reward Payment Terms__\n\nPayouts are handled by the Firedancer team directly and are denominated in USD. However, payments are made in USDC.",
       "outOfScopeAndRules": ".",
-      "assetsBodyV2": "The Firedancer codebase can be found at https://github.com/firedancer-io/firedancer/tree/main. \n\nDocumentation and further resources can be found on:\n\n- Documentation: [https://firedancer-io.github.io/firedancer/](https://firedancer-io.github.io/firedancer/)\n- Technical education: Technical articles, ReadMe's, whitepaper, etc.\n- [https://github.com/firedancer-io/firedancer/blob/main/README.md](https://github.com/firedancer-io/firedancer/blob/main/README.md)\n- [https://github.com/firedancer-io/firedancer/blob/main/src/disco/README.md](https://github.com/firedancer-io/firedancer/blob/main/src/disco/README.md)\n- All header files contain sufficient documentation about each component's function\n- Developer codebase walkthrough (recorded for the preceding contest): https://youtu.be/KJzZ5QApW2s\n- Non-technical education: introductory videos, protocol summaries, FAQs, etc\n- Solana Docs: https://solana.com/docs\n- How to build and run a Node [https://firedancer-io.github.io/firedancer/guide/getting-started.html](https://firedancer-io.github.io/firedancer/guide/getting-started.html)\n\nThe full Firedancer implementation now exists as a separate binary, but only the Frankendancer validator `fdctl` is in scope for this bug bounty program.\nFindings that apply exclusively to the full Firedancer binary (i.e., code not used by Frankendancer or fdctl) will be treated as informational (insight reports) and are not eligible for bounty rewards.\n\n\nThe Firedancer repository contains code for two validators:\n\n- The latest Firedancer mainnet release, lovingly nicknamed “Frankendancer”, a split between Firedancer and the existing Agave validator written in Rust\n- A full C-only Firedancer, completely replacing the existing Agave validator.\n\n\nThe full Firedancer code is behind a development flag, and findings in code that is only reachable in full Firedancer will be considered informational (aka insight reports).\n\n\nThe Frankendancer validator interfaces with the existing Agave validator written in Rust via an FFI interface. This FFI interface and the modifications to Agave to support such FFI are in scope, but bugs in the Agave validator itself that would impact existing Solana validators should be reported to the Agave bug bounty and are not considered in scope for the contest.\n\n\nThe directory and file listing are provided to help navigate the codebase and determine what is in scope. The ground truth for scope and impact will follow the production binary.",
-      "impactsBody": "Firedancer builds as a single production binary, fdctl. Code linked into and reachable from this binary in the latest Frankendancer release build and branch is in scope, including the primary `fdctl run` command. Code from the consensus, runtime, and other components of the full future Firedancer validator are not in scope. The FFI interface between Frankendancer and Agave is in scope, but bugs in Agave code that exist in the standalone Anza Agave validator are not in scope, and should be reported to Anza. Protocol bugs or design flaws in Solana are not in scope, and are reportable to Anza.\n\nFor cluster-level impact, a theoretical Firedancer-only chain is in scope. For example, while a chain halt is not currently possible on mainnet via a Firedancer-only exploit (since the network includes other validator clients), you may assume a 100% Firedancer validator set and demonstrate impacts such as a chain halt or chain split under those conditions.\n\nThe sandbox and security model are in scope. You may assume an existing RCE within a specific tile, and any findings downstream of that breach—such as a sandbox escape or gaining RCE in the sandbox of a different tile—are considered valid.\n\nHowever, tiles in the Agave address space (e.g., bank, poh, store) are not considered sandboxed. As such, transitions from non-Agave tiles to Agave tiles—for example, going from pack → bank, net → store—do not constitute sandbox escapes and are explicitly out of scope. These tile boundaries do not represent sandbox isolation in the Frankendancer threat model and are based on different trust assumptions.\nThe primary security concern of the validator is defending against untrusted or malicious behavior originating from the network, and limiting damage in the event of RCE. Issues that are purely local to the validator and not remotely exploitable—such as command-line argument or environment variable handling—will be considered out of scope or informational.\n\nThe GUI is in scope. You may assume the GUI’s HTTP port is exposed to the public internet.\nVulnerabilities that involve, are triggered by, or relate to the block engine functionality may be considered valid. However, such findings will typically be assessed at a lower severity level.\n\n**Special Note:** Severities noted by the **“*”** are those that we don’t believe are currently realizable risks with the amount of stake applied to Firedancer when authoring these terms. \n\nHowever, We believe these risks could be realized with more stake applied to Firedancer.  If you find something that realizes these risks, you are encouraged to submit it, and they will be rewarded according to their impact.",
+      "assetsBodyV2": "The Firedancer codebase can be found at https://github.com/firedancer-io/firedancer/tree/main. \n\nDocumentation and further resources can be found at:\n\n- Documentation: [https://firedancer-io.github.io/firedancer/](https://firedancer-io.github.io/firedancer/)\n- Technical education: Technical articles, ReadMe's, whitepaper, etc.\n- [https://github.com/firedancer-io/firedancer/blob/main/README.md](https://github.com/firedancer-io/firedancer/blob/main/README.md)\n- [https://github.com/firedancer-io/firedancer/blob/main/src/disco/README.md](https://github.com/firedancer-io/firedancer/blob/main/src/disco/README.md)\n- All header files contain sufficient documentation about each component's function\n- Developer codebase walkthrough (recorded for the preceding contest): https://youtu.be/KJzZ5QApW2s\n- Non-technical education: introductory videos, protocol summaries, FAQs, etc\n- Solana Docs: https://solana.com/docs\n- How to build and run a Node [https://firedancer-io.github.io/firedancer/guide/getting-started.html](https://firedancer-io.github.io/firedancer/guide/getting-started.html)\n\nThe full Firedancer implementation now exists as a separate binary, but only the Frankendancer validator `fdctl` is in scope for this bug bounty program.\nFindings that apply exclusively to the full Firedancer binary (i.e., code not used by Frankendancer or fdctl) will be treated as informational (insight reports) and are not eligible for bounty rewards.\n\n\nThe Firedancer repository contains code for two validators:\n\n- The latest Firedancer mainnet release, lovingly nicknamed “Frankendancer”, a split between Firedancer and the existing Agave validator written in Rust\n- A full C-only Firedancer, completely replacing the existing Agave validator.\n\n\nThe full Firedancer code is behind a development flag, and findings in code that is only reachable in full Firedancer will be considered informational (aka insight reports).\n\n\nThe Frankendancer validator interfaces with the existing Agave validator written in Rust via an FFI interface. This FFI interface and the modifications to Agave to support such FFI are in scope, but bugs in the Agave validator itself that would impact existing Solana validators should be reported to the Agave bug bounty and are not considered in scope for the contest.\n\n\nThe directory and file listing are provided to help navigate the codebase and determine what is in scope. The ground truth for scope and impact will follow the production binary.",
+      "impactsBody": "Firedancer builds as a single production binary, fdctl. Code linked into and reachable from this binary in the latest Frankendancer release build and branch is in scope, including the primary `fdctl run` command. Code from the consensus, runtime, and other components of the full future Firedancer validator are not in scope. The FFI interface between Frankendancer and Agave is in scope, but bugs in Agave code that exist in the standalone Anza Agave validator are not in scope, and should be reported to Anza. Protocol bugs or design flaws in Solana are not in scope, and are reportable to Anza.\n\nFor cluster-level impact, a theoretical Firedancer-only chain is in scope. For example, while a chain halt is not currently possible on mainnet via a Firedancer-only exploit (since the network includes other validator clients), you may assume a 100% Firedancer validator set and demonstrate impacts such as a chain halt or chain split under those conditions.\n\nThe sandbox and security model are in scope. You may assume an existing RCE within a specific tile, and any findings downstream of that breach—such as a sandbox escape or gaining RCE in the sandbox of a different tile—are considered valid.\n\nHowever, tiles in the Agave address space (e.g., bank, poh, store) are not considered tightly sandboxed. As such, transitions from a tile in the Agave to any other tile are not in-scope. Additionally, the link between pack and bank is trusted and out-of-scope. Regarding severity of inter-tile RCE, we are most interested in starting in a complex tile that is close to input from the network. (e.g. net or quic).\n\nThe primary security concern of the validator is defending against untrusted or malicious behavior originating from the network, and limiting damage in the event of RCE. Issues that are purely local to the validator and not remotely exploitable—such as command-line argument or environment variable handling—will be considered out of scope or informational.\n\nThe GUI is in scope. You may assume the GUI’s HTTP port is exposed to the public internet.\nVulnerabilities that involve, are triggered by, or relate to the block engine functionality may be considered valid. However, such findings will typically be assessed at a lower severity level.\n\n**Special Note:** Severities noted by the **“*”** are those that we don’t believe are currently realizable risks with the amount of stake applied to Firedancer when authoring these terms. \n\nHowever, We believe these risks could be realized with more stake applied to Firedancer.  If you find something that realizes these risks, you are encouraged to submit it, and they will be rewarded according to their impact.",
       "immunefiStandard": true,
       "tags": {
         "general": [
@@ -277,7 +285,7 @@
       ],
       "programDocumentations": [],
       "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
+      "newProgramRewardsEnabled": true,
       "findingsUrl": null,
       "premiumTriaging": false
     },
