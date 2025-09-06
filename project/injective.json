@@ -177,16 +177,10 @@
       ],
       "impacts": [
         {
-          "id": 27,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Temporary freezing of funds"
-        },
-        {
-          "id": 1,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Network not being able to confirm new transactions (total network shutdown)"
+          "id": 52,
+          "type": "websites_and_applications",
+          "severity": "medium",
+          "title": "Redirecting users to malicious websites (open redirect)"
         },
         {
           "id": 3,
@@ -369,10 +363,10 @@
           "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:\n- Reflected HTML Injection\n- Loading external site data"
         },
         {
-          "id": 52,
-          "type": "websites_and_applications",
-          "severity": "medium",
-          "title": "Redirecting users to malicious websites (open redirect)"
+          "id": 1,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Network not being able to confirm new transactions (total network shutdown)"
         },
         {
           "id": 53,
@@ -399,16 +393,16 @@
           "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
         },
         {
-          "id": 5615,
-          "type": "blockchain_dlt",
-          "severity": "medium",
-          "title": "RPC API crash affecting programs with greater than or equal to 25% of the market capitalization on top of the respective layer"
-        },
-        {
           "id": 5655,
           "type": "blockchain_dlt",
           "severity": "high",
           "title": "Permanent freezing of funds (fix requires hardfork)"
+        },
+        {
+          "id": 27,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Temporary freezing of funds"
         },
         {
           "id": 5656,
@@ -421,6 +415,18 @@
           "type": "blockchain_dlt",
           "severity": "low",
           "title": "A bug in the respective layer 0/1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk"
+        },
+        {
+          "id": 5700,
+          "type": "blockchain_dlt",
+          "severity": "medium",
+          "title": "RPC API crashes leading to consensus failures or halted block progression"
+        },
+        {
+          "id": 5701,
+          "type": "blockchain_dlt",
+          "severity": "medium",
+          "title": "Attack vectors leading to consensus failures or halted block progression"
         }
       ],
       "programOverview": "Injective is a lightning fast interoperable layer one optimized for building unmatched Web3 finance applications. Injective is incubated by Binance and is backed by prominent investors such as Jump Crypto, Pantera and Mark Cuban.\n\nFor more information about Injective, please visit https://injective.com/\n\nInjective provides rewards in stablecoins, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below.\n\n\n__Primacy of Impact vs Primacy of Rules__\n\nInjective adheres to the Primacy of Impact for the following impacts:\n- Blockchain/DLT : Critical\n- Smart Contract : Critical\n- Web/App : Critical\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact) \n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under \nPrimacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n\n- Vulnerabilities found in vendor systems such as Cosmos-SDK, IBC, CometBFT and CosmWasm fall outside this policy and should be reported to the respective vendor following their disclosure policy (if any)",
