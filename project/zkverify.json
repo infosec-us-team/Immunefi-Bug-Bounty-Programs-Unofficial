@@ -9,11 +9,11 @@
       "logo": "https://qn5bmgziiocgawpp.public.blob.vercel-storage.com/43562-XsQidDmPxFzfkmVAQWyt_-QWtGz8DGV5zcFHPyca9xbsMLyiimNP.png",
       "launchDate": "2025-09-05T12:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-09-05T17:44:25.962Z",
+      "updatedDate": "2025-09-08T23:45:00.622Z",
       "kyc": true,
       "rewards": [
         {
-          "id": 34992,
+          "id": 35061,
           "assetType": "blockchain_dlt",
           "severity": "critical",
           "rewardModel": "range",
@@ -22,7 +22,7 @@
           "rewardCalculationPercentage": 5
         },
         {
-          "id": 34993,
+          "id": 35062,
           "assetType": "blockchain_dlt",
           "severity": "high",
           "rewardModel": "range",
@@ -30,33 +30,29 @@
           "minReward": 5000
         },
         {
-          "id": 34994,
+          "id": 35063,
           "assetType": "websites_and_applications",
           "severity": "critical",
           "rewardModel": "range",
           "maxReward": 10000,
-          "minReward": 7500,
-          "otherImpactMaxReward": 0
-        },
-        {
-          "id": 34995,
-          "assetType": "websites_and_applications",
-          "severity": "high",
-          "rewardModel": "fixed",
-          "fixedReward": 3000
+          "minReward": 5000
         }
       ],
-      "audits": null,
-      "assets": [
+      "audits": [
         {
-          "id": "xQ1XOxS04wfJUd8Vnjyrj",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/zkVerify",
-          "description": null,
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-09-05T16:00:16.244Z"
+          "id": "2QWAvo8GYue9yTR4Jpf87P",
+          "url": "https://github.com/trailofbits/publications/blob/master/reviews/2025-02-zkverify-foundation-blockchain-securityreview.pdf",
+          "auditor": "Trail of Bits",
+          "date": "2025-02-06T05:00:00.000Z"
         },
+        {
+          "id": "1Bww5WFkkdebNNJRttOKGZ",
+          "url": "https://github.com/srlabs/audit-reports/blob/main/Polkadot/SRL-zkVerify_baseline_assurance-report-2025.pdf",
+          "auditor": "SRLabs",
+          "date": "2025-09-03T04:00:00.000Z"
+        }
+      ],
+      "assets": [
         {
           "id": "2U2yI9GVNHZfk152xBPntE",
           "type": "websites_and_applications",
@@ -65,6 +61,15 @@
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
           "addedAt": "2025-09-05T16:00:49.005Z"
+        },
+        {
+          "id": "xQ1XOxS04wfJUd8Vnjyrj",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/zkVerify",
+          "description": null,
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2025-09-05T16:00:16.244Z"
         }
       ],
       "impacts": [
@@ -109,24 +114,6 @@
           "type": "websites_and_applications",
           "severity": "critical",
           "title": "Retrieve sensitive data/files from a running server, such as:\n- /etc/shadow\n- database passwords\n- blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
-        },
-        {
-          "id": 37,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Taking down the application/website"
-        },
-        {
-          "id": 47,
-          "type": "websites_and_applications",
-          "severity": "high",
-          "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Email\n- Password of the victim etc."
-        },
-        {
-          "id": 49,
-          "type": "websites_and_applications",
-          "severity": "high",
-          "title": "Subdomain takeover without already-connected wallet interaction"
         }
       ],
       "programOverview": "zkVerify allows modular blockchain networks to offload the computationally heavy and expensive process of proof verification, enabling them to focus on their primary functions and stay ahead of their competition.\n\nThis modular approach not only streamlines operations but also significantly boosts overall network efficiency.",
@@ -139,7 +126,7 @@
       "tags": {
         "general": [
           "KYC Required",
-          "PoC Not Required",
+          "PoC Required",
           "PoC Not Required"
         ],
         "productType": [
