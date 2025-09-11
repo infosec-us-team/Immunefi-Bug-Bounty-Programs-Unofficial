@@ -9,11 +9,11 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2XQ4IvyqIZmE4ZUHl7vs01/8eccb04dee97cd402d3083997b8785dc/Logomark_Black_BG__1_.png",
       "launchDate": "2023-07-11T14:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-03-05T05:28:08.339Z",
+      "updatedDate": "2025-09-10T15:39:25.951Z",
       "kyc": true,
       "rewards": [
         {
-          "id": 14529,
+          "id": 35153,
           "assetType": "smart_contract",
           "severity": "critical",
           "rewardModel": "fixed",
@@ -21,14 +21,14 @@
           "fixedReward": 100000
         },
         {
-          "id": 14530,
+          "id": 35154,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "fixed",
           "fixedReward": 5000
         },
         {
-          "id": 14531,
+          "id": 35155,
           "assetType": "smart_contract",
           "severity": "low",
           "rewardModel": "fixed",
@@ -56,13 +56,22 @@
           "addedAt": "2023-07-11T14:00:00.000Z"
         },
         {
-          "id": "2LZiznx8avUnI6awctUeSM",
+          "id": "6Q0CDCPsGM3tUlA5NgLIAf",
           "type": "smart_contract",
-          "url": "https://immunefi.com",
-          "description": "Primacy of Impact",
-          "isPrimacyOfImpact": true,
+          "url": "https://github.com/Consensys/linea-monorepo/blob/a83412e247b7d352b905c906271138e97c1ee5a4/contracts/contracts/messageService/l2/L2MessageService.sol",
+          "description": "L2MessageService.sol",
+          "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-10-05T15:29:08.793Z"
+          "addedAt": "2025-09-10T15:22:22.817Z"
+        },
+        {
+          "id": "1FPzD4dotx57KpWJxWMQzZ",
+          "type": "smart_contract",
+          "url": "https://github.com/Consensys/linea-monorepo/blob/a83412e247b7d352b905c906271138e97c1ee5a4/contracts/contracts/tokenBridge/TokenBridge.sol",
+          "description": "TokenBridge.sol",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2025-09-10T15:22:40.709Z"
         }
       ],
       "impacts": [
@@ -101,7 +110,7 @@
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below.\n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks or attacks stemming from the same root cause, for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Previous Audits__\n\nConsensys has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n\n__1st Audit Round__\n\n__Diligence:__\n\n- Plonk Verifier: [https://consensys.io/diligence/audits/2023/06/linea-plonk-verifier/](https://consensys.io/diligence/audits/2023/06/linea-plonk-verifier/)\n- Message Service & Rollup: [https://consensys.io/diligence/audits/2023/06/linea-message-service/](https://consensys.io/diligence/audits/2023/06/linea-message-service/)\n- Canonical Token Bridge:\n[https://consensys.io/diligence/audits/2023/06/linea-canonical-token-bridge/](https://consensys.io/diligence/audits/2023/06/linea-canonical-token-bridge/)\n\n__Open Zeppelin:__ \n\n  - Linea Bridge Audit: https://blog.openzeppelin.com/linea-bridge-audit-1\n  - Linea Verifier Audit: https://blog.openzeppelin.com/linea-verifier-audit-1 \n\n__2nd Audit Round__\n\n__Diligence:__\n\n- Proof aggregation, data compression and message service updates audit: [https://consensys.io/diligence/audits/2024/01/linea-contracts-update/](https://consensys.io/diligence/audits/2024/01/linea-contracts-update/)\n\n__Open Zeppelin:__ \n\n- Proof aggregation, data compression and message service updates audit: [https://blog.openzeppelin.com/linea-v2-audit](https://blog.openzeppelin.com/linea-v2-audit)\n\n__3rd Audit Round__\n\n__Open Zeppelin__ \n- Blob submission audit: [https://blog.openzeppelin.com/linea-blob-submission-audit](https://blog.openzeppelin.com/linea-blob-submission-audit) \n\n__4th Audit Round__\n\n__Open Zeppelin__\n- Gas optimization and token bridge update audit: [https://blog.openzeppelin.com/linea-gas-optimizations-audit](https://blog.openzeppelin.com/linea-gas-optimizations-audit)  \n\n__Cyfrin__ \n- Full codebase audit including recent gas optimizations and TokenBridge updates: [https://github.com/Cyfrin/cyfrin-audit-reports/blob/main/reports/2024-05-24-cyfrin-linea-v2.0.pdf](https://github.com/Cyfrin/cyfrin-audit-reports/blob/main/reports/2024-05-24-cyfrin-linea-v2.0.pdf) \n\n__5th Audit Round (latest)__\n\n__Diligence__\n- LineaRollup, L2MessageService and TokenBridge Granular Role Updates: https://diligence.consensys.io/audits/2024/12/linea-rollup-update/\n\n__OpenZeppelin__\n- LineaRollup, L2MessageService and TokenBridge Granular Role Updates: https://blog.openzeppelin.com/linearollup-and-tokenbridge-role-upgrade\n\n__Cyfrin__\n- LineaRollup, L2MessageService and TokenBridge Granular Role Updates: https://github.com/Cyfrin/cyfrin-audit-reports/blob/642b409c207d0e31679467480c3d9b8797b98696/reports/2025-01-06-cyfrin-linea-v2.2.pdf\n\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract - Critical\n- Smart Contract - High\n- Smart Contract - Medium\n- Smart Contract - Low\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the ConsenSys team directly and are denominated in USDC.",
       "outOfScopeAndRules": null,
-      "assetsBodyV2": "All smart contract code of Linea can be found at https://github.com/Consensys/linea-monorepo/tree/a83412e247b7d352b905c906271138e97c1ee5a/ . Documentation for the assets provided in the table can be found at https://docs.linea.build/\n\nOther helpful links include:\n- Infura docs - [https://docs.infura.io/networks/linea](https://docs.infura.io/networks/linea)\n- RPC [https://linea-sepolia.infura.io/v3/](https://linea-sepolia.infura.io/v3/)",
+      "assetsBodyV2": null,
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -109,8 +118,7 @@
           "Immunefi Standard",
           "KYC Required",
           "PoC Required",
-          "PoC Not Required",
-          "Primacy of Impact"
+          "PoC Not Required"
         ],
         "productType": [
           "L2"
@@ -177,10 +185,16 @@
       "eligibilityCriteriaAdditionalInformation": null,
       "programCodebases": [
         {
-          "id": 107,
+          "id": 392,
           "title": "Linea Codebase",
           "description": "Program Codebase",
-          "url": "https://github.com/Consensys/linea-contracts/tree/b17e7c79b5647e47c175c6367dea30c3f1c66738/contracts"
+          "url": "https://github.com/Consensys/linea-monorepo/tree/a83412e247b7d352b905c906271138e97c1ee5a4"
+        },
+        {
+          "id": 393,
+          "title": "Linea Codebase",
+          "description": "Program Codebase",
+          "url": "https://github.com/Consensys/linea-monorepo/releases/tag/contract-audit-2025-01-06 ."
         }
       ],
       "programDocumentations": [
@@ -189,6 +203,18 @@
           "title": "Linea Documentation",
           "description": "Program Documentation",
           "url": "https://docs.linea.build/](https://docs.linea.build/"
+        },
+        {
+          "id": 294,
+          "title": "Infura docs",
+          "description": "Program Documentation",
+          "url": "https://docs.infura.io/networks/linea"
+        },
+        {
+          "id": 295,
+          "title": "RPC",
+          "description": "Program Documentation",
+          "url": "https://linea-goerli.infura.io/v3/"
         }
       ],
       "primacy": "primacy_of_impact",
