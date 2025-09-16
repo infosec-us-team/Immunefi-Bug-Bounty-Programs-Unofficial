@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/OBgJTywLzana1ALxCFcc3/85ca6f5463dc82a51c99ffa0cde96553/MoneroOxide.png",
       "launchDate": "2025-09-09T14:58:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-09-11T08:44:17.802Z",
+      "updatedDate": "2025-09-15T08:49:14.846Z",
       "kyc": false,
       "rewards": [
         {
@@ -63,10 +63,22 @@
       ],
       "impacts": [
         {
+          "id": 5720,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Incompatibilities with the targeted Monero consensus protocol which would require reimplementing notable sections of monero-oxide"
+        },
+        {
           "id": 5716,
           "type": "blockchain_dlt",
           "severity": "low",
           "title": "Non-constant-time implementation with regards to secret data"
+        },
+        {
+          "id": 5717,
+          "type": "blockchain_dlt",
+          "severity": "low",
+          "title": "Undocumented panic reachable from a public API"
         },
         {
           "id": 5718,
@@ -75,10 +87,10 @@
           "title": "Unintended, undocumented recovery of private spend keys (or private spend key shares)"
         },
         {
-          "id": 5717,
+          "id": 5719,
           "type": "blockchain_dlt",
           "severity": "low",
-          "title": "Undocumented panic reachable from a public API"
+          "title": "Incompatibilities with the targeted Monero wallet protocol which would require reimplementing notable sections of monero-oxide"
         },
         {
           "id": 5703,
@@ -103,12 +115,6 @@
           "type": "blockchain_dlt",
           "severity": "high",
           "title": "Incorrect/incomplete cryptographic formula"
-        },
-        {
-          "id": 5707,
-          "type": "blockchain_dlt",
-          "severity": "medium",
-          "title": "Incompatibilities with the targeted Monero protocol which would require reimplementing notable sections of monero-oxide"
         },
         {
           "id": 5708,
@@ -198,7 +204,10 @@
       "features": [],
       "premiumTriaging": false,
       "isSafeHarborActive": false,
-      "performanceMetrics": {}
+      "performanceMetrics": {
+        "medianResponseTimeInMinutes": 32,
+        "totalPaidReports": 0
+      }
     },
     "metaData": {
       "title": "monero-oxide Bug Bounties",
