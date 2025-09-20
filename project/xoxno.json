@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5jY3HNj6JkKgJG8eVfrILY/bd62c19d04421265d5be2ad5ad4684f9/bTA7cvxE_400x400.png",
       "launchDate": "2025-09-16T08:00:31.000Z",
       "endDate": null,
-      "updatedDate": "2025-09-17T14:58:56.059Z",
+      "updatedDate": "2025-09-19T13:59:28.525Z",
       "kyc": true,
       "rewards": [
         {
@@ -49,24 +49,6 @@
       "audits": null,
       "assets": [
         {
-          "id": "6I49YgN4dPDMoPEzjGgahQ",
-          "type": "smart_contract",
-          "url": "https://github.com/XOXNO/rs-lending/tree/master/controller/src",
-          "description": "Controller",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-09-16T08:00:39.857Z"
-        },
-        {
-          "id": "Vo7Zh2qAINPYTKwcD3faQ",
-          "type": "smart_contract",
-          "url": "https://github.com/XOXNO/rs-lending/tree/master/liquidity_layer",
-          "description": "Liquidity Layer Template",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-09-16T08:00:55.767Z"
-        },
-        {
           "id": "4GD8yyZFTv5IdcRu48ytwP",
           "type": "smart_contract",
           "url": "https://github.com/XOXNO/rs-lending/tree/master/common",
@@ -83,9 +65,45 @@
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
           "addedAt": "2025-09-16T08:01:26.670Z"
+        },
+        {
+          "id": "6I49YgN4dPDMoPEzjGgahQ",
+          "type": "smart_contract",
+          "url": "https://github.com/XOXNO/rs-lending/tree/master/controller/src",
+          "description": "Controller",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2025-09-16T08:00:39.857Z"
+        },
+        {
+          "id": "Vo7Zh2qAINPYTKwcD3faQ",
+          "type": "smart_contract",
+          "url": "https://github.com/XOXNO/rs-lending/tree/master/liquidity_layer",
+          "description": "Liquidity Layer Template",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2025-09-16T08:00:55.767Z"
         }
       ],
       "impacts": [
+        {
+          "id": 5723,
+          "type": "smart_contract",
+          "severity": "low",
+          "title": "Imprecision on accounting (balances, rates)"
+        },
+        {
+          "id": 5724,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Manipulation of interest rates (supply or borrow) with mechanisms not intended or limited by design"
+        },
+        {
+          "id": 5725,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Loss of rewards-to-be-accrued"
+        },
         {
           "id": 14,
           "type": "smart_contract",
@@ -183,34 +201,10 @@
           "title": "Smart contract unable to operate due to lack of token funds"
         },
         {
-          "id": 30,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Block stuffing"
-        },
-        {
           "id": 31,
           "type": "smart_contract",
           "severity": "medium",
           "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-        },
-        {
-          "id": 32,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Theft of gas"
-        },
-        {
-          "id": 33,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Unbounded gas consumption"
-        },
-        {
-          "id": 34,
-          "type": "smart_contract",
-          "severity": "low",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value"
         }
       ],
       "programOverview": "XOXNO is an innovative DeFi protocol deployed on MultiversX, our suite of protocols combines a liquid staking contract for $EGLD as well as the newly deployed lending protocol.\n\nWe have started as an NFT marketplace and slowly leveraged our infrastructure into merging NFTs and DeFi via tokenization of lending accounts\nFor more information about XOXNO, please visit https://xoxno.com/\n\nXOXNO provides rewards in USDC on ETH, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__\n\nXOXNO will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nXOXNO adheres to **category 2 - Notice Required**. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nXOXNO adheres to the Primacy of Impact for the following impacts:\n\n- Smart Contract / Critical\n- Smart Contract / High\n- Smart Contract / Medium\n- Smart Contract / Low\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.",
@@ -226,13 +220,23 @@
           "PoC Required",
           "PoC Not Required"
         ],
-        "productType": [],
-        "projectType": [],
-        "ecosystem": [],
+        "productType": [
+          "Lending",
+          "Liquid Staking",
+          "NFT Marketplace"
+        ],
+        "projectType": [
+          "Defi"
+        ],
+        "ecosystem": [
+          "MultiversX"
+        ],
         "programType": [
           "Smart Contract"
         ],
-        "language": [],
+        "language": [
+          "Rust"
+        ],
         "featured": [
           "Launched Recently"
         ]
