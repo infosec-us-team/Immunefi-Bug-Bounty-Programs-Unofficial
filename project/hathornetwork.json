@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5jW460UDYEbPDo4PZAOuZE/dd602e17d4ff01851c727c387eeecc5a/KEBPir98_400x400.jpg",
       "launchDate": "2023-03-15T19:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-12-12T18:24:11.209Z",
+      "updatedDate": "2025-09-25T00:00:34.632Z",
       "kyc": true,
       "rewards": [
         {
@@ -60,22 +60,14 @@
       "audits": null,
       "assets": [
         {
-          "id": "7H0YCXhiS5eqVsHkj97x4u",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/HathorNetwork/hathor-core",
-          "description": "Blockchain/DLT",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2023-03-15T19:00:00.000Z"
-        },
-        {
-          "id": "7BhJhDGfSbfYOq16jj0BiE",
+          "id": "1TaBnImYgTebDlQuPQWOph",
           "type": "websites_and_applications",
-          "url": "https://github.com/HathorNetwork/hathor-wallet-lib",
-          "description": "wallet-lib",
+          "url": "https://github.com/HathorNetwork/hathor-wallet",
+          "description": "Desktop wallet",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-03-15T19:00:00.000Z"
+          "addedAt": "2023-03-15T19:00:00.000Z",
+          "fund": 0
         },
         {
           "id": "1azUEn0aB0KceObUYb2jOy",
@@ -84,16 +76,28 @@
           "description": "Mobile wallet",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-03-15T19:00:00.000Z"
+          "addedAt": "2023-03-15T19:00:00.000Z",
+          "fund": 0
         },
         {
-          "id": "1TaBnImYgTebDlQuPQWOph",
+          "id": "7BhJhDGfSbfYOq16jj0BiE",
           "type": "websites_and_applications",
-          "url": "https://github.com/HathorNetwork/hathor-wallet",
-          "description": "Desktop wallet",
+          "url": "https://github.com/HathorNetwork/hathor-wallet-lib",
+          "description": "wallet-lib",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-03-15T19:00:00.000Z"
+          "addedAt": "2023-03-15T19:00:00.000Z",
+          "fund": 0
+        },
+        {
+          "id": "7H0YCXhiS5eqVsHkj97x4u",
+          "type": "blockchain_dlt",
+          "url": "https://github.com/HathorNetwork/hathor-core",
+          "description": "Blockchain/DLT",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2023-03-15T19:00:00.000Z",
+          "fund": 0
         },
         {
           "id": "7zSkdE3D8FGCq0y6nCazhD",
@@ -102,7 +106,8 @@
           "description": "Headless wallet",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2023-03-15T19:00:00.000Z"
+          "addedAt": "2023-03-15T19:00:00.000Z",
+          "fund": 0
         }
       ],
       "impacts": [
@@ -201,7 +206,7 @@
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the  [Immunefi Vulnerability Severity Classification System V2.3.](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/) This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported. \n\nAll Blockchain/DLT and Web/App bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required. Bug reports are required to include a runnable PoC in order to prove impact. Exceptions may be made in cases where the vulnerability is objectively evident from simply mentioning the vulnerability and where it exists. However, the bug reporter may be required to provide a PoC at any point in time.\n\nHathor Labs requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed is a government ID and proof of address.\n\nUnlike other bug bounty programs on Immunefi, all bug report submissions, including associated vulnerabilities, become the exclusive property of Hathor Labs. By making a submission to this program and in consideration for a bounty, the bug submitter conveys all ownership rights, titles, and interests in the bug report to Hathor Labs. Thus, the final decision on whether a postmortem will be written is at the sole discretion of Hathor Labs.\n\nPayouts are handled by the __Hathor Labs__ team directly and are denominated in USD. However, payouts are done in __HTR__.",
       "outOfScopeAndRules": ".",
-      "assetsBodyV2": "Only the latest release is in scope for Blockchain/DLT and Web/App assets. You can access the latest release for a repository by adding \"releases/latest\" to the end of a repository's URL.\n\nNever run tests on Hathor's production environments such as the mainnet. If you believe your attack would only work in our production environment, get in touch with us at security@hathor.network. \n\nAll config and test files are considered as out-of-scope of this bug bounty program. \n\nHathor-core/hathor/wallet is out-of-scope.  [https://github.com/HathorNetwork/hathor-core/tree/master/hathor/wallet](https://github.com/HathorNetwork/hathor-core/tree/master/hathor/wallet)\n\nAll code of Hathor Network can be found at [https://github.com/HathorNetwork.](https://github.com/HathorNetwork) However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nDocumentation and instruction for PoC can be found here:\n- [https://hathor.gitbook.io/hathor/](https://hathor.gitbook.io/hathor/)\n- [https://github.com/HathorNetwork/rfcs/blob/master/text/0033-private-network-guide.md](https://github.com/HathorNetwork/rfcs/blob/master/text/0033-private-network-guide.md)",
+      "assetsBodyV2": "Only the latest release is in scope for Blockchain/DLT and Web/App assets. You can access the latest release for a repository by adding \"releases/latest\" to the end of a repository's URL.\n\nNever run tests on Hathor's production environments such as the mainnet. If you believe your attack would only work in our production environment, get in touch with us at security@hathor.network. \n\nAll config and test files are considered as out-of-scope of this bug bounty program. \n\nHathor-core/hathor/wallet is out-of-scope.  [https://github.com/HathorNetwork/hathor-core/tree/master/hathor/wallet](https://github.com/HathorNetwork/hathor-core/tree/master/hathor/wallet)\n\nhathor-core/tree/master/hathor/nanocontracts is out-of-scope. [https://github.com/HathorNetwork/hathor-core/tree/master/hathor/nanocontracts](https://github.com/HathorNetwork/hathor-core/tree/master/hathor/nanocontracts)\n\nAll code of Hathor Network can be found at [https://github.com/HathorNetwork.](https://github.com/HathorNetwork) However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nDocumentation and instruction for PoC can be found here:\n- [https://hathor.gitbook.io/hathor/](https://hathor.gitbook.io/hathor/)\n- [https://github.com/HathorNetwork/rfcs/blob/master/text/0033-private-network-guide.md](https://github.com/HathorNetwork/rfcs/blob/master/text/0033-private-network-guide.md)",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -266,9 +271,9 @@
           }
         ]
       },
-      "websiteUrl": null,
+      "websiteUrl": "https://hathor.network/",
       "description": "Hathor is a digital platform for financial transactions and contracts with a unique combination of high scalability and high decentralization. It creates the perfect environment for multiple use cases where scale, efficiency, long-term security, and censorship-resistance through network distribution combined are needed or can drastically cut current costs and bureaucracy.",
-      "githubUrl": null,
+      "githubUrl": "https://github.com/HathorNetwork",
       "feasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
       "prohibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
       "responsiblePublicationCategory": null,
@@ -282,7 +287,7 @@
       "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
       "customOutOfScopeInformation": null,
       "customProhibitedActivities": [],
-      "rewardsTokenNetwork": "Ethereum",
+      "rewardsTokenNetwork": "Hathor Network",
       "rewardsToken": "HTR",
       "eligibilityCriteria": [],
       "eligibilityCriteriaAdditionalInformation": null,
