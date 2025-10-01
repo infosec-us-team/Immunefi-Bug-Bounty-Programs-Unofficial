@@ -5,46 +5,46 @@
       "id": "pushprotocol",
       "slug": "pushprotocol",
       "project": "Push Protocol",
-      "maxBounty": 100000,
+      "maxBounty": 20000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4oEKDaXV0fcVaIbKKVllob/23d26db5de8b4405e0876b3b0a9c8c65/Push_protocol_logo.png",
       "launchDate": "2023-06-21T14:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2024-11-14T13:23:18.927Z",
+      "updatedDate": "2025-09-30T08:48:01.458Z",
       "kyc": true,
       "rewards": [
         {
-          "id": 5315,
-          "assetType": "smart_contract",
-          "severity": "high",
-          "rewardModel": "range",
-          "maxReward": 50000,
-          "minReward": 10000
-        },
-        {
-          "id": 5316,
-          "assetType": "smart_contract",
-          "severity": "medium",
-          "rewardModel": "fixed",
-          "fixedReward": 1500
-        },
-        {
-          "id": 5317,
-          "assetType": "smart_contract",
-          "severity": "low",
-          "rewardModel": "fixed",
-          "fixedReward": 1000
-        },
-        {
-          "id": 8221,
+          "id": 35419,
           "assetType": "smart_contract",
           "severity": "critical",
           "rewardModel": "range",
-          "maxReward": 100000,
-          "minReward": 80000,
+          "maxReward": 20000,
+          "minReward": 2000,
           "rewardCalculationPercentage": 10
+        },
+        {
+          "id": 35420,
+          "assetType": "smart_contract",
+          "severity": "high",
+          "rewardModel": "range",
+          "maxReward": 2000,
+          "minReward": 1000
+        },
+        {
+          "id": 35421,
+          "assetType": "smart_contract",
+          "severity": "medium",
+          "rewardModel": "fixed",
+          "fixedReward": 1000
         }
       ],
-      "audits": null,
+      "audits": [
+        {
+          "id": "3bMcBB1Ef1sxFPGRKP1HKL",
+          "url": "https://comms.push.org/docs/notifications/push-smart-contracts/security-audits/",
+          "auditor": "Chainsafe",
+          "date": "2021-03-30T20:00:00.000Z"
+        }
+      ],
       "assets": [
         {
           "id": "1Z39EvPMmhONwlnPD6MnSq",
@@ -71,59 +71,9 @@
             "usdValue": 0,
             "addressesCount": 1
           }
-        },
-        {
-          "id": "3mKMEVr12UAp30QJCuyKn3",
-          "type": "smart_contract",
-          "url": "https://github.com/ethereum-push-notification-service/push-smart-contracts/blob/bug_bounty_dev/contracts/EPNSCore/EPNSCoreStorageV1_5.sol",
-          "description": "EPNSCoreStorageV1_5.sol",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2023-06-21T14:00:00.000Z",
-          "fund": {
-            "usdValue": 0,
-            "addressesCount": 1
-          }
-        },
-        {
-          "id": "2raULG7yRNhSBOTprXHo3v",
-          "type": "smart_contract",
-          "url": "https://immunefi.com",
-          "description": "Primacy of Impact",
-          "isPrimacyOfImpact": true,
-          "isSafeHarbor": null,
-          "addedAt": "2023-10-05T15:28:10.012Z",
-          "fund": {
-            "usdValue": 0,
-            "addressesCount": 1
-          }
         }
       ],
       "impacts": [
-        {
-          "id": 34,
-          "type": "smart_contract",
-          "severity": "low",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value"
-        },
-        {
-          "id": 23,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Theft of unclaimed yield"
-        },
-        {
-          "id": 25,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Permanent freezing of unclaimed yield"
-        },
-        {
-          "id": 27,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Temporary freezing of funds"
-        },
         {
           "id": 4299,
           "type": "smart_contract",
@@ -137,28 +87,22 @@
           "title": "User/Stakers being able to harvest without staking for at least 1 complete epoch."
         },
         {
-          "id": 29,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Smart contract unable to operate due to lack of token funds"
-        },
-        {
-          "id": 31,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-        },
-        {
-          "id": 33,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Unbounded gas consumption"
-        },
-        {
           "id": 4301,
           "type": "smart_contract",
           "severity": "medium",
           "title": "Unfair reward distribution between users with equal staking details like token weight, stake duration etc."
+        },
+        {
+          "id": 4302,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Drain of Funds from contract"
+        },
+        {
+          "id": 4303,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Loss of funds due to bridging of tokens"
         },
         {
           "id": 15,
@@ -173,21 +117,15 @@
           "title": "Permanent freezing of funds"
         },
         {
-          "id": 4302,
+          "id": 29,
           "type": "smart_contract",
-          "severity": "critical",
-          "title": "Drain of Funds from contract"
-        },
-        {
-          "id": 4303,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Loss of funds due to bridging of tokens"
+          "severity": "medium",
+          "title": "Smart contract unable to operate due to lack of token funds"
         }
       ],
       "programOverview": "Push Protocol is the communication protocol of web3. Push enables cross-chain notifications (on chain / off chain), messaging, video for dapps, wallets, and services tied to wallet addresses in an open, gasless, and platform-agnostic fashion. The open communication layer allows any crypto wallet / frontend to tap into the network and get the communication across.\n\nFor more information about Push Protocol, please visit [https://push.org/.](https://push.org/) \n\nPush Protocol provides rewards in PUSH. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__\n\nThe provision of KYC is required to receive a reward for this bug bounty program where the following information will be required to be provided:\n\n- Push Protocol requires a signup on [https://epns.synaps.me/signup](https://epns.synaps.me/signup)\n\nKYC information is only required on confirmation of the validity of a bug report.   \n\n\n__Primacy of Impact vs Primacy of Rules__\n\nPush Protocol adheres to the Primacy of Impact for the following severity levels:\n\n- Smart Contracts, Critical Severity Level\n- Smart Contracts, High Severity Level\n- Smart Contracts, Medium Severity Level\n- Smart Contracts, Low Severity Level\n\nIf a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTestnet and mock files are not covered under the Primacy of Impact. \n\nAll other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n\n__Immunefi Standard Badge__\n\nPush Protocol has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-), which is given to projects that adhere to our best practices. \n\n__Invoicing Information__\n\nIf needed by the security researcher, Push Protocol is able to provide the necessary information for the proper issuance of an invoice. This includes:\n- Legal Entity Name\n- Registered Address",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nFor Critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 100,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 80,000 is to be rewarded in order to incentivize security researchers against withholding a bug report. \n\nFor High Smart Contract bugs, the reward amount is 100% of the funds directly affected up to a maximum of USD 50,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 10,000 is to be rewarded in order to incentivize security researchers against withholding a bug report.   \n\n__Restrictions on Security Researcher Eligibility__\n\nSecurity researchers who fall under any of the following are ineligible for a reward\n- Any country or government or international authority, including the US Department of the Treasury’s Office of Foreign Assets Control (OFAC), the US Department of State, the United Nations Security Council, the European Union, Her Majesty's Treasury, the Hong Kong Monetary Authority or the Monetary Authority of Singapore.\n\n__Previous Audits__\n\nPush Protocol has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [Push Protocol V1 Audit Report](https://github.com/ChainSafe/audits/blob/main/EPNS/epns-protocol-10-2021.pdf)\n- [Push Protocol V1.5 Audit Report](https://github.com/ChainSafe/audits/blob/main/EPNS/epns-protocol-11-2022.pdf)\n- [Push Protocol V2 Audit Report](https://github.com/ChainSafe/audits/blob/main/EPNS/epns-protocol-05-2023.pdf)\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n\n- Smart Contract, Critical Severity Level\n- Smart Contract, High Severity Level\n- Smart Contract, Medium Severity Level\n- Smart Contract, Low Severity Level\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules). Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Push Protocol team directly and are denominated in USD. However, payments are done in PUSH.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability. For avoidance of doubt, if the reward amount is USD 5 000 and the average price is USD 1.75 per token, then the reward will be 2857.142857 units of that token.",
+      "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nFor Critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 20,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 2,000 is to be rewarded in order to incentivize security researchers against withholding a bug report. \n\nFor High Smart Contract bugs, the reward amount is 100% of the funds directly affected up to a maximum of USD 2,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 1,000 is to be rewarded in order to incentivize security researchers against withholding a bug report.   \n\n__Restrictions on Security Researcher Eligibility__\n\nSecurity researchers who fall under any of the following are ineligible for a reward\n- Any country or government or international authority, including the US Department of the Treasury’s Office of Foreign Assets Control (OFAC), the US Department of State, the United Nations Security Council, the European Union, Her Majesty's Treasury, the Hong Kong Monetary Authority or the Monetary Authority of Singapore.\n\n__Previous Audits__\n\nPush Protocol has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [Push Protocol V1 Audit Report](https://github.com/ChainSafe/audits/blob/main/EPNS/epns-protocol-10-2021.pdf)\n- [Push Protocol V1.5 Audit Report](https://github.com/ChainSafe/audits/blob/main/EPNS/epns-protocol-11-2022.pdf)\n- [Push Protocol V2 Audit Report](https://github.com/ChainSafe/audits/blob/main/EPNS/epns-protocol-05-2023.pdf)\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n\n- Smart Contract, Critical Severity Level\n- Smart Contract, High Severity Level\n- Smart Contract, Medium Severity Level\n- Smart Contract, Low Severity Level\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules). Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Push Protocol team directly and are denominated in USD. However, payments are done in PUSH.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability. For avoidance of doubt, if the reward amount is USD 5 000 and the average price is USD 1.75 per token, then the reward will be 2857.142857 units of that token.",
       "outOfScopeAndRules": null,
       "assetsBodyV2": null,
       "impactsBody": "Other helpful links include:\n- Push Smart Contracts - [https://docs.push.org/developers/developer-tooling/push-smart-contracts.](https://docs.push.org/developers/developer-tooling/push-smart-contracts)",
@@ -197,12 +135,10 @@
           "Immunefi Standard",
           "KYC Required",
           "PoC Required",
-          "PoC Not Required",
-          "Primacy of Impact"
+          "PoC Not Required"
         ],
         "productType": [
-          "DAO",
-          "Services"
+          "Staking"
         ],
         "projectType": [
           "Infrastructure"
@@ -248,9 +184,9 @@
         ],
         "web_rewards": []
       },
-      "websiteUrl": null,
+      "websiteUrl": "https://push.org/",
       "description": "Push Protocol is the communication protocol of web3. Push enables cross-chain notifications (on chain / off chain), messaging, video for dapps, wallets, and services tied to wallet addresses in an open, gasless, and platform-agnostic fashion. The open communication layer allows any crypto wallet / frontend to tap into the network and get the communication across.",
-      "githubUrl": null,
+      "githubUrl": "https://github.com/pushchain/push-smart-contracts/tree/bug_bounty_dev",
       "feasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
       "prohibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
       "responsiblePublicationCategory": "category_2",
@@ -286,7 +222,7 @@
           "url": "https://docs.google.com/document/d/1GZsrj1XiiwFCPv453Ct-TziZyoLuwLjCdQuaF1AJ-V8/edit"
         }
       ],
-      "primacy": "primacy_of_impact",
+      "primacy": "primacy_of_rules",
       "newProgramRewardsEnabled": true,
       "findingsUrl": null,
       "premiumTriaging": false
@@ -299,7 +235,7 @@
     },
     "metaData": {
       "title": "Push Protocol Bug Bounties",
-      "description": "Find bugs and vulnerabilities on Push Protocol and get paid up to $100,000.",
+      "description": "Find bugs and vulnerabilities on Push Protocol and get paid up to $20,000.",
       "url": "https://immunefi.com/bug-bounty/pushprotocol/",
       "ogImg": "/api/bounty/og-image/?project=Push+Protocol&slug=pushprotocol"
     },
