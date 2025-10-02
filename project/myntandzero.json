@@ -13,51 +13,35 @@
       "kyc": false,
       "rewards": [
         {
-          "id": 30278,
-          "assetType": "smart_contract",
-          "severity": "critical",
-          "rewardModel": "up_to",
-          "maxReward": 1000000,
-          "rewardCalculationPercentage": 10
-        },
-        {
-          "id": 30279,
+          "id": 35828,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "up_to",
           "maxReward": 15000
         },
         {
-          "id": 30280,
+          "id": 35829,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "up_to",
           "maxReward": 4000
         },
         {
-          "id": 30281,
-          "assetType": "smart_contract",
-          "severity": "low",
-          "rewardModel": "up_to",
-          "maxReward": 1500
-        },
-        {
-          "id": 30282,
+          "id": 35830,
           "assetType": "websites_and_applications",
           "severity": "critical",
           "rewardModel": "up_to",
-          "maxReward": 15000,
-          "otherImpactMaxReward": 0
+          "maxReward": 15000
         },
         {
-          "id": 30283,
+          "id": 35831,
           "assetType": "websites_and_applications",
           "severity": "high",
           "rewardModel": "up_to",
           "maxReward": 4000
         },
         {
-          "id": 30284,
+          "id": 35832,
           "assetType": "websites_and_applications",
           "severity": "medium",
           "rewardModel": "up_to",
@@ -693,24 +677,6 @@
       ],
       "impacts": [
         {
-          "id": 34,
-          "type": "smart_contract",
-          "severity": "low",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value"
-        },
-        {
-          "id": 23,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Theft of unclaimed yield"
-        },
-        {
-          "id": 25,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Permanent freezing of unclaimed yield"
-        },
-        {
           "id": 4207,
           "type": "smart_contract",
           "severity": "high",
@@ -735,18 +701,6 @@
           "title": "Block stuffing for profit"
         },
         {
-          "id": 31,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-        },
-        {
-          "id": 32,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Theft of gas"
-        },
-        {
           "id": 4211,
           "type": "smart_contract",
           "severity": "medium",
@@ -765,12 +719,6 @@
           "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as: Reflected HTML injection, Loading external site data"
         },
         {
-          "id": 52,
-          "type": "websites_and_applications",
-          "severity": "medium",
-          "title": "Redirecting users to malicious websites (open redirect)"
-        },
-        {
           "id": 4214,
           "type": "websites_and_applications",
           "severity": "medium",
@@ -781,24 +729,6 @@
           "type": "websites_and_applications",
           "severity": "medium",
           "title": "Improperly disclosing confidential user information such as: Email address, Phone number, Physical address, etc."
-        },
-        {
-          "id": 15,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-        },
-        {
-          "id": 17,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Permanent freezing of funds"
-        },
-        {
-          "id": 22,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Protocol insolvency"
         },
         {
           "id": 4216,
@@ -825,16 +755,22 @@
           "title": "Subdomain takeover with already-connected wallet interaction resulting in financial loss"
         },
         {
+          "id": 4220,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Malicious interactions with an already-connected wallet such as: Modifying transaction arguments or parameters, Substituting contract addresses, Submitting malicious transactions"
+        },
+        {
           "id": 42,
           "type": "websites_and_applications",
           "severity": "critical",
           "title": "Direct theft of user funds"
         },
         {
-          "id": 4220,
+          "id": 52,
           "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Malicious interactions with an already-connected wallet such as: Modifying transaction arguments or parameters, Substituting contract addresses, Submitting malicious transactions"
+          "severity": "medium",
+          "title": "Redirecting users to malicious websites (open redirect)"
         }
       ],
       "programOverview": "This bug bounty program includes in its scope actively used contracts as part of Sovryn’s Mynt and Zero smart contract systems and the accompanying frontend web application.\n\nZero is a decentralized borrowing protocol that enables users to lock BTC collateral in a “line of credit” and borrow a BTC-backed stablecoin called ZUSD at 0% interest, up to a minimum collateral ratio. ZUSD can then be deposited into a stability pool to provide liquidity for liquidations, or redeem ZUSD at face value for the underlying BTC collateral if the ZUSD peg drops too far below its expected value of 1 ZUSD = 1 USD. More information about Zero can be found [here](https://wiki.sovryn.com/en/sovryn-dapp/subprotocols/zero-zusd).\n\nMynt is a BTC-backed stablecoin aggregator. Users can deposit BTC-backed stablecoins such as DOC and ZUSD and receive a new stablecoin called the Sovryn Dollar (DLLR). At any time, the DLLR can be burned and redeemed for one of the underlying stablecoins. The purpose of aggregating BTC-backed stablecoins this way is to aggregate previously fragmented liquidity markets for the underlying stablecoins, and to create a new stablecoin that is more resilient and scalable than either of the individual underlying stablecoins.\nFor more information about Mynt and the Sovryn Dollar, please visit [https://wiki.sovryn.com/en/sovryn-dapp/sovryn-dollar ](https://wiki.sovryn.com/en/sovryn-dapp/sovryn-dollar)\n\n__For Whitehats:__ It is highly recommended that you review the details of this program in full. Although many Bug Bounty programs have standard terms and conditions, each also has their own unique details that are critical to your success.  \n\nPrior to submitting a report please review the [Immunefi Bug Report Template and Best Practices. ](https://immunefisupport.zendesk.com/hc/en-us/articles/12435277406481-Bug-Report-Template)",
