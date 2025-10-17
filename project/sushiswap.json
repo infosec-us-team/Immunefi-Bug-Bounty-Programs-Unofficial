@@ -9,11 +9,11 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/ktA91VW40fkAtwAT2Ygs9/4bccd7ed0e2b2b2ef8f27e783801273e/Sushiswap-logo.png",
       "launchDate": "2021-03-26T07:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-10-08T17:22:25.903Z",
+      "updatedDate": "2025-10-16T22:38:56.122Z",
       "kyc": false,
       "rewards": [
         {
-          "id": 37196,
+          "id": 37400,
           "assetType": "smart_contract",
           "severity": "critical",
           "rewardModel": "range",
@@ -22,7 +22,7 @@
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 37197,
+          "id": 37401,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "range",
@@ -30,7 +30,7 @@
           "minReward": 5000
         },
         {
-          "id": 37198,
+          "id": 37402,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "range",
@@ -38,7 +38,7 @@
           "minReward": 1000
         },
         {
-          "id": 37199,
+          "id": 37403,
           "assetType": "smart_contract",
           "severity": "low",
           "rewardModel": "fixed",
@@ -157,7 +157,7 @@
       ],
       "programOverview": "SushiSwap is an automated market-making (AMM) decentralized exchange (DEX) that allows users to provide liquidity for token swaps.\n\nFurther resources regarding SushiSwap can be found on their website, [https://sushi.com](https://sushi.com).\n\nProgram focuses on three sets of contracts:\n  - Constant Product AMM\n  - Concentrated Liquidity AMM\n  - RedSnwapper\n\n\nThe bug bounty program is focused around it's smart contracts for the purpose of preventing the loss of user funds.",
       "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the\nfollowing types:\n\n**Smart Contracts/Blockchain:**\n\n- Re-entrancy\n- Logic errors\n  - including user authentication errors\n- Solidity/EVM details not considered\n  - including integer over-/under-flow\n  - including unhandled exceptions\n- Trusting trust/dependency vulnerabilities\n  - including composability vulnerabilities\n- Oracle failure/manipulation\n  - excluding real market activity\n  - excluding external oracle manipulation\n- Novel governance attacks\n- Congestion and scalability\n  - including running out of gas\n  - including block stuffing\n  - including susceptibility to frontrunning\n- Consensus failures\n- Cryptography problems\n  - Signature malleability\n  - Susceptibility to replay attacks\n  - Weak randomness\n  - Weak encryption\n- Susceptibility to block timestamp manipulation\n- Missing access controls / unprotected internal or debugging interfaces\n\n**Web/App**\n\n- For web vulnerabilities, Sushiswap is strictly interested in those that cause\n  direct and unequivocal loss or permanent locking of user funds\n- An example would be a vulnerability that lets an attacker spoof transactions\n  on Sushi web applications, leading to theft of funds",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on\nthe [Immunefi Vulnerability Severity Classification System](/severity-system/). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nTheft of Yield vulnerability reports are temporarily not in scope for this bug bounty program, though this attack may be in the future.\n\nAll bug reports must come with a PoC. All bug reports without a PoC will not be accepted under this bug bounty program.\n\nAll critical payments for smart contracts are capped at 10% of economic damage. \n\nSushiswap is open to rewarding bounties beyond the critical cap for\nvulnerabilities with extreme impact.\n\nPayouts are handled by the **SushiSwap** team directly and are denominated in **USD**. Payouts worth USD $100,000 and below are done in **USDC**. Payouts beyond USD $100,000 up to USD 200,000 are made in **SUSHI**, though the first $100,000 can be made in **USDC** if requested.",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on\nthe [Immunefi Vulnerability Severity Classification System](/severity-system/). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nReports involving **RedSwanpper** about executing any arbitrary executions would be considered **out of scope** as this is working as per design.\n\nTheft of Yield vulnerability reports are temporarily not in scope for this bug bounty program, though this attack may be in the future.\n\nAll bug reports must come with a PoC. All bug reports without a PoC will not be accepted under this bug bounty program.\n\nAll critical payments for smart contracts are capped at 10% of economic damage. \n\nSushiswap is open to rewarding bounties beyond the critical cap for\nvulnerabilities with extreme impact.\n\nPayouts are handled by the **SushiSwap** team directly and are denominated in **USD**. Payouts worth USD $100,000 and below are done in **USDC**. Payouts beyond USD $100,000 up to USD 200,000 are made in **SUSHI**, though the first $100,000 can be made in **USDC** if requested.",
       "outOfScopeAndRules": null,
       "assetsBodyV2": "__Submission Requirements__\n\nIn order to be considered for a reward, all bug reports must contain the following:\n  - Description of suspected vulnerability\n  - POC demonstrating the vulnerability for reproduction, can be a high-level POC\n  - Steps to reproduce the issue\n  - Your name and/or colleagues if you wish to be later recognized\n  - (Optional) A patch and/or suggestions to resolve the vulnerability\n\n__Ethical Behavior Requirements__\n\nResponsible disclosure is predicated on ethical behavior. These guidelines outline best practices for the community as whole, whether you are reporting, or the recipient of a report. By stating that you adhere to this policy, you’re claiming to handle vulnerability information ethically, and abide by the following:\n\n  - Do not attempt to leverage a vulnerability, or information of its existence as part of a financial trading strategy or otherwise for financial gain.\n  - Do not attempt to compromise systems upon which development of a product relies; including but not limited to compromising development systems, accounts, domains, email, etc..\n  - Do not attempt to sell vulnerability information or exploits.\n  - Do not ask for any form of compensation from an affected party. You may compensate a disclosing party if you would like to after all known vulnerability details have been disclosed.\n  - Do not disclose a bug or vulnerability on mailing lists, public boards, forums, social media or any other channel prior to Responsibly Disclosing to the organizations you have a published relationship with\n  - Do not attempt any illegal acts, including phishing, physical attacks, DDoS, or any attempt to gain access without authorization.\n\n__3rd Party Affected Projects__\n\nIn the case where we become aware of security issues affecting other projects that have never affected SushiSwap, our intention is to inform those projects of security issues on a best effort basis.\n\nIn the case where we fix a security issue in SushiSwap that also affects the following neighboring projects, our intention is to engage in responsible disclosures with them as described in the adopted standard, subject to the deviations described in the deviations section below.\n\n__Deviations from the Standard__\n\nIn the case of a counterfeiting or fund-stealing bug affecting SushiSwap, however, we might decide not to include those details with our reports to partners ahead of coordinated release, as long as we are sure that they are not vulnerable.\n\n__Notes on Expected Behaviors__\n\n  - Any reports that involve tokens outside of ERC20s will not be considered in scope. (i.e. ERC777 tokens)",
       "impactsBody": "When submitting a bug report, please select the severity level you feel best corresponds to the severity classification system.",
@@ -286,7 +286,7 @@
       "premiumTriaging": false,
       "isSafeHarborActive": false,
       "performanceMetrics": {
-        "medianResponseTimeInMinutes": 12574,
+        "medianResponseTimeInMinutes": 12376,
         "totalPaidAmount": 564101
       }
     },
