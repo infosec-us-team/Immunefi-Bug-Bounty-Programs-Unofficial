@@ -2406,6 +2406,24 @@
           "title": "Smart contract fails to deliver promised returns, but doesn’t lose value"
         },
         {
+          "id": 31,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+        },
+        {
+          "id": 32,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Theft of gas"
+        },
+        {
+          "id": 33,
+          "type": "smart_contract",
+          "severity": "medium",
+          "title": "Unbounded gas consumption"
+        },
+        {
           "id": 918,
           "type": "smart_contract",
           "severity": "high",
@@ -2442,24 +2460,6 @@
           "title": "Block stuffing for profit"
         },
         {
-          "id": 31,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-        },
-        {
-          "id": 32,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Theft of gas"
-        },
-        {
-          "id": 33,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Unbounded gas consumption"
-        },
-        {
           "id": 924,
           "type": "smart_contract",
           "severity": "critical",
@@ -2476,12 +2476,6 @@
           "type": "smart_contract",
           "severity": "critical",
           "title": "Insolvency"
-        },
-        {
-          "id": 927,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Any inputs to the state transition function that trigger an unexpected result, and that affects the whole network, not limited to a single node (excluding RPC inputs)"
         }
       ],
       "programOverview": "Arbitrum is a suite of scaling solutions for Ethereum developed by Offchain Labs that drastically reduces costs and latency. Arbitrum One is an \"Optimistic Rollup\", which instantly scales apps, reducing costs and increasing capacity, without sacrificing Ethereum's security. Arbitrum validators optimistically post updates to Ethereum, and the protocol uses an interactive fraud proof mechanism to resolve any disputes efficiently with a minimal on-chain footprint. Porting contracts to Arbitrum requires no code changes or downloads as Arbitrum is fully compatible with most existing Ethereum developer tooling. Arbitrum Nova, is another chain that relies on AnyTrust technology and posts calldata to a Data Availability Committee, further reducing costs while adding a small trust assumption.\n\nFor more information about Arbitrum and the related mainnet chains, please visit [https://developer.offchainlabs.com/](https://developer.offchainlabs.com/).\n\nThis bug bounty program is focused on the mainnet Arbitrum chains, Arbitrum One and Arbitrum Nova and their underlying technologies, Arbitrum Rollup and Arbitrum AnyTrust respectively. Any vulnerabilities unrelated to either of the two mainnet chains are not covered by this program. Issues that affect Arb1 and Nova will be treated as a single issue, and a report of the same issue with the only difference being the network will be treated as a duplicate. This program is focused on their smart contracts and is focused on preventing the following impacts:\n\nThis bug bounty program is focused on their smart contracts and is focused on preventing the following impacts:\n\n  - Loss of user funds by permanent freezing or direct theft\n  - Temporary freezing of funds\n  - Unable to call smart contract\n  - Network shutdown\n  - Smart contract gas drainage",
