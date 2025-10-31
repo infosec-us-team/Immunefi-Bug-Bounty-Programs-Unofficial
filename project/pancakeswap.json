@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2xJOw4FpKeRGxyQOV0RG0G/58c413a9b3969ddbd605bea881c02e72/Pancakeswap-logo.jpg",
       "launchDate": "2021-03-28T07:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-09-24T12:40:34.844Z",
+      "updatedDate": "2025-10-30T08:16:08.529Z",
       "kyc": false,
       "rewards": [
         {
@@ -60,39 +60,78 @@
       "audits": null,
       "assets": [
         {
-          "id": "6NxeDoMYOWdDHkFGgEgcDF",
+          "id": "5Mybwl38SoAMbIs1Hvn05p",
           "type": "smart_contract",
-          "url": "https://developer.pancakeswap.finance/contracts/v3/github",
+          "url": "https://github.com/pancakeswap/pancake-v3-contracts",
           "description": "Pancakeswap V3",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2025-09-24T12:36:34.502Z",
+          "addedAt": "2025-10-30T08:16:01.454Z",
           "fund": {
             "usdValue": 0,
             "addressesCount": 1
           }
         },
         {
-          "id": "751AQuIYecxwMeN9wS06r6",
+          "id": "VQW86j81JaGjf4Q4H6BJk",
           "type": "smart_contract",
-          "url": "https://developer.pancakeswap.finance/contracts/v2/github",
+          "url": "https://github.com/pancakeswap/pancake-swap-periphery",
+          "description": "Pancakeswap V2 Periphery ",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2025-10-30T08:16:01.444Z",
+          "fund": {
+            "usdValue": 0,
+            "addressesCount": 1
+          }
+        },
+        {
+          "id": "2L3WiTS0fOxj6QdNqcUM3F",
+          "type": "smart_contract",
+          "url": "https://github.com/pancakeswap/pancake-smart-contracts",
           "description": "Pancakeswap V2",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2025-09-24T12:36:34.493Z",
+          "addedAt": "2025-10-30T08:15:59.585Z",
           "fund": {
             "usdValue": 0,
             "addressesCount": 1
           }
         },
         {
-          "id": "5IbH79aFUc8ryT8hO1cB3q",
+          "id": "4I3Xs76vaBmrAdpNRwmuGL",
           "type": "smart_contract",
-          "url": "https://developer.pancakeswap.finance/contracts/infinity/resources/github",
-          "description": "Pancakeswap Infinity",
+          "url": "https://github.com/pancakeswap/infinity-universal-router",
+          "description": "Pancakeswap Infinity Router",
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2025-09-24T12:36:34.536Z",
+          "addedAt": "2025-10-30T08:16:01.374Z",
+          "fund": {
+            "usdValue": 0,
+            "addressesCount": 1
+          }
+        },
+        {
+          "id": "7h98Bj3XvQGzq7ZDeiJ28W",
+          "type": "smart_contract",
+          "url": "https://github.com/pancakeswap/infinity-periphery",
+          "description": "Pancakeswap Infinity Periphery",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2025-10-30T08:16:01.612Z",
+          "fund": {
+            "usdValue": 0,
+            "addressesCount": 1
+          }
+        },
+        {
+          "id": "6HwLEqOpgtsbhpXStHqlEd",
+          "type": "smart_contract",
+          "url": "https://github.com/pancakeswap/infinity-core",
+          "description": "Pancakeswap Infinity Core",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2025-10-30T08:16:01.554Z",
           "fund": {
             "usdValue": 0,
             "addressesCount": 1
@@ -114,10 +153,34 @@
       ],
       "impacts": [
         {
-          "id": 52,
-          "type": "websites_and_applications",
-          "severity": "medium",
-          "title": "Redirecting users to malicious websites (open redirect)"
+          "id": 233,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Complete theft of unclaimed yield (dependent on the value at stake)"
+        },
+        {
+          "id": 17,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Permanent freezing of funds"
+        },
+        {
+          "id": 22,
+          "type": "smart_contract",
+          "severity": "critical",
+          "title": "Protocol insolvency"
+        },
+        {
+          "id": 23,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Theft of unclaimed yield"
+        },
+        {
+          "id": 25,
+          "type": "smart_contract",
+          "severity": "high",
+          "title": "Permanent freezing of unclaimed yield"
         },
         {
           "id": 29,
@@ -132,22 +195,10 @@
           "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
         },
         {
-          "id": 32,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Theft of gas"
-        },
-        {
           "id": 35,
           "type": "websites_and_applications",
           "severity": "critical",
           "title": "Execute arbitrary system commands"
-        },
-        {
-          "id": 42,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Direct theft of user funds"
         },
         {
           "id": 41,
@@ -156,10 +207,22 @@
           "title": "Subdomain takeover with already-connected wallet interaction"
         },
         {
-          "id": 233,
-          "type": "smart_contract",
+          "id": 42,
+          "type": "websites_and_applications",
+          "severity": "critical",
+          "title": "Direct theft of user funds"
+        },
+        {
+          "id": 49,
+          "type": "websites_and_applications",
           "severity": "high",
-          "title": "Complete theft of unclaimed yield (dependent on the value at stake)"
+          "title": "Subdomain takeover without already-connected wallet interaction"
+        },
+        {
+          "id": 52,
+          "type": "websites_and_applications",
+          "severity": "medium",
+          "title": "Redirecting users to malicious websites (open redirect)"
         },
         {
           "id": 234,
