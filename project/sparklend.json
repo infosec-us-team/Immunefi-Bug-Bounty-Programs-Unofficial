@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6PSQWUew0V3et86JKkvxs0/152af27a6fa55003a4cc5511f0641d17/badge__1_.png",
       "launchDate": "2023-11-01T15:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-11-03T06:27:00.569Z",
+      "updatedDate": "2025-11-05T07:08:35.917Z",
       "kyc": false,
       "rewards": [
         {
@@ -58,13 +58,65 @@
       "audits": null,
       "assets": [
         {
-          "id": "H0npbMRbZUUF3Ylu5YNBt",
+          "id": "6TvHWJQYxaX2cUE01NYZgw",
           "type": "smart_contract",
-          "url": "https://snowscan.xyz/address/0xAf76856f788519704a9411839614e144FEd52d8a",
-          "description": "SparkRewards",
+          "url": "https://uniscan.xyz/address/0x7CD6EC14785418aF694efe154E7ff7d9ba99D99b#code",
+          "description": null,
           "isPrimacyOfImpact": null,
           "isSafeHarbor": null,
-          "addedAt": "2025-11-03T06:26:54.652Z",
+          "addedAt": "2025-11-05T07:08:21.040Z",
+          "fund": {
+            "usdValue": 0,
+            "addressesCount": 1
+          }
+        },
+        {
+          "id": "5u7Sw9ondp41piOsHIjPUo",
+          "type": "smart_contract",
+          "url": "https://optimistic.etherscan.io/address/0x282dAfE8B97e2Db5053761a4601ab2E1CB976318#code",
+          "description": null,
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2025-11-05T07:08:22.637Z",
+          "fund": {
+            "usdValue": 0,
+            "addressesCount": 1
+          }
+        },
+        {
+          "id": "3lSDhPUHUli6qRVYDVAL7",
+          "type": "smart_contract",
+          "url": "https://etherscan.io/address/0x577Fa18a498e1775939b668B0224A5e5a1e56fc3#code",
+          "description": null,
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2025-11-05T07:08:21.221Z",
+          "fund": {
+            "usdValue": 0,
+            "addressesCount": 1
+          }
+        },
+        {
+          "id": "5YukYtXZjKzGk7qEW1NdEl",
+          "type": "smart_contract",
+          "url": "https://basescan.org/address/0xC0bcbb2554D4694fe7b34bB68b9DdfbB55D896BC",
+          "description": null,
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2025-11-05T07:08:22.668Z",
+          "fund": {
+            "usdValue": 0,
+            "addressesCount": 1
+          }
+        },
+        {
+          "id": "b8lDiA9LIAY4wzjekdR5l",
+          "type": "smart_contract",
+          "url": "https://arbiscan.io/address/0x3a1d3A9B0eD182d7B17aa61393D46a4f4EE0CEA5",
+          "description": null,
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2025-11-05T07:08:21.298Z",
           "fund": {
             "usdValue": 0,
             "addressesCount": 1
@@ -539,6 +591,19 @@
           }
         },
         {
+          "id": "H0npbMRbZUUF3Ylu5YNBt",
+          "type": "smart_contract",
+          "url": "https://snowscan.xyz/address/0xAf76856f788519704a9411839614e144FEd52d8a",
+          "description": "SparkRewards",
+          "isPrimacyOfImpact": null,
+          "isSafeHarbor": null,
+          "addedAt": "2025-11-03T06:26:54.652Z",
+          "fund": {
+            "usdValue": 0,
+            "addressesCount": 1
+          }
+        },
+        {
           "id": "KeO6ezRyJxikV6Q7GH5CF",
           "type": "smart_contract",
           "url": "https://github.com/marsfoundation/spark-alm-controller/blob/master/src/RateLimitHelpers.sol",
@@ -737,7 +802,7 @@
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 5 000 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 50 000 is to be rewarded in order to incentivize security researchers against withholding a bug report.  \n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack is considered if the smart contracts where the vulnerability exists can be upgraded, paused, or killed. If the attack impacts a smart contract directly holding funds that cannot be upgraded or paused, the  amount of funds at risk will be calculated with the impact of the first attack being at 100% and then for every 300 blocks the attack needs for subsequent attacks from the first attack the impact will be counted at a reduction of 25% from the impact of the first attack, rounded down. For avoidance of doubt, if a second attack would happen at 600 blocks and then a third at 900 blocks, the funds at risk would be counted at 50% and 25% of the reward from the first attack, respectively.\n\nHowever, for smart contracts directly holding funds that cannot be paused, if a discovered vulnerability includes the temporary locking of funds that could otherwise be withdrawn and thus prevented from being stolen but still accessible to the exploiter to take the funds, the time is extended to the exact same time as temporary locking. Extensions of the temporary locking that introduce a gap where withdrawals can happen will not be considered. \n\nWe do not consider funds locked if:\n- Funds are not used as collateral and can eventually be recovered by a governance action\n\n__Reward Calculation for High Level Reports__\n\nHigh smart contract impacts will be capped at up to 100% of the funds affected. In the event of temporary freezing, the reward doubles for every additional 300 blocks that the funds could be temporarily frozen, rounded down to the nearest multiple of 300, up to the hard cap of USD 100 000. However, if it is within the hard cap, there is a further hard cap of 1000% of the funds affected. \n\nHowever, a temporary freezing impact with less than 150 blocks will be rewarded the flat amount of  USD 10 000.\n\nWe do not consider funds frozen if:\n- Funds are not used as collateral and can eventually be recovered by a governance action\n\n\n__Restrictions on Security Researcher Eligibility__\n\nSecurity researchers who fall under any of the following are ineligible for a reward\n- Compensated contributors of Spark and/or MakerDAO who have written code for at least one of the assets in scope below\n\n__Previous Audits__\n\nSpark has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [https://devs.spark.fi/security/security-and-audits ](https://devs.spark.fi/security/security-and-audits)\n\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract - Critical\n- Smart Contract - High\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Other Terms and Information__\n\n- In the calculation of the USD value of the total value locked metric in determining the funds at risk, it does not include outstanding borrows.\n- Referenced libraries, proxy implementations and inherited contracts of all listed assets in scope are also considered in scope of the bug bounty program.\n   - In selecting an asset in scope that is impacted, please select the most relevant asset.\n- In order to be eligible for a reward, the vulnerability must exist in the deployed smart contract and not just the GitHub file. In the event that a vulnerability exists on the GitHub file but not on the most recently deployed contract, this may be due to a fix to address a vulnerability but done in a discreet manner until proper communication can be done. \n\n__Reward Payment Terms__\n\nReward Denomination:\nPayments are denominated in USD. However, payouts are done in DAI assuming a full 1:1 ratio with the USD. However, if the price of DAI deviates from the USD value by more than 1%, the amount of DAI will be adjusted.\n\nPayout Process:\nAll bounty payouts are handled by MakerDAO governance. Upon confirmation, bug bounty payouts should be included in the next possible ‘executive spell’, which is a governance vote with an onchain payload attached to it. This would involve sending DAI directly from the protocol’s buffer to the whitehat hacker.\n\nImmunefi will publicly contact one of the Governance Facilitators with the request, including a specification of the respective vulnerability report, the requested amount and the Ethereum mainnet addresses of the beneficiaries. This should also include the payment details of the Immunefi fee, if it applies. Immunefi and the Maker Governance Facilitators should make sure the payout occurs up to one full calendar month after the report was approved.\n\nFor bug bounty rewards over USD 1 000 000, after the first million is paid out, the remaining amount is paid out over time with up to USD 1 000 000 per consecutive month until the determined amount for payout is reached.",
       "outOfScopeAndRules": ".",
-      "assetsBodyV2": "All code of Spark can be found in the following repositories: \n- [https://github.com/marsfoundation/sparklend ](https://github.com/marsfoundation/sparklend)\n- [https://github.com/marsfoundation/aave-v3-core/ ](https://github.com/marsfoundation/aave-v3-core/)\n- [https://github.com/marsfoundation/aave-v3-periphery/ ](https://github.com/marsfoundation/aave-v3-periphery/)\n- [https://github.com/marsfoundation/spark-app](https://github.com/marsfoundation/spark-app)\n\nDocumentation for the assets provided in the table can be found at [https://devs.spark.fi/](https://devs.spark.fi/)\n\nAssets in scope for Applications - [http://app.spark.fi](http://app.spark.fi)\n\nAssets in scope for Websites - [spark.fi](spark.fi), [docs.spark.fi](docs.spark.fi), [devs.spark.fi](devs.spark.fi), [api-v2.spark.fi](api-v2.spark.fi)",
+      "assetsBodyV2": "All code of Spark can be found in the following repositories: \n- [https://github.com/sparkdotfi/sparklend ](https://github.com/sparkdotfi/sparklend)\n- [https://github.com/sparkdotfi/aave-v3-core/ ](https://github.com/sparkdotfi/aave-v3-core/)\n- [https://github.com/sparkdotfi/aave-v3-periphery/ ](https://github.com/sparkdotfi/aave-v3-periphery/)\n- [https://github.com/sparkdotfi/spark-app](https://github.com/sparkdotfi/spark-app)\n- [https://github.com/sparkdotfi/spark-alm-controller](https://github.com/sparkdotfi/spark-alm-controller)\n- [https://github.com/sparkdotfi/spark-gov-relay](https://github.com/sparkdotfi/spark-gov-relay)\n- [https://github.com/sparkdotfi/spark-rewards](https://github.com/sparkdotfi/spark-rewards)\n- [https://github.com/sparkdotfi/spark-vaults-v2](https://github.com/sparkdotfi/spark-vaults-v2)\n- [https://github.com/sparkdotfi/spark-app](https://github.com/sparkdotfi/spark-app)\n\nDocumentation for the assets provided in the table can be found at [https://devs.spark.fi/](https://devs.spark.fi/)\n\nAssets in scope for Applications - [http://app.spark.fi](http://app.spark.fi)\n\nAssets in scope for Websites - [spark.fi](spark.fi), [docs.spark.fi](docs.spark.fi), [devs.spark.fi](devs.spark.fi), [api-v2.spark.fi](api-v2.spark.fi)",
       "impactsBody": null,
       "immunefiStandard": true,
       "tags": {
@@ -841,6 +906,42 @@
           "title": "SparkLend Codebase",
           "description": "Program Codebase",
           "url": "https://github.com/marsfoundation/spark-app"
+        },
+        {
+          "id": 605,
+          "title": "Crosschain SSR Oracle",
+          "description": "Relays crosschain SSR values",
+          "url": "https://github.com/sparkdotfi/xchain-ssr-oracle"
+        },
+        {
+          "id": 606,
+          "title": "Spark PSM",
+          "description": "L2 PSM",
+          "url": "https://github.com/sparkdotfi/spark-psm"
+        },
+        {
+          "id": 607,
+          "title": "Spark Governance Relay",
+          "description": "Crosschain governance relayer contracts",
+          "url": "https://github.com/sparkdotfi/spark-gov-relay"
+        },
+        {
+          "id": 608,
+          "title": "Spark Rewards",
+          "description": "Merkle distributor",
+          "url": "https://github.com/sparkdotfi/spark-rewards"
+        },
+        {
+          "id": 609,
+          "title": "Spark Savings V2",
+          "description": "Contracts for new Spark Savings products",
+          "url": "https://github.com/sparkdotfi/spark-vaults-v2"
+        },
+        {
+          "id": 610,
+          "title": "Spark ALM Controller",
+          "description": "Onchain components for the Spark Liquidity Layer.",
+          "url": "https://github.com/sparkdotfi/spark-alm-controller/tree/master"
         }
       ],
       "programDocumentations": [
