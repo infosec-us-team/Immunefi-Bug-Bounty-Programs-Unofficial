@@ -9,11 +9,11 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3UXQcPOIAaOkE2QBCasSKa/14893bedf55bdb191e4cf99a67203e85/LayerZero_logo.jpeg",
       "launchDate": "2023-05-17T17:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-09-01T12:49:10.998Z",
+      "updatedDate": "2025-11-11T09:44:54.638Z",
       "kyc": true,
       "rewards": [
         {
-          "id": 34651,
+          "id": 37886,
           "assetType": "smart_contract",
           "severity": "critical",
           "rewardModel": "up_to",
@@ -21,21 +21,21 @@
           "rewardCalculationPercentage": 10
         },
         {
-          "id": 34652,
+          "id": 37887,
           "assetType": "smart_contract",
           "severity": "high",
           "rewardModel": "up_to",
           "maxReward": 250000
         },
         {
-          "id": 34653,
+          "id": 37888,
           "assetType": "smart_contract",
           "severity": "medium",
           "rewardModel": "up_to",
           "maxReward": 25000
         },
         {
-          "id": 34654,
+          "id": 37889,
           "assetType": "smart_contract",
           "severity": "low",
           "rewardModel": "up_to",
@@ -355,6 +355,19 @@
             "usdValue": 0,
             "addressesCount": 1
           }
+        },
+        {
+          "id": "6dHbnS8CIh77iim2v7SzrO",
+          "type": "smart_contract",
+          "url": "https://immunefi.com",
+          "description": "Primacy of Impact",
+          "isPrimacyOfImpact": true,
+          "isSafeHarbor": null,
+          "addedAt": "2025-11-11T09:37:09.759Z",
+          "fund": {
+            "usdValue": 0,
+            "addressesCount": 1
+          }
         }
       ],
       "impacts": [
@@ -389,7 +402,7 @@
           "title": "Permanent DoS attacks (excluding volumetric attacks)"
         }
       ],
-      "programOverview": "LayerZero is an omnichain interoperability protocol that allows developers to seamlessly interact with contracts across dozens of blockchains. \n\nFor more information about LayerZero, please visit [https://layerzero.network/](https://layerzero.network/).",
+      "programOverview": "LayerZero is an omnichain interoperability protocol that allows developers to seamlessly interact with contracts across dozens of blockchains. \n\nFor more information about LayerZero, please visit [https://layerzero.network/](https://layerzero.network/).\n\n__Primacy of Impact vs Primacy of Rules__\n\nLayerzero adheres to the Primacy of Impact for the following impacts:\n\n- Smart Contract - Critical\n- Smart Contract - High\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact).\n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact. All other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
       "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the  [Immunefi Vulnerability Severity Classification System V2.2. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/)This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported. \n\nV1 Smart Contract rewards are classified by Group 1 and Group 2. Group 1 consists of: Ethereum, BNB Chain, Avalanche, Polygon, Arbitrum, Optimism, Fantom. Group 2 consists of all other chains. Group 1 rewards are notated in the rewards table by the higher ranges listed by severity level, while Group 2 rewards are notated by the lower ranges listed by severity level. \n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required. Bug reports are required to include a runnable PoC in order to prove impact. Exceptions may be made in cases where the vulnerability is objectively evident from simply mentioning the vulnerability and where it exists. However, the bug reporter may be required to provide a PoC at any point in time.\n\nAll vulnerabilities marked in the [https://github.com/LayerZero-Labs/Audits ](https://github.com/LayerZero-Labs/Audits) are not eligible for a reward.\n\nAll Impacts for OFT and [ONFT](https://github.com/LayerZero-Labs/solidity-examples/tree/main/contracts/token/onft) related contracts will be treated as low severity classifications and respective rewards. \n\nCritical V1 smart contract vulnerability payouts for Group 1 are a minimum of __USD $250,000__, or 10% of the value at risk at the time of report submission, with a hard cap of __USD $15,000,000__, whichever is larger. Value at risk should be calculated primarily (though not exclusively) based on concrete and demonstrable funds at risk. Any supplementary reward beyond the minimum USD $250,000 or 10% of value at risk is at the discretion of the team.\n\nCritical V1 smart contract vulnerability payouts for Group 2 are a minimum of __USD $25,000__, or 10% of the value at risk at the time of report submission, with a hard cap of __USD $1,500,000__, whichever is larger. Value at risk should be calculated primarily (though not exclusively) based on concrete and demonstrable funds at risk. Any supplementary reward beyond the minimum USD $25,000 or 10% of value at risk is at the discretion of the team.\n\nCritical V2 smart contract vulnerability payouts are a minimum of __USD $100,000__, or __10%__ of the value at risk at the time of report submission, with a hard cap of __$2,000,000__, whichever is larger. Value at risk should be calculated primarily (though not exclusively) based on concrete and demonstrable funds at risk. Any supplementary reward beyond the minimum __USD $100,000__ or __10%__ of value at risk is at the discretion of the team.\n\nAll non-critical rewards for the project bug bounty program are scaled based on an internally established team criteria, taking into account the exploitability of the bug, the impact it causes, and the likelihood of the vulnerability presenting itself, which is especially factored in with bug reports requiring multiple conditions to be met that are currently not in-place. Rewards will be provided at the determined fair value by the team depending on these conditions, assuming that the bug report is in-scope of the bug bounty program.\n\nLayerZero requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed are: \n- Invoice is required with Name, Address, and Payment Instructions\n- Proof of address (either a redacted bank statement with your address or a recent utility bill with your name, address, and issuer of the bill)\n- Copy of your passport or other Government ID will be required\n- Bounty hunters must pass OFAC Screening. Rewards cannot be paid out if hunters are on the OFAC SDN list \n\nThe collection of this information will be done by the project team.\n\nPayouts are handled by __LayerZero Labs__  directly and are denominated in USD. However, payouts are done in __Fiat USD via wire transfer, or USDC, USDT and BUSD__, with the choice of ratio at the discretion of the team.",
       "outOfScopeAndRules": null,
@@ -401,7 +414,8 @@
           "Immunefi Standard",
           "KYC Required",
           "PoC Required",
-          "PoC Not Required"
+          "PoC Not Required",
+          "Primacy of Impact"
         ],
         "productType": [
           "Bridge",
@@ -543,7 +557,7 @@
           "url": "https://docs.layerzero.network"
         }
       ],
-      "primacy": "primacy_of_rules",
+      "primacy": "primacy_of_impact",
       "newProgramRewardsEnabled": true,
       "findingsUrl": null,
       "premiumTriaging": true

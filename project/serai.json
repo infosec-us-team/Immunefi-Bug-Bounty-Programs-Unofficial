@@ -9,7 +9,7 @@
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5xUPQvjAjam8ACUKuhW1Ga/472fbbbcb27749a403d6dcbac86577ab/Screenshot_2024-11-15_at_3.48.57___PM.png",
       "launchDate": "2023-08-04T11:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-09-09T11:29:18.947Z",
+      "updatedDate": "2025-11-11T07:09:47.202Z",
       "kyc": true,
       "rewards": [
         {
@@ -189,22 +189,10 @@
           "title": "Non-constant time implementation with regards to secret data"
         },
         {
-          "id": 4396,
-          "type": "blockchain_dlt",
-          "severity": "high",
-          "title": "Incorrect/incomplete formulas"
-        },
-        {
           "id": 4397,
           "type": "blockchain_dlt",
           "severity": "medium",
           "title": "Undocumented transcript collision"
-        },
-        {
-          "id": 4398,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Recovery of private keys/shares/nonces"
         },
         {
           "id": 4399,
@@ -217,11 +205,35 @@
           "type": "blockchain_dlt",
           "severity": "critical",
           "title": "Ability to forge proofs"
+        },
+        {
+          "id": 5812,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Unintended, undocumented recovery of private spend keys (or private spend key shares)"
+        },
+        {
+          "id": 5813,
+          "type": "blockchain_dlt",
+          "severity": "critical",
+          "title": "Reportedly received funds which weren’t actually received/spendable"
+        },
+        {
+          "id": 5814,
+          "type": "blockchain_dlt",
+          "severity": "high",
+          "title": "Incorrect/incomplete (in the academic sense) cryptographic formulae within a verifier's callstack"
+        },
+        {
+          "id": 5815,
+          "type": "blockchain_dlt",
+          "severity": "low",
+          "title": "Incorrect/incomplete (in the academic sense) cryptographic formulae within a prover's callstack"
         }
       ],
       "programOverview": "Serai is an actively developed cross-chain, decentralized exchange for Bitcoin, Ethereum, and Monero. Built from scratch in Rust, Serai uses threshold multisignatures to secure coins under its own decentralized network.\n\nFor more information about Serai, please visit [https://github.com/serai-dex/serai](https://github.com/serai-dex/serai)\n\nSerai provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__\n\nThe provision of KYC is required to receive a reward for this bug bounty program, where the following information will be required to be provided:\n- IRS form W-8/W-9, as applicable\n- Applicant is not listed on the [OFAC SDN list](https://www.treasury.gov/ofac/downloads/sdnlist.pdf)\n\nKYC information is only required on confirmation of the validity of a bug report.   \n\n\n__Primacy of Impact vs Primacy of Rules__\n\nSerai adheres to the Primacy of Impact for the following severity levels:\n- Blockchain/DLT - Critical\n- Blockchain/DLT - High\n- Blockchain/DLT - Medium\n- Blockchain/DLT - Low\n\nIf a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nAll other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n\n__Immunefi Standard Badge__\n\nSerai has satisfied the requirements for the [Immunefi Standard Badge,](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-) which is given to projects that adhere to our best practices.",
       "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Overtime Attack Limitations__\n\nIn cases of attacks executed over time for smart contract and blockchain/DLT bugs, an explicit two hour window without human intervention is provided, starting from the first erroneous or malicious action. Only achievements during this window will be counted, regardless of further impact.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs acknowledged below are not eligible for any reward through the bug bounty program. \n- [https://github.com/serai-dex/serai/issues](https://github.com/serai-dex/serai/issues)\n- [https://github.com/serai-dex/serai/tree/develop/audits](https://github.com/serai-dex/serai/tree/develop/audits)\n\n__Previous Audits__\n\nSerai has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [https://github.com/serai-dex/serai/blob/develop/audits/Cypher%20Stack%20crypto%20March%202023/Audit.pdf](https://github.com/serai-dex/serai/blob/develop/audits/Cypher%20Stack%20crypto%20March%202023/Audit.pdf)\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Blockchain/DLT - Critical\n\nIn addition, PoC will be required for the following low impact:\n- Undocumented panic\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Serai team directly and are denominated in USD. However, payments are done in USDC.\n\n__ Exclusion with monero-oxide __\n\nFor submissions mutual to Serai DEX and monero-oxide, both programs should be submitted to yet only one will issue a reward (of the submitter's choice).",
+      "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Overtime Attack Limitations__\n\nIn cases of attacks executed over time for smart contract and blockchain/DLT bugs, an explicit two hour window without human intervention is provided, starting from the first erroneous or malicious action. Only achievements during this window will be counted, regardless of further impact.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs acknowledged below are not eligible for any reward through the bug bounty program. \n- [https://github.com/serai-dex/serai/issues](https://github.com/serai-dex/serai/issues)\n- [https://github.com/serai-dex/serai/tree/develop/audits](https://github.com/serai-dex/serai/tree/develop/audits)\n\n__Previous Audits__\n\nSerai has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [https://github.com/serai-dex/serai/blob/develop/audits/Cypher%20Stack%20crypto%20March%202023/Audit.pdf](https://github.com/serai-dex/serai/blob/develop/audits/Cypher%20Stack%20crypto%20March%202023/Audit.pdf)\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Blockchain/DLT - Critical\n\nIn addition, PoC will be required for the following low impact:\n- Undocumented panic reachable from a public API\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Serai team directly and are denominated in USD. However, payments are done in USDC.\n\n__ Exclusion with monero-oxide __\n\nFor submissions mutual to Serai DEX and monero-oxide, both programs should be submitted to yet only one will issue a reward (of the submitter's choice).",
       "outOfScopeAndRules": null,
       "assetsBodyV2": null,
       "impactsBody": null,
@@ -321,7 +333,7 @@
       "premiumTriaging": false,
       "isSafeHarborActive": false,
       "performanceMetrics": {
-        "medianResponseTimeInMinutes": 55
+        "medianResponseTimeInMinutes": 53
       }
     },
     "metaData": {
