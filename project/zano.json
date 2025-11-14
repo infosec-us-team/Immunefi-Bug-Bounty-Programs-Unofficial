@@ -5,15 +5,15 @@
       "id": "zano",
       "slug": "zano",
       "project": "Zano",
-      "maxBounty": 20000,
+      "maxBounty": 10000,
       "logo": "https://images.ctfassets.net/t3wqy70tc3bv/56nkDjrefTYbi6qvtdq0UL/4443f936ab5d2b9f7833967cd7de2e04/Zano.png",
       "launchDate": "2025-07-14T13:00:00.000Z",
       "endDate": null,
-      "updatedDate": "2025-08-06T13:58:55.348Z",
+      "updatedDate": "2025-11-13T17:16:13.859Z",
       "kyc": false,
       "rewards": [
         {
-          "id": 37785,
+          "id": 38024,
           "assetType": "blockchain_dlt",
           "severity": "critical",
           "rewardModel": "range",
@@ -22,21 +22,21 @@
           "rewardCalculationPercentage": 5
         },
         {
-          "id": 37786,
+          "id": 38025,
           "assetType": "blockchain_dlt",
           "severity": "high",
           "rewardModel": "up_to",
           "maxReward": 3000
         },
         {
-          "id": 37787,
+          "id": 38026,
           "assetType": "blockchain_dlt",
           "severity": "medium",
           "rewardModel": "up_to",
           "maxReward": 1000
         },
         {
-          "id": 37788,
+          "id": 38027,
           "assetType": "websites_and_applications",
           "severity": "critical",
           "rewardModel": "range",
@@ -45,14 +45,14 @@
           "otherImpactMaxReward": 0
         },
         {
-          "id": 37789,
+          "id": 38028,
           "assetType": "websites_and_applications",
           "severity": "high",
           "rewardModel": "up_to",
           "maxReward": 3000
         },
         {
-          "id": 37790,
+          "id": 38029,
           "assetType": "websites_and_applications",
           "severity": "medium",
           "rewardModel": "up_to",
@@ -337,6 +337,12 @@
       ],
       "impacts": [
         {
+          "id": 5827,
+          "type": "blockchain_dlt",
+          "severity": "medium",
+          "title": "Attack on the node through p2p protocol, that lead to node shutdown(DoS, OOM, any other attack that lead to node failure)"
+        },
+        {
           "id": 1,
           "type": "blockchain_dlt",
           "severity": "critical",
@@ -507,7 +513,7 @@
       ],
       "programOverview": "Zano is the development of a scalable and secure coin, designed for use in e-commerce. The technology behind our blockchain provides reliability, security, and flexibility—a perfect option for P2P transactions.\n\nFor more information about Zano, please visit https://zano.org/.\n\nZano provides rewards in USDC on Ethereum, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below.\n\n__Responsible Publication__\n\nZano adheres to  **Category 3: Approval Required** . This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nZano adheres to the Primacy of Impact for the following impacts:\n\n- Blockchain/DLT  —  Critical\n- Website & Application  —  Critical\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. \n\nFor more information, please see [Best Practices: Primacy of Impact](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact) \n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Previous Audits__\n\nZano has completed an Invite-only Program with Immunefi.  The audit reports can be found at https://drive.google.com/file/d/1R8jcc5_vFfCdR4jAmtfEGvmCoa2j0dJe/view. Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.",
       "prioritizedVulnerabilities": "_blank_",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the Immunefi Vulnerability Severity Classification System V2.3. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Blockchain/DLT bugs, the reward amount is 10% of the funds directly affected, capped at the maximum critical reward USD 20 000. However, a minimum reward of USD 5 000 is to be rewarded in order to incentivize security researchers against withholding on a bug report.\n\nFor critical Blockchain/DLT bugs with a non-funds-at risk impact, the reward will be paid out as follows: \n\n- Network not being able to confirm new transactions (total network shutdown) - USD 5 000\n- Unintended permanent chain split requiring hard fork (network partition requiring hard fork) - USD 5 000\n- Permanent freezing of funds (fix requires hardfork) - USD 5 000\n\nFor critical web/apps bugs, reports will be rewarded with USD 10 000, only if the impact leads to:\n\n- A loss of funds involving an attack that does not require any user action\n- Private key or private key generation leakage leading to unauthorized access to user funds \n\nAll other impacts that would be classified as Critical would be rewarded a flat amount of USD 4 000. The rest of the severity levels are paid out according to the Impact in Scope table.  \n\n__Reward Calculation for High Level Reports__\n\nFor high Blockchain/DLT non-funds-at risk impacts, the reward will be paid out as follows: \n\n- Unintended chain split (network partition) - USD 4 000\n- Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments - USD 4 000\n- Causing network processing nodes to process transactions from the mempool beyond set parameters - USD 4 000\n- RPC API crash affecting projects with greater than or equal to 25% of the market capitalization on top of the respective layer - USD 4 000\n\n__Reward Payment Terms__\n\nPayouts are handled by the Zano team directly and are denominated in **USD**. However, payments are done in **USDC** on **Ethereum**.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
+      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the Immunefi Vulnerability Severity Classification System V2.3. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Blockchain/DLT bugs, the reward amount is 5% of the funds directly affected, capped at the maximum critical reward USD 10 000. However, a minimum reward of USD 2000 is to be rewarded in order to incentivize security researchers against withholding on a bug report.\n\nFor critical Blockchain/DLT bugs with a non-funds-at risk impact, the reward will be paid out as follows: \n\n- Network not being able to confirm new transactions (total network shutdown) - USD 3 000\n- Unintended permanent chain split requiring hard fork (network partition requiring hard fork) - USD 3 000\n- Permanent freezing of funds (fix requires hardfork) - USD 3 000\n\n__Reward Calculation for High Level Reports__\n\nFor high Blockchain/DLT non-funds-at risk impacts, the reward will be paid out as follows: \n\n- Unintended chain split (network partition) - USD 4 000\n- Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments - USD 4 000\n- Causing network processing nodes to process transactions from the mempool beyond set parameters - USD 3 000\n\n__Reward Payment Terms__\n\nPayouts are handled by the Zano team directly and are denominated in **USD**. However, payments are done in **USDC** on **Ethereum**.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
       "outOfScopeAndRules": null,
       "assetsBodyV2": "Theoretical papers explaining the math behind codebase:\n\n- Original CryptoNote protocol description (basic concepts of ring signatures and ephemeral keys): https://github.com/hyle-team/docs/blob/master/arch/cryptonote_wp_v2.0.pdf\n- Zano original whitepaper: https://github.com/hyle-team/docs/blob/master/zano/Zano_WP_latest.pdf\n- Extension of CLSAG that used in Zano signatures: https://github.com/hyle-team/docs/blob/master/zano/dv-CLSAG-extension/dv-CLSAG-extension.pdf\n- RingCT and Confidential Assets: https://github.com/hyle-team/docs/blob/master/zano/CA_paper/Zano_CA_for_RingCT_and_Zarcanum_v1.1.pdf\n- Confidential PoS: https://github.com/hyle-team/docs/blob/master/zano/PoS_with_Hiden_amounts_Zarcanum/Zarcanum-PoS-with-hidden-amounts.pdf",
       "impactsBody": null,
@@ -552,7 +558,7 @@
         "web_rewards": []
       },
       "websiteUrl": null,
-      "description": "Zano is the development of a scalable and secure coin, designed for use in e-commerce. The technology behind our blockchain provides reliability, security, and flexibility—a perfect option for P2P transactions.\n",
+      "description": "Zano is the development of a privcy focused, scalable and secure L1, designed as platfrom for privacy focused projects. The technology behind our blockchain provides reliability, security, and flexibility—a perfect option for P2P transactions.",
       "githubUrl": null,
       "feasibilityLimitations": null,
       "prohibitedActivites": null,
@@ -602,7 +608,7 @@
     },
     "metaData": {
       "title": "Zano Bug Bounties",
-      "description": "Find bugs and vulnerabilities on Zano and get paid up to $20,000.",
+      "description": "Find bugs and vulnerabilities on Zano and get paid up to $10,000.",
       "url": "https://immunefi.com/bug-bounty/zano/",
       "ogImg": "/api/bounty/og-image/?project=Zano&slug=zano"
     },
