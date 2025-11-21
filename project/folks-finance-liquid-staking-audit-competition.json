@@ -1,320 +1,248 @@
 {
-  "pageProps": {
-    "isAttackathon": false,
-    "academyContent": null,
-    "ethereumAttackathonSponsors": null,
-    "project": {
-      "features": [
-        "Boost",
-        "Managed Triage: Time Saver",
-        "Vault"
-      ],
-      "premiumTriaging": true,
-      "isSafeHarborActive": false,
-      "performanceMetrics": {}
-    },
-    "bounty": {
-      "contentfulId": "7JLVmMH4JBQZIJYWvN2GK",
-      "id": "folks-finance-liquid-staking-audit-competition",
-      "slug": "folks-finance-liquid-staking-audit-competition",
-      "project": "Audit Comp | Folks: Liquid Staking",
-      "maxBounty": 30000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4NFnVNSefjOLrvyAZJNJya/b7e769f644c794bf71656737775fcf99/image_23_cropped.png",
-      "launchDate": "2024-12-09T10:00:12.000Z",
-      "endDate": "2024-12-19T10:00:00.000Z",
-      "updatedDate": "2025-01-13T13:29:03.971Z",
-      "kyc": false,
-      "rewards": [
-        {
-          "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "Portion of the Reward Pool",
-          "pocRequired": true
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "high",
-          "payout": "Portion of the Reward Pool",
-          "pocRequired": true
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "Portion of the Reward Pool",
-          "pocRequired": true
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "low",
-          "payout": "Portion of the Reward Pool",
-          "pocRequired": true
-        }
-      ],
-      "audits": null,
-      "assets": [
-        {
-          "id": "5N5OtGiOi4qhuH39kfQJU9",
-          "type": "smart_contract",
-          "url": "https://github.com/Folks-Finance/algo-liquid-staking-contracts/blob/8bd890fde7981335e9b042a99db432e327681e1a/contracts/xalgo/consensus_v2.py",
-          "description": "ConsensusV2 [651]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2024-12-09T10:00:12.000Z",
-          "fund": null
-        }
-      ],
-      "impacts": [
-        {
-          "id": 15,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-        },
-        {
-          "id": 17,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Permanent freezing of funds"
-        },
-        {
-          "id": 22,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Protocol insolvency"
-        },
-        {
-          "id": 23,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Theft of unclaimed yield"
-        },
-        {
-          "id": 25,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Permanent freezing of unclaimed yield"
-        },
-        {
-          "id": 5267,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Temporary freezing of funds for at least 1 hour"
-        },
-        {
-          "id": 29,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Smart contract unable to operate due to lack of token funds"
-        },
-        {
-          "id": 31,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-        },
-        {
-          "id": 34,
-          "type": "smart_contract",
-          "severity": "low",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value"
-        }
-      ],
-      "programOverview": "Folks Finance is a leading DeFi platform providing innovative tools for lending, borrowing, trading and managing digital assets, all in one place.\n\nFor more information about Folks Finance and their existing products, please visit [https://folks.finance](https://folks.finance).\n\nFolks Finance provides rewards in USDC on Algorand, denominated in USD.\n\n- Folks Finance team will freeze the codebase for the duration of the Audit Competition\n- Duplicates are rewarded",
-      "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "The following reward terms are a summary, for the full details read our [Folks: Liquid Staking Audit Competition Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/30675078530449-Folks-Finance-Liquid-Staking-Audit-Competition-Reward-Terms).\n\nRewards are denominated in USD and distributed in USDC on Algorand.\n\nRewards are distributed all at once after the competition has ended. No rewards are distributed during the competition.\n\nThe reward pool is **$30,000 USD and will be fully distributed among whitehat participants in the form of USDC on Algorand**.\n\nDuplicates and private known issues are valid for a reward.\n\nRewards are distributed according to the impact of the vulnerability based on the Immunefi [Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/).\n\n__Reward Payment Terms__\n\nPayouts are handled by the Folks Finance team directly and are denominated in USD. However, payments are done in USDC on Algorand.\n\n__Insight Rewards Payment Terms__\n\nInsight Rewards: Portion of the Rewards Pool\n\n- The \"Insight\" severity was introduced on Audit Competition & Attackathon programs to recognize contributions that extend beyond identifying immediate vulnerabilities. Currently, it's not an option to select the Insight severity when submitting a report. However, our team or program will designate it accordingly if applicable. \"Insights\" underscores our commitment to valuing all types of contributions that contribute to a more secure environment and will always be rewarded. [View more information about Insights](https://immunefisupport.zendesk.com/hc/en-us/articles/13333032674961-Severity-Classification-System?utm_source=immunefi).",
-      "outOfScopeAndRules": null,
-      "assetsBodyV2": "__Asset Accuracy Assurance__\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n__Build commands, Test commands, and instructions on how to run them:__\n\nYou can find the smart contract repository at [https://github.com/Folks-Finance/algo-liquid-staking-contracts](https://github.com/Folks-Finance/algo-liquid-staking-contracts). Follow the instructions in the README to get setup and be able to run the tests\n\n__Impact Terms__\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n- You cannot delete an added proposer.\n- A proposer’s balance may go below the minimum balance needed in order to be eligible for consensus rewards.\n- A decrease in the max proposer balance may lead to some proposer balances being temporarily above the limit. \n- Unclaimed fees are generating additional yield for everyone.\n- Unclaimed fees can be slightly reduced through often updates because of rounding down.\n- Loss of precision over time as the value of xALGO accumulates.\n- The smart contract doesn’t check for box cost payments - instead they are implicitly required.\n\n__Previous Audits__\n\nFolks Finance’s completed audit reports can be found at [https://github.com/Folks-Finance/audits/blob/50831a54420ed3e4513c8fa17a42f2bbd0338df1/Coinspect%20-%20Audit%20of%20Liquid%20Staking%20-%20August%202024.pdf](https://github.com/Folks-Finance/audits/blob/50831a54420ed3e4513c8fa17a42f2bbd0338df1/Coinspect%20-%20Audit%20of%20Liquid%20Staking%20-%20August%202024.pdf). Note that this is an audit on the previous version of the smart contract which shares similarities with the new version. Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Private Known Issues Reward Policy__\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward equal to that of a bug one severity lower.\n\n__Primacy of Impact vs Primacy of Rules__\n\nFolks Finance adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page.\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this audit competition and a leaderboard of the participants and their earnings.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Folks Finance has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
-      "impactsBody": "__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Whitehat Educational Resources & Technical Info__\n\n__What ERC20 / ERC721 / ERC777 / ERC1155 token standards are supported? Which are not?__\n\nAlgorand has native support for tokens with ASAs (Algorand Standard Assets). The liquid staking token which is distributed is an Algorand ASA.\n\n__What emergency actions may you want to use as a reason to invalidate or downgrade an otherwise valid bug report?__\n\nWe can update the deployed application in an emergency so some issues e.g. freezing of funds, may be mitigated from a permanent issue to a temporary issue.  We also have the ability to pause immediate and/or delayed minting. \n\n__What monitoring systems may you want to use as a reason to invalidate or downgrade an otherwise valid bug report?__\n\nNone\n\n__What addresses would you consider any bug report requiring their involvement to be out of scope, as long as they operate within the privileges attributed to them?__\n\nThe four admins:\n- The “admin” which is the super admin.\n- The “register_admin” which can add proposers, set the proposer admin and register a proposer offline.\n- The “xgov_admin” which can subscribe and unsubscribe proposers to xgov.\n- The “proposer_admin” which can register a proposer online and offline.\n\n__What addresses would you consider any bug report requiring their involvement be out of scope, even if they exceed the privileges attributed to them?__\n\nNone\n\n__Security Researcher Education__\n\n__Project educational resources__\n\n- Design Overview for ALGO Staking Smart Contract [https://docs.google.com/document/d/1w-0ZmpWGTGrFl46PNhjmguEKj3ChnnFnMM3X_is1R9M/edit?usp=sharing](https://docs.google.com/document/d/1w-0ZmpWGTGrFl46PNhjmguEKj3ChnnFnMM3X_is1R9M/edit?usp=sharing)\n- Smart Contract deployed on Testnet [https://lora.algokit.io/testnet/application/730430673](https://lora.algokit.io/testnet/application/730430673)\n- Algorand Consensus Incentivisation Whitepaper [https://assets-global.website-files.com/62d96b0e9ea60fd1c96a1b50/65a7c0863805fd8b83cf34d5_upload_consensus-incentives.pdf](https://assets-global.website-files.com/62d96b0e9ea60fd1c96a1b50/65a7c0863805fd8b83cf34d5_upload_consensus-incentives.pdf)\n- The xGov Integration Requirements [https://docs.google.com/document/d/1zB8-t0vHtkQVZeNgVlI5W8z38ugD8IhBK8uRrkoRAxM/edit?usp=sharing](https://docs.google.com/document/d/1zB8-t0vHtkQVZeNgVlI5W8z38ugD8IhBK8uRrkoRAxM/edit?usp=sharing)\n- Docs for old version of ALGO Staking [https://docs.folks.finance/functionalities/xalgo-liquid-staking](https://docs.folks.finance/functionalities/xalgo-liquid-staking)\n\n__Is this an upgrade of an existing system? If so, which? And what are the main differences?__\n\nYes it is an upgrade of the old version of ALGO Liquid Staking deployed at [https://lora.algokit.io/mainnet/application/1134695678](https://lora.algokit.io/mainnet/application/1134695678). The main differences are:\n- Support for subscribing and unsubscribing from the xGov program. \n- Support for 3rd party node runners where now each proposer has its own admin which can register it online and offline. \n- The smart contract enforces the splitting of stake between the proposers. \n- Removed “min_proposer_balance” checks.\n\nNote that the existing state of the smart contract will persist after the update (global/local state and box storage). \n\n__Where do you suspect there may be bugs?__\n\nThe calculations for “immediate_mint”, “delayed_mint”, “claim_delayed_mint” and “burn” cannot be manipulated. In addition, the smart contract should enforce an approximate equal stake split between the proposers.\n\nYou should also check privileged operations are safely guarded.\n\n__What external dependencies are there?__\n\nThe main external dependency is the Algorand Consensus participation. Each proposers; participation keys will reside on its own Algorand Node and will receive ALGO rewards each time it proposes a block.\n\nAnother external dependency is the xGov program. The xGov power is given to block proposers and the smart contract allows delegating the control of the votes to an external address supplied by the “xgov_admin”.\n\nLastly some of the proposers’ Algorand Nodes may be run by trusted projects and/or key community members. \n\n__Are there any unusual points about your protocol that may confuse Security Researchers?__\n\nThe smart contract is an update of an existing smart contract which is already deployed on mainnet. Therefore there is no application create call supported. In addition you should consider the existing state of the smart contract [https://lora.algokit.io/mainnet/application/1134695678](https://lora.algokit.io/mainnet/application/1134695678) (global/local state and box storage) as these will persist between updates. The accompanying Design Overview Document provides further details on this.\n\nWhen an account is marked online/offline, the moment a key registration transaction is confirmed by the network it takes 320 rounds for the change to take effect. So, if a key registration is confirmed in round 5000, the account will stop participating at round 5320.\n\nThe same applies for changes in stake.",
-      "immunefiStandard": true,
-      "tags": {
-        "general": [
-          "Immunefi Standard",
-          "KYC Not Required",
-          "Step-by-step PoC Required"
-        ],
-        "productType": [],
-        "projectType": [],
-        "ecosystem": [],
-        "programType": [
-          "Smart Contract"
-        ],
-        "language": [],
-        "featured": [
-          "Launched Recently"
-        ]
-      },
-      "legacy": {
-        "technologies": [
-          "Smart Contract"
-        ],
-        "blockchain_rewards": [],
-        "smartcontract_rewards": [
-          {
-            "level": "Critical",
-            "payout": "Portion of the Reward Pool"
-          },
-          {
-            "level": "High",
-            "payout": "Portion of the Reward Pool"
-          },
-          {
-            "level": "Medium",
-            "payout": "Portion of the Reward Pool"
-          },
-          {
-            "level": "Low",
-            "payout": "Portion of the Reward Pool"
-          }
-        ],
-        "web_rewards": []
-      },
-      "evaluationEndDate": "2025-01-13T13:27:04.445Z",
-      "boostedIntroStartingIn": "$30,000 USD in rewards is available for finding bugs on Folks: Liquid Staking Audit Competition which introduces new liquid staking contract on Algorand. \n\nFor more information about Folks Finance please visit [https://folks.finance/](https://folks.finance/). \n\nNo KYC is required.\n\nAny technical questions can be asked directly to the Folks Finance technical team on Immunefi's [Immunefi's Discord](https://discord.com/invite/immunefi) in the \"folks-liquid-staking-audit-competition\" channel.\n\nWhen the Audit Competition has ended, Immunefi will publish an event-specific leaderboard and bug reports from the event.\n\nA few days after the launch, Immunefi will publish Folks Finance's technical walkthrough on our official YouTube channel.",
-      "boostedIntroLive": "$30,000 USD is available in rewards for finding bugs in Folks Finance's contracts of 651 nSLOC.\n\nNo KYC is required.\n\nAny technical questions and support requests can be asked directly to Folks Finance or Immunefi in the \"[project name]-audit-competition\" channel.\n\nWhen the Audit Competition has ended Immunefi will publish an event-specific leaderboard and bug reports from the event.\n\nFor more information about Folks Finance, please visit [https://folks.finance/](https://folks.finance/).",
-      "boostedIntroEvaluating": "",
-      "boostedIntroFinished": "Audit Competition cards for security researchers with paid reports are available [here](https://drive.google.com/drive/folders/1LKBn1EGnUFLXx-ULjt2epNQUsZ4M5QEV?usp=sharing)\n\nAll paid bug reports are available in original format [here](https://reports.immunefi.com/folks-liquid-staking)",
-      "rewardsToken": "USDC",
-      "rewardsPool": 30000,
-      "primaryPool": 30000,
-      "allStarsPool": 0,
-      "podiumPool": 0,
-      "sourceLinesOfCode": 651,
-      "boostedSummaryReport": "https://drive.google.com/file/d/1xRCghsyzF9YPgrUG2TeIZTmuayOaU7LF/view?usp=sharing",
-      "inviteOnly": false,
-      "hideAssetsInScope": null,
-      "boostedLeaderboard": [
-        {
-          "high": 1,
-          "name": "uhudo",
-          "critical": 0,
-          "earnings": 7155,
-          "insights": 1,
-          "mediumLow": 1,
-          "totalValidBugs": 2
-        },
-        {
-          "high": 1,
-          "name": "A2Security",
-          "critical": 0,
-          "earnings": 6473,
-          "insights": 0,
-          "mediumLow": 0,
-          "totalValidBugs": 1
-        },
-        {
-          "high": 1,
-          "name": "Blockian",
-          "critical": 0,
-          "earnings": 3336,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 1
-        },
-        {
-          "high": 1,
-          "name": "danvinci_20",
-          "critical": 0,
-          "earnings": 3122,
-          "insights": 2,
-          "mediumLow": 0,
-          "totalValidBugs": 1
-        },
-        {
-          "high": 1,
-          "name": "holydevoti0n",
-          "critical": 0,
-          "earnings": 2264,
-          "insights": 0,
-          "mediumLow": 0,
-          "totalValidBugs": 1
-        },
-        {
-          "high": 1,
-          "name": "Oxbakeng",
-          "critical": 0,
-          "earnings": 2264,
-          "insights": 0,
-          "mediumLow": 0,
-          "totalValidBugs": 1
-        },
-        {
-          "high": 1,
-          "name": "dustykid",
-          "critical": 0,
-          "earnings": 2264,
-          "insights": 0,
-          "mediumLow": 0,
-          "totalValidBugs": 1
-        },
-        {
-          "high": 1,
-          "name": "ruhum",
-          "critical": 0,
-          "earnings": 2264,
-          "insights": 0,
-          "mediumLow": 0,
-          "totalValidBugs": 1
-        },
-        {
-          "high": 0,
-          "name": "k13n",
-          "critical": 0,
-          "earnings": 643,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "perseverance",
-          "critical": 0,
-          "earnings": 214,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        }
-      ],
-      "features": [
-        "Boost",
-        "Managed Triage: Time Saver",
-        "Vault"
-      ],
-      "academyStartDate": null,
-      "websiteUrl": "https://folks.finance/",
-      "description": "Folks Finance is a leading DeFi platform providing innovative tools for lending, borrowing, trading and managing digital assets, all in one place.",
-      "githubUrl": null,
-      "feasibilityLimitations": null,
-      "prohibitedActivites": null,
-      "responsiblePublicationCategory": null,
-      "knownIssues": [],
-      "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
-      "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": null,
-      "customProhibitedActivities": [],
-      "rewardsTokenNetwork": "Algorand",
-      "eligibilityCriteria": [],
-      "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
-      "programDocumentations": [],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
-      "findingsUrl": "https://reports.immunefi.com/folks-liquid-staking",
-      "premiumTriaging": true
-    },
-    "layoutProps": {
-      "headerMarginBottom": "mb-12 lg:mb-16"
-    },
-    "metaData": {
-      "title": "Audit Comp | Folks: Liquid Staking Bug Bounties",
-      "description": "Find bugs and vulnerabilities on Audit Comp | Folks: Liquid Staking and get paid up to $30,000.",
-      "url": "https://immunefi.com/audit-competition/folks-finance-liquid-staking-audit-competition/",
-      "ogImg": "/api/bounty/og-image/?project=Audit+Comp+%7C+Folks%3A+Liquid+Staking&slug=folks-finance-liquid-staking-audit-competition"
+  "assets": [
+    {
+      "id": "5N5OtGiOi4qhuH39kfQJU9",
+      "revision": 2,
+      "type": "smart_contract",
+      "url": "https://github.com/Folks-Finance/algo-liquid-staking-contracts/blob/8bd890fde7981335e9b042a99db432e327681e1a/contracts/xalgo/consensus_v2.py",
+      "description": "ConsensusV2 [651]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2024-12-09T10:00:12.000Z"
     }
-  },
-  "__N_SSG": true
+  ],
+  "assetsBodyV2": "__Asset Accuracy Assurance__\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n__Build commands, Test commands, and instructions on how to run them:__\n\nYou can find the smart contract repository at [https://github.com/Folks-Finance/algo-liquid-staking-contracts](https://github.com/Folks-Finance/algo-liquid-staking-contracts). Follow the instructions in the README to get setup and be able to run the tests\n\n__Impact Terms__\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n- You cannot delete an added proposer.\n- A proposer’s balance may go below the minimum balance needed in order to be eligible for consensus rewards.\n- A decrease in the max proposer balance may lead to some proposer balances being temporarily above the limit. \n- Unclaimed fees are generating additional yield for everyone.\n- Unclaimed fees can be slightly reduced through often updates because of rounding down.\n- Loss of precision over time as the value of xALGO accumulates.\n- The smart contract doesn’t check for box cost payments - instead they are implicitly required.\n\n__Previous Audits__\n\nFolks Finance’s completed audit reports can be found at [https://github.com/Folks-Finance/audits/blob/50831a54420ed3e4513c8fa17a42f2bbd0338df1/Coinspect%20-%20Audit%20of%20Liquid%20Staking%20-%20August%202024.pdf](https://github.com/Folks-Finance/audits/blob/50831a54420ed3e4513c8fa17a42f2bbd0338df1/Coinspect%20-%20Audit%20of%20Liquid%20Staking%20-%20August%202024.pdf). Note that this is an audit on the previous version of the smart contract which shares similarities with the new version. Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Private Known Issues Reward Policy__\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward equal to that of a bug one severity lower.\n\n__Primacy of Impact vs Primacy of Rules__\n\nFolks Finance adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page.\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this audit competition and a leaderboard of the participants and their earnings.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Folks Finance has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
+  "boostedIntroEvaluating": "",
+  "boostedIntroFinished": "Audit Competition cards for security researchers with paid reports are available [here](https://drive.google.com/drive/folders/1LKBn1EGnUFLXx-ULjt2epNQUsZ4M5QEV?usp=sharing)\n\nAll paid bug reports are available in original format [here](https://reports.immunefi.com/folks-liquid-staking)",
+  "boostedIntroLive": "$30,000 USD is available in rewards for finding bugs in Folks Finance's contracts of 651 nSLOC.\n\nNo KYC is required.\n\nAny technical questions and support requests can be asked directly to Folks Finance or Immunefi in the \"[project name]-audit-competition\" channel.\n\nWhen the Audit Competition has ended Immunefi will publish an event-specific leaderboard and bug reports from the event.\n\nFor more information about Folks Finance, please visit [https://folks.finance/](https://folks.finance/).",
+  "boostedIntroStartingIn": "$30,000 USD in rewards is available for finding bugs on Folks: Liquid Staking Audit Competition which introduces new liquid staking contract on Algorand. \n\nFor more information about Folks Finance please visit [https://folks.finance/](https://folks.finance/). \n\nNo KYC is required.\n\nAny technical questions can be asked directly to the Folks Finance technical team on Immunefi's [Immunefi's Discord](https://discord.com/invite/immunefi) in the \"folks-liquid-staking-audit-competition\" channel.\n\nWhen the Audit Competition has ended, Immunefi will publish an event-specific leaderboard and bug reports from the event.\n\nA few days after the launch, Immunefi will publish Folks Finance's technical walkthrough on our official YouTube channel.",
+  "boostedLeaderboard": [
+    {
+      "high": 1,
+      "name": "uhudo",
+      "critical": 0,
+      "earnings": 7155,
+      "insights": 1,
+      "mediumLow": 1,
+      "totalValidBugs": 2
+    },
+    {
+      "high": 1,
+      "name": "A2Security",
+      "critical": 0,
+      "earnings": 6473,
+      "insights": 0,
+      "mediumLow": 0,
+      "totalValidBugs": 1
+    },
+    {
+      "high": 1,
+      "name": "Blockian",
+      "critical": 0,
+      "earnings": 3336,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 1
+    },
+    {
+      "high": 1,
+      "name": "danvinci_20",
+      "critical": 0,
+      "earnings": 3122,
+      "insights": 2,
+      "mediumLow": 0,
+      "totalValidBugs": 1
+    },
+    {
+      "high": 1,
+      "name": "holydevoti0n",
+      "critical": 0,
+      "earnings": 2264,
+      "insights": 0,
+      "mediumLow": 0,
+      "totalValidBugs": 1
+    },
+    {
+      "high": 1,
+      "name": "Oxbakeng",
+      "critical": 0,
+      "earnings": 2264,
+      "insights": 0,
+      "mediumLow": 0,
+      "totalValidBugs": 1
+    },
+    {
+      "high": 1,
+      "name": "dustykid",
+      "critical": 0,
+      "earnings": 2264,
+      "insights": 0,
+      "mediumLow": 0,
+      "totalValidBugs": 1
+    },
+    {
+      "high": 1,
+      "name": "ruhum",
+      "critical": 0,
+      "earnings": 2264,
+      "insights": 0,
+      "mediumLow": 0,
+      "totalValidBugs": 1
+    },
+    {
+      "high": 0,
+      "name": "k13n",
+      "critical": 0,
+      "earnings": 643,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "perseverance",
+      "critical": 0,
+      "earnings": 214,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    }
+  ],
+  "boostedSummaryReport": "https://drive.google.com/file/d/1xRCghsyzF9YPgrUG2TeIZTmuayOaU7LF/view?usp=sharing",
+  "ecosystem": null,
+  "endDate": "2024-12-19T10:00:00.000Z",
+  "evaluationEndDate": "2025-01-13T13:27:04.445Z",
+  "features": [
+    "Boost",
+    "Managed Triage: Time Saver",
+    "Vault"
+  ],
+  "hideAssetsInScope": null,
+  "immunefiStandard": true,
+  "inviteOnly": false,
+  "kyc": false,
+  "language": null,
+  "launchDate": "2024-12-09T10:00:12.000Z",
+  "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4NFnVNSefjOLrvyAZJNJya/b7e769f644c794bf71656737775fcf99/image_23_cropped.png",
+  "maxBounty": 30000,
+  "pocPerTypeAndSeverity": [
+    "smart_contract - low",
+    "smart_contract - medium",
+    "smart_contract - high",
+    "smart_contract - critical"
+  ],
+  "primaryPaymentWallet": "EVM",
+  "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+  "productType": null,
+  "programOverview": "Folks Finance is a leading DeFi platform providing innovative tools for lending, borrowing, trading and managing digital assets, all in one place.\n\nFor more information about Folks Finance and their existing products, please visit [https://folks.finance](https://folks.finance).\n\nFolks Finance provides rewards in USDC on Algorand, denominated in USD.\n\n- Folks Finance team will freeze the codebase for the duration of the Audit Competition\n- Duplicates are rewarded",
+  "programType": [
+    "Smart Contract"
+  ],
+  "project": "Audit Comp | Folks: Liquid Staking",
+  "projectType": null,
+  "rewardsBody": "The following reward terms are a summary, for the full details read our [Folks: Liquid Staking Audit Competition Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/30675078530449-Folks-Finance-Liquid-Staking-Audit-Competition-Reward-Terms).\n\nRewards are denominated in USD and distributed in USDC on Algorand.\n\nRewards are distributed all at once after the competition has ended. No rewards are distributed during the competition.\n\nThe reward pool is **$30,000 USD and will be fully distributed among whitehat participants in the form of USDC on Algorand**.\n\nDuplicates and private known issues are valid for a reward.\n\nRewards are distributed according to the impact of the vulnerability based on the Immunefi [Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/).\n\n__Reward Payment Terms__\n\nPayouts are handled by the Folks Finance team directly and are denominated in USD. However, payments are done in USDC on Algorand.\n\n__Insight Rewards Payment Terms__\n\nInsight Rewards: Portion of the Rewards Pool\n\n- The \"Insight\" severity was introduced on Audit Competition & Attackathon programs to recognize contributions that extend beyond identifying immediate vulnerabilities. Currently, it's not an option to select the Insight severity when submitting a report. However, our team or program will designate it accordingly if applicable. \"Insights\" underscores our commitment to valuing all types of contributions that contribute to a more secure environment and will always be rewarded. [View more information about Insights](https://immunefisupport.zendesk.com/hc/en-us/articles/13333032674961-Severity-Classification-System?utm_source=immunefi).",
+  "rewardsPool": 30000,
+  "primaryPool": 30000,
+  "allStarsPool": 0,
+  "podiumPool": 0,
+  "rewardsToken": "USDC",
+  "slug": "folks-finance-liquid-staking-audit-competition",
+  "tenPercentEconomicRule": false,
+  "updatedDate": "2025-01-13T13:29:03.971Z",
+  "impactsBody": "__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Whitehat Educational Resources & Technical Info__\n\n__What ERC20 / ERC721 / ERC777 / ERC1155 token standards are supported? Which are not?__\n\nAlgorand has native support for tokens with ASAs (Algorand Standard Assets). The liquid staking token which is distributed is an Algorand ASA.\n\n__What emergency actions may you want to use as a reason to invalidate or downgrade an otherwise valid bug report?__\n\nWe can update the deployed application in an emergency so some issues e.g. freezing of funds, may be mitigated from a permanent issue to a temporary issue.  We also have the ability to pause immediate and/or delayed minting. \n\n__What monitoring systems may you want to use as a reason to invalidate or downgrade an otherwise valid bug report?__\n\nNone\n\n__What addresses would you consider any bug report requiring their involvement to be out of scope, as long as they operate within the privileges attributed to them?__\n\nThe four admins:\n- The “admin” which is the super admin.\n- The “register_admin” which can add proposers, set the proposer admin and register a proposer offline.\n- The “xgov_admin” which can subscribe and unsubscribe proposers to xgov.\n- The “proposer_admin” which can register a proposer online and offline.\n\n__What addresses would you consider any bug report requiring their involvement be out of scope, even if they exceed the privileges attributed to them?__\n\nNone\n\n__Security Researcher Education__\n\n__Project educational resources__\n\n- Design Overview for ALGO Staking Smart Contract [https://docs.google.com/document/d/1w-0ZmpWGTGrFl46PNhjmguEKj3ChnnFnMM3X_is1R9M/edit?usp=sharing](https://docs.google.com/document/d/1w-0ZmpWGTGrFl46PNhjmguEKj3ChnnFnMM3X_is1R9M/edit?usp=sharing)\n- Smart Contract deployed on Testnet [https://lora.algokit.io/testnet/application/730430673](https://lora.algokit.io/testnet/application/730430673)\n- Algorand Consensus Incentivisation Whitepaper [https://assets-global.website-files.com/62d96b0e9ea60fd1c96a1b50/65a7c0863805fd8b83cf34d5_upload_consensus-incentives.pdf](https://assets-global.website-files.com/62d96b0e9ea60fd1c96a1b50/65a7c0863805fd8b83cf34d5_upload_consensus-incentives.pdf)\n- The xGov Integration Requirements [https://docs.google.com/document/d/1zB8-t0vHtkQVZeNgVlI5W8z38ugD8IhBK8uRrkoRAxM/edit?usp=sharing](https://docs.google.com/document/d/1zB8-t0vHtkQVZeNgVlI5W8z38ugD8IhBK8uRrkoRAxM/edit?usp=sharing)\n- Docs for old version of ALGO Staking [https://docs.folks.finance/functionalities/xalgo-liquid-staking](https://docs.folks.finance/functionalities/xalgo-liquid-staking)\n\n__Is this an upgrade of an existing system? If so, which? And what are the main differences?__\n\nYes it is an upgrade of the old version of ALGO Liquid Staking deployed at [https://lora.algokit.io/mainnet/application/1134695678](https://lora.algokit.io/mainnet/application/1134695678). The main differences are:\n- Support for subscribing and unsubscribing from the xGov program. \n- Support for 3rd party node runners where now each proposer has its own admin which can register it online and offline. \n- The smart contract enforces the splitting of stake between the proposers. \n- Removed “min_proposer_balance” checks.\n\nNote that the existing state of the smart contract will persist after the update (global/local state and box storage). \n\n__Where do you suspect there may be bugs?__\n\nThe calculations for “immediate_mint”, “delayed_mint”, “claim_delayed_mint” and “burn” cannot be manipulated. In addition, the smart contract should enforce an approximate equal stake split between the proposers.\n\nYou should also check privileged operations are safely guarded.\n\n__What external dependencies are there?__\n\nThe main external dependency is the Algorand Consensus participation. Each proposers; participation keys will reside on its own Algorand Node and will receive ALGO rewards each time it proposes a block.\n\nAnother external dependency is the xGov program. The xGov power is given to block proposers and the smart contract allows delegating the control of the votes to an external address supplied by the “xgov_admin”.\n\nLastly some of the proposers’ Algorand Nodes may be run by trusted projects and/or key community members. \n\n__Are there any unusual points about your protocol that may confuse Security Researchers?__\n\nThe smart contract is an update of an existing smart contract which is already deployed on mainnet. Therefore there is no application create call supported. In addition you should consider the existing state of the smart contract [https://lora.algokit.io/mainnet/application/1134695678](https://lora.algokit.io/mainnet/application/1134695678) (global/local state and box storage) as these will persist between updates. The accompanying Design Overview Document provides further details on this.\n\nWhen an account is marked online/offline, the moment a key registration transaction is confirmed by the network it takes 320 rounds for the change to take effect. So, if a key registration is confirmed in round 5000, the account will stop participating at round 5320.\n\nThe same applies for changes in stake.",
+  "websiteUrl": "https://folks.finance/",
+  "githubUrl": null,
+  "eligibilityCriteria": [],
+  "responsiblePublicationCategory": null,
+  "description": "Folks Finance is a leading DeFi platform providing innovative tools for lending, borrowing, trading and managing digital assets, all in one place.",
+  "knownIssues": [],
+  "defaultOutOfScopeBlockchain": null,
+  "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+  "defaultOutOfScopeWebAndApplications": null,
+  "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+  "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+  "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+  "customOutOfScopeInformation": null,
+  "customProhibitedActivities": [],
+  "impacts": [
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 29,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Smart contract unable to operate due to lack of token funds"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 34,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
+    },
+    {
+      "id": 5267,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds for at least 1 hour"
+    }
+  ],
+  "rewards": [
+    {
+      "assetType": "smart_contract",
+      "level": "critical",
+      "payout": "Portion of the Reward Pool",
+      "pocRequired": true
+    },
+    {
+      "assetType": "smart_contract",
+      "level": "high",
+      "payout": "Portion of the Reward Pool",
+      "pocRequired": true
+    },
+    {
+      "assetType": "smart_contract",
+      "level": "medium",
+      "payout": "Portion of the Reward Pool",
+      "pocRequired": true
+    },
+    {
+      "assetType": "smart_contract",
+      "level": "low",
+      "payout": "Portion of the Reward Pool",
+      "pocRequired": true
+    }
+  ]
 }

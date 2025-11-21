@@ -1,684 +1,610 @@
 {
-  "pageProps": {
-    "isAttackathon": false,
-    "academyContent": null,
-    "ethereumAttackathonSponsors": null,
-    "project": {
-      "features": [
-        "Managed Triage: Time Saver"
-      ],
-      "premiumTriaging": true,
-      "isSafeHarborActive": false,
-      "performanceMetrics": {}
+  "assets": [
+    {
+      "id": "4mvglDK3LEFLbNp3K5clPn",
+      "revision": 1,
+      "type": "smart_contract",
+      "url": "https://etherscan.io/address/0xf2991507952d9594e71a44a54fb19f3109d213a5#code",
+      "description": "Timelock for DepositContractProxy",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2023-11-20T16:00:00.000Z"
     },
-    "bounty": {
-      "contentfulId": "42pNqgNigeVPHiqy9IPmTu",
-      "id": "boosteddegatebugbounty",
-      "slug": "boosteddegatebugbounty",
-      "project": "Audit Comp | DeGate",
-      "maxBounty": 400000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3IdBeRLWUgyzNlQMTxcsLk/e46540438fbcd3e556c45e1769418263/DeGate_logo.jpeg",
-      "launchDate": "2023-11-20T16:00:00.000Z",
-      "endDate": "2023-12-04T09:00:00.000Z",
-      "updatedDate": "2024-10-15T13:36:17.735Z",
-      "kyc": false,
-      "rewards": [
-        {
-          "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "Pool of USD $300,000",
-          "pocRequired": true
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "high",
-          "payout": "Pool of USD $50,000",
-          "pocRequired": true
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "Pool of USD $50,000 (baseline)",
-          "pocRequired": true
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "low",
-          "payout": "Pool of USD $50,000 (baseline)",
-          "pocRequired": true
-        }
-      ],
-      "audits": null,
-      "assets": [
-        {
-          "id": "4mvglDK3LEFLbNp3K5clPn",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0xf2991507952d9594e71a44a54fb19f3109d213a5#code",
-          "description": "Timelock for DepositContractProxy",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2023-11-20T16:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "05o5wmKiDXx1laZpssx8j",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x0d2ec0a5858730e7d49f5b4ae6f2c665e46c1d9d#code",
-          "description": "Timelock for ExchangeProxy",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2023-11-20T16:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "3s5SW75jd5UG18nVoWvhJr",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x54D7aE423Edb07282645e740C046B9373970a168#code",
-          "description": "DepositContractProxy",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2023-11-20T16:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "3t1bnnf9qptsJycPUjn4nk",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x9C07A72177c5A05410cA338823e790876E79D73B#code",
-          "description": "ExchangeProxy",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2023-11-20T16:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "5FhS0NYHXiKWO1bmiH40An",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x2028834B2c0A36A918c10937EeA71BE4f932da52#code",
-          "description": "Gnosis Multisig",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2023-11-20T16:00:00.000Z",
-          "fund": null
-        }
-      ],
-      "impacts": [
-        {
-          "id": 4570,
-          "type": "smart_contract",
-          "severity": "low",
-          "title": "Circuit fails to work correctly, but doesn’t lose value (Zero Knowledge Proof Circuit)"
-        },
-        {
-          "id": 34,
-          "type": "smart_contract",
-          "severity": "low",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value"
-        },
-        {
-          "id": 4571,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Theft of funds from the Default Deposit Contract that requires malicious actions from the DeGate Operator."
-        },
-        {
-          "id": 4572,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Permanent freezing of funds from the Default Deposit Contract that requires malicious actions from the DeGate Operator."
-        },
-        {
-          "id": 4573,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Direct theft of user funds from the Default Deposit Contract that is less than 1,000,000 USD."
-        },
-        {
-          "id": 4574,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Permanent freezing of funds in the Default Deposit Contract that is less than 2,500,000 USD."
-        },
-        {
-          "id": 4575,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Force DeGate into Exodus Mode"
-        },
-        {
-          "id": 4576,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Impact of this malicious contract verification through zk-proof"
-        },
-        {
-          "id": 4577,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "The amount of tokens in the L2 is inconsistent with that of the L1, except for Non-Standard tokens (Zero Knowledge Proof Circuit)"
-        },
-        {
-          "id": 4578,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Climbing blocks fails to recovery the asset tree (Zero Knowledge Proof Circuit)"
-        },
-        {
-          "id": 4579,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Temporary freezing of funds: Minimum freezing of 15 days (Zero Knowledge Proof Circuit)"
-        },
-        {
-          "id": 4580,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Prevent new token from registering (Zero Knowledge Proof Circuit)"
-        },
-        {
-          "id": 4581,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Steal trading fee or gas fee (Zero Knowledge Proof Circuit)"
-        },
-        {
-          "id": 4582,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Prevent new users from registering (Zero Knowledge Proof Circuit)"
-        },
-        {
-          "id": 4583,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "The account cannot be used (Zero Knowledge Proof Circuit)"
-        },
-        {
-          "id": 4584,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Theft of unclaimed rewards"
-        },
-        {
-          "id": 4585,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Permanent freezing of unclaimed rewards"
-        },
-        {
-          "id": 4586,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Smart contract unable to operate due to lack of token funds: Minimum 24hrs"
-        },
-        {
-          "id": 4587,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Block stuffing for profit"
-        },
-        {
-          "id": 31,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-        },
-        {
-          "id": 32,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Theft of gas"
-        },
-        {
-          "id": 33,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Unbounded gas consumption"
-        },
-        {
-          "id": 4588,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Direct theft of funds exceeding 1,000,000 USD from the Default Deposit Contract"
-        },
-        {
-          "id": 4589,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Permanent freezing of funds exceeding 2,500,000 USD in the Default Deposit Contract."
-        }
-      ],
-      "programOverview": "__Audit Competition Overview__\n\nA total of $400,000 USD in rewards is available in this audit competition. A baseline reward pool of $50,000 USD will be distributed among participants even if no valid bugs are found. For this audit competition, duplicates and private known issues are valid for a reward.\n\nDeGate will respond within 24 hours on weekdays to all bug reports. Any technical questions and support requests can be asked directly to DeGate or Immunefi in the [DeGate Audit Competition Discord channel.](https://discord.com/channels/787092485969150012/1173840561455775744)\n\nWhen the audit competition has ended Immunefi will publish an event-specific leaderboard and bug reports from the event. \n\nDeGate deployed approximately 500 nSLOC designed to allow them to upgrade their contracts. This new code is the target of this audit competition. DeGate is most interested in bugs in how their new contracts were deployed and how they interact with their protocol.\n\nA high level overview of the code which is in scope for this audit competition can be found here: [https://github.com/degatedev/protocols/commit/180138015197c886ec3c87efa8bf0031b653359f#commitcomment-132582143](https://github.com/degatedev/protocols/commit/180138015197c886ec3c87efa8bf0031b653359f#commitcomment-132582143)\n\nOnly the proxies themselves are in scope for this audit competition. Bugs in the implementation contracts are out of scope, but are valid for a reward in [DeGate's normal bug bounty program,](https://immunefi.com/bounty/degate/) and should be submitted there instead.\n\n__Project Overview__\n\n[DeGate](https://degate.com/) is a decentralized orderbook exchange (DEX) built on the Ethereum blockchain that utilizes zero-knowledge technology. DeGate DEX offers spot market trading with limit orders and also offers a grid trading function.\n\nDeGate operates as a decentralized autonomous organization (DAO). The DEX platform is focused on being user-friendly and is built on the principle of Trustlessness. With DeGate’s unique Efficient Gas Saving technology, users can expect super-low gas fees while using a decentralized protocol. Another critical component of DeGate is the Permissionless Listing feature which enables any token to be listed in a permissionless manner on DeGate’s orderbook DEX.\n\nFor more information about DeGate, visit [https://docs.degate.com](https://docs.degate.com)",
-      "prioritizedVulnerabilities": "Only the following (custom) impacts are accepted within this bug bounty program. All other impacts are not considered as in scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "This audit competition has $400,000 USD in rewards split across 3 reward pools. $300,000 is allocated to the Criticals reward pool, $50,000 to the Highs reward pool, and $50,000 to the Baseline rewards pool.\n\n__Reward Payment Terms__\n\nPayouts are handled by the DeGate team directly and are denominated in USD. However, payouts are done in USDC.\n\nRewards will be distributed all at once after the event has concluded and the final bug reports have been resolved.\n\nThe following reward rules are a summary, for an in-depth explanation read our [Reward Distribution Rules article](https://immunefisupport.zendesk.com/hc/en-us/articles/20215594250385-DeGate-s-Boosted-Bug-Bounty-Reward-Distribution-Rules). The reward mechanisms are designed to reward all high quality whitehat work, with the greatest rewards for Critical issues and unique findings.\n\n__Duplicate & Private Known Issue Reward Policy__\n\nDuplicate bug reports which are in-scope for this event are considered valid and will be rewarded in a Sybil-resistant manner. Attempts to abuse the duplicate reward policy will result in a ban and forfeit of all rewards.\nPrivate known issues, meaning bugs known to the project but not publicly disclosed, which are in scope for this event are considered valid and will be rewarded at a reduced rate of 25%.\n\n__Baseline Reward Pool__\n\nThe $50,000 USD baseline reward pool is distributed among all participants. 80% is split among all valid report submissions based on the bug’s severity. 20% is distributed at Immunefi’s discretion to highly valuable reports, even if they’re technically invalid, and other significant contributions.\nThe entire baseline reward pool will be distributed even if no valid bugs are found.\n\n__Criticals Reward Pool__\n\nThe $300,000 USD Criticals reward pool is distributed among all valid Critical severity reports. This reward pool is split among all Critical bug submissions with 80% going to the primary finder and 20% going to all other finders in a Sybil-resistant way. The primary finder is the first whitehat to demonstrate how the bug is Critical severity.\nIf no Critical severity bugs are found then this reward pool is not distributed.\n\n__Highs Reward Pool__\n\nThe $50,000 USD Highs reward pool is distributed among all valid High severity reports. This reward pool is split among all High bug submissions with 80% going to the primary finder and 20% going to all other finders in a Sybil-resistant way. The primary finder is the first whitehat to demonstrate how the bug is High severity.\nIf no High severity bugs are found then this reward pool is not distributed.",
-      "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories:__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Blockchain/DLT & Smart Contract Specific:__\n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n- Impacts involving balance changes and authority freezes caused by the token contract itself, such as rebase tokens\n- Impacts involving the need to use more than 300 ETH in gas fees to force entry into Exodus Mode through block stuffing, storage occupation, or executing other potential economic attacks.\n\n__Prohibited Activities:__\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Out-of-scope bugs which are in-scope for DeGate’s normal bug bounty program may not be published. Such bug reports are to be submitted to [DeGate’s normal bug bounty program.](https://immunefi.com/bounty/degate/)\n- Bug reports in mediation may not be published until mediation has concluded.\n\nImmunefi may publish bug reports submitted to this audit competition.",
-      "assetsBodyV2": "__Assets in Scope__\n\nAll impacts resulting from the introduction of the in code listed in scope are in scope for this audit competition.\n\nAll impacts not resulting from the introduction of the code listed in scope should be submitted to [DeGate’s normal bug bounty program ](https://immunefi.com/bounty/degate/)instead.\n\nImpacts on test files, mock files, and configuration files are out of scope, unless stated otherwise in the bug bounty program.\nTimelock contracts source code (a fork from Compound): [https://github.com/degatedev/protocols/blob/degate1.1.0/packages/loopring_v3/contracts/thirdparty/timelock](https://github.com/degatedev/protocols/blob/degate1.1.0/packages/loopring_v3/contracts/thirdparty/timelock)\n\nUpgradability contracts source code: [https://github.com/degatedev/protocols/blob/degate1.1.0/packages/loopring_v3/contracts/thirdparty/proxies](https://github.com/degatedev/protocols/blob/degate1.1.0/packages/loopring_v3/contracts/thirdparty/proxies)\n\nDocumentation directly pertaining to the in scope code can be found at: [https://github.com/degatedev/protocols/commit/180138015197c886ec3c87efa8bf0031b653359f#commitcomment-132582143](https://github.com/degatedev/protocols/commit/180138015197c886ec3c87efa8bf0031b653359f#commitcomment-132582143) \n\n__Further Resources__\n\nDeGate is especially interested in bugs in how this new code interacts with their older code.\n\nAll DeGate’s smart contract code, including out of scope smart contract code, can be found at [https://github.com/degatedev/protocols/tree/degate1.1.0/packages/loopring_v3/contracts](https://github.com/degatedev/protocols/tree/degate1.1.0/packages/loopring_v3/contracts), along with the [Protocol Specification Docs](https://github.com/degatedev/protocols/blob/degate1.1.0/DeGate%20Protocol%20Specification%20Document.md?utm_source=immunefi), [Circuit Design Docs](https://github.com/degatedev/protocols/blob/degate1.1.0/Circuit%20Design.md?utm_source=immunefi) and [Smart Contract Design Docs.](https://github.com/degatedev/protocols/blob/degate1.1.0/Smart%20Contract%20Design.md?utm_source=immunefi)\n\nDeGate Testnet is currently live on [https://testnet.degate.com,](https://testnet.degate.com) and more details can be found in the product documentation ([https://docs.degate.com/v/product_en/readme](https://docs.degate.com/v/product_en/readme) ). \n\nTo ask DeGate or Immunefi questions directly, join the [DeGate Audit Competition Discord channel.](https://discord.com/channels/787092485969150012/1173840561455775744)\n\n__Previous Audits & Known Issues__\n\nPrivate known issues, meaning known issues which were not publicly disclosed, are valid for a partial reward. If a bug found during the event requires an immediate fix then that bug will be considered a publicly known issue as soon as the fix is deployed.\nDeGate’s completed audit reports and known issues can be found at:\n\n- Previous Code: \nhttps://github.com/degatedev/protocols/blob/degate_mainnet/packages/loopring_v3/security_audit/Trailofbits%20-%20DeGate%20Final%20Audit%20Report.pdf \n- Previous Code: https://github.com/degatedev/protocols/blob/degate_mainnet/packages/loopring_v3/security_audit/Least%20Authority%20-%20DeGate%20DAO%20DeGate%20Smart%20Contracts%20Updated%20Final%20Audit%20Report.pdf \n- Previous Code:\nhttps://github.com/degatedev/protocols/blob/degate_mainnet/packages/loopring_v3/security_audit/Least%20Authority%20-%20DeGate%20Technology%20DeGate%20zk-SNARK%20Circuit%20Final%20Audit%20Report.pdf\n- Previous Code: https://github.com/degatedev/protocols/blob/degate_mainnet/packages/loopring_v3/security_audit/DeGate_Report_EN-final2023.pdf \n- Previous Code: https://github.com/degatedev/protocols/blob/degate_mainnet/packages/loopring_v3/security_audit/DeGate_Report_EN-final20230912.pdf  \n- Latest Code:\nhttps://github.com/degatedev/protocols/blob/degate1.1.0/packages/loopring_v3/security_audit/DeGate_Report_EN-20231115.pdf\n\nAny unfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n\n__Known Issue Assurance__\n\nDeGate commits to providing Known Issue Assurance to bug submissions through their program. This means that DeGate will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission.\n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in scope, and due a reward.\n\n__Primacy of Impact vs Primacy of Rules__\n\nThis timeboxed bug bounty adheres to the Primacy of Rules, which means that the whole timeboxed bug bounty program is run strictly under the terms stated on this page.\n\nIf your bug report demonstrates an impact which does not originate from or depend on the assets in scope of this timeboxed bug bounty program then it may be valid for a reward on [DeGate’s normal bug bounty program](https://immunefi.com/bounty/degate/), which utilizes Primacy of Impact.",
-      "impactsBody": "__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n__List of ERC20, ERC721, and ERC777 that DeGate Can Interact With:__\n\n- DeGate is permissionless and can interact with all ERC20s. However, impacts involving balance changes and authority freezes caused by the token contract itself are out of scope, such as rebase tokens\n- ERC721 and ERC777 are incompatible with DeGate\n\n__Validity of bugs dependent on 100% trusted actors or privileged addresses:__\n\n- DeGate is built on the principle of Trustlessness, or ‘Can’t do evil’. Impacts due to the unintended functions of an Operator are especially valuable and valid for a reward.\n- DeGate is interested in all impacts caused by the unintended functionality of multisig owners. Such bugs are in scope and valid for a reward, with the exception of impacts dependent on the multisig owners proposing new malicious code that will only implement after a 45 day delay.\n\n__Repeatable Attack Limitations__\n\n- If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attacks within the first hour will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n- For critical repeatable attacks on smart contracts that can not be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards ](https://immunefisupport.zendesk.com/hc/en-us/sections/18488140853905-Feasibility-Limitations)which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.",
-      "immunefiStandard": true,
-      "tags": {
-        "general": [
-          "Immunefi Standard",
-          "KYC Not Required",
-          "Step-by-step PoC Required"
-        ],
-        "productType": [
-          "Asset Management",
-          "DEX",
-          "L2"
-        ],
-        "projectType": [
-          "Defi",
-          "Exchange"
-        ],
-        "ecosystem": [
-          "ETH"
-        ],
-        "programType": [
-          "Smart Contract"
-        ],
-        "language": [
-          "C/C++",
-          "Go",
-          "Solidity"
-        ],
-        "featured": [
-          "Launched Recently"
-        ]
-      },
-      "legacy": {
-        "technologies": [
-          "Smart Contract"
-        ],
-        "blockchain_rewards": [],
-        "smartcontract_rewards": [
-          {
-            "level": "Critical",
-            "payout": "Pool of USD $300,000"
-          },
-          {
-            "level": "High",
-            "payout": "Pool of USD $50,000"
-          },
-          {
-            "level": "Medium",
-            "payout": "Pool of USD $50,000 (baseline)"
-          },
-          {
-            "level": "Low",
-            "payout": "Pool of USD $50,000 (baseline)"
-          }
-        ],
-        "web_rewards": []
-      },
-      "evaluationEndDate": "2023-12-21T09:00:00.000Z",
-      "boostedIntroStartingIn": "",
-      "boostedIntroLive": "",
-      "boostedIntroEvaluating": "",
-      "boostedIntroFinished": "All paid bug reports are available in original format [here](https://github.com/immunefi-team/Bounty_Boosts/tree/main/DeGate).",
-      "rewardsToken": "USDC",
-      "rewardsPool": 50000,
-      "primaryPool": 50000,
-      "allStarsPool": 0,
-      "podiumPool": 0,
-      "sourceLinesOfCode": 500,
-      "boostedSummaryReport": null,
-      "inviteOnly": false,
-      "hideAssetsInScope": null,
-      "boostedLeaderboard": [
-        {
-          "high": 0,
-          "name": "infosec_us_team",
-          "critical": 0,
-          "earnings": 7000,
-          "insights": 3,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "yttriumzz",
-          "critical": 0,
-          "earnings": 3000,
-          "insights": 2,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "dontonka",
-          "critical": 0,
-          "earnings": 3000,
-          "insights": 2,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "p4rsely",
-          "critical": 0,
-          "earnings": 3000,
-          "insights": 2,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "ThreeHrSleep",
-          "critical": 0,
-          "earnings": 2500,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "neth",
-          "critical": 0,
-          "earnings": 2500,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "Shogoki",
-          "critical": 0,
-          "earnings": 2500,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "JCN2023",
-          "critical": 0,
-          "earnings": 2500,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "Merkle_Bonsai",
-          "critical": 0,
-          "earnings": 2500,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "lordagnew",
-          "critical": 0,
-          "earnings": 2500,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "savi0ur",
-          "critical": 0,
-          "earnings": 1500,
-          "insights": 2,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "ongrid",
-          "critical": 0,
-          "earnings": 1500,
-          "insights": 2,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "CanYeRest298751",
-          "critical": 0,
-          "earnings": 1000,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "said",
-          "critical": 0,
-          "earnings": 1000,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "kank",
-          "critical": 0,
-          "earnings": 1000,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "piken",
-          "critical": 0,
-          "earnings": 1000,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "Paludo0x",
-          "critical": 0,
-          "earnings": 1000,
-          "insights": 2,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "SentientX",
-          "critical": 0,
-          "earnings": 1000,
-          "insights": 2,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "cheatcode",
-          "critical": 0,
-          "earnings": 1000,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "OxSCSamurai",
-          "critical": 0,
-          "earnings": 1000,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "peterm",
-          "critical": 0,
-          "earnings": 1000,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "Madalad",
-          "critical": 0,
-          "earnings": 1000,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "v0id",
-          "critical": 0,
-          "earnings": 1000,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "EricTee",
-          "critical": 0,
-          "earnings": 750,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "KaloMen",
-          "critical": 0,
-          "earnings": 750,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "hoshiyari",
-          "critical": 0,
-          "earnings": 500,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "Bauchibred",
-          "critical": 0,
-          "earnings": 500,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "xBentley",
-          "critical": 0,
-          "earnings": 500,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "conqueror",
-          "critical": 0,
-          "earnings": 500,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "copperscrewer",
-          "critical": 0,
-          "earnings": 250,
-          "insights": 2,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "ZanyBonzy",
-          "critical": 0,
-          "earnings": 250,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "naraion",
-          "critical": 0,
-          "earnings": 250,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "Kodak",
-          "critical": 0,
-          "earnings": 250,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "Breeje",
-          "critical": 0,
-          "earnings": 250,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "whunter",
-          "critical": 0,
-          "earnings": 250,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        }
-      ],
-      "features": [
-        "Managed Triage: Time Saver"
-      ],
-      "academyStartDate": null,
-      "websiteUrl": null,
-      "description": "DeGate deployed approximately 500 nSLOC designed to allow them to upgrade their contracts. This new code is the target of this audit competition",
-      "githubUrl": null,
-      "feasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
-      "prohibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
-      "responsiblePublicationCategory": null,
-      "knownIssues": [],
-      "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
-      "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": null,
-      "defaultFeasibilityLimitations": null,
-      "customOutOfScopeInformation": null,
-      "customProhibitedActivities": [],
-      "rewardsTokenNetwork": "Ethereum",
-      "eligibilityCriteria": [],
-      "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
-      "programDocumentations": [],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
-      "findingsUrl": null,
-      "premiumTriaging": true
+    {
+      "id": "05o5wmKiDXx1laZpssx8j",
+      "revision": 1,
+      "type": "smart_contract",
+      "url": "https://etherscan.io/address/0x0d2ec0a5858730e7d49f5b4ae6f2c665e46c1d9d#code",
+      "description": "Timelock for ExchangeProxy",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2023-11-20T16:00:00.000Z"
     },
-    "layoutProps": {
-      "headerMarginBottom": "mb-12 lg:mb-16"
+    {
+      "id": "3s5SW75jd5UG18nVoWvhJr",
+      "revision": 1,
+      "type": "smart_contract",
+      "url": "https://etherscan.io/address/0x54D7aE423Edb07282645e740C046B9373970a168#code",
+      "description": "DepositContractProxy",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2023-11-20T16:00:00.000Z"
     },
-    "metaData": {
-      "title": "Audit Comp | DeGate Bug Bounties",
-      "description": "Find bugs and vulnerabilities on Audit Comp | DeGate and get paid up to $400,000.",
-      "url": "https://immunefi.com/audit-competition/boosteddegatebugbounty/",
-      "ogImg": "/api/bounty/og-image/?project=Audit+Comp+%7C+DeGate&slug=boosteddegatebugbounty"
+    {
+      "id": "3t1bnnf9qptsJycPUjn4nk",
+      "revision": 1,
+      "type": "smart_contract",
+      "url": "https://etherscan.io/address/0x9C07A72177c5A05410cA338823e790876E79D73B#code",
+      "description": "ExchangeProxy",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2023-11-20T16:00:00.000Z"
+    },
+    {
+      "id": "5FhS0NYHXiKWO1bmiH40An",
+      "revision": 1,
+      "type": "smart_contract",
+      "url": "https://etherscan.io/address/0x2028834B2c0A36A918c10937EeA71BE4f932da52#code",
+      "description": "Gnosis Multisig",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2023-11-20T16:00:00.000Z"
     }
-  },
-  "__N_SSG": true
+  ],
+  "assetsBodyV2": "__Assets in Scope__\n\nAll impacts resulting from the introduction of the in code listed in scope are in scope for this audit competition.\n\nAll impacts not resulting from the introduction of the code listed in scope should be submitted to [DeGate’s normal bug bounty program ](https://immunefi.com/bounty/degate/)instead.\n\nImpacts on test files, mock files, and configuration files are out of scope, unless stated otherwise in the bug bounty program.\nTimelock contracts source code (a fork from Compound): [https://github.com/degatedev/protocols/blob/degate1.1.0/packages/loopring_v3/contracts/thirdparty/timelock](https://github.com/degatedev/protocols/blob/degate1.1.0/packages/loopring_v3/contracts/thirdparty/timelock)\n\nUpgradability contracts source code: [https://github.com/degatedev/protocols/blob/degate1.1.0/packages/loopring_v3/contracts/thirdparty/proxies](https://github.com/degatedev/protocols/blob/degate1.1.0/packages/loopring_v3/contracts/thirdparty/proxies)\n\nDocumentation directly pertaining to the in scope code can be found at: [https://github.com/degatedev/protocols/commit/180138015197c886ec3c87efa8bf0031b653359f#commitcomment-132582143](https://github.com/degatedev/protocols/commit/180138015197c886ec3c87efa8bf0031b653359f#commitcomment-132582143) \n\n__Further Resources__\n\nDeGate is especially interested in bugs in how this new code interacts with their older code.\n\nAll DeGate’s smart contract code, including out of scope smart contract code, can be found at [https://github.com/degatedev/protocols/tree/degate1.1.0/packages/loopring_v3/contracts](https://github.com/degatedev/protocols/tree/degate1.1.0/packages/loopring_v3/contracts), along with the [Protocol Specification Docs](https://github.com/degatedev/protocols/blob/degate1.1.0/DeGate%20Protocol%20Specification%20Document.md?utm_source=immunefi), [Circuit Design Docs](https://github.com/degatedev/protocols/blob/degate1.1.0/Circuit%20Design.md?utm_source=immunefi) and [Smart Contract Design Docs.](https://github.com/degatedev/protocols/blob/degate1.1.0/Smart%20Contract%20Design.md?utm_source=immunefi)\n\nDeGate Testnet is currently live on [https://testnet.degate.com,](https://testnet.degate.com) and more details can be found in the product documentation ([https://docs.degate.com/v/product_en/readme](https://docs.degate.com/v/product_en/readme) ). \n\nTo ask DeGate or Immunefi questions directly, join the [DeGate Audit Competition Discord channel.](https://discord.com/channels/787092485969150012/1173840561455775744)\n\n__Previous Audits & Known Issues__\n\nPrivate known issues, meaning known issues which were not publicly disclosed, are valid for a partial reward. If a bug found during the event requires an immediate fix then that bug will be considered a publicly known issue as soon as the fix is deployed.\nDeGate’s completed audit reports and known issues can be found at:\n\n- Previous Code: \nhttps://github.com/degatedev/protocols/blob/degate_mainnet/packages/loopring_v3/security_audit/Trailofbits%20-%20DeGate%20Final%20Audit%20Report.pdf \n- Previous Code: https://github.com/degatedev/protocols/blob/degate_mainnet/packages/loopring_v3/security_audit/Least%20Authority%20-%20DeGate%20DAO%20DeGate%20Smart%20Contracts%20Updated%20Final%20Audit%20Report.pdf \n- Previous Code:\nhttps://github.com/degatedev/protocols/blob/degate_mainnet/packages/loopring_v3/security_audit/Least%20Authority%20-%20DeGate%20Technology%20DeGate%20zk-SNARK%20Circuit%20Final%20Audit%20Report.pdf\n- Previous Code: https://github.com/degatedev/protocols/blob/degate_mainnet/packages/loopring_v3/security_audit/DeGate_Report_EN-final2023.pdf \n- Previous Code: https://github.com/degatedev/protocols/blob/degate_mainnet/packages/loopring_v3/security_audit/DeGate_Report_EN-final20230912.pdf  \n- Latest Code:\nhttps://github.com/degatedev/protocols/blob/degate1.1.0/packages/loopring_v3/security_audit/DeGate_Report_EN-20231115.pdf\n\nAny unfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n\n__Known Issue Assurance__\n\nDeGate commits to providing Known Issue Assurance to bug submissions through their program. This means that DeGate will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission.\n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in scope, and due a reward.\n\n__Primacy of Impact vs Primacy of Rules__\n\nThis timeboxed bug bounty adheres to the Primacy of Rules, which means that the whole timeboxed bug bounty program is run strictly under the terms stated on this page.\n\nIf your bug report demonstrates an impact which does not originate from or depend on the assets in scope of this timeboxed bug bounty program then it may be valid for a reward on [DeGate’s normal bug bounty program](https://immunefi.com/bounty/degate/), which utilizes Primacy of Impact.",
+  "boostedIntroEvaluating": "",
+  "boostedIntroFinished": "All paid bug reports are available in original format [here](https://github.com/immunefi-team/Bounty_Boosts/tree/main/DeGate).",
+  "boostedIntroLive": "",
+  "boostedIntroStartingIn": "",
+  "boostedLeaderboard": [
+    {
+      "high": 0,
+      "name": "infosec_us_team",
+      "critical": 0,
+      "earnings": 7000,
+      "insights": 3,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "yttriumzz",
+      "critical": 0,
+      "earnings": 3000,
+      "insights": 2,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "dontonka",
+      "critical": 0,
+      "earnings": 3000,
+      "insights": 2,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "p4rsely",
+      "critical": 0,
+      "earnings": 3000,
+      "insights": 2,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "ThreeHrSleep",
+      "critical": 0,
+      "earnings": 2500,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "neth",
+      "critical": 0,
+      "earnings": 2500,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "Shogoki",
+      "critical": 0,
+      "earnings": 2500,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "JCN2023",
+      "critical": 0,
+      "earnings": 2500,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "Merkle_Bonsai",
+      "critical": 0,
+      "earnings": 2500,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "lordagnew",
+      "critical": 0,
+      "earnings": 2500,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "savi0ur",
+      "critical": 0,
+      "earnings": 1500,
+      "insights": 2,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "ongrid",
+      "critical": 0,
+      "earnings": 1500,
+      "insights": 2,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "CanYeRest298751",
+      "critical": 0,
+      "earnings": 1000,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "said",
+      "critical": 0,
+      "earnings": 1000,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "kank",
+      "critical": 0,
+      "earnings": 1000,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "piken",
+      "critical": 0,
+      "earnings": 1000,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "Paludo0x",
+      "critical": 0,
+      "earnings": 1000,
+      "insights": 2,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "SentientX",
+      "critical": 0,
+      "earnings": 1000,
+      "insights": 2,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "cheatcode",
+      "critical": 0,
+      "earnings": 1000,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "OxSCSamurai",
+      "critical": 0,
+      "earnings": 1000,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "peterm",
+      "critical": 0,
+      "earnings": 1000,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "Madalad",
+      "critical": 0,
+      "earnings": 1000,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "v0id",
+      "critical": 0,
+      "earnings": 1000,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "EricTee",
+      "critical": 0,
+      "earnings": 750,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "KaloMen",
+      "critical": 0,
+      "earnings": 750,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "hoshiyari",
+      "critical": 0,
+      "earnings": 500,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "Bauchibred",
+      "critical": 0,
+      "earnings": 500,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "xBentley",
+      "critical": 0,
+      "earnings": 500,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "conqueror",
+      "critical": 0,
+      "earnings": 500,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "copperscrewer",
+      "critical": 0,
+      "earnings": 250,
+      "insights": 2,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "ZanyBonzy",
+      "critical": 0,
+      "earnings": 250,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "naraion",
+      "critical": 0,
+      "earnings": 250,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "Kodak",
+      "critical": 0,
+      "earnings": 250,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "Breeje",
+      "critical": 0,
+      "earnings": 250,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "whunter",
+      "critical": 0,
+      "earnings": 250,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    }
+  ],
+  "boostedSummaryReport": null,
+  "ecosystem": [
+    "ETH"
+  ],
+  "endDate": "2023-12-04T09:00:00.000Z",
+  "evaluationEndDate": "2023-12-21T09:00:00.000Z",
+  "features": [
+    "Managed Triage: Time Saver"
+  ],
+  "hideAssetsInScope": null,
+  "immunefiStandard": true,
+  "inviteOnly": false,
+  "kyc": false,
+  "language": [
+    "C/C++",
+    "Go",
+    "Solidity"
+  ],
+  "launchDate": "2023-11-20T16:00:00.000Z",
+  "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3IdBeRLWUgyzNlQMTxcsLk/e46540438fbcd3e556c45e1769418263/DeGate_logo.jpeg",
+  "maxBounty": 400000,
+  "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories:__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Blockchain/DLT & Smart Contract Specific:__\n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n- Impacts involving balance changes and authority freezes caused by the token contract itself, such as rebase tokens\n- Impacts involving the need to use more than 300 ETH in gas fees to force entry into Exodus Mode through block stuffing, storage occupation, or executing other potential economic attacks.\n\n__Prohibited Activities:__\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Out-of-scope bugs which are in-scope for DeGate’s normal bug bounty program may not be published. Such bug reports are to be submitted to [DeGate’s normal bug bounty program.](https://immunefi.com/bounty/degate/)\n- Bug reports in mediation may not be published until mediation has concluded.\n\nImmunefi may publish bug reports submitted to this audit competition.",
+  "pocPerTypeAndSeverity": [
+    "smart_contract - critical",
+    "smart_contract - high",
+    "smart_contract - medium",
+    "smart_contract - low"
+  ],
+  "primaryPaymentWallet": "EVM",
+  "prioritizedVulnerabilities": "Only the following (custom) impacts are accepted within this bug bounty program. All other impacts are not considered as in scope, even if they affect something in the assets in scope table.",
+  "productType": [
+    "Asset Management",
+    "DEX",
+    "L2"
+  ],
+  "programOverview": "__Audit Competition Overview__\n\nA total of $400,000 USD in rewards is available in this audit competition. A baseline reward pool of $50,000 USD will be distributed among participants even if no valid bugs are found. For this audit competition, duplicates and private known issues are valid for a reward.\n\nDeGate will respond within 24 hours on weekdays to all bug reports. Any technical questions and support requests can be asked directly to DeGate or Immunefi in the [DeGate Audit Competition Discord channel.](https://discord.com/channels/787092485969150012/1173840561455775744)\n\nWhen the audit competition has ended Immunefi will publish an event-specific leaderboard and bug reports from the event. \n\nDeGate deployed approximately 500 nSLOC designed to allow them to upgrade their contracts. This new code is the target of this audit competition. DeGate is most interested in bugs in how their new contracts were deployed and how they interact with their protocol.\n\nA high level overview of the code which is in scope for this audit competition can be found here: [https://github.com/degatedev/protocols/commit/180138015197c886ec3c87efa8bf0031b653359f#commitcomment-132582143](https://github.com/degatedev/protocols/commit/180138015197c886ec3c87efa8bf0031b653359f#commitcomment-132582143)\n\nOnly the proxies themselves are in scope for this audit competition. Bugs in the implementation contracts are out of scope, but are valid for a reward in [DeGate's normal bug bounty program,](https://immunefi.com/bounty/degate/) and should be submitted there instead.\n\n__Project Overview__\n\n[DeGate](https://degate.com/) is a decentralized orderbook exchange (DEX) built on the Ethereum blockchain that utilizes zero-knowledge technology. DeGate DEX offers spot market trading with limit orders and also offers a grid trading function.\n\nDeGate operates as a decentralized autonomous organization (DAO). The DEX platform is focused on being user-friendly and is built on the principle of Trustlessness. With DeGate’s unique Efficient Gas Saving technology, users can expect super-low gas fees while using a decentralized protocol. Another critical component of DeGate is the Permissionless Listing feature which enables any token to be listed in a permissionless manner on DeGate’s orderbook DEX.\n\nFor more information about DeGate, visit [https://docs.degate.com](https://docs.degate.com)",
+  "programType": [
+    "Smart Contract"
+  ],
+  "project": "Audit Comp | DeGate",
+  "projectType": [
+    "Defi",
+    "Exchange"
+  ],
+  "rewardsBody": "This audit competition has $400,000 USD in rewards split across 3 reward pools. $300,000 is allocated to the Criticals reward pool, $50,000 to the Highs reward pool, and $50,000 to the Baseline rewards pool.\n\n__Reward Payment Terms__\n\nPayouts are handled by the DeGate team directly and are denominated in USD. However, payouts are done in USDC.\n\nRewards will be distributed all at once after the event has concluded and the final bug reports have been resolved.\n\nThe following reward rules are a summary, for an in-depth explanation read our [Reward Distribution Rules article](https://immunefisupport.zendesk.com/hc/en-us/articles/20215594250385-DeGate-s-Boosted-Bug-Bounty-Reward-Distribution-Rules). The reward mechanisms are designed to reward all high quality whitehat work, with the greatest rewards for Critical issues and unique findings.\n\n__Duplicate & Private Known Issue Reward Policy__\n\nDuplicate bug reports which are in-scope for this event are considered valid and will be rewarded in a Sybil-resistant manner. Attempts to abuse the duplicate reward policy will result in a ban and forfeit of all rewards.\nPrivate known issues, meaning bugs known to the project but not publicly disclosed, which are in scope for this event are considered valid and will be rewarded at a reduced rate of 25%.\n\n__Baseline Reward Pool__\n\nThe $50,000 USD baseline reward pool is distributed among all participants. 80% is split among all valid report submissions based on the bug’s severity. 20% is distributed at Immunefi’s discretion to highly valuable reports, even if they’re technically invalid, and other significant contributions.\nThe entire baseline reward pool will be distributed even if no valid bugs are found.\n\n__Criticals Reward Pool__\n\nThe $300,000 USD Criticals reward pool is distributed among all valid Critical severity reports. This reward pool is split among all Critical bug submissions with 80% going to the primary finder and 20% going to all other finders in a Sybil-resistant way. The primary finder is the first whitehat to demonstrate how the bug is Critical severity.\nIf no Critical severity bugs are found then this reward pool is not distributed.\n\n__Highs Reward Pool__\n\nThe $50,000 USD Highs reward pool is distributed among all valid High severity reports. This reward pool is split among all High bug submissions with 80% going to the primary finder and 20% going to all other finders in a Sybil-resistant way. The primary finder is the first whitehat to demonstrate how the bug is High severity.\nIf no High severity bugs are found then this reward pool is not distributed.",
+  "rewardsPool": 50000,
+  "primaryPool": 50000,
+  "allStarsPool": 0,
+  "podiumPool": 0,
+  "rewardsToken": "USDC",
+  "slug": "boosteddegatebugbounty",
+  "updatedDate": "2024-10-15T13:36:17.735Z",
+  "impactsBody": "__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n__List of ERC20, ERC721, and ERC777 that DeGate Can Interact With:__\n\n- DeGate is permissionless and can interact with all ERC20s. However, impacts involving balance changes and authority freezes caused by the token contract itself are out of scope, such as rebase tokens\n- ERC721 and ERC777 are incompatible with DeGate\n\n__Validity of bugs dependent on 100% trusted actors or privileged addresses:__\n\n- DeGate is built on the principle of Trustlessness, or ‘Can’t do evil’. Impacts due to the unintended functions of an Operator are especially valuable and valid for a reward.\n- DeGate is interested in all impacts caused by the unintended functionality of multisig owners. Such bugs are in scope and valid for a reward, with the exception of impacts dependent on the multisig owners proposing new malicious code that will only implement after a 45 day delay.\n\n__Repeatable Attack Limitations__\n\n- If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attacks within the first hour will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n- For critical repeatable attacks on smart contracts that can not be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards ](https://immunefisupport.zendesk.com/hc/en-us/sections/18488140853905-Feasibility-Limitations)which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.",
+  "websiteUrl": null,
+  "githubUrl": null,
+  "eligibilityCriteria": [],
+  "responsiblePublicationCategory": null,
+  "description": "DeGate deployed approximately 500 nSLOC designed to allow them to upgrade their contracts. This new code is the target of this audit competition",
+  "knownIssues": [],
+  "defaultOutOfScopeBlockchain": null,
+  "defaultOutOfScopeSmartContract": null,
+  "defaultOutOfScopeWebAndApplications": null,
+  "defaultOutOfScopeGeneral": null,
+  "defaultFeasibilityLimitations": null,
+  "defaultProhibitedActivities": null,
+  "customOutOfScopeInformation": null,
+  "customProhibitedActivities": [],
+  "impacts": [
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 32,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of gas"
+    },
+    {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
+    },
+    {
+      "id": 34,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
+    },
+    {
+      "id": 4570,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Circuit fails to work correctly, but doesn’t lose value (Zero Knowledge Proof Circuit)"
+    },
+    {
+      "id": 4571,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of funds from the Default Deposit Contract that requires malicious actions from the DeGate Operator."
+    },
+    {
+      "id": 4572,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of funds from the Default Deposit Contract that requires malicious actions from the DeGate Operator."
+    },
+    {
+      "id": 4573,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Direct theft of user funds from the Default Deposit Contract that is less than 1,000,000 USD."
+    },
+    {
+      "id": 4574,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of funds in the Default Deposit Contract that is less than 2,500,000 USD."
+    },
+    {
+      "id": 4575,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Force DeGate into Exodus Mode"
+    },
+    {
+      "id": 4576,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Impact of this malicious contract verification through zk-proof"
+    },
+    {
+      "id": 4577,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "The amount of tokens in the L2 is inconsistent with that of the L1, except for Non-Standard tokens (Zero Knowledge Proof Circuit)"
+    },
+    {
+      "id": 4578,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Climbing blocks fails to recovery the asset tree (Zero Knowledge Proof Circuit)"
+    },
+    {
+      "id": 4579,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds: Minimum freezing of 15 days (Zero Knowledge Proof Circuit)"
+    },
+    {
+      "id": 4580,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Prevent new token from registering (Zero Knowledge Proof Circuit)"
+    },
+    {
+      "id": 4581,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Steal trading fee or gas fee (Zero Knowledge Proof Circuit)"
+    },
+    {
+      "id": 4582,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Prevent new users from registering (Zero Knowledge Proof Circuit)"
+    },
+    {
+      "id": 4583,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "The account cannot be used (Zero Knowledge Proof Circuit)"
+    },
+    {
+      "id": 4584,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed rewards"
+    },
+    {
+      "id": 4585,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed rewards"
+    },
+    {
+      "id": 4586,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Smart contract unable to operate due to lack of token funds: Minimum 24hrs"
+    },
+    {
+      "id": 4587,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing for profit"
+    },
+    {
+      "id": 4588,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of funds exceeding 1,000,000 USD from the Default Deposit Contract"
+    },
+    {
+      "id": 4589,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds exceeding 2,500,000 USD in the Default Deposit Contract."
+    }
+  ],
+  "rewards": [
+    {
+      "assetType": "smart_contract",
+      "level": "critical",
+      "payout": "Pool of USD $300,000",
+      "pocRequired": true
+    },
+    {
+      "assetType": "smart_contract",
+      "level": "high",
+      "payout": "Pool of USD $50,000",
+      "pocRequired": true
+    },
+    {
+      "assetType": "smart_contract",
+      "level": "medium",
+      "payout": "Pool of USD $50,000 (baseline)",
+      "pocRequired": true
+    },
+    {
+      "assetType": "smart_contract",
+      "level": "low",
+      "payout": "Pool of USD $50,000 (baseline)",
+      "pocRequired": true
+    }
+  ]
 }

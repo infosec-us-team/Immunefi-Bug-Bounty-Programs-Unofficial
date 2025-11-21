@@ -1,255 +1,191 @@
 {
-  "pageProps": {
-    "bounty": {
-      "contentfulId": "1SZjYExbqhHzguldeBbmEI",
-      "id": "alchemix",
-      "slug": "alchemix",
-      "project": "Alchemix",
-      "maxBounty": 300000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2NgcBC2slhGYI8qYGnTsCw/0616521e1a588b3a5373af0215dd2a2b/Alchemix-logo.png",
-      "launchDate": "2022-08-25T07:00:00.000Z",
-      "endDate": null,
-      "updatedDate": "2025-03-26T01:31:50.121Z",
-      "kyc": false,
-      "rewards": [
-        {
-          "id": 15599,
-          "assetType": "smart_contract",
-          "severity": "critical",
-          "rewardModel": "up_to",
-          "maxReward": 300000,
-          "rewardCalculationPercentage": 10
-        },
-        {
-          "id": 15600,
-          "assetType": "smart_contract",
-          "severity": "high",
-          "rewardModel": "range",
-          "maxReward": 35000,
-          "minReward": 5000
-        },
-        {
-          "id": 15601,
-          "assetType": "smart_contract",
-          "severity": "medium",
-          "rewardModel": "fixed",
-          "fixedReward": 4000
-        },
-        {
-          "id": 15602,
-          "assetType": "smart_contract",
-          "severity": "low",
-          "rewardModel": "fixed",
-          "fixedReward": 1000
-        }
-      ],
-      "audits": null,
-      "assets": [
-        {
-          "id": "1JNQN7Kv8NSZRkAPdYo349",
-          "type": "smart_contract",
-          "url": "https://github.com/alchemix-finance/v2-foundry/tree/master/src",
-          "description": "EXCEPT the folders “external/aave”, “mocks”, and “test”.",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2022-09-09T00:24:27.802Z",
-          "fund": {
-            "usdValue": 0,
-            "addressesCount": 1
-          }
-        }
-      ],
-      "impacts": [
-        {
-          "id": 23,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Theft of unclaimed yield"
-        },
-        {
-          "id": 25,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Permanent freezing of unclaimed yield"
-        },
-        {
-          "id": 29,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Smart contract unable to operate due to lack of token funds"
-        },
-        {
-          "id": 31,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-        },
-        {
-          "id": 33,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Unbounded gas consumption"
-        },
-        {
-          "id": 15,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-        },
-        {
-          "id": 17,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Permanent freezing of funds"
-        },
-        {
-          "id": 22,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Protocol insolvency"
-        },
-        {
-          "id": 61,
-          "type": "smart_contract",
-          "severity": "low",
-          "title": "Smart contract fails to deliver promised returns, but doesn’t lose value"
-        },
-        {
-          "id": 62,
-          "type": "smart_contract",
-          "severity": "low",
-          "title": "Unbounded gas consumption, that does not cause a more severe bug"
-        },
-        {
-          "id": 63,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Temporary freezing of funds for at least 1 day"
-        },
-        {
-          "id": 65,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Miner-extractable value (MEV)"
-        }
-      ],
-      "programOverview": "Alchemix Finance is a future-yield-backed synthetic asset platform and community DAO. The platform gives you advances on your yield farming via a synthetic token that represents a fungible claim on underlying collateral in the Alchemix protocol. \n\nFor more information about Alchemix, please visit [https://alchemix.fi/](https://alchemix.fi/).  \n\n__Primacy of Impact vs Primacy of Rules__\n\nAlchemix adheres to the Primacy of Rules.\nLearn more about report validity best practices here: [Best Practice - Primacy of Impact vs Primacy of Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact).",
-      "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported. \n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. All Medium, High and Critical Smart Contract bug reports require a PoC and a suggestion for a fix to be eligible for a reward. All Low Smart Contract bug reports require a suggestion for a fix to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nCritical smart contract vulnerabilities are capped at __10%__ of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. In cases of repeatable attacks, only the first attack is considered unless the smart contract cannot be upgraded or paused. However, there is a minimum reward of __USD 35 000__ and a maximum of __USD 300 000__. For High vulnerability reports, the payouts will be primarily calculated as 10% of potential economic damage, primarily taking into account funds at risk but also PR and branding aspects, and bounded by the payout range for the vulnerability level. \n\nThe following vulnerabilities are not eligible for a reward:\n\n  - All vulnerabilities listed here [https://github.com/code-423n4/2022-05-alchemix-findings/issues?q=is%3Aopen+is%3Aissue++-label%3A%22G+%28Gas+Optimization%29%22+-label%3A%22QA+%28Quality+Assurance%29%22 ](https://github.com/code-423n4/2022-05-alchemix-findings/issues?q=is%3Aopen+is%3Aissue++-label%3A%22G+%28Gas+Optimization%29%22+-label%3A%22QA+%28Quality+Assurance%29%22)(succinct) \n  - All vulnerabilities listed here [https://github.com/code-423n4/2022-05-alchemix-findings/issues?q=is%3Aopen+is%3Aissue+](https://github.com/code-423n4/2022-05-alchemix-findings/issues?q=is%3Aopen+is%3Aissue+) (full)\n  - All vulnerabilities listed in [Runtime Verification audit](https://github.com/runtimeverification/publications/blob/main/reports/smart-contracts/Alchemix_v2.pdf)\n\nPayouts are handled by the __Alchemix__ team directly and are denominated in USD. However, payouts are done in __ALCX__.",
-      "outOfScopeAndRules": null,
-      "assetsBodyV2": "All smart contracts of Alchemix can be found at [https://github.com/alchemix-finance/v2-foundry](https://github.com/alchemix-finance/v2-foundry). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.  The in scope contracts can be found in the “src” folder, [https://github.com/alchemix-finance/v2-foundry/tree/master/src](https://github.com/alchemix-finance/v2-foundry/tree/master/src), but excludes the “external/aave”, “mocks”, and “test” folder. All 3rd party code in any folder is also out of scope.\n\nThough only the proxy contracts are listed as in-scope, current implementation and any further updates to the implementation contracts are considered in scope. When reporting a bug, please make sure to select the relevant proxy smart contract as the target. \n\nIf an impact can be caused to any other asset managed by Alchemix that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project. This only applies to Critical and High impacts.",
-      "impactsBody": null,
-      "immunefiStandard": true,
-      "tags": {
-        "general": [
-          "Immunefi Standard",
-          "KYC Not Required",
-          "PoC Required"
-        ],
-        "productType": [
-          "DAO",
-          "Synthetic Assets",
-          "Token"
-        ],
-        "projectType": [
-          "Defi"
-        ],
-        "ecosystem": [
-          "Arbitrum",
-          "ETH",
-          "Optimism"
-        ],
-        "programType": [
-          "Smart Contract"
-        ],
-        "language": [
-          "Solidity"
-        ],
-        "featured": [
-          "Launched Recently"
-        ]
-      },
-      "legacy": {
-        "technologies": [
-          "Smart Contract"
-        ],
-        "blockchain_rewards": [],
-        "smartcontract_rewards": [
-          {
-            "level": "Critical",
-            "payout": "Up to USD $300,000"
-          },
-          {
-            "level": "High",
-            "payout": "USD $5,000 to $35,000"
-          },
-          {
-            "level": "Medium",
-            "payout": "USD $4,000"
-          },
-          {
-            "level": "Low",
-            "payout": "USD $1,000"
-          }
-        ],
-        "web_rewards": []
-      },
-      "websiteUrl": null,
-      "description": "Alchemix Finance is a future-yield-backed synthetic asset platform and community DAO. The platform gives you advances on your yield farming via a synthetic token that represents a fungible claim on underlying collateral in the Alchemix protocol. ",
-      "githubUrl": null,
-      "feasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
-      "prohibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
-      "responsiblePublicationCategory": null,
-      "knownIssues": [],
-      "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
-      "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": "  - Best practice critiques\n  - Specifically for the crosschaincanonicalbase.sol contract: This contract is outdated bridging code for Layer 2 alAssets, however, the layer 2 alAssets were upgraded and still contain state variables related to this code, therefore the code has not been stripped from the Layer 2 alAssets. The crosschaincanonicalbase.sol contract is out of scope, EXCEPT for any bugs that would allow anyone besides a trusted admin/multisig to access the functions, or any issues with the current implementation of the bridge/L2 token (alchemicalTokenBase) created by this contract. ",
-      "customProhibitedActivities": [],
-      "rewardsTokenNetwork": "Ethereum",
-      "rewardsToken": "ALCX",
-      "eligibilityCriteria": [],
-      "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [
-        {
-          "id": 133,
-          "title": "Alchemix Codebase",
-          "description": "Program Codebase",
-          "url": "https://github.com/alchemix-finance/v2-foundry"
-        }
-      ],
-      "programDocumentations": [],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": true,
-      "findingsUrl": null,
-      "premiumTriaging": true
-    },
-    "project": {
-      "features": [
-        "Arbitration",
-        "Managed Triage: Expert Assessment"
-      ],
-      "premiumTriaging": true,
-      "isSafeHarborActive": false,
-      "performanceMetrics": {
-        "medianResponseTimeInMinutes": 5757,
-        "totalPaidAmount": 205537.12
-      }
-    },
-    "metaData": {
-      "title": "Alchemix Bug Bounties",
-      "description": "Find bugs and vulnerabilities on Alchemix and get paid up to $300,000.",
-      "url": "https://immunefi.com/bug-bounty/alchemix/",
-      "ogImg": "/api/bounty/og-image/?project=Alchemix&slug=alchemix"
-    },
-    "layoutProps": {
-      "headerMarginBottom": "mb-3 lg:mb-15",
-      "footerMarginTop": "mt-0"
+  "assets": [
+    {
+      "id": "1JNQN7Kv8NSZRkAPdYo349",
+      "revision": 3,
+      "type": "smart_contract",
+      "url": "https://github.com/alchemix-finance/v2-foundry/tree/master/src",
+      "description": "EXCEPT the folders “external/aave”, “mocks”, and “test”.",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2022-09-09T00:24:27.802Z"
     }
-  },
-  "__N_SSG": true
+  ],
+  "assetsBodyV2": "All smart contracts of Alchemix can be found at [https://github.com/alchemix-finance/v2-foundry](https://github.com/alchemix-finance/v2-foundry). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.  The in scope contracts can be found in the “src” folder, [https://github.com/alchemix-finance/v2-foundry/tree/master/src](https://github.com/alchemix-finance/v2-foundry/tree/master/src), but excludes the “external/aave”, “mocks”, and “test” folder. All 3rd party code in any folder is also out of scope.\n\nThough only the proxy contracts are listed as in-scope, current implementation and any further updates to the implementation contracts are considered in scope. When reporting a bug, please make sure to select the relevant proxy smart contract as the target. \n\nIf an impact can be caused to any other asset managed by Alchemix that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project. This only applies to Critical and High impacts.",
+  "boostedIntroEvaluating": "",
+  "boostedIntroFinished": "",
+  "boostedIntroLive": "",
+  "boostedIntroStartingIn": "",
+  "boostedLeaderboard": [],
+  "boostedSummaryReport": null,
+  "ecosystem": [
+    "Arbitrum",
+    "ETH",
+    "Optimism"
+  ],
+  "endDate": null,
+  "evaluationEndDate": null,
+  "features": [
+    "Arbitration",
+    "Managed Triage: Expert Assessment"
+  ],
+  "hideAssetsInScope": null,
+  "immunefiStandard": true,
+  "inviteOnly": false,
+  "kyc": false,
+  "language": [
+    "Solidity"
+  ],
+  "launchDate": "2022-08-25T07:00:00.000Z",
+  "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2NgcBC2slhGYI8qYGnTsCw/0616521e1a588b3a5373af0215dd2a2b/Alchemix-logo.png",
+  "maxBounty": 300000,
+  "pocPerTypeAndSeverity": [
+    "smart_contract - critical",
+    "smart_contract - high",
+    "smart_contract - medium"
+  ],
+  "primaryPaymentWallet": "EVM",
+  "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+  "productType": [
+    "DAO",
+    "Synthetic Assets",
+    "Token"
+  ],
+  "programOverview": "Alchemix Finance is a future-yield-backed synthetic asset platform and community DAO. The platform gives you advances on your yield farming via a synthetic token that represents a fungible claim on underlying collateral in the Alchemix protocol. \n\nFor more information about Alchemix, please visit [https://alchemix.fi/](https://alchemix.fi/).  \n\n__Primacy of Impact vs Primacy of Rules__\n\nAlchemix adheres to the Primacy of Rules.\nLearn more about report validity best practices here: [Best Practice - Primacy of Impact vs Primacy of Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact).",
+  "programType": [
+    "Smart Contract"
+  ],
+  "project": "Alchemix",
+  "projectType": [
+    "Defi"
+  ],
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported. \n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. All Medium, High and Critical Smart Contract bug reports require a PoC and a suggestion for a fix to be eligible for a reward. All Low Smart Contract bug reports require a suggestion for a fix to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nCritical smart contract vulnerabilities are capped at __10%__ of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. In cases of repeatable attacks, only the first attack is considered unless the smart contract cannot be upgraded or paused. However, there is a minimum reward of __USD 35 000__ and a maximum of __USD 300 000__. For High vulnerability reports, the payouts will be primarily calculated as 10% of potential economic damage, primarily taking into account funds at risk but also PR and branding aspects, and bounded by the payout range for the vulnerability level. \n\nThe following vulnerabilities are not eligible for a reward:\n\n  - All vulnerabilities listed here [https://github.com/code-423n4/2022-05-alchemix-findings/issues?q=is%3Aopen+is%3Aissue++-label%3A%22G+%28Gas+Optimization%29%22+-label%3A%22QA+%28Quality+Assurance%29%22 ](https://github.com/code-423n4/2022-05-alchemix-findings/issues?q=is%3Aopen+is%3Aissue++-label%3A%22G+%28Gas+Optimization%29%22+-label%3A%22QA+%28Quality+Assurance%29%22)(succinct) \n  - All vulnerabilities listed here [https://github.com/code-423n4/2022-05-alchemix-findings/issues?q=is%3Aopen+is%3Aissue+](https://github.com/code-423n4/2022-05-alchemix-findings/issues?q=is%3Aopen+is%3Aissue+) (full)\n  - All vulnerabilities listed in [Runtime Verification audit](https://github.com/runtimeverification/publications/blob/main/reports/smart-contracts/Alchemix_v2.pdf)\n\nPayouts are handled by the __Alchemix__ team directly and are denominated in USD. However, payouts are done in __ALCX__.",
+  "rewardsPool": 0,
+  "primaryPool": 0,
+  "allStarsPool": 0,
+  "podiumPool": 0,
+  "rewardsToken": "ALCX",
+  "slug": "alchemix",
+  "tenPercentEconomicRule": true,
+  "updatedDate": "2025-03-26T01:31:50.121Z",
+  "impactsBody": null,
+  "websiteUrl": null,
+  "githubUrl": null,
+  "eligibilityCriteria": [],
+  "responsiblePublicationCategory": null,
+  "description": "Alchemix Finance is a future-yield-backed synthetic asset platform and community DAO. The platform gives you advances on your yield farming via a synthetic token that represents a fungible claim on underlying collateral in the Alchemix protocol. ",
+  "knownIssues": [],
+  "defaultOutOfScopeBlockchain": null,
+  "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+  "defaultOutOfScopeWebAndApplications": null,
+  "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+  "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+  "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+  "customOutOfScopeInformation": "  - Best practice critiques\n  - Specifically for the crosschaincanonicalbase.sol contract: This contract is outdated bridging code for Layer 2 alAssets, however, the layer 2 alAssets were upgraded and still contain state variables related to this code, therefore the code has not been stripped from the Layer 2 alAssets. The crosschaincanonicalbase.sol contract is out of scope, EXCEPT for any bugs that would allow anyone besides a trusted admin/multisig to access the functions, or any issues with the current implementation of the bridge/L2 token (alchemicalTokenBase) created by this contract. ",
+  "customProhibitedActivities": [],
+  "impacts": [
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 29,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Smart contract unable to operate due to lack of token funds"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
+    },
+    {
+      "id": 61,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Smart contract fails to deliver promised returns, but doesn’t lose value"
+    },
+    {
+      "id": 62,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Unbounded gas consumption, that does not cause a more severe bug"
+    },
+    {
+      "id": 63,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds for at least 1 day"
+    },
+    {
+      "id": 65,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Miner-extractable value (MEV)"
+    }
+  ],
+  "rewards": [
+    {
+      "id": 15599,
+      "assetType": "smart_contract",
+      "severity": "critical",
+      "rewardModel": "up_to",
+      "maxReward": 300000,
+      "rewardCalculationPercentage": 10
+    },
+    {
+      "id": 15600,
+      "assetType": "smart_contract",
+      "severity": "high",
+      "rewardModel": "range",
+      "maxReward": 35000,
+      "minReward": 5000
+    },
+    {
+      "id": 15601,
+      "assetType": "smart_contract",
+      "severity": "medium",
+      "rewardModel": "fixed",
+      "fixedReward": 4000
+    },
+    {
+      "id": 15602,
+      "assetType": "smart_contract",
+      "severity": "low",
+      "rewardModel": "fixed",
+      "fixedReward": 1000
+    }
+  ]
 }

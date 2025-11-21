@@ -1,202 +1,141 @@
 {
-  "pageProps": {
-    "bounty": {
-      "contentfulId": "1NB1yJBHa4Dc0IkXh1aWnw",
-      "id": "pillar",
-      "slug": "pillar",
-      "project": "Pillar",
-      "maxBounty": 1250,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1VaX5GGiRtF4IEALVgEhCW/19d55b16c30cb6d3ec6fba82fb9bd960/Pillar_Logo__1_.png",
-      "launchDate": "2022-02-11T17:00:00.000Z",
-      "endDate": null,
-      "updatedDate": "2024-10-29T13:58:37.090Z",
-      "kyc": false,
-      "rewards": [
-        {
-          "id": 5413,
-          "assetType": "smart_contract",
-          "severity": "high",
-          "rewardModel": "fixed",
-          "fixedReward": 1000
-        },
-        {
-          "id": 8235,
-          "assetType": "smart_contract",
-          "severity": "critical",
-          "rewardModel": "fixed",
-          "fixedReward": 1250
-        }
-      ],
-      "audits": null,
-      "assets": [
-        {
-          "id": "6AO1NeMlPbcTvZ5Qj0iew4",
-          "type": "smart_contract",
-          "url": "https://polygonscan.com/address/0xE9a88F0d543d3a0C14E487bed884B3dA49529e48#code",
-          "description": "PillarDAO",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2022-04-04T12:41:14.546Z",
-          "fund": {
-            "usdValue": 0,
-            "addressesCount": 1
-          }
-        },
-        {
-          "id": "3LkahwGc7fpBkFNnJ4MmXT",
-          "type": "smart_contract",
-          "url": "https://polygonscan.com/address/0xFa2d028Ba398C20eE0A7483c00218F91FFEe47c6#code",
-          "description": "MembershipNFT",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2022-04-04T12:41:13.036Z",
-          "fund": {
-            "usdValue": 0,
-            "addressesCount": 1
-          }
-        }
-      ],
-      "impacts": [
-        {
-          "id": 27,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Temporary freezing of funds"
-        },
-        {
-          "id": 1810,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Any governance voting result manipulation"
-        },
-        {
-          "id": 15,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-        },
-        {
-          "id": 17,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Permanent freezing of funds"
-        },
-        {
-          "id": 1811,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Miner-extractable value (MEV)"
-        },
-        {
-          "id": 22,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Protocol insolvency"
-        }
-      ],
-      "programOverview": "Pillar is the only community-run, multichain DeFi wallet with one address, low-to-no gas fees, and in-app curated insights to help you ‘learn to earn’. Pillar is one place for your tokens, NFTs, dApps and DeFi services. Easily connect to Ethereum, Polygon, xDai, Binance Smart Chain, and more.\n\nFor more information about Pillar, please visit [https://www.pillar.fi/](https://www.pillar.fi/).   \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Loss of user funds staked (principal) by freezing or theft.\n  - Ability to mint membership NFTs without the corresponding stake of Pillar tokens.\n  - Withdrawing more funds than what is staked.\n  - Temporary freezing of funds for at least 1 day.\n  - Withdrawing of funds before the completion of staking term.",
-      "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Smart Contracts/Blockchain__\n\n  - Loss of user funds staked (principal) by freezing or theft.\n  - Ability to mint membership NFTs without the corresponding stake of Pillar tokens.\n  - Withdrawing more funds than what is staked.\n  - Temporary freezing of funds for at least 1 day.\n  - Withdrawing of funds before the completion of staking term.",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nPayouts are handled by the __Pillar__ team directly and are denominated in USD. However, payouts are done in __USDC__ (on Polygon).",
-      "outOfScopeAndRules": null,
-      "assetsBodyV2": "Only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
-      "impactsBody": null,
-      "immunefiStandard": true,
-      "tags": {
-        "general": [
-          "Immunefi Standard",
-          "KYC Not Required",
-          "PoC Required"
-        ],
-        "productType": [
-          "Wallet"
-        ],
-        "projectType": [
-          "Defi",
-          "NFT"
-        ],
-        "ecosystem": [
-          "Polygon"
-        ],
-        "programType": [
-          "Smart Contract"
-        ],
-        "language": [
-          "Solidity"
-        ],
-        "featured": [
-          "Launched Recently"
-        ]
-      },
-      "legacy": {
-        "technologies": [
-          "Smart Contract"
-        ],
-        "blockchain_rewards": [],
-        "smartcontract_rewards": [
-          {
-            "level": "Critical",
-            "payout": "USD $1,250"
-          },
-          {
-            "level": "High",
-            "payout": "USD $1,000"
-          }
-        ],
-        "web_rewards": []
-      },
-      "websiteUrl": null,
-      "description": "Pillar is the only community-run, multichain DeFi wallet with one address, low-to-no gas fees, and in-app curated insights to help you ‘learn to earn’. Pillar is one place for your tokens, NFTs, dApps and DeFi services. Easily connect to Ethereum, Polygon, xDai, Binance Smart Chain, and more.",
-      "githubUrl": null,
-      "feasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
-      "prohibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
-      "responsiblePublicationCategory": null,
-      "knownIssues": [],
-      "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
-      "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": "  - Best practice critiques",
-      "customProhibitedActivities": [],
-      "rewardsTokenNetwork": "Polygon",
-      "rewardsToken": "USDC",
-      "eligibilityCriteria": [],
-      "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [
-        {
-          "id": 124,
-          "title": "Pillar Smart Contracts",
-          "description": "Program smart contracts",
-          "url": "https://github.com/pillarwallet/pillar-dao-contracts"
-        }
-      ],
-      "programDocumentations": [],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": true,
-      "findingsUrl": null,
-      "premiumTriaging": false
+  "assets": [
+    {
+      "id": "6AO1NeMlPbcTvZ5Qj0iew4",
+      "revision": 3,
+      "type": "smart_contract",
+      "url": "https://polygonscan.com/address/0xE9a88F0d543d3a0C14E487bed884B3dA49529e48#code",
+      "description": "PillarDAO",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2022-04-04T12:41:14.546Z"
     },
-    "project": {
-      "features": [],
-      "premiumTriaging": false,
-      "isSafeHarborActive": false,
-      "performanceMetrics": {
-        "medianResponseTimeInMinutes": 372,
-        "totalPaidAmount": 2100
-      }
-    },
-    "metaData": {
-      "title": "Pillar Bug Bounties",
-      "description": "Find bugs and vulnerabilities on Pillar and get paid up to $1,250.",
-      "url": "https://immunefi.com/bug-bounty/pillar/",
-      "ogImg": "/api/bounty/og-image/?project=Pillar&slug=pillar"
-    },
-    "layoutProps": {
-      "headerMarginBottom": "mb-3 lg:mb-15",
-      "footerMarginTop": "mt-0"
+    {
+      "id": "3LkahwGc7fpBkFNnJ4MmXT",
+      "revision": 3,
+      "type": "smart_contract",
+      "url": "https://polygonscan.com/address/0xFa2d028Ba398C20eE0A7483c00218F91FFEe47c6#code",
+      "description": "MembershipNFT",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2022-04-04T12:41:13.036Z"
     }
-  },
-  "__N_SSG": true
+  ],
+  "assetsBodyV2": "Only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
+  "boostedIntroEvaluating": "",
+  "boostedIntroFinished": "",
+  "boostedIntroLive": "",
+  "boostedIntroStartingIn": "",
+  "boostedLeaderboard": [],
+  "boostedSummaryReport": null,
+  "ecosystem": [
+    "Polygon"
+  ],
+  "endDate": null,
+  "evaluationEndDate": null,
+  "features": [],
+  "hideAssetsInScope": null,
+  "immunefiStandard": true,
+  "inviteOnly": false,
+  "kyc": false,
+  "language": [
+    "Solidity"
+  ],
+  "launchDate": "2022-02-11T17:00:00.000Z",
+  "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1VaX5GGiRtF4IEALVgEhCW/19d55b16c30cb6d3ec6fba82fb9bd960/Pillar_Logo__1_.png",
+  "maxBounty": 1250,
+  "pocPerTypeAndSeverity": [
+    "smart_contract - critical",
+    "smart_contract - high"
+  ],
+  "primaryPaymentWallet": "EVM",
+  "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Smart Contracts/Blockchain__\n\n  - Loss of user funds staked (principal) by freezing or theft.\n  - Ability to mint membership NFTs without the corresponding stake of Pillar tokens.\n  - Withdrawing more funds than what is staked.\n  - Temporary freezing of funds for at least 1 day.\n  - Withdrawing of funds before the completion of staking term.",
+  "productType": [
+    "Wallet"
+  ],
+  "programOverview": "Pillar is the only community-run, multichain DeFi wallet with one address, low-to-no gas fees, and in-app curated insights to help you ‘learn to earn’. Pillar is one place for your tokens, NFTs, dApps and DeFi services. Easily connect to Ethereum, Polygon, xDai, Binance Smart Chain, and more.\n\nFor more information about Pillar, please visit [https://www.pillar.fi/](https://www.pillar.fi/).   \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Loss of user funds staked (principal) by freezing or theft.\n  - Ability to mint membership NFTs without the corresponding stake of Pillar tokens.\n  - Withdrawing more funds than what is staked.\n  - Temporary freezing of funds for at least 1 day.\n  - Withdrawing of funds before the completion of staking term.",
+  "programType": [
+    "Smart Contract"
+  ],
+  "project": "Pillar",
+  "projectType": [
+    "Defi",
+    "NFT"
+  ],
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nPayouts are handled by the __Pillar__ team directly and are denominated in USD. However, payouts are done in __USDC__ (on Polygon).",
+  "rewardsPool": 0,
+  "primaryPool": 0,
+  "allStarsPool": 0,
+  "podiumPool": 0,
+  "rewardsToken": "USDC",
+  "slug": "pillar",
+  "tenPercentEconomicRule": false,
+  "updatedDate": "2024-10-29T13:58:37.090Z",
+  "impactsBody": null,
+  "websiteUrl": null,
+  "githubUrl": null,
+  "eligibilityCriteria": [],
+  "responsiblePublicationCategory": null,
+  "description": "Pillar is the only community-run, multichain DeFi wallet with one address, low-to-no gas fees, and in-app curated insights to help you ‘learn to earn’. Pillar is one place for your tokens, NFTs, dApps and DeFi services. Easily connect to Ethereum, Polygon, xDai, Binance Smart Chain, and more.",
+  "knownIssues": [],
+  "defaultOutOfScopeBlockchain": null,
+  "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+  "defaultOutOfScopeWebAndApplications": null,
+  "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+  "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+  "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+  "customOutOfScopeInformation": "  - Best practice critiques",
+  "customProhibitedActivities": [],
+  "impacts": [
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
+    },
+    {
+      "id": 27,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds"
+    },
+    {
+      "id": 1810,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Any governance voting result manipulation"
+    },
+    {
+      "id": 1811,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Miner-extractable value (MEV)"
+    }
+  ],
+  "rewards": [
+    {
+      "id": 8235,
+      "assetType": "smart_contract",
+      "severity": "critical",
+      "rewardModel": "fixed",
+      "fixedReward": 1250
+    },
+    {
+      "id": 5413,
+      "assetType": "smart_contract",
+      "severity": "high",
+      "rewardModel": "fixed",
+      "fixedReward": 1000
+    }
+  ]
 }

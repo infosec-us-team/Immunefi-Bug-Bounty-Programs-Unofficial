@@ -1,344 +1,239 @@
 {
-  "pageProps": {
-    "isAttackathon": false,
-    "academyContent": null,
-    "ethereumAttackathonSponsors": null,
-    "project": {
-      "features": [
-        "IOP (Invite Only Program)",
-        "Managed Triage: Signal Booster",
-        "Vault"
-      ],
-      "premiumTriaging": true,
-      "isSafeHarborActive": false,
-      "performanceMetrics": {}
+  "assets": [],
+  "assetsBodyV2": "",
+  "boostedIntroEvaluating": "**Thank You to All Participating Security Researchers!**\n\nThe Invite-Only Program has now concluded and is currently in the evaluation phase. During this period, all submitted reports are being carefully reviewed by the Immunefi triage team and the project team.",
+  "boostedIntroFinished": "",
+  "boostedIntroLive": "$6,000 USD in rewards is available for finding bugs on Term Structure Institutional (TSI)\n\nFor more information about Term Structure Institutional, please visit, [https://docs.institutional.ts.finance/](https://docs.institutional.ts.finance/)\n\nThis is an **Invite-Only Program Competition, and its only open to Security Researchers who have been invited.**\n\nRunnable POCs are not required. Read our [New Audit Competition Proof-of-Concept Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/33260632501777-Proof-of-Concept-Rules-for-Audit-Competitions)\n\nInsight reports can be submitted. Read our [Insight validity rules](https://immunefisupport.zendesk.com/hc/en-us/articles/34179768760337-Insight-Severity-Level)\n\nTerm Structure Institutional rewards are denominated in USD and distributed in USDC on Ethereum.\n\nKYC is required.",
+  "boostedIntroStartingIn": "**$6,000 USD** in rewards is available for finding bugs on Term Structure Institutional (TSI)\n\nThis is an **Invite-Only Program** Competition, and its **only open to Security Researchers who have been invited**.",
+  "boostedLeaderboard": [
+    {
+      "high": 2,
+      "name": "zeroK",
+      "critical": 2,
+      "earnings": 2089,
+      "insights": 1,
+      "mediumLow": 2,
+      "totalValidBugs": 6
     },
-    "bounty": {
-      "contentfulId": "7Hr93q3nkV7OuONthvzB9h",
-      "id": "iop-term-structure",
-      "slug": "iop-term-structure",
-      "project": "IOP | Term Structure Institutional",
-      "maxBounty": 6000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1Ahp32eNjGwFPnX0YvGqOY/42ece9029a8d2f8f0742bf603c591166/Term_Structure_logo-round-white.png",
-      "launchDate": "2025-06-02T10:00:21.000Z",
-      "endDate": "2025-06-16T10:00:00.000Z",
-      "updatedDate": "2025-07-07T16:26:26.080Z",
-      "kyc": true,
-      "rewards": [
-        {
-          "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "Portion of the Reward Pool",
-          "pocRequired": true
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "high",
-          "payout": "Portion of the Reward Pool",
-          "pocRequired": true
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "Portion of the Reward Pool",
-          "pocRequired": true
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "low",
-          "payout": "Portion of the Reward Pool",
-          "pocRequired": true
-        }
-      ],
-      "audits": null,
-      "assets": [
-        {
-          "id": "4fxOPIsaLz4E5hS8lMP6z8",
-          "type": "smart_contract",
-          "url": "https://github.com/term-structure/tsi-contract/blob/main/src/Settlement.sol",
-          "description": "Settlement.sol-The main logic of TSI protocol.-[270]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-06-02T10:00:21.000Z",
-          "fund": null
-        },
-        {
-          "id": "1pkciWRpO6Txi9SHTAZHmY",
-          "type": "smart_contract",
-          "url": "https://github.com/term-structure/tsi-contract/tree/main/src/lib",
-          "description": "Library contracts-loan logics and utils.-[308]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-06-02T10:00:21.000Z",
-          "fund": null
-        }
-      ],
-      "impacts": [
-        {
-          "id": 34,
-          "type": "smart_contract",
-          "severity": "low",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value"
-        },
-        {
-          "id": 17,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Permanent freezing of funds"
-        },
-        {
-          "id": 22,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Protocol insolvency"
-        },
-        {
-          "id": 23,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Theft of unclaimed yield"
-        },
-        {
-          "id": 24,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Theft of unclaimed royalties"
-        },
-        {
-          "id": 25,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Permanent freezing of unclaimed yield"
-        },
-        {
-          "id": 26,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Permanent freezing of unclaimed royalties"
-        },
-        {
-          "id": 27,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Temporary freezing of funds"
-        },
-        {
-          "id": 5575,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Temporary freezing of funds for at least 24 hour"
-        },
-        {
-          "id": 15,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-        },
-        {
-          "id": 29,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Smart contract unable to operate due to lack of token funds"
-        },
-        {
-          "id": 30,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Block stuffing"
-        },
-        {
-          "id": 31,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-        },
-        {
-          "id": 32,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Theft of gas"
-        },
-        {
-          "id": 33,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Unbounded gas consumption"
-        },
-        {
-          "id": 5576,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Temporary freezing of funds for at least 1 hour"
-        }
-      ],
-      "programOverview": "Term Structure Institutional (TSI) is an institutional-grade platform enabling clients to borrow and lend digital assets at fixed rates within the Fireblocks multi-party computation (MPC) wallet environment and a reliable TSI Electronic Communication Network (ECN). TSI empowers institutions, lenders, borrowers, and traders to participate in fixed-income markets with greater efficiency and confidence.\n\nFor more information about Term Structure Institutional, please visit, [https://docs.institutional.ts.finance/](https://docs.institutional.ts.finance/)\n\nTerm Structure Institutional rewards are denominated in USD and distributed in USDC on Ethereum.\n\nKYC is required.",
-      "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "__Rewards Terms__\n\nRewards are distributed among SRs according to [Immunefi’s Standardized Competition Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/31657285001873-Standardized-Competition-Reward-Terms).\n\nRewards are denominated in USD and distributed in USDC on Ethereum.\n\nThe reward pool is $4,000 USD if any bug is found.\n\nIf not a single bug is found (Insights do not count as bugs) the reward pool is $360 USD\n\nOn top of this, each participating SR will receive a guaranteed reward of $1,000 USD.\n\n**Proof of Concept (PoC) Requirements**\n\nFor this program, runnable PoC code is not required. Whitehats are instead required to write a step-by-step explanation of the PoC and impact.\n\n__Insight Rewards Payment Terms__\n\nInsight Rewards: Portion of the Rewards Pool\n\n*The \"Insight\" severity was introduced on Boost (Audit Competitions) & Attackathon programs to recognize contributions that extend beyond identifying immediate vulnerabilities. Currently, it's not an option to select the Insight severity when submitting a report. However, our team or program will designate it accordingly if applicable. \"Insights\" underscores our commitment to valuing all types of contributions that contribute to a more secure environment and will always be rewarded. [View more information about Insights](https://immunefisupport.zendesk.com/hc/en-us/articles/13333032674961-Severity-Classification-System?utm_source=immunefi)\n\nDuplicates of Insight reports are not eligible for a reward.\n\n__KYC is Required__\n\nTerm Structure Institutional requires KYC information to pay for bug submissions. The following information will be required:\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\nSecurity researchers are required to submit KYC within 14 days of KYC being requested, else their rewards may be forfeited. Immunefi may make exceptions due to extenuating circumstances.",
-      "outOfScopeAndRules": null,
-      "assetsBodyV2": "__Code Freeze Assurance__\n\nCode of the assets in scope is frozen while the program is live.\n\nDuplicate submissions of bugs are valid. Duplicate submissions of Insights are invalid.\n\nThe project commits to keeping private all info related to bug findings until this program is over. This means the project will not leak info about any bug findings or planned bug fixes, including bug findings found independently by the project or from concurrent private audits.\n\n__Insight Reporting__\n\nInsight reports may be reported to this program and do not require a PoC. Insights are rewarded according to [Immunefi’s Standardized Competition Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/31657285001873-Standardized-Competition-Reward-Terms).\n\n__Asset Accuracy Assurance__\n\nBugs found on assets incorrectly listed in-scope are valid.\n\n__Private Known Issues Reward Policy__\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward.\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Dispute Resolution__\n\nIf there is any dispute over bug reports between projects and security researchers, Immunefi has final say on validity and severity based on the terms of this program.\n\n__Responsible Publication Policy__\n\nImmunefi will publish bug reports, earnings, and a leaderboard for this Invite Only Program. Security Researchers may publish their bug reports as well, but only after Immunefi has published the valid bug reports as part of the competition results.",
-      "impactsBody": "__Build Commands, Test Commands, and How to Run Them__\n\n```install denpendencies```\nforge soldeer update\n\n```build```\nforge build\n\n```test```\nforge test –skip Fork\n\n__Previous Audits__\n\n- Term Structure Institutional’s has no audit report as of 28 May 2025.\n\n\n__Where might Security Researchers confuse out-of-scope code to be in-scope?__\n\n- Security researchers may incorrectly assume that the collateral management system is within scope because they might question whether collateral that is locked in the lender's wallet can be successfully retrieved during liquidation or repayment events. This confusion arises because the retrieval process is partially controlled by the business logic in the backend, which could lead researchers to believe that the collateral locking and unlocking mechanisms are part of the attackable surface area.\n\n\n__Is this an upgrade of an existing system? If so, which? And what are the main differences?__\n\n- No. This is a new product from scratch.\n\n__Where do you suspect there may be bugs and/or what attack vectors are you most concerned about?__\n\n- We are most concerned about arithmetic overflow and loss of precision issues, which are commonly overlooked in DeFi protocols but can have severe consequences. Given TSI's complex financial calculations, several areas are particularly vulnerable:\n\n\n__What ERC20 / ERC721 / ERC777 / ERC1155 token standards are supported?__\n\n- ERC20\n\n__What addresses would you consider any bug report requiring their involvement to be out of scope, as long as they operate within the privileges attributed to them?__\n\n- The signer who signs the settlement information is out of scope.\n\n__Which chains and/or networks will the code in scope be deployed to?__\n\n- Ethereum.\n\n__What external dependencies are there?__\n\n- Oracles from Chainlink or RedStone. DEXs for liquidation.\n\n__Are there any unusual points about your protocol that may confuse Security Researchers?__\n\n- All participating addresses use Fireblocks' 2-of-2 Multi-Party Computation (MPC) wallets, where users hold one key share and Fireblocks (not TSI directly) holds the other key share. This creates an unusual custody model that may confuse researchers:\n\n*Key Unusual Points:*\n\n- **Non-Custodial but Coordinated:** While TSI never holds user funds directly, the collateral locking mechanism relies on lender pre-approval rather than traditional smart contract escrow. Lenders must pre-sign transactions that allow the settlement smart contract to automatically transfer collateral from their wallet during repayment or liquidation events.\n\n- **Hybrid Settlement Model:** Unlike typical DeFi protocols where assets are deposited into smart contracts, TSI's settlement contracts facilitate direct wallet-to-wallet transfers. The contracts don't hold funds but coordinate simultaneous exchanges between parties.\n\n- **Backend-Triggered Automation:** TSI's backend system can trigger certain automated actions (like unlocking collateral during liquidation) because it coordinates with Fireblocks' MPC infrastructure, even though TSI doesn't control the private keys directly.\n\n- **Device-Bound Keys:** User key shares are bound to specific browsers/devices, making the typical \"connect any wallet\" assumption invalid.\n\nResearchers might incorrectly assume TSI has direct key control or that smart contracts hold collateral, when in reality the system uses a sophisticated coordination layer between MPC wallets and pre-authorized transaction execution.\n\n__What are the most valuable educational resources already available? (Ie. Documentation, Explainer videos or articles, etc)__\n\n- [https://docs.institutional.ts.finance/]\n- https://www.youtube.com/watch?v=usyhq0ucMOw&list=PLW028xWwhYBHSmzbGLFjd4BybCTrBdjaE",
-      "immunefiStandard": true,
-      "tags": {
-        "general": [
-          "Immunefi Standard",
-          "KYC Required",
-          "Step-by-step PoC Required"
-        ],
-        "productType": [],
-        "projectType": [],
-        "ecosystem": [
-          "ETH"
-        ],
-        "programType": [
-          "Smart Contract"
-        ],
-        "language": [
-          "Solidity"
-        ],
-        "featured": [
-          "Launched Recently"
-        ]
-      },
-      "legacy": {
-        "technologies": [
-          "Smart Contract"
-        ],
-        "blockchain_rewards": [],
-        "smartcontract_rewards": [
-          {
-            "level": "Critical",
-            "payout": "Portion of the Reward Pool"
-          },
-          {
-            "level": "High",
-            "payout": "Portion of the Reward Pool"
-          },
-          {
-            "level": "Medium",
-            "payout": "Portion of the Reward Pool"
-          },
-          {
-            "level": "Low",
-            "payout": "Portion of the Reward Pool"
-          }
-        ],
-        "web_rewards": []
-      },
-      "evaluationEndDate": "2025-07-07T16:26:20.458Z",
-      "boostedIntroStartingIn": "**$6,000 USD** in rewards is available for finding bugs on Term Structure Institutional (TSI)\n\nThis is an **Invite-Only Program** Competition, and its **only open to Security Researchers who have been invited**.",
-      "boostedIntroLive": "$6,000 USD in rewards is available for finding bugs on Term Structure Institutional (TSI)\n\nFor more information about Term Structure Institutional, please visit, [https://docs.institutional.ts.finance/](https://docs.institutional.ts.finance/)\n\nThis is an **Invite-Only Program Competition, and its only open to Security Researchers who have been invited.**\n\nRunnable POCs are not required. Read our [New Audit Competition Proof-of-Concept Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/33260632501777-Proof-of-Concept-Rules-for-Audit-Competitions)\n\nInsight reports can be submitted. Read our [Insight validity rules](https://immunefisupport.zendesk.com/hc/en-us/articles/34179768760337-Insight-Severity-Level)\n\nTerm Structure Institutional rewards are denominated in USD and distributed in USDC on Ethereum.\n\nKYC is required.",
-      "boostedIntroEvaluating": "**Thank You to All Participating Security Researchers!**\n\nThe Invite-Only Program has now concluded and is currently in the evaluation phase. During this period, all submitted reports are being carefully reviewed by the Immunefi triage team and the project team.",
-      "boostedIntroFinished": "",
-      "rewardsToken": "USDC",
-      "rewardsPool": 6000,
-      "primaryPool": 6000,
-      "allStarsPool": 0,
-      "podiumPool": 0,
-      "sourceLinesOfCode": 578,
-      "boostedSummaryReport": "https://drive.google.com/file/d/1W6OZ7DwDlMiG7oIcc4Pyt2T1jV2KK9qm/view?usp=sharing",
-      "inviteOnly": true,
-      "hideAssetsInScope": null,
-      "boostedLeaderboard": [
-        {
-          "high": 2,
-          "name": "zeroK",
-          "critical": 2,
-          "earnings": 2089,
-          "insights": 1,
-          "mediumLow": 2,
-          "totalValidBugs": 6
-        },
-        {
-          "high": 1,
-          "name": "Catchme",
-          "critical": 2,
-          "earnings": 1911,
-          "insights": 1,
-          "mediumLow": 2,
-          "totalValidBugs": 5
-        }
-      ],
-      "features": [
-        "IOP (Invite Only Program)",
-        "Managed Triage: Signal Booster",
-        "Vault"
-      ],
-      "academyStartDate": null,
-      "websiteUrl": "https://docs.institutional.ts.finance/",
-      "description": "Term Structure Institutional (TSI) is an institutional-grade platform enabling clients to borrow and lend digital assets at fixed rates within the Fireblocks multi-party computation (MPC) wallet environment and a reliable TSI Electronic Communication Network (ECN). TSI empowers institutions, lenders, borrowers, and traders to participate in fixed-income markets with greater efficiency and confidence.",
-      "githubUrl": null,
-      "feasibilityLimitations": null,
-      "prohibitedActivites": null,
-      "responsiblePublicationCategory": null,
-      "knownIssues": [
-        {
-          "id": 58,
-          "description": "Problems with Oracle and other third-party contracts.",
-          "link": "https://docs.institutional.ts.finance/",
-          "lastUpdatedAt": "2025-04-15T00:00:00.000Z",
-          "relatedImpactInScope": "smart_contract"
-        },
-        {
-          "id": 57,
-          "description": "Security issues caused by private key or permission leakage.",
-          "link": "https://docs.institutional.ts.finance/",
-          "lastUpdatedAt": "2025-04-15T00:00:00.000Z",
-          "relatedImpactInScope": "smart_contract"
-        },
-        {
-          "id": 56,
-          "description": "Centralization issues related to Fireblock flow, such as allowance management and fund locking mechanism.",
-          "link": "https://docs.institutional.ts.finance/",
-          "lastUpdatedAt": "2025-04-15T00:00:00.000Z",
-          "relatedImpactInScope": "smart_contract"
-        }
-      ],
-      "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": null,
-      "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": null,
-      "customProhibitedActivities": [],
-      "rewardsTokenNetwork": "Ethereum",
-      "eligibilityCriteria": [
-        "no_ofac_sdn",
-        "no_official_contributor",
-        "no_employee",
-        "no_auditor"
-      ],
-      "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
-      "programDocumentations": [
-        {
-          "id": 248,
-          "title": "TSI Doc",
-          "description": "Documentation",
-          "url": "https://docs.institutional.ts.finance/"
-        },
-        {
-          "id": 249,
-          "title": "About TSI",
-          "description": "Discover Term Structure Institutional (TSI)",
-          "url": "https://www.youtube.com/watch?v=usyhq0ucMOw&list=PLW028xWwhYBHSmzbGLFjd4BybCTrBdjaE"
-        }
-      ],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
-      "findingsUrl": "https://reports.immunefi.com/term-structure-institutional_iop",
-      "premiumTriaging": true
-    },
-    "layoutProps": {
-      "headerMarginBottom": "mb-12 lg:mb-16"
-    },
-    "metaData": {
-      "title": "IOP | Term Structure Institutional Bug Bounties",
-      "description": "Find bugs and vulnerabilities on IOP | Term Structure Institutional and get paid up to $6,000.",
-      "url": "https://immunefi.com/audit-competition/iop-term-structure/",
-      "ogImg": "/api/bounty/og-image/?project=IOP+%7C+Term+Structure+Institutional&slug=iop-term-structure"
+    {
+      "high": 1,
+      "name": "Catchme",
+      "critical": 2,
+      "earnings": 1911,
+      "insights": 1,
+      "mediumLow": 2,
+      "totalValidBugs": 5
     }
-  },
-  "__N_SSG": true
+  ],
+  "boostedSummaryReport": "https://drive.google.com/file/d/1W6OZ7DwDlMiG7oIcc4Pyt2T1jV2KK9qm/view?usp=sharing",
+  "ecosystem": [
+    "ETH"
+  ],
+  "endDate": "2025-06-16T10:00:00.000Z",
+  "evaluationEndDate": "2025-07-07T16:26:20.458Z",
+  "features": [
+    "IOP (Invite Only Program)",
+    "Managed Triage: Signal Booster",
+    "Vault"
+  ],
+  "hideAssetsInScope": null,
+  "immunefiStandard": true,
+  "inviteOnly": true,
+  "kyc": true,
+  "language": [
+    "Solidity"
+  ],
+  "launchDate": "2025-06-02T10:00:21.000Z",
+  "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1Ahp32eNjGwFPnX0YvGqOY/42ece9029a8d2f8f0742bf603c591166/Term_Structure_logo-round-white.png",
+  "maxBounty": 6000,
+  "pocPerTypeAndSeverity": [
+    "smart_contract - critical",
+    "smart_contract - high",
+    "smart_contract - medium",
+    "smart_contract - low"
+  ],
+  "primaryPaymentWallet": "EVM",
+  "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+  "productType": null,
+  "programOverview": "Term Structure Institutional (TSI) is an institutional-grade platform enabling clients to borrow and lend digital assets at fixed rates within the Fireblocks multi-party computation (MPC) wallet environment and a reliable TSI Electronic Communication Network (ECN). TSI empowers institutions, lenders, borrowers, and traders to participate in fixed-income markets with greater efficiency and confidence.\n\nFor more information about Term Structure Institutional, please visit, [https://docs.institutional.ts.finance/](https://docs.institutional.ts.finance/)\n\nTerm Structure Institutional rewards are denominated in USD and distributed in USDC on Ethereum.\n\nKYC is required.",
+  "programType": [
+    "Smart Contract"
+  ],
+  "project": "IOP | Term Structure Institutional",
+  "projectType": null,
+  "rewardsBody": "__Rewards Terms__\n\nRewards are distributed among SRs according to [Immunefi’s Standardized Competition Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/31657285001873-Standardized-Competition-Reward-Terms).\n\nRewards are denominated in USD and distributed in USDC on Ethereum.\n\nThe reward pool is $4,000 USD if any bug is found.\n\nIf not a single bug is found (Insights do not count as bugs) the reward pool is $360 USD\n\nOn top of this, each participating SR will receive a guaranteed reward of $1,000 USD.\n\n**Proof of Concept (PoC) Requirements**\n\nFor this program, runnable PoC code is not required. Whitehats are instead required to write a step-by-step explanation of the PoC and impact.\n\n__Insight Rewards Payment Terms__\n\nInsight Rewards: Portion of the Rewards Pool\n\n*The \"Insight\" severity was introduced on Boost (Audit Competitions) & Attackathon programs to recognize contributions that extend beyond identifying immediate vulnerabilities. Currently, it's not an option to select the Insight severity when submitting a report. However, our team or program will designate it accordingly if applicable. \"Insights\" underscores our commitment to valuing all types of contributions that contribute to a more secure environment and will always be rewarded. [View more information about Insights](https://immunefisupport.zendesk.com/hc/en-us/articles/13333032674961-Severity-Classification-System?utm_source=immunefi)\n\nDuplicates of Insight reports are not eligible for a reward.\n\n__KYC is Required__\n\nTerm Structure Institutional requires KYC information to pay for bug submissions. The following information will be required:\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\nSecurity researchers are required to submit KYC within 14 days of KYC being requested, else their rewards may be forfeited. Immunefi may make exceptions due to extenuating circumstances.",
+  "rewardsPool": 6000,
+  "primaryPool": 6000,
+  "allStarsPool": 0,
+  "podiumPool": 0,
+  "rewardsToken": "USDC",
+  "slug": "iop-term-structure",
+  "tenPercentEconomicRule": false,
+  "updatedDate": "2025-07-07T16:26:26.080Z",
+  "impactsBody": "__Build Commands, Test Commands, and How to Run Them__\n\n```install denpendencies```\nforge soldeer update\n\n```build```\nforge build\n\n```test```\nforge test –skip Fork\n\n__Previous Audits__\n\n- Term Structure Institutional’s has no audit report as of 28 May 2025.\n\n\n__Where might Security Researchers confuse out-of-scope code to be in-scope?__\n\n- Security researchers may incorrectly assume that the collateral management system is within scope because they might question whether collateral that is locked in the lender's wallet can be successfully retrieved during liquidation or repayment events. This confusion arises because the retrieval process is partially controlled by the business logic in the backend, which could lead researchers to believe that the collateral locking and unlocking mechanisms are part of the attackable surface area.\n\n\n__Is this an upgrade of an existing system? If so, which? And what are the main differences?__\n\n- No. This is a new product from scratch.\n\n__Where do you suspect there may be bugs and/or what attack vectors are you most concerned about?__\n\n- We are most concerned about arithmetic overflow and loss of precision issues, which are commonly overlooked in DeFi protocols but can have severe consequences. Given TSI's complex financial calculations, several areas are particularly vulnerable:\n\n\n__What ERC20 / ERC721 / ERC777 / ERC1155 token standards are supported?__\n\n- ERC20\n\n__What addresses would you consider any bug report requiring their involvement to be out of scope, as long as they operate within the privileges attributed to them?__\n\n- The signer who signs the settlement information is out of scope.\n\n__Which chains and/or networks will the code in scope be deployed to?__\n\n- Ethereum.\n\n__What external dependencies are there?__\n\n- Oracles from Chainlink or RedStone. DEXs for liquidation.\n\n__Are there any unusual points about your protocol that may confuse Security Researchers?__\n\n- All participating addresses use Fireblocks' 2-of-2 Multi-Party Computation (MPC) wallets, where users hold one key share and Fireblocks (not TSI directly) holds the other key share. This creates an unusual custody model that may confuse researchers:\n\n*Key Unusual Points:*\n\n- **Non-Custodial but Coordinated:** While TSI never holds user funds directly, the collateral locking mechanism relies on lender pre-approval rather than traditional smart contract escrow. Lenders must pre-sign transactions that allow the settlement smart contract to automatically transfer collateral from their wallet during repayment or liquidation events.\n\n- **Hybrid Settlement Model:** Unlike typical DeFi protocols where assets are deposited into smart contracts, TSI's settlement contracts facilitate direct wallet-to-wallet transfers. The contracts don't hold funds but coordinate simultaneous exchanges between parties.\n\n- **Backend-Triggered Automation:** TSI's backend system can trigger certain automated actions (like unlocking collateral during liquidation) because it coordinates with Fireblocks' MPC infrastructure, even though TSI doesn't control the private keys directly.\n\n- **Device-Bound Keys:** User key shares are bound to specific browsers/devices, making the typical \"connect any wallet\" assumption invalid.\n\nResearchers might incorrectly assume TSI has direct key control or that smart contracts hold collateral, when in reality the system uses a sophisticated coordination layer between MPC wallets and pre-authorized transaction execution.\n\n__What are the most valuable educational resources already available? (Ie. Documentation, Explainer videos or articles, etc)__\n\n- [https://docs.institutional.ts.finance/]\n- https://www.youtube.com/watch?v=usyhq0ucMOw&list=PLW028xWwhYBHSmzbGLFjd4BybCTrBdjaE",
+  "websiteUrl": "https://docs.institutional.ts.finance/",
+  "githubUrl": null,
+  "eligibilityCriteria": [
+    "no_ofac_sdn",
+    "no_official_contributor",
+    "no_employee",
+    "no_auditor"
+  ],
+  "responsiblePublicationCategory": null,
+  "description": "Term Structure Institutional (TSI) is an institutional-grade platform enabling clients to borrow and lend digital assets at fixed rates within the Fireblocks multi-party computation (MPC) wallet environment and a reliable TSI Electronic Communication Network (ECN). TSI empowers institutions, lenders, borrowers, and traders to participate in fixed-income markets with greater efficiency and confidence.",
+  "knownIssues": [
+    {
+      "id": 56,
+      "description": "Centralization issues related to Fireblock flow, such as allowance management and fund locking mechanism.",
+      "link": "https://docs.institutional.ts.finance/",
+      "lastUpdatedAt": "2025-04-15T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 57,
+      "description": "Security issues caused by private key or permission leakage.",
+      "link": "https://docs.institutional.ts.finance/",
+      "lastUpdatedAt": "2025-04-15T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 58,
+      "description": "Problems with Oracle and other third-party contracts.",
+      "link": "https://docs.institutional.ts.finance/",
+      "lastUpdatedAt": "2025-04-15T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
+  "defaultOutOfScopeBlockchain": null,
+  "defaultOutOfScopeSmartContract": null,
+  "defaultOutOfScopeWebAndApplications": null,
+  "defaultOutOfScopeGeneral": null,
+  "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+  "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+  "customOutOfScopeInformation": null,
+  "customProhibitedActivities": [],
+  "impacts": [
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 24,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed royalties"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 26,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed royalties"
+    },
+    {
+      "id": 27,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds"
+    },
+    {
+      "id": 29,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Smart contract unable to operate due to lack of token funds"
+    },
+    {
+      "id": 30,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 32,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of gas"
+    },
+    {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
+    },
+    {
+      "id": 34,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
+    },
+    {
+      "id": 5575,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds for at least 24 hour"
+    },
+    {
+      "id": 5576,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Temporary freezing of funds for at least 1 hour"
+    }
+  ],
+  "rewards": [
+    {
+      "assetType": "smart_contract",
+      "level": "critical",
+      "payout": "Portion of the Reward Pool",
+      "pocRequired": true
+    },
+    {
+      "assetType": "smart_contract",
+      "level": "high",
+      "payout": "Portion of the Reward Pool",
+      "pocRequired": true
+    },
+    {
+      "assetType": "smart_contract",
+      "level": "medium",
+      "payout": "Portion of the Reward Pool",
+      "pocRequired": true
+    },
+    {
+      "assetType": "smart_contract",
+      "level": "low",
+      "payout": "Portion of the Reward Pool",
+      "pocRequired": true
+    }
+  ]
 }

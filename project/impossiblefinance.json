@@ -1,254 +1,196 @@
 {
-  "pageProps": {
-    "bounty": {
-      "contentfulId": "4GM60VkAYNxpvm6l8i3Apt",
-      "id": "impossiblefinance",
-      "slug": "impossiblefinance",
-      "project": "Impossible Finance",
-      "maxBounty": 94000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3Yc7Opcyc9vocdZJaHxz2L/d0c09ecc727b2188b63b168d60755767/Impossible.jpeg",
-      "launchDate": "2021-06-18T13:00:00.000Z",
-      "endDate": null,
-      "updatedDate": "2024-11-18T12:50:36.114Z",
-      "kyc": false,
-      "rewards": [
-        {
-          "id": 8319,
-          "assetType": "smart_contract",
-          "severity": "critical",
-          "rewardModel": "range",
-          "maxReward": 94000,
-          "minReward": 50000,
-          "rewardCalculationPercentage": 10
-        },
-        {
-          "id": 6470,
-          "assetType": "smart_contract",
-          "severity": "high",
-          "rewardModel": "fixed",
-          "fixedReward": 20000
-        },
-        {
-          "id": 6471,
-          "assetType": "smart_contract",
-          "severity": "medium",
-          "rewardModel": "fixed",
-          "fixedReward": 5000
-        },
-        {
-          "id": 6472,
-          "assetType": "smart_contract",
-          "severity": "low",
-          "rewardModel": "fixed",
-          "fixedReward": 1000
-        }
-      ],
-      "audits": null,
-      "assets": [
-        {
-          "id": "f9BFrgfDvcF4IG7ji0z9H",
-          "type": "smart_contract",
-          "url": "https://github.com/ImpossibleFinance/launchpad-contracts",
-          "description": null,
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2022-02-09T14:05:39.513Z",
-          "fund": {
-            "usdValue": 0,
-            "addressesCount": 1
-          }
-        }
-      ],
-      "impacts": [
-        {
-          "id": 585,
-          "type": "smart_contract",
-          "severity": "low",
-          "title": "Smart contract fails to deliver promised returns, but doesn’t lose value"
-        },
-        {
-          "id": 23,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Theft of unclaimed yield"
-        },
-        {
-          "id": 586,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Any governance voting result manipulation"
-        },
-        {
-          "id": 25,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Permanent freezing of unclaimed yield"
-        },
-        {
-          "id": 587,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Temporary freezing of funds for a minimum period of 7 days"
-        },
-        {
-          "id": 588,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Smart contract unable to operate due to lack of funds"
-        },
-        {
-          "id": 589,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Miner-extractable value (MEV)"
-        },
-        {
-          "id": 590,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Block stuffing for profit"
-        },
-        {
-          "id": 31,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-        },
-        {
-          "id": 32,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Theft of gas"
-        },
-        {
-          "id": 33,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Unbounded gas consumption"
-        },
-        {
-          "id": 15,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-        },
-        {
-          "id": 17,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Permanent freezing of funds"
-        },
-        {
-          "id": 22,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Protocol insolvency"
-        }
-      ],
-      "programOverview": "Impossible Finance uses decentralised financial protocols to give everyone the same access to financial products, which were previously only available to institutions and select individuals. Impossible Finance has a vision to level the playing field by building a fair, more accessible open financial system for all.\n\nFurther resources regarding Impossible Finance can be found on their website, [https://impossible.finance/](https://impossible.finance/).  \n\nThe bug bounty program is focused around its smart contracts and is mostly concerned with the loss of user funds and other smart contract risks.",
-      "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nSmart Contract critical payouts have a maximum total payout of 10% of the funds that are directly potentially affected with a payout floor of USD 50 000. The estimated maximum payout is based on the Total Value Locked (TVL) in the Impossible Finance but is explicitly only an estimate and only the actual active amount at the time of reporting will be considered. The actual active amount of staked funds can be found on [https://farms.impossible.finance/farms](https://farms.impossible.finance/farms). \n\n__KYC__\n\nCountry of residence is required for KYC process\n\nPayouts are handled by the __Impossible Finance__ team directly and are denominated in USD. However, payouts are done in __BUSD__. For Critical payouts, up to 80% of the reward may be in the project token, __IF__.",
-      "outOfScopeAndRules": null,
-      "assetsBodyV2": "The ImpossibleRouter01.sol smart contract is considered as out-of-scope of the bug bounty program.\n\n*Please note that the current settings in the repository are optimized for running our test cases. These settings include changing the duration of “ONE_DAY” to 50 binance smart chain blocks (as opposed to 28800) and commenting out require statements in modifiers such as onlyGovernance in ImpossiblePair.sol and setRouter in ImpossibleFactory.sol. Specifically, we are aware that with these settings, if a router is not initialized upon contract deployment, an adversary can call setRouter and link a malicious router which takes advantage of how cheapSwap in ImpossiblePair.sol doesn’t perform K invariant checks. The scope of the bug bounty covers the “production version” of these contracts in which the 3 variables are uncommented instead of commented.*",
-      "impactsBody": null,
-      "immunefiStandard": true,
-      "tags": {
-        "general": [
-          "Immunefi Standard",
-          "KYC Not Required",
-          "PoC Not Required"
-        ],
-        "productType": [
-          "DEX",
-          "Launchpad",
-          "Staking"
-        ],
-        "projectType": [
-          "Defi"
-        ],
-        "ecosystem": [
-          "Arbitrum",
-          "BSC",
-          "ETH"
-        ],
-        "programType": [
-          "Smart Contract"
-        ],
-        "language": [
-          "Solidity"
-        ],
-        "featured": [
-          "Launched Recently"
-        ]
-      },
-      "legacy": {
-        "technologies": [
-          "Smart Contract"
-        ],
-        "blockchain_rewards": [],
-        "smartcontract_rewards": [
-          {
-            "level": "Critical",
-            "payout": "USD $50,000 - 10% of Funds at Risk (max est. USD $94,000)"
-          },
-          {
-            "level": "High",
-            "payout": "USD $20,000"
-          },
-          {
-            "level": "Medium",
-            "payout": "USD $5,000"
-          },
-          {
-            "level": "Low",
-            "payout": "USD $1,000"
-          }
-        ],
-        "web_rewards": []
-      },
-      "websiteUrl": null,
-      "description": "Impossible Finance uses decentralised financial protocols to give everyone the same access to financial products, which were previously only available to institutions and select individuals. Impossible Finance has a vision to level the playing field by building a fair, more accessible open financial system for all.",
-      "githubUrl": null,
-      "feasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
-      "prohibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
-      "responsiblePublicationCategory": null,
-      "knownIssues": [],
-      "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
-      "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": "  - Best practice critiques",
-      "customProhibitedActivities": [],
-      "rewardsTokenNetwork": "Ethereum, Base",
-      "rewardsToken": "BUSD",
-      "eligibilityCriteria": [],
-      "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
-      "programDocumentations": [],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": true,
-      "findingsUrl": null,
-      "premiumTriaging": false
-    },
-    "project": {
-      "features": [],
-      "premiumTriaging": false,
-      "isSafeHarborActive": false,
-      "performanceMetrics": {}
-    },
-    "metaData": {
-      "title": "Impossible Finance Bug Bounties",
-      "description": "Find bugs and vulnerabilities on Impossible Finance and get paid up to $94,000.",
-      "url": "https://immunefi.com/bug-bounty/impossiblefinance/",
-      "ogImg": "/api/bounty/og-image/?project=Impossible+Finance&slug=impossiblefinance"
-    },
-    "layoutProps": {
-      "headerMarginBottom": "mb-3 lg:mb-15",
-      "footerMarginTop": "mt-0"
+  "assets": [
+    {
+      "id": "f9BFrgfDvcF4IG7ji0z9H",
+      "revision": 1,
+      "type": "smart_contract",
+      "url": "https://github.com/ImpossibleFinance/launchpad-contracts",
+      "description": null,
+      "isPrimacyOfImpact": null,
+      "addedAt": "2022-02-09T14:05:39.513Z"
     }
-  },
-  "__N_SSG": true
+  ],
+  "assetsBodyV2": "The ImpossibleRouter01.sol smart contract is considered as out-of-scope of the bug bounty program.\n\n*Please note that the current settings in the repository are optimized for running our test cases. These settings include changing the duration of “ONE_DAY” to 50 binance smart chain blocks (as opposed to 28800) and commenting out require statements in modifiers such as onlyGovernance in ImpossiblePair.sol and setRouter in ImpossibleFactory.sol. Specifically, we are aware that with these settings, if a router is not initialized upon contract deployment, an adversary can call setRouter and link a malicious router which takes advantage of how cheapSwap in ImpossiblePair.sol doesn’t perform K invariant checks. The scope of the bug bounty covers the “production version” of these contracts in which the 3 variables are uncommented instead of commented.*",
+  "boostedIntroEvaluating": "",
+  "boostedIntroFinished": "",
+  "boostedIntroLive": "",
+  "boostedIntroStartingIn": "",
+  "boostedLeaderboard": [],
+  "boostedSummaryReport": null,
+  "ecosystem": [
+    "Arbitrum",
+    "BSC",
+    "ETH"
+  ],
+  "endDate": null,
+  "evaluationEndDate": null,
+  "features": [],
+  "hideAssetsInScope": null,
+  "immunefiStandard": true,
+  "inviteOnly": false,
+  "kyc": false,
+  "language": [
+    "Solidity"
+  ],
+  "launchDate": "2021-06-18T13:00:00.000Z",
+  "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3Yc7Opcyc9vocdZJaHxz2L/d0c09ecc727b2188b63b168d60755767/Impossible.jpeg",
+  "maxBounty": 94000,
+  "pocPerTypeAndSeverity": [],
+  "primaryPaymentWallet": "EVM",
+  "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces",
+  "productType": [
+    "DEX",
+    "Launchpad",
+    "Staking"
+  ],
+  "programOverview": "Impossible Finance uses decentralised financial protocols to give everyone the same access to financial products, which were previously only available to institutions and select individuals. Impossible Finance has a vision to level the playing field by building a fair, more accessible open financial system for all.\n\nFurther resources regarding Impossible Finance can be found on their website, [https://impossible.finance/](https://impossible.finance/).  \n\nThe bug bounty program is focused around its smart contracts and is mostly concerned with the loss of user funds and other smart contract risks.",
+  "programType": [
+    "Smart Contract"
+  ],
+  "project": "Impossible Finance",
+  "projectType": [
+    "Defi"
+  ],
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nSmart Contract critical payouts have a maximum total payout of 10% of the funds that are directly potentially affected with a payout floor of USD 50 000. The estimated maximum payout is based on the Total Value Locked (TVL) in the Impossible Finance but is explicitly only an estimate and only the actual active amount at the time of reporting will be considered. The actual active amount of staked funds can be found on [https://farms.impossible.finance/farms](https://farms.impossible.finance/farms). \n\n__KYC__\n\nCountry of residence is required for KYC process\n\nPayouts are handled by the __Impossible Finance__ team directly and are denominated in USD. However, payouts are done in __BUSD__. For Critical payouts, up to 80% of the reward may be in the project token, __IF__.",
+  "rewardsPool": 0,
+  "primaryPool": 0,
+  "allStarsPool": 0,
+  "podiumPool": 0,
+  "rewardsToken": "BUSD",
+  "slug": "impossiblefinance",
+  "tenPercentEconomicRule": false,
+  "updatedDate": "2024-11-18T12:50:36.114Z",
+  "impactsBody": null,
+  "websiteUrl": null,
+  "githubUrl": null,
+  "eligibilityCriteria": [],
+  "responsiblePublicationCategory": null,
+  "description": "Impossible Finance uses decentralised financial protocols to give everyone the same access to financial products, which were previously only available to institutions and select individuals. Impossible Finance has a vision to level the playing field by building a fair, more accessible open financial system for all.",
+  "knownIssues": [],
+  "defaultOutOfScopeBlockchain": null,
+  "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+  "defaultOutOfScopeWebAndApplications": null,
+  "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+  "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+  "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+  "customOutOfScopeInformation": "  - Best practice critiques",
+  "customProhibitedActivities": [],
+  "impacts": [
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 32,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of gas"
+    },
+    {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
+    },
+    {
+      "id": 585,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Smart contract fails to deliver promised returns, but doesn’t lose value"
+    },
+    {
+      "id": 586,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Any governance voting result manipulation"
+    },
+    {
+      "id": 587,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds for a minimum period of 7 days"
+    },
+    {
+      "id": 588,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Smart contract unable to operate due to lack of funds"
+    },
+    {
+      "id": 589,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Miner-extractable value (MEV)"
+    },
+    {
+      "id": 590,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing for profit"
+    }
+  ],
+  "rewards": [
+    {
+      "id": 8319,
+      "assetType": "smart_contract",
+      "severity": "critical",
+      "rewardModel": "range",
+      "maxReward": 94000,
+      "minReward": 50000,
+      "rewardCalculationPercentage": 10
+    },
+    {
+      "id": 6470,
+      "assetType": "smart_contract",
+      "severity": "high",
+      "rewardModel": "fixed",
+      "fixedReward": 20000
+    },
+    {
+      "id": 6471,
+      "assetType": "smart_contract",
+      "severity": "medium",
+      "rewardModel": "fixed",
+      "fixedReward": 5000
+    },
+    {
+      "id": 6472,
+      "assetType": "smart_contract",
+      "severity": "low",
+      "rewardModel": "fixed",
+      "fixedReward": 1000
+    }
+  ]
 }

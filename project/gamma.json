@@ -1,214 +1,152 @@
 {
-  "pageProps": {
-    "bounty": {
-      "contentfulId": "4WzXJzRyYzHvF3OhSfBKVO",
-      "id": "gamma",
-      "slug": "gamma",
-      "project": "Gamma",
-      "maxBounty": 50000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2teADVeqlZjb4p9u7YbiMX/9c40208f8f56b9beb73bb3077228fa2c/Gamma_Logo.png",
-      "launchDate": "2021-10-08T15:00:00.000Z",
-      "endDate": null,
-      "updatedDate": "2024-12-07T18:43:32.008Z",
-      "kyc": false,
-      "rewards": [
-        {
-          "id": 9544,
-          "assetType": "smart_contract",
-          "severity": "critical",
-          "rewardModel": "fixed",
-          "rewardCalculationPercentage": 0,
-          "fixedReward": 50000
-        },
-        {
-          "id": 9545,
-          "assetType": "smart_contract",
-          "severity": "medium",
-          "rewardModel": "fixed",
-          "fixedReward": 5000
-        }
-      ],
-      "audits": null,
-      "assets": [
-        {
-          "id": "21zPm19TlbEQqK0SR1jK48",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x26805021988F1a45dC708B5FB75Fc75F21747D8c",
-          "description": "xGamma",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2022-02-09T12:45:07.989Z",
-          "fund": {
-            "usdValue": 176544.83,
-            "addressesCount": 1
-          }
-        },
-        {
-          "id": "2zW4jVKz9ikehx9XfuQkKY",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0xa8076ae31e4b6c64d07b1ed27889924a962a70d3",
-          "description": "Hypervisor",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2022-03-30T17:40:11.919Z",
-          "fund": {
-            "usdValue": 0,
-            "addressesCount": 1
-          }
-        },
-        {
-          "id": "5HYeXpcawP3e58xcFJJJrT",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x83de646a7125ac04950fea7e322481d4be66c71d",
-          "description": "UniProxy",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2022-04-25T16:25:55.512Z",
-          "fund": {
-            "usdValue": 0,
-            "addressesCount": 1
-          }
-        }
-      ],
-      "impacts": [
-        {
-          "id": 1099,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Theft of unclaimed yield"
-        },
-        {
-          "id": 1100,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Permanent freezing of unclaimed yield"
-        },
-        {
-          "id": 1101,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Temporary freezing of funds"
-        },
-        {
-          "id": 29,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Smart contract unable to operate due to lack of token funds"
-        },
-        {
-          "id": 15,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-        },
-        {
-          "id": 17,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Permanent freezing of funds"
-        }
-      ],
-      "programOverview": "Access active liquidity management on Uniswap v3. Gamma has developed a protocol, a management infrastructure, and a variety of strategies used by managers and market makers. As an LP, you can deposit your assets for Gamma to actively manage in Uniswap v3 positions, returning yield in the asset you deposit.\n\nFor more information about Gamma, please visit [https://www.gammastrategies.org/](https://www.gammastrategies.org/).   \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Loss of user funds\n  - Theft of unclaimed yield or principal\n  - Freezing of unclaimed yield",
-      "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n    - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the Immunefi Vulnerability Severity Classification System. This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nAll bug reports must come with a PoC in order to be considered for a reward. \n\nThe following known issues would be considered as out-of-scope of this bounty program: \n  - For the UniProxy contract, its deposit configuration is its operational context. Attacks which depend on different configuration than provided for their example hypervisor contract are not to be considered\n  - For the xGamma contract, an attack is possible wherein the attacker deposits just before and withdraws just after rebase. In our operational context, they do not send funds (rebase) to the xGamma contract outside of private rpc.\n\nPayouts are handled by the __Gamma__ team directly and are denominated in USD. However, payouts are done in either __GAMMA__, __ETH__ or __USDC__, up to the discretion of the team.",
-      "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n  - Attacks which require differing operational configuration than targets supplied\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
-      "assetsBodyV2": "However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
-      "impactsBody": null,
-      "immunefiStandard": true,
-      "tags": {
-        "general": [
-          "Immunefi Standard",
-          "KYC Not Required",
-          "PoC Required"
-        ],
-        "productType": [
-          "AMM",
-          "Liquid Staking"
-        ],
-        "projectType": [
-          "Defi",
-          "Infrastructure"
-        ],
-        "ecosystem": [
-          "ETH"
-        ],
-        "programType": [
-          "Smart Contract"
-        ],
-        "language": [
-          "Solidity"
-        ],
-        "featured": [
-          "Launched Recently"
-        ]
-      },
-      "legacy": {
-        "technologies": [
-          "Smart Contract"
-        ],
-        "blockchain_rewards": [],
-        "smartcontract_rewards": [
-          {
-            "level": "Critical",
-            "payout": "USD $50,000"
-          },
-          {
-            "level": "Medium",
-            "payout": "USD $5,000"
-          }
-        ],
-        "web_rewards": []
-      },
-      "websiteUrl": null,
-      "description": "Access active liquidity management on Uniswap v3. Gamma has developed a protocol, a management infrastructure, and a variety of strategies used by managers and market makers. As an LP, you can deposit your assets for Gamma to actively manage in Uniswap v3 positions, returning yield in the asset you deposit.",
-      "githubUrl": null,
-      "feasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
-      "prohibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
-      "responsiblePublicationCategory": null,
-      "knownIssues": [],
-      "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
-      "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": "  - Attacks which require differing operational configuration than targets supplied\n  - Best practice critiques\n",
-      "customProhibitedActivities": [],
-      "rewardsTokenNetwork": "Ethereum",
-      "rewardsToken": "GAMMA, ETH or USDC",
-      "eligibilityCriteria": [],
-      "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [
-        {
-          "id": 202,
-          "title": "Gamma Smart Contracts",
-          "description": "Program Smart Contracts",
-          "url": "https://github.com/GammaStrategies/hypervisor/tree/stable"
-        }
-      ],
-      "programDocumentations": [],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": true,
-      "findingsUrl": null,
-      "premiumTriaging": false
+  "assets": [
+    {
+      "id": "21zPm19TlbEQqK0SR1jK48",
+      "revision": 1,
+      "type": "smart_contract",
+      "url": "https://etherscan.io/address/0x26805021988F1a45dC708B5FB75Fc75F21747D8c",
+      "description": "xGamma",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2022-02-09T12:45:07.989Z"
     },
-    "project": {
-      "features": [],
-      "premiumTriaging": false,
-      "isSafeHarborActive": false,
-      "performanceMetrics": {}
+    {
+      "id": "2zW4jVKz9ikehx9XfuQkKY",
+      "revision": 2,
+      "type": "smart_contract",
+      "url": "https://etherscan.io/address/0xa8076ae31e4b6c64d07b1ed27889924a962a70d3",
+      "description": "Hypervisor",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2022-03-30T17:40:11.919Z"
     },
-    "metaData": {
-      "title": "Gamma Bug Bounties",
-      "description": "Find bugs and vulnerabilities on Gamma and get paid up to $50,000.",
-      "url": "https://immunefi.com/bug-bounty/gamma/",
-      "ogImg": "/api/bounty/og-image/?project=Gamma&slug=gamma"
-    },
-    "layoutProps": {
-      "headerMarginBottom": "mb-3 lg:mb-15",
-      "footerMarginTop": "mt-0"
+    {
+      "id": "5HYeXpcawP3e58xcFJJJrT",
+      "revision": 2,
+      "type": "smart_contract",
+      "url": "https://etherscan.io/address/0x83de646a7125ac04950fea7e322481d4be66c71d",
+      "description": "UniProxy",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2022-04-25T16:25:55.512Z"
     }
-  },
-  "__N_SSG": true
+  ],
+  "assetsBodyV2": "However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
+  "boostedIntroEvaluating": "",
+  "boostedIntroFinished": "",
+  "boostedIntroLive": "",
+  "boostedIntroStartingIn": "",
+  "boostedLeaderboard": [],
+  "boostedSummaryReport": null,
+  "ecosystem": [
+    "ETH"
+  ],
+  "endDate": null,
+  "evaluationEndDate": null,
+  "features": [],
+  "hideAssetsInScope": null,
+  "immunefiStandard": true,
+  "inviteOnly": false,
+  "kyc": false,
+  "language": [
+    "Solidity"
+  ],
+  "launchDate": "2021-10-08T15:00:00.000Z",
+  "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2teADVeqlZjb4p9u7YbiMX/9c40208f8f56b9beb73bb3077228fa2c/Gamma_Logo.png",
+  "maxBounty": 50000,
+  "outOfScopeAndRules": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks that the reporter has already exploited themselves, leading to damage\n  - Attacks requiring access to leaked keys/credentials\n  - Attacks requiring access to privileged addresses (governance, strategist)\n  - Attacks which require differing operational configuration than targets supplied\n\n__Smart Contracts and Blockchain__\n\n  - Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n  - Basic economic governance attacks (e.g. 51% attack)\n  - Lack of liquidity\n  - Best practice critiques\n  - Sybil attacks\n\nThe following activities are prohibited by this bug bounty program:\n\n  - Any testing with mainnet or public testnet contracts; all testing should be done on private testnets\n  - Any testing with pricing oracles or third party smart contracts\n  - Attempting phishing or other social engineering attacks against our employees and/or customers\n  - Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n  - Any denial of service attacks\n  - Automated testing of services that generates significant amounts of traffic\n  - Public disclosure of an unpatched vulnerability in an embargoed bounty",
+  "pocPerTypeAndSeverity": [
+    "smart_contract - critical"
+  ],
+  "primaryPaymentWallet": "EVM",
+  "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n    - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces",
+  "productType": [
+    "AMM",
+    "Liquid Staking"
+  ],
+  "programOverview": "Access active liquidity management on Uniswap v3. Gamma has developed a protocol, a management infrastructure, and a variety of strategies used by managers and market makers. As an LP, you can deposit your assets for Gamma to actively manage in Uniswap v3 positions, returning yield in the asset you deposit.\n\nFor more information about Gamma, please visit [https://www.gammastrategies.org/](https://www.gammastrategies.org/).   \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Loss of user funds\n  - Theft of unclaimed yield or principal\n  - Freezing of unclaimed yield",
+  "programType": [
+    "Smart Contract"
+  ],
+  "project": "Gamma",
+  "projectType": [
+    "Defi",
+    "Infrastructure"
+  ],
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the Immunefi Vulnerability Severity Classification System. This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nAll bug reports must come with a PoC in order to be considered for a reward. \n\nThe following known issues would be considered as out-of-scope of this bounty program: \n  - For the UniProxy contract, its deposit configuration is its operational context. Attacks which depend on different configuration than provided for their example hypervisor contract are not to be considered\n  - For the xGamma contract, an attack is possible wherein the attacker deposits just before and withdraws just after rebase. In our operational context, they do not send funds (rebase) to the xGamma contract outside of private rpc.\n\nPayouts are handled by the __Gamma__ team directly and are denominated in USD. However, payouts are done in either __GAMMA__, __ETH__ or __USDC__, up to the discretion of the team.",
+  "rewardsPool": 0,
+  "primaryPool": 0,
+  "allStarsPool": 0,
+  "podiumPool": 0,
+  "rewardsToken": "GAMMA, ETH or USDC",
+  "slug": "gamma",
+  "tenPercentEconomicRule": false,
+  "updatedDate": "2024-12-07T18:43:32.008Z",
+  "impactsBody": null,
+  "websiteUrl": null,
+  "githubUrl": null,
+  "eligibilityCriteria": [],
+  "responsiblePublicationCategory": null,
+  "description": "Access active liquidity management on Uniswap v3. Gamma has developed a protocol, a management infrastructure, and a variety of strategies used by managers and market makers. As an LP, you can deposit your assets for Gamma to actively manage in Uniswap v3 positions, returning yield in the asset you deposit.",
+  "knownIssues": [],
+  "defaultOutOfScopeBlockchain": null,
+  "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+  "defaultOutOfScopeWebAndApplications": null,
+  "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+  "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+  "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+  "customOutOfScopeInformation": "  - Attacks which require differing operational configuration than targets supplied\n  - Best practice critiques\n",
+  "customProhibitedActivities": [],
+  "impacts": [
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 29,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Smart contract unable to operate due to lack of token funds"
+    },
+    {
+      "id": 1099,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 1100,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 1101,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Temporary freezing of funds"
+    }
+  ],
+  "rewards": [
+    {
+      "id": 9544,
+      "assetType": "smart_contract",
+      "severity": "critical",
+      "rewardModel": "fixed",
+      "rewardCalculationPercentage": 0,
+      "fixedReward": 50000
+    },
+    {
+      "id": 9545,
+      "assetType": "smart_contract",
+      "severity": "medium",
+      "rewardModel": "fixed",
+      "fixedReward": 5000
+    }
+  ]
 }

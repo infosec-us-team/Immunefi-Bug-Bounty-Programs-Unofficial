@@ -1,399 +1,314 @@
 {
-  "pageProps": {
-    "bounty": {
-      "contentfulId": "3dAK8FTw8wrCKmdyl56gCN",
-      "id": "astarnetwork",
-      "slug": "astarnetwork",
-      "project": "Astar Network",
-      "maxBounty": 250000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/14P174mW7atHe0iqI2UmE8/b47c08fa562ebe74aaff6b179e371d00/Astar_Network_logo.jpeg",
-      "launchDate": "2022-05-31T16:30:00.000Z",
-      "endDate": null,
-      "updatedDate": "2025-03-07T08:42:39.965Z",
-      "kyc": true,
-      "rewards": [
-        {
-          "id": 14652,
-          "assetType": "blockchain_dlt",
-          "severity": "critical",
-          "rewardModel": "range",
-          "maxReward": 250000,
-          "minReward": 7500,
-          "rewardCalculationPercentage": 10
-        },
-        {
-          "id": 14653,
-          "assetType": "blockchain_dlt",
-          "severity": "high",
-          "rewardModel": "range",
-          "maxReward": 50000,
-          "minReward": 3000
-        },
-        {
-          "id": 14654,
-          "assetType": "blockchain_dlt",
-          "severity": "medium",
-          "rewardModel": "fixed",
-          "fixedReward": 3000
-        },
-        {
-          "id": 14655,
-          "assetType": "blockchain_dlt",
-          "severity": "low",
-          "rewardModel": "fixed",
-          "fixedReward": 1000
-        },
-        {
-          "id": 14656,
-          "assetType": "websites_and_applications",
-          "severity": "critical",
-          "rewardModel": "range",
-          "maxReward": 15000,
-          "minReward": 7500,
-          "otherImpactMaxReward": 0
-        },
-        {
-          "id": 14657,
-          "assetType": "websites_and_applications",
-          "severity": "high",
-          "rewardModel": "range",
-          "maxReward": 7500,
-          "minReward": 2500
-        }
-      ],
-      "audits": null,
-      "assets": [
-        {
-          "id": "27sVtrJRQEFDettJ84lagu",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/AstarNetwork/Astar",
-          "description": "Mainnet Astar and Shiden (Included subfolders: runtime/)",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2022-05-31T16:30:00.000Z",
-          "fund": {
-            "usdValue": 0,
-            "addressesCount": 1
-          }
-        },
-        {
-          "id": "6rJLhVifUyzzcnPytYfSrV",
-          "type": "websites_and_applications",
-          "url": "https://github.com/AstarNetwork/astar-apps",
-          "description": "Astar Portal (Included subfolders: src/)",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2022-05-31T16:30:00.000Z",
-          "fund": {
-            "usdValue": 0,
-            "addressesCount": 1
-          }
-        }
-      ],
-      "impacts": [
-        {
-          "id": 2695,
-          "type": "blockchain_dlt",
-          "severity": "low",
-          "title": "DoS of greater than 10% but less than 30% of validator or miner nodes and does not shut down the network"
-        },
-        {
-          "id": 2,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
-        },
-        {
-          "id": 4,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Permanent freezing of funds (fix requires hardfork)"
-        },
-        {
-          "id": 35,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Execute arbitrary system commands"
-        },
-        {
-          "id": 37,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Taking down the application/website"
-        },
-        {
-          "id": 1,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Network not being able to confirm new transactions (total network shutdown)"
-        },
-        {
-          "id": 5,
-          "type": "blockchain_dlt",
-          "severity": "high",
-          "title": "Unintended chain split (network partition)"
-        },
-        {
-          "id": 36,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "Retrieve sensitive data/files from a running server, such as:\n- /etc/shadow\n- database passwords\n- blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
-        },
-        {
-          "id": 46,
-          "type": "websites_and_applications",
-          "severity": "high",
-          "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:\n- HTML injection without JavaScript\n- Replacing existing text with arbitrary text\n- Arbitrary file uploads, etc."
-        },
-        {
-          "id": 47,
-          "type": "websites_and_applications",
-          "severity": "high",
-          "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Email\n- Password of the victim etc."
-        },
-        {
-          "id": 48,
-          "type": "websites_and_applications",
-          "severity": "high",
-          "title": "Improperly disclosing confidential user information, such as:\n- Email address\n- Phone number\n- Physical address, etc."
-        },
-        {
-          "id": 49,
-          "type": "websites_and_applications",
-          "severity": "high",
-          "title": "Subdomain takeover without already-connected wallet interaction"
-        },
-        {
-          "id": 2696,
-          "type": "blockchain_dlt",
-          "severity": "low",
-          "title": "Underpricing transaction fees relative to computation time"
-        },
-        {
-          "id": 2702,
-          "type": "blockchain_dlt",
-          "severity": "high",
-          "title": "Blocking or modifying processes for governance or users from performing their tasks"
-        },
-        {
-          "id": 2704,
-          "type": "blockchain_dlt",
-          "severity": "high",
-          "title": "Token holders temporarily unable to transfer holdings"
-        },
-        {
-          "id": 2705,
-          "type": "blockchain_dlt",
-          "severity": "high",
-          "title": "Transient consensus failures"
-        },
-        {
-          "id": 2709,
-          "type": "blockchain_dlt",
-          "severity": "medium",
-          "title": "High compute consumption by validator/mining nodes"
-        },
-        {
-          "id": 2711,
-          "type": "blockchain_dlt",
-          "severity": "medium",
-          "title": "DoS of greater than 30% of validator or miner nodes and does not shut down the network"
-        },
-        {
-          "id": 2712,
-          "type": "blockchain_dlt",
-          "severity": "medium",
-          "title": "Putting on-chain data into an unexpected state without interrupting the system or users from performing their tasks, e.g. generating redundant events, logs, etc"
-        },
-        {
-          "id": 2713,
-          "type": "blockchain_dlt",
-          "severity": "medium",
-          "title": "Block stuffing"
-        },
-        {
-          "id": 2718,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Transaction/consensus manipulation"
-        },
-        {
-          "id": 2719,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Unauthorized token minting"
-        },
-        {
-          "id": 2720,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Governance compromise"
-        },
-        {
-          "id": 2721,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Getting access to an identity that can lead to unauthorized access to system’s or user’s assets"
-        },
-        {
-          "id": 2722,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Empty or freeze the contract's holdings (e.g. economic attacks, flash loans, reentrancy, MEV, logic errors, integer over-/under-flow)"
-        },
-        {
-          "id": 5394,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Direct theft or loss of any user or funds, whether at-rest or in-motion"
-        },
-        {
-          "id": 5407,
-          "type": "blockchain_dlt",
-          "severity": "medium",
-          "title": "Attacks against thin clients"
-        },
-        {
-          "id": 5408,
-          "type": "websites_and_applications",
-          "severity": "critical",
-          "title": "GitHub misconfiguration leading to unauthorized change"
-        }
-      ],
-      "programOverview": "[Astar Network](https://astar.network/) – __The Future of Multichain Smart Contracts__.\n\nAstar Network supports the building of dApps with EVM and WASM smart contracts and offers developers true interoperability with cross-consensus messaging and cross-virtual machines. Astar’s unique Build2Earn model empowers developers to get paid through a dApp staking mechanism for the code they write and dApps they build.\nAstar’s vibrant ecosystem has become Polkadot’s leading Parachain globally, supported by all major exchanges and Tier 1 VCs. Astar offers the flexibility of all Ethereum and WASM toolings for developers to start building their dApps\n\nFor more information about Astar, please visit [https://astar.network/](https://astar.network/).",
-      "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. All High and Critical Blockchain bug reports require a PoC and a suggestion for a fix to be eligible for a reward. All Medium and Low Blockchain bug reports require a suggestion for a fix to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required. In specific cases, we keep the right to ask the whitehat to demonstrate PoC on the test environment provided by the Astar team to validate the impact of the report.\n\nCritical vulnerabilities involving a direct loss of user funds, double spending, or the minting of tokens are capped at 10% of the economic damage, taking primarily into consideration the funds at risk or the amount of tokens that can be minted but also branding and PR considerations, at the discretion of the team. However, there is a minimum reward of __USD 50 000__. Consensus manipulation or governance compromise results in the full __USD 250 000__.\n\nThe final severity and reward amount are determined at the discretion of the Astar team by evaluating the funds at risk, possible impact, likelihood of attack, and other factors. If there are no funds at risk, the level of the bug may be downgraded or rejected.\n\nA reward can only be provided if:\n  - The bug wasn't reported before.\n  - You do not disclose the bug to other parties or publicity until it's fixed by the Astar dev Team.\n  - You didn't exploit the vulnerability or allow anyone else to profit from it.\n  - You report a bug without any additional conditions or threats.\n  - The investigation was NOT conducted with Ineligible methods or Prohibited Activities, as defined in this document.\n  - You should reply to our additional questions regarding the reproduction of the reported bug (if they follow) within a reasonable time (up to 24h for Critical and up to 48hours for other levels of vulnerability)\n  - When duplicate bug reports occur, we reward only the first one if it's provided with enough information for reproduction.\n  - When multiple vulnerabilities are caused by one underlying issue, we will reward only the first reported.\n  - The vulnerability is found in the runtime pallet of Astar (no tests, or modules that aren’t in runtime, e.g. live, can be considered as vulnerability).\n\nAstar requires KYC and an invoice to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed are Name, Address, Email. The collection of this information will be done by the Astar team. Astar may require additional KYC verification to be completed before payment can be released. Some countries are restricted when it comes to payments. This bug bounty program is only open to individuals who reside outside of the countries that are restricted by OFAC and by UNSC resolutions.\n\nPayouts are handled by the __Astar Network__ team directly and are denominated in __USD__. However, payouts are done in __ASTR, SDN, USDC-ERC20, or USDT-ERC20__, subjected to Astar Network discretion.",
-      "outOfScopeAndRules": null,
-      "assetsBodyV2": "The Shiden parachain on Kusama and the Astar parachain on Polkadot are both included in the assets-in-scope.\n\nHowever, only those explicitly listed in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf an impact can be caused to any other asset managed by Astar Network that isn’t on this table but for which the impact is in the Impacts in Scope section, you are encouraged to submit it for the consideration of the project. This only applies to Critical impacts.",
-      "impactsBody": null,
-      "immunefiStandard": true,
-      "tags": {
-        "general": [
-          "Immunefi Standard",
-          "KYC Required",
-          "PoC Required"
-        ],
-        "productType": [
-          "Crosschain Liquidity",
-          "L2",
-          "Staking"
-        ],
-        "projectType": [
-          "Defi"
-        ],
-        "ecosystem": [
-          "ETH",
-          "Polkadot"
-        ],
-        "programType": [
-          "Blockchain/DLT",
-          "Websites and Applications"
-        ],
-        "language": [
-          "JavaScript",
-          "Rust",
-          "Solidity",
-          "Typescript"
-        ],
-        "featured": [
-          "Launched Recently"
-        ]
-      },
-      "legacy": {
-        "technologies": [
-          "Websites and Applications",
-          "Blockchain/DLT"
-        ],
-        "blockchain_rewards": [
-          {
-            "level": "Critical",
-            "payout": "USD $50,000 - $250,000"
-          },
-          {
-            "level": "High",
-            "payout": "USD $10,000 - USD $50,000"
-          },
-          {
-            "level": "Medium",
-            "payout": "USD $10,000"
-          },
-          {
-            "level": "Low",
-            "payout": "USD $5,000"
-          }
-        ],
-        "smartcontract_rewards": [],
-        "web_rewards": [
-          {
-            "level": "Critical",
-            "payout": "USD $7,500 - USD $15,000"
-          },
-          {
-            "level": "High",
-            "payout": "USD $2,500 - USD $7,500"
-          },
-          {
-            "level": "Medium",
-            "payout": "USD $2,500"
-          },
-          {
-            "level": "Low",
-            "payout": "USD $1,000"
-          }
-        ]
-      },
-      "websiteUrl": null,
-      "description": "Astar Network supports the building of dApps with EVM and WASM smart contracts and offers developers true interoperability with cross-consensus messaging and cross-virtual machines. Astar’s unique Build2Earn model empowers developers to get paid through a dApp staking mechanism for the code they write and dApps they build.",
-      "githubUrl": null,
-      "feasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
-      "prohibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
-      "responsiblePublicationCategory": null,
-      "knownIssues": [],
-      "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeSmartContract": null,
-      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
-      "defaultOutOfScopeWebAndApplications": "- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n  - This does not exclude reflected HTML injection with or without JavaScript\n  - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering",
-      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": "  - Spamming\n  - Any physical attacks against Astar property, or employees\n  - Phishing or other social engineering attacks against our Astar’s employees\n  - Any attack requiring successful phishing or another scam to be executed\n  - Astar network footprints such as employee email addresses, subdomains, whois info\n\n  - GitHub and other cloud platforms misconfiguration are considered web/app vulnerabilities. \n  - All vulnerabilities and attack methods that are listed in OWASP [https://owasp.org/www-community/attacks/](https://owasp.org/www-community/attacks/)\n",
-      "customProhibitedActivities": [],
-      "rewardsTokenNetwork": "Ethereum, Polkadot",
-      "rewardsToken": "ASTR, SDN, USDC-ERC20, or USDT-ERC20",
-      "eligibilityCriteria": [],
-      "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [
-        {
-          "id": 214,
-          "title": "Astar Network Codebase",
-          "description": "Program Codebase",
-          "url": "https://github.com/AstarNetwork/"
-        }
-      ],
-      "programDocumentations": [],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": true,
-      "findingsUrl": null,
-      "premiumTriaging": false
+  "assets": [
+    {
+      "id": "27sVtrJRQEFDettJ84lagu",
+      "revision": 1,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/AstarNetwork/Astar",
+      "description": "Mainnet Astar and Shiden (Included subfolders: runtime/)",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2022-05-31T16:30:00.000Z"
     },
-    "project": {
-      "features": [],
-      "premiumTriaging": false,
-      "isSafeHarborActive": false,
-      "performanceMetrics": {
-        "medianResponseTimeInMinutes": 3013
-      }
-    },
-    "metaData": {
-      "title": "Astar Network Bug Bounties",
-      "description": "Find bugs and vulnerabilities on Astar Network and get paid up to $250,000.",
-      "url": "https://immunefi.com/bug-bounty/astarnetwork/",
-      "ogImg": "/api/bounty/og-image/?project=Astar+Network&slug=astarnetwork"
-    },
-    "layoutProps": {
-      "headerMarginBottom": "mb-3 lg:mb-15",
-      "footerMarginTop": "mt-0"
+    {
+      "id": "6rJLhVifUyzzcnPytYfSrV",
+      "revision": 1,
+      "type": "websites_and_applications",
+      "url": "https://github.com/AstarNetwork/astar-apps",
+      "description": "Astar Portal (Included subfolders: src/)",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2022-05-31T16:30:00.000Z"
     }
-  },
-  "__N_SSG": true
+  ],
+  "assetsBodyV2": "The Shiden parachain on Kusama and the Astar parachain on Polkadot are both included in the assets-in-scope.\n\nHowever, only those explicitly listed in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf an impact can be caused to any other asset managed by Astar Network that isn’t on this table but for which the impact is in the Impacts in Scope section, you are encouraged to submit it for the consideration of the project. This only applies to Critical impacts.",
+  "boostedIntroEvaluating": "",
+  "boostedIntroFinished": "",
+  "boostedIntroLive": "",
+  "boostedIntroStartingIn": "",
+  "boostedLeaderboard": [],
+  "boostedSummaryReport": null,
+  "ecosystem": [
+    "ETH",
+    "Polkadot"
+  ],
+  "endDate": null,
+  "evaluationEndDate": null,
+  "features": [],
+  "hideAssetsInScope": null,
+  "immunefiStandard": true,
+  "inviteOnly": false,
+  "kyc": true,
+  "language": [
+    "JavaScript",
+    "Rust",
+    "Solidity",
+    "Typescript"
+  ],
+  "launchDate": "2022-05-31T16:30:00.000Z",
+  "logo": "https://images.ctfassets.net/t3wqy70tc3bv/14P174mW7atHe0iqI2UmE8/b47c08fa562ebe74aaff6b179e371d00/Astar_Network_logo.jpeg",
+  "maxBounty": 250000,
+  "pocPerTypeAndSeverity": [
+    "websites_and_applications - critical",
+    "websites_and_applications - high",
+    "blockchain_dlt - critical",
+    "blockchain_dlt - high"
+  ],
+  "primaryPaymentWallet": "EVM",
+  "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+  "productType": [
+    "Crosschain Liquidity",
+    "L2",
+    "Staking"
+  ],
+  "programOverview": "[Astar Network](https://astar.network/) – __The Future of Multichain Smart Contracts__.\n\nAstar Network supports the building of dApps with EVM and WASM smart contracts and offers developers true interoperability with cross-consensus messaging and cross-virtual machines. Astar’s unique Build2Earn model empowers developers to get paid through a dApp staking mechanism for the code they write and dApps they build.\nAstar’s vibrant ecosystem has become Polkadot’s leading Parachain globally, supported by all major exchanges and Tier 1 VCs. Astar offers the flexibility of all Ethereum and WASM toolings for developers to start building their dApps\n\nFor more information about Astar, please visit [https://astar.network/](https://astar.network/).",
+  "programType": [
+    "Blockchain/DLT",
+    "Websites and Applications"
+  ],
+  "project": "Astar Network",
+  "projectType": [
+    "Defi"
+  ],
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. All High and Critical Blockchain bug reports require a PoC and a suggestion for a fix to be eligible for a reward. All Medium and Low Blockchain bug reports require a suggestion for a fix to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required. In specific cases, we keep the right to ask the whitehat to demonstrate PoC on the test environment provided by the Astar team to validate the impact of the report.\n\nCritical vulnerabilities involving a direct loss of user funds, double spending, or the minting of tokens are capped at 10% of the economic damage, taking primarily into consideration the funds at risk or the amount of tokens that can be minted but also branding and PR considerations, at the discretion of the team. However, there is a minimum reward of __USD 50 000__. Consensus manipulation or governance compromise results in the full __USD 250 000__.\n\nThe final severity and reward amount are determined at the discretion of the Astar team by evaluating the funds at risk, possible impact, likelihood of attack, and other factors. If there are no funds at risk, the level of the bug may be downgraded or rejected.\n\nA reward can only be provided if:\n  - The bug wasn't reported before.\n  - You do not disclose the bug to other parties or publicity until it's fixed by the Astar dev Team.\n  - You didn't exploit the vulnerability or allow anyone else to profit from it.\n  - You report a bug without any additional conditions or threats.\n  - The investigation was NOT conducted with Ineligible methods or Prohibited Activities, as defined in this document.\n  - You should reply to our additional questions regarding the reproduction of the reported bug (if they follow) within a reasonable time (up to 24h for Critical and up to 48hours for other levels of vulnerability)\n  - When duplicate bug reports occur, we reward only the first one if it's provided with enough information for reproduction.\n  - When multiple vulnerabilities are caused by one underlying issue, we will reward only the first reported.\n  - The vulnerability is found in the runtime pallet of Astar (no tests, or modules that aren’t in runtime, e.g. live, can be considered as vulnerability).\n\nAstar requires KYC and an invoice to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed are Name, Address, Email. The collection of this information will be done by the Astar team. Astar may require additional KYC verification to be completed before payment can be released. Some countries are restricted when it comes to payments. This bug bounty program is only open to individuals who reside outside of the countries that are restricted by OFAC and by UNSC resolutions.\n\nPayouts are handled by the __Astar Network__ team directly and are denominated in __USD__. However, payouts are done in __ASTR, SDN, USDC-ERC20, or USDT-ERC20__, subjected to Astar Network discretion.",
+  "rewardsPool": 0,
+  "primaryPool": 0,
+  "allStarsPool": 0,
+  "podiumPool": 0,
+  "rewardsToken": "ASTR, SDN, USDC-ERC20, or USDT-ERC20",
+  "slug": "astarnetwork",
+  "updatedDate": "2025-03-07T08:42:39.965Z",
+  "impactsBody": null,
+  "websiteUrl": null,
+  "githubUrl": null,
+  "eligibilityCriteria": [],
+  "responsiblePublicationCategory": null,
+  "description": "Astar Network supports the building of dApps with EVM and WASM smart contracts and offers developers true interoperability with cross-consensus messaging and cross-virtual machines. Astar’s unique Build2Earn model empowers developers to get paid through a dApp staking mechanism for the code they write and dApps they build.",
+  "knownIssues": [],
+  "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+  "defaultOutOfScopeSmartContract": null,
+  "defaultOutOfScopeWebAndApplications": "- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n  - This does not exclude reflected HTML injection with or without JavaScript\n  - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering",
+  "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+  "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+  "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+  "customOutOfScopeInformation": "  - Spamming\n  - Any physical attacks against Astar property, or employees\n  - Phishing or other social engineering attacks against our Astar’s employees\n  - Any attack requiring successful phishing or another scam to be executed\n  - Astar network footprints such as employee email addresses, subdomains, whois info\n\n  - GitHub and other cloud platforms misconfiguration are considered web/app vulnerabilities. \n  - All vulnerabilities and attack methods that are listed in OWASP [https://owasp.org/www-community/attacks/](https://owasp.org/www-community/attacks/)\n",
+  "customProhibitedActivities": [],
+  "impacts": [
+    {
+      "id": 1,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Network not being able to confirm new transactions (total network shutdown)"
+    },
+    {
+      "id": 2,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
+    },
+    {
+      "id": 4,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Permanent freezing of funds (fix requires hardfork)"
+    },
+    {
+      "id": 5,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Unintended chain split (network partition)"
+    },
+    {
+      "id": 35,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Execute arbitrary system commands"
+    },
+    {
+      "id": 36,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Retrieve sensitive data/files from a running server, such as:\n- /etc/shadow\n- database passwords\n- blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
+    },
+    {
+      "id": 37,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Taking down the application/website"
+    },
+    {
+      "id": 46,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:\n- HTML injection without JavaScript\n- Replacing existing text with arbitrary text\n- Arbitrary file uploads, etc."
+    },
+    {
+      "id": 47,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Email\n- Password of the victim etc."
+    },
+    {
+      "id": 48,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Improperly disclosing confidential user information, such as:\n- Email address\n- Phone number\n- Physical address, etc."
+    },
+    {
+      "id": 49,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Subdomain takeover without already-connected wallet interaction"
+    },
+    {
+      "id": 2695,
+      "type": "blockchain_dlt",
+      "severity": "low",
+      "title": "DoS of greater than 10% but less than 30% of validator or miner nodes and does not shut down the network"
+    },
+    {
+      "id": 2696,
+      "type": "blockchain_dlt",
+      "severity": "low",
+      "title": "Underpricing transaction fees relative to computation time"
+    },
+    {
+      "id": 2702,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Blocking or modifying processes for governance or users from performing their tasks"
+    },
+    {
+      "id": 2704,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Token holders temporarily unable to transfer holdings"
+    },
+    {
+      "id": 2705,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Transient consensus failures"
+    },
+    {
+      "id": 2709,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "High compute consumption by validator/mining nodes"
+    },
+    {
+      "id": 2711,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "DoS of greater than 30% of validator or miner nodes and does not shut down the network"
+    },
+    {
+      "id": 2712,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Putting on-chain data into an unexpected state without interrupting the system or users from performing their tasks, e.g. generating redundant events, logs, etc"
+    },
+    {
+      "id": 2713,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Block stuffing"
+    },
+    {
+      "id": 2718,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Transaction/consensus manipulation"
+    },
+    {
+      "id": 2719,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Unauthorized token minting"
+    },
+    {
+      "id": 2720,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Governance compromise"
+    },
+    {
+      "id": 2721,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Getting access to an identity that can lead to unauthorized access to system’s or user’s assets"
+    },
+    {
+      "id": 2722,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Empty or freeze the contract's holdings (e.g. economic attacks, flash loans, reentrancy, MEV, logic errors, integer over-/under-flow)"
+    },
+    {
+      "id": 5394,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Direct theft or loss of any user or funds, whether at-rest or in-motion"
+    },
+    {
+      "id": 5407,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Attacks against thin clients"
+    },
+    {
+      "id": 5408,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "GitHub misconfiguration leading to unauthorized change"
+    }
+  ],
+  "rewards": [
+    {
+      "id": 14652,
+      "assetType": "blockchain_dlt",
+      "severity": "critical",
+      "rewardModel": "range",
+      "maxReward": 250000,
+      "minReward": 7500,
+      "rewardCalculationPercentage": 10
+    },
+    {
+      "id": 14656,
+      "assetType": "websites_and_applications",
+      "severity": "critical",
+      "rewardModel": "range",
+      "maxReward": 15000,
+      "minReward": 7500,
+      "otherImpactMaxReward": 0
+    },
+    {
+      "id": 14653,
+      "assetType": "blockchain_dlt",
+      "severity": "high",
+      "rewardModel": "range",
+      "maxReward": 50000,
+      "minReward": 3000
+    },
+    {
+      "id": 14657,
+      "assetType": "websites_and_applications",
+      "severity": "high",
+      "rewardModel": "range",
+      "maxReward": 7500,
+      "minReward": 2500
+    },
+    {
+      "id": 14654,
+      "assetType": "blockchain_dlt",
+      "severity": "medium",
+      "rewardModel": "fixed",
+      "fixedReward": 3000
+    },
+    {
+      "id": 14655,
+      "assetType": "blockchain_dlt",
+      "severity": "low",
+      "rewardModel": "fixed",
+      "fixedReward": 1000
+    }
+  ]
 }

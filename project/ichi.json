@@ -1,241 +1,167 @@
 {
-  "pageProps": {
-    "bounty": {
-      "contentfulId": "3CybmyiLsdbQFTYU5AsBa9",
-      "id": "ichi",
-      "slug": "ichi",
-      "project": "Ichi",
-      "maxBounty": 50000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4sIm0crvpmamzvcEeYiPf3/0b6dd39dc320f99744fb16f6cecf4f28/Ichi.jpeg",
-      "launchDate": "2021-06-17T15:00:00.000Z",
-      "endDate": null,
-      "updatedDate": "2024-11-12T12:44:04.171Z",
-      "kyc": false,
-      "rewards": [
-        {
-          "id": 4313,
-          "assetType": "smart_contract",
-          "severity": "high",
-          "rewardModel": "fixed",
-          "fixedReward": 20000
-        },
-        {
-          "id": 4314,
-          "assetType": "smart_contract",
-          "severity": "medium",
-          "rewardModel": "fixed",
-          "fixedReward": 5000
-        },
-        {
-          "id": 4315,
-          "assetType": "smart_contract",
-          "severity": "low",
-          "rewardModel": "fixed",
-          "fixedReward": 1000
-        },
-        {
-          "id": 8153,
-          "assetType": "smart_contract",
-          "severity": "critical",
-          "rewardModel": "fixed",
-          "rewardCalculationPercentage": 10,
-          "fixedReward": 50000
-        }
-      ],
-      "audits": null,
-      "assets": [
-        {
-          "id": "5HpruAcPsEvrnDh8tLbL1E",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0xd0092632b9ac5a7856664eec1abb6e3403a6a36a",
-          "description": "OneTokenFactory",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2022-02-18T11:55:44.014Z",
-          "fund": {
-            "usdValue": 0,
-            "addressesCount": 1
-          }
-        },
-        {
-          "id": "Lk2Gzhajg0HcQRqY2i4Vg",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x14356bf935d6a62f3b87ab89f729217599bc108d",
-          "description": "OneTokenV1",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2022-02-18T11:55:46.709Z",
-          "fund": {
-            "usdValue": 0,
-            "addressesCount": 1
-          }
-        },
-        {
-          "id": "5BW8OE3kra1qBqo37ADe3v",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x81c9932bd9a87e454710ef83551ac32dd808630e",
-          "description": "Basic Null Controller",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2022-02-18T11:55:49.993Z",
-          "fund": {
-            "usdValue": 0,
-            "addressesCount": 1
-          }
-        },
-        {
-          "id": "7iqVH0J9hdktWFk8G3h1ye",
-          "type": "smart_contract",
-          "url": "https://etherscan.io/address/0x58254B405E85359Fc7Eb3b8856bA82A4dD7C82E2",
-          "description": "Incremental Mint Master",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2022-02-18T11:55:51.845Z",
-          "fund": {
-            "usdValue": 0,
-            "addressesCount": 1
-          }
-        },
-        {
-          "id": "6sDBXwLpwggsNGOCi2ynyG",
-          "type": "smart_contract",
-          "url": "https://github.com/ichifarm/ichi-oneToken",
-          "description": null,
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2022-02-18T11:55:56.824Z",
-          "fund": {
-            "usdValue": 0,
-            "addressesCount": 1
-          }
-        }
-      ],
-      "impacts": [
-        {
-          "id": 581,
-          "type": "smart_contract",
-          "severity": "low",
-          "title": "Low Smart Contract Impact"
-        },
-        {
-          "id": 582,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "High Smart Contract Impact"
-        },
-        {
-          "id": 583,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Medium Smart Contract Impact"
-        },
-        {
-          "id": 584,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Critical Smart Contract Impact"
-        }
-      ],
-      "programOverview": "ICHI is a self-sustaining, community governed platform that enables any other cryptocurrency community to create and govern their own in-house, non-custodial oneToken (a stablecoin valued at $1). \n\nICHI is the governance token of the ichi.org community and platform. It is hard capped at 5M tokens.  Each ICHI is a vote on allowed oracles, collateral, investment strategies, etc in exchange for protocol governance rewards.\n\noneTokens are the governance tokens of specific oneToken systems.  Each oneToken is a vote on treasury allocations, specific stablecoins parameters (like minting and redeeming fees), and on adoption programs.\n\nMore information about Ichi can be found on their website, [https://www.ichi.org/](https://www.ichi.org/).  \n\nThis bug bounty program is focused around its smart contracts and is mostly concerned with the prevention of the loss of user funds.",
-      "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces",
-      "rewardsBody": "Rewards for Smart Contract vulnerabilities are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nPayouts are handled by the __ICHI__ team directly and are denominated in USD. However, payouts are done in __USDC__ for rewards up to __USD 10 000__. For payouts greater, the reward is paid in __xICHI__. Critical payouts are done over a 6-month period distributed every month with the utilization of a Sablier contract",
-      "outOfScopeAndRules": null,
-      "assetsBodyV2": "Vulnerabilities affecting the four listed smart contracts are prioritized over the other smart contracts found on the GitHub link. Testnet smart contracts and other assets that are not smart contracts are not included in this bug bounty program.",
-      "impactsBody": null,
-      "immunefiStandard": true,
-      "tags": {
-        "general": [
-          "Immunefi Standard",
-          "KYC Not Required",
-          "PoC Not Required"
-        ],
-        "productType": [
-          "Stablecoin"
-        ],
-        "projectType": [
-          "Defi"
-        ],
-        "ecosystem": [
-          "ETH"
-        ],
-        "programType": [
-          "Smart Contract"
-        ],
-        "language": [
-          "Solidity"
-        ],
-        "featured": [
-          "Launched Recently"
-        ]
-      },
-      "legacy": {
-        "technologies": [
-          "Smart Contract"
-        ],
-        "blockchain_rewards": [],
-        "smartcontract_rewards": [
-          {
-            "level": "Critical",
-            "payout": "USD $50,000"
-          },
-          {
-            "level": "High",
-            "payout": "USD $20,000"
-          },
-          {
-            "level": "Medium",
-            "payout": "USD $5,000"
-          },
-          {
-            "level": "Low",
-            "payout": "USD $1,000"
-          }
-        ],
-        "web_rewards": []
-      },
-      "websiteUrl": null,
-      "description": "ICHI is a self-sustaining, community governed platform that enables any other cryptocurrency community to create and govern their own in-house, non-custodial oneToken (a stablecoin valued at $1). ",
-      "githubUrl": null,
-      "feasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
-      "prohibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
-      "responsiblePublicationCategory": null,
-      "knownIssues": [],
-      "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": null,
-      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
-      "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": "  - Best practice critiques",
-      "customProhibitedActivities": [],
-      "rewardsTokenNetwork": "Ethereum",
-      "rewardsToken": "xICHI",
-      "eligibilityCriteria": [],
-      "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
-      "programDocumentations": [],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": true,
-      "findingsUrl": null,
-      "premiumTriaging": false
+  "assets": [
+    {
+      "id": "5HpruAcPsEvrnDh8tLbL1E",
+      "revision": 1,
+      "type": "smart_contract",
+      "url": "https://etherscan.io/address/0xd0092632b9ac5a7856664eec1abb6e3403a6a36a",
+      "description": "OneTokenFactory",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2022-02-18T11:55:44.014Z"
     },
-    "project": {
-      "features": [],
-      "premiumTriaging": false,
-      "isSafeHarborActive": false,
-      "performanceMetrics": {}
+    {
+      "id": "Lk2Gzhajg0HcQRqY2i4Vg",
+      "revision": 1,
+      "type": "smart_contract",
+      "url": "https://etherscan.io/address/0x14356bf935d6a62f3b87ab89f729217599bc108d",
+      "description": "OneTokenV1",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2022-02-18T11:55:46.709Z"
     },
-    "metaData": {
-      "title": "Ichi Bug Bounties",
-      "description": "Find bugs and vulnerabilities on Ichi and get paid up to $50,000.",
-      "url": "https://immunefi.com/bug-bounty/ichi/",
-      "ogImg": "/api/bounty/og-image/?project=Ichi&slug=ichi"
+    {
+      "id": "5BW8OE3kra1qBqo37ADe3v",
+      "revision": 1,
+      "type": "smart_contract",
+      "url": "https://etherscan.io/address/0x81c9932bd9a87e454710ef83551ac32dd808630e",
+      "description": "Basic Null Controller",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2022-02-18T11:55:49.993Z"
     },
-    "layoutProps": {
-      "headerMarginBottom": "mb-3 lg:mb-15",
-      "footerMarginTop": "mt-0"
+    {
+      "id": "7iqVH0J9hdktWFk8G3h1ye",
+      "revision": 1,
+      "type": "smart_contract",
+      "url": "https://etherscan.io/address/0x58254B405E85359Fc7Eb3b8856bA82A4dD7C82E2",
+      "description": "Incremental Mint Master",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2022-02-18T11:55:51.845Z"
+    },
+    {
+      "id": "6sDBXwLpwggsNGOCi2ynyG",
+      "revision": 1,
+      "type": "smart_contract",
+      "url": "https://github.com/ichifarm/ichi-oneToken",
+      "description": null,
+      "isPrimacyOfImpact": null,
+      "addedAt": "2022-02-18T11:55:56.824Z"
     }
-  },
-  "__N_SSG": true
+  ],
+  "assetsBodyV2": "Vulnerabilities affecting the four listed smart contracts are prioritized over the other smart contracts found on the GitHub link. Testnet smart contracts and other assets that are not smart contracts are not included in this bug bounty program.",
+  "boostedIntroEvaluating": "",
+  "boostedIntroFinished": "",
+  "boostedIntroLive": "",
+  "boostedIntroStartingIn": "",
+  "boostedLeaderboard": [],
+  "boostedSummaryReport": null,
+  "ecosystem": [
+    "ETH"
+  ],
+  "endDate": null,
+  "evaluationEndDate": null,
+  "features": [],
+  "hideAssetsInScope": null,
+  "immunefiStandard": true,
+  "inviteOnly": false,
+  "kyc": false,
+  "language": [
+    "Solidity"
+  ],
+  "launchDate": "2021-06-17T15:00:00.000Z",
+  "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4sIm0crvpmamzvcEeYiPf3/0b6dd39dc320f99744fb16f6cecf4f28/Ichi.jpeg",
+  "maxBounty": 50000,
+  "pocPerTypeAndSeverity": [],
+  "primaryPaymentWallet": "EVM",
+  "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces",
+  "productType": [
+    "Stablecoin"
+  ],
+  "programOverview": "ICHI is a self-sustaining, community governed platform that enables any other cryptocurrency community to create and govern their own in-house, non-custodial oneToken (a stablecoin valued at $1). \n\nICHI is the governance token of the ichi.org community and platform. It is hard capped at 5M tokens.  Each ICHI is a vote on allowed oracles, collateral, investment strategies, etc in exchange for protocol governance rewards.\n\noneTokens are the governance tokens of specific oneToken systems.  Each oneToken is a vote on treasury allocations, specific stablecoins parameters (like minting and redeeming fees), and on adoption programs.\n\nMore information about Ichi can be found on their website, [https://www.ichi.org/](https://www.ichi.org/).  \n\nThis bug bounty program is focused around its smart contracts and is mostly concerned with the prevention of the loss of user funds.",
+  "programType": [
+    "Smart Contract"
+  ],
+  "project": "Ichi",
+  "projectType": [
+    "Defi"
+  ],
+  "rewardsBody": "Rewards for Smart Contract vulnerabilities are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nPayouts are handled by the __ICHI__ team directly and are denominated in USD. However, payouts are done in __USDC__ for rewards up to __USD 10 000__. For payouts greater, the reward is paid in __xICHI__. Critical payouts are done over a 6-month period distributed every month with the utilization of a Sablier contract",
+  "rewardsPool": 0,
+  "primaryPool": 0,
+  "allStarsPool": 0,
+  "podiumPool": 0,
+  "rewardsToken": "xICHI",
+  "slug": "ichi",
+  "tenPercentEconomicRule": false,
+  "updatedDate": "2024-11-12T12:44:04.171Z",
+  "impactsBody": null,
+  "websiteUrl": null,
+  "githubUrl": null,
+  "eligibilityCriteria": [],
+  "responsiblePublicationCategory": null,
+  "description": "ICHI is a self-sustaining, community governed platform that enables any other cryptocurrency community to create and govern their own in-house, non-custodial oneToken (a stablecoin valued at $1). ",
+  "knownIssues": [],
+  "defaultOutOfScopeBlockchain": null,
+  "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+  "defaultOutOfScopeWebAndApplications": null,
+  "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+  "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+  "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+  "customOutOfScopeInformation": "  - Best practice critiques",
+  "customProhibitedActivities": [],
+  "impacts": [
+    {
+      "id": 581,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Low Smart Contract Impact"
+    },
+    {
+      "id": 582,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "High Smart Contract Impact"
+    },
+    {
+      "id": 583,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Medium Smart Contract Impact"
+    },
+    {
+      "id": 584,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Critical Smart Contract Impact"
+    }
+  ],
+  "rewards": [
+    {
+      "id": 8153,
+      "assetType": "smart_contract",
+      "severity": "critical",
+      "rewardModel": "fixed",
+      "rewardCalculationPercentage": 10,
+      "fixedReward": 50000
+    },
+    {
+      "id": 4313,
+      "assetType": "smart_contract",
+      "severity": "high",
+      "rewardModel": "fixed",
+      "fixedReward": 20000
+    },
+    {
+      "id": 4314,
+      "assetType": "smart_contract",
+      "severity": "medium",
+      "rewardModel": "fixed",
+      "fixedReward": 5000
+    },
+    {
+      "id": 4315,
+      "assetType": "smart_contract",
+      "severity": "low",
+      "rewardModel": "fixed",
+      "fixedReward": 1000
+    }
+  ]
 }

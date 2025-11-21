@@ -1,1547 +1,975 @@
 {
-  "pageProps": {
-    "isAttackathon": true,
-    "academyContent": {
-      "slug": "movement-labs-attackathon",
-      "programSlug": "movement-labs-attackathon",
-      "meta": {
-        "title": "Movement Labs Attackathon",
-        "description": "Everything you need to know to find bugs on Movement Labs in one place. Learn Movement Labs from beginner-to-advanced, including guides on making POCs, and a calendar of live events",
-        "ogImg": "/academy/og-academy-movement-labs.png"
-      },
-      "og": {
-        "program": "Movement Labs Attackathon",
-        "bg": "/academy/og-background-movement-labs.png"
-      },
-      "hero": {
-        "img": "/academy/hero-bg-movement-labs.png",
-        "title": "Movement Labs Academy",
-        "text": "Movement Labs is building a Move-based blockchain network to provide interoperability between the Move execution environment and other networks.",
-        "ctaText": "View Attackathon",
-        "ctaUrl": "/audit-competition/movement-labs-attackathon/?utm_source=hero_academy"
-      },
-      "whatIs": {
-        "title": "What's an Attackathon?",
-        "text": "Attackathons are education-based bug hunting competitions where security researchers compete over a reward pool by submitting impactful bugs in the project's code. Here's how they work:\n\n**Before the Attackathon**<br/> Immunefi works with the project to host a security-focused education period, providing top tier education and support to security researchers.\n\n**During the Attackathon**<br/> Security researchers experience optimal hunting conditions, with direct project support, responsiveness, and duplicate rewards.\n\n**After the Attackathon**<br/> Immunefi spotlights the security accomplishments with a custom leaderboard, Attackathon Summary Report, Bugfix Reviews, and Individual Achievement Cards.\n\nUltimately, Attackathons serve to secure projects, develop their security ecosystem, and create new opportunities for security researchers."
-      },
-      "resources": [
-        {
-          "id": 100,
-          "title": "Movement Network",
-          "items": [
-            {
-              "id": 101,
-              "title": "Introduction to Move",
-              "description": "An overview of the Move programming language used within the Movement Network.",
-              "url": "https://docs.movementnetwork.xyz/general/Introduction/introductionToMove",
-              "level": "Beginner"
-            },
-            {
-              "id": 102,
-              "title": "Network Architecture",
-              "description": "In-depth technical information about the Movement Network's infrastructure.",
-              "url": "https://docs.movementnetwork.xyz/general/Introduction/technical_details",
-              "level": "Beginner"
-            },
-            {
-              "id": 103,
-              "title": "Movement Frameworks",
-              "description": "Exploration of frameworks that support development within the Movement ecosystem.",
-              "url": "https://docs.movementnetwork.xyz/general/Introduction/move_components",
-              "level": "Intermediate"
-            },
-            {
-              "id": 104,
-              "title": "High-level Architecture",
-              "description": "Overview of the Movement Network's system design and components.",
-              "url": "https://docs.movementnetwork.xyz/general/Mainnet/high_level_architecture",
-              "level": "Intermediate"
-            },
-            {
-              "id": 105,
-              "title": "Node-level Architecture",
-              "description": "Specifics on the architecture at the node level within the Movement Network.",
-              "url": "https://docs.movementnetwork.xyz/general/Mainnet/node_level_architecture",
-              "level": "Intermediate"
-            },
-            {
-              "id": 106,
-              "title": "Fast Finality Settlement (FFS)",
-              "description": "Explore how Fast Finality Settlement (FFS) enhances blockchain performance by enabling rapid transaction finality without sacrificing security.",
-              "url": "https://blog.movementlabs.xyz/article/security-and-fast-finality-settlement",
-              "level": "Advanced"
-            }
-          ]
-        },
-        {
-          "id": 200,
-          "title": "Move Language",
-          "items": [
-            {
-              "id": 201,
-              "title": "Introduction",
-              "description": "Overview of the Move programming language, its purpose, and target audience.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/",
-              "level": "Beginner"
-            },
-            {
-              "id": 202,
-              "title": "Modules and Scripts",
-              "description": "Explanation of Move's two primary program types: modules and scripts, and their interactions.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/modules-and-scripts",
-              "level": "Beginner"
-            },
-            {
-              "id": 203,
-              "title": "Move Tutorial",
-              "description": "A step-by-step guide to getting started with Move, including practical examples.",
-              "url": "https://github.com/aptos-labs/aptos-core/blob/main/aptos-move/move-examples/move-tutorial/README.md",
-              "level": "Beginner"
-            },
-            {
-              "id": 204,
-              "title": "Integers",
-              "description": "Detailed information on integer types and operations in Move.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/integers",
-              "level": "Beginner"
-            },
-            {
-              "id": 205,
-              "title": "Bool",
-              "description": "Understanding boolean types and their usage in Move.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/bool",
-              "level": "Beginner"
-            },
-            {
-              "id": 206,
-              "title": "Address",
-              "description": "Insights into the address type and its significance in Move.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/address",
-              "level": "Beginner"
-            },
-            {
-              "id": 207,
-              "title": "Vector",
-              "description": "Exploration of the vector collection type and its functionalities.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/vector",
-              "level": "Beginner"
-            },
-            {
-              "id": 208,
-              "title": "Signer",
-              "description": "Details on the signer type and its role in Move transactions.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/signer",
-              "level": "Intermediate"
-            },
-            {
-              "id": 209,
-              "title": "References",
-              "description": "Explanation of reference types and their usage in Move.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/references",
-              "level": "Intermediate"
-            },
-            {
-              "id": 210,
-              "title": "Tuples and Unit",
-              "description": "Overview of tuples and the unit type in Move.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/tuples",
-              "level": "Intermediate"
-            },
-            {
-              "id": 211,
-              "title": "Local Variables and Scopes",
-              "description": "Understanding variable declarations, scopes, and lifetimes in Move.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/variables",
-              "level": "Intermediate"
-            },
-            {
-              "id": 212,
-              "title": "Equality",
-              "description": "Discussion on equality operations and considerations in Move.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/equality",
-              "level": "Intermediate"
-            },
-            {
-              "id": 213,
-              "title": "Abort and Assert",
-              "description": "Guide to using abort and assert statements for error handling.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/abort-and-assert",
-              "level": "Intermediate"
-            },
-            {
-              "id": 214,
-              "title": "Conditionals",
-              "description": "Explanation of conditional statements and their syntax.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/conditionals",
-              "level": "Beginner"
-            },
-            {
-              "id": 215,
-              "title": "While and Loop",
-              "description": "Details on loop constructs and their usage in Move.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/loops",
-              "level": "Beginner"
-            },
-            {
-              "id": 216,
-              "title": "Functions",
-              "description": "Comprehensive guide to function declarations, visibility, and usage.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/functions",
-              "level": "Intermediate"
-            },
-            {
-              "id": 217,
-              "title": "Structs and Resources",
-              "description": "Understanding struct definitions and the concept of resources in Move.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/structs-and-resources",
-              "level": "Intermediate"
-            },
-            {
-              "id": 218,
-              "title": "Constants",
-              "description": "Guide to declaring and using constants in Move.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/constants",
-              "level": "Intermediate"
-            },
-            {
-              "id": 219,
-              "title": "Generics",
-              "description": "Explanation of generic types and their applications.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/generics",
-              "level": "Advanced"
-            },
-            {
-              "id": 220,
-              "title": "Type Abilities",
-              "description": "Insights into type abilities and their significance in Move's type system.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/abilities",
-              "level": "Advanced"
-            },
-            {
-              "id": 221,
-              "title": "Uses and Aliases",
-              "description": "Guide to the use syntax for creating aliases to module members.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/uses",
-              "level": "Intermediate"
-            },
-            {
-              "id": 222,
-              "title": "Friends",
-              "description": "Explanation of the friend feature for module access control.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/friends",
-              "level": "Advanced"
-            },
-            {
-              "id": 223,
-              "title": "Packages",
-              "description": "Overview of Move packages, their structure, and manifest syntax.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/packages",
-              "level": "Intermediate"
-            },
-            {
-              "id": 224,
-              "title": "Unit Tests",
-              "description": "Guide to writing and running unit tests in Move.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/unit-testing",
-              "level": "Intermediate"
-            },
-            {
-              "id": 225,
-              "title": "Global Storage Structure",
-              "description": "Understanding the structure of global storage in Move.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/global-storage-structure",
-              "level": "Intermediate"
-            },
-            {
-              "id": 226,
-              "title": "Global Storage Operators",
-              "description": "Explanation of operators for interacting with global storage.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/global-storage-operators",
-              "level": "Intermediate"
-            },
-            {
-              "id": 227,
-              "title": "Standard Library",
-              "description": "Exploration of Move's standard library modules and their functionalities.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/standard-library",
-              "level": "Intermediate"
-            },
-            {
-              "id": 228,
-              "title": "Coding Conventions",
-              "description": "Recommended coding conventions and best practices for Move development.",
-              "url": "https://aptos.dev/en/build/smart-contracts/book/coding-conventions",
-              "level": "Beginner"
-            },
-            {
-              "id": 229,
-              "title": "Security pitfalls of the Move language: Part 1",
-              "description": "Dive into the foundational security challenges of the Move programming language.",
-              "url": "https://www.zellic.io/blog/move-fast-and-break-things-pt-1/",
-              "level": "Advanced"
-            },
-            {
-              "id": 230,
-              "title": "Security pitfalls of the Move language: Part 2",
-              "description": "Building on the first installment, Part 2 of this series takes a deeper look into advanced security concerns in the Move language.",
-              "url": "https://www.zellic.io/blog/move-fast-break-things-move-security-part-2/",
-              "level": "Advanced"
-            },
-            {
-              "id": 231,
-              "title": "Top 10 Most Common Move Contract Bugs",
-              "description": "This practical guide highlights the top 10 most frequent bugs found in Move smart contracts.",
-              "url": "https://www.zellic.io/blog/top-10-aptos-move-bugs",
-              "level": "Advanced"
-            }
-          ]
-        },
-        {
-          "id": 300,
-          "title": "Investigating On-Chain Data",
-          "items": [
-            {
-              "id": 301,
-              "title": "Faucets",
-              "description": "Information on obtaining testnet tokens for development purposes.",
-              "url": "https://docs.movementnetwork.xyz/general/UsingMovement/faucet",
-              "level": "Beginner"
-            },
-            {
-              "id": 302,
-              "title": "Explorers",
-              "description": "Block explorers the Movement blockchain.",
-              "url": "https://docs.movementnetwork.xyz/general/UsingMovement/explorers",
-              "level": "Beginner"
-            },
-            {
-              "id": 303,
-              "title": "Network Endpoints",
-              "description": "Information on available network endpoints for connecting and interacting with the Movement Network.",
-              "url": "https://docs.movementnetwork.xyz/devs/networkEndpoints",
-              "level": "Advanced"
-            },
-            {
-              "id": 304,
-              "title": "Indexers",
-              "description": "GraphQL API that you can use to retrive data",
-              "url": "https://docs.movementnetwork.xyz/devs/indexing",
-              "level": "Advanced"
-            }
-          ]
-        },
-        {
-          "id": 400,
-          "title": "Running Proof of Concept (PoC)",
-          "items": [
-            {
-              "id": 401,
-              "title": "Your First Move Contract",
-              "description": "Step-by-step guide to writing and deploying your first Move contract on the Movement Network.",
-              "url": "https://docs.movementnetwork.xyz/devs/firstmove",
-              "level": "Beginner"
-            },
-            {
-              "id": 402,
-              "title": "Movement CLI",
-              "description": "Instructions on installing and using the Movement Command Line Interface for development tasks.",
-              "url": "https://docs.movementnetwork.xyz/devs/movementcli",
-              "level": "Beginner"
-            },
-            {
-              "id": 403,
-              "title": "Aptos Move dApp",
-              "description": "How to build an end-to-end \"onchain bio\" dApp.",
-              "url": "https://docs.movementnetwork.xyz/devs/tutorials/build",
-              "level": "Intermediate"
-            },
-            {
-              "id": 404,
-              "title": "Deploy to Movement Network",
-              "description": "Deploy Move module to the Movement Network",
-              "url": "http://docs.movementnetwork.xyz/devs/tutorials/deploy",
-              "level": "Intermediate"
-            },
-            {
-              "id": 405,
-              "title": "Interact Onchain",
-              "description": "Guide to interacting with your deployed Move contracts on the blockchain.",
-              "url": "https://docs.movementnetwork.xyz/devs/interactonchain/",
-              "level": "Intermediate"
-            },
-            {
-              "id": 406,
-              "title": "Oracles",
-              "description": "How to use real-time data from Pyth Network in modules on the Movement Porto testnet.",
-              "url": "https://docs.movementnetwork.xyz/devs/oracles",
-              "level": "Advanced"
-            },
-            {
-              "id": 407,
-              "title": "Run a Follower Node",
-              "description": "Set up and run a Movement follower node",
-              "url": "https://docs.movementnetwork.xyz/devs/followerNode",
-              "level": "Advanced"
-            },
-            {
-              "id": 408,
-              "title": "Sync a Follower Node",
-              "description": "Sync an existing Bardock follower node for the Bradock Testnet network.",
-              "url": "https://docs.movementnetwork.xyz/devs/followerNode_from_docker_file",
-              "level": "Advanced"
-            }
-          ]
-        },
-        {
-          "id": 500,
-          "title": "Movement Audits & Known Issues",
-          "items": [
-            {
-              "id": 501,
-              "title": "Audits & Known Issues",
-              "description": "Take a look into known Issues and workarounds for the Movement ecosystem.",
-              "url": "https://immunefi.slite.com/app/docs/CObq7VYr2OcpyE",
-              "level": "Intermediate"
-            }
-          ]
-        },
-        {
-          "id": 600,
-          "title": "Technical FAQ",
-          "items": [
-            {
-              "id": 601,
-              "title": "FAQ",
-              "description": "Frequently asked questions about working with Movement as a developer.",
-              "url": "https://docs.movementnetwork.xyz/devs/faq",
-              "level": "Beginner"
-            },
-            {
-              "id": 602,
-              "title": "Why Move?",
-              "description": "Explore how the Move programming language enhances blockchain development with its resource-oriented approach, security features, and formal verification.",
-              "url": "https://blog.movementlabs.xyz/article/move-best-language-smart-contracts-blockchain-development",
-              "level": "Intermediate"
-            },
-            {
-              "id": 603,
-              "title": "Whitepaper",
-              "description": "The Movement white paper which outlines the vision, principles, and technical foundation of Movement.",
-              "url": "https://www.movementnetwork.xyz/whitepaper/movement-whitepaper_en.pdf",
-              "level": "Advanced"
-            },
-            {
-              "id": 604,
-              "title": "Movement Improvement Proposals (MIPs)",
-              "description": "Access the complete repository of Movement Improvement Proposals (MIPs) to review and understand all network upgrades and features.",
-              "url": "https://movementlabsxyz.github.io/MIP/",
-              "level": "Advanced"
-            }
-          ]
-        }
-      ]
+  "assets": [
+    {
+      "id": "RIKVjSC0VK35voi7jKtki",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/networks/movement/movement-config",
+      "description": "movement-config [981]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
     },
-    "ethereumAttackathonSponsors": null,
-    "project": {
-      "features": [
-        "Attackathon",
-        "Managed Triage: Time Saver",
-        "Vault"
-      ],
-      "premiumTriaging": true,
-      "isSafeHarborActive": false,
-      "performanceMetrics": {}
+    {
+      "id": "3uG6m4wmBUDINjthJNSeXk",
+      "revision": 2,
+      "type": "smart_contract",
+      "url": "https://github.com/immunefi-team/attackathon-movement-layerzero-devtools/tree/main/examples/oft-evm-move-adapters/deploy-eth/src/MOVEOFTAdapter.sol",
+      "description": "MOVEOFTAdapter.sol [17]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
     },
-    "bounty": {
-      "contentfulId": "3ZlPHI1BhHWB6cSrFg2kfD",
-      "id": "movement-labs-attackathon",
-      "slug": "movement-labs-attackathon",
-      "project": "Attackathon | Movement Labs",
-      "maxBounty": 400000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7DjMVTpQlNLAmfCQBtATm3/216ffcea3d1b3fa3570ab58429e6b35e/movement-mark-reverse-rgb-2000px_72ppi__1_.png",
-      "launchDate": "2025-03-07T18:00:00.000Z",
-      "endDate": "2025-04-04T18:00:00.000Z",
-      "updatedDate": "2025-06-19T15:15:39.123Z",
-      "kyc": true,
-      "rewards": [
-        {
-          "assetType": "blockchain_dlt",
-          "level": "critical",
-          "payout": "Portion of the Reward Pool",
-          "pocRequired": true
-        },
-        {
-          "assetType": "blockchain_dlt",
-          "level": "high",
-          "payout": "Portion of the Reward Pool",
-          "pocRequired": true
-        },
-        {
-          "assetType": "blockchain_dlt",
-          "level": "medium",
-          "payout": "Portion of the Reward Pool",
-          "pocRequired": true
-        },
-        {
-          "assetType": "blockchain_dlt",
-          "level": "low",
-          "payout": "Portion of the Reward Pool",
-          "pocRequired": true
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "critical",
-          "payout": "Portion of the Reward Pool",
-          "pocRequired": true
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "high",
-          "payout": "Portion of the Reward Pool",
-          "pocRequired": true
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "medium",
-          "payout": "Portion of the Reward Pool",
-          "pocRequired": true
-        },
-        {
-          "assetType": "smart_contract",
-          "level": "low",
-          "payout": "Portion of the Reward Pool",
-          "pocRequired": true
-        }
-      ],
-      "audits": null,
-      "assets": [
-        {
-          "id": "RIKVjSC0VK35voi7jKtki",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/networks/movement/movement-config",
-          "description": "movement-config [981]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "3uG6m4wmBUDINjthJNSeXk",
-          "type": "smart_contract",
-          "url": "https://github.com/immunefi-team/attackathon-movement-layerzero-devtools/tree/main/examples/oft-evm-move-adapters/deploy-eth/src/MOVEOFTAdapter.sol",
-          "description": "MOVEOFTAdapter.sol [17]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "35bjpEBDUswuFYp2IyeL9p",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/networks/movement/movement-full-node",
-          "description": "movement-full-node [1777]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "5XU3oXGNmJQTq2sYogEsoa",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/access-control/aptos/account-whitelist",
-          "description": "account-whitelist [77]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "650IcjBUJCVkBnEwWGTVGc",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/",
-          "description": "movement [4417]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "2r2S4iSmJFGgsGaOz5x8V0",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/protocol/client",
-          "description": "client [175]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "1UDxFjdDLeHPafliovSBOU",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/protocol/da",
-          "description": "da [320]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "1cnXGt4m0iFAD87FyPB5eD",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/protocol/light-node",
-          "description": "light-node [760]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "25keJ6PwWi565IbBDVc8kb",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/protocol/light-node-signer",
-          "description": "light-node-signer [34]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "1HJJCxVgPp8K1BE49OGKVy",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/protocol/prevalidator",
-          "description": "prevalidator [156]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "4LOYZ3jCcpOhHqPjodyPNq",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/protocol/proto",
-          "description": "proto [32]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "4XT4Z0fnY6bdnj9gkRuxMW",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/protocol/util",
-          "description": "util [937]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "18aSwCKFs7cWiDdVRue9Bt",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/protocol/verifier",
-          "description": "verifier [145]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "4oC6cEzZlnmXMiAjShwP12",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/providers/celestia",
-          "description": "celestia [175]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "iT8GzciHgB28R3ZIK91Ac",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/providers/digest-store",
-          "description": "digest-store [195]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "72lhrAI8Tn9qGp1P90be1x",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/execution/maptos/dof",
-          "description": "dof [582]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "rRPq0v9eDn04VJyezOpKz",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/execution/maptos/opt-executor",
-          "description": "opt-executor [1691]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "5UlkI1Y1apNvyRhfv8fafK",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/mempool/move-rocks",
-          "description": "move-rocks [528]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "2peAPzFsOVD3Ut4LqFT5n0",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/mempool/util",
-          "description": "util [199]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "5qJlyLUVAqILd1zV2GiX6a",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/movement-rest",
-          "description": "movement-rest [102]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "2KBTSDNGeHaTZkNDHSKxRu",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/sequencing/memseq/sequencer",
-          "description": "sequencer [431]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "Gpo362EkC0QjThErdlxAR",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/sequencing/memseq/util/src/lib.rs",
-          "description": "lib.rs [70]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "7BVZis0MSd9XN0rzl0NlWq",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/sequencing/util",
-          "description": "util [29]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "1ng6DuZI0wNYVVcPA4vdFp",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/syncing/syncup",
-          "description": "syncup [159]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "1SNsggarVoZx831SGvz1CU",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/buildtime",
-          "description": "buildtime [205]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "aBckVTQHCFZqu4UlHmoaD",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/buildtime/buildtime-helpers",
-          "description": "buildtime-helpers [66]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "2wQCymnA1tH5XZFs11CunW",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/buildtime/buildtime-macros",
-          "description": "buildtime-macros [85]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "41ScYgiOLrgCA8GgDqObuM",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/collections",
-          "description": "collections [365]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "kh19MoT8iNJy5ZKn9Bdg8",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/dot-movement",
-          "description": "dot-movement [166]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "63qHdweEWTdZLgV7yGi3Su",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/godfig",
-          "description": "godfig [559]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "2cDk8ZrdFo8poAKyonhYuY",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/movement-algs",
-          "description": "movement-algs [850]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "lgR7QtmOTFeE0IuJgxM7K",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/movement-types",
-          "description": "movement-types [436]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "2oJN2vOHgC4faSQ5lQb4lV",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/signing/integrations/aptos",
-          "description": "aptos [658]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "2jCiPlE4j4B8nuWz7LYULu",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/signing/providers/aws-kms",
-          "description": "aws-kms [260]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "3ZOUZMxR4EXSgeLRrRJgiR",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/signing/providers/hashicorp-vault",
-          "description": "hashicorp-vault [235]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "53Pf4KkZVQ875a8ofYGAfm",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/signing/signing-admin",
-          "description": "signing-admin [318]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "6oFEl3XGLNFg2e5TWOZPbL",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/signing/util/loader",
-          "description": "loader [273]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "3IcG2ygTV0tFEiKAn7tGLo",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/syncador",
-          "description": "syncador [1550]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "2gUhhNgHu5yMzyyPoK8hsV",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/docker/compose/movement-full-node/docker-compose.yml",
-          "description": "docker-compose.yml [102]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "7kCaOnMVdDYrIsjDmA3Lrp",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/docker/compose/movement-indexer/docker-compose.indexer.yml",
-          "description": "docker-compose.indexer.yml [82]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "6dfyVBvLxHBtB527dM0Yzp",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/docker/compose/movement-indexer/docker-compose.local-development.indexer.yml",
-          "description": "docker-compose.local-development.indexer.yml [70]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "5mLfjadRUTuSWGuhh2nYDQ",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/docker/compose/movement-full-node/docker-compose.follower.yml",
-          "description": "docker-compose.follower.yml [68]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "5jAqyodBx832HKEBIiDF0l",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/docker/compose/movement-full-node/docker-compose.ledger-should-progress.yml",
-          "description": "docker-compose.ledger-should-progress.yml [53]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "3zYBIZngeug1n8i8gabrsb",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/docker/compose/movement-full-node/docker-compose.celestia-mainnet.yml",
-          "description": "docker-compose.celestia-mainnet.yml [49]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "6ULisrjzhZZWatA6wdv5GH",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/docker/compose/movement-full-node/docker-compose.leader.yml",
-          "description": "docker-compose.leader.yml [9]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "2S7GAm5LLZVleqF4lb3elK",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/docker/compose/movement-full-node/docker-compose.mainnet-leader.yml",
-          "description": "docker-compose.mainnet-leader.yml [9]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "6Fnvluxm2zpxJbQeWQuLXU",
-          "type": "smart_contract",
-          "url": "https://github.com/immunefi-team/attackathon-movement-layerzero-devtools/tree/main/examples/oft-evm-move-adapters/deploy-eth/script/MOVEOFTAdater.s.sol",
-          "description": "MOVEOFTAdater.s.sol [49]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "96UUlQAk545wkaq34yXS8",
-          "type": "smart_contract",
-          "url": "https://github.com/immunefi-team/attackathon-movement-layerzero-devtools/tree/main/examples/oft-evm-move-adapters/sources/oft_implementation/move_oft_adapter.move",
-          "description": "move_oft_adapter.move [140]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        },
-        {
-          "id": "72u9SBqKPru2AiX62TZCPm",
-          "type": "blockchain_dlt",
-          "url": "https://github.com/immunefi-team/attackathon-movement-aptos-core/tree/main",
-          "description": "aptos-core [28238]",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-03-07T18:00:00.000Z",
-          "fund": null
-        }
-      ],
-      "impacts": [
-        {
-          "id": 34,
-          "type": "smart_contract",
-          "severity": "low",
-          "title": "Contract fails to deliver promised returns, but doesn't lose value"
-        },
-        {
-          "id": 3,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Direct loss of funds"
-        },
-        {
-          "id": 4,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Permanent freezing of funds (fix requires hardfork)"
-        },
-        {
-          "id": 2,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
-        },
-        {
-          "id": 5,
-          "type": "blockchain_dlt",
-          "severity": "high",
-          "title": "Unintended chain split (network partition)"
-        },
-        {
-          "id": 6,
-          "type": "blockchain_dlt",
-          "severity": "high",
-          "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments"
-        },
-        {
-          "id": 7,
-          "type": "blockchain_dlt",
-          "severity": "high",
-          "title": "Causing network processing nodes to process transactions from the mempool beyond set parameters"
-        },
-        {
-          "id": 8,
-          "type": "blockchain_dlt",
-          "severity": "high",
-          "title": "RPC API crash affecting programs with greater than or equal to 25% of the market capitalization on top of the respective layer"
-        },
-        {
-          "id": 9,
-          "type": "blockchain_dlt",
-          "severity": "medium",
-          "title": "Increasing network processing node resource consumption by at least 30% without brute force actions, compared to the preceding 24 hours"
-        },
-        {
-          "id": 10,
-          "type": "blockchain_dlt",
-          "severity": "medium",
-          "title": "Shutdown of greater than or equal to 30% of network processing nodes without brute force actions, but does not shut down the network"
-        },
-        {
-          "id": 11,
-          "type": "blockchain_dlt",
-          "severity": "medium",
-          "title": "A bug in the respective layer 0/1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk"
-        },
-        {
-          "id": 13,
-          "type": "blockchain_dlt",
-          "severity": "low",
-          "title": "Modification of transaction fees outside of design parameters"
-        },
-        {
-          "id": 12,
-          "type": "blockchain_dlt",
-          "severity": "low",
-          "title": "Shutdown of greater than 10% or equal to but less than 30% of network processing nodes without brute force actions, but does not shut down the network"
-        },
-        {
-          "id": 15,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-        },
-        {
-          "id": 5405,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Permanent freezing of funds"
-        },
-        {
-          "id": 1,
-          "type": "blockchain_dlt",
-          "severity": "critical",
-          "title": "Network not being able to confirm new transactions (total network shutdown)"
-        },
-        {
-          "id": 31,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-        },
-        {
-          "id": 32,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Theft of gas"
-        },
-        {
-          "id": 33,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Unbounded gas consumption"
-        },
-        {
-          "id": 5406,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Temporary freezing of funds for at least 24 hour"
-        }
-      ],
-      "programOverview": "Movement Labs is a core contributor to Movement Network, a Move-based blockchain network that settles to Ethereum and creates safer execution environments by way of move.\n\nFor more information about Movement Labs, please visit [https://movementlabs.xyz/](https://movementlabs.xyz/). \n\nThis is a **mainnet AC (audit competition)** and the project may fix bugs mid-competition. The more bugs a project fixes the more rewards will be unlocked for a simultaneously running **mitigation competition** with up to $100,000 USD in rewards that is open for everyone to participate in. Read our full [mainnet AC rules](https://immunefisupport.zendesk.com/hc/en-us/articles/33256328266769-Mainnet-Audit-Competition-Rules) for more info.\n\nBugs in code which is in scope for both the Aptos bug bounty program & Movement Attackathon will only be rewarded from the Movement Attackathon reward pool. This is so bugs won't be paid twice, once from Aptos bug bounty program and then again from Movement's Atttackathon. This only applies to bugs submitted while the Movement Attackathon is live.\n\n**Responsible Publication**\n\nImmunefi will publish bug reports, earnings, and a leaderboard for this Attackathon.\n\nSecurity Researchers may publish their bug reports as well, but only after Immunefi has published the valid bug reports as part of the competition results.\n\n**Dispute Resolution**\n\nIf there is any dispute over bug reports between projects and security researchers, Immunefi has final say on validity and severity based on the terms of this program.",
-      "prioritizedVulnerabilities": "To be determined",
-      "rewardsBody": "Rewards are distributed among SRs according to [Immunefi’s Standardized Competition Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/31657285001873-Standardized-Competition-Reward-Terms).\n\nRewards are denominated in USD and distributed in USDC on Ethereum and Move: $400k USDC and $100k worth of MOVE tokens.\n\nThe reward pool is **$400,000 USD** if any bug is found.\n\nIf not a single bug is found (Insights do not count as bugs) the reward pool is **$50,000 USD**.\n\n__Mitigation Competition Rewards__\n\nThe maximum reward pool for the mitigation competition is **$100,000 USD**.\n\nIf any bug in scope is fixed during the mainnet AC then a mitigation competition will begin immediately, run simultaneously, and end 5 days after the mainnet AC has ended.\n\nThe mitigation competition’s reward pool is based on how many bugs are fixed while the competitions are live relative to how many bugs are found in the mainnet AC. So if projects make more bug fixes mid-competition then the size of the mitigation competition reward pool increases up to the maximum.\n\nThe full mitigation competition reward terms can be [read here](https://immunefisupport.zendesk.com/hc/en-us/articles/33256328266769-Mainnet-Audit-Competition-Rules).",
-      "outOfScopeAndRules": "To be determined",
-      "assetsBodyV2": "**Are there any unusual points about your protocol that may confuse Security Researchers?**\n\nThe nodes are not currently rolling back on settlement failures: https://github.com/movementlabsxyz/movement/blob/main/protocol-units/settlement/mcr/README.md. Settlement logic is out of scope.\n\n**Where might Security Researchers confuse out-of-scope code to be in-scope?**\n\n- The entire layerzero-devtools repo is not generally in scope. Only the files we modified for our bridge are in scope.\n- The indexer / graphql are not in scope.\n- Other than the indexer, native_bridge.move, and atomic_bridge.move, the entire aptos-core repo is in scope. However, only certain parts of the movement repo are in scope.\n- The nodes are not currently rolling back on settlement failures: [https://github.com/movementlabsxyz/movement/blob/main/protocol-units/settlement/mcr/README.md](https://github.com/movementlabsxyz/movement/blob/main/protocol-units/settlement/mcr/README.md). Settlement logic and MCR is out of scope.\n\n**Is this an upgrade of an existing system? If so, which? And what are the main differences?**\n\nThe Move Language is forked from Aptos-Core, with additional modifications. Any bugs found outside of changes made by Movement Labs in Aptos-Core should be reported to Aptos Labs. Please view the following diff to view the scope of the Attackathon [https://github.com/aptos-labs/aptos-core/compare/main...movementlabsxyz:aptos-core:movement](https://github.com/aptos-labs/aptos-core/compare/main...movementlabsxyz:aptos-core:movement).\n\n**Where do you suspect there may be bugs and/or what attack vectors are you most concerned about?**\n\nWe don’t suspect a particular area more strongly than others; all in-scope assets are subject to investigation.\n\n**What emergency actions may you want to use as a reason to downgrade an otherwise valid bug report?**\n\nMovement has the ability to rollback chain state. Any impacts which do not cause significant damage and can be mitigated by a rollback may be downgraded. Snapshots of state are taken periodically.\n\n**Which chains and/or networks is and will the code in scope be deployed to?**\n\nThe Movement Network.\n\n**What external dependencies are there?**\n\n- Crates in Cargo.toml\n- Base images in the in scope Docker Compose files\n\n**Are there any unusual points about your protocol that may confuse Security Researchers?**\n\nThe nodes are not currently rolling back on settlement failures: [https://github.com/movementlabsxyz/movement/blob/main/protocol-units/settlement/mcr/README.md](https://github.com/movementlabsxyz/movement/blob/main/protocol-units/settlement/mcr/README.md). Settlement logic and MCR is out of scope.\n\n**What are the most valuable educational resources already available? (Ie. Documentation, Explainer videos or articles, etc)**\n\n[https://docs.movementnetwork.xyz](https://docs.movementnetwork.xyz)\n\n**Out-of-scope clauses**\n\nThe nodes are not currently rolling back on settlement failures: [https://github.com/movementlabsxyz/movement/blob/main/protocol-units/settlement/mcr/README.md](https://github.com/movementlabsxyz/movement/blob/main/protocol-units/settlement/mcr/README.md). Settlement logic is out of scope.\n\nAdditionally, the native_bridge.move and atomic_bridge.move files within the aptos-core repository are not in scope as they are not used in production. Please see MOVEOFTAdapter.sol in the layerzero_devtools repository for bridging logic.\n\nIndexer / graphql and MCR / settlement are all considered to be out-of-scope.\n\nThe following is always considered out of scope as a security researcher needs to find an applicable in scope impact, which would not be possible if it was the following:\n- test and dev logic not directly related to our deployments\n- code that is not used",
-      "impactsBody": "**No Runnable PoC Code Required**\n\nFor this program, runnable PoC code is not required. Whitehats are instead required to write a step-by-step explanation of the PoC and impact. For more information, please read [Audit Competition Proof-of-Concept Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/33260632501777-Audit-Competition-Proof-of-Concept-Rules). \n\n**Asset Accuracy Assurance**\n\nBugs found on assets incorrectly listed in-scope are valid.\n\n**Previous Audits**\n\nMovement Labs’s completed audit reports can be found here:\n- [https://1247499478-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FBMbDkZsgQosju3BU30VN%2Fuploads%2FIw6F6sO75Gl3oOa9D6kD%2Fmeridian_audit_final.pdf?alt=media&token=f5ab2581-9407-4b2b-93d2-e7c61760cdbd](https://1247499478-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FBMbDkZsgQosju3BU30VN%2Fuploads%2FIw6F6sO75Gl3oOa9D6kD%2Fmeridian_audit_final.pdf?alt=media&token=f5ab2581-9407-4b2b-93d2-e7c61760cdbd)\n- [https://docs.canopyhub.xyz/audits/audit-reports](https://docs.canopyhub.xyz/audits/audit-reports)\n- [https://drive.google.com/file/d/1nTg57yVLay1TrBbB3HnEoQ_ElQ0_rScL/view?usp=sharing](https://drive.google.com/file/d/1nTg57yVLay1TrBbB3HnEoQ_ElQ0_rScL/view?usp=sharing)\n- [https://docs.echelon.market/echelon-v1/security/audit-reports](https://docs.echelon.market/echelon-v1/security/audit-reports)\n- [https://github.com/movementlabsxyz/layerzero-devtools/issues](https://github.com/movementlabsxyz/layerzero-devtools/issues)\n- [https://github.com/movementlabsxyz/aptos-core/issues](https://github.com/movementlabsxyz/aptos-core/issues)\n- [https://github.com/movementlabsxyz/movement/issues](https://github.com/movementlabsxyz/movement/issues)\n- [https://github.com/aptos-labs/aptos-core/issues](https://github.com/aptos-labs/aptos-core/issues)\n\nUnfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n\n**Public Disclosure of Known Issues**\n\nBug reports for publicly disclosed bugs are not eligible for a reward. \n- [https://github.com/movementlabsxyz/aptos-core/pull/115](https://github.com/movementlabsxyz/aptos-core/pull/115)\n- https://github.com/movementlabsxyz/movement/issues/1113 \n\n**Private Known Issues Reward Policy**\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward.\n\n**Mainnet AC (Audit Competition) Bug Fix Policy**\n\nThe project may make bug fixes during the competition.\n- Fixed bugs immediately become out of scope once the fix is public.\n- Duplicate submissions of a bug are only valid if they’re submitted before the fix is public.\t\n\nAll project made bug fixes immediately become in scope for the mitigation competition once the fix is public, including fixes to bugs found independently of SRs.\n\nRead our full [mainnet AC rules](https://immunefisupport.zendesk.com/hc/en-us/articles/33256328266769-Mainnet-Audit-Competition-Rules) for more info.\n\n**KYC Requirement**\n\nMovement Labs requires KYC information to pay for bug submissions. The following information will be required:\n- Full name\n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\nSecurity researchers are required to submit KYC within 14 days of KYC being requested, else their rewards may be forfeited. Immunefi may make exceptions due to extenuating circumstances.\n\n**Eligibility Criteria**\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in an audit review of the code in scope (Such auditors may still participate in this program only if they receive project permission)",
-      "immunefiStandard": true,
-      "tags": {
-        "general": [
-          "Immunefi Standard",
-          "KYC Required",
-          "Step-by-step PoC Required"
-        ],
-        "productType": [],
-        "projectType": [
-          "Blockchain"
-        ],
-        "ecosystem": [],
-        "programType": [
-          "Blockchain/DLT",
-          "Smart Contract"
-        ],
-        "language": [
-          "Move",
-          "Rust"
-        ],
-        "featured": [
-          "Launched Recently"
-        ]
-      },
-      "legacy": {
-        "technologies": [
-          "Smart Contract",
-          "Blockchain/DLT"
-        ],
-        "blockchain_rewards": [
-          {
-            "level": "Critical",
-            "payout": "Portion of the Reward Pool"
-          },
-          {
-            "level": "High",
-            "payout": "Portion of the Reward Pool"
-          },
-          {
-            "level": "Medium",
-            "payout": "Portion of the Reward Pool"
-          },
-          {
-            "level": "Low",
-            "payout": "Portion of the Reward Pool"
-          }
-        ],
-        "smartcontract_rewards": [
-          {
-            "level": "Critical",
-            "payout": "Portion of the Reward Pool"
-          },
-          {
-            "level": "High",
-            "payout": "Portion of the Reward Pool"
-          },
-          {
-            "level": "Medium",
-            "payout": "Portion of the Reward Pool"
-          },
-          {
-            "level": "Low",
-            "payout": "Portion of the Reward Pool"
-          }
-        ],
-        "web_rewards": []
-      },
-      "evaluationEndDate": "2025-06-19T15:16:18.008Z",
-      "boostedIntroStartingIn": "A flat $400,000 USD is in rewards for finding bugs on Movement Labs code.\n\nOn top of the above rewards, a separate Mitigation Audit with up to $100,000 USD will be launched in case if Movement Labs push public fixes of found vulnerabilities during the Attackathon.\n\nMarch 7th the **Movement Labs Attackathon Education Period** begins — launching the ‘Movement Labs Academy’, and opening direct access to the Movement Labs’ team for ongoing technical Q&A on [Immunefi's Discord](https://discord.com/invite/immunefi) in the “movement-labs-attackathon\" channel.\n\nWhen the Movement Labs Attackathon ends, Immunefi will publish a leaderboard and Attackathon findings report.",
-      "boostedIntroLive": "A flat $400,000 USD is in rewards for finding bugs on Movement Labs code.\n\nOn top of the above rewards, a separate Mitigation Audit with up to $100,000 USD will be launched in case if Movement Labs pushes public fixes of found vulnerabilities during the Attackathon.\n\nAny technical questions and support requests can be asked directly to Movement Labs or Immunefi in the #movement-labs-attackathon channel in [Immunefi's Discord](https://discord.com/invite/immunefi).\n\nWhen the Movement Labs Attackathon ends, Immunefi will publish a leaderboard and Attackathon findings report.",
-      "boostedIntroEvaluating": "",
-      "boostedIntroFinished": "",
-      "rewardsToken": "USDC",
-      "rewardsPool": 400000,
-      "primaryPool": 400000,
-      "allStarsPool": 0,
-      "podiumPool": 0,
-      "sourceLinesOfCode": 48884,
-      "boostedSummaryReport": "https://drive.google.com/file/d/1IAto_Q53lXfv4AeqF1MyQtUFP6oT6jcz/view?usp=drive_link",
-      "inviteOnly": false,
-      "hideAssetsInScope": null,
-      "boostedLeaderboard": [
-        {
-          "high": 1,
-          "name": "usmannk",
-          "critical": 7,
-          "earnings": 95112,
-          "insights": 0,
-          "mediumLow": 0,
-          "totalValidBugs": 8
-        },
-        {
-          "high": 2,
-          "name": "perseverance",
-          "critical": 4,
-          "earnings": 37972,
-          "insights": 0,
-          "mediumLow": 1,
-          "totalValidBugs": 7
-        },
-        {
-          "high": 6,
-          "name": "infosec_us_team",
-          "critical": 1,
-          "earnings": 33781,
-          "insights": 0,
-          "mediumLow": 0,
-          "totalValidBugs": 7
-        },
-        {
-          "high": 4,
-          "name": "KlosMitSoss",
-          "critical": 2,
-          "earnings": 30241,
-          "insights": 4,
-          "mediumLow": 1,
-          "totalValidBugs": 7
-        },
-        {
-          "high": 1,
-          "name": "jovi",
-          "critical": 2,
-          "earnings": 24819,
-          "insights": 4,
-          "mediumLow": 1,
-          "totalValidBugs": 4
-        },
-        {
-          "high": 2,
-          "name": "okmxuse",
-          "critical": 2,
-          "earnings": 23002,
-          "insights": 4,
-          "mediumLow": 1,
-          "totalValidBugs": 5
-        },
-        {
-          "high": 1,
-          "name": "dustincha",
-          "critical": 1,
-          "earnings": 20715,
-          "insights": 0,
-          "mediumLow": 0,
-          "totalValidBugs": 2
-        },
-        {
-          "high": 0,
-          "name": "hulkvision",
-          "critical": 2,
-          "earnings": 18529,
-          "insights": 0,
-          "mediumLow": 0,
-          "totalValidBugs": 2
-        },
-        {
-          "high": 4,
-          "name": "Blockian",
-          "critical": 1,
-          "earnings": 16675,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 5
-        },
-        {
-          "high": 0,
-          "name": "br0nz3p1ck4x3",
-          "critical": 2,
-          "earnings": 13713,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 2
-        },
-        {
-          "high": 4,
-          "name": "HollaDieWaldfee",
-          "critical": 1,
-          "earnings": 11878,
-          "insights": 2,
-          "mediumLow": 3,
-          "totalValidBugs": 8
-        },
-        {
-          "high": 0,
-          "name": "savi0ur",
-          "critical": 1,
-          "earnings": 11042,
-          "insights": 2,
-          "mediumLow": 2,
-          "totalValidBugs": 3
-        },
-        {
-          "high": 2,
-          "name": "niroh",
-          "critical": 1,
-          "earnings": 7439,
-          "insights": 1,
-          "mediumLow": 1,
-          "totalValidBugs": 4
-        },
-        {
-          "high": 0,
-          "name": "yemresaritoprak",
-          "critical": 1,
-          "earnings": 6712,
-          "insights": 0,
-          "mediumLow": 0,
-          "totalValidBugs": 1
-        },
-        {
-          "high": 0,
-          "name": "a090325",
-          "critical": 1,
-          "earnings": 6712,
-          "insights": 0,
-          "mediumLow": 0,
-          "totalValidBugs": 1
-        },
-        {
-          "high": 3,
-          "name": "zhaojie",
-          "critical": 0,
-          "earnings": 5886,
-          "insights": 0,
-          "mediumLow": 0,
-          "totalValidBugs": 3
-        },
-        {
-          "high": 1,
-          "name": "Rhaydden",
-          "critical": 0,
-          "earnings": 5844,
-          "insights": 8,
-          "mediumLow": 2,
-          "totalValidBugs": 3
-        },
-        {
-          "high": 1,
-          "name": "ZeroTrust",
-          "critical": 0,
-          "earnings": 4826,
-          "insights": 0,
-          "mediumLow": 1,
-          "totalValidBugs": 2
-        },
-        {
-          "high": 1,
-          "name": "keizo",
-          "critical": 0,
-          "earnings": 4143,
-          "insights": 0,
-          "mediumLow": 0,
-          "totalValidBugs": 1
-        },
-        {
-          "high": 1,
-          "name": "fnmain",
-          "critical": 0,
-          "earnings": 4143,
-          "insights": 0,
-          "mediumLow": 0,
-          "totalValidBugs": 1
-        },
-        {
-          "high": 1,
-          "name": "Berserk",
-          "critical": 1,
-          "earnings": 3498,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 2
-        },
-        {
-          "high": 1,
-          "name": "Cartel",
-          "critical": 1,
-          "earnings": 2718,
-          "insights": 0,
-          "mediumLow": 0,
-          "totalValidBugs": 2
-        },
-        {
-          "high": 0,
-          "name": "Nirix0x",
-          "critical": 1,
-          "earnings": 2441,
-          "insights": 2,
-          "mediumLow": 0,
-          "totalValidBugs": 1
-        },
-        {
-          "high": 1,
-          "name": "avoloder",
-          "critical": 0,
-          "earnings": 2438,
-          "insights": 2,
-          "mediumLow": 0,
-          "totalValidBugs": 1
-        },
-        {
-          "high": 0,
-          "name": "Minato7namikazi",
-          "critical": 0,
-          "earnings": 1381,
-          "insights": 0,
-          "mediumLow": 1,
-          "totalValidBugs": 1
-        },
-        {
-          "high": 0,
-          "name": "p_laksmana",
-          "critical": 0,
-          "earnings": 1381,
-          "insights": 0,
-          "mediumLow": 1,
-          "totalValidBugs": 1
-        },
-        {
-          "high": 1,
-          "name": "XDZIBECX",
-          "critical": 0,
-          "earnings": 973,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 1
-        },
-        {
-          "high": 0,
-          "name": "Franfran",
-          "critical": 0,
-          "earnings": 654,
-          "insights": 1,
-          "mediumLow": 1,
-          "totalValidBugs": 1
-        },
-        {
-          "high": 0,
-          "name": "p4rsely",
-          "critical": 0,
-          "earnings": 559,
-          "insights": 0,
-          "mediumLow": 1,
-          "totalValidBugs": 1
-        },
-        {
-          "high": 0,
-          "name": "Cryptor",
-          "critical": 0,
-          "earnings": 484,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        },
-        {
-          "high": 0,
-          "name": "p4y4b13",
-          "critical": 0,
-          "earnings": 290,
-          "insights": 1,
-          "mediumLow": 0,
-          "totalValidBugs": 0
-        }
-      ],
-      "features": [
-        "Attackathon",
-        "Managed Triage: Time Saver",
-        "Vault"
-      ],
-      "academyStartDate": "2025-03-06T16:00:00.000Z",
-      "websiteUrl": "https://movementlabs.xyz/",
-      "description": "Movement Labs is a core contributor to Movement Network, a Move-based blockchain network that settles to Ethereum and creates safer execution environments by way of move. ",
-      "githubUrl": null,
-      "feasibilityLimitations": null,
-      "prohibitedActivites": null,
-      "responsiblePublicationCategory": null,
-      "knownIssues": [],
-      "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
-      "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": "The nodes are not currently rolling back on settlement failures: [https://github.com/movementlabsxyz/movement/blob/main/protocol-units/settlement/mcr/README.md](https://github.com/movementlabsxyz/movement/blob/main/protocol-units/settlement/mcr/README.md). Settlement logic is out of scope.\n\nAdditionally, the native_bridge.move and atomic_bridge.move files within the aptos-core repository are not in scope as they are not used in production. Please see MOVEOFTAdapter.sol in the layerzero_devtools repository for bridging logic.\n\nIndexer / graphql and MCR / settlement are all considered to be out-of-scope.\n\nThe following is always considered out of scope as a security researcher needs to find an applicable in scope impact, which would not be possible if it was the following:\n- test and dev logic not directly related to our deployments\n- code that is not used",
-      "customProhibitedActivities": [],
-      "rewardsTokenNetwork": "Ethereum",
-      "eligibilityCriteria": [
-        "no_ofac_sdn",
-        "no_official_contributor",
-        "no_employee",
-        "no_auditor"
-      ],
-      "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [],
-      "programDocumentations": [],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": false,
-      "findingsUrl": "https://reports.immunefi.com/movement-labs-attackathon",
-      "premiumTriaging": true
+    {
+      "id": "35bjpEBDUswuFYp2IyeL9p",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/networks/movement/movement-full-node",
+      "description": "movement-full-node [1777]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
     },
-    "layoutProps": {
-      "headerMarginBottom": "mb-12 lg:mb-16"
+    {
+      "id": "5XU3oXGNmJQTq2sYogEsoa",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/access-control/aptos/account-whitelist",
+      "description": "account-whitelist [77]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
     },
-    "metaData": {
-      "title": "Attackathon | Movement Labs Bug Bounties",
-      "description": "Find bugs and vulnerabilities on Attackathon | Movement Labs and get paid up to $400,000.",
-      "url": "https://immunefi.com/audit-competition/movement-labs-attackathon/",
-      "ogImg": "/api/bounty/og-image/?project=Attackathon+%7C+Movement+Labs&slug=movement-labs-attackathon"
+    {
+      "id": "650IcjBUJCVkBnEwWGTVGc",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/",
+      "description": "movement [4417]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "2r2S4iSmJFGgsGaOz5x8V0",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/protocol/client",
+      "description": "client [175]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "1UDxFjdDLeHPafliovSBOU",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/protocol/da",
+      "description": "da [320]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "1cnXGt4m0iFAD87FyPB5eD",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/protocol/light-node",
+      "description": "light-node [760]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "25keJ6PwWi565IbBDVc8kb",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/protocol/light-node-signer",
+      "description": "light-node-signer [34]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "1HJJCxVgPp8K1BE49OGKVy",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/protocol/prevalidator",
+      "description": "prevalidator [156]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "4LOYZ3jCcpOhHqPjodyPNq",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/protocol/proto",
+      "description": "proto [32]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "4XT4Z0fnY6bdnj9gkRuxMW",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/protocol/util",
+      "description": "util [937]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "18aSwCKFs7cWiDdVRue9Bt",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/protocol/verifier",
+      "description": "verifier [145]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "4oC6cEzZlnmXMiAjShwP12",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/providers/celestia",
+      "description": "celestia [175]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "iT8GzciHgB28R3ZIK91Ac",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/da/movement/providers/digest-store",
+      "description": "digest-store [195]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "72lhrAI8Tn9qGp1P90be1x",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/execution/maptos/dof",
+      "description": "dof [582]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "rRPq0v9eDn04VJyezOpKz",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/execution/maptos/opt-executor",
+      "description": "opt-executor [1691]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "5UlkI1Y1apNvyRhfv8fafK",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/mempool/move-rocks",
+      "description": "move-rocks [528]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "2peAPzFsOVD3Ut4LqFT5n0",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/mempool/util",
+      "description": "util [199]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "5qJlyLUVAqILd1zV2GiX6a",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/movement-rest",
+      "description": "movement-rest [102]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "2KBTSDNGeHaTZkNDHSKxRu",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/sequencing/memseq/sequencer",
+      "description": "sequencer [431]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "Gpo362EkC0QjThErdlxAR",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/sequencing/memseq/util/src/lib.rs",
+      "description": "lib.rs [70]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "7BVZis0MSd9XN0rzl0NlWq",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/sequencing/util",
+      "description": "util [29]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "1ng6DuZI0wNYVVcPA4vdFp",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/protocol-units/syncing/syncup",
+      "description": "syncup [159]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "1SNsggarVoZx831SGvz1CU",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/buildtime",
+      "description": "buildtime [205]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "aBckVTQHCFZqu4UlHmoaD",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/buildtime/buildtime-helpers",
+      "description": "buildtime-helpers [66]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "2wQCymnA1tH5XZFs11CunW",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/buildtime/buildtime-macros",
+      "description": "buildtime-macros [85]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "41ScYgiOLrgCA8GgDqObuM",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/collections",
+      "description": "collections [365]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "kh19MoT8iNJy5ZKn9Bdg8",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/dot-movement",
+      "description": "dot-movement [166]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "63qHdweEWTdZLgV7yGi3Su",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/godfig",
+      "description": "godfig [559]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "2cDk8ZrdFo8poAKyonhYuY",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/movement-algs",
+      "description": "movement-algs [850]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "lgR7QtmOTFeE0IuJgxM7K",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/movement-types",
+      "description": "movement-types [436]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "2oJN2vOHgC4faSQ5lQb4lV",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/signing/integrations/aptos",
+      "description": "aptos [658]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "2jCiPlE4j4B8nuWz7LYULu",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/signing/providers/aws-kms",
+      "description": "aws-kms [260]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "3ZOUZMxR4EXSgeLRrRJgiR",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/signing/providers/hashicorp-vault",
+      "description": "hashicorp-vault [235]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "53Pf4KkZVQ875a8ofYGAfm",
+      "revision": 3,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/signing/signing-admin",
+      "description": "signing-admin [318]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "6oFEl3XGLNFg2e5TWOZPbL",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/signing/util/loader",
+      "description": "loader [273]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "3IcG2ygTV0tFEiKAn7tGLo",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/util/syncador",
+      "description": "syncador [1550]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "2gUhhNgHu5yMzyyPoK8hsV",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/docker/compose/movement-full-node/docker-compose.yml",
+      "description": "docker-compose.yml [102]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "7kCaOnMVdDYrIsjDmA3Lrp",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/docker/compose/movement-indexer/docker-compose.indexer.yml",
+      "description": "docker-compose.indexer.yml [82]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "6dfyVBvLxHBtB527dM0Yzp",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/docker/compose/movement-indexer/docker-compose.local-development.indexer.yml",
+      "description": "docker-compose.local-development.indexer.yml [70]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "5mLfjadRUTuSWGuhh2nYDQ",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/docker/compose/movement-full-node/docker-compose.follower.yml",
+      "description": "docker-compose.follower.yml [68]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "5jAqyodBx832HKEBIiDF0l",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/docker/compose/movement-full-node/docker-compose.ledger-should-progress.yml",
+      "description": "docker-compose.ledger-should-progress.yml [53]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "3zYBIZngeug1n8i8gabrsb",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/docker/compose/movement-full-node/docker-compose.celestia-mainnet.yml",
+      "description": "docker-compose.celestia-mainnet.yml [49]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "6ULisrjzhZZWatA6wdv5GH",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/docker/compose/movement-full-node/docker-compose.leader.yml",
+      "description": "docker-compose.leader.yml [9]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "2S7GAm5LLZVleqF4lb3elK",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement/tree/main/docker/compose/movement-full-node/docker-compose.mainnet-leader.yml",
+      "description": "docker-compose.mainnet-leader.yml [9]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "6Fnvluxm2zpxJbQeWQuLXU",
+      "revision": 2,
+      "type": "smart_contract",
+      "url": "https://github.com/immunefi-team/attackathon-movement-layerzero-devtools/tree/main/examples/oft-evm-move-adapters/deploy-eth/script/MOVEOFTAdater.s.sol",
+      "description": "MOVEOFTAdater.s.sol [49]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "96UUlQAk545wkaq34yXS8",
+      "revision": 2,
+      "type": "smart_contract",
+      "url": "https://github.com/immunefi-team/attackathon-movement-layerzero-devtools/tree/main/examples/oft-evm-move-adapters/sources/oft_implementation/move_oft_adapter.move",
+      "description": "move_oft_adapter.move [140]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
+    },
+    {
+      "id": "72u9SBqKPru2AiX62TZCPm",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/immunefi-team/attackathon-movement-aptos-core/tree/main",
+      "description": "aptos-core [28238]",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-03-07T18:00:00.000Z"
     }
-  },
-  "__N_SSG": true
+  ],
+  "assetsBodyV2": "**Are there any unusual points about your protocol that may confuse Security Researchers?**\n\nThe nodes are not currently rolling back on settlement failures: https://github.com/movementlabsxyz/movement/blob/main/protocol-units/settlement/mcr/README.md. Settlement logic is out of scope.\n\n**Where might Security Researchers confuse out-of-scope code to be in-scope?**\n\n- The entire layerzero-devtools repo is not generally in scope. Only the files we modified for our bridge are in scope.\n- The indexer / graphql are not in scope.\n- Other than the indexer, native_bridge.move, and atomic_bridge.move, the entire aptos-core repo is in scope. However, only certain parts of the movement repo are in scope.\n- The nodes are not currently rolling back on settlement failures: [https://github.com/movementlabsxyz/movement/blob/main/protocol-units/settlement/mcr/README.md](https://github.com/movementlabsxyz/movement/blob/main/protocol-units/settlement/mcr/README.md). Settlement logic and MCR is out of scope.\n\n**Is this an upgrade of an existing system? If so, which? And what are the main differences?**\n\nThe Move Language is forked from Aptos-Core, with additional modifications. Any bugs found outside of changes made by Movement Labs in Aptos-Core should be reported to Aptos Labs. Please view the following diff to view the scope of the Attackathon [https://github.com/aptos-labs/aptos-core/compare/main...movementlabsxyz:aptos-core:movement](https://github.com/aptos-labs/aptos-core/compare/main...movementlabsxyz:aptos-core:movement).\n\n**Where do you suspect there may be bugs and/or what attack vectors are you most concerned about?**\n\nWe don’t suspect a particular area more strongly than others; all in-scope assets are subject to investigation.\n\n**What emergency actions may you want to use as a reason to downgrade an otherwise valid bug report?**\n\nMovement has the ability to rollback chain state. Any impacts which do not cause significant damage and can be mitigated by a rollback may be downgraded. Snapshots of state are taken periodically.\n\n**Which chains and/or networks is and will the code in scope be deployed to?**\n\nThe Movement Network.\n\n**What external dependencies are there?**\n\n- Crates in Cargo.toml\n- Base images in the in scope Docker Compose files\n\n**Are there any unusual points about your protocol that may confuse Security Researchers?**\n\nThe nodes are not currently rolling back on settlement failures: [https://github.com/movementlabsxyz/movement/blob/main/protocol-units/settlement/mcr/README.md](https://github.com/movementlabsxyz/movement/blob/main/protocol-units/settlement/mcr/README.md). Settlement logic and MCR is out of scope.\n\n**What are the most valuable educational resources already available? (Ie. Documentation, Explainer videos or articles, etc)**\n\n[https://docs.movementnetwork.xyz](https://docs.movementnetwork.xyz)\n\n**Out-of-scope clauses**\n\nThe nodes are not currently rolling back on settlement failures: [https://github.com/movementlabsxyz/movement/blob/main/protocol-units/settlement/mcr/README.md](https://github.com/movementlabsxyz/movement/blob/main/protocol-units/settlement/mcr/README.md). Settlement logic is out of scope.\n\nAdditionally, the native_bridge.move and atomic_bridge.move files within the aptos-core repository are not in scope as they are not used in production. Please see MOVEOFTAdapter.sol in the layerzero_devtools repository for bridging logic.\n\nIndexer / graphql and MCR / settlement are all considered to be out-of-scope.\n\nThe following is always considered out of scope as a security researcher needs to find an applicable in scope impact, which would not be possible if it was the following:\n- test and dev logic not directly related to our deployments\n- code that is not used",
+  "boostedIntroEvaluating": "",
+  "boostedIntroFinished": "",
+  "boostedIntroLive": "A flat $400,000 USD is in rewards for finding bugs on Movement Labs code.\n\nOn top of the above rewards, a separate Mitigation Audit with up to $100,000 USD will be launched in case if Movement Labs pushes public fixes of found vulnerabilities during the Attackathon.\n\nAny technical questions and support requests can be asked directly to Movement Labs or Immunefi in the #movement-labs-attackathon channel in [Immunefi's Discord](https://discord.com/invite/immunefi).\n\nWhen the Movement Labs Attackathon ends, Immunefi will publish a leaderboard and Attackathon findings report.",
+  "boostedIntroStartingIn": "A flat $400,000 USD is in rewards for finding bugs on Movement Labs code.\n\nOn top of the above rewards, a separate Mitigation Audit with up to $100,000 USD will be launched in case if Movement Labs push public fixes of found vulnerabilities during the Attackathon.\n\nMarch 7th the **Movement Labs Attackathon Education Period** begins — launching the ‘Movement Labs Academy’, and opening direct access to the Movement Labs’ team for ongoing technical Q&A on [Immunefi's Discord](https://discord.com/invite/immunefi) in the “movement-labs-attackathon\" channel.\n\nWhen the Movement Labs Attackathon ends, Immunefi will publish a leaderboard and Attackathon findings report.",
+  "boostedLeaderboard": [
+    {
+      "high": 1,
+      "name": "usmannk",
+      "critical": 7,
+      "earnings": 95112,
+      "insights": 0,
+      "mediumLow": 0,
+      "totalValidBugs": 8
+    },
+    {
+      "high": 2,
+      "name": "perseverance",
+      "critical": 4,
+      "earnings": 37972,
+      "insights": 0,
+      "mediumLow": 1,
+      "totalValidBugs": 7
+    },
+    {
+      "high": 6,
+      "name": "infosec_us_team",
+      "critical": 1,
+      "earnings": 33781,
+      "insights": 0,
+      "mediumLow": 0,
+      "totalValidBugs": 7
+    },
+    {
+      "high": 4,
+      "name": "KlosMitSoss",
+      "critical": 2,
+      "earnings": 30241,
+      "insights": 4,
+      "mediumLow": 1,
+      "totalValidBugs": 7
+    },
+    {
+      "high": 1,
+      "name": "jovi",
+      "critical": 2,
+      "earnings": 24819,
+      "insights": 4,
+      "mediumLow": 1,
+      "totalValidBugs": 4
+    },
+    {
+      "high": 2,
+      "name": "okmxuse",
+      "critical": 2,
+      "earnings": 23002,
+      "insights": 4,
+      "mediumLow": 1,
+      "totalValidBugs": 5
+    },
+    {
+      "high": 1,
+      "name": "dustincha",
+      "critical": 1,
+      "earnings": 20715,
+      "insights": 0,
+      "mediumLow": 0,
+      "totalValidBugs": 2
+    },
+    {
+      "high": 0,
+      "name": "hulkvision",
+      "critical": 2,
+      "earnings": 18529,
+      "insights": 0,
+      "mediumLow": 0,
+      "totalValidBugs": 2
+    },
+    {
+      "high": 4,
+      "name": "Blockian",
+      "critical": 1,
+      "earnings": 16675,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 5
+    },
+    {
+      "high": 0,
+      "name": "br0nz3p1ck4x3",
+      "critical": 2,
+      "earnings": 13713,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 2
+    },
+    {
+      "high": 4,
+      "name": "HollaDieWaldfee",
+      "critical": 1,
+      "earnings": 11878,
+      "insights": 2,
+      "mediumLow": 3,
+      "totalValidBugs": 8
+    },
+    {
+      "high": 0,
+      "name": "savi0ur",
+      "critical": 1,
+      "earnings": 11042,
+      "insights": 2,
+      "mediumLow": 2,
+      "totalValidBugs": 3
+    },
+    {
+      "high": 2,
+      "name": "niroh",
+      "critical": 1,
+      "earnings": 7439,
+      "insights": 1,
+      "mediumLow": 1,
+      "totalValidBugs": 4
+    },
+    {
+      "high": 0,
+      "name": "yemresaritoprak",
+      "critical": 1,
+      "earnings": 6712,
+      "insights": 0,
+      "mediumLow": 0,
+      "totalValidBugs": 1
+    },
+    {
+      "high": 0,
+      "name": "a090325",
+      "critical": 1,
+      "earnings": 6712,
+      "insights": 0,
+      "mediumLow": 0,
+      "totalValidBugs": 1
+    },
+    {
+      "high": 3,
+      "name": "zhaojie",
+      "critical": 0,
+      "earnings": 5886,
+      "insights": 0,
+      "mediumLow": 0,
+      "totalValidBugs": 3
+    },
+    {
+      "high": 1,
+      "name": "Rhaydden",
+      "critical": 0,
+      "earnings": 5844,
+      "insights": 8,
+      "mediumLow": 2,
+      "totalValidBugs": 3
+    },
+    {
+      "high": 1,
+      "name": "ZeroTrust",
+      "critical": 0,
+      "earnings": 4826,
+      "insights": 0,
+      "mediumLow": 1,
+      "totalValidBugs": 2
+    },
+    {
+      "high": 1,
+      "name": "keizo",
+      "critical": 0,
+      "earnings": 4143,
+      "insights": 0,
+      "mediumLow": 0,
+      "totalValidBugs": 1
+    },
+    {
+      "high": 1,
+      "name": "fnmain",
+      "critical": 0,
+      "earnings": 4143,
+      "insights": 0,
+      "mediumLow": 0,
+      "totalValidBugs": 1
+    },
+    {
+      "high": 1,
+      "name": "Berserk",
+      "critical": 1,
+      "earnings": 3498,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 2
+    },
+    {
+      "high": 1,
+      "name": "Cartel",
+      "critical": 1,
+      "earnings": 2718,
+      "insights": 0,
+      "mediumLow": 0,
+      "totalValidBugs": 2
+    },
+    {
+      "high": 0,
+      "name": "Nirix0x",
+      "critical": 1,
+      "earnings": 2441,
+      "insights": 2,
+      "mediumLow": 0,
+      "totalValidBugs": 1
+    },
+    {
+      "high": 1,
+      "name": "avoloder",
+      "critical": 0,
+      "earnings": 2438,
+      "insights": 2,
+      "mediumLow": 0,
+      "totalValidBugs": 1
+    },
+    {
+      "high": 0,
+      "name": "Minato7namikazi",
+      "critical": 0,
+      "earnings": 1381,
+      "insights": 0,
+      "mediumLow": 1,
+      "totalValidBugs": 1
+    },
+    {
+      "high": 0,
+      "name": "p_laksmana",
+      "critical": 0,
+      "earnings": 1381,
+      "insights": 0,
+      "mediumLow": 1,
+      "totalValidBugs": 1
+    },
+    {
+      "high": 1,
+      "name": "XDZIBECX",
+      "critical": 0,
+      "earnings": 973,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 1
+    },
+    {
+      "high": 0,
+      "name": "Franfran",
+      "critical": 0,
+      "earnings": 654,
+      "insights": 1,
+      "mediumLow": 1,
+      "totalValidBugs": 1
+    },
+    {
+      "high": 0,
+      "name": "p4rsely",
+      "critical": 0,
+      "earnings": 559,
+      "insights": 0,
+      "mediumLow": 1,
+      "totalValidBugs": 1
+    },
+    {
+      "high": 0,
+      "name": "Cryptor",
+      "critical": 0,
+      "earnings": 484,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    },
+    {
+      "high": 0,
+      "name": "p4y4b13",
+      "critical": 0,
+      "earnings": 290,
+      "insights": 1,
+      "mediumLow": 0,
+      "totalValidBugs": 0
+    }
+  ],
+  "boostedSummaryReport": "https://drive.google.com/file/d/1IAto_Q53lXfv4AeqF1MyQtUFP6oT6jcz/view?usp=drive_link",
+  "ecosystem": null,
+  "endDate": "2025-04-04T18:00:00.000Z",
+  "evaluationEndDate": "2025-06-19T15:16:18.008Z",
+  "features": [
+    "Attackathon",
+    "Managed Triage: Time Saver",
+    "Vault"
+  ],
+  "hideAssetsInScope": null,
+  "immunefiStandard": true,
+  "inviteOnly": false,
+  "kyc": true,
+  "language": [
+    "Move",
+    "Rust"
+  ],
+  "launchDate": "2025-03-07T18:00:00.000Z",
+  "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7DjMVTpQlNLAmfCQBtATm3/216ffcea3d1b3fa3570ab58429e6b35e/movement-mark-reverse-rgb-2000px_72ppi__1_.png",
+  "maxBounty": 400000,
+  "outOfScopeAndRules": "To be determined",
+  "pocPerTypeAndSeverity": [
+    "blockchain_dlt - critical",
+    "blockchain_dlt - high",
+    "blockchain_dlt - medium",
+    "blockchain_dlt - low",
+    "smart_contract - critical",
+    "smart_contract - high",
+    "smart_contract - medium",
+    "smart_contract - low"
+  ],
+  "primaryPaymentWallet": "EVM",
+  "prioritizedVulnerabilities": "To be determined",
+  "productType": null,
+  "programOverview": "Movement Labs is a core contributor to Movement Network, a Move-based blockchain network that settles to Ethereum and creates safer execution environments by way of move.\n\nFor more information about Movement Labs, please visit [https://movementlabs.xyz/](https://movementlabs.xyz/). \n\nThis is a **mainnet AC (audit competition)** and the project may fix bugs mid-competition. The more bugs a project fixes the more rewards will be unlocked for a simultaneously running **mitigation competition** with up to $100,000 USD in rewards that is open for everyone to participate in. Read our full [mainnet AC rules](https://immunefisupport.zendesk.com/hc/en-us/articles/33256328266769-Mainnet-Audit-Competition-Rules) for more info.\n\nBugs in code which is in scope for both the Aptos bug bounty program & Movement Attackathon will only be rewarded from the Movement Attackathon reward pool. This is so bugs won't be paid twice, once from Aptos bug bounty program and then again from Movement's Atttackathon. This only applies to bugs submitted while the Movement Attackathon is live.\n\n**Responsible Publication**\n\nImmunefi will publish bug reports, earnings, and a leaderboard for this Attackathon.\n\nSecurity Researchers may publish their bug reports as well, but only after Immunefi has published the valid bug reports as part of the competition results.\n\n**Dispute Resolution**\n\nIf there is any dispute over bug reports between projects and security researchers, Immunefi has final say on validity and severity based on the terms of this program.",
+  "programType": [
+    "Blockchain/DLT",
+    "Smart Contract"
+  ],
+  "project": "Attackathon | Movement Labs",
+  "projectType": [
+    "Blockchain"
+  ],
+  "rewardsBody": "Rewards are distributed among SRs according to [Immunefi’s Standardized Competition Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/31657285001873-Standardized-Competition-Reward-Terms).\n\nRewards are denominated in USD and distributed in USDC on Ethereum and Move: $400k USDC and $100k worth of MOVE tokens.\n\nThe reward pool is **$400,000 USD** if any bug is found.\n\nIf not a single bug is found (Insights do not count as bugs) the reward pool is **$50,000 USD**.\n\n__Mitigation Competition Rewards__\n\nThe maximum reward pool for the mitigation competition is **$100,000 USD**.\n\nIf any bug in scope is fixed during the mainnet AC then a mitigation competition will begin immediately, run simultaneously, and end 5 days after the mainnet AC has ended.\n\nThe mitigation competition’s reward pool is based on how many bugs are fixed while the competitions are live relative to how many bugs are found in the mainnet AC. So if projects make more bug fixes mid-competition then the size of the mitigation competition reward pool increases up to the maximum.\n\nThe full mitigation competition reward terms can be [read here](https://immunefisupport.zendesk.com/hc/en-us/articles/33256328266769-Mainnet-Audit-Competition-Rules).",
+  "rewardsPool": 400000,
+  "primaryPool": 400000,
+  "allStarsPool": 0,
+  "podiumPool": 0,
+  "rewardsToken": "USDC",
+  "slug": "movement-labs-attackathon",
+  "tenPercentEconomicRule": false,
+  "updatedDate": "2025-06-19T15:15:39.123Z",
+  "impactsBody": "**No Runnable PoC Code Required**\n\nFor this program, runnable PoC code is not required. Whitehats are instead required to write a step-by-step explanation of the PoC and impact. For more information, please read [Audit Competition Proof-of-Concept Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/33260632501777-Audit-Competition-Proof-of-Concept-Rules). \n\n**Asset Accuracy Assurance**\n\nBugs found on assets incorrectly listed in-scope are valid.\n\n**Previous Audits**\n\nMovement Labs’s completed audit reports can be found here:\n- [https://1247499478-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FBMbDkZsgQosju3BU30VN%2Fuploads%2FIw6F6sO75Gl3oOa9D6kD%2Fmeridian_audit_final.pdf?alt=media&token=f5ab2581-9407-4b2b-93d2-e7c61760cdbd](https://1247499478-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FBMbDkZsgQosju3BU30VN%2Fuploads%2FIw6F6sO75Gl3oOa9D6kD%2Fmeridian_audit_final.pdf?alt=media&token=f5ab2581-9407-4b2b-93d2-e7c61760cdbd)\n- [https://docs.canopyhub.xyz/audits/audit-reports](https://docs.canopyhub.xyz/audits/audit-reports)\n- [https://drive.google.com/file/d/1nTg57yVLay1TrBbB3HnEoQ_ElQ0_rScL/view?usp=sharing](https://drive.google.com/file/d/1nTg57yVLay1TrBbB3HnEoQ_ElQ0_rScL/view?usp=sharing)\n- [https://docs.echelon.market/echelon-v1/security/audit-reports](https://docs.echelon.market/echelon-v1/security/audit-reports)\n- [https://github.com/movementlabsxyz/layerzero-devtools/issues](https://github.com/movementlabsxyz/layerzero-devtools/issues)\n- [https://github.com/movementlabsxyz/aptos-core/issues](https://github.com/movementlabsxyz/aptos-core/issues)\n- [https://github.com/movementlabsxyz/movement/issues](https://github.com/movementlabsxyz/movement/issues)\n- [https://github.com/aptos-labs/aptos-core/issues](https://github.com/aptos-labs/aptos-core/issues)\n\nUnfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n\n**Public Disclosure of Known Issues**\n\nBug reports for publicly disclosed bugs are not eligible for a reward. \n- [https://github.com/movementlabsxyz/aptos-core/pull/115](https://github.com/movementlabsxyz/aptos-core/pull/115)\n- https://github.com/movementlabsxyz/movement/issues/1113 \n\n**Private Known Issues Reward Policy**\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward.\n\n**Mainnet AC (Audit Competition) Bug Fix Policy**\n\nThe project may make bug fixes during the competition.\n- Fixed bugs immediately become out of scope once the fix is public.\n- Duplicate submissions of a bug are only valid if they’re submitted before the fix is public.\t\n\nAll project made bug fixes immediately become in scope for the mitigation competition once the fix is public, including fixes to bugs found independently of SRs.\n\nRead our full [mainnet AC rules](https://immunefisupport.zendesk.com/hc/en-us/articles/33256328266769-Mainnet-Audit-Competition-Rules) for more info.\n\n**KYC Requirement**\n\nMovement Labs requires KYC information to pay for bug submissions. The following information will be required:\n- Full name\n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\nSecurity researchers are required to submit KYC within 14 days of KYC being requested, else their rewards may be forfeited. Immunefi may make exceptions due to extenuating circumstances.\n\n**Eligibility Criteria**\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in an audit review of the code in scope (Such auditors may still participate in this program only if they receive project permission)",
+  "websiteUrl": "https://movementlabs.xyz/",
+  "githubUrl": null,
+  "eligibilityCriteria": [
+    "no_ofac_sdn",
+    "no_official_contributor",
+    "no_employee",
+    "no_auditor"
+  ],
+  "responsiblePublicationCategory": null,
+  "description": "Movement Labs is a core contributor to Movement Network, a Move-based blockchain network that settles to Ethereum and creates safer execution environments by way of move. ",
+  "knownIssues": [],
+  "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+  "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+  "defaultOutOfScopeWebAndApplications": null,
+  "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+  "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+  "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+  "customOutOfScopeInformation": "The nodes are not currently rolling back on settlement failures: [https://github.com/movementlabsxyz/movement/blob/main/protocol-units/settlement/mcr/README.md](https://github.com/movementlabsxyz/movement/blob/main/protocol-units/settlement/mcr/README.md). Settlement logic is out of scope.\n\nAdditionally, the native_bridge.move and atomic_bridge.move files within the aptos-core repository are not in scope as they are not used in production. Please see MOVEOFTAdapter.sol in the layerzero_devtools repository for bridging logic.\n\nIndexer / graphql and MCR / settlement are all considered to be out-of-scope.\n\nThe following is always considered out of scope as a security researcher needs to find an applicable in scope impact, which would not be possible if it was the following:\n- test and dev logic not directly related to our deployments\n- code that is not used",
+  "customProhibitedActivities": [],
+  "impacts": [
+    {
+      "id": 1,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Network not being able to confirm new transactions (total network shutdown)"
+    },
+    {
+      "id": 2,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
+    },
+    {
+      "id": 3,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Direct loss of funds"
+    },
+    {
+      "id": 4,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Permanent freezing of funds (fix requires hardfork)"
+    },
+    {
+      "id": 5,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Unintended chain split (network partition)"
+    },
+    {
+      "id": 6,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments"
+    },
+    {
+      "id": 7,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Causing network processing nodes to process transactions from the mempool beyond set parameters"
+    },
+    {
+      "id": 8,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "RPC API crash affecting programs with greater than or equal to 25% of the market capitalization on top of the respective layer"
+    },
+    {
+      "id": 9,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Increasing network processing node resource consumption by at least 30% without brute force actions, compared to the preceding 24 hours"
+    },
+    {
+      "id": 10,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Shutdown of greater than or equal to 30% of network processing nodes without brute force actions, but does not shut down the network"
+    },
+    {
+      "id": 11,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "A bug in the respective layer 0/1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk"
+    },
+    {
+      "id": 12,
+      "type": "blockchain_dlt",
+      "severity": "low",
+      "title": "Shutdown of greater than 10% or equal to but less than 30% of network processing nodes without brute force actions, but does not shut down the network"
+    },
+    {
+      "id": 13,
+      "type": "blockchain_dlt",
+      "severity": "low",
+      "title": "Modification of transaction fees outside of design parameters"
+    },
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 32,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of gas"
+    },
+    {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
+    },
+    {
+      "id": 34,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
+    },
+    {
+      "id": 5405,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 5406,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Temporary freezing of funds for at least 24 hour"
+    }
+  ],
+  "rewards": [
+    {
+      "assetType": "blockchain_dlt",
+      "level": "critical",
+      "payout": "Portion of the Reward Pool",
+      "pocRequired": true
+    },
+    {
+      "assetType": "blockchain_dlt",
+      "level": "high",
+      "payout": "Portion of the Reward Pool",
+      "pocRequired": true
+    },
+    {
+      "assetType": "blockchain_dlt",
+      "level": "medium",
+      "payout": "Portion of the Reward Pool",
+      "pocRequired": true
+    },
+    {
+      "assetType": "blockchain_dlt",
+      "level": "low",
+      "payout": "Portion of the Reward Pool",
+      "pocRequired": true
+    },
+    {
+      "assetType": "smart_contract",
+      "level": "critical",
+      "payout": "Portion of the Reward Pool",
+      "pocRequired": true
+    },
+    {
+      "assetType": "smart_contract",
+      "level": "high",
+      "payout": "Portion of the Reward Pool",
+      "pocRequired": true
+    },
+    {
+      "assetType": "smart_contract",
+      "level": "medium",
+      "payout": "Portion of the Reward Pool",
+      "pocRequired": true
+    },
+    {
+      "assetType": "smart_contract",
+      "level": "low",
+      "payout": "Portion of the Reward Pool",
+      "pocRequired": true
+    }
+  ]
 }

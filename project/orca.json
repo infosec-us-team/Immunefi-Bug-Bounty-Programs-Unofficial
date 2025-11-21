@@ -1,248 +1,179 @@
 {
-  "pageProps": {
-    "bounty": {
-      "contentfulId": "2iuFSwGkNG44S7L2chOlgQ",
-      "id": "orca",
-      "slug": "orca",
-      "project": "Orca",
-      "maxBounty": 500000,
-      "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6p07t55yWuOlsHLiQV9xsM/61c489fc59e7233557039a6965c76000/Screenshot_2024-11-11_at_11.35.18___PM.png",
-      "launchDate": "2022-05-19T17:30:00.000Z",
-      "endDate": null,
-      "updatedDate": "2025-08-12T07:01:25.023Z",
-      "kyc": false,
-      "rewards": [
-        {
-          "id": 34301,
-          "assetType": "smart_contract",
-          "severity": "critical",
-          "rewardModel": "up_to",
-          "maxReward": 500000,
-          "rewardCalculationPercentage": 10
-        },
-        {
-          "id": 34302,
-          "assetType": "smart_contract",
-          "severity": "high",
-          "rewardModel": "fixed",
-          "fixedReward": 50000
-        },
-        {
-          "id": 34303,
-          "assetType": "smart_contract",
-          "severity": "medium",
-          "rewardModel": "fixed",
-          "fixedReward": 10000
-        }
-      ],
-      "audits": null,
-      "assets": [
-        {
-          "id": "3eLgXbnQaKA6kNzm6CeYYJ",
-          "type": "smart_contract",
-          "url": "https://solscan.io/account/whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc",
-          "description": "Orca Whirlpools",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-08-12T07:01:19.077Z",
-          "fund": {
-            "usdValue": 0,
-            "addressesCount": 1
-          }
-        },
-        {
-          "id": "6hBuRvw4FZlEeUIqZLuDL5",
-          "type": "smart_contract",
-          "url": "https://solscan.io/account/waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
-          "description": "Orca Wavebreak",
-          "isPrimacyOfImpact": null,
-          "isSafeHarbor": null,
-          "addedAt": "2025-08-12T07:01:19.086Z",
-          "fund": {
-            "usdValue": 0,
-            "addressesCount": 1
-          }
-        }
-      ],
-      "impacts": [
-        {
-          "id": 2676,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Bugs that could temporarily freeze user funds or incorrectly assign value to user funds"
-        },
-        {
-          "id": 2677,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Temporary freezing of unclaimed yield for any amount of time"
-        },
-        {
-          "id": 23,
-          "type": "smart_contract",
-          "severity": "high",
-          "title": "Theft of unclaimed yield"
-        },
-        {
-          "id": 29,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Smart contract unable to operate due to lack of token funds"
-        },
-        {
-          "id": 2678,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Block stuffing for profit"
-        },
-        {
-          "id": 31,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-        },
-        {
-          "id": 32,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Theft of gas"
-        },
-        {
-          "id": 33,
-          "type": "smart_contract",
-          "severity": "medium",
-          "title": "Unbounded gas consumption"
-        },
-        {
-          "id": 2679,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Bugs that freeze user funds or drain the contract's holdings or involve theft of funds without user signatures"
-        },
-        {
-          "id": 15,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-        },
-        {
-          "id": 17,
-          "type": "smart_contract",
-          "severity": "critical",
-          "title": "Permanent freezing of funds"
-        }
-      ],
-      "programOverview": "Orca is one of the first general-purpose AMMs launched on Solana. Users can swap assets, provide liquidity, and earn yield through an easy-to-use interface. Orca has created custom smart contracts for its concentrated liquidity product, [Whirlpools](https://www.orca.so/whirlpools). In traditional AMM liquidity pools, a user provides liquidity across the entire continuous price curve. With Whirlpools, each user can specify the price range where they will provide liquidity.\n\nFor more information on Orca, please visit [https://orca.so/](https://orca.so/) or [Orca’s Twitter](https://twitter.com/orca_so).",
-      "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-      "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nAll known issues previously highlighted in the following audits are considered as out of scope: \n  - [Neodyme Audit](https://orca-so.gitbook.io/orca-developer-portal/whirlpools/overview#security-audits)\n  - [Kudelski Security](https://drive.google.com/file/d/1u0ja4_3GoogVWVU9prMezDrBaqE5BxdW/view)\n\nRewards for critical smart contract vulnerabilities can be further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum reward of __USD 100 000__ for Critical smart contract bug reports. \n\nPayouts are handled by the __Orca__ team directly and are denominated in USD. Payouts of up to __USD 250 000__ are done in __ORCA__ or __USDC__ (SPL Version) at the discretion of the team. Payouts above __USD 250 000__ will be done in __ORCA__ and will be vested monthly over a 12-month period.",
-      "outOfScopeAndRules": null,
-      "assetsBodyV2": "However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf any Critical/High severity impact can be caused to any other asset managed by Orca that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.",
-      "impactsBody": null,
-      "immunefiStandard": true,
-      "tags": {
-        "general": [
-          "Immunefi Standard",
-          "KYC Not Required",
-          "PoC Required"
-        ],
-        "productType": [
-          "AMM",
-          "Crosschain Liquidity"
-        ],
-        "projectType": [
-          "Defi"
-        ],
-        "ecosystem": [
-          "Solana"
-        ],
-        "programType": [
-          "Smart Contract"
-        ],
-        "language": [
-          "Rust"
-        ],
-        "featured": [
-          "Launched Recently"
-        ]
-      },
-      "legacy": {
-        "technologies": [
-          "Smart Contract"
-        ],
-        "blockchain_rewards": [],
-        "smartcontract_rewards": [
-          {
-            "level": "Critical",
-            "payout": "Up to USD $500,000"
-          },
-          {
-            "level": "High",
-            "payout": "USD $50,000"
-          },
-          {
-            "level": "Medium",
-            "payout": "USD $10,000"
-          }
-        ],
-        "web_rewards": []
-      },
-      "websiteUrl": "https://orca.so",
-      "description": "Orca is one of the first general-purpose AMMs launched on Solana. Users can swap assets, provide liquidity, and earn yield through an easy-to-use interface. Orca has created custom smart contracts for its concentrated liquidity product, [Whirlpools](https://www.orca.so/whirlpools). In traditional AMM liquidity pools, a user provides liquidity across the entire continuous price curve.",
-      "githubUrl": "https://github.com/orca-so",
-      "feasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)\n",
-      "prohibitedActivites": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)\n",
-      "responsiblePublicationCategory": null,
-      "knownIssues": [],
-      "knownIssueAssurance": false,
-      "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-      "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
-      "defaultOutOfScopeWebAndApplications": null,
-      "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-      "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-      "customOutOfScopeInformation": "  - Best practice critiques",
-      "customProhibitedActivities": [],
-      "rewardsTokenNetwork": "Solana",
-      "rewardsToken": "USDC, ORCA",
-      "eligibilityCriteria": [],
-      "eligibilityCriteriaAdditionalInformation": null,
-      "programCodebases": [
-        {
-          "id": 388,
-          "title": "Orca Whirlpools",
-          "description": "Orca Whirlpools Smart Contract",
-          "url": "https://github.com/orca-so/whirlpools"
-        }
-      ],
-      "programDocumentations": [
-        {
-          "id": 277,
-          "title": "Whirlpools Docs",
-          "description": "Technical Documentation for the Orca Whirlpools program",
-          "url": "https://dev.orca.so"
-        }
-      ],
-      "primacy": "primacy_of_rules",
-      "newProgramRewardsEnabled": true,
-      "findingsUrl": null,
-      "premiumTriaging": false
+  "assets": [
+    {
+      "id": "3eLgXbnQaKA6kNzm6CeYYJ",
+      "revision": 1,
+      "type": "smart_contract",
+      "url": "https://solscan.io/account/whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc",
+      "description": "Orca Whirlpools",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-08-12T07:01:19.077Z"
     },
-    "project": {
-      "features": [],
-      "premiumTriaging": false,
-      "isSafeHarborActive": false,
-      "performanceMetrics": {}
-    },
-    "metaData": {
-      "title": "Orca Bug Bounties",
-      "description": "Find bugs and vulnerabilities on Orca and get paid up to $500,000.",
-      "url": "https://immunefi.com/bug-bounty/orca/",
-      "ogImg": "/api/bounty/og-image/?project=Orca&slug=orca"
-    },
-    "layoutProps": {
-      "headerMarginBottom": "mb-3 lg:mb-15",
-      "footerMarginTop": "mt-0"
+    {
+      "id": "6hBuRvw4FZlEeUIqZLuDL5",
+      "revision": 1,
+      "type": "smart_contract",
+      "url": "https://solscan.io/account/waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+      "description": "Orca Wavebreak",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-08-12T07:01:19.086Z"
     }
-  },
-  "__N_SSG": true
+  ],
+  "assetsBodyV2": "However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf any Critical/High severity impact can be caused to any other asset managed by Orca that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.",
+  "boostedIntroEvaluating": "",
+  "boostedIntroFinished": "",
+  "boostedIntroLive": "",
+  "boostedIntroStartingIn": "",
+  "boostedLeaderboard": [],
+  "boostedSummaryReport": null,
+  "ecosystem": [
+    "Solana"
+  ],
+  "endDate": null,
+  "evaluationEndDate": null,
+  "features": [],
+  "hideAssetsInScope": null,
+  "immunefiStandard": true,
+  "inviteOnly": false,
+  "kyc": false,
+  "language": [
+    "Rust"
+  ],
+  "launchDate": "2022-05-19T17:30:00.000Z",
+  "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6p07t55yWuOlsHLiQV9xsM/61c489fc59e7233557039a6965c76000/Screenshot_2024-11-11_at_11.35.18___PM.png",
+  "maxBounty": 500000,
+  "pocPerTypeAndSeverity": [
+    "smart_contract - critical",
+    "smart_contract - high",
+    "smart_contract - medium"
+  ],
+  "primaryPaymentWallet": "Solana",
+  "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+  "productType": [
+    "AMM",
+    "Crosschain Liquidity"
+  ],
+  "programOverview": "Orca is one of the first general-purpose AMMs launched on Solana. Users can swap assets, provide liquidity, and earn yield through an easy-to-use interface. Orca has created custom smart contracts for its concentrated liquidity product, [Whirlpools](https://www.orca.so/whirlpools). In traditional AMM liquidity pools, a user provides liquidity across the entire continuous price curve. With Whirlpools, each user can specify the price range where they will provide liquidity.\n\nFor more information on Orca, please visit [https://orca.so/](https://orca.so/) or [Orca’s Twitter](https://twitter.com/orca_so).",
+  "programType": [
+    "Smart Contract"
+  ],
+  "project": "Orca",
+  "projectType": [
+    "Defi"
+  ],
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nAll known issues previously highlighted in the following audits are considered as out of scope: \n  - [Neodyme Audit](https://orca-so.gitbook.io/orca-developer-portal/whirlpools/overview#security-audits)\n  - [Kudelski Security](https://drive.google.com/file/d/1u0ja4_3GoogVWVU9prMezDrBaqE5BxdW/view)\n\nRewards for critical smart contract vulnerabilities can be further capped at 10% of economic damage, with the main consideration being the funds affected in addition to PR and brand considerations, at the discretion of the team. However, there is a minimum reward of __USD 100 000__ for Critical smart contract bug reports. \n\nPayouts are handled by the __Orca__ team directly and are denominated in USD. Payouts of up to __USD 250 000__ are done in __ORCA__ or __USDC__ (SPL Version) at the discretion of the team. Payouts above __USD 250 000__ will be done in __ORCA__ and will be vested monthly over a 12-month period.",
+  "rewardsPool": 0,
+  "primaryPool": 0,
+  "allStarsPool": 0,
+  "podiumPool": 0,
+  "rewardsToken": "USDC, ORCA",
+  "slug": "orca",
+  "updatedDate": "2025-08-12T07:01:25.023Z",
+  "impactsBody": null,
+  "websiteUrl": "https://orca.so",
+  "githubUrl": "https://github.com/orca-so",
+  "eligibilityCriteria": [],
+  "responsiblePublicationCategory": null,
+  "description": "Orca is one of the first general-purpose AMMs launched on Solana. Users can swap assets, provide liquidity, and earn yield through an easy-to-use interface. Orca has created custom smart contracts for its concentrated liquidity product, [Whirlpools](https://www.orca.so/whirlpools). In traditional AMM liquidity pools, a user provides liquidity across the entire continuous price curve.",
+  "knownIssues": [],
+  "defaultOutOfScopeBlockchain": null,
+  "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+  "defaultOutOfScopeWebAndApplications": null,
+  "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+  "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+  "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+  "customOutOfScopeInformation": "  - Best practice critiques",
+  "customProhibitedActivities": [],
+  "impacts": [
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 29,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Smart contract unable to operate due to lack of token funds"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 32,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of gas"
+    },
+    {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
+    },
+    {
+      "id": 2676,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Bugs that could temporarily freeze user funds or incorrectly assign value to user funds"
+    },
+    {
+      "id": 2677,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of unclaimed yield for any amount of time"
+    },
+    {
+      "id": 2678,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing for profit"
+    },
+    {
+      "id": 2679,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Bugs that freeze user funds or drain the contract's holdings or involve theft of funds without user signatures"
+    }
+  ],
+  "rewards": [
+    {
+      "id": 34301,
+      "assetType": "smart_contract",
+      "severity": "critical",
+      "rewardModel": "up_to",
+      "maxReward": 500000,
+      "rewardCalculationPercentage": 10
+    },
+    {
+      "id": 34302,
+      "assetType": "smart_contract",
+      "severity": "high",
+      "rewardModel": "fixed",
+      "fixedReward": 50000
+    },
+    {
+      "id": 34303,
+      "assetType": "smart_contract",
+      "severity": "medium",
+      "rewardModel": "fixed",
+      "fixedReward": 10000
+    }
+  ]
 }
