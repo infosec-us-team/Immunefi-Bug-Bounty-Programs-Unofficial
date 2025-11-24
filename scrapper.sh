@@ -16,8 +16,8 @@ added_or_unpaused_programs=$(comm -13 ./previous_slugs.txt ./current_slugs.txt |
 rm ./previous_slugs.txt
 rm ./current_slugs.txt
 
-# Overwrite the tracked directory snapshot with the latest data, duplicating slug into id for compatibility.
-echo "$bounty_directory_json" | jq 'map(. + {id: .slug})' >projects.json
+# Overwrite the tracked directory snapshot with the latest data.
+echo "$bounty_directory_json" >projects.json
 
 # Determine how many entries we need to fetch individually.
 bounty_count=$(echo "$bounty_directory_json" | jq length)
@@ -40,7 +40,7 @@ for ((index = 0; index <= bounty_count - 1; index++)); do
   if [ "$response_slug" = "$bounty_slug" ]; then
 
     # Happy path: format and store the program snapshot.
-    echo "$bounty_details_json" | jq '. + {id: .slug}' >./project/$bounty_slug.json
+    echo "$bounty_details_json" | jq >./project/$bounty_slug.json
     echo "Scanned: $bounty_slug [$index/$bounty_count]"
     sleep .5
 
