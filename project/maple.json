@@ -467,9 +467,36 @@
       "description": "Sky Strategy",
       "isPrimacyOfImpact": null,
       "addedAt": "2025-04-09T09:05:59.874Z"
+    },
+    {
+      "id": "6v9IrgadrFJ9WbVRc6oQIv",
+      "revision": 1,
+      "type": "smart_contract",
+      "url": "https://etherscan.io/address/0xF95E5722226a1018d058CD757B75F1D10289e967",
+      "description": "WithdrawalManagerImplementation (v200) (Queue)",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-11-28T15:35:43.102Z"
+    },
+    {
+      "id": "CaaKodnihWSVYraNTrFm5",
+      "revision": 1,
+      "type": "smart_contract",
+      "url": "https://etherscan.io/address/0xD389BFE4A129525b486B098411336a4fCecF3024",
+      "description": "WithdrawalManagerInitializer (v200)",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-11-28T15:36:15.822Z"
+    },
+    {
+      "id": "5eKZwqD12kewqXK4Dx3wFz",
+      "revision": 1,
+      "type": "smart_contract",
+      "url": "https://etherscan.io/address/0x2eFFf88747EB5a3FF00d4d8d0f0800E306C0426b",
+      "description": "GovernorTimelock",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-11-28T15:39:26.814Z"
     }
   ],
-  "assetsBodyV2": "All contracts listed above are in scope, as well as all proxy and contract instances deployed from all factories. Though only the proxy contracts are listed as in-scope, current implementation and any further updates to the implementation contracts are considered in scope. When reporting a bug, please make sure to select the relevant proxy smart contract as the target.\n\nAll contracts that are marked as “(*For reference*)” are instances of contracts that have been deployed by protocol factories and are in scope for the audit. All other instances that are deployed in the same fashion are in scope of the audit, including:\n- Liquidator (Not deployed currently, deployed during loan liquidations of collateral)\n- Loan (Fixed-Term & Open-Term)\n- LoanManager (Fixed-Term & Open-Term)\n- Pool\n- PoolManager\n- PoolDelegateCover\n- WithdrawalManager (Cyclical)\n- WithdrawalManager (Queue)",
+  "assetsBodyV2": "All contracts listed above are in scope, as well as all proxy and contract instances deployed from all factories. Though only the proxy contracts are listed as in-scope, current implementation and any further updates to the implementation contracts are considered in scope. When reporting a bug, please make sure to select the relevant proxy smart contract as the target.\n\nAll contracts that are marked as “(*For reference*)” are instances of contracts that have been deployed by protocol factories and are in scope for the audit. All other instances that are deployed in the same fashion are in scope of the audit, including:\n- Liquidator (Not deployed currently, deployed during loan liquidations of collateral)\n- Loan (Fixed-Term & Open-Term)\n- LoanManager (Fixed-Term & Open-Term)\n- Pool\n- PoolManager\n- PoolDelegateCover\n- WithdrawalManager (Cyclical)\n- WithdrawalManager (Queue)\n- Liquid DeFi strategies such as Aave and Sky",
   "boostedIntroEvaluating": "",
   "boostedIntroFinished": "",
   "boostedIntroLive": "",
@@ -517,7 +544,7 @@
   "podiumPool": 0,
   "rewardsToken": "USDC, MPL",
   "slug": "maple",
-  "updatedDate": "2025-04-09T09:07:38.444Z",
+  "updatedDate": "2025-11-28T15:40:33.159Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -597,15 +624,16 @@
   ],
   "rewards": [
     {
-      "id": 8224,
+      "id": 39121,
       "assetType": "smart_contract",
       "severity": "critical",
       "rewardModel": "range",
       "maxReward": 500000,
-      "minReward": 50000
+      "minReward": 50000,
+      "rewardCalculationPercentage": 10
     },
     {
-      "id": 5327,
+      "id": 39122,
       "assetType": "smart_contract",
       "severity": "high",
       "rewardModel": "fixed",
