@@ -1,38 +1,47 @@
 {
   "assets": [
     {
-      "id": "41lsglKkylNLYDjhj3uPRG",
+      "id": "7KtVhVPOH6Q31YMlnZccOp",
       "revision": 1,
       "type": "blockchain_dlt",
-      "url": "https://github.com/availproject/avail-core",
-      "description": "Avail Core",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-07-23T02:00:00.000Z"
-    },
-    {
-      "id": "2H8B6VRAaNU6KqQ8JMd7JZ",
-      "revision": 1,
-      "type": "smart_contract",
-      "url": "https://github.com/availproject/contracts",
-      "description": "Smart Contracts",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-07-23T02:00:00.000Z"
-    },
-    {
-      "id": "7dUmMK6HewpKD9HTFubO80",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/availproject/avail",
-      "description": "Avail",
+      "description": null,
       "isPrimacyOfImpact": null,
-      "addedAt": "2024-07-23T02:00:00.000Z"
+      "addedAt": "2025-12-01T08:24:47.660Z"
     },
     {
       "id": "18liAnHwE6kAUPXBNjvUqI",
-      "revision": 3,
+      "revision": 4,
       "type": "websites_and_applications",
       "url": "https://bridge.availproject.org",
       "description": "Bridge UI",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2024-07-23T02:00:00.000Z"
+    },
+    {
+      "id": "1ZTboJSRu0wkWmVirAJIRM",
+      "revision": 1,
+      "type": "smart_contract",
+      "url": "https://github.com/availproject/ca-sc",
+      "description": "Avail Nexus Smart Contracts",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-12-01T08:06:57.979Z"
+    },
+    {
+      "id": "2H8B6VRAaNU6KqQ8JMd7JZ",
+      "revision": 2,
+      "type": "smart_contract",
+      "url": "https://github.com/availproject/contracts",
+      "description": "Avail Bridge Smart Contracts",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2024-07-23T02:00:00.000Z"
+    },
+    {
+      "id": "41lsglKkylNLYDjhj3uPRG",
+      "revision": 2,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/availproject/avail-core",
+      "description": "Avail Core",
       "isPrimacyOfImpact": null,
       "addedAt": "2024-07-23T02:00:00.000Z"
     }
@@ -62,7 +71,7 @@
   ],
   "launchDate": "2024-07-23T02:00:00.000Z",
   "logo": "https://images.ctfassets.net/t3wqy70tc3bv/37wGk8Qz27HTCY0URGtIzR/3c3171085fec2e44832cc45a25326d09/avail.png",
-  "maxBounty": 500000,
+  "maxBounty": 250000,
   "outOfScopeAndRules": ".",
   "pocPerTypeAndSeverity": [
     "blockchain_dlt - critical",
@@ -92,7 +101,7 @@
   "projectType": [
     "Infrastructure"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Blockchain/DLT bugs, the reward amount is 10% of the funds directly affected, capped at the maximum critical reward USD 500,000. However, a minimum reward of USD 50,000 is to be rewarded in order to incentivize security researchers against withholding on a bug report. Note that critical Blockchain/DLT bugs need to be able to exploit the runtime layer of the blockchain, as the critical chain logic is strictly part of the runtime.\n\nFor critical Blockchain/DLT bugs with a  non-funds-at risk impact, the reward will be paid out as follows: \n\n- Network not being able to confirm new transactions (total network shutdown) - USD 50,000\n- Unintended permanent chain split requiring hard fork (network partition requiring hard fork) - USD 50,000\n- Permanent freezing of funds (fix requires hardfork) - USD 50,000\n\nFor high Blockchain/DLT non-funds-at risk impacts, the reward will be paid out as follows: \n\n- Unintended chain split (network partition) - USD 20,000\n- Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments - USD 20,000\n- Causing network processing nodes to process transactions from the mempool beyond set parameters - USD 20,000\n- RPC API crash affecting projects with greater than or equal to 25% of the market capitalization on top of the respective layer - USD 20,000\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 500,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 50,000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\nFor critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Level Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of USD 5,000 to USD 20,000 depending on the funds at risk, capped at the maximum high reward.  \n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional [24h] that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\nFor critical web/apps bug reports will be rewarded with USD 20,000, only if the impact leads to:\nA loss of funds involving an attack that does not require any user action\nPrivate key or private key generation leakage leading to unauthorized access to user funds \n\nAll other impacts that would be classified as Critical would be rewarded a flat amount of USD 6,000. The rest of the severity levels are paid out according to the Impact in Scope table.  \n\n__Reward Payment Terms__\n\nPayouts are handled by the Avail team directly and are denominated in USD. However, payments are done in USDC on Ethereum.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Blockchain/DLT bugs, the reward amount is 10% of the funds directly affected, capped at the maximum critical reward USD 250,000. However, a minimum reward of USD 25,000 is to be rewarded in order to incentivize security researchers against withholding on a bug report. Note that critical Blockchain/DLT bugs need to be able to exploit the runtime layer of the blockchain, as the critical chain logic is strictly part of the runtime.\n\nFor critical Blockchain/DLT bugs with a non-funds-at risk impact, the reward will be paid out as follows: \n\n- Network not being able to confirm new transactions (total network shutdown) - USD 30,000\n- Unintended permanent chain split requiring hard fork (network partition requiring hard fork) - USD 30,000\n- Permanent freezing of funds (fix requires hardfork) - USD 30,000\n\nFor high Blockchain/DLT non-funds-at risk impacts, the reward will be paid out as follows: \n\n- Unintended chain split (network partition) - USD 20,000\n- Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments - USD 20,000\n- Causing network processing nodes to process transactions from the mempool beyond set parameters - USD 20,000\n- RPC API crash affecting projects with greater than or equal to 25% of the market capitalization on top of the respective layer - USD 20,000\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 250,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 25,000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\nFor critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Level Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of USD 5,000 to USD 20,000 depending on the funds at risk, capped at the maximum high reward.  \n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional [24h] that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\nFor critical web/apps bug reports will be rewarded with USD 20,000, only if the impact leads to:\nA loss of funds involving an attack that does not require any user action\nPrivate key or private key generation leakage leading to unauthorized access to user funds \n\nAll other impacts that would be classified as Critical would be rewarded a flat amount of USD 6,000. The rest of the severity levels are paid out according to the Impact in Scope table.  \n\n__Reward Payment Terms__\n\nPayouts are handled by the Avail team directly and are denominated in USD. However, payments are done in USDC on Ethereum.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -100,7 +109,7 @@
   "rewardsToken": "USDC",
   "slug": "avail",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2025-03-17T12:33:59.558Z",
+  "updatedDate": "2025-12-01T08:24:52.934Z",
   "impactsBody": null,
   "websiteUrl": "https://www.availproject.org/",
   "githubUrl": "https://github.com/availproject",
@@ -111,7 +120,7 @@
     "no_auditor"
   ],
   "responsiblePublicationCategory": "category_3",
-  "description": "Avail is designed to be a platform that connects different ecosystems by providing a modular, scalable, and interoperable platform.\nAvail's vision is to provide a cohesive, unified user experience within a flexible and modular blockchain ecosystem, drawing on lessons from Web2 to innovate in Web3. Avail is not just building a product; we are pioneering a new category in the blockchain space, paving the way for an era of enhanced scalability and seamless integration. \n\n",
+  "description": "Avail is designed to be a platform that connects different ecosystems by providing a modular, scalable, and interoperable platform. Avail Nexus powers the new onchain world, beyond the boundaries of siloed blockchain networks. \nAvail's vision is to provide a cohesive, unified user experience within a flexible and modular blockchain ecosystem, drawing on lessons from Web2 to innovate in Web3. Avail is not just building a product; we are pioneering a new category in the blockchain space, paving the way for an era of enhanced scalability and seamless integration.",
   "knownIssues": [],
   "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
@@ -267,12 +276,6 @@
       "title": "Changing details of other users (including modifying browser local storage) without already-connected wallet interaction & with significant user interaction, such as: Iframing leading to modifying the backend/browser state(must demonstrate impact with POC)"
     },
     {
-      "id": 4994,
-      "type": "blockchain_dlt",
-      "severity": "low",
-      "title": "Primacy of Impact"
-    },
-    {
       "id": 4995,
       "type": "websites_and_applications",
       "severity": "high",
@@ -297,18 +300,6 @@
       "title": "RPC API crash affecting projects with greater than or equal to 25% of the market capitalization on top of the respective layer"
     },
     {
-      "id": 4999,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Primacy of Impact"
-    },
-    {
-      "id": 5000,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Primacy of Impact"
-    },
-    {
       "id": 5001,
       "type": "websites_and_applications",
       "severity": "medium",
@@ -319,18 +310,6 @@
       "type": "websites_and_applications",
       "severity": "medium",
       "title": "Changing non-sensitive details of other users(including modifying browser local storage)without already-connected wallet interaction & with up to one click of user interaction, such as: Changing the first/last name of user, Enabling/disabling notifications"
-    },
-    {
-      "id": 5003,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Primacy of Impact"
-    },
-    {
-      "id": 5004,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Primacy of Impact"
     },
     {
       "id": 5005,
@@ -357,24 +336,6 @@
       "title": "Direct theft of any user funds, whether at-rest or in-motion"
     },
     {
-      "id": 5009,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Primacy of Impact"
-    },
-    {
-      "id": 5010,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Primacy of Impact"
-    },
-    {
-      "id": 5011,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Primacy of Impacy"
-    },
-    {
       "id": 5296,
       "type": "blockchain_dlt",
       "severity": "critical",
@@ -389,34 +350,33 @@
   ],
   "rewards": [
     {
-      "id": 15161,
+      "id": 39205,
       "assetType": "smart_contract",
       "severity": "critical",
       "rewardModel": "range",
-      "maxReward": 500000,
-      "minReward": 50000,
+      "maxReward": 250000,
+      "minReward": 25000,
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 15157,
+      "id": 39201,
       "assetType": "blockchain_dlt",
       "severity": "critical",
       "rewardModel": "range",
-      "maxReward": 500000,
-      "minReward": 50000,
+      "maxReward": 250000,
+      "minReward": 25000,
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 15164,
+      "id": 39208,
       "assetType": "websites_and_applications",
       "severity": "critical",
       "rewardModel": "range",
       "maxReward": 20000,
-      "minReward": 6000,
-      "otherImpactMaxReward": 0
+      "minReward": 6000
     },
     {
-      "id": 15162,
+      "id": 39206,
       "assetType": "smart_contract",
       "severity": "high",
       "rewardModel": "range",
@@ -424,7 +384,7 @@
       "minReward": 5000
     },
     {
-      "id": 15158,
+      "id": 39202,
       "assetType": "blockchain_dlt",
       "severity": "high",
       "rewardModel": "range",
@@ -432,42 +392,42 @@
       "minReward": 20000
     },
     {
-      "id": 15165,
+      "id": 39209,
       "assetType": "websites_and_applications",
       "severity": "high",
       "rewardModel": "fixed",
       "fixedReward": 5000
     },
     {
-      "id": 15163,
+      "id": 39207,
       "assetType": "smart_contract",
       "severity": "medium",
       "rewardModel": "fixed",
       "fixedReward": 4000
     },
     {
-      "id": 15159,
+      "id": 39203,
       "assetType": "blockchain_dlt",
       "severity": "medium",
       "rewardModel": "fixed",
       "fixedReward": 5000
     },
     {
-      "id": 15166,
+      "id": 39210,
       "assetType": "websites_and_applications",
       "severity": "medium",
       "rewardModel": "fixed",
       "fixedReward": 2500
     },
     {
-      "id": 15160,
+      "id": 39204,
       "assetType": "blockchain_dlt",
       "severity": "low",
       "rewardModel": "fixed",
       "fixedReward": 1000
     },
     {
-      "id": 15167,
+      "id": 39211,
       "assetType": "websites_and_applications",
       "severity": "low",
       "rewardModel": "fixed",
