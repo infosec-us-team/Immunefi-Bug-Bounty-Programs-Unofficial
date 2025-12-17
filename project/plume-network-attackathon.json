@@ -1982,7 +1982,7 @@
       "podiumPoolEarnings": 0
     }
   ],
-  "boostedSummaryReport": null,
+  "boostedSummaryReport": "https://drive.google.com/file/d/18d2IXnGAEk3ievLk5h4LG2B9M1DaQEhz/view?usp=sharing",
   "ecosystem": null,
   "endDate": "2025-08-14T19:00:00.000Z",
   "evaluationEndDate": "2025-11-07T20:00:00.000Z",
@@ -2009,7 +2009,7 @@
     "smart_contract - critical"
   ],
   "primaryPaymentWallet": "EVM",
-  "prioritizedVulnerabilities": "To be determined",
+  "prioritizedVulnerabilities": "_blank_",
   "productType": null,
   "programOverview": "Plume is a public, EVM-compatible blockchain optimized for the rapid adoption and demand-driven integration of real world assets (RWAs).\n\nFor more information about Plume Network, please visit [https://plume.org/](https://plume.org/).",
   "programType": [
@@ -2025,7 +2025,7 @@
   "rewardsToken": "USDC",
   "slug": "plume-network-attackathon",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2025-11-26T19:56:04.073Z",
+  "updatedDate": "2025-12-16T14:33:59.639Z",
   "impactsBody": "**Build commands, Test commands, and instructions on how to run them:**\n\n- [https://github.com/plumenetwork/contracts/blob/main/plume/README.md](https://github.com/plumenetwork/contracts/blob/main/plume/README.md) - Staking\n- [https://github.com/plumenetwork/contracts/blob/main/plume/SPIN.md](https://github.com/plumenetwork/contracts/blob/main/plume/SPIN.md) - Daily Spin\n- [https://github.com/plumenetwork/contracts/blob/main/arc/README.md](https://github.com/plumenetwork/contracts/blob/main/arc/README.md) - Arc Token\n\n**Previous Audits**\n\nPlume Network’s completed audit reports can be found at [https://github.com/plumenetwork/contracts/blob/main/plume/audit/immunefi.pdf](https://github.com/plumenetwork/contracts/blob/main/plume/audit/immunefi.pdf) & [https://github.com/plumenetwork/contracts/blob/main/plume/audit/ottersec.pdf](https://github.com/plumenetwork/contracts/blob/main/plume/audit/ottersec.pdf). Unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n**Public Disclosure of Known Issues**\n\nBug reports for publicly disclosed bugs are not eligible for a reward. \n- None\n\n**Is this an upgrade of an existing system? If so, which? And what are the main differences?**\n\nNo – from the security-reviewer’s perspective this should be treated as a fresh, stand-alone system.\n\n**What ERC20 / ERC721 / ERC777 / ERC1155 token standards are supported?**\n\n- ERC-20 –\n     - The native stake/reward token $PLUME functions like an ERC-20 (plus an “ETH-style” 0xEeee… sentinel for native transfers).\n     - Any ERC-20 can be added as a reward token via addRewardToken.\n- No support for ERC-721, ERC-777, ERC-1155 in the staking contracts themselves.\n\n**What emergency actions may you want to use as a reason to downgrade an otherwise valid bug report?**\n\n- The bug requires privileged roles (TIMELOCK_ROLE / ADMIN_ROLE) to mis-configure a contract in a way that is already disallowed by policy.\n- The issue is a gas-optimisation or low-severity DOS that does not cause loss of funds or permanent unavailability.\n- Attacks that rely on an external system (e.g. the treasury implementation, oracle feeds, validators’ off-chain behaviour) operating maliciously within their allowed privileges.\n- Issues that only affect test / script code or out-of-scope directories.\n- Findings that depend on the administrator intentionally doing things.\n\n**What addresses would you consider any bug report requiring their involvement be out of scope, even if they exceed the privileges attributed to them?**\n\nThe addresses holding the following roles are considered trusted, and their actions, when performed within the defined capabilities of their roles, are out of scope:\n- ADMIN_ROLE / TIMELOCK_ROLE: The system's highest-level administrators.\n- VALIDATOR_ROLE: The role responsible for adding and removing validators from the set.\n- REWARD_MANAGER_ROLE: The role responsible for managing reward tokens and their emission rates.\n- l2AdminAddress (Validator Admin): The address that manages a specific validator's commission and other settings.\n\n**What external dependencies are there?**\n\nThe project has the following key external dependencies:\n- solidstate-solidity: Used for the core Diamond Proxy architecture.\n- @openzeppelin/contracts-upgradeable: Used for standard, secure, and upgradeable components like ReentrancyGuardUpgradeable and SafeERC20.\n\n**What are the most valuable educational resources already available? (Ie. Documentation, Explainer videos or articles, etc)**\n\n- https://github.com/plumenetwork/contracts/blob/main/plume/SPIN.md <- Daily Spin & Raffle Contracts high level overview\n- https://github.com/plumenetwork/contracts/tree/main/plume <- Plume’s staking contracts overview\n- https://github.com/plumenetwork/contracts/tree/main/arc <- Arc explanations",
   "websiteUrl": "https://plumenetwork.xyz/",
   "githubUrl": null,
