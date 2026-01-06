@@ -115,7 +115,7 @@
     "smart_contract - critical"
   ],
   "primaryPaymentWallet": "EVM",
-  "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces\n\n__Websites and Apps__\n\n  - Remote Code Execution\n  - Trusting trust/dependency vulnerabilities\n  - Vertical Privilege Escalation\n  - XML External Entities Injection\n  - SQL Injection\n  - LFI/RFI\n  - Horizontal Privilege Escalation\n  - Stored XSS\n  - Reflective XSS with impact\n  - CSRF with impact\n  - Direct object reference\n  - Internal SSRF\n  - Session fixation\n  - Insecure Deserialization\n  - DOM XSS\n  - SSL misconfigurations\n  - SSL/TLS issues (weak crypto, improper setup)\n  - URL redirect\n  - Clickjacking (must be accompanied with PoC)\n  - Misleading Unicode text (e.g. using right to left override characters)",
+  "prioritizedVulnerabilities": "_blank_",
   "productType": [
     "L2"
   ],
@@ -136,8 +136,8 @@
   "rewardsToken": "USDC, POL",
   "slug": "polygon",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2025-10-06T08:24:17.864Z",
-  "impactsBody": "Important notes:\n- You must be able to prove the real exploitability/severity of a report without doubt or assumptions, and based on the current state of the blockchain at the time of the report.\n- Reports are classified by Impact and Likelihood/Probability and using common frameworks such as CVSS. The combination determines the severity and are determined at Polygon’s sole discretion.\n- Actual reward amounts are determined at Polygon’s sole discretion. Factors influencing payout include report quality, completeness, and severity/exploitability.\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table. The final classification however takes into consideration the likelihood of the impact being achieved based on the table below. When submitting a bug report, select the original assigned impact level, but please be aware that its severity level may be reassigned based on the likelihood according to this table.\n\n|                    | Low Impact | Medium Impact | High Impact |\n|--------------------|------------|----------------|--------------|\n| **High Probability**   | MEDIUM     | HIGH           | CRITICAL     |\n| **Medium Probability** | LOW        | MEDIUM         | HIGH         |\n| **Low Probability**    | LOW        | LOW            | MEDIUM       |\n\n\nIn addition to Immunefi’s Vulnerability Severity Classification System, Polygon classifies vulnerabilities using the Common Vulnerability Scoring System (CVSS). In case of discrepancy, final determination is done by Polygon.\n\n__Impacts to other assets__ \n\nHackers are encouraged to submit issues outside of those outlined Impacts and Assets in Scope. \n\nIf Whitehats can demonstrate a critical impact of code in production for an asset not in scope, Polygon Labs encourages you to submit your bug report using the “primacy of impact exception” asset as outlined below.",
+  "updatedDate": "2026-01-05T11:10:50.979Z",
+  "impactsBody": "Important notes:\n- You must be able to prove the real exploitability/severity of a report without doubt or assumptions, and based on the current state of the blockchain at the time of the report.\n- Reports are classified by Impact and Likelihood/Probability and using common frameworks such as CVSS. The combination determines the severity and are determined at Polygon’s sole discretion.\n- Actual reward amounts are determined at Polygon’s sole discretion. Factors influencing payout include report quality, completeness, and severity/exploitability.\n\n__Severity Table__\n\nReports are classified using two dimensions: Impact and Probability (Likelihood) and classified using the following table\n\n|                    | Low Impact | Medium Impact | High Impact |\n|--------------------|------------|----------------|--------------|\n| **High Probability**   | MEDIUM     | HIGH           | CRITICAL     |\n| **Medium Probability** | LOW        | MEDIUM         | HIGH         |\n| **Low Probability**    | LOW        | LOW            | MEDIUM       |\n\n__Understanding Probability__\n\nReports are classified using two dimensions: Impact and Probability (Likelihood). Probability reflects how permissionless and reliably the issue can be exploited against the current production deployment. Critical severity requires both High Impact and High Probability (i.e., a permissionless exploit that can be executed at will).\n\nHigh Probability\n- Permissionless: no privileged role/allowlist or compromised keys required.\n- Exploitable at will on production (reliable/repeatable under normal conditions).\n\nMedium Probability\n- Exploitable, but requires realistic preconditions (e.g., specific state/timing, meaningful capital/positioning, or common MEV/order-dependence).\n- May not succeed every attempt; depends on conditions outside the attacker's full control.\n\nLow Probability\n\n- Requires rare edge conditions or strong assumptions (e.g., very narrow timing, unlikely state/user behavior).\n- Hard to reproduce reliably / low success rate in practice.\n\n__Impacts to other assets__ \n\nHackers are encouraged to submit issues outside of those outlined Impacts and Assets in Scope. \n\nIf Whitehats can demonstrate a critical impact of code in production for an asset not in scope, Polygon Labs encourages you to submit your bug report using the “primacy of impact exception” asset as outlined below.",
   "websiteUrl": "https://polygon.technology",
   "githubUrl": "https://github.com/0xPolygon",
   "eligibilityCriteria": [],
@@ -154,10 +154,22 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
+      "id": 1,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Network not being able to confirm new transactions (total network shutdown)"
+    },
+    {
       "id": 3,
       "type": "blockchain_dlt",
       "severity": "critical",
       "title": "Direct loss of funds"
+    },
+    {
+      "id": 4,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Permanent freezing of funds (fix requires hardfork)"
     },
     {
       "id": 15,
@@ -222,7 +234,7 @@
   ],
   "rewards": [
     {
-      "id": 33609,
+      "id": 39579,
       "assetType": "smart_contract",
       "severity": "critical",
       "rewardModel": "range",
@@ -231,7 +243,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 33606,
+      "id": 39576,
       "assetType": "blockchain_dlt",
       "severity": "critical",
       "rewardModel": "range",
@@ -240,28 +252,28 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 33610,
+      "id": 39580,
       "assetType": "smart_contract",
       "severity": "high",
       "rewardModel": "fixed",
       "fixedReward": 20000
     },
     {
-      "id": 33607,
+      "id": 39577,
       "assetType": "blockchain_dlt",
       "severity": "high",
       "rewardModel": "fixed",
       "fixedReward": 20000
     },
     {
-      "id": 33611,
+      "id": 39581,
       "assetType": "smart_contract",
       "severity": "medium",
       "rewardModel": "fixed",
       "fixedReward": 5000
     },
     {
-      "id": 33608,
+      "id": 39578,
       "assetType": "blockchain_dlt",
       "severity": "medium",
       "rewardModel": "fixed",
