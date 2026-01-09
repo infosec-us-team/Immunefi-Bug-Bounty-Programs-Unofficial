@@ -33,7 +33,6 @@
   "maxBounty": 100000,
   "pocPerTypeAndSeverity": [
     "blockchain_dlt - low",
-    "blockchain_dlt - medium",
     "blockchain_dlt - high",
     "blockchain_dlt - critical"
   ],
@@ -56,7 +55,7 @@
   "rewardsToken": "",
   "slug": "monero-oxide",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2025-12-09T08:37:46.131Z",
+  "updatedDate": "2026-01-08T09:24:26.714Z",
   "impactsBody": "monero-oxide does not attempt to implement all Monero consensus rules, instead deferring that to works such as Cuprate, a Monero node written in Rust. Instead, monero-oxide aims to support working with transactions as useful to enable building programs from nodes to wallets with. monero-oxide does include some consensus rules however, whether to provide certain functionality or to maintain certain invariants. Our impact, \"Incompatibilities with the targeted Monero consensus protocol which would require reimplementing notable sections of monero-oxide\", is intended for when we do not simply omit a consensus rule, yet actively conflict with it, requiring the caller to avoid monero-oxide's code and handle the issue themselves. Implementing features, such as the addition of specific consensus rules, will not be considered re-implementation.\n\nRoughly stated, the academic definition of incorrect is an algorithm whose honest execution will not have the expected result. The roughly-stated academic definition of incomplete is an algorithm which claims to work with a set of cases yet actually only works for a subset. This is distinct from unsoundness, where a verifier should be convinced a correct proof is correct yet is convinced by an incorrect proof, and zero-knowledge, where an algorithm which shouldn't reveal any additional information about the secrets does in fact do so. Our occassional (as appropriate within the Monero protocol) support for points which have a term from a small-order subgroup will not inherently be considered incorrect or incomplete unless such effects actually descend from this property.\n\nFor the \"Undocumented panic reachable from a public API\" impact, we are officially considering Rust panics. We cannot prevent an operating system which decides to terminate a program using our library. We will, however, consider out-of-memory issues (and similar) if they're reasonably posited as a Denial of Service. The fact any function allocates, and therefore can exceed the program's allowed memory usage, will not automatically be considered as a valid submission. Notable overhead for the amount of memory allocated as a factor of the amount of memory legitimately present must be demonstrated.\n\nFor documentation-related impacts (e.g. \"Undocumented ...\"), updates to documentation will be considered bug fixes as expected. For non-documentation-related impacts, updates to documentation alone will not be considered bug fixes.\n\nAll submissions will be reviewed with `debug-assertions = false`, `overflow-checks = true`, and `panic = \"abort\"`.",
   "websiteUrl": null,
   "githubUrl": "https://github.com/monero-oxide/monero-oxide",
@@ -90,12 +89,6 @@
       "type": "blockchain_dlt",
       "severity": "critical",
       "title": "Ability to forge proofs present with only the default features"
-    },
-    {
-      "id": 5708,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Undocumented fingerprints in created transactions, when compared to the targeted version of Monero’s wallet2"
     },
     {
       "id": 5716,
@@ -138,11 +131,17 @@
       "type": "blockchain_dlt",
       "severity": "high",
       "title": "Incorrect/incomplete (in the academic sense) cryptographic formulae within a verifier's callstack"
+    },
+    {
+      "id": 5846,
+      "type": "blockchain_dlt",
+      "severity": "low",
+      "title": "Undocumented fingerprints in created transactions, when compared to the targeted version of Monero’s wallet2"
     }
   ],
   "rewards": [
     {
-      "id": 39375,
+      "id": 39607,
       "assetType": "blockchain_dlt",
       "severity": "critical",
       "rewardModel": "fixed",
@@ -150,21 +149,14 @@
       "fixedReward": 100000
     },
     {
-      "id": 39376,
+      "id": 39608,
       "assetType": "blockchain_dlt",
       "severity": "high",
       "rewardModel": "fixed",
       "fixedReward": 10000
     },
     {
-      "id": 39377,
-      "assetType": "blockchain_dlt",
-      "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 5000
-    },
-    {
-      "id": 39378,
+      "id": 39609,
       "assetType": "blockchain_dlt",
       "severity": "low",
       "rewardModel": "fixed",
