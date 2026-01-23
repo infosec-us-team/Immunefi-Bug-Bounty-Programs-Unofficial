@@ -1,15 +1,6 @@
 {
   "assets": [
     {
-      "id": "7rj46oO8zhV0cjm0bXrntM",
-      "revision": 1,
-      "type": "blockchain_dlt",
-      "url": "https://github.com/ava-labs/libevm",
-      "description": "libevm",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-12-08T08:06:46.619Z"
-    },
-    {
       "id": "1HWax05ZGVCUGhWL0sNHQM",
       "revision": 3,
       "type": "smart_contract",
@@ -173,7 +164,7 @@
     },
     {
       "id": "6Y5IS4uUfLSQCq5OT583vz",
-      "revision": 5,
+      "revision": 6,
       "type": "smart_contract",
       "url": "https://snowtrace.io/address/0x63a72806098bd3d9520cc43356dd78afe5d386d9",
       "description": null,
@@ -182,7 +173,7 @@
     },
     {
       "id": "6xnlVXQjtTW4z6FDrJyJet",
-      "revision": 4,
+      "revision": 5,
       "type": "blockchain_dlt",
       "url": "https://github.com/ava-labs/avalanchego",
       "description": " AvalancheGo",
@@ -191,7 +182,7 @@
     },
     {
       "id": "7bGs3OcOwiTY2vZGRTdHLv",
-      "revision": 5,
+      "revision": 6,
       "type": "smart_contract",
       "url": "https://snowtrace.io/address/0x596fa47043f99a4e0f122243b841e55375cde0d2",
       "description": " ZRX.e",
@@ -215,6 +206,15 @@
       "description": "BUSD.e",
       "isPrimacyOfImpact": null,
       "addedAt": "2023-12-04T13:15:47.758Z"
+    },
+    {
+      "id": "7rj46oO8zhV0cjm0bXrntM",
+      "revision": 1,
+      "type": "blockchain_dlt",
+      "url": "https://github.com/ava-labs/libevm",
+      "description": "libevm",
+      "isPrimacyOfImpact": null,
+      "addedAt": "2025-12-08T08:06:46.619Z"
     },
     {
       "id": "HZzFVxAP3QbZvlCdMVKwn",
@@ -253,7 +253,7 @@
       "addedAt": "2023-12-04T13:15:07.929Z"
     }
   ],
-  "assetsBodyV2": "Ava Labs’s codebase can be found at [https://github.com/ava-labs](https://github.com/ava-labs). Documentation and further resources can be found on [https://docs.avax.network/](https://docs.avax.network/). For details on standing up a local test network, sees [https://docs.avax.network/tooling/network-runner](https://docs.avax.network/tooling/network-runner).\n\nBlockchain/DLT - libevm: excluding already reported and disclosed publicly in upstream geth.\n\nBlockchain/DLT - ICM Services: Excluding tests",
+  "assetsBodyV2": "Ava Labs’s codebase can be found at [https://github.com/ava-labs](https://github.com/ava-labs). Documentation and further resources can be found on [https://docs.avax.network/](https://docs.avax.network/). For details on standing up a local test network, sees [https://docs.avax.network/tooling/network-runner](https://docs.avax.network/tooling/network-runner).\n\n**libevm and avalanchego/graft**\n- If a bug is publicly disclosed in [ethereum/go-ethereum](https://github.com/ethereum/go-ethereum), that bug is considered out-of-scope in this program.\n- The following issues are considered out of scope:\n    - Network-level Denial-of-Service (TCP/IP/P2P)\n    - Misconfigurations of AvalancheGo nodes currently running on the Avalanche Network\n    - Denial-of-Service, OOM, or panic on any API exposed by AvalancheGo\n    - Any usage of the node's HTTP API through intended mediums. Intended mediums include usage:\n        - requiring direct machine access\n        - through explicitly opened RPC ports\n        - This includes the ability to send HTTP requests that cause node panics, OOMs, increased disk usage, or causing the node to become unhealthy.\n    - Consensus liveness failure requiring network control.\n    - Ex: BGP hijacking attacks\n    - Preventing a node from properly connecting to the P2P network due to brute force networking DoS vectors.\n    - Ex: Syn attacking a specific node with a botnet.\n    - Unintended node behavior caused by local disk failures.\n    - Unintended node behavior caused by unusual node configuration deviating from best practices for node configurations\n    - Compile time or runtime errors due to using unsupported hardware or operating systems.\n    - Inability to automatically perform NAT-hole punching on specific router hardware.\n\nEven if a bug is considered out-of-scope but you feel it should be disclosed privately, we appreciate any and all informational disclosures through this portal. Thanks for your responsible disclosure! \n\nBlockchain/DLT - ICM Services: Excluding tests",
   "boostedIntroEvaluating": "",
   "boostedIntroFinished": "",
   "boostedIntroLive": "",
@@ -285,7 +285,7 @@
     "smart_contract - medium"
   ],
   "primaryPaymentWallet": "EVM",
-  "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+  "prioritizedVulnerabilities": "_blank_",
   "productType": [
     "L1",
     "Services"
@@ -304,8 +304,8 @@
   "podiumPool": 0,
   "rewardsToken": "AVAX",
   "slug": "avalanche",
-  "updatedDate": "2025-12-08T08:06:53.072Z",
-  "impactsBody": null,
+  "updatedDate": "2026-01-22T19:25:42.227Z",
+  "impactsBody": "**Expected resource-intensive operations including but not limited to:**\n- Node synchronization after being offline or behind on block height\n- Initial blockchain sync or historical data loading\n- Large database migrations or reindexing operations\n- Batch processing of accumulated transactions or events\n\n**Valid DoS vulnerabilities must demonstrate:**\n- An exploitable vulnerability beyond normal resource consumption\n- Malicious input or actions that cause disproportionate resource usage\n- A realistic attack scenario that differs from standard operational load\n- Impact that prevents legitimate users from accessing the service beyond expected operational delays\n- Disproportionate resource consumption relative to the cost paid (e.g., spending $1 in gas to cause $1000 in computational cost)",
   "websiteUrl": null,
   "githubUrl": null,
   "eligibilityCriteria": [
@@ -379,12 +379,6 @@
       "type": "blockchain_dlt",
       "severity": "medium",
       "title": "Shutdown of greater than or equal to 30% of network processing nodes without brute force actions, but does not shut down the network"
-    },
-    {
-      "id": 12,
-      "type": "blockchain_dlt",
-      "severity": "low",
-      "title": "Shutdown of greater than 10% or equal to but less than 30% of network processing nodes without brute force actions, but does not shut down the network"
     },
     {
       "id": 13,
