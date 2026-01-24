@@ -370,8 +370,8 @@
   "rewardsToken": "USDC",
   "slug": "optimism",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-01-13T16:25:39.338Z",
-  "impactsBody": null,
+  "updatedDate": "2026-01-23T16:59:31.922Z",
+  "impactsBody": "- Bugs in op-challenger that result in \"Incorrectly resolved dispute game, detected by op-dispute-mon\" are NOT in scope for this bounty program because of existing ability to detect and resolve these issues.",
   "websiteUrl": null,
   "githubUrl": null,
   "eligibilityCriteria": [],
@@ -402,24 +402,6 @@
   "customOutOfScopeInformation": "- explorer.optimism.io\n- testnet-explorer.optimism.io\n- vote.optimism.io\n- retrofunding.optimism.io\n- atlas.optimism.io\n- public-grafana.optimism.io\n- discord.optimism.io\n- kyc.optimism.io\n- kyb.optimism.io\n- raas.optimism.io\n- contribute.optimism.io\n- superfest.optimism.io\n- welovetheart.optimism.io\n- Additionally, any other asset belonging to Optimism but not under Optimism’s control will also be out of scope.\n\nProgram’s custom out-of-scope information:\n\n- Vulnerabilities in the implementation of ‘custom token bridges’ which are written by third parties for bridging tokens to their network\n- Vulnerabilities requiring the user to have publicly exposed an API, such as JSON-RPC or the Beacon API, are out of scope of the bug bounty program.\n- Since Optimism uses a fork of Geth, issues which are responsibly disclosed to upstream cannot be \"replayed\" against Optimism’s bug bounty program if the vulnerability has already been made public. If the vulnerability is disclosed to Optimism at the same time as upstream Geth, the vulnerability is eligible for the bug bounty program.\n\nThe following known issues are considered to be out of scope of this bug bounty program:\n\n - All currently known issues with devp2p here: [https://github.com/ethereum/devp2p/blob/master/rlpx.md#known-issues-in-the-current-version](https://github.com/ethereum/devp2p/blob/master/rlpx.md#known-issues-in-the-current-version)\n\n__Blockchain / DLT__:\n- When running in non-archive mode, op-geth has difficulty executing deep reorgs. We are working on a fix.\n\n__Smart Contracts__:\n- Proof of whale based attacks on Fault Proofs.\n- There appears to be an obvious bug which would allow an attacker to withdraw a fake ERC20 token from L2 in exchange for a real ERC20 (such as WBTC) token on L1. There is no check in the L2StandardBridge, however the withdrawal is prevented from finalizing by a check in the L1StandardBridge. Naturally if you do find a way to circumvent our protections, then we would reward you.\n- A bug in ResolvedDelegateProxy.sol which could result in a storage slot key collision overwriting the address of the implementation. This bug is dependent on the layout of the implementation contract, and Optimism is not affected.\n- There is an edge case in which ETH deposited to the OptimismPortal by a contract can be irrecoverably stranded:\n  - When a deposit transaction fails to execute, the sender’s account balance is still credited with the mint value. However, if the deposit’s L1 sender is a contract, the tx.origin on L2 will be aliased, and this aliased address will receive the minted on L2. In general the contract on L1 will not be able to recover these funds. We have documented this risk and encourage users to take advantage of our CrossDomainMessenger contracts which provide additional safety measures.\n- Sending cross-chain messages with very large amounts of data, or very specific amounts of gas can open up griefing attacks causing the sender’s funds to be stuck and requiring an upgrade to release them.\n- Deposit transactions can be griefed at a cost to the attacker, by filling up the MAX_RESOURCE_LIMIT. This issue is mitigated by PR 5064, which does not completely resolve the issue but does increase the cost of a sustained griefing attack. A more complete fix will require architectural changes.\n- There are various ‘foot guns’ in the bridge which may arise from misconfiguration of a token. To minimize complexity our bridge design does not try to prevent all forms of developer and user error. Examples of such foot guns include:\n  - Having both (or neither of) the local and remote tokens be OptimismMintable.\n  - Tokens which dynamically alter the amount of a token held by an account, such as fee-on-transfer and rebasing tokens.\n\n\n",
   "customProhibitedActivities": [],
   "impacts": [
-    {
-      "id": 3,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Direct loss of funds"
-    },
-    {
-      "id": 17,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
-    },
-    {
-      "id": 22,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Protocol insolvency"
-    },
     {
       "id": 35,
       "type": "websites_and_applications",
@@ -487,76 +469,94 @@
       "title": "Network not being able to confirm new transactions (Total network shutdown)"
     },
     {
-      "id": 1660,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Transient consensus failures"
-    },
-    {
       "id": 1661,
       "type": "blockchain_dlt",
       "severity": "high",
       "title": "Freezing of funds (fix requires L2 hardfork)"
     },
     {
-      "id": 1662,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing of funds (e.g. recoverable via an upgrade)"
-    },
-    {
-      "id": 1663,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Incorrectly resolved dispute game (mitigated by a delay)"
-    },
-    {
-      "id": 1664,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Incorrectly proven withdrawal (mitigated by a delay)"
-    },
-    {
-      "id": 1665,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Incorrectly initiated bond withdrawal (mitigated by a delay)"
-    },
-    {
-      "id": 1666,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Denial of Service attacks targeting distinct users"
-    },
-    {
-      "id": 1667,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Memory pool information leaks allowing for MEV searchers to read the list of pending transactions"
-    },
-    {
-      "id": 1668,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Incorrectly resolved dispute game (mitigated by a delay AND requires calling FaultDisputeGame.step() against a claim at MAX_GAME_DEPTH or calling FaultDisputeGame.attack or FaultDisputeGame.defend against a claim at MAX_GAME_DEPTH-2)."
-    },
-    {
-      "id": 1669,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Loss of user funds by direct theft, other than unclaimed yield"
-    },
-    {
-      "id": 5664,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Issues in the dispute-mon service that would cause the service to silently fail to properly detect an incorrectly resolving dispute game within the airgap window"
-    },
-    {
       "id": 5731,
       "type": "websites_and_applications",
       "severity": "high",
       "title": "Taking down the application/website"
+    },
+    {
+      "id": 5849,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Incorrectly resolved dispute game, detected by op-dispute-mon, excluding bugs in op-challenger"
+    },
+    {
+      "id": 5850,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency, not including proposer/challenger bonds or fee vaults"
+    },
+    {
+      "id": 5851,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds, not including proposer/challenger bonds or fee vaults (e.g. recoverable via an upgrade)"
+    },
+    {
+      "id": 5852,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Loss of user funds by direct theft, not including proposer/challenger bonds or fee vaults"
+    },
+    {
+      "id": 5853,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Direct loss of funds, not including proposer/challenger bonds or fee vaults"
+    },
+    {
+      "id": 5854,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds, not including proposer/challenger bonds or fee vaults"
+    },
+    {
+      "id": 5855,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Incorrectly initiated dispute game bond withdrawal other than by incorrectly resolved dispute game, mitigated by a delay"
+    },
+    {
+      "id": 5856,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Incorrectly proven withdrawal other than by incorrectly resolved dispute game, mitigated by a delay"
+    },
+    {
+      "id": 5857,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Incorrectly resolved dispute game, not detected by op-dispute-mon, does not allow proving invalid withdrawal"
+    },
+    {
+      "id": 5858,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Incorrectly resolved dispute game, not detected by op-dispute-mon, allows proving invalid withdrawal"
+    },
+    {
+      "id": 5859,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Incorrectly resolved dispute game, not detected by op-dispute-mon, allows proving invalid withdrawal"
+    },
+    {
+      "id": 5860,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Incorrectly resolved dispute game, not detected by op-dispute-mon, does not allow proving invalid withdrawal"
+    },
+    {
+      "id": 5861,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Incorrectly resolved dispute game, detected by op-dispute-mon"
     }
   ],
   "rewards": [
