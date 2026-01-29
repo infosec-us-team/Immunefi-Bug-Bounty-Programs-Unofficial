@@ -2,7 +2,7 @@
   "assets": [
     {
       "id": "18fcj6wUfkewAWTnDTnbgL",
-      "revision": 3,
+      "revision": 4,
       "type": "websites_and_applications",
       "url": "https://moonbeam.foundation/",
       "description": null,
@@ -20,7 +20,7 @@
     },
     {
       "id": "47eAU3xGqtRd2VDuqCdAJ4",
-      "revision": 3,
+      "revision": 4,
       "type": "websites_and_applications",
       "url": "https://moonbeam.network/",
       "description": null,
@@ -38,7 +38,7 @@
     },
     {
       "id": "5WiZhG7t40ZWeGaBIpt4gH",
-      "revision": 3,
+      "revision": 4,
       "type": "websites_and_applications",
       "url": "https://apps.moonbeam.network",
       "description": null,
@@ -120,7 +120,7 @@
   "projectType": [
     "Blockchain"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll  bug reports must come with a detailed PoC demonstrating the exploit in a real-world scenario; and written instructions to reproduce, in order to be considered for a reward. Theoretical vulnerabilities without a working POC will not be accepted. \nThe payout for **critical vulnerabilities** is dependent on the ratio between the funds at risk and the **combined market cap** (as listed on coinmarketcap on the day of the report) of the Moonbeam and Moonriver Blockchains. \n\nThe payout for __critical vulnerabilities__ is dependent on the ratio between the funds at risk and the combined __market cap__ (as listed on coinmarketcap on the day of the report) of the Moonbeam and Moonriver Blockchains. \n\nThis ratio is known as the __“risk ratio”__, i.e.:\n\nRisk Ratio = Funds at Risk / ( Moonbeam Market Cap + Moonriver Market Cap)\n\nThe exact payout is determined as follows:\n\n  - If the risk ratio is at or below 0.5, the payout is calculated linearly between 2,500$ and 25K.\n  - If the risk ratio is above 0.5, the payout is calculated linearly between $25K and $100K; with a maximum cap of $100K\n\nThis results in the following payout graph:\n![MoonbeamNewGraph](https://images.ctfassets.net/t3wqy70tc3bv/1Ut1uZ8vGlefoKvPOHYylO/7c6634daa7ad500944c119c1b3cc78b3/photo_2024-11-21_06.23.27.jpeg)\n\nNote that a bug reported for one of either the Moonbeam or Moonriver networks that applies to both will be treated as a single report and paid only once. \n\nThe Moonbeam Foundation requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed is an ID scan along with a selfie to verify identity. \n\nPayouts are handled by the __Moonbeam Foundation__ team directly and are denominated in USD. However, payouts are done in __USDT__ or __USDC__.\n\nThe Moonriver parachain on Kusama and the Moonbeam parachain on Polkadot (estimated launch in Jan 2022) are both included in the assets-in-scope. \n\nAll source code of Moonbeam can be found at [https://github.com/PureStake/](https://github.com/PureStake/). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll  bug reports must come with a detailed PoC demonstrating the exploit in a real-world scenario; and written instructions to reproduce, in order to be considered for a reward. Theoretical vulnerabilities without a working POC will not be accepted. \n\nFor **Critical vulnerabilities** , rewards are based on how much value is realistically at risk and how quickly that risk can be realized. We first calculate the **base risk ratio**:\n\nFunds at Risk ÷ (Moonbeam market cap + Moonriver market cap) \n\nusing market caps  on the day of the report.\n\nBecause some vulnerabilities can only cause damage gradually over time, the base risk ratio is then scaled down based on how long it would take to actually realize that impact.\n\nTo do this, we divide the base risk ratio by the number of two-day periods required to exploit the issue:\n\n* Impact achievable within 2 days → no reduction\n* Impact achievable within 4 days → divide risk by 2\n* Impact achievable within 6 days → divide risk by 3\n* and so on\n\nOnly full two-day periods are counted, and the minimum assumed time is 2 days.\n\nThis  can be expressed as:\n\nRisk Ratio Over Time = (Funds at Risk / ( Moonbeam Market Cap + Moonriver Market Cap))  / (  D/2)\n\nThe final, risk ratio over time is then used to determine the payout:\n\n  - If the ratio is at or below 0.5, the payout is calculated linearly between 2,500$ and 25K.\n  - If the  ratio is above 0.5, the payout is calculated linearly between $25K and $100K; with a maximum cap of $100K\n\nThis results in the following payout graph:\n![MoonbeamNewGraph](https://images.ctfassets.net/t3wqy70tc3bv/1Ut1uZ8vGlefoKvPOHYylO/7c6634daa7ad500944c119c1b3cc78b3/photo_2024-11-21_06.23.27.jpeg)\n\nNote that a bug reported for one of either the Moonbeam or Moonriver networks that applies to both will be treated as a single report and paid only once. \n\nThe Moonbeam Foundation requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed is an ID scan along with a selfie to verify identity. \n\nPayouts are handled by the __Moonbeam Foundation__ team directly and are denominated in USD. However, payouts are done in __USDT__ or __USDC__.\n\nThe Moonriver parachain on Kusama and the Moonbeam parachain on Polkadot (estimated launch in Jan 2022) are both included in the assets-in-scope. \n\nAll source code of Moonbeam can be found at [https://github.com/PureStake/](https://github.com/PureStake/). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -128,7 +128,7 @@
   "rewardsToken": "USDC, USDT",
   "slug": "moonbeamnetwork",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2025-11-25T09:48:54.578Z",
+  "updatedDate": "2026-01-28T09:51:14.580Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -222,12 +222,6 @@
       "type": "blockchain_dlt",
       "severity": "medium",
       "title": "DoS of greater than 30% of validator or miner nodes and does not shut down the network"
-    },
-    {
-      "id": 1478,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "An attack causing an RPC API crash"
     },
     {
       "id": 1479,
@@ -330,6 +324,18 @@
       "type": "websites_and_applications",
       "severity": "high",
       "title": "Ability to execute system commands"
+    },
+    {
+      "id": 5862,
+      "type": "blockchain_dlt",
+      "severity": "low",
+      "title": "An  attack causing an RPC API crash  on a tracing node"
+    },
+    {
+      "id": 5863,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "An attack causing an RPC API crash on a  regular node"
     }
   ],
   "rewards": [

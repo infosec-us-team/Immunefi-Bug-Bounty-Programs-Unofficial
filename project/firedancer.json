@@ -44,7 +44,7 @@
     "blockchain_dlt - low"
   ],
   "primaryPaymentWallet": "EVM",
-  "prioritizedVulnerabilities": "Vulnerabilities are prioritized based on severity and impact.",
+  "prioritizedVulnerabilities": "_blank_",
   "productType": [
     "Validator"
   ],
@@ -64,8 +64,8 @@
   "rewardsToken": "USDC",
   "slug": "firedancer",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2025-08-28T13:41:36.014Z",
-  "impactsBody": "Firedancer builds as a single production binary, fdctl. Code linked into and reachable from this binary in the latest Frankendancer release build and branch is in scope, including the primary `fdctl run` command. Code from the consensus, runtime, and other components of the full future Firedancer validator are not in scope. The FFI interface between Frankendancer and Agave is in scope, but bugs in Agave code that exist in the standalone Anza Agave validator are not in scope, and should be reported to Anza. Protocol bugs or design flaws in Solana are not in scope, and are reportable to Anza.\n\nFor cluster-level impact, a theoretical Firedancer-only chain is in scope. For example, while a chain halt is not currently possible on mainnet via a Firedancer-only exploit (since the network includes other validator clients), you may assume a 100% Firedancer validator set and demonstrate impacts such as a chain halt or chain split under those conditions.\n\nThe sandbox and security model are in scope. You may assume an existing RCE within a specific tile, and any findings downstream of that breach—such as a sandbox escape or gaining RCE in the sandbox of a different tile—are considered valid.\n\nHowever, tiles in the Agave address space (e.g., bank, poh, store) are not considered tightly sandboxed. As such, transitions from a tile in the Agave to any other tile are not in-scope. Additionally, the link between pack and bank is trusted and out-of-scope. Regarding severity of inter-tile RCE, we are most interested in starting in a complex tile that is close to input from the network. (e.g. net or quic).\n\nThe primary security concern of the validator is defending against untrusted or malicious behavior originating from the network, and limiting damage in the event of RCE. Issues that are purely local to the validator and not remotely exploitable—such as command-line argument or environment variable handling—will be considered out of scope or informational.\n\nThe GUI is in scope. You may assume the GUI’s HTTP port is exposed to the public internet.\nVulnerabilities that involve, are triggered by, or relate to the block engine functionality may be considered valid. However, such findings will typically be assessed at a lower severity level.\n\n**Special Note:** Severities noted by the **“*”** are those that we don’t believe are currently realizable risks with the amount of stake applied to Firedancer when authoring these terms. \n\nHowever, We believe these risks could be realized with more stake applied to Firedancer.  If you find something that realizes these risks, you are encouraged to submit it, and they will be rewarded according to their impact.",
+  "updatedDate": "2026-01-28T16:03:49.939Z",
+  "impactsBody": "Firedancer builds as a single production binary, fdctl. Code linked into and reachable from this binary in the latest Frankendancer release build and branch is in scope, including the primary `fdctl run` command. Code from the consensus, runtime, and other components of the full future Firedancer validator are not in scope. The FFI interface between Frankendancer and Agave is in scope, but bugs in Agave code that exist in the standalone Anza Agave validator are not in scope, and should be reported to Anza. Protocol bugs or design flaws in Solana are not in scope, and are reportable to Anza.\n\nFor cluster-level impact, a theoretical Firedancer-only chain is in scope. For example, while a chain halt is not currently possible on mainnet via a Firedancer-only exploit (since the network includes other validator clients), you may assume a 100% Firedancer validator set and demonstrate impacts such as a chain halt or chain split under those conditions.\n\nThe sandbox and security model are in scope. You may assume an existing RCE within a specific tile, and any findings downstream of that breach—such as a sandbox escape or gaining RCE in the sandbox of a different tile—are considered valid.\n\nDownstream findings must give attackers a new capability/advantage that they wouldn't have without RCE. For example, causing a Denial of Service in a different tile is not a new capability, as RCE can already be used for that.\n\nAdditionally, tiles in the Agave address space (e.g., bank, poh, store) are not considered tightly sandboxed. As such, transitions from a tile in the Agave to any other tile are not in-scope. Furthermore, the link between pack and bank is trusted and out-of-scope. Regarding severity of inter-tile RCE, we are most interested in starting in a complex tile that is close to input from the network. (e.g. net or quic).\n\nThe primary security concern of the validator is defending against untrusted or malicious behavior originating from the network, and limiting damage in the event of RCE. Issues that are purely local to the validator and not remotely exploitable—such as command-line argument or environment variable handling—will be considered out of scope or informational.\n\nThe GUI is in scope. You may assume the GUI’s HTTP port is exposed to the public internet.\nVulnerabilities that involve, are triggered by, or relate to the block engine functionality may be considered valid. However, such findings will typically be assessed at a lower severity level.\n\n**Special Note:** Severities noted by the **“*”** are those that we don’t believe are currently realizable risks with the amount of stake applied to Firedancer when authoring these terms. \n\nHowever, We believe these risks could be realized with more stake applied to Firedancer.  If you find something that realizes these risks, you are encouraged to submit it, and they will be rewarded according to their impact.",
   "websiteUrl": null,
   "githubUrl": null,
   "eligibilityCriteria": [
@@ -221,7 +221,7 @@
   ],
   "rewards": [
     {
-      "id": 34615,
+      "id": 40034,
       "assetType": "blockchain_dlt",
       "severity": "critical",
       "rewardModel": "range",
@@ -230,7 +230,7 @@
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 34616,
+      "id": 40035,
       "assetType": "blockchain_dlt",
       "severity": "high",
       "rewardModel": "range",
@@ -238,7 +238,7 @@
       "minReward": 50000
     },
     {
-      "id": 34617,
+      "id": 40036,
       "assetType": "blockchain_dlt",
       "severity": "medium",
       "rewardModel": "range",
@@ -246,7 +246,7 @@
       "minReward": 5000
     },
     {
-      "id": 34618,
+      "id": 40037,
       "assetType": "blockchain_dlt",
       "severity": "low",
       "rewardModel": "fixed",
