@@ -2,48 +2,48 @@
   "assets": [
     {
       "id": "30Mt1jdhiJ1BR0da5zH4bN",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://gist.github.com/n1punp/e9d2961de5af69fbd9a39d0efbb77766",
+      "type": "smart_contract",
+      "addedAt": "2022-04-04T16:17:12.164Z",
+      "revision": 1,
       "description": "Alpha Homora v1 (ETH)",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-04-04T16:17:12.164Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "lOv5WTJMzjKiGgPRdBiW8",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://gist.github.com/n1punp/afc21382eabf68a2a16a8f2947697338",
+      "type": "smart_contract",
+      "addedAt": "2022-04-04T16:17:10.456Z",
+      "revision": 1,
       "description": "Alpha Homora v1 (BSC)",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-04-04T16:17:10.456Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "11tpqmD7UxOdqdK3EvSekT",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://gist.github.com/n1punp/3345d1bf6d159c7d4457b41656cd11f7",
+      "type": "smart_contract",
+      "addedAt": "2022-04-04T16:17:08.054Z",
+      "revision": 1,
       "description": "Alpha Staking",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-04-04T16:17:08.054Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "5EIVm6NbmzKr9Vuh7qMdnL",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://gist.github.com/n1punp/707f1fa2632ae9e3651b3686ac68d197",
+      "type": "smart_contract",
+      "addedAt": "2022-04-04T16:17:05.951Z",
+      "revision": 2,
       "description": "Homora v2",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-04-04T16:17:05.951Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "7CT0nBSifMVVFDk6jjQQ6L",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://gist.github.com/n1punp/66e994be78d5e303829f148feb96b0e8",
+      "type": "smart_contract",
+      "addedAt": "2022-04-04T16:17:04.333Z",
+      "revision": 2,
       "description": "Homora v2 (AVAX)",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-04-04T16:17:04.333Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "In the Github link in the Assets in Scope table, only Exact Match Verified smart contracts are considered as in-scope of the bug bounty program.",
@@ -115,22 +115,10 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 15,
+      "id": 34,
       "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-    },
-    {
-      "id": 17,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
-    },
-    {
-      "id": 22,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Protocol insolvency"
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
     },
     {
       "id": 23,
@@ -157,6 +145,12 @@
       "title": "Smart contract unable to operate due to lack of token funds"
     },
     {
+      "id": 69,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing for profit"
+    },
+    {
       "id": 31,
       "type": "smart_contract",
       "severity": "medium",
@@ -175,59 +169,65 @@
       "title": "Unbounded gas consumption"
     },
     {
-      "id": 34,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
-    },
-    {
-      "id": 69,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Block stuffing for profit"
-    },
-    {
       "id": 72,
       "type": "smart_contract",
       "severity": "critical",
       "title": "Any governance voting result manipulation"
     },
     {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
       "id": 73,
       "type": "smart_contract",
       "severity": "critical",
       "title": "Miner-extractable value (MEV)"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
     }
   ],
   "rewards": [
     {
       "id": 35198,
-      "assetType": "smart_contract",
       "severity": "critical",
-      "rewardModel": "up_to",
+      "assetType": "smart_contract",
       "maxReward": 500000,
+      "rewardModel": "up_to",
       "rewardCalculationPercentage": 10
     },
     {
       "id": 35199,
-      "assetType": "smart_contract",
       "severity": "high",
-      "rewardModel": "fixed",
-      "fixedReward": 20000
+      "assetType": "smart_contract",
+      "fixedReward": 20000,
+      "rewardModel": "fixed"
     },
     {
       "id": 35200,
-      "assetType": "smart_contract",
       "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 5000
+      "assetType": "smart_contract",
+      "fixedReward": 5000,
+      "rewardModel": "fixed"
     },
     {
       "id": 35201,
-      "assetType": "smart_contract",
       "severity": "low",
-      "rewardModel": "fixed",
-      "fixedReward": 1000
+      "assetType": "smart_contract",
+      "fixedReward": 1000,
+      "rewardModel": "fixed"
     }
   ]
 }

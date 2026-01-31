@@ -2,57 +2,57 @@
   "assets": [
     {
       "id": "5jMJPsPTOUJQ5AQ8wSGfFa",
-      "revision": 3,
-      "type": "smart_contract",
       "url": "https://github.com/neo-project/examples/blob/master/csharp/NEP17/NEP17.cs",
+      "type": "smart_contract",
+      "addedAt": "2022-04-04T13:36:05.276Z",
+      "revision": 3,
       "description": " Official NEP17 Standard",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-04-04T13:36:05.276Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "3zDPMYsOp33uQUNEV7NxSC",
-      "revision": 3,
-      "type": "smart_contract",
       "url": "https://github.com/flamingo-finance/flamingo-contract-staking-n3/tree/main/FLM",
+      "type": "smart_contract",
+      "addedAt": "2022-04-04T13:36:44.633Z",
+      "revision": 3,
       "description": " FLM",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-04-04T13:36:44.633Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "3ohGEk11O3N9LqOKVEZ0DT",
-      "revision": 4,
-      "type": "smart_contract",
       "url": "https://github.com/flamingo-finance/flamingo-contract-swap",
+      "type": "smart_contract",
+      "addedAt": "2022-04-04T13:36:46.799Z",
+      "revision": 4,
       "description": "Swap",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-04-04T13:36:46.799Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "5O59aFFBtZztNjGHtYWxg2",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/flamingo-finance/flamingo-contract-swap/tree/master/Swap/flamingo-contract-swap/FlamingoSwapPair",
+      "type": "smart_contract",
+      "addedAt": "2022-04-04T13:38:17.953Z",
+      "revision": 2,
       "description": "Swap Pairs",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-04-04T13:38:17.953Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "7wIaHSNJrmvILFTHuCn3rh",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/flamingo-finance/flamingo-contract-staking-n3",
+      "type": "smart_contract",
+      "addedAt": "2022-04-04T13:38:21.132Z",
+      "revision": 2,
       "description": "Staking Vault",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-04-04T13:38:21.132Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "22Wgkgc3c3uPwn4U0FBGnL",
-      "revision": 3,
-      "type": "websites_and_applications",
       "url": "https://flamingo.finance/",
+      "type": "websites_and_applications",
+      "addedAt": "2022-04-04T13:38:23.021Z",
+      "revision": 3,
       "description": "Main Web App",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-04-04T13:38:23.021Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "Assets in Scope Listed Below.",
@@ -129,22 +129,10 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 15,
+      "id": 34,
       "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-    },
-    {
-      "id": 17,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
-    },
-    {
-      "id": 22,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Protocol insolvency"
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
     },
     {
       "id": 23,
@@ -165,10 +153,40 @@
       "title": "Temporary freezing of funds"
     },
     {
+      "id": 1880,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Injecting/modifying the static content on the target application without Javascript (Persistent) such as HTML injection without Javascript, replacing existing text with arbitrary text, arbitrary file uploads, etc"
+    },
+    {
+      "id": 1881,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as email or password of the victim, etc"
+    },
+    {
+      "id": 1882,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Improperly disclosing confidential user information such as email address, phone number, physical address, etc"
+    },
+    {
+      "id": 49,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Subdomain takeover without already-connected wallet interaction"
+    },
+    {
       "id": 29,
       "type": "smart_contract",
       "severity": "medium",
       "title": "Smart contract unable to operate due to lack of token funds"
+    },
+    {
+      "id": 1883,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing for profit"
     },
     {
       "id": 31,
@@ -189,66 +207,6 @@
       "title": "Unbounded gas consumption"
     },
     {
-      "id": 34,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
-    },
-    {
-      "id": 37,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Taking down the application/website"
-    },
-    {
-      "id": 41,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Subdomain takeover with already-connected wallet interaction"
-    },
-    {
-      "id": 42,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Direct theft of user funds"
-    },
-    {
-      "id": 49,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Subdomain takeover without already-connected wallet interaction"
-    },
-    {
-      "id": 52,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Redirecting users to malicious websites (open redirect)"
-    },
-    {
-      "id": 1880,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Injecting/modifying the static content on the target application without Javascript (Persistent) such as HTML injection without Javascript, replacing existing text with arbitrary text, arbitrary file uploads, etc"
-    },
-    {
-      "id": 1881,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as email or password of the victim, etc"
-    },
-    {
-      "id": 1882,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Improperly disclosing confidential user information such as email address, phone number, physical address, etc"
-    },
-    {
-      "id": 1883,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Block stuffing for profit"
-    },
-    {
       "id": 1884,
       "type": "websites_and_applications",
       "severity": "medium",
@@ -259,6 +217,30 @@
       "type": "websites_and_applications",
       "severity": "medium",
       "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data"
+    },
+    {
+      "id": 52,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Redirecting users to malicious websites (open redirect)"
+    },
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
     },
     {
       "id": 1886,
@@ -273,10 +255,28 @@
       "title": "Retrieve sensitive data that might result in loss of funds from a running server such as /etc/shadow, database passwords, and blockchain keys(this does not include non-sensitive environment variables, open source code, or usernames)"
     },
     {
+      "id": 37,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Taking down the application/website"
+    },
+    {
       "id": 1888,
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, commenting, voting, making trades, withdrawals, etc"
+    },
+    {
+      "id": 41,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Subdomain takeover with already-connected wallet interaction"
+    },
+    {
+      "id": 42,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Direct theft of user funds"
     },
     {
       "id": 1889,
@@ -288,54 +288,54 @@
   "rewards": [
     {
       "id": 8324,
-      "assetType": "smart_contract",
       "severity": "critical",
-      "rewardModel": "up_to",
+      "assetType": "smart_contract",
       "maxReward": 1000000,
+      "rewardModel": "up_to",
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 6512,
-      "assetType": "websites_and_applications",
-      "severity": "critical",
-      "rewardModel": "fixed",
-      "otherImpactMaxReward": 0,
-      "fixedReward": 25000
-    },
-    {
       "id": 6509,
+      "severity": "high",
       "assetType": "smart_contract",
-      "severity": "high",
-      "rewardModel": "up_to",
-      "maxReward": 40000
-    },
-    {
-      "id": 6513,
-      "assetType": "websites_and_applications",
-      "severity": "high",
-      "rewardModel": "fixed",
-      "fixedReward": 10000
+      "maxReward": 40000,
+      "rewardModel": "up_to"
     },
     {
       "id": 6510,
+      "severity": "medium",
       "assetType": "smart_contract",
-      "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 4000
-    },
-    {
-      "id": 6514,
-      "assetType": "websites_and_applications",
-      "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 1000
+      "fixedReward": 4000,
+      "rewardModel": "fixed"
     },
     {
       "id": 6511,
-      "assetType": "smart_contract",
       "severity": "low",
+      "assetType": "smart_contract",
+      "fixedReward": 1000,
+      "rewardModel": "fixed"
+    },
+    {
+      "id": 6512,
+      "severity": "critical",
+      "assetType": "websites_and_applications",
+      "fixedReward": 25000,
       "rewardModel": "fixed",
-      "fixedReward": 1000
+      "otherImpactMaxReward": 0
+    },
+    {
+      "id": 6513,
+      "severity": "high",
+      "assetType": "websites_and_applications",
+      "fixedReward": 10000,
+      "rewardModel": "fixed"
+    },
+    {
+      "id": 6514,
+      "severity": "medium",
+      "assetType": "websites_and_applications",
+      "fixedReward": 1000,
+      "rewardModel": "fixed"
     }
   ]
 }

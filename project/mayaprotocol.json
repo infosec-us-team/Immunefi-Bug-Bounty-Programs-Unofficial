@@ -2,12 +2,12 @@
   "assets": [
     {
       "id": "fw0A37ZPCRE0zOWCZvJOA",
-      "revision": 1,
-      "type": "blockchain_dlt",
       "url": "https://gitlab.com/mayachain/mayanode",
+      "type": "blockchain_dlt",
+      "addedAt": "2023-03-29T17:00:00.000Z",
+      "revision": 1,
       "description": "Blockchain/DLT",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2023-03-29T17:00:00.000Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "Only those listed in the Assets in Scope table are considered to be in-scope of the bug bounty program. \n\n__Blockchain/DLT:__ \n\n- __Blockchain/DLT - PoC__, Blockchain/DLT bug reports are to include a runnable Proof of Concept (PoC) to prove impact in the form of a git patch of either a regression test or complete mocknet simulation.  \n- For more information on PoCs please visit: [Proof of Concept (PoC) Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n- The list of all deployed code can be found at: [https://gitlab.com/mayachain/mayanode](https://gitlab.com/mayachain/mayanode)\n\nWhitehats are highly encouraged to review any potential subdomains and what specific port(s) are in scope. Even though the domain may be the same, different ports may point to different assets.  \n\n__Dev Environment and Documentation:__\n\nMaya Protocol has included dev documentation and/or instructions to help in reviewing code and exploring for bugs:\n- [Dev docs with stagenet endpoints](https://docs.mayaprotocol.com/maya-protocol-devs/mayachain/concepts/connecting-to-thorchain)\n- [Local mocknet](https://gitlab.com/mayachain/mayanode/#start-standalone-full-stack)\n\n__Impacts in Scope:__\n\n(For Blockchain/DLTR and Smart Contracts Only) This program is considered to be governed by Primacy of Rules. For more information on what this means visit: [Best Practice - Primacy of Impact vs Primacy of Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact). \n\nImpacts are based on the [Immunefi Vulnerability Severity Classification System V2.2.](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/)\n\nAt Immunefi, we classify bugs on a simplified 5-level scale:\n- Critical\n- High\n- Medium\n- Low\n- None",
@@ -81,16 +81,16 @@
   ],
   "impacts": [
     {
-      "id": 3,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Direct loss of funds"
-    },
-    {
       "id": 5,
       "type": "blockchain_dlt",
       "severity": "high",
       "title": "Unintended chain split (network partition)"
+    },
+    {
+      "id": 3,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Direct loss of funds"
     },
     {
       "id": 3996,
@@ -120,18 +120,18 @@
   "rewards": [
     {
       "id": 14674,
-      "assetType": "blockchain_dlt",
       "severity": "critical",
-      "rewardModel": "up_to",
+      "assetType": "blockchain_dlt",
       "maxReward": 35000,
+      "rewardModel": "up_to",
       "rewardCalculationPercentage": 10
     },
     {
       "id": 14675,
-      "assetType": "blockchain_dlt",
       "severity": "high",
-      "rewardModel": "fixed",
-      "fixedReward": 5000
+      "assetType": "blockchain_dlt",
+      "fixedReward": 5000,
+      "rewardModel": "fixed"
     }
   ]
 }

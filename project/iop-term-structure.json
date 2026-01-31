@@ -83,23 +83,23 @@
   "description": "Term Structure Institutional (TSI) is an institutional-grade platform enabling clients to borrow and lend digital assets at fixed rates within the Fireblocks multi-party computation (MPC) wallet environment and a reliable TSI Electronic Communication Network (ECN). TSI empowers institutions, lenders, borrowers, and traders to participate in fixed-income markets with greater efficiency and confidence.",
   "knownIssues": [
     {
-      "id": 56,
-      "description": "Centralization issues related to Fireblock flow, such as allowance management and fund locking mechanism.",
+      "id": 58,
       "link": "https://docs.institutional.ts.finance/",
+      "description": "Problems with Oracle and other third-party contracts.",
       "lastUpdatedAt": "2025-04-15T00:00:00.000Z",
       "relatedImpactInScope": "smart_contract"
     },
     {
       "id": 57,
-      "description": "Security issues caused by private key or permission leakage.",
       "link": "https://docs.institutional.ts.finance/",
+      "description": "Security issues caused by private key or permission leakage.",
       "lastUpdatedAt": "2025-04-15T00:00:00.000Z",
       "relatedImpactInScope": "smart_contract"
     },
     {
-      "id": 58,
-      "description": "Problems with Oracle and other third-party contracts.",
+      "id": 56,
       "link": "https://docs.institutional.ts.finance/",
+      "description": "Centralization issues related to Fireblock flow, such as allowance management and fund locking mechanism.",
       "lastUpdatedAt": "2025-04-15T00:00:00.000Z",
       "relatedImpactInScope": "smart_contract"
     }
@@ -114,10 +114,10 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 15,
+      "id": 34,
       "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
     },
     {
       "id": 17,
@@ -162,6 +162,18 @@
       "title": "Temporary freezing of funds"
     },
     {
+      "id": 5575,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds for at least 24 hour"
+    },
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
       "id": 29,
       "type": "smart_contract",
       "severity": "medium",
@@ -192,18 +204,6 @@
       "title": "Unbounded gas consumption"
     },
     {
-      "id": 34,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
-    },
-    {
-      "id": 5575,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing of funds for at least 24 hour"
-    },
-    {
       "id": 5576,
       "type": "smart_contract",
       "severity": "medium",
@@ -212,27 +212,27 @@
   ],
   "rewards": [
     {
-      "assetType": "smart_contract",
       "level": "critical",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "high",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "medium",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "low",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     }
   ]

@@ -2,21 +2,21 @@
   "assets": [
     {
       "id": "7hemAL0aCO2wtdzySET0DD",
-      "revision": 4,
-      "type": "smart_contract",
       "url": "https://docs.tranchess.com/tech-support/contracts/bnbchainv2contracts",
+      "type": "smart_contract",
+      "addedAt": "2022-02-11T12:41:44.295Z",
+      "revision": 4,
       "description": "Deployed Addresses (BNB Chain Only)",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-02-11T12:41:44.295Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "66eLhnyLqfPowgmoi8eQNe",
-      "revision": 1,
-      "type": "websites_and_applications",
       "url": "https://tranchess.com/",
+      "type": "websites_and_applications",
+      "addedAt": "2022-02-11T12:42:09.308Z",
+      "revision": 1,
       "description": null,
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-02-11T12:42:09.308Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": null,
@@ -88,10 +88,10 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 15,
-      "type": "smart_contract",
+      "id": 42,
+      "type": "websites_and_applications",
       "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+      "title": "Direct theft of user funds"
     },
     {
       "id": 17,
@@ -106,22 +106,10 @@
       "title": "Protocol insolvency"
     },
     {
-      "id": 23,
-      "type": "smart_contract",
+      "id": 478,
+      "type": "websites_and_applications",
       "severity": "high",
-      "title": "Theft of unclaimed yield"
-    },
-    {
-      "id": 25,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of unclaimed yield"
-    },
-    {
-      "id": 27,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing of funds"
+      "title": "Spoofing content on the target application (Persistent)"
     },
     {
       "id": 37,
@@ -130,16 +118,28 @@
       "title": "Taking down the application/website"
     },
     {
-      "id": 42,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Direct theft of user funds"
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
     },
     {
-      "id": 478,
-      "type": "websites_and_applications",
+      "id": 27,
+      "type": "smart_contract",
       "severity": "high",
-      "title": "Spoofing content on the target application (Persistent)"
+      "title": "Temporary freezing of funds"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
     },
     {
       "id": 479,
@@ -229,33 +229,33 @@
   "rewards": [
     {
       "id": 33004,
-      "assetType": "smart_contract",
       "severity": "critical",
-      "rewardModel": "up_to",
+      "assetType": "smart_contract",
       "maxReward": 200000,
+      "rewardModel": "up_to",
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 33006,
-      "assetType": "websites_and_applications",
-      "severity": "critical",
-      "rewardModel": "fixed",
-      "otherImpactMaxReward": 0,
-      "fixedReward": 5000
+      "id": 33005,
+      "severity": "high",
+      "assetType": "smart_contract",
+      "fixedReward": 20000,
+      "rewardModel": "fixed"
     },
     {
-      "id": 33005,
-      "assetType": "smart_contract",
-      "severity": "high",
+      "id": 33006,
+      "severity": "critical",
+      "assetType": "websites_and_applications",
+      "fixedReward": 5000,
       "rewardModel": "fixed",
-      "fixedReward": 20000
+      "otherImpactMaxReward": 0
     },
     {
       "id": 33007,
-      "assetType": "websites_and_applications",
       "severity": "high",
-      "rewardModel": "fixed",
-      "fixedReward": 3000
+      "assetType": "websites_and_applications",
+      "fixedReward": 3000,
+      "rewardModel": "fixed"
     }
   ]
 }

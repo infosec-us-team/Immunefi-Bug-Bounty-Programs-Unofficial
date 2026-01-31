@@ -2,30 +2,30 @@
   "assets": [
     {
       "id": "5GqtMqeW4q31b6gOZBfTrJ",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://solscan.io/account/StaKE6XNKVVhG8Qu9hDJBqCW3eRe7MDGLz17nJZetLT",
+      "type": "smart_contract",
+      "addedAt": "2026-01-08T09:23:34.322Z",
+      "revision": 1,
       "description": "xORCA",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2026-01-08T09:23:34.322Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "3eLgXbnQaKA6kNzm6CeYYJ",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://solscan.io/account/whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc",
+      "type": "smart_contract",
+      "addedAt": "2025-08-12T07:01:19.077Z",
+      "revision": 1,
       "description": "Orca Whirlpools",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-08-12T07:01:19.077Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "6hBuRvw4FZlEeUIqZLuDL5",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://solscan.io/account/waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+      "type": "smart_contract",
+      "addedAt": "2025-08-12T07:01:19.086Z",
+      "revision": 1,
       "description": "Orca Wavebreak",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-08-12T07:01:19.086Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf any Critical/High severity impact can be caused to any other asset managed by Orca that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.",
@@ -95,16 +95,16 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 15,
+      "id": 2676,
       "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+      "severity": "high",
+      "title": "Bugs that could temporarily freeze user funds or incorrectly assign value to user funds"
     },
     {
-      "id": 17,
+      "id": 2677,
       "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
+      "severity": "high",
+      "title": "Temporary freezing of unclaimed yield for any amount of time"
     },
     {
       "id": 23,
@@ -117,6 +117,12 @@
       "type": "smart_contract",
       "severity": "medium",
       "title": "Smart contract unable to operate due to lack of token funds"
+    },
+    {
+      "id": 2678,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing for profit"
     },
     {
       "id": 31,
@@ -137,52 +143,46 @@
       "title": "Unbounded gas consumption"
     },
     {
-      "id": 2676,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Bugs that could temporarily freeze user funds or incorrectly assign value to user funds"
-    },
-    {
-      "id": 2677,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing of unclaimed yield for any amount of time"
-    },
-    {
-      "id": 2678,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Block stuffing for profit"
-    },
-    {
       "id": 2679,
       "type": "smart_contract",
       "severity": "critical",
       "title": "Bugs that freeze user funds or drain the contract's holdings or involve theft of funds without user signatures"
+    },
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
     }
   ],
   "rewards": [
     {
       "id": 34301,
-      "assetType": "smart_contract",
       "severity": "critical",
-      "rewardModel": "up_to",
+      "assetType": "smart_contract",
       "maxReward": 500000,
+      "rewardModel": "up_to",
       "rewardCalculationPercentage": 10
     },
     {
       "id": 34302,
-      "assetType": "smart_contract",
       "severity": "high",
-      "rewardModel": "fixed",
-      "fixedReward": 50000
+      "assetType": "smart_contract",
+      "fixedReward": 50000,
+      "rewardModel": "fixed"
     },
     {
       "id": 34303,
-      "assetType": "smart_contract",
       "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 10000
+      "assetType": "smart_contract",
+      "fixedReward": 10000,
+      "rewardModel": "fixed"
     }
   ]
 }

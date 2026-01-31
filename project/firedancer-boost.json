@@ -2,12 +2,12 @@
   "assets": [
     {
       "id": "15iAOy1deWFKNbPdx2aypi",
-      "revision": 6,
-      "type": "blockchain_dlt",
       "url": "https://github.com/firedancer-io/firedancer/tree/e60d9a6206efaceac65a5a2c3a9e387a79d1d096",
+      "type": "blockchain_dlt",
+      "addedAt": "2024-07-10T17:00:00.000Z",
+      "revision": 6,
       "description": "Firedancer v0.1 Testnet (only directory and file listed in this file [https://asymmetric-assets.s3.amazonaws.com/fdctl-scope.txt?utm_source=immunefi] are within the scope)",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-07-10T17:00:00.000Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "The Firedancer validator builds as a single binary: `fdctl`.  All code and functionality linked and reachable by the main function of this binary is in scope, including from the primary `run` command, but also `configure`, `monitor`, and others. Bugs in linked but unreachable code (for example: cryptography implementations that are behind a development flag or library utility code that is never called) are in scope but are not exploitable and will be considered informational (aka insight reports).\n\nThe Firedancer repository contains code for two validators:\n\n- Firedancer v0.1, lovingly nicknamed “Frankendancer”, a split between Firedancer and the existing Agave validator written in Rust\n- A full C-only Firedancer completely replacing the existing Agave validator.\n\nThe full Firedancer code is behind a development flag, and findings in code that is only reachable in full Firedancer will be considered informational (aka insight reports).\n\nThe Firedancer v0.1 validator interfaces with the existing Agave validator written in Rust via an FFI interface. This FFI interface and the modifications to Agave to support such FFI are in scope, but bugs in the Agave validator itself that would impact existing Solana validators should be reported to the [Agave bug bounty](https://github.com/anza-xyz/agave/security#bounty) and are not considered in scope for the contest.\n\nThe [directory and file listing](https://asymmetric-assets.s3.amazonaws.com/fdctl-scope.txt) are provided to help navigate the codebase and determine what is in scope. The ground truth for scope and impact will follow the production binary.\n\nThe Firedancer v0.1 sandbox (and machine model) are explicitly **in-scope**. This means that a researcher could **assume** a tile’s already been breached, and any findings downstream of that “contrived” tile breach are valid. As an example: Assume the “Net” tile has been breached, such that the researcher has full RCE within the sandbox of the Net tile. If the attacker is able to cause malicious effects in any of the “downstream” tiles or on the system itself, these findings would also be in scope.\n\n__Mid-Contest Code Updates__\n\nIn this contest bug fixes may be applied mid-contest.\n\nThe project is to keep changes private as far as possible. When changes need to be made public, then the changelog will be updated here & in the [Firedancer Audit Competition Discord channel](https://discord.com/invite/immunefi?utm_source=immunefi). Publicly fixed bugs are invalid and the scope is updated to the new code.\n\nAll bug reports before the fix was public will earn a reward. All bug reports after are invalid. If a new bug is introduced by their fix then it is valid for a reward.\n\n__Mid-Contest Changelog__\n\n- July 16 :: improve balance between votes and non-votes https://github.com/firedancer-io/firedancer/pull/2404\n\nAsset in scope link updated from https://github.com/firedancer-io/firedancer/tree/v0.106.11814 to https://github.com/firedancer-io/firedancer/tree/e60d9a6206efaceac65a5a2c3a9e387a79d1d096\n\n__Asset Accuracy Assurance__\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n__Private Known Issues Reward Policy__\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are **not** valid for a reward.\n\n\n__Primacy of Impact vs Primacy of Rules__\n\nFiredancer adheres to the Primacy of Rules, meaning the whole bug bounty program is run strictly under the terms and conditions stated on this page.\n\n__KYC Requirement__\n\nImmunefi will be requesting KYC information to pay for successful bug submissions. The following information will be required:\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with the address or a recent utility bill)\n- Copy of Passport or other Government ID\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement outlined in this program and cannot be:\n- On OFAC SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Employees of Solana Foundation or any other Solana client project\n- Security auditors who directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this program and a leaderboard of the participants and their earnings.\n\n__Feasibility Limitations__\n\nThe project may receive valid reports (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the bug's impact, which are not feasible or would require unconventional action and, hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) that, by default, state what security researchers and projects can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Firedancer has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
@@ -171,21 +171,21 @@
   ],
   "rewards": [
     {
-      "assetType": "blockchain_dlt",
       "level": "critical",
       "payout": "Portion of the Reward Pool",
+      "assetType": "blockchain_dlt",
       "pocRequired": true
     },
     {
-      "assetType": "blockchain_dlt",
       "level": "high",
       "payout": "Portion of the Reward Pool",
+      "assetType": "blockchain_dlt",
       "pocRequired": true
     },
     {
-      "assetType": "blockchain_dlt",
       "level": "medium",
       "payout": "Portion of the Reward Pool",
+      "assetType": "blockchain_dlt",
       "pocRequired": true
     }
   ]

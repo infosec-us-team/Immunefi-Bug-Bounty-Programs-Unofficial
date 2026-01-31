@@ -2,48 +2,48 @@
   "assets": [
     {
       "id": "mWiiJfIryePm17WasTxus",
-      "revision": 1,
-      "type": "blockchain_dlt",
       "url": "https://github.com/stacks-network/sbtc/tree/immunefi_attackaton_0.9/signer",
+      "type": "blockchain_dlt",
+      "addedAt": "2024-12-02T08:00:00.000Z",
+      "revision": 1,
       "description": "sBTC Signer - a signer entity separate from the Stacks Nakamoto signer which signs sBTC operations, communicates with sBTC contracts, and manages sBTC UTXOs. - 19760",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-12-02T08:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "62GqEM1obidH4Fk7jo7DDT",
-      "revision": 1,
-      "type": "blockchain_dlt",
       "url": "https://github.com/stacks-network/sbtc/tree/immunefi_attackaton_0.9/emily",
+      "type": "blockchain_dlt",
+      "addedAt": "2024-12-02T08:00:00.000Z",
+      "revision": 1,
       "description": "Emily - An API that helps facilitate and supervise the sBTC Bridge - 6000",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-12-02T08:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "9VUhMac5zrLarJu9eoIvW",
-      "revision": 1,
-      "type": "blockchain_dlt",
       "url": "https://github.com/stacks-network/sbtc/tree/immunefi_attackaton_0.9/protobufs",
+      "type": "blockchain_dlt",
+      "addedAt": "2024-12-02T08:00:00.000Z",
+      "revision": 1,
       "description": "Protobuffs - Platform-neutral extensible mechanisms for serializing structured data. - 292",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-12-02T08:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "lg0NutDDOz4o2YIvvztBD",
-      "revision": 1,
-      "type": "blockchain_dlt",
       "url": "https://github.com/stacks-network/sbtc/tree/immunefi_attackaton_0.9/sbtc",
+      "type": "blockchain_dlt",
+      "addedAt": "2024-12-02T08:00:00.000Z",
+      "revision": 1,
       "description": "lib-sbtc - A library for creating BTC deposit transactions that can be handled by the sBTC signers. - 1186",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-12-02T08:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "RzovoaWgIExBQbYPMzKLS",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/stacks-network/sbtc/tree/immunefi_attackaton_0.9/contracts/contracts",
+      "type": "smart_contract",
+      "addedAt": "2024-12-02T08:00:00.000Z",
+      "revision": 1,
       "description": "Smart Contract - sBTC contracts - The Clarity contracts for the sBTC protocol. - 645",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-12-02T08:00:00.000Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "Learn more on the Stacks' Academy.\n\n## Project Technical Info\n\nWhat ERC20 / ERC721 / ERC777 / ERC1155 token standards are supported? Which are not?\n\n- SIP10 is the only token standard supported https://github.com/stacksgov/sips/blob/main/sips/sip-010/sip-010-fungible-token-standard.md \n\nWhat emergency actions may you want to use as a reason to invalidate or downgrade an otherwise valid bug report?\n\n- Deposit processing can be paused by shutting down the Emily API server. In the case of vulnerabilities in deposit handling, this can be used to reduce the impact of an ongoing attack.\n\nWhat addresses would you consider any bug report requiring their involvement to be out of scope, as long as they operate within the privileges attributed to them?\n\n- Signers are permissioned and whitelisted operators. Any attack that requires a majority of signers to be malicious should be out of scope. Attacks that require a minority of signers to be malicious would still be in scope but with reduced severity. \n\nWhich chains and/or networks will the code in scope be deployed to?\n\n- Stacks L2\n\n## Security Researcher Education\n\nIs this an upgrade of an existing system? If so, which? And what are the main differences?\n\n- sBTC is a new 1:1 Bitcoin-backed asset on the Stacks Bitcoin L2. The in-scope codebase is completely new. \n\nWhere do you suspect there may be bugs?\n\n- The end-to-end flow of processing new Bitcoin deposits and minting sBTC on Stacks is relatively complex and error prone. Issues here could allow DoS of valid deposits or incorrect minting of unbacked sBTC.\n\nVulnerabilities in the sBTC smart contracts hosted on Stacks could break the core assumptions of the system. Any attack that leads to a mismatch between the BTC collateral and the sBTC would be highly interesting to us.\n\n- Any attacks against the threshold signature scheme used on Bitcoin\n\nWhere might Security Researchers confuse out-of-scope code to be in-scope?\n\n- Vulnerabilities in the Stacks L2 blockchain itself should be reported directly to the [Stacks Immunefi bug bounty](https://immunefi.com/bug-bounty/stacks/information/). \n\n- The initial launch of sBTC does not enable withdrawals back to Bitcoin. While partial code to support withdrawals can be found in the codebase, issues that can’t be exploited in “deposit-only” mode will be downgraded.\n\nAre there any unusual points about your protocol that may confuse Security Researchers?\n\n- sBTC launches without support for withdrawals. Users can go from BTC -> sBTC, but the support for sBTC -> BTC is not fully implemented. This functionality will be part of a follow-up contest.",
@@ -201,6 +201,42 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
+      "id": 5256,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Network not being able to confirm new transactions (total network shutdown)"
+    },
+    {
+      "id": 30,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 32,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of gas"
+    },
+    {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
+    },
+    {
+      "id": 34,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
+    },
+    {
       "id": 3,
       "type": "blockchain_dlt",
       "severity": "critical",
@@ -279,42 +315,6 @@
       "title": "Smart contract unable to operate due to lack of token funds"
     },
     {
-      "id": 30,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Block stuffing"
-    },
-    {
-      "id": 31,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-    },
-    {
-      "id": 32,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Theft of gas"
-    },
-    {
-      "id": 33,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Unbounded gas consumption"
-    },
-    {
-      "id": 34,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
-    },
-    {
-      "id": 5256,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Network not being able to confirm new transactions (total network shutdown)"
-    },
-    {
       "id": 5257,
       "type": "blockchain_dlt",
       "severity": "high",
@@ -347,51 +347,51 @@
   ],
   "rewards": [
     {
-      "assetType": "blockchain_dlt",
       "level": "critical",
       "payout": "Portion of the Reward Pool",
+      "assetType": "blockchain_dlt",
       "pocRequired": true
     },
     {
-      "assetType": "blockchain_dlt",
       "level": "high",
       "payout": "Portion of the Reward Pool",
+      "assetType": "blockchain_dlt",
       "pocRequired": true
     },
     {
-      "assetType": "blockchain_dlt",
       "level": "medium",
       "payout": "Portion of the Reward Pool",
+      "assetType": "blockchain_dlt",
       "pocRequired": true
     },
     {
-      "assetType": "blockchain_dlt",
       "level": "low",
       "payout": "Portion of the Reward Pool",
+      "assetType": "blockchain_dlt",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "critical",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "high",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "medium",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "low",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     }
   ]

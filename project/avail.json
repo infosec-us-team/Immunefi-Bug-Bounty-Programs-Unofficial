@@ -2,21 +2,21 @@
   "assets": [
     {
       "id": "18liAnHwE6kAUPXBNjvUqI",
-      "revision": 4,
-      "type": "websites_and_applications",
       "url": "https://bridge.availproject.org",
+      "type": "websites_and_applications",
+      "addedAt": "2024-07-23T02:00:00.000Z",
+      "revision": 4,
       "description": "Bridge UI",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-07-23T02:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "2H8B6VRAaNU6KqQ8JMd7JZ",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/availproject/contracts",
+      "type": "smart_contract",
+      "addedAt": "2024-07-23T02:00:00.000Z",
+      "revision": 2,
       "description": "Avail Bridge Smart Contracts",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-07-23T02:00:00.000Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "Fusion contracts (Fusion.sol,...) are out of scope as they are not in production.",
@@ -100,6 +100,78 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
+      "id": 4991,
+      "type": "websites_and_applications",
+      "severity": "low",
+      "title": "Temporarily disabling user to access target site, such as:  Locking up the victim from login Cookie bombing, etc."
+    },
+    {
+      "id": 4992,
+      "type": "websites_and_applications",
+      "severity": "low",
+      "title": "Taking over broken or expired outgoing links, such as:  Social media handles, etc."
+    },
+    {
+      "id": 4993,
+      "type": "websites_and_applications",
+      "severity": "low",
+      "title": "Changing details of other users (including modifying browser local storage) without already-connected wallet interaction & with significant user interaction, such as: Iframing leading to modifying the backend/browser state(must demonstrate impact with POC)"
+    },
+    {
+      "id": 4995,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Improperly disclosing confidential user information, such as:  Email address, Phone number, Physical address, etc."
+    },
+    {
+      "id": 4996,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:  Email, Password of the victim etc."
+    },
+    {
+      "id": 4997,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:  HTML injection without JavaScript, Replacing existing text with arbitrary text, Arbitrary file uploads, etc"
+    },
+    {
+      "id": 5001,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:  Reflected HTML injection, Loading external site data"
+    },
+    {
+      "id": 5002,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Changing non-sensitive details of other users(including modifying browser local storage)without already-connected wallet interaction & with up to one click of user interaction, such as: Changing the first/last name of user, Enabling/disabling notifications"
+    },
+    {
+      "id": 5005,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Malicious interactions with an already-connected wallet, such as:  Modifying transaction arguments or parameters Substituting contract addresses Submitting malicious transactions"
+    },
+    {
+      "id": 5006,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:   Changing registration information, Commenting, Voting, Making trades, Withdrawals, etc."
+    },
+    {
+      "id": 5007,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Retrieve sensitive data/files from a running server, such as:   /etc/shadow, database passwords, blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
+    },
+    {
+      "id": 5008,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion"
+    },
+    {
       "id": 14,
       "type": "smart_contract",
       "severity": "critical",
@@ -176,133 +248,61 @@
       "type": "websites_and_applications",
       "severity": "medium",
       "title": "Redirecting users to malicious websites (open redirect)"
-    },
-    {
-      "id": 4991,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Temporarily disabling user to access target site, such as:  Locking up the victim from login Cookie bombing, etc."
-    },
-    {
-      "id": 4992,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Taking over broken or expired outgoing links, such as:  Social media handles, etc."
-    },
-    {
-      "id": 4993,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Changing details of other users (including modifying browser local storage) without already-connected wallet interaction & with significant user interaction, such as: Iframing leading to modifying the backend/browser state(must demonstrate impact with POC)"
-    },
-    {
-      "id": 4995,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Improperly disclosing confidential user information, such as:  Email address, Phone number, Physical address, etc."
-    },
-    {
-      "id": 4996,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:  Email, Password of the victim etc."
-    },
-    {
-      "id": 4997,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:  HTML injection without JavaScript, Replacing existing text with arbitrary text, Arbitrary file uploads, etc"
-    },
-    {
-      "id": 5001,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:  Reflected HTML injection, Loading external site data"
-    },
-    {
-      "id": 5002,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Changing non-sensitive details of other users(including modifying browser local storage)without already-connected wallet interaction & with up to one click of user interaction, such as: Changing the first/last name of user, Enabling/disabling notifications"
-    },
-    {
-      "id": 5005,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Malicious interactions with an already-connected wallet, such as:  Modifying transaction arguments or parameters Substituting contract addresses Submitting malicious transactions"
-    },
-    {
-      "id": 5006,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:   Changing registration information, Commenting, Voting, Making trades, Withdrawals, etc."
-    },
-    {
-      "id": 5007,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Retrieve sensitive data/files from a running server, such as:   /etc/shadow, database passwords, blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
-    },
-    {
-      "id": 5008,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion"
     }
   ],
   "rewards": [
     {
       "id": 39457,
-      "assetType": "smart_contract",
       "severity": "critical",
-      "rewardModel": "range",
+      "assetType": "smart_contract",
       "maxReward": 250000,
       "minReward": 25000,
+      "rewardModel": "range",
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 39460,
-      "assetType": "websites_and_applications",
-      "severity": "critical",
-      "rewardModel": "range",
-      "maxReward": 20000,
-      "minReward": 6000
-    },
-    {
       "id": 39458,
+      "severity": "high",
       "assetType": "smart_contract",
-      "severity": "high",
-      "rewardModel": "range",
       "maxReward": 40000,
-      "minReward": 5000
-    },
-    {
-      "id": 39461,
-      "assetType": "websites_and_applications",
-      "severity": "high",
-      "rewardModel": "fixed",
-      "fixedReward": 5000
+      "minReward": 5000,
+      "rewardModel": "range"
     },
     {
       "id": 39459,
-      "assetType": "smart_contract",
       "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 4000
+      "assetType": "smart_contract",
+      "fixedReward": 4000,
+      "rewardModel": "fixed"
+    },
+    {
+      "id": 39460,
+      "severity": "critical",
+      "assetType": "websites_and_applications",
+      "maxReward": 20000,
+      "minReward": 6000,
+      "rewardModel": "range"
+    },
+    {
+      "id": 39461,
+      "severity": "high",
+      "assetType": "websites_and_applications",
+      "fixedReward": 5000,
+      "rewardModel": "fixed"
     },
     {
       "id": 39462,
-      "assetType": "websites_and_applications",
       "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 2500
+      "assetType": "websites_and_applications",
+      "fixedReward": 2500,
+      "rewardModel": "fixed"
     },
     {
       "id": 39463,
-      "assetType": "websites_and_applications",
       "severity": "low",
-      "rewardModel": "fixed",
-      "fixedReward": 1000
+      "assetType": "websites_and_applications",
+      "fixedReward": 1000,
+      "rewardModel": "fixed"
     }
   ]
 }

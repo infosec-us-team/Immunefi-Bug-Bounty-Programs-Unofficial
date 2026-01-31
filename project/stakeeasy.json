@@ -2,48 +2,48 @@
   "assets": [
     {
       "id": "1ItWQA8xxRBzY6agN4uTSG",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://www.mintscan.io/juno/wasm/contract/juno1dlp8avgc2r6t4nnsv4yydc6lc73rjtjqvdcee9r2kf0uwuef7v0smljy8w",
+      "type": "smart_contract",
+      "addedAt": "2023-04-06T17:00:00.000Z",
+      "revision": 1,
       "description": "stakeeasy",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2023-04-06T17:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "7AWM4SLaYpoKqYHqkTfc6E",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://www.mintscan.io/juno/wasm/contract/juno1dd0k0um5rqncfueza62w9sentdfh3ec4nw4aq4lk5hkjl63vljqscth9gv",
+      "type": "smart_contract",
+      "addedAt": "2023-04-06T17:00:00.000Z",
+      "revision": 1,
       "description": "seJUNO",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2023-04-06T17:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "2INNoQUldmnM18uO1sF24X",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://www.mintscan.io/juno/wasm/contract/juno1wwnhkagvcd3tjz6f8vsdsw5plqnw8qy2aj3rrhqr2axvktzv9q2qz8jxn3",
+      "type": "smart_contract",
+      "addedAt": "2023-04-06T17:00:00.000Z",
+      "revision": 1,
       "description": "bJUNO",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2023-04-06T17:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "gRIrRzMri7oNK0ct8bSnB",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://www.mintscan.io/juno/wasm/contract/juno10njts2m24u03cx7tq97de44y8pcv4y87apya2894n9ut9gcmhx6sxug0fe",
+      "type": "smart_contract",
+      "addedAt": "2023-04-06T17:00:00.000Z",
+      "revision": 1,
       "description": "reward",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2023-04-06T17:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "3w4duc5cwGPFvmv4syfy5P",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://immunefi.com",
+      "type": "smart_contract",
+      "addedAt": "2023-10-05T15:29:39.930Z",
+      "revision": 1,
       "description": "Primacy of Impact",
-      "isPrimacyOfImpact": true,
-      "addedAt": "2023-10-05T15:29:39.930Z"
+      "isPrimacyOfImpact": true
     }
   ],
   "assetsBodyV2": "Impacts only apply to assets in active use by the project like contracts on mainnet or web/app assets used in production. Any impact that applies to assets not in active use, like test or mock files, are out-of-scope of the bug bounty program unless explicitly mentioned as in-scope. \n\n__Smart Contracts__ \n\n- __Smart Contracts - PoC__, Smart Contract bug reports are to include a runnable Proof of Concept (PoC) in order to prove impact.  \n- For more information on PoCs please visit: [Proof of Concept (PoC) Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\nWhitehats we highly encourage you to review any potential subdomains and what specific port(s) are in scope. Even though the domain may be the same, different ports may point to different assets.  \n\n__Dev Environment and Documentation:__\n\nStakeEasy has included dev documentation and/or instructions to help in reviewing code and exploring for bugs:\n- [https://docs.stakeeasy.finance/docs/guides/userflow](https://docs.stakeeasy.finance/docs/guides/userflow)\n- [https://github.com/arufa-research/stakeeasy-juno-contracts/tree/master/contracts/staking_contract](https://github.com/arufa-research/stakeeasy-juno-contracts/tree/master/contracts/staking_contract)\n- [https://github.com/arufa-research/stakeeasy-juno-contracts](https://github.com/arufa-research/stakeeasy-juno-contracts)\n\n__Impacts to other assets:__ \n\nHackers are encouraged to submit issues outside of the outlined Impacts and Assets in Scope. \n\nIf whitehats can demonstrate a critical impact on code in production for an asset not in scope, StakeEasy encourages you to submit your bug report using the “primacy of impact exception” asset. \n\n__Impacts in Scope:__\n\n(For Blockchain/DLTR and Smart Contracts Only) This program is considered to be governed by Primacy of Impact. For more information on what this means visit: [Best Practice - Primacy of Impact vs Primacy of Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact). \n\nImpacts are based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/).\n\nAt Immunefi, we classify bugs on a simplified 5-level scale:\n- Critical\n- High\n- Medium\n- Low\n- None\n\n__Other Impacts to other assets:__\n\nHackers are encouraged to submit issues outside of the outlined Impacts and Assets in Scope. \n\nIf whitehats can demonstrate a critical impact of code in production for an asset not in scope, StakeEasy encourages you to submit your bug report using the “primacy of impact exception” asset as outlined below.",
@@ -115,6 +115,42 @@
   ],
   "impacts": [
     {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 4001,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds for at least 4 days"
+    },
+    {
+      "id": 29,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Smart contract unable to operate due to lack of token funds"
+    },
+    {
+      "id": 4002,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
+    },
+    {
+      "id": 4003,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Any governance voting result manipulation"
+    },
+    {
       "id": 15,
       "type": "smart_contract",
       "severity": "critical",
@@ -131,66 +167,30 @@
       "type": "smart_contract",
       "severity": "critical",
       "title": "Protocol insolvency"
-    },
-    {
-      "id": 23,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of unclaimed yield"
-    },
-    {
-      "id": 25,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of unclaimed yield"
-    },
-    {
-      "id": 29,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Smart contract unable to operate due to lack of token funds"
-    },
-    {
-      "id": 4001,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing of funds for at least 4 days"
-    },
-    {
-      "id": 4002,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
-    },
-    {
-      "id": 4003,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Any governance voting result manipulation"
     }
   ],
   "rewards": [
     {
       "id": 8339,
-      "assetType": "smart_contract",
       "severity": "critical",
+      "assetType": "smart_contract",
+      "fixedReward": 8000,
       "rewardModel": "fixed",
-      "rewardCalculationPercentage": 10,
-      "fixedReward": 8000
+      "rewardCalculationPercentage": 10
     },
     {
       "id": 6663,
-      "assetType": "smart_contract",
       "severity": "high",
-      "rewardModel": "fixed",
-      "fixedReward": 3000
+      "assetType": "smart_contract",
+      "fixedReward": 3000,
+      "rewardModel": "fixed"
     },
     {
       "id": 6664,
-      "assetType": "smart_contract",
       "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 1000
+      "assetType": "smart_contract",
+      "fixedReward": 1000,
+      "rewardModel": "fixed"
     }
   ]
 }

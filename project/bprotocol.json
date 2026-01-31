@@ -2,48 +2,48 @@
   "assets": [
     {
       "id": "58z8aHBLKWCJhqUj6FodGB",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/backstop-protocol/dev/blob/main/packages/contracts/contracts/B.Protocol/BAMM.sol",
+      "type": "smart_contract",
+      "addedAt": "2022-05-10T15:48:34.002Z",
+      "revision": 2,
       "description": "BAMM.sol",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-05-10T15:48:34.002Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "481SBOKyC6KUMMAAKU6mUn",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/backstop-protocol/dev/blob/main/packages/contracts/contracts/B.Protocol/CropJoinAdapter.sol",
+      "type": "smart_contract",
+      "addedAt": "2022-05-10T15:48:40.740Z",
+      "revision": 2,
       "description": "CropJoinAdapter.sol",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-05-10T15:48:40.740Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "4TZ3PiMM4DhzvWQNo6S5QB",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/backstop-protocol/dev/blob/main/packages/contracts/contracts/B.Protocol/PBAMM.sol",
+      "type": "smart_contract",
+      "addedAt": "2022-05-10T15:48:41.772Z",
+      "revision": 2,
       "description": "PBAMM.sol",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-05-10T15:48:41.772Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "r1r9h9u31GGirg3lRVI0U",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/backstop-protocol/dev/blob/main/packages/contracts/contracts/B.Protocol/PriceFormula.sol",
+      "type": "smart_contract",
+      "addedAt": "2023-06-26T17:38:50.857Z",
+      "revision": 1,
       "description": "PriceFormula.sol",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2023-06-26T17:38:50.857Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "1iRz1rltKTKOnOFGCuVVxc",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/backstop-protocol/dev/blob/main/packages/contracts/contracts/B.Protocol/crop.sol",
+      "type": "smart_contract",
+      "addedAt": "2023-06-26T17:38:49.525Z",
+      "revision": 1,
       "description": "crop.sol",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2023-06-26T17:38:49.525Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "However, only the smart contracts within the assets in scope table itself are considered as in-scope for the bug bounty program.",
@@ -108,22 +108,10 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 15,
+      "id": 34,
       "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-    },
-    {
-      "id": 17,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
-    },
-    {
-      "id": 22,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Protocol insolvency"
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
     },
     {
       "id": 23,
@@ -150,6 +138,12 @@
       "title": "Smart contract unable to operate due to lack of token funds"
     },
     {
+      "id": 650,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing for profit"
+    },
+    {
       "id": 31,
       "type": "smart_contract",
       "severity": "medium",
@@ -168,59 +162,65 @@
       "title": "Unbounded gas consumption"
     },
     {
-      "id": 34,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
-    },
-    {
-      "id": 650,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Block stuffing for profit"
-    },
-    {
       "id": 651,
       "type": "smart_contract",
       "severity": "critical",
       "title": "Any governance voting result manipulation"
     },
     {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
       "id": 652,
       "type": "smart_contract",
       "severity": "critical",
       "title": "Miner-extractable value (MEV)"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
     }
   ],
   "rewards": [
     {
-      "id": 8150,
-      "assetType": "smart_contract",
-      "severity": "critical",
-      "rewardModel": "up_to",
-      "maxReward": 100000,
-      "rewardCalculationPercentage": 10
-    },
-    {
       "id": 4261,
-      "assetType": "smart_contract",
       "severity": "high",
-      "rewardModel": "fixed",
-      "fixedReward": 10000
+      "assetType": "smart_contract",
+      "fixedReward": 10000,
+      "rewardModel": "fixed"
     },
     {
       "id": 4262,
-      "assetType": "smart_contract",
       "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 5000
+      "assetType": "smart_contract",
+      "fixedReward": 5000,
+      "rewardModel": "fixed"
     },
     {
       "id": 4263,
-      "assetType": "smart_contract",
       "severity": "low",
-      "rewardModel": "fixed",
-      "fixedReward": 1000
+      "assetType": "smart_contract",
+      "fixedReward": 1000,
+      "rewardModel": "fixed"
+    },
+    {
+      "id": 8150,
+      "severity": "critical",
+      "assetType": "smart_contract",
+      "maxReward": 100000,
+      "rewardModel": "up_to",
+      "rewardCalculationPercentage": 10
     }
   ]
 }

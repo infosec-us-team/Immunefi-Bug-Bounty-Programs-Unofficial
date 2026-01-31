@@ -2,39 +2,39 @@
   "assets": [
     {
       "id": "39I4UubBcljARlt90OaRGQ",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016",
+      "type": "smart_contract",
+      "addedAt": "2022-05-10T15:42:40.273Z",
+      "revision": 2,
       "description": "XDaiForeignBridge: DAI-xDAI TokenBridge contract on the Ethereum Mainnet ",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-05-10T15:42:40.273Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "6VGumskpUySCP01OvbYYMn",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://blockscout.com/xdai/mainnet/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6",
+      "type": "smart_contract",
+      "addedAt": "2022-05-10T15:42:41.409Z",
+      "revision": 2,
       "description": "HomeBridgeErcToNative: DAI-xDAI TokenBridge contract on the Gnosis chain",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-05-10T15:42:41.409Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "4oQoN6nat7OLKqL8ib88eC",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671",
+      "type": "smart_contract",
+      "addedAt": "2022-05-10T15:42:42.480Z",
+      "revision": 2,
       "description": "ForeignOmnibridge: OmniBridge contract on the Ethereum Mainnet",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-05-10T15:42:42.480Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "1TEVjuzA8DmpOMImDZWzs3",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://blockscout.com/xdai/mainnet/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d",
+      "type": "smart_contract",
+      "addedAt": "2022-05-10T15:42:43.435Z",
+      "revision": 2,
       "description": "HomeOmnibridge: OmniBridge contract on the Gnosis chain",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-05-10T15:42:43.435Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "The smart contract regarding native xDAI bridging (XDaiForeignBridge and HomeBridgeErcToNative)  can be found at [https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge-upgrade-sda](https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge-upgrade-sda). The smart contracts regarding arbitrary ERC20 bridging (ForeignOmnibridge and HomeOmnibridge) can be found at [https://github.com/gnosischain/omnibridge/tree/master](https://github.com/gnosischain/omnibridge/tree/master).\n\nOnly those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf an impact can be caused to any other asset managed by Gnosis that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.",
@@ -105,6 +105,84 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 24,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed royalties"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 26,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed royalties"
+    },
+    {
+      "id": 56,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds for at least  1 week"
+    },
+    {
+      "id": 57,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing NFTs for at least  1 week"
+    },
+    {
+      "id": 58,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Miner-extractable value (MEV)"
+    },
+    {
+      "id": 29,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Smart contract unable to operate due to lack of token funds"
+    },
+    {
+      "id": 59,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing for profit"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 32,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of gas"
+    },
+    {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
+    },
+    {
+      "id": 60,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Any governance voting result manipulation"
+    },
+    {
       "id": 15,
       "type": "smart_contract",
       "severity": "critical",
@@ -145,111 +223,33 @@
       "type": "smart_contract",
       "severity": "critical",
       "title": "Unintended alteration of what the NFT represents (e.g. token URI, payload, artistic content)"
-    },
-    {
-      "id": 23,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of unclaimed yield"
-    },
-    {
-      "id": 24,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of unclaimed royalties"
-    },
-    {
-      "id": 25,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of unclaimed yield"
-    },
-    {
-      "id": 26,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of unclaimed royalties"
-    },
-    {
-      "id": 29,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Smart contract unable to operate due to lack of token funds"
-    },
-    {
-      "id": 31,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-    },
-    {
-      "id": 32,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Theft of gas"
-    },
-    {
-      "id": 33,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Unbounded gas consumption"
-    },
-    {
-      "id": 56,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing of funds for at least  1 week"
-    },
-    {
-      "id": 57,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing NFTs for at least  1 week"
-    },
-    {
-      "id": 58,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Miner-extractable value (MEV)"
-    },
-    {
-      "id": 59,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Block stuffing for profit"
-    },
-    {
-      "id": 60,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Any governance voting result manipulation"
     }
   ],
   "rewards": [
     {
-      "id": 8288,
-      "assetType": "smart_contract",
-      "severity": "critical",
-      "rewardModel": "range",
-      "maxReward": 2000000,
-      "minReward": 50000,
-      "rewardCalculationPercentage": 10
-    },
-    {
       "id": 6154,
-      "assetType": "smart_contract",
       "severity": "high",
-      "rewardModel": "range",
+      "assetType": "smart_contract",
       "maxReward": 50000,
-      "minReward": 10000
+      "minReward": 10000,
+      "rewardModel": "range"
     },
     {
       "id": 6155,
-      "assetType": "smart_contract",
       "severity": "medium",
-      "rewardModel": "range",
+      "assetType": "smart_contract",
       "maxReward": 10000,
-      "minReward": 1000
+      "minReward": 1000,
+      "rewardModel": "range"
+    },
+    {
+      "id": 8288,
+      "severity": "critical",
+      "assetType": "smart_contract",
+      "maxReward": 2000000,
+      "minReward": 50000,
+      "rewardModel": "range",
+      "rewardCalculationPercentage": 10
     }
   ]
 }

@@ -2,21 +2,21 @@
   "assets": [
     {
       "id": "27sVtrJRQEFDettJ84lagu",
-      "revision": 2,
-      "type": "blockchain_dlt",
       "url": "https://github.com/AstarNetwork/Astar",
+      "type": "blockchain_dlt",
+      "addedAt": "2022-05-31T16:30:00.000Z",
+      "revision": 2,
       "description": "Mainnet Astar (Included subfolders: runtime/)",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-05-31T16:30:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "6rJLhVifUyzzcnPytYfSrV",
-      "revision": 2,
-      "type": "websites_and_applications",
       "url": "https://github.com/AstarNetwork/astar-apps",
+      "type": "websites_and_applications",
+      "addedAt": "2022-05-31T16:30:00.000Z",
+      "revision": 2,
       "description": "Astar Portal (Included subfolders: src/)",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-05-31T16:30:00.000Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "Astar parachain on Polkadot are both included in the assets-in-scope.\n\nHowever, only those explicitly listed in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf an impact can be caused to any other asset managed by Astar Network that isn’t on this table but for which the impact is in the Impacts in Scope section, you are encouraged to submit it for the consideration of the project. This only applies to Critical impacts.",
@@ -92,6 +92,12 @@
   "customOutOfScopeInformation": "  - Spamming\n  - Any physical attacks against Astar property, or employees\n  - Phishing or other social engineering attacks against our Astar’s employees\n  - Any attack requiring successful phishing or another scam to be executed\n  - Astar network footprints such as employee email addresses, subdomains, whois info\n\n  - GitHub and other cloud platforms misconfiguration are considered web/app vulnerabilities. \n  - All vulnerabilities and attack methods that are listed in OWASP [https://owasp.org/www-community/attacks/](https://owasp.org/www-community/attacks/)\n",
   "customProhibitedActivities": [],
   "impacts": [
+    {
+      "id": 5845,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Vulnerabilities that allow an attacker to abuse the system by blocking or modifying protocol-level processes like governance or disrupt other users from performing their tasks."
+    },
     {
       "id": 1,
       "type": "blockchain_dlt",
@@ -253,62 +259,56 @@
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "GitHub misconfiguration leading to unauthorized change"
-    },
-    {
-      "id": 5845,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Vulnerabilities that allow an attacker to abuse the system by blocking or modifying protocol-level processes like governance or disrupt other users from performing their tasks."
     }
   ],
   "rewards": [
     {
       "id": 14652,
-      "assetType": "blockchain_dlt",
       "severity": "critical",
-      "rewardModel": "range",
+      "assetType": "blockchain_dlt",
       "maxReward": 250000,
       "minReward": 7500,
+      "rewardModel": "range",
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 14656,
-      "assetType": "websites_and_applications",
-      "severity": "critical",
-      "rewardModel": "range",
-      "maxReward": 15000,
-      "minReward": 7500,
-      "otherImpactMaxReward": 0
-    },
-    {
       "id": 14653,
+      "severity": "high",
       "assetType": "blockchain_dlt",
-      "severity": "high",
-      "rewardModel": "range",
       "maxReward": 50000,
-      "minReward": 3000
-    },
-    {
-      "id": 14657,
-      "assetType": "websites_and_applications",
-      "severity": "high",
-      "rewardModel": "range",
-      "maxReward": 7500,
-      "minReward": 2500
+      "minReward": 3000,
+      "rewardModel": "range"
     },
     {
       "id": 14654,
-      "assetType": "blockchain_dlt",
       "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 3000
+      "assetType": "blockchain_dlt",
+      "fixedReward": 3000,
+      "rewardModel": "fixed"
     },
     {
       "id": 14655,
-      "assetType": "blockchain_dlt",
       "severity": "low",
-      "rewardModel": "fixed",
-      "fixedReward": 1000
+      "assetType": "blockchain_dlt",
+      "fixedReward": 1000,
+      "rewardModel": "fixed"
+    },
+    {
+      "id": 14656,
+      "severity": "critical",
+      "assetType": "websites_and_applications",
+      "maxReward": 15000,
+      "minReward": 7500,
+      "rewardModel": "range",
+      "otherImpactMaxReward": 0
+    },
+    {
+      "id": 14657,
+      "severity": "high",
+      "assetType": "websites_and_applications",
+      "maxReward": 7500,
+      "minReward": 2500,
+      "rewardModel": "range"
     }
   ]
 }

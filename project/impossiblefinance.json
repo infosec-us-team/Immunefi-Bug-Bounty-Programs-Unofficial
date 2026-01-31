@@ -2,12 +2,12 @@
   "assets": [
     {
       "id": "f9BFrgfDvcF4IG7ji0z9H",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/ImpossibleFinance/launchpad-contracts",
+      "type": "smart_contract",
+      "addedAt": "2022-02-09T14:05:39.513Z",
+      "revision": 1,
       "description": null,
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-02-09T14:05:39.513Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "The ImpossibleRouter01.sol smart contract is considered as out-of-scope of the bug bounty program.\n\n*Please note that the current settings in the repository are optimized for running our test cases. These settings include changing the duration of “ONE_DAY” to 50 binance smart chain blocks (as opposed to 28800) and commenting out require statements in modifiers such as onlyGovernance in ImpossiblePair.sol and setRouter in ImpossibleFactory.sol. Specifically, we are aware that with these settings, if a router is not initialized upon contract deployment, an adversary can call setRouter and link a malicious router which takes advantage of how cheapSwap in ImpossiblePair.sol doesn’t perform K invariant checks. The scope of the bug bounty covers the “production version” of these contracts in which the 3 variables are uncommented instead of commented.*",
@@ -77,22 +77,10 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 15,
+      "id": 585,
       "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-    },
-    {
-      "id": 17,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
-    },
-    {
-      "id": 22,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Protocol insolvency"
+      "severity": "low",
+      "title": "Smart contract fails to deliver promised returns, but doesn’t lose value"
     },
     {
       "id": 23,
@@ -101,40 +89,16 @@
       "title": "Theft of unclaimed yield"
     },
     {
-      "id": 25,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of unclaimed yield"
-    },
-    {
-      "id": 31,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-    },
-    {
-      "id": 32,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Theft of gas"
-    },
-    {
-      "id": 33,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Unbounded gas consumption"
-    },
-    {
-      "id": 585,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Smart contract fails to deliver promised returns, but doesn’t lose value"
-    },
-    {
       "id": 586,
       "type": "smart_contract",
       "severity": "high",
       "title": "Any governance voting result manipulation"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
     },
     {
       "id": 587,
@@ -159,38 +123,74 @@
       "type": "smart_contract",
       "severity": "medium",
       "title": "Block stuffing for profit"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 32,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of gas"
+    },
+    {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
+    },
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
     }
   ],
   "rewards": [
     {
       "id": 8319,
-      "assetType": "smart_contract",
       "severity": "critical",
-      "rewardModel": "range",
+      "assetType": "smart_contract",
       "maxReward": 94000,
       "minReward": 50000,
+      "rewardModel": "range",
       "rewardCalculationPercentage": 10
     },
     {
       "id": 6470,
-      "assetType": "smart_contract",
       "severity": "high",
-      "rewardModel": "fixed",
-      "fixedReward": 20000
+      "assetType": "smart_contract",
+      "fixedReward": 20000,
+      "rewardModel": "fixed"
     },
     {
       "id": 6471,
-      "assetType": "smart_contract",
       "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 5000
+      "assetType": "smart_contract",
+      "fixedReward": 5000,
+      "rewardModel": "fixed"
     },
     {
       "id": 6472,
-      "assetType": "smart_contract",
       "severity": "low",
-      "rewardModel": "fixed",
-      "fixedReward": 1000
+      "assetType": "smart_contract",
+      "fixedReward": 1000,
+      "rewardModel": "fixed"
     }
   ]
 }

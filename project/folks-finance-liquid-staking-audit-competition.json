@@ -2,12 +2,12 @@
   "assets": [
     {
       "id": "5N5OtGiOi4qhuH39kfQJU9",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/Folks-Finance/algo-liquid-staking-contracts/blob/8bd890fde7981335e9b042a99db432e327681e1a/contracts/xalgo/consensus_v2.py",
+      "type": "smart_contract",
+      "addedAt": "2024-12-09T10:00:12.000Z",
+      "revision": 2,
       "description": "ConsensusV2 [651]",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-12-09T10:00:12.000Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "__Asset Accuracy Assurance__\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n__Build commands, Test commands, and instructions on how to run them:__\n\nYou can find the smart contract repository at [https://github.com/Folks-Finance/algo-liquid-staking-contracts](https://github.com/Folks-Finance/algo-liquid-staking-contracts). Follow the instructions in the README to get setup and be able to run the tests\n\n__Impact Terms__\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n- You cannot delete an added proposer.\n- A proposer’s balance may go below the minimum balance needed in order to be eligible for consensus rewards.\n- A decrease in the max proposer balance may lead to some proposer balances being temporarily above the limit. \n- Unclaimed fees are generating additional yield for everyone.\n- Unclaimed fees can be slightly reduced through often updates because of rounding down.\n- Loss of precision over time as the value of xALGO accumulates.\n- The smart contract doesn’t check for box cost payments - instead they are implicitly required.\n\n__Previous Audits__\n\nFolks Finance’s completed audit reports can be found at [https://github.com/Folks-Finance/audits/blob/50831a54420ed3e4513c8fa17a42f2bbd0338df1/Coinspect%20-%20Audit%20of%20Liquid%20Staking%20-%20August%202024.pdf](https://github.com/Folks-Finance/audits/blob/50831a54420ed3e4513c8fa17a42f2bbd0338df1/Coinspect%20-%20Audit%20of%20Liquid%20Staking%20-%20August%202024.pdf). Note that this is an audit on the previous version of the smart contract which shares similarities with the new version. Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Private Known Issues Reward Policy__\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward equal to that of a bug one severity lower.\n\n__Primacy of Impact vs Primacy of Rules__\n\nFolks Finance adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page.\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this audit competition and a leaderboard of the participants and their earnings.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Folks Finance has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
@@ -195,6 +195,12 @@
       "title": "Permanent freezing of unclaimed yield"
     },
     {
+      "id": 5267,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds for at least 1 hour"
+    },
+    {
       "id": 29,
       "type": "smart_contract",
       "severity": "medium",
@@ -211,37 +217,31 @@
       "type": "smart_contract",
       "severity": "low",
       "title": "Contract fails to deliver promised returns, but doesn't lose value"
-    },
-    {
-      "id": 5267,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing of funds for at least 1 hour"
     }
   ],
   "rewards": [
     {
-      "assetType": "smart_contract",
       "level": "critical",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "high",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "medium",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "low",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     }
   ]

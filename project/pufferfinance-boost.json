@@ -2,39 +2,39 @@
   "assets": [
     {
       "id": "32nobiKEqGuQr706GcgX5e",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://etherscan.io/address/0x3C28B7c7Ba1A1f55c9Ce66b263B33B204f2126eA#code",
+      "type": "smart_contract",
+      "addedAt": "2024-02-22T08:00:00.000Z",
+      "revision": 1,
       "description": "[TimeLock.sol] - [289 nSLOC]",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-02-22T08:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "Vp5HhNZo73EtJ8JTtlRsL",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://etherscan.io/address/0x7276925e42f9c4054afa2fad80fa79520c453d6a",
+      "type": "smart_contract",
+      "addedAt": "2024-02-22T08:00:00.000Z",
+      "revision": 1,
       "description": "[PufferDepositor.sol] - [208]",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-02-22T08:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "3NdyyZx2NPLR3ugCrVDF4L",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://etherscan.io/address/0xd9a442856c234a39a81a089c06451ebaa4306a72",
+      "type": "smart_contract",
+      "addedAt": "2024-02-22T08:00:00.000Z",
+      "revision": 1,
       "description": "[PufferVault.sol] - [295]",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-02-22T08:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "ZXgVte55zg0AVBmonSabG",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://etherscan.io/address/0xd9a442856c234a39a81a089c06451ebaa4306a72",
+      "type": "smart_contract",
+      "addedAt": "2024-02-22T08:00:00.000Z",
+      "revision": 1,
       "description": null,
-      "isPrimacyOfImpact": true,
-      "addedAt": "2024-02-22T08:00:00.000Z"
+      "isPrimacyOfImpact": true
     }
   ],
   "assetsBodyV2": "Puffer Finance’s codebase can be found at https://github.com/PufferFinance/pufETH/tree/main \n\n- There is a minor edit in PufferDepositor.sol github which doesn't match the deployed code. The code is basically the same functions, just the permit is moved to a separate file and the rest of the changes are related to that move. The deployed code is the determinator of whether a bug is valid.\n\nPuffer Depositor swap functions are in scope, but due to them being paused bugs will only be considered if they can bypass the pause mechanism. They technically pause in 2 days from now (Feb 21 2024) but we will consider them to already be paused at the beginning of this program.\n\n\n**Whitehat Educational Resources & Technical Info:**\n\n- Documentation: https://docs.puffer.fi/\n\n- [Decoding Puffer: The Future of Ethereum Restaking](https://medium.com/@puffer.fi/decoding-puffer-the-future-of-ethereum-restaking-28a8d7ee53da)\n- [Ethereum Restaking Redefined: A Deep Dive with Puffer’s CTO](https://medium.com/@puffer.fi/ethereum-restaking-redefined-a-deep-dive-with-puffers-cto-at-devconnect-2023-11f30c7a38e9)\n- [How Puffer’s Secure-Signer Reduces Slashing Risk](https://medium.com/@puffer.fi/how-puffers-secure-signer-reduces-slashing-risk-5f24dc2c57c)\n- [Demystify the Access Control Mechanism in Puffer Protocol](https://blocksec.com/blog/demystify-the-access-control-mechanism-in-puffer-protocol)\n\n\n**Non-Technical Resources:**\n\n- [Puffer Finance hits $850 million in TVL, now second-largest liquid restaking protocol](https://www.theblock.co/post/277137/puffer-finance-hits-850-million-in-tvl-now-second-largest-liquid-restaking-protocol)\n- [The Crunchy Carrot Campaign and Beyond](https://medium.com/@puffer.fi/the-crunchy-carrot-campaign-and-beyond-6bf2c5432923)\n- [Puffer Finance Raises $5.5M to Redefine Liquid ETH Staking](https://medium.com/@puffer.fi/a-push-for-decentralization-puffer-finance-raises-5-5m-to-redefine-liquid-eth-staking-936a61b750f7)\n- [Securing Ethereum Through Slash-Resistant and Decentralized Liquid Staking](https://medium.com/@puffer.fi/puffer-finance-securing-ethereum-through-slash-resistant-and-decentralized-liquid-staking-9da124d58752)\n- [Making a Splash in the LST Market](https://medium.com/@puffer.fi/puffer-finance-making-a-splash-in-the-lst-market-723b36a748c8)\n\n\n\n**Is this an upgrade of an existing system? If so, which? And what are the main differences?**\n\n- No, this is the first deployment we have made as part of our product offering. Upgrades to come later. \n\n\n\n**Which parts of the code are you most concerned about?**\n\n- The vault logic of Open Zeppelin’s that we have overridden\n  - We are not fully compliant with ERC 4626, because we have overridden some functionality. Namely, we have overriden the maxWithdraw() function, and we are not returning a value of 0, even though withdrawals are currently paused. The specs of ERC 4626 require global and user-specific limits to be factored into the result of this function, which we do not abide by. Similarly, maxRedeem() has the same non-compliance with ERC 4626 specs.\n- withdraw() and redeem() are disabled\n- EigenLayer integration\n\n\n\n**What attack vectors are you most concerned about?**\n\n- We’ve upgraded the logic dealing with the vault’s total assets, so perhaps the logic to calculate the shares each user has within the vault can be examined closely to ensure the vault still works as intended and there are no attacks to mess with the original accounting code of the vault \n\n\n**Which part(s) of the system do you want whitehats to attempt to break the most?**\n\n- Being able to steal, DoS, or lock up funds\n\n**Are there any assumed invariants that you want whitehats to attempt to break?**\n\n- No unauthorized parties should be able to move or withdraw funds from the vault\n\n\n\n**What ERC20 / ERC721 / ERC777 / ERC1155 token standards are supported? Which are not?**\n\n- Rebasing ERC20 (we will allow stETH and wstETH deposits into our vault)\n\n\n\n**What monitoring systems may you want to use as a reason to invalidate or downgrade an otherwise valid bug report?**\n\nMonitoring systems are only a valid reason to downgrade a bug if there is 100% certainty that the bug would be detected and fully prevented. Immunefi’s full policy and reasoning can be [read here](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring).\n\n- We are implementing BlockSec Phalcon and Hexagate monitoring to pause the contracts in case of any hack attempts on the contracts. The monitoring criteria is a work in progress and we are setting up tests in place to make sure the monitoring works as intended. \n\n\n\n**What Roles are there, and what capacities do they have?**\n\n- We have 3 different multisigs, the Community multisig, the Operations multisig, and the Pauser multisig. You may review their capacities within the following doc: https://blocksec.com/blog/demystify-the-access-control-mechanism-in-puffer-protocol\n\n\n\n\n\n**Are there trusted roles for which you would consider any bugs invalid, even if the roles are not intended to have that capacity?**\n\n- Since the multisig parties  are trusted to behave honestly, we would consider bugs where multisig members  can do malicious things as invalid\n\n\n**What external dependencies are there?**\n\n- Open Zeppelin Contracts and Open Zeppelin Upgradeable Contracts\n\n\n**Are there any unusual points about your protocol that may confuse whitehats?**\n\n- There is currently no way to withdraw or redeem assets from our vault. This is because that functionality will come later on in our product roadmap. \n\n\n**What is the test suite setup information?**\n\n- Use forge test\n- See README: https://github.com/PufferFinance/pufETH/blob/main/README.md \n\n**Public Disclosure of Known Issues**\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n\n- Inflation attack on erc4626 vaults: https://blog.openzeppelin.com/a-novel-defense-against-erc4626-inflation-attacks \n\n**Previous Audits**\n\nPuffer Finance’s completed audit reports can be found below. Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n- Slow Mist: https://github.com/slowmist/Knowledge-Base/blob/master/open-report-V2/smart-contract/SlowMist%20Audit%20Report%20-%20pufETH_en-us.pdf\n- BlockSec: https://github.com/blocksecteam/audit-reports/blob/main/solidity/blocksec_puffer_v1.0-signed.pdf\n- QuantStamp: https://github.com/PufferFinance/pufETH/blob/main/audits/Quantstamp-pufETH-v1.pdf  \n\n### Asset In Scope Policies\n\n**Asset Accuracy Assurance**\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n**Private Known Issues Reward Policy**\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid, but are downgraded one severity level.\n\n**Known Issue Assurance**\n\nPuffer Finance commits to providing Known Issue Assurance to bug submissions through their program. This means that Puffer Finance will either disclose known issues publicly, or at the very least, privately via a self-reported bug submission. \n\nIn a potential scenario of a mediation, this allows for a more objective and streamlined process, in order to prove that an issue is known. Otherwise, assuming the bug report is valid, it would result in the report being considered as in-scope, and due a reward.\n\n**Primacy of Impact vs Primacy of Rules**\n\nPuffer Finance adheres to the Primacy of Impact for all impacts.\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact ](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.",
@@ -426,22 +426,10 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 15,
+      "id": 34,
       "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-    },
-    {
-      "id": 17,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
-    },
-    {
-      "id": 22,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Protocol insolvency"
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
     },
     {
       "id": 23,
@@ -454,6 +442,12 @@
       "type": "smart_contract",
       "severity": "high",
       "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 4750,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds for at least 1 hour"
     },
     {
       "id": 30,
@@ -480,41 +474,47 @@
       "title": "Unbounded gas consumption"
     },
     {
-      "id": 34,
+      "id": 15,
       "type": "smart_contract",
-      "severity": "low",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
     },
     {
-      "id": 4750,
+      "id": 17,
       "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing of funds for at least 1 hour"
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
     }
   ],
   "rewards": [
     {
-      "assetType": "smart_contract",
       "level": "critical",
       "payout": "USD $200,000",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "high",
       "payout": "USD $50,000",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "medium",
       "payout": "USD $2,000",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "low",
       "payout": "USD $1,000",
+      "assetType": "smart_contract",
       "pocRequired": true
     }
   ]

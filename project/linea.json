@@ -2,66 +2,66 @@
   "assets": [
     {
       "id": "10mfwShB7bwMBi8snEtp3Q",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/Consensys/linea-monorepo/blob/a9a43aafe9004c043b61063373264e2c9217a978/contracts-tge/src/L1/LineaToken.sol",
+      "type": "smart_contract",
+      "addedAt": "2025-09-24T06:30:08.153Z",
+      "revision": 1,
       "description": "L1 LineaToken",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-09-24T06:30:08.153Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "1FPzD4dotx57KpWJxWMQzZ",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/Consensys/linea-monorepo/blob/a83412e247b7d352b905c906271138e97c1ee5a4/contracts/contracts/tokenBridge/TokenBridge.sol",
+      "type": "smart_contract",
+      "addedAt": "2025-09-10T15:22:40.709Z",
+      "revision": 2,
       "description": "TokenBridge.sol",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-09-10T15:22:40.709Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "3VbMArIG72Wl69rNbum0Qi",
-      "revision": 6,
-      "type": "smart_contract",
       "url": "https://github.com/Consensys/linea-monorepo/blob/a83412e247b7d352b905c906271138e97c1ee5a4/contracts/contracts/ZkEvmV2.sol",
+      "type": "smart_contract",
+      "addedAt": "2023-07-11T14:00:00.000Z",
+      "revision": 6,
       "description": "Rollup ZkEVMv2.sol",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2023-07-11T14:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "5jYVL8AED9m5hDaXSr4ETL",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/Consensys/linea-monorepo/blob/a9a43aafe9004c043b61063373264e2c9217a978/contracts-tge/src/L2/L2LineaToken.sol",
+      "type": "smart_contract",
+      "addedAt": "2025-09-29T20:48:36.614Z",
+      "revision": 1,
       "description": "L2 LineaToken",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-09-29T20:48:36.614Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "6Q0CDCPsGM3tUlA5NgLIAf",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/Consensys/linea-monorepo/blob/a83412e247b7d352b905c906271138e97c1ee5a4/contracts/contracts/messageService/l2/L2MessageService.sol",
+      "type": "smart_contract",
+      "addedAt": "2025-09-10T15:22:22.817Z",
+      "revision": 2,
       "description": "L2MessageService.sol",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-09-10T15:22:22.817Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "7K70pZ6znMGmIF2IRkt3cF",
-      "revision": 5,
-      "type": "smart_contract",
       "url": "https://github.com/Consensys/linea-monorepo/blob/a83412e247b7d352b905c906271138e97c1ee5a4/contracts/contracts/LineaRollup.sol",
+      "type": "smart_contract",
+      "addedAt": "2023-07-11T14:00:00.000Z",
+      "revision": 5,
       "description": "Rollup LineaRollup.sol",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2023-07-11T14:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "6lgarcovcirtWYOC2BUZZN",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://immunefi.com/bug-bounty/linea/scope/#top",
+      "type": "smart_contract",
+      "addedAt": "2025-10-01T14:59:11.013Z",
+      "revision": 1,
       "description": null,
-      "isPrimacyOfImpact": true,
-      "addedAt": "2025-10-01T14:59:11.013Z"
+      "isPrimacyOfImpact": true
     }
   ],
   "assetsBodyV2": null,
@@ -136,16 +136,10 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 15,
+      "id": 34,
       "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-    },
-    {
-      "id": 17,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
     },
     {
       "id": 32,
@@ -160,34 +154,40 @@
       "title": "Unbounded gas consumption"
     },
     {
-      "id": 34,
+      "id": 15,
       "type": "smart_contract",
-      "severity": "low",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
     }
   ],
   "rewards": [
     {
       "id": 35856,
-      "assetType": "smart_contract",
       "severity": "critical",
+      "assetType": "smart_contract",
+      "fixedReward": 100000,
       "rewardModel": "fixed",
-      "rewardCalculationPercentage": 0,
-      "fixedReward": 100000
+      "rewardCalculationPercentage": 0
     },
     {
       "id": 35857,
-      "assetType": "smart_contract",
       "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 5000
+      "assetType": "smart_contract",
+      "fixedReward": 5000,
+      "rewardModel": "fixed"
     },
     {
       "id": 35858,
-      "assetType": "smart_contract",
       "severity": "low",
-      "rewardModel": "fixed",
-      "fixedReward": 1000
+      "assetType": "smart_contract",
+      "fixedReward": 1000,
+      "rewardModel": "fixed"
     }
   ]
 }

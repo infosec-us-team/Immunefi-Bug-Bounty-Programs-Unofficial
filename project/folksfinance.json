@@ -2,21 +2,21 @@
   "assets": [
     {
       "id": "332cKgUZjh9d8eiL2AsJPa",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://docs.xapp.folks.finance/developers/contracts",
+      "type": "smart_contract",
+      "addedAt": "2024-09-26T08:15:12.081Z",
+      "revision": 1,
       "description": "Core",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-09-26T08:15:12.081Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "5Hesl9fBmF3YG5mtOVHOE9",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://docs.folks.finance/developer/contracts",
+      "type": "smart_contract",
+      "addedAt": "2022-05-10T15:54:58.801Z",
+      "revision": 2,
       "description": "Core",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-05-10T15:54:58.801Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "In the Github link in the Assets in Scope table, only Exact Match Verified smart contracts are considered as in-scope of the bug bounty program.",
@@ -96,10 +96,10 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 14,
+      "id": 34,
       "type": "smart_contract",
-      "severity": "critical",
-      "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results"
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
     },
     {
       "id": 15,
@@ -132,6 +132,18 @@
       "title": "Permanent freezing of unclaimed yield"
     },
     {
+      "id": 5368,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds for at least 48 hours"
+    },
+    {
+      "id": 14,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results"
+    },
+    {
       "id": 29,
       "type": "smart_contract",
       "severity": "medium",
@@ -144,18 +156,6 @@
       "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
     },
     {
-      "id": 34,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
-    },
-    {
-      "id": 5368,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing of funds for at least 48 hours"
-    },
-    {
       "id": 5369,
       "type": "smart_contract",
       "severity": "medium",
@@ -165,34 +165,34 @@
   "rewards": [
     {
       "id": 13618,
-      "assetType": "smart_contract",
       "severity": "critical",
-      "rewardModel": "range",
+      "assetType": "smart_contract",
       "maxReward": 200000,
       "minReward": 50000,
+      "rewardModel": "range",
       "rewardCalculationPercentage": 10
     },
     {
       "id": 13619,
-      "assetType": "smart_contract",
       "severity": "high",
-      "rewardModel": "range",
+      "assetType": "smart_contract",
       "maxReward": 50000,
-      "minReward": 10000
+      "minReward": 10000,
+      "rewardModel": "range"
     },
     {
       "id": 13620,
-      "assetType": "smart_contract",
       "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 5000
+      "assetType": "smart_contract",
+      "fixedReward": 5000,
+      "rewardModel": "fixed"
     },
     {
       "id": 13621,
-      "assetType": "smart_contract",
       "severity": "low",
-      "rewardModel": "fixed",
-      "fixedReward": 1000
+      "assetType": "smart_contract",
+      "fixedReward": 1000,
+      "rewardModel": "fixed"
     }
   ]
 }

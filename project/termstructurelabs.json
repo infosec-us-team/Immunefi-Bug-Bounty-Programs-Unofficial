@@ -2,57 +2,57 @@
   "assets": [
     {
       "id": "2qfzfAx3OBErYehBiEJJLj",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/term-structure/termmax-contract-v2",
+      "type": "smart_contract",
+      "addedAt": "2025-09-15T06:21:34.760Z",
+      "revision": 2,
       "description": "TermMax V2 smart contract. This is the most up-to-date contract and the primary contract to review.",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-09-15T06:21:34.760Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "42fd7DYaL9DjhWPGEatuGr",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://immunefi.com/",
+      "type": "smart_contract",
+      "addedAt": "2024-06-12T03:22:00.000Z",
+      "revision": 1,
       "description": "Primacy of Impact",
-      "isPrimacyOfImpact": true,
-      "addedAt": "2024-06-12T03:22:00.000Z"
+      "isPrimacyOfImpact": true
     },
     {
       "id": "4d8NC8roNqETfRTXFIXvFq",
-      "revision": 1,
-      "type": "websites_and_applications",
       "url": "https://curator.termmax.ts.finance",
+      "type": "websites_and_applications",
+      "addedAt": "2025-08-18T09:54:28.877Z",
+      "revision": 1,
       "description": "TermMax Curator tool",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-08-18T09:54:28.877Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "5KlKyfeDQplQgt36GvdRRd",
-      "revision": 5,
-      "type": "smart_contract",
       "url": "https://github.com/term-structure/termmax-contract",
+      "type": "smart_contract",
+      "addedAt": "2024-06-12T03:22:00.000Z",
+      "revision": 5,
       "description": "TermMax contracts V1. This is the old codebase.",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-06-12T03:22:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "6iVglIOrthhjr2uxyCImgY",
-      "revision": 2,
-      "type": "websites_and_applications",
       "url": "https://ts.finance",
+      "type": "websites_and_applications",
+      "addedAt": "2025-04-16T06:39:57.451Z",
+      "revision": 2,
       "description": "Term Structure Labs website",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-04-16T06:39:57.451Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "XcRAu9DMy5FTkj9rKYFS9",
-      "revision": 2,
-      "type": "websites_and_applications",
       "url": "https://app.termmax.ts.finance/",
+      "type": "websites_and_applications",
+      "addedAt": "2025-04-15T14:42:07.035Z",
+      "revision": 2,
       "description": "TermMax Taker App",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-04-15T14:42:07.035Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": null,
@@ -127,6 +127,24 @@
   "customOutOfScopeInformation": "",
   "customProhibitedActivities": [],
   "impacts": [
+    {
+      "id": 5507,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Taking down the application/website"
+    },
+    {
+      "id": 5687,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Subdomain takeover with already-connected wallet interaction (https://app.termmax.ts.finance, https://curator.termmax.ts.finance)"
+    },
+    {
+      "id": 5688,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Subdomain takeover without already-connected wallet interaction (https://app.termmax.ts.finance, https://curator.termmax.ts.finance)"
+    },
     {
       "id": 15,
       "type": "smart_contract",
@@ -204,59 +222,41 @@
       "type": "websites_and_applications",
       "severity": "high",
       "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:\n- HTML injection without JavaScript\n- Replacing existing text with arbitrary text\n- Arbitrary file uploads, etc."
-    },
-    {
-      "id": 5507,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Taking down the application/website"
-    },
-    {
-      "id": 5687,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Subdomain takeover with already-connected wallet interaction (https://app.termmax.ts.finance, https://curator.termmax.ts.finance)"
-    },
-    {
-      "id": 5688,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Subdomain takeover without already-connected wallet interaction (https://app.termmax.ts.finance, https://curator.termmax.ts.finance)"
     }
   ],
   "rewards": [
     {
       "id": 39371,
-      "assetType": "smart_contract",
       "severity": "critical",
-      "rewardModel": "range",
+      "assetType": "smart_contract",
       "maxReward": 50000,
       "minReward": 10000,
+      "rewardModel": "range",
       "rewardCalculationPercentage": 10
     },
     {
+      "id": 39372,
+      "severity": "high",
+      "assetType": "smart_contract",
+      "maxReward": 25000,
+      "minReward": 5000,
+      "rewardModel": "range"
+    },
+    {
       "id": 39373,
-      "assetType": "websites_and_applications",
       "severity": "critical",
-      "rewardModel": "range",
+      "assetType": "websites_and_applications",
       "maxReward": 10000,
       "minReward": 3000,
+      "rewardModel": "range",
       "otherImpactMaxReward": 0
     },
     {
-      "id": 39372,
-      "assetType": "smart_contract",
-      "severity": "high",
-      "rewardModel": "range",
-      "maxReward": 25000,
-      "minReward": 5000
-    },
-    {
       "id": 39374,
-      "assetType": "websites_and_applications",
       "severity": "high",
-      "rewardModel": "fixed",
-      "fixedReward": 1500
+      "assetType": "websites_and_applications",
+      "fixedReward": 1500,
+      "rewardModel": "fixed"
     }
   ]
 }

@@ -2,12 +2,12 @@
   "assets": [
     {
       "id": "5UH5nPIEmL5mdgvQOz5hbV",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/tinymanorg/tinyman-contracts-v1/tree/13acadd1a619d0fcafadd6f6c489a906bf347484/contracts",
+      "type": "smart_contract",
+      "addedAt": "2022-02-09T11:21:59.496Z",
+      "revision": 2,
       "description": "Smart Contracts",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-02-09T11:21:59.496Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "This bug bounty program applies only for Tinyman v1.1 contracts which includes validator approval, validator clear state and pool logic sig (stateless) programs. The Pool accounts are LogicSignature Contract accounts. The unique LogicSignature contract for each is generated from [pool_logicsig.teal.tmpl](https://github.com/tinymanorg/tinyman-contracts-v1/blob/8be3e7f8005bb131c51e10e82885a8e764d7a336/contracts/pool_logicsig.teal.tmpl). It does not exist on-chain.",
@@ -72,22 +72,16 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 15,
+      "id": 34,
       "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
     },
     {
-      "id": 17,
+      "id": 1701,
       "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
-    },
-    {
-      "id": 22,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Protocol insolvency"
+      "severity": "low",
+      "title": "Bootstrapping a pool with incorrect Pool Token properties"
     },
     {
       "id": 23,
@@ -120,22 +114,28 @@
       "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
     },
     {
-      "id": 34,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
-    },
-    {
-      "id": 1701,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Bootstrapping a pool with incorrect Pool Token properties"
-    },
-    {
       "id": 1702,
       "type": "smart_contract",
       "severity": "medium",
       "title": "Making pool accounts pay unnecessary fees"
+    },
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
     },
     {
       "id": 1703,
@@ -153,32 +153,32 @@
   "rewards": [
     {
       "id": 9044,
-      "assetType": "smart_contract",
       "severity": "critical",
+      "assetType": "smart_contract",
+      "fixedReward": 100000,
       "rewardModel": "fixed",
-      "rewardCalculationPercentage": 0,
-      "fixedReward": 100000
+      "rewardCalculationPercentage": 0
     },
     {
       "id": 9045,
-      "assetType": "smart_contract",
       "severity": "high",
-      "rewardModel": "fixed",
-      "fixedReward": 10000
+      "assetType": "smart_contract",
+      "fixedReward": 10000,
+      "rewardModel": "fixed"
     },
     {
       "id": 9046,
-      "assetType": "smart_contract",
       "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 5000
+      "assetType": "smart_contract",
+      "fixedReward": 5000,
+      "rewardModel": "fixed"
     },
     {
       "id": 9047,
-      "assetType": "smart_contract",
       "severity": "low",
-      "rewardModel": "fixed",
-      "fixedReward": 1000
+      "assetType": "smart_contract",
+      "fixedReward": 1000,
+      "rewardModel": "fixed"
     }
   ]
 }

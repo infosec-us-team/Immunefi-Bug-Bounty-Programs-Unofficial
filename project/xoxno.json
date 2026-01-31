@@ -2,39 +2,39 @@
   "assets": [
     {
       "id": "4GD8yyZFTv5IdcRu48ytwP",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/XOXNO/rs-lending/tree/master/common",
+      "type": "smart_contract",
+      "addedAt": "2025-09-16T08:01:12.414Z",
+      "revision": 2,
       "description": "Common Utils used across Controller and Liquidity Layer",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-09-16T08:01:12.414Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "53VzX1llrZVKMeKGotjFxV",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/XOXNO/rs-liquid-staking-sc/tree/main/liquid-staking/src",
+      "type": "smart_contract",
+      "addedAt": "2025-09-16T08:01:26.670Z",
+      "revision": 2,
       "description": "Liquid Staking of $EGLD used in Lending",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-09-16T08:01:26.670Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "6I49YgN4dPDMoPEzjGgahQ",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/XOXNO/rs-lending/tree/master/controller/src",
+      "type": "smart_contract",
+      "addedAt": "2025-09-16T08:00:39.857Z",
+      "revision": 2,
       "description": "Controller",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-09-16T08:00:39.857Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "Vo7Zh2qAINPYTKwcD3faQ",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/XOXNO/rs-lending/tree/master/liquidity_layer",
+      "type": "smart_contract",
+      "addedAt": "2025-09-16T08:00:55.767Z",
+      "revision": 2,
       "description": "Liquidity Layer Template",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-09-16T08:00:55.767Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": null,
@@ -110,6 +110,24 @@
   "customOutOfScopeInformation": null,
   "customProhibitedActivities": [],
   "impacts": [
+    {
+      "id": 5723,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Imprecision on accounting (balances, rates)"
+    },
+    {
+      "id": 5724,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Manipulation of interest rates (supply or borrow) with mechanisms not intended or limited by design"
+    },
+    {
+      "id": 5725,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Loss of rewards-to-be-accrued"
+    },
     {
       "id": 14,
       "type": "smart_contract",
@@ -211,59 +229,41 @@
       "type": "smart_contract",
       "severity": "medium",
       "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-    },
-    {
-      "id": 5723,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Imprecision on accounting (balances, rates)"
-    },
-    {
-      "id": 5724,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Manipulation of interest rates (supply or borrow) with mechanisms not intended or limited by design"
-    },
-    {
-      "id": 5725,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Loss of rewards-to-be-accrued"
     }
   ],
   "rewards": [
     {
       "id": 35212,
-      "assetType": "smart_contract",
       "severity": "critical",
-      "rewardModel": "range",
+      "assetType": "smart_contract",
       "maxReward": 50000,
       "minReward": 5000,
+      "rewardModel": "range",
       "rewardCalculationPercentage": 10
     },
     {
       "id": 35213,
-      "assetType": "smart_contract",
       "severity": "high",
-      "rewardModel": "range",
+      "assetType": "smart_contract",
       "maxReward": 5000,
-      "minReward": 3500
+      "minReward": 3500,
+      "rewardModel": "range"
     },
     {
       "id": 35214,
-      "assetType": "smart_contract",
       "severity": "medium",
-      "rewardModel": "range",
+      "assetType": "smart_contract",
       "maxReward": 3500,
-      "minReward": 2000
+      "minReward": 2000,
+      "rewardModel": "range"
     },
     {
       "id": 35215,
-      "assetType": "smart_contract",
       "severity": "low",
-      "rewardModel": "range",
+      "assetType": "smart_contract",
       "maxReward": 1500,
-      "minReward": 1000
+      "minReward": 1000,
+      "rewardModel": "range"
     }
   ]
 }

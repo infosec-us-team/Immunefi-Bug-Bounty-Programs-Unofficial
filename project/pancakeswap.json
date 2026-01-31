@@ -2,57 +2,57 @@
   "assets": [
     {
       "id": "4I3Xs76vaBmrAdpNRwmuGL",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/pancakeswap/infinity-universal-router",
+      "type": "smart_contract",
+      "addedAt": "2025-10-30T08:16:01.374Z",
+      "revision": 1,
       "description": "Pancakeswap Infinity Router",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-10-30T08:16:01.374Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "5Mybwl38SoAMbIs1Hvn05p",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/pancakeswap/pancake-v3-contracts",
+      "type": "smart_contract",
+      "addedAt": "2025-10-30T08:16:01.454Z",
+      "revision": 1,
       "description": "Pancakeswap V3",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-10-30T08:16:01.454Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "6HwLEqOpgtsbhpXStHqlEd",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/pancakeswap/infinity-core",
+      "type": "smart_contract",
+      "addedAt": "2025-10-30T08:16:01.554Z",
+      "revision": 1,
       "description": "Pancakeswap Infinity Core",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-10-30T08:16:01.554Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "7h98Bj3XvQGzq7ZDeiJ28W",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/pancakeswap/infinity-periphery",
+      "type": "smart_contract",
+      "addedAt": "2025-10-30T08:16:01.612Z",
+      "revision": 1,
       "description": "Pancakeswap Infinity Periphery",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-10-30T08:16:01.612Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "VQW86j81JaGjf4Q4H6BJk",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/pancakeswap/pancake-swap-periphery",
+      "type": "smart_contract",
+      "addedAt": "2025-10-30T08:16:01.444Z",
+      "revision": 2,
       "description": "Pancakeswap V2 Periphery ",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-10-30T08:16:01.444Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "gqfHES9sbEHfoWg3bvomY",
-      "revision": 4,
-      "type": "websites_and_applications",
       "url": "https://pancakeswap.finance/",
+      "type": "websites_and_applications",
+      "addedAt": "2022-02-17T14:05:15.343Z",
+      "revision": 4,
       "description": null,
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-02-17T14:05:15.343Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "Please note that for Website/App, only [https://pancakeswap.finance](https://pancakeswap.finance) is in scope. Other subdomains are not in scope.\n\nOFT related contracts are not in the scope of this program, unless the logic is specific to PancakeSwap’s implementation.\n\nIf you have found an issue with OFT related contracts, please report it to [https://immunefi.com/bounty/layerzero/](https://immunefi.com/bounty/layerzero/).",
@@ -127,6 +127,12 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
+      "id": 233,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Complete theft of unclaimed yield (dependent on the value at stake)"
+    },
+    {
       "id": 17,
       "type": "smart_contract",
       "severity": "critical",
@@ -191,12 +197,6 @@
       "type": "websites_and_applications",
       "severity": "medium",
       "title": "Redirecting users to malicious websites (open redirect)"
-    },
-    {
-      "id": 233,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Complete theft of unclaimed yield (dependent on the value at stake)"
     },
     {
       "id": 234,
@@ -304,47 +304,47 @@
   "rewards": [
     {
       "id": 35261,
-      "assetType": "smart_contract",
       "severity": "critical",
-      "rewardModel": "up_to",
+      "assetType": "smart_contract",
       "maxReward": 1000000,
+      "rewardModel": "up_to",
       "rewardCalculationPercentage": 5
     },
     {
-      "id": 35264,
-      "assetType": "websites_and_applications",
-      "severity": "critical",
-      "rewardModel": "fixed",
-      "otherImpactMaxReward": 0,
-      "fixedReward": 7500
-    },
-    {
       "id": 35262,
+      "severity": "high",
       "assetType": "smart_contract",
-      "severity": "high",
-      "rewardModel": "up_to",
-      "maxReward": 20000
-    },
-    {
-      "id": 35265,
-      "assetType": "websites_and_applications",
-      "severity": "high",
-      "rewardModel": "fixed",
-      "fixedReward": 4000
+      "maxReward": 20000,
+      "rewardModel": "up_to"
     },
     {
       "id": 35263,
-      "assetType": "smart_contract",
       "severity": "medium",
-      "rewardModel": "up_to",
-      "maxReward": 2000
+      "assetType": "smart_contract",
+      "maxReward": 2000,
+      "rewardModel": "up_to"
+    },
+    {
+      "id": 35264,
+      "severity": "critical",
+      "assetType": "websites_and_applications",
+      "fixedReward": 7500,
+      "rewardModel": "fixed",
+      "otherImpactMaxReward": 0
+    },
+    {
+      "id": 35265,
+      "severity": "high",
+      "assetType": "websites_and_applications",
+      "fixedReward": 4000,
+      "rewardModel": "fixed"
     },
     {
       "id": 35266,
-      "assetType": "websites_and_applications",
       "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 1500
+      "assetType": "websites_and_applications",
+      "fixedReward": 1500,
+      "rewardModel": "fixed"
     }
   ]
 }

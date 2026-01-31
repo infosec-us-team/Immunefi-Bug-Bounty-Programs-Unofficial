@@ -2,12 +2,12 @@
   "assets": [
     {
       "id": "4SmphuvPXknl9cJ92botjQ",
-      "revision": 2,
-      "type": "blockchain_dlt",
       "url": "https://github.com/monero-oxide/monero-oxide/tree/main",
+      "type": "blockchain_dlt",
+      "addedAt": "2025-09-09T14:58:00.000Z",
+      "revision": 2,
       "description": "monero-oxide",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-09-09T14:58:00.000Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": null,
@@ -73,22 +73,28 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 5703,
+      "id": 5756,
       "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Signing of unintended messages"
+      "severity": "high",
+      "title": "Incorrect/incomplete (in the academic sense) cryptographic formulae within a verifier's callstack"
     },
     {
-      "id": 5704,
+      "id": 5720,
       "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Reportedly received funds which weren’t actually received"
+      "severity": "high",
+      "title": "Incompatibilities with the targeted Monero consensus protocol which would require reimplementing notable sections of monero-oxide"
     },
     {
-      "id": 5705,
+      "id": 5755,
       "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Ability to forge proofs present with only the default features"
+      "severity": "low",
+      "title": "Incorrect/incomplete (in the academic sense) cryptographic formulae within a prover's callstack"
+    },
+    {
+      "id": 5846,
+      "type": "blockchain_dlt",
+      "severity": "low",
+      "title": "Undocumented fingerprints in created transactions, when compared to the targeted version of Monero’s wallet2"
     },
     {
       "id": 5716,
@@ -115,52 +121,46 @@
       "title": "Incompatibilities with the targeted Monero wallet protocol which would require reimplementing notable sections of monero-oxide"
     },
     {
-      "id": 5720,
+      "id": 5703,
       "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Incompatibilities with the targeted Monero consensus protocol which would require reimplementing notable sections of monero-oxide"
+      "severity": "critical",
+      "title": "Signing of unintended messages"
     },
     {
-      "id": 5755,
+      "id": 5704,
       "type": "blockchain_dlt",
-      "severity": "low",
-      "title": "Incorrect/incomplete (in the academic sense) cryptographic formulae within a prover's callstack"
+      "severity": "critical",
+      "title": "Reportedly received funds which weren’t actually received"
     },
     {
-      "id": 5756,
+      "id": 5705,
       "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Incorrect/incomplete (in the academic sense) cryptographic formulae within a verifier's callstack"
-    },
-    {
-      "id": 5846,
-      "type": "blockchain_dlt",
-      "severity": "low",
-      "title": "Undocumented fingerprints in created transactions, when compared to the targeted version of Monero’s wallet2"
+      "severity": "critical",
+      "title": "Ability to forge proofs present with only the default features"
     }
   ],
   "rewards": [
     {
       "id": 39607,
-      "assetType": "blockchain_dlt",
       "severity": "critical",
+      "assetType": "blockchain_dlt",
+      "fixedReward": 100000,
       "rewardModel": "fixed",
-      "rewardCalculationPercentage": 10,
-      "fixedReward": 100000
+      "rewardCalculationPercentage": 10
     },
     {
       "id": 39608,
-      "assetType": "blockchain_dlt",
       "severity": "high",
-      "rewardModel": "fixed",
-      "fixedReward": 10000
+      "assetType": "blockchain_dlt",
+      "fixedReward": 10000,
+      "rewardModel": "fixed"
     },
     {
       "id": 39609,
-      "assetType": "blockchain_dlt",
       "severity": "low",
-      "rewardModel": "fixed",
-      "fixedReward": 1000
+      "assetType": "blockchain_dlt",
+      "fixedReward": 1000,
+      "rewardModel": "fixed"
     }
   ]
 }

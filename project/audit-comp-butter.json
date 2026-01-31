@@ -2,21 +2,21 @@
   "assets": [
     {
       "id": "1Xd0wzccAx75KX6zWLmWHb",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/immunefi-team/audit-comp-butter-cfm-v1",
+      "type": "smart_contract",
+      "addedAt": "2025-01-23T10:00:00.000Z",
+      "revision": 2,
       "description": null,
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-01-23T10:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "3cZhkexgbsYOS2xZFoOBZs",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/immunefi-team/audit-comp-butter-cfm-v1-playmoney",
+      "type": "smart_contract",
+      "addedAt": "2025-01-23T10:00:00.000Z",
+      "revision": 1,
       "description": null,
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-01-23T10:00:00.000Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "__Asset Accuracy Assurance__\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n__Private Known Issues Reward Policy__\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward.\n\n__Primacy of Impact vs Primacy of Rules__\n\nButter adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page.\n\n__KYC Requirement__\n\nButter will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\nSecurity researchers are required to submit KYC within 14 days of KYC being requested, else their rewards may be forfeited. Immunefi may make exceptions due to extenuating circumstances.\n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this Audit Competition bug bounty and a leaderboard of the participants and their earnings.\n\n__Feasibility Limitations__\n\nWhen there is uncertainty about how feasible an attack is Immunefi will use our feasibility limitation standards to determine the severity of the report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Butter has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
@@ -158,57 +158,57 @@
   "knownIssues": [
     {
       "id": 24,
-      "description": "Known Issue",
       "link": "https://gist.github.com/lajarre/94f7af6a980da30f756654a2ca0f7a25",
+      "description": "Known Issue",
       "lastUpdatedAt": "2025-01-17T00:00:00.000Z",
       "relatedImpactInScope": "smart_contract"
     },
     {
       "id": 23,
-      "description": "Known Issue",
       "link": "https://gist.github.com/lajarre/8f2b808ee7549785e9cc0afbf002e900",
+      "description": "Known Issue",
       "lastUpdatedAt": "2025-01-17T00:00:00.000Z",
       "relatedImpactInScope": "smart_contract"
     },
     {
       "id": 25,
-      "description": "Known Issue",
       "link": "https://gist.github.com/lajarre/61495716497c704b2258b32e41a57d64",
+      "description": "Known Issue",
       "lastUpdatedAt": "2025-01-17T00:00:00.000Z",
       "relatedImpactInScope": "smart_contract"
     },
     {
       "id": 26,
-      "description": "Known Issue",
       "link": "https://gist.github.com/lajarre/fb7b857bdaa5765167e77220258049c8",
+      "description": "Known Issue",
       "lastUpdatedAt": "2025-01-17T00:00:00.000Z",
       "relatedImpactInScope": "smart_contract"
     },
     {
       "id": 27,
-      "description": "Known Issue",
       "link": "https://gist.github.com/lajarre/8aba7f4ac04583fdd6339279e14c3486",
+      "description": "Known Issue",
       "lastUpdatedAt": "2025-01-17T00:00:00.000Z",
       "relatedImpactInScope": "smart_contract"
     },
     {
       "id": 28,
-      "description": "Known Issue",
       "link": "https://gist.github.com/lajarre/92cd0ba594f6e4490bf4763020509d96",
+      "description": "Known Issue",
       "lastUpdatedAt": "2025-01-17T00:00:00.000Z",
       "relatedImpactInScope": "smart_contract"
     },
     {
       "id": 29,
-      "description": "Known Issue",
       "link": "https://gist.github.com/lajarre/d8c9741773272919d110dc5f728295c0",
+      "description": "Known Issue",
       "lastUpdatedAt": "2025-01-17T00:00:00.000Z",
       "relatedImpactInScope": "smart_contract"
     },
     {
       "id": 21,
-      "description": "Previous Audits",
       "link": "https://github.com/immunefi-team/audit-comp-butter-cfm-v1/tree/main/audits",
+      "description": "Previous Audits",
       "lastUpdatedAt": "2025-01-17T00:00:00.000Z",
       "relatedImpactInScope": "smart_contract"
     }
@@ -223,10 +223,28 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
+    },
+    {
       "id": 14,
       "type": "smart_contract",
       "severity": "critical",
       "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results"
+    },
+    {
+      "id": 30,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing"
+    },
+    {
+      "id": 34,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
     },
     {
       "id": 17,
@@ -253,16 +271,16 @@
       "title": "Permanent freezing of unclaimed yield"
     },
     {
+      "id": 5294,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds for at least 1 hour"
+    },
+    {
       "id": 29,
       "type": "smart_contract",
       "severity": "medium",
       "title": "Smart contract unable to operate due to lack of token funds"
-    },
-    {
-      "id": 30,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Block stuffing"
     },
     {
       "id": 31,
@@ -277,24 +295,6 @@
       "title": "Theft of gas"
     },
     {
-      "id": 33,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Unbounded gas consumption"
-    },
-    {
-      "id": 34,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
-    },
-    {
-      "id": 5294,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing of funds for at least 1 hour"
-    },
-    {
       "id": 5295,
       "type": "smart_contract",
       "severity": "medium",
@@ -303,27 +303,27 @@
   ],
   "rewards": [
     {
-      "assetType": "smart_contract",
       "level": "critical",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "high",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "medium",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "low",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     }
   ]

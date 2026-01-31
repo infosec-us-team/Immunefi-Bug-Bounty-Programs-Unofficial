@@ -2,12 +2,12 @@
   "assets": [
     {
       "id": "6bXntWlBIds3IkGJpnnOkI",
-      "revision": 2,
-      "type": "blockchain_dlt",
       "url": "https://github.com/firedancer-io/firedancer/releases",
+      "type": "blockchain_dlt",
+      "addedAt": "2024-09-18T13:00:00.000Z",
+      "revision": 2,
       "description": "Firedancer Latest Mainnet Release",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-09-18T13:00:00.000Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "The Firedancer codebase can be found at https://github.com/firedancer-io/firedancer/tree/main. \n\nDocumentation and further resources can be found at:\n\n- Documentation: [https://firedancer-io.github.io/firedancer/](https://firedancer-io.github.io/firedancer/)\n- Technical education: Technical articles, ReadMe's, whitepaper, etc.\n- [https://github.com/firedancer-io/firedancer/blob/main/README.md](https://github.com/firedancer-io/firedancer/blob/main/README.md)\n- [https://github.com/firedancer-io/firedancer/blob/main/src/disco/README.md](https://github.com/firedancer-io/firedancer/blob/main/src/disco/README.md)\n- All header files contain sufficient documentation about each component's function\n- Developer codebase walkthrough (recorded for the preceding contest): https://youtu.be/KJzZ5QApW2s\n- Non-technical education: introductory videos, protocol summaries, FAQs, etc\n- Solana Docs: https://solana.com/docs\n- How to build and run a Node [https://firedancer-io.github.io/firedancer/guide/getting-started.html](https://firedancer-io.github.io/firedancer/guide/getting-started.html)\n\nThe full Firedancer implementation now exists as a separate binary, but only the Frankendancer validator `fdctl` is in scope for this bug bounty program.\nFindings that apply exclusively to the full Firedancer binary (i.e., code not used by Frankendancer or fdctl) will be treated as informational (insight reports) and are not eligible for bounty rewards.\n\n\nThe Firedancer repository contains code for two validators:\n\n- The latest Firedancer mainnet release, lovingly nicknamed “Frankendancer”, a split between Firedancer and the existing Agave validator written in Rust\n- A full C-only Firedancer, completely replacing the existing Agave validator.\n\n\nThe full Firedancer code is behind a development flag, and findings in code that is only reachable in full Firedancer will be considered informational (aka insight reports).\n\n\nThe Frankendancer validator interfaces with the existing Agave validator written in Rust via an FFI interface. This FFI interface and the modifications to Agave to support such FFI are in scope, but bugs in the Agave validator itself that would impact existing Solana validators should be reported to the Agave bug bounty and are not considered in scope for the contest.\n\n\nThe directory and file listing are provided to help navigate the codebase and determine what is in scope. The ground truth for scope and impact will follow the production binary.",
@@ -222,35 +222,35 @@
   "rewards": [
     {
       "id": 40034,
-      "assetType": "blockchain_dlt",
       "severity": "critical",
-      "rewardModel": "range",
+      "assetType": "blockchain_dlt",
       "maxReward": 500000,
       "minReward": 100000,
+      "rewardModel": "range",
       "rewardCalculationPercentage": 0
     },
     {
       "id": 40035,
-      "assetType": "blockchain_dlt",
       "severity": "high",
-      "rewardModel": "range",
+      "assetType": "blockchain_dlt",
       "maxReward": 100000,
-      "minReward": 50000
+      "minReward": 50000,
+      "rewardModel": "range"
     },
     {
       "id": 40036,
-      "assetType": "blockchain_dlt",
       "severity": "medium",
-      "rewardModel": "range",
+      "assetType": "blockchain_dlt",
       "maxReward": 50000,
-      "minReward": 5000
+      "minReward": 5000,
+      "rewardModel": "range"
     },
     {
       "id": 40037,
-      "assetType": "blockchain_dlt",
       "severity": "low",
-      "rewardModel": "fixed",
-      "fixedReward": 5000
+      "assetType": "blockchain_dlt",
+      "fixedReward": 5000,
+      "rewardModel": "fixed"
     }
   ]
 }

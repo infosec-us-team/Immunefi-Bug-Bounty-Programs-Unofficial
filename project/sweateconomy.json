@@ -2,30 +2,30 @@
   "assets": [
     {
       "id": "1CUQYIF94opUrvyP9DUThH",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/sweatco/sweat-near/tree/main",
+      "type": "smart_contract",
+      "addedAt": "2023-03-31T18:00:00.000Z",
+      "revision": 2,
       "description": "FT Token",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2023-03-31T18:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "1GaJXbZYqcZ1nr7QSvKvmU",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/sweatco/sweat-jar/commit/663beb1883ae81cc0bd6b35945cb0749ab853d3f",
+      "type": "smart_contract",
+      "addedAt": "2023-11-14T17:29:02.163Z",
+      "revision": 2,
       "description": "DeFi",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2023-11-14T17:29:02.163Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "3SdkAPIZLct8r4pwXrH08O",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/sweatco/sweat-claim/tree/main",
+      "type": "smart_contract",
+      "addedAt": "2024-02-07T09:44:32.318Z",
+      "revision": 1,
       "description": " DeFi",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-02-07T09:44:32.318Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "The following assets can have their deployment addresses found at:\n- FT Token - [https://nearblocks.io/address/token.sweat ](https://nearblocks.io/address/token.sweat)\n- SWEAT DeFi Jars - [ https://nearblocks.io/address/jars.sweat]( https://nearblocks.io/address/jars.sweat)\n- SWEAT Claim - [https://nearblocks.io/address/claim.sweat](https://nearblocks.io/address/claim.sweat)\n\nHowever, only those in the Assets in Scope table are considered as in-scope of the bug bounty program. Only the master branch is in-scope\n\nIf an impact can be caused to any other asset managed by Sweat Foundation that isn’t on this table, but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for consideration by the project.",
@@ -96,42 +96,6 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 15,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-    },
-    {
-      "id": 16,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user NFTs, whether at-rest or in-motion, other than unclaimed royalties"
-    },
-    {
-      "id": 17,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
-    },
-    {
-      "id": 18,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of NFTs"
-    },
-    {
-      "id": 19,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Unauthorized minting of NFTs"
-    },
-    {
-      "id": 21,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Unintended alteration of what the NFT represents (e.g. token URI, payload, artistic content)"
-    },
-    {
       "id": 23,
       "type": "smart_contract",
       "severity": "high",
@@ -168,28 +132,64 @@
       "title": "Temporary freezing NFTs for at least 24 hours"
     },
     {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 16,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user NFTs, whether at-rest or in-motion, other than unclaimed royalties"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 18,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of NFTs"
+    },
+    {
+      "id": 19,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Unauthorized minting of NFTs"
+    },
+    {
       "id": 3960,
       "type": "smart_contract",
       "severity": "critical",
       "title": "Unauthorized minting of SWEAT"
+    },
+    {
+      "id": 21,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Unintended alteration of what the NFT represents (e.g. token URI, payload, artistic content)"
     }
   ],
   "rewards": [
     {
-      "id": 8285,
+      "id": 6144,
+      "severity": "high",
       "assetType": "smart_contract",
-      "severity": "critical",
-      "rewardModel": "range",
-      "maxReward": 2000000,
-      "minReward": 50000,
-      "rewardCalculationPercentage": 10
+      "fixedReward": 25000,
+      "rewardModel": "fixed"
     },
     {
-      "id": 6144,
+      "id": 8285,
+      "severity": "critical",
       "assetType": "smart_contract",
-      "severity": "high",
-      "rewardModel": "fixed",
-      "fixedReward": 25000
+      "maxReward": 2000000,
+      "minReward": 50000,
+      "rewardModel": "range",
+      "rewardCalculationPercentage": 10
     }
   ]
 }

@@ -2,39 +2,39 @@
   "assets": [
     {
       "id": "2txcdHJh31vEpTJMJgVEI2",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/jito-foundation/restaking/tree/master/restaking_core",
+      "type": "smart_contract",
+      "addedAt": "2024-11-04T10:00:41.000Z",
+      "revision": 1,
       "description": "Restaking Core [1009]",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-11-04T10:00:41.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "1FCy4bgRb52ybWj9g6eWds",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/jito-foundation/restaking/tree/master/restaking_program",
+      "type": "smart_contract",
+      "addedAt": "2024-11-04T10:00:41.000Z",
+      "revision": 1,
       "description": "Restaking Program [1370]",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-11-04T10:00:41.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "1sQxZZYIFp1uZW3spcXZtB",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/jito-foundation/restaking/tree/master/vault_core",
+      "type": "smart_contract",
+      "addedAt": "2024-11-04T10:00:41.000Z",
+      "revision": 1,
       "description": "Vault Core [3356]",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-11-04T10:00:41.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "5gZofwMN0kBZO5jzkWJr26",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/jito-foundation/restaking/tree/master/vault_program",
+      "type": "smart_contract",
+      "addedAt": "2024-11-04T10:00:41.000Z",
+      "revision": 1,
       "description": "Vault Program [2660]",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-11-04T10:00:41.000Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "Jito’s up-to-date codebase can be found at [https://github.com/jito-foundation/restaking](https://github.com/jito-foundation/restaking). Documentation and further resources can be found at [https://docs.restaking.jito.network](https://docs.restaking.jito.network).\n\n__Mid-Contest Code Updates__\n\nIn this contest bug fixes may be applied mid-contest. \n\nThe project is to keep changes private as far as possible. When changes need to be made public, then the changelog will be updated here & in the Jito Restaking Audit Competition Discord channel. Publicly fixed bugs are invalid and the scope is updated to the new code.\n\nAll bug reports before the fix was public will earn a reward. All bug reports after are invalid. If a new bug is introduced by their fix then it is valid for a reward.\n\n__Mid-Contest Changelog__\n\nNone\n\n__KYC Requirement__\n\nJito will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\nSecurity researchers are required to submit KYC within 14 days of KYC being requested, else their rewards may be forfeited. Immunefi may make exceptions due to extenuating circumstances.\n\n__Asset Accuracy Assurance__\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n__Private Known Issues Reward Policy__\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward equal to that of a bug one severity lower.\n\n__Primacy of Impact vs Primacy of Rules__\n\nJito adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page.\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this audit competition and a leaderboard of the participants and their earnings.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Jito has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
@@ -168,22 +168,28 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 15,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-    },
-    {
       "id": 17,
       "type": "smart_contract",
       "severity": "critical",
       "title": "Permanent freezing of funds"
     },
     {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
       "id": 23,
       "type": "smart_contract",
       "severity": "high",
       "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 5176,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of protocol revenue"
     },
     {
       "id": 25,
@@ -202,31 +208,25 @@
       "type": "smart_contract",
       "severity": "medium",
       "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-    },
-    {
-      "id": 5176,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of protocol revenue"
     }
   ],
   "rewards": [
     {
-      "assetType": "smart_contract",
       "level": "critical",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "high",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "medium",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     }
   ]

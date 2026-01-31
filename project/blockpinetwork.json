@@ -2,21 +2,21 @@
   "assets": [
     {
       "id": "4AHkbbH2oO5Uenqti9iL3y",
-      "revision": 1,
-      "type": "websites_and_applications",
       "url": "https://blockpi.io/",
+      "type": "websites_and_applications",
+      "addedAt": "2022-11-11T03:00:00.000Z",
+      "revision": 1,
       "description": "Main Web App",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-11-11T03:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "2SyJJoWb5gmhEWJqeI5ueC",
-      "revision": 1,
-      "type": "websites_and_applications",
       "url": "https://dashboard.blockpi.io/",
+      "type": "websites_and_applications",
+      "addedAt": "2022-11-11T03:00:00.000Z",
+      "revision": 1,
       "description": "Dashboard",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-11-11T03:00:00.000Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "Only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf an impact can be caused to any other asset managed by BlockPI that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project. This only applies to Critical and High impacts.",
@@ -101,30 +101,6 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 35,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Execute arbitrary system commands"
-    },
-    {
-      "id": 37,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Taking down the application/website"
-    },
-    {
-      "id": 42,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Direct theft of user funds"
-    },
-    {
-      "id": 49,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Subdomain takeover without already-connected wallet interaction"
-    },
-    {
       "id": 3547,
       "type": "websites_and_applications",
       "severity": "low",
@@ -167,6 +143,12 @@
       "title": "Improperly disclosing confidential user information such as email address, phone number, physical address, etc."
     },
     {
+      "id": 49,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Subdomain takeover without already-connected wallet interaction"
+    },
+    {
       "id": 3554,
       "type": "websites_and_applications",
       "severity": "medium",
@@ -179,16 +161,34 @@
       "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data"
     },
     {
+      "id": 35,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Execute arbitrary system commands"
+    },
+    {
       "id": 3556,
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys(this does not include non-sensitive environment variables, open source code, or usernames)"
     },
     {
+      "id": 37,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Taking down the application/website"
+    },
+    {
       "id": 3557,
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc."
+    },
+    {
+      "id": 42,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Direct theft of user funds"
     },
     {
       "id": 3558,
@@ -200,33 +200,33 @@
   "rewards": [
     {
       "id": 6538,
-      "assetType": "websites_and_applications",
       "severity": "critical",
-      "rewardModel": "range",
+      "assetType": "websites_and_applications",
       "maxReward": 10000,
       "minReward": 5000,
+      "rewardModel": "range",
       "otherImpactMaxReward": 0
     },
     {
       "id": 6539,
-      "assetType": "websites_and_applications",
       "severity": "high",
-      "rewardModel": "fixed",
-      "fixedReward": 2000
+      "assetType": "websites_and_applications",
+      "fixedReward": 2000,
+      "rewardModel": "fixed"
     },
     {
       "id": 6540,
-      "assetType": "websites_and_applications",
       "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 1500
+      "assetType": "websites_and_applications",
+      "fixedReward": 1500,
+      "rewardModel": "fixed"
     },
     {
       "id": 6541,
-      "assetType": "websites_and_applications",
       "severity": "low",
-      "rewardModel": "fixed",
-      "fixedReward": 1000
+      "assetType": "websites_and_applications",
+      "fixedReward": 1000,
+      "rewardModel": "fixed"
     }
   ]
 }

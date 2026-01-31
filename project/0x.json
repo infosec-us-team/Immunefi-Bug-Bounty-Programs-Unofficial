@@ -2,57 +2,57 @@
   "assets": [
     {
       "id": "2kq8YfrkfDfU3PjjmOLEaQ",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://immunefi.com/",
+      "type": "smart_contract",
+      "addedAt": "2024-07-30T16:00:00.000Z",
+      "revision": 1,
       "description": "Primacy of Impact",
-      "isPrimacyOfImpact": true,
-      "addedAt": "2024-07-30T16:00:00.000Z"
+      "isPrimacyOfImpact": true
     },
     {
       "id": "3q6Ww4Zmb5xTFDecNIOyP9",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/0xProject/0x-settler/tree/master/src",
+      "type": "smart_contract",
+      "addedAt": "2024-07-30T16:00:00.000Z",
+      "revision": 1,
       "description": "0x Settler",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-07-30T16:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "5Om3uqsmkOBGssW4r9QNx4",
-      "revision": 1,
-      "type": "websites_and_applications",
       "url": "https://matcha.xyz/",
+      "type": "websites_and_applications",
+      "addedAt": "2024-07-30T16:00:00.000Z",
+      "revision": 1,
       "description": "Matcha website",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-07-30T16:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "5oaLGfx87KH7r3uC74SD9v",
-      "revision": 1,
-      "type": "websites_and_applications",
       "url": "https://api.0x.org/gasless/",
+      "type": "websites_and_applications",
+      "addedAt": "2024-07-30T16:00:00.000Z",
+      "revision": 1,
       "description": "gasless API",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-07-30T16:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "6zLYnGVm3qvETl3rHRARrX",
-      "revision": 1,
-      "type": "websites_and_applications",
       "url": "https://api.0x.org/swap/",
+      "type": "websites_and_applications",
+      "addedAt": "2024-07-30T16:00:00.000Z",
+      "revision": 1,
       "description": "swap API",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-07-30T16:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "7Abi8kqlXJ6yiycwjtU6RD",
-      "revision": 1,
-      "type": "websites_and_applications",
       "url": "https://meta.matcha.xyz",
+      "type": "websites_and_applications",
+      "addedAt": "2025-07-24T14:11:15.161Z",
+      "revision": 1,
       "description": "DEX Meta Aggregator",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-07-24T14:11:15.161Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "Documentation and further resources can be found on [https://0x.org/docs/](https://0x.org/docs/)\n\nFor brevity regarding Smart Contract Assets\n\n- the source tree on GitHub ([https://github.com/0xProject/0x-settler/tree/master/src](https://github.com/0xProject/0x-settler/tree/master/src)) \n- Deployer:\n    - 0x00000000000004533Fe15556B1E086BB1A72cEae\n    - any contract holding a \"Deployer\" ERC721 token (each a \"Settler\")\n- AllowanceHolder:\n    - 0x0000000000001fF3684f28c67538d4D072C22734\n    - 0x0000000000005E88410CcDFaDe4a5EfaE4b49562\n    - 0x000000000000175a8b9bC6d539B3708EEd92EA6c\n- ERC2771 forwarding MultiCall\n    - 0x00000000000000CF9E3c5A26621af382fA17f24f\n- Cross-chain receiver factory\n    - 0x00000000000000304861c3aDfb80dd5ebeC96325\n- Pauser Safe module\n    - 0x1CeC01DC0fFEE5eB5aF47DbEc1809F2A7c601C30\n \n\nThe scope is limited to these addresses, but *is not limited to any chain*. These contracts are deployed to many mainnet chains (the test-nets are not in scope). Presently the supported mainnet chains are: Ethereum mainnet, Ethereum Sepolia, Polygon, Base, Optimism, Arbitrum, Blast, Bnb, Mode, World Chain, Gnosis, Fantom Sonic, Ink, Monad testnet, Avalanche, Unichain, Berachain, Scroll, HyperEvm, Katana, Mantle, Taiko, and Linea. There will be many new chains added in the near future.",
@@ -148,16 +148,28 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 17,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
-    },
-    {
       "id": 27,
       "type": "smart_contract",
       "severity": "high",
       "title": "Temporary freezing of funds"
+    },
+    {
+      "id": 4921,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:  HTML injection without JavaScript, Replacing existing text with arbitrary text, Arbitrary file uploads, etc"
+    },
+    {
+      "id": 4922,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:  Email, Password of the victim etc."
+    },
+    {
+      "id": 4923,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Improperly disclosing confidential user information, such as:  Email address, Phone number, Physical address, etc."
     },
     {
       "id": 29,
@@ -190,16 +202,58 @@
       "title": "Unbounded gas consumption"
     },
     {
+      "id": 4924,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:  Changing the name of user, Enabling/disabling notifications"
+    },
+    {
+      "id": 4925,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:  Reflected HTML injection, Loading external site data"
+    },
+    {
+      "id": 52,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Redirecting users to malicious websites (open redirect)"
+    },
+    {
+      "id": 4926,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
       "id": 35,
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Execute arbitrary system commands"
     },
     {
+      "id": 4927,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Retrieve sensitive data/files from a running server, such as:   /etc/shadow, database passwords, blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
+    },
+    {
       "id": 37,
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Taking down the application/website"
+    },
+    {
+      "id": 4928,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:   Changing registration information, Making trades, Withdrawals, etc."
     },
     {
       "id": 41,
@@ -214,60 +268,6 @@
       "title": "Direct theft of user funds"
     },
     {
-      "id": 52,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Redirecting users to malicious websites (open redirect)"
-    },
-    {
-      "id": 4921,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:  HTML injection without JavaScript, Replacing existing text with arbitrary text, Arbitrary file uploads, etc"
-    },
-    {
-      "id": 4922,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:  Email, Password of the victim etc."
-    },
-    {
-      "id": 4923,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Improperly disclosing confidential user information, such as:  Email address, Phone number, Physical address, etc."
-    },
-    {
-      "id": 4924,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:  Changing the name of user, Enabling/disabling notifications"
-    },
-    {
-      "id": 4925,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:  Reflected HTML injection, Loading external site data"
-    },
-    {
-      "id": 4926,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion"
-    },
-    {
-      "id": 4927,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Retrieve sensitive data/files from a running server, such as:   /etc/shadow, database passwords, blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
-    },
-    {
-      "id": 4928,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:   Changing registration information, Making trades, Withdrawals, etc."
-    },
-    {
       "id": 4929,
       "type": "websites_and_applications",
       "severity": "critical",
@@ -277,50 +277,50 @@
   "rewards": [
     {
       "id": 10630,
-      "assetType": "smart_contract",
       "severity": "critical",
-      "rewardModel": "range",
+      "assetType": "smart_contract",
       "maxReward": 1000000,
       "minReward": 100000,
+      "rewardModel": "range",
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 10633,
-      "assetType": "websites_and_applications",
-      "severity": "critical",
-      "rewardModel": "range",
-      "maxReward": 50000,
-      "minReward": 15000,
-      "otherImpactMaxReward": 0
-    },
-    {
       "id": 10631,
+      "severity": "high",
       "assetType": "smart_contract",
-      "severity": "high",
-      "rewardModel": "range",
       "maxReward": 100000,
-      "minReward": 35000
-    },
-    {
-      "id": 10634,
-      "assetType": "websites_and_applications",
-      "severity": "high",
-      "rewardModel": "fixed",
-      "fixedReward": 10000
+      "minReward": 35000,
+      "rewardModel": "range"
     },
     {
       "id": 10632,
-      "assetType": "smart_contract",
       "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 35000
+      "assetType": "smart_contract",
+      "fixedReward": 35000,
+      "rewardModel": "fixed"
+    },
+    {
+      "id": 10633,
+      "severity": "critical",
+      "assetType": "websites_and_applications",
+      "maxReward": 50000,
+      "minReward": 15000,
+      "rewardModel": "range",
+      "otherImpactMaxReward": 0
+    },
+    {
+      "id": 10634,
+      "severity": "high",
+      "assetType": "websites_and_applications",
+      "fixedReward": 10000,
+      "rewardModel": "fixed"
     },
     {
       "id": 10635,
-      "assetType": "websites_and_applications",
       "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 1000
+      "assetType": "websites_and_applications",
+      "fixedReward": 1000,
+      "rewardModel": "fixed"
     }
   ]
 }

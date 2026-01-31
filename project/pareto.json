@@ -2,21 +2,21 @@
   "assets": [
     {
       "id": "2J91J0Fz7AlXeSylq0C4EL",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://docs.pareto.credit/developers/addresses/product/credit-vaults",
+      "type": "smart_contract",
+      "addedAt": "2024-12-12T11:36:22.094Z",
+      "revision": 2,
       "description": null,
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-12-12T11:36:22.094Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "78BeyyEf1qYkMkTl8yAl4N",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://docs.pareto.credit/developers/addresses/product/usp",
+      "type": "smart_contract",
+      "addedAt": "2024-12-12T11:36:31.719Z",
+      "revision": 2,
       "description": null,
-      "isPrimacyOfImpact": null,
-      "addedAt": "2024-12-12T11:36:31.719Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "Only Senior Best Yield contracts will be considered in scope for the Best Yield. Governance and Utilities and ERC-4626 wrappers contracts are not covered under this bug bounty program. **Paused** contracts and contract market as **Deprecated**/**Decommissioned** in doc are not considered in scope",
@@ -86,24 +86,6 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 15,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-    },
-    {
-      "id": 17,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
-    },
-    {
-      "id": 22,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Protocol insolvency"
-    },
-    {
       "id": 23,
       "type": "smart_contract",
       "severity": "high",
@@ -128,34 +110,52 @@
       "title": "Temporary freezing of funds"
     },
     {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
       "id": 184,
       "type": "smart_contract",
       "severity": "critical",
       "title": "Miner-extractable value (MEV) if can freeze funds or cause protocol insolvency"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
     }
   ],
   "rewards": [
     {
       "id": 30309,
-      "assetType": "smart_contract",
       "severity": "critical",
-      "rewardModel": "up_to",
+      "assetType": "smart_contract",
       "maxReward": 50000,
+      "rewardModel": "up_to",
       "rewardCalculationPercentage": 10
     },
     {
       "id": 30310,
-      "assetType": "smart_contract",
       "severity": "high",
-      "rewardModel": "up_to",
-      "maxReward": 20000
+      "assetType": "smart_contract",
+      "maxReward": 20000,
+      "rewardModel": "up_to"
     },
     {
       "id": 30311,
-      "assetType": "smart_contract",
       "severity": "medium",
-      "rewardModel": "up_to",
-      "maxReward": 5000
+      "assetType": "smart_contract",
+      "maxReward": 5000,
+      "rewardModel": "up_to"
     }
   ]
 }

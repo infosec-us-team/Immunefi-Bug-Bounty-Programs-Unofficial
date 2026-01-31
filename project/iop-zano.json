@@ -84,8 +84,8 @@
   "knownIssues": [
     {
       "id": 31,
-      "description": "Any attacks related to lock time in transaction are out of scope. We removed this parameter from API but it still possible to create transaction with locked outputs. we are aware of this situation and it’s known to exist. Also, the default wallet behaviour is ignoring such transactions.",
       "link": "https://github.com/immunefi-team/zano-iop",
+      "description": "Any attacks related to lock time in transaction are out of scope. We removed this parameter from API but it still possible to create transaction with locked outputs. we are aware of this situation and it’s known to exist. Also, the default wallet behaviour is ignoring such transactions.",
       "lastUpdatedAt": "2025-02-13T00:00:00.000Z",
       "relatedImpactInScope": "websites_and_applications"
     }
@@ -104,78 +104,6 @@
       "type": "blockchain_dlt",
       "severity": "critical",
       "title": "Network not being able to confirm new transactions (total network shutdown)"
-    },
-    {
-      "id": 2,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
-    },
-    {
-      "id": 3,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Direct loss of funds"
-    },
-    {
-      "id": 4,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Permanent freezing of funds (fix requires hardfork)"
-    },
-    {
-      "id": 5,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Unintended chain split (network partition)"
-    },
-    {
-      "id": 6,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments"
-    },
-    {
-      "id": 7,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Causing network processing nodes to process transactions from the mempool beyond set parameters"
-    },
-    {
-      "id": 8,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "RPC API crash affecting programs with greater than or equal to 25% of the market capitalization on top of the respective layer"
-    },
-    {
-      "id": 9,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Increasing network processing node resource consumption by at least 30% without brute force actions, compared to the preceding 24 hours"
-    },
-    {
-      "id": 10,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Shutdown of greater than or equal to 30% of network processing nodes without brute force actions, but does not shut down the network"
-    },
-    {
-      "id": 11,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "A bug in the respective layer 0/1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk"
-    },
-    {
-      "id": 12,
-      "type": "blockchain_dlt",
-      "severity": "low",
-      "title": "Shutdown of greater than 10% or equal to but less than 30% of network processing nodes without brute force actions, but does not shut down the network"
-    },
-    {
-      "id": 13,
-      "type": "blockchain_dlt",
-      "severity": "low",
-      "title": "Modification of transaction fees outside of design parameters"
     },
     {
       "id": 35,
@@ -262,16 +190,16 @@
       "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Changing the first/last name of user\n- Enabling/disabling notifications"
     },
     {
-      "id": 51,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:\n- Reflected HTML Injection\n- Loading external site data"
-    },
-    {
       "id": 52,
       "type": "websites_and_applications",
       "severity": "medium",
       "title": "Redirecting users to malicious websites (open redirect)"
+    },
+    {
+      "id": 51,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:\n- Reflected HTML Injection\n- Loading external site data"
     },
     {
       "id": 53,
@@ -290,55 +218,127 @@
       "type": "websites_and_applications",
       "severity": "low",
       "title": "Temporarily disabling user to access target site, such as:\n- Locking up the victim from login\n- Cookie bombing, etc."
+    },
+    {
+      "id": 3,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Direct loss of funds"
+    },
+    {
+      "id": 2,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
+    },
+    {
+      "id": 4,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Permanent freezing of funds (fix requires hardfork)"
+    },
+    {
+      "id": 5,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Unintended chain split (network partition)"
+    },
+    {
+      "id": 6,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments"
+    },
+    {
+      "id": 7,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Causing network processing nodes to process transactions from the mempool beyond set parameters"
+    },
+    {
+      "id": 8,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "RPC API crash affecting programs with greater than or equal to 25% of the market capitalization on top of the respective layer"
+    },
+    {
+      "id": 10,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Shutdown of greater than or equal to 30% of network processing nodes without brute force actions, but does not shut down the network"
+    },
+    {
+      "id": 9,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Increasing network processing node resource consumption by at least 30% without brute force actions, compared to the preceding 24 hours"
+    },
+    {
+      "id": 11,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "A bug in the respective layer 0/1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk"
+    },
+    {
+      "id": 12,
+      "type": "blockchain_dlt",
+      "severity": "low",
+      "title": "Shutdown of greater than 10% or equal to but less than 30% of network processing nodes without brute force actions, but does not shut down the network"
+    },
+    {
+      "id": 13,
+      "type": "blockchain_dlt",
+      "severity": "low",
+      "title": "Modification of transaction fees outside of design parameters"
     }
   ],
   "rewards": [
     {
-      "assetType": "blockchain_dlt",
       "level": "critical",
       "payout": "portion of the Reward Pool",
+      "assetType": "blockchain_dlt",
       "pocRequired": true
     },
     {
-      "assetType": "blockchain_dlt",
       "level": "high",
       "payout": "portion of the Reward Pool",
+      "assetType": "blockchain_dlt",
       "pocRequired": true
     },
     {
-      "assetType": "blockchain_dlt",
       "level": "medium",
       "payout": "portion of the Reward Pool",
+      "assetType": "blockchain_dlt",
       "pocRequired": true
     },
     {
-      "assetType": "blockchain_dlt",
       "level": "low",
       "payout": "portion of the Reward Pool",
+      "assetType": "blockchain_dlt",
       "pocRequired": true
     },
     {
-      "assetType": "websites_and_applications",
       "level": "critical",
       "payout": "portion of the Reward Pool",
+      "assetType": "websites_and_applications",
       "pocRequired": true
     },
     {
-      "assetType": "websites_and_applications",
       "level": "high",
       "payout": "portion of the Reward Pool",
+      "assetType": "websites_and_applications",
       "pocRequired": true
     },
     {
-      "assetType": "websites_and_applications",
       "level": "medium",
       "payout": "portion of the Reward Pool",
+      "assetType": "websites_and_applications",
       "pocRequired": true
     },
     {
-      "assetType": "websites_and_applications",
       "level": "low",
       "payout": "portion of the Reward Pool",
+      "assetType": "websites_and_applications",
       "pocRequired": true
     }
   ]

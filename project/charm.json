@@ -2,30 +2,30 @@
   "assets": [
     {
       "id": "5mUVD7W2sZtIhl2Y3K1zjY",
-      "revision": 3,
-      "type": "smart_contract",
       "url": "https://github.com/charmfinance/alpha-vaults-v2-contracts/blob/main/contracts/AlphaProVault.sol",
+      "type": "smart_contract",
+      "addedAt": "2022-02-18T12:10:01.730Z",
+      "revision": 3,
       "description": null,
-      "isPrimacyOfImpact": null,
-      "addedAt": "2022-02-18T12:10:01.730Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "2pYIfndfVifzo5ik4MSt5c",
-      "revision": 2,
-      "type": "smart_contract",
       "url": "https://github.com/charmfinance/alpha-vaults-v2-contracts/blob/main/contracts/AlphaProVaultFactory.sol",
+      "type": "smart_contract",
+      "addedAt": "2023-08-10T18:48:43.910Z",
+      "revision": 2,
       "description": null,
-      "isPrimacyOfImpact": null,
-      "addedAt": "2023-08-10T18:48:43.910Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "6d87rRrXhC3pwsnVeel4JI",
-      "revision": 1,
-      "type": "smart_contract",
       "url": "https://github.com/charmfinance/alpha-vaults-v2-contracts/blob/main/contracts/CloneFactory.sol",
+      "type": "smart_contract",
+      "addedAt": "2023-08-10T18:48:40.618Z",
+      "revision": 1,
       "description": null,
-      "isPrimacyOfImpact": null,
-      "addedAt": "2023-08-10T18:48:40.618Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": null,
@@ -96,22 +96,10 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 15,
+      "id": 34,
       "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-    },
-    {
-      "id": 17,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
-    },
-    {
-      "id": 22,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Protocol insolvency"
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
     },
     {
       "id": 23,
@@ -138,6 +126,12 @@
       "title": "Smart contract unable to operate due to lack of token funds"
     },
     {
+      "id": 96,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing for profit"
+    },
+    {
       "id": 31,
       "type": "smart_contract",
       "severity": "medium",
@@ -156,59 +150,65 @@
       "title": "Unbounded gas consumption"
     },
     {
-      "id": 34,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
-    },
-    {
-      "id": 96,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Block stuffing for profit"
-    },
-    {
       "id": 97,
       "type": "smart_contract",
       "severity": "critical",
       "title": "Any governance voting result manipulation"
     },
     {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
       "id": 98,
       "type": "smart_contract",
       "severity": "critical",
       "title": "Miner-extractable value (MEV)"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
     }
   ],
   "rewards": [
     {
       "id": 9306,
-      "assetType": "smart_contract",
       "severity": "critical",
+      "assetType": "smart_contract",
+      "fixedReward": 20000,
       "rewardModel": "fixed",
-      "rewardCalculationPercentage": 0,
-      "fixedReward": 20000
+      "rewardCalculationPercentage": 0
     },
     {
       "id": 9307,
-      "assetType": "smart_contract",
       "severity": "high",
-      "rewardModel": "fixed",
-      "fixedReward": 7500
+      "assetType": "smart_contract",
+      "fixedReward": 7500,
+      "rewardModel": "fixed"
     },
     {
       "id": 9308,
-      "assetType": "smart_contract",
       "severity": "medium",
-      "rewardModel": "fixed",
-      "fixedReward": 3000
+      "assetType": "smart_contract",
+      "fixedReward": 3000,
+      "rewardModel": "fixed"
     },
     {
       "id": 9309,
-      "assetType": "smart_contract",
       "severity": "low",
-      "rewardModel": "fixed",
-      "fixedReward": 750
+      "assetType": "smart_contract",
+      "fixedReward": 750,
+      "rewardModel": "fixed"
     }
   ]
 }

@@ -2,21 +2,21 @@
   "assets": [
     {
       "id": "4VbhYMw35Qz9S0Fhjqtl8S",
-      "revision": 4,
-      "type": "blockchain_dlt",
       "url": "https://github.com/vechain/thor/compare/v2.3.2...release/hayabusa",
+      "type": "blockchain_dlt",
+      "addedAt": "2025-10-01T13:00:00.000Z",
+      "revision": 4,
       "description": "VeChain Hayabusa Release Branch - [8855 Go]",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-10-01T13:00:00.000Z"
+      "isPrimacyOfImpact": null
     },
     {
       "id": "6nP5i2Xa7OVmIqI6GkfSlj",
-      "revision": 3,
-      "type": "smart_contract",
       "url": "https://github.com/vechain/thor/blob/release/hayabusa/builtin/gen/staker.sol",
+      "type": "smart_contract",
+      "addedAt": "2025-10-01T13:00:00.000Z",
+      "revision": 3,
       "description": "builtin - [389 Sol]",
-      "isPrimacyOfImpact": null,
-      "addedAt": "2025-10-01T13:00:00.000Z"
+      "isPrimacyOfImpact": null
     }
   ],
   "assetsBodyV2": "**Build Commands, Test Commands, and How to Run Them**\n\n[https://github.com/vechain/thor-hayabusa](https://github.com/vechain/thor-hayabusa) provides some information in operating a public or validator node in the Hayabusa network and provides access to additional tools, faucet for funds, an explorer and inspector a tool that allows for easy interaction with deployed smart contracts.\n\n**Where might Security Researchers confuse out-of-scope code to be in-scope?**\n\nThe scope is limited to a particular release branch of code so the scope is very clear, see scope above.\n\n\n**Is this an upgrade of an existing system? If so, which? And what are the main differences?**\n\nYes, upgrading the consensus mechanism of VeChainThor from Proof of Authority (PoA) to Delegated Proof of Stake (DPoS). See the provided VIPs for details of the changes. \n\n**Where do you suspect there may be bugs and/or what attack vectors are you most concerned about?**\n\nThe change in the consensus mechanism and the distribution of rewards\n\n**What ERC20 / ERC721 / ERC777 / ERC1155 token standards are supported?**\n\nAll of the above listed standards are implemented on chain but do not form part of the upgrade.\n\n**What emergency actions may you want to use as a reason to downgrade an otherwise valid bug report?**\n\nThe fact that two traditional audits are taking place in parallel with this Attackathon.\n\n**What addresses would you consider any bug report requiring their involvement to be out of scope, as long as they operate within the privileges attributed to them?**\n\nThere is the executor address and stargate address which have privileged roles in the network and their actions so long as they operate within the privileges attributed to them are expected.\n\n**What addresses would you consider any bug report requiring their involvement be out of scope, even if they exceed the privileges attributed to them?**\n\nBoth the executor and stargate address are essentially out of scope as they are known addresses and operated by trusted third parties.\n\n**Which chains and/or networks is and will the code in scope be deployed to?**\n\nVeChainThor\n\n**What external dependencies are there?**\n\nThere are no new dependencies. All of the old dependencies are out of scope. \n\n**What are the most valuable educational resources already available? (Ie. Documentation, Explainer videos or articles, etc)**\n\nFor more information about the VeChain Hayabusa upgrade refer to, please visit the following resources:\n- https://docs.vechain.org/ \n- VeChainThor Hayabusa Upgrade Release Branch\n    - https://github.com/vechain/thor/tree/release/hayabusa \n- VeChain Hayabusa E2E Tests Repo\n    - https://github.com/vechain/hayabusa-e2e \n- VeChain Hayabusa Upgrade VIPs\n    - https://github.com/vechain/VIPs/blob/master/vips/VIP-253.md\n    - https://github.com/vechain/VIPs/blob/master/vips/VIP-254.md",
@@ -318,10 +318,10 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 1,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Network not being able to confirm new transactions (total network shutdown)"
+      "id": 34,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
     },
     {
       "id": 2,
@@ -366,16 +366,10 @@
       "title": "RPC API crash affecting programs with greater than or equal to 25% of the market capitalization on top of the respective layer"
     },
     {
-      "id": 9,
+      "id": 13,
       "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Increasing network processing node resource consumption by at least 30% without brute force actions, compared to the preceding 24 hours"
-    },
-    {
-      "id": 10,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Shutdown of greater than or equal to 30% of network processing nodes without brute force actions, but does not shut down the network"
+      "severity": "low",
+      "title": "Modification of transaction fees outside of design parameters"
     },
     {
       "id": 11,
@@ -384,16 +378,22 @@
       "title": "A bug in the respective layer 0/1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk"
     },
     {
+      "id": 10,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Shutdown of greater than or equal to 30% of network processing nodes without brute force actions, but does not shut down the network"
+    },
+    {
+      "id": 9,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Increasing network processing node resource consumption by at least 30% without brute force actions, compared to the preceding 24 hours"
+    },
+    {
       "id": 12,
       "type": "blockchain_dlt",
       "severity": "low",
       "title": "Shutdown of greater than 10% or equal to but less than 30% of network processing nodes without brute force actions, but does not shut down the network"
-    },
-    {
-      "id": 13,
-      "type": "blockchain_dlt",
-      "severity": "low",
-      "title": "Modification of transaction fees outside of design parameters"
     },
     {
       "id": 14,
@@ -444,6 +444,18 @@
       "title": "Permanent freezing of unclaimed royalties"
     },
     {
+      "id": 5728,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds for at least 24 hours"
+    },
+    {
+      "id": 1,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Network not being able to confirm new transactions (total network shutdown)"
+    },
+    {
       "id": 29,
       "type": "smart_contract",
       "severity": "medium",
@@ -468,18 +480,6 @@
       "title": "Unbounded gas consumption"
     },
     {
-      "id": 34,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
-    },
-    {
-      "id": 5728,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing of funds for at least 24 hours"
-    },
-    {
       "id": 5729,
       "type": "smart_contract",
       "severity": "medium",
@@ -488,51 +488,51 @@
   ],
   "rewards": [
     {
-      "assetType": "blockchain_dlt",
       "level": "critical",
       "payout": "Portion of the Reward Pool",
+      "assetType": "blockchain_dlt",
       "pocRequired": true
     },
     {
-      "assetType": "blockchain_dlt",
       "level": "high",
       "payout": "Portion of the Reward Pool",
+      "assetType": "blockchain_dlt",
       "pocRequired": true
     },
     {
-      "assetType": "blockchain_dlt",
       "level": "medium",
       "payout": "Portion of the Reward Pool",
+      "assetType": "blockchain_dlt",
       "pocRequired": true
     },
     {
-      "assetType": "blockchain_dlt",
       "level": "low",
       "payout": "Portion of the Reward Pool",
+      "assetType": "blockchain_dlt",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "critical",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "high",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "medium",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     },
     {
-      "assetType": "smart_contract",
       "level": "low",
       "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
       "pocRequired": true
     }
   ]
