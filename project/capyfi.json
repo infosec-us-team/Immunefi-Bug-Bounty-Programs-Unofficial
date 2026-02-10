@@ -99,6 +99,26 @@
       "description": "caETH",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_508e98f9-e2d1-49ab-824a-eee790ab44a7",
+      "url": "https://app.capyfi.com",
+      "type": "smart_contract",
+      "addedAt": "2026-02-06T13:39:50.230Z",
+      "revision": 0,
+      "description": "Primacy of Impact",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": true
+    },
+    {
+      "id": "db_b76aa9b9-62ba-456b-91cf-bd59604677db",
+      "url": "https://app.capyfi.com",
+      "type": "websites_and_applications",
+      "addedAt": "2026-02-06T13:40:16.232Z",
+      "revision": 0,
+      "description": "Primacy of Impact",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": true
     }
   ],
   "assetsBodyV2": null,
@@ -152,7 +172,7 @@
   "rewardsToken": "USDC",
   "slug": "capyfi",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-02-04T20:37:31.393Z",
+  "updatedDate": "2026-02-06T13:41:11.168Z",
   "impactsBody": null,
   "websiteUrl": "https://app.capyfi.com",
   "githubUrl": "https://github.com/Capyfi/capyfi-smart-contracts",
@@ -229,6 +249,12 @@
       "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
     },
     {
+      "id": 34,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
+    },
+    {
       "id": 35,
       "type": "websites_and_applications",
       "severity": "critical",
@@ -245,12 +271,6 @@
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Taking down the application/website"
-    },
-    {
-      "id": 39,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Taking and/modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:\n- Changing registration information\n- Commenting\n- Voting\n- Making trades\n- Withdrawals, etc."
     },
     {
       "id": 41,
@@ -299,41 +319,11 @@
       "type": "websites_and_applications",
       "severity": "medium",
       "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:\n- Reflected HTML Injection\n- Loading external site data"
-    },
-    {
-      "id": 52,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Redirecting users to malicious websites (open redirect)"
-    },
-    {
-      "id": 53,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Changing details of other users (including modifying browser local storage) without already-connected wallet interaction and with significant user interaction, such as:\n- Iframing leading to modifying the backend/browser state (must demonstrate impact with PoC)"
-    },
-    {
-      "id": 54,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Taking over broken or expired outgoing links, such as:\n- Social media handles, etc."
-    },
-    {
-      "id": 55,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Temporarily disabling user to access target site, such as:\n- Locking up the victim from login\n- Cookie bombing, etc."
-    },
-    {
-      "id": 34,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
     }
   ],
   "rewards": [
     {
-      "id": 38693,
+      "id": 40290,
       "severity": "critical",
       "assetType": "smart_contract",
       "maxReward": 1000000,
@@ -342,7 +332,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 38694,
+      "id": 40291,
       "severity": "high",
       "assetType": "smart_contract",
       "maxReward": 50000,
@@ -350,7 +340,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 38695,
+      "id": 40292,
       "severity": "medium",
       "assetType": "smart_contract",
       "maxReward": 10000,
@@ -358,7 +348,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 38696,
+      "id": 40293,
       "severity": "low",
       "assetType": "smart_contract",
       "maxReward": 5000,
@@ -366,7 +356,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 38697,
+      "id": 40294,
       "severity": "critical",
       "assetType": "websites_and_applications",
       "maxReward": 10000,
@@ -374,7 +364,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 38698,
+      "id": 40295,
       "severity": "high",
       "assetType": "websites_and_applications",
       "maxReward": 4000,
@@ -382,19 +372,12 @@
       "rewardModel": "range"
     },
     {
-      "id": 38699,
+      "id": 40296,
       "severity": "medium",
       "assetType": "websites_and_applications",
       "maxReward": 2000,
       "minReward": 1001,
       "rewardModel": "range"
-    },
-    {
-      "id": 38700,
-      "severity": "low",
-      "assetType": "websites_and_applications",
-      "fixedReward": 1000,
-      "rewardModel": "fixed"
     }
   ]
 }

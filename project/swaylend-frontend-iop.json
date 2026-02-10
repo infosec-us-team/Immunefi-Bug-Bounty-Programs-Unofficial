@@ -4,10 +4,21 @@
       "id": "7DdLMg3FbRStg9cfTFdmbz",
       "url": "https://github.com/Swaylend/swaylend-monorepo/tree/develop/apps/frontend",
       "type": "websites_and_applications",
-      "addedAt": "2024-11-12T10:00:00.000Z",
-      "revision": 1,
+      "addedAt": "2024-10-30T14:12:03.219Z",
+      "revision": 0,
       "description": "Frontend",
-      "isPrimacyOfImpact": null
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "98744",
+      "url": "https://immunefi.com/",
+      "type": "websites_and_applications",
+      "addedAt": "2026-02-06T15:58:36.804Z",
+      "revision": 0,
+      "description": "Primacy of Impact",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": true
     }
   ],
   "assetsBodyV2": "__Asset Accuracy Assurance__\n\nBugs found on assets incorrectly listed in-scope will be considered valid and be rewarded.\n\n__Private Known Issues Reward Policy__\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward.\n\n__Primacy of Impact vs Primacy of Rules__\n\nSwaylend: frontend adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page. \n\n__Eligibility Criteria__\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Security auditors that directly or indirectly participated in the audit review\n\n__Responsible Publication__\n\nWhitehats may publish their bug reports after they have been fixed & paid, or closed as invalid, with the following exceptions:\n- Bug reports in mediation may not be published until mediation has concluded and the bug report is resolved.\n\nImmunefi may publish bug reports submitted to this audit competition and a leaderboard of the participants and their earnings.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Swaylend has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).",
@@ -66,13 +77,13 @@
   ],
   "primaryPaymentWallet": "EVM",
   "prioritizedVulnerabilities": "The most critical things that should be tested are:\n\n- Withdrawing only assets that you supplied\n- Borrowing only the amount you're allowed (based on supplied collateral asset and collateral factor)\n- Repaying the borrowed amount before withdrawing collateral asset",
-  "productType": null,
+  "productType": [],
   "programOverview": "Swaylend is a leading lending protocol on the Fuel network. It is a fork of Compound V3.\n\nFor more information about Swaylend, please visit https://swaylend.com/\n\nSwaylend  provides rewards in UDSC, denominated in USD.",
   "programType": [
     "Websites and Applications"
   ],
   "project": "IOP | SwayLend Frontend",
-  "projectType": null,
+  "projectType": [],
   "rewardsBody": "The following reward terms are a summary, for the full details read our [IOP | SwayLend: Frontend - Reward Distribution Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/29893062996881-IOP-SwayLend-Frontend-Rewards-Terms). \n\nA reward pool of $30,000 USD will be distributed among participants, even if no valid bugs are found. \n\nDuplicates and private known issues are valid for a reward.\n\nRewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/).\n\nRewards will be distributed all at once based on Immunefi’s distribution formula after the event has concluded and the final bug reports have been resolved.\n\n__Insight Rewards Payment Terms__\n\nInsight Rewards: Portion of the Rewards Pool\n\n*The \"Insight\" severity was introduced on Audit Competition & Attackathon programs to recognize contributions that extend beyond identifying immediate vulnerabilities. Currently, it's not an option to select the Insight severity when submitting a report. However, our team or program will designate it accordingly if applicable. \"Insights\" underscores our commitment to valuing all types of contributions that contribute to a more secure environment and will always be rewarded. [View more information about Insights](https://immunefisupport.zendesk.com/hc/en-us/articles/13333032674961-Severity-Classification-System?utm_source=immunefi)\n\nDuplicates of Insight are not rewarded.",
   "rewardsPool": 30000,
   "primaryPool": 30000,
@@ -81,10 +92,10 @@
   "rewardsToken": "USDC",
   "slug": "swaylend-frontend-iop",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2025-01-16T18:51:04.549Z",
+  "updatedDate": "2026-01-29T22:03:15.303Z",
   "impactsBody": "__Whitehat Educational Resources & Technical Info__\n\nDocumentation: https://docs.swaylend.com/\n\n\n**Is this an upgrade of an existing system? If so, which? And what are the main differences?**\n\nSwaylend is the port of Compound V3 lending protocol and architecture in the Sway programming language for the Fuel Network.\n\n\n**What external dependencies are there?**\n\nThe frontend uses many external libraries, the most important dependencies related to smart contracts are: \n1. Fuel libraries for handling wallet connections, contract types and calling of smart contract methods.\n- @fuel-ts/contract\n- @fuels/connectors\n- @fuels/react\n- fuels\n\n2. Pyth libraries for handling fetching of price updates from their Hermes network and load Pyth contract ABI types. \n- @pythnetwork/hermes-client\n- @pythnetwork/pyth-fuel-js\n\n3. Other larger libraries used are:\n- Next.js 14\n- Tailwind\n- @tanstack/react-query\n- Zustand\n\n\n**What ERC20 / ERC721 / ERC777 / ERC1155 token standards are supported? Which are not?**\n\nOnly SRC-20 are supported, which are similar to ERC-20 standard but on the Fuel Network\n\n\n**Where might whitehats confuse out-of-scope code to be in-scope?**\n\nBugs found inside external libraries related to contract calls, specifically Fuel and Pyth libraries.\nWrong usage of the above libraries, still counts as in-scope.\n\n**Are there any unusual points about your protocol that may confuse whitehats?**\n\nPyth is used as a pull oracle by Swaylend. Pyth pull oracle information: https://docs.pyth.network/price-feeds/pull-updates\n\n**Where do you suspect there may be bugs?**\n\nSwaylend is the lending protocol that offers functionalities like other lending protocols, i.e., supplying base assets (in our case, USDC) and borrowing base assets in exchange for providing collateral assets. The most critical things that should be tested are:\n- Withdrawing only assets that you supplied\n- Borrowing only the amount you're allowed (based on supplied collateral asset and collateral factor)\n- Repaying the borrowed amount before withdrawing collateral asset\n\n\n__Public Disclosure of Known Issues__\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n\nThere are no known public disclosures for frontend\n\n__Previous Audits__\n\nSwaylend’s completed audit reports can be found at https://www.halborn.com/audits/swaylend. Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.",
   "websiteUrl": "https://swaylend.com/",
-  "githubUrl": "https://github.com/Swaylend/swaylend-monorepo/tree/develop/apps/frontend  https://app.swaylend.com/ ",
+  "githubUrl": "https://github.com/Swaylend/swaylend-monorepo/tree/develop/apps/frontend  https://app.swaylend.com/",
   "eligibilityCriteria": [],
   "responsiblePublicationCategory": null,
   "description": "Swaylend is a leading lending protocol on the Fuel network, based on a fork of Compound V3.\n\nFor more information, visit: https://swaylend.com/\n\n**IOP | Swaylend Frontend focuses on Web2 attack vectors. Please review the in-scope impacts.**\n\nSwaylend rewards are provided in USDC, denominated in USD.",
@@ -188,25 +199,25 @@
       "level": "critical",
       "payout": "Portion of the Reward Pool",
       "assetType": "websites_and_applications",
-      "pocRequired": true
+      "pocRequired": false
     },
     {
       "level": "high",
       "payout": "Portion of the Reward Pool",
       "assetType": "websites_and_applications",
-      "pocRequired": true
+      "pocRequired": false
     },
     {
       "level": "medium",
       "payout": "Portion of the Reward Pool",
       "assetType": "websites_and_applications",
-      "pocRequired": true
+      "pocRequired": false
     },
     {
       "level": "low",
       "payout": "Portion of the Reward Pool",
       "assetType": "websites_and_applications",
-      "pocRequired": true
+      "pocRequired": false
     }
   ]
 }
