@@ -207,7 +207,7 @@
   "rewardsToken": "USDC",
   "slug": "veda",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-01-29T22:01:23.648Z",
+  "updatedDate": "2026-02-04T18:32:43.009Z",
   "impactsBody": null,
   "websiteUrl": "https://veda.tech/",
   "githubUrl": "https://github.com/Veda-Labs/boring-vault/",
@@ -219,7 +219,15 @@
   ],
   "responsiblePublicationCategory": "category_2",
   "description": "Veda is a DeFi vault primitive, which is a protocol-level mechanism for pricing, accounting, securing, optimizing, and automating capital. Designed to be non-custodial, trust-minimized, and composable, Veda empowers businesses, asset issuers, protocols, chains, wallets and applications to build enterprise-grade DeFi products without reinventing complex smart contract and offchain infrastructure.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1249,
+      "link": "https://github.com/veda-Labs/boring-vault",
+      "description": "Known Issue: The protocol is aware that certain edge cases exist when vault.totalSupply() == 0. Reports requiring an empty vault as a precondition will not be eligible for reward, unless the vulnerability specifically targets the first-deposit mechanism.",
+      "lastUpdatedAt": "2026-01-01T07:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeWebAndApplications": null,
