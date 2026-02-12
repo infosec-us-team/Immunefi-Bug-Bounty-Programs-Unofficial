@@ -281,10 +281,9 @@
   "language": [],
   "launchDate": "2024-11-19T22:50:00.000Z",
   "logo": "https://images.ctfassets.net/t3wqy70tc3bv/ZfXCvEBrW9zv4R7VqmZg5/8ec5fed17af2d46128a91be5507f4e3f/starknet.png",
-  "maxBounty": 20000,
+  "maxBounty": 100000,
   "outOfScopeAndRules": null,
   "pocPerTypeAndSeverity": [
-    "smart_contract - low",
     "smart_contract - medium",
     "smart_contract - critical",
     "smart_contract - high"
@@ -310,7 +309,7 @@
   "rewardsToken": "USDC or STRK",
   "slug": "starknet-staking",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-02-05T11:32:13.767Z",
+  "updatedDate": "2026-02-11T09:28:59.947Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -375,68 +374,39 @@
       "title": "Temporary freezing of funds"
     },
     {
-      "id": 30,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Block stuffing"
-    },
-    {
-      "id": 29,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Smart contract unable to operate due to lack of token funds"
-    },
-    {
       "id": 31,
       "type": "smart_contract",
       "severity": "medium",
       "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
     },
     {
-      "id": 32,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Theft of gas"
-    },
-    {
       "id": 33,
       "type": "smart_contract",
       "severity": "medium",
       "title": "Unbounded gas consumption"
-    },
-    {
-      "id": 34,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
     }
   ],
   "rewards": [
     {
-      "id": 40216,
+      "id": 40757,
       "severity": "critical",
       "assetType": "smart_contract",
-      "fixedReward": 20000,
-      "rewardModel": "fixed",
+      "maxReward": 100000,
+      "minReward": 15000,
+      "rewardModel": "range",
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 40217,
+      "id": 40758,
       "severity": "high",
       "assetType": "smart_contract",
-      "fixedReward": 2500,
-      "rewardModel": "fixed"
+      "maxReward": 10000,
+      "minReward": 1500,
+      "rewardModel": "range"
     },
     {
-      "id": 40218,
+      "id": 40759,
       "severity": "medium",
-      "assetType": "smart_contract",
-      "fixedReward": 1000,
-      "rewardModel": "fixed"
-    },
-    {
-      "id": 40219,
-      "severity": "low",
       "assetType": "smart_contract",
       "fixedReward": 1000,
       "rewardModel": "fixed"
