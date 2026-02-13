@@ -138,7 +138,9 @@
   "boostedIntroStartingIn": "",
   "boostedLeaderboard": [],
   "boostedSummaryReport": null,
-  "ecosystem": [],
+  "ecosystem": [
+    "Rootstock"
+  ],
   "endDate": null,
   "evaluationEndDate": null,
   "features": [
@@ -180,7 +182,7 @@
   "rewardsToken": "USDC",
   "slug": "rootstocklabs",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-02-11T09:01:24.884Z",
+  "updatedDate": "2026-02-12T18:48:48.339Z",
   "impactsBody": "__Vector Definition__\n\n__Deployment assumptions__\n\n- HSM, middleware, and Powpeg-Node run on the same host.\n- HSM and middleware expose no external network interfaces (no inbound remote access paths).\n- Powpeg-Node is the only externally connected component, used to sync blockchain data and forward it to the middleware, and its public exposure is limited.\n\n__Remote__\n\n“Remote” means the attacker cannot directly reach the HSM or middleware over the network and has no local access to the host. The only realistic remote reachability is indirect, via untrusted but consensus-valid on-chain data produced and propagated by the RSK network, synchronized by Powpeg-Node, and forwarded to the middleware (and subsequently to the HSM) for processing, where it may trigger vulnerable parsing/validation/logic.\n\n__Local__\n\n“Local” means the attacker has obtained root (or equivalent) control of the host running Powpeg-Node, the middleware, and the HSM (for example via shell/SSH access, a compromised account, or malware), but does not require physical access to the machine or device. With this level of access, the attacker can directly issue commands to the HSM via its local interfaces, ultimately affecting HSM operations.\n\n__Physical__\n\n“Physical” means the attacker has obtained physical access to the HSM device, enabling direct interaction and potential hardware tampering. With this level of access, the attacker may be able to probe, manipulate, reset, fault, or modify the device or its connections, potentially bypassing logical protections and ultimately affecting HSM operations.",
   "websiteUrl": "https://www.rootstocklabs.com/",
   "githubUrl": "https://github.com/rsksmart",
@@ -192,7 +194,15 @@
   ],
   "responsiblePublicationCategory": "category_2",
   "description": "RootstockLabs, previously IOVLabs, have been longstanding contributors to Rootstock, Bitcoin’s DeFi layer. Launched in 2018, Rootstock allows anyone to develop apps and services on top of the planet’s most secure and decentralized financial infrastructure; Bitcoin. \nToday we continue to contribute to Rootstock’s evolution by building tools and technology focused on scaling Bitcoin and making it work for everyone.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1254,
+      "link": "https://docs.google.com/document/d/161O90SVWDMGG5x3jLFCf_j2ehk1D-aA_E4H9PaLEEzw/edit?tab=t.0#heading=h.cv82oamvvho",
+      "description": "False Positive Reports",
+      "lastUpdatedAt": "2026-02-11T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
   "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeWebAndApplications": "- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n  - This does not exclude reflected HTML injection with or without JavaScript\n  - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering",
