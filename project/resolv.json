@@ -551,9 +551,9 @@
       "isPrimacyOfImpact": false
     },
     {
-      "id": "98732",
+      "id": "98762",
       "url": "https://immunefi.com/",
-      "type": "smart_contract",
+      "type": "websites_and_applications",
       "addedAt": "2026-02-06T15:58:36.804Z",
       "revision": 0,
       "description": "Primacy of Impact",
@@ -561,9 +561,9 @@
       "isPrimacyOfImpact": true
     },
     {
-      "id": "98762",
+      "id": "98732",
       "url": "https://immunefi.com/",
-      "type": "websites_and_applications",
+      "type": "smart_contract",
       "addedAt": "2026-02-06T15:58:36.804Z",
       "revision": 0,
       "description": "Primacy of Impact",
@@ -623,7 +623,7 @@
   "rewardsToken": "USR",
   "slug": "resolv",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-01-29T22:04:09.323Z",
+  "updatedDate": "2026-02-06T22:56:07.250Z",
   "impactsBody": null,
   "websiteUrl": "https://resolv.xyz/",
   "githubUrl": "https://github.com/resolv-im",
@@ -635,7 +635,15 @@
   ],
   "responsiblePublicationCategory": "category_3",
   "description": "Resolv is a protocol maintaining USR, a stablecoin natively backed by Ether (ETH) and pegged to US Dollar.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1258,
+      "link": "https://etherscan.io/address/0x6c8984bc7DBBeDAf4F6b2FD766f16eBB7d10AAb4",
+      "description": "Rounding-based zero-allowance transfers - vulnerabilities where `transferSharesFrom` or similar functions allow share transfers without approval due to floor division rounding the underlying amount to zero. These attacks extract sub-wei value per transaction, making exploitation economically irrational (gas cost exceeds stolen value).",
+      "lastUpdatedAt": "2026-01-31T21:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeWebAndApplications": "- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n  - This does not exclude reflected HTML injection with or without JavaScript\n  - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering",
