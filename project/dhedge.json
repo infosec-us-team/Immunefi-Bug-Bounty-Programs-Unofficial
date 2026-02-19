@@ -1,27 +1,57 @@
 {
   "assets": [
     {
-      "id": "2tFRPfGbfDVpKv38yIIlIQ",
-      "url": "https://polygonscan.com/address/0x206CbDa3381e7afdF448621b90f549f89555A588#code",
+      "id": "98981",
+      "url": "https://polygonscan.com/address/0xfdc7b8bFe0DD3513Cc669bB8d601Cb83e2F69cB0",
       "type": "smart_contract",
-      "addedAt": "2022-02-12T09:43:55.984Z",
+      "addedAt": "2026-02-17T15:53:24.620Z",
       "revision": 0,
-      "description": "Governance",
+      "description": "PoolFactory and linked contracts",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
     },
     {
-      "id": "753yMsyh7HWCL3tQUBEBWv",
-      "url": "https://polygonscan.com/address/0xfdc7b8bFe0DD3513Cc669bB8d601Cb83e2F69cB0#code",
+      "id": "98982",
+      "url": "https://optimistic.etherscan.io/address/0x5e61a079A178f0E5784107a4963baAe0c5a680c6",
       "type": "smart_contract",
-      "addedAt": "2022-02-12T09:44:25.384Z",
+      "addedAt": "2026-02-17T15:53:24.620Z",
       "revision": 0,
-      "description": "Pool Factory Proxy",
+      "description": "PoolFactory and linked contracts",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "98983",
+      "url": "https://etherscan.io/address/0x96D33bCF84DdE326014248E2896F79bbb9c13D6d",
+      "type": "smart_contract",
+      "addedAt": "2026-02-17T15:53:24.620Z",
+      "revision": 0,
+      "description": "PoolFactory and linked contracts",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "98984",
+      "url": "https://basescan.org/address/0x49Afe3abCf66CF09Fab86cb1139D8811C8afe56F",
+      "type": "smart_contract",
+      "addedAt": "2026-02-17T15:53:24.620Z",
+      "revision": 0,
+      "description": "PoolFactory and linked contracts",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "98985",
+      "url": "https://arbiscan.io/address/0xffFb5fB14606EB3a548C113026355020dDF27535",
+      "type": "smart_contract",
+      "addedAt": "2026-02-17T15:53:24.620Z",
+      "revision": 0,
+      "description": "PoolFactory and linked contracts",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
     }
   ],
-  "assetsBodyV2": "dHEDGE deployed contracts that are currently linked to the Pool Factory are considered in scope, including other chains such as Optimism.",
+  "assetsBodyV2": "Deployed contracts that are currently linked to the PoolFactory are considered in scope. Linked contracts include, but not limited to: vault implementation contracts (PoolLogic, PoolManagerLogic), numerous contract/asset guards (3rd party integrations related code) and price aggregator contracts used for assets pricing.",
   "boostedIntroEvaluating": "",
   "boostedIntroFinished": "",
   "boostedIntroLive": "",
@@ -29,6 +59,10 @@
   "boostedLeaderboard": [],
   "boostedSummaryReport": null,
   "ecosystem": [
+    "Arbitrum",
+    "Base",
+    "ETH",
+    "Optimism",
     "Polygon"
   ],
   "endDate": null,
@@ -47,7 +81,7 @@
   "outOfScopeAndRules": null,
   "pocPerTypeAndSeverity": [],
   "primaryPaymentWallet": "EVM",
-  "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__\n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces",
+  "prioritizedVulnerabilities": "_blank_",
   "productType": [
     "Asset Management"
   ],
@@ -59,7 +93,7 @@
   "projectType": [
     "Defi"
   ],
-  "rewardsBody": "![Screenshot 2023-03-22 at 2.14.14 PM](//images.ctfassets.net/t3wqy70tc3bv/7phFwTw1I2KTlieqdYifvw/cf2d7363fa764395eb54203899318794/Screenshot_2023-03-22_at_2.14.14_PM.png)\n\nRewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nThere is one exception for this bug bounty program, which overrides one vulnerability in the vulnerability scale, in the above Immunefi Vulnerability Severity Classification System:\n  - The vulnerability of: “Token holders temporarily unable to transfer holdings” will be classified under this bug bounty program as a medium vulnerability. \n\nVulnerabilities marked as “Acknowledged” in the [https://www.certik.org/projects/dhedge](https://www.certik.org/projects/dhedge) are not eligible for a reward.\n\ndHedge vaults are trust minimized, meaning that the vault manager may not follow a set strategy, or may make bad trades, including trades with poor slippage. A complete loss of funds is possible via poor risk-management strategies by the manager. These types of losses are not in scope for the bounty.\n\nPayouts are handled by the __dHEDGE__ team directly and are denominated in USD. However, payouts are done in __USDC__.\n\n__Please note, from May, 22nd through June 17th, dHEDGE will be undergoing a Public Audit. During this time, any in-scope bug submission reported to this program, that was also submitted for the contest, by one or more reporters, will be considered a 'Known Issue' and closed as out of scope. Additionally, valid bug reports submitted during the audit may have their rewards delayed until the audit is completed.A full list of reported known issues will be provided, and this program will be updated once the audit is completed.__",
+  "rewardsBody": "If a vulnerability is found in integration-related contracts (such as contract guards or asset guards), the funds at risk should be calculated per chain, based on which deployments actually include the affected integration.\n\nIn the dHEDGE system, managers/traders are generally not considered trusted, and issues exploitable by a manager/trader are typically treated as putting user funds at risk. However, this assumption does not apply to vaults managed directly by the protocol team. Vaults operated by dHEDGE itself or by incubated protocols under its operational control (e.g., Toros, mStable) should be considered trusted. Therefore, if a vulnerability is exploitable only by a permissioned manager/trader, the funds at risk should exclude vaults under direct team management.\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -67,12 +101,12 @@
   "rewardsToken": "USDC",
   "slug": "dhedge",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-01-29T22:00:48.701Z",
-  "impactsBody": null,
-  "websiteUrl": null,
-  "githubUrl": null,
+  "updatedDate": "2026-02-17T16:15:11.006Z",
+  "impactsBody": "dHEDGE vaults are trust minimized, meaning that the vault manager may not follow a set strategy, or may make bad trades, including trades with poor slippage. A complete loss of funds is possible via poor risk-management strategies by the manager. These types of losses are not in scope for the bounty.",
+  "websiteUrl": "https://dhedge.org/",
+  "githubUrl": "https://github.com/dhedge/V2-Public",
   "eligibilityCriteria": [],
-  "responsiblePublicationCategory": null,
+  "responsiblePublicationCategory": "category_3",
   "description": "dHEDGE is a one-stop location for managing investment activities on the blockchain where you can put your capital to work in different strategies based on a transparent track record. Multi-chain, non-custodial, decentralized asset management integrated with multiple protocols; allowing for trades, providing liquidity and yield farming.",
   "knownIssues": [],
   "defaultOutOfScopeBlockchain": null,
@@ -85,128 +119,39 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 1280,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Permanent loss or freezing of funds $1m+ (Very Unlikely)"
-    },
-    {
-      "id": 1281,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Permanent loss or freezing of funds $100k+ (Unlikely)"
-    },
-    {
-      "id": 1282,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Temporary freezing of funds"
-    },
-    {
-      "id": 1283,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Loss of yield"
-    },
-    {
-      "id": 1284,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Miner-extractable value (MEV)"
-    },
-    {
-      "id": 1285,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Unable to call smart contract"
-    },
-    {
-      "id": 1286,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent loss or freezing of funds $10m+ (Possible)"
-    },
-    {
-      "id": 1287,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent loss or freezing of funds $100k+ (Very Likely)"
-    },
-    {
-      "id": 1288,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Permanent loss or freezing of funds $10m+ (Very Unlikely)"
-    },
-    {
-      "id": 1289,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Permanent loss or freezing of funds $1m+ (Unlikely)"
-    },
-    {
-      "id": 1290,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Permanent loss or freezing of funds $100k+ (Possible)"
-    },
-    {
-      "id": 1291,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Temporary freezing of funds (Very Likely)"
-    },
-    {
-      "id": 1292,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Loss of yield (Very Likely)"
-    },
-    {
-      "id": 1293,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Miner-extractable value (MEV)"
-    },
-    {
-      "id": 1294,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Unable to call smart contract"
-    },
-    {
-      "id": 1295,
+      "id": 15,
       "type": "smart_contract",
       "severity": "critical",
-      "title": "Permanent loss or freezing of funds"
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 27,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds"
     }
   ],
   "rewards": [
     {
-      "id": 9433,
+      "id": 41068,
+      "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
-      "fixedReward": 50000,
-      "rewardModel": "fixed",
-      "rewardCalculationPercentage": 0
+      "maxReward": 50000,
+      "minReward": 2000,
+      "rewardModel": "range",
+      "rewardCalculationPercentage": 0.1
     },
     {
-      "id": 9434,
+      "id": 41069,
+      "primacy": null,
       "severity": "high",
-      "assetType": "smart_contract",
-      "fixedReward": 10000,
-      "rewardModel": "fixed"
-    },
-    {
-      "id": 9435,
-      "severity": "medium",
-      "assetType": "smart_contract",
-      "fixedReward": 2000,
-      "rewardModel": "fixed"
-    },
-    {
-      "id": 9436,
-      "severity": "low",
       "assetType": "smart_contract",
       "fixedReward": 1000,
       "rewardModel": "fixed"
