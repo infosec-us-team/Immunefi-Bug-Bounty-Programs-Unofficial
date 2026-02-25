@@ -155,7 +155,7 @@
   ],
   "launchDate": "2022-02-11T15:00:00.000Z",
   "logo": "https://images.ctfassets.net/t3wqy70tc3bv/zjpjBpSpX6wiIdgfoLeKc/b7c1a836bbc7a4a850623ddee15f3158/wormhole-logo-full-color-rgb-2000px_72ppi__1_.png",
-  "maxBounty": 5000000,
+  "maxBounty": 2000000,
   "outOfScopeAndRules": ".",
   "pocPerTypeAndSeverity": [
     "blockchain_dlt - critical",
@@ -182,7 +182,7 @@
     "Blockchain",
     "Infrastructure"
   ],
-  "rewardsBody": "Please note that for any valid Critical severity reports, the maximum reward will be up to $5,000,000 USD, paid in W token, with the following tiers: \n\n- __Tier 1:__ Ability to Extract the TVL of all chains: Up to $5,000,000 in W\n- __Tier 2:__ Ability to Extract the TVL of a single chain: Up to $2,500,000 in W \n- __Tier 3:__ Ability to permanently deny access to the TVL of one or many chains: Up to $1,250,000 in W \n\nAll rewards are decided on a case-by-case basis, taking into account the bug's exploitability, the feasibility of the exploit scenario, the impact it causes, and the likelihood of the vulnerability presenting itself, particularly if it is nondeterministic or some of the conditions are not present at the time.\n\nBecause of the governor, rewards for critical vulnerabilities are further capped at 10% of extractable value during a 24-hour period. The Governor (https://github.com/wormhole-foundation/wormhole/tree/main/node/pkg/governor) is designed to limit the value that can be transferred out of one chain over time. \n Rewards for vulnerabilities resulting in the perpetual locking of funds are further capped at the lesser of 1% of destroyable value or $1,250,000 in W.  Rewards for critical vulnerabilities relating to NFTs are further capped at $20,000 in W.\n\nValue is calculated based on the current market value and available liquidity for widely used tokens in the Portal Token Bridge, such as ETH and SOL. \n\nIn cases where the report achieves more than one of the above objectives, rewards will be tiered to the higher of the two objectives and will not be aggregated (e.g., if you can extract and brick a complete TVL for a chain, you will be awarded a bounty as if you could only extract the complete TVL for that chain).\n\nRewards for bugs in dependencies and third-party code are at the discretion of the Wormhole team and will be based on the impact demonstrated on Wormhole. If the dependency has its own bug bounty program, your reward for submitting this vulnerability to Wormhole will be lowered by the expected payout of that other program. If the vulnerability is in a connected blockchain rather than the Wormhole code, the locked and wrapped assets on that chain are not included in the impact calculation.\n\nVulnerabilities known to the Wormhole team at the time of reporting are ineligible for reward. This includes external audit reports, vulnerabilities in Wormhole's dependencies that have been disclosed publicly, and internal company communications. If necessary, the program will provide proof of prior knowledge about the issue. Reports that copy public vulnerability disclosures, or reports that highlight patch gaps between Wormhole's forked repositories and their upstream codebases, are not eligible for a reward.\n\nWormhole Foundation will maintain full discretion on vulnerability payouts. We encourage bug reporters to submit issues outside of the above-mentioned payout structure, though we want to be clear that we’ll exercise discretion on a case-by-case basis regarding whether an issue warrants a payout and what that ultimate payout would be.",
+  "rewardsBody": "Please note that for any valid Critical severity reports, the maximum reward will be up to $2,000,000 USD, paid in W token, with the following tiers: \n\n- __Tier 1:__ Ability to Extract the TVL of all chains: Up to $2,000,000 in W\n- __Tier 2:__ Ability to Extract the TVL of a single chain: Up to $1,000,000 in W \n- __Tier 3:__ Ability to permanently deny access to the TVL of one or many chains: Up to $500,000 in W \n\nAll rewards are decided on a case-by-case basis, taking into account the bug's exploitability, the feasibility of the exploit scenario, the impact it causes, and the likelihood of the vulnerability presenting itself, particularly if it is nondeterministic or some of the conditions are not present at the time.\n\nBecause of the governor, rewards for critical vulnerabilities are further capped at 10% of extractable value during a 24-hour period. The Governor (https://github.com/wormhole-foundation/wormhole/tree/main/node/pkg/governor) is designed to limit the value that can be transferred out of one chain over time. \n Rewards for vulnerabilities resulting in the perpetual locking of funds are further capped at the lesser of 1% of destroyable value or $500,000 in W.\n\nValue is calculated based on the current market value and available liquidity for widely used tokens in the Portal Token Bridge, such as ETH and SOL. \n\nIn cases where the report achieves more than one of the above objectives, rewards will be tiered to the higher of the two objectives and will not be aggregated (e.g., if you can extract and brick a complete TVL for a chain, you will be awarded a bounty as if you could only extract the complete TVL for that chain).\n\nRewards for bugs in dependencies and third-party code are at the discretion of the Wormhole team and will be based on the impact demonstrated on Wormhole. If the dependency has its own bug bounty program, your reward for submitting this vulnerability to Wormhole will be lowered by the expected payout of that other program. If the vulnerability is in a connected blockchain rather than the Wormhole code, the locked and wrapped assets on that chain are not included in the impact calculation.\n\nVulnerabilities known to the Wormhole team at the time of reporting are ineligible for reward. This includes external audit reports, vulnerabilities in Wormhole's dependencies that have been disclosed publicly, and internal company communications. If necessary, the program will provide proof of prior knowledge about the issue. Reports that copy public vulnerability disclosures, or reports that highlight patch gaps between Wormhole's forked repositories and their upstream codebases, are not eligible for a reward.\n\nWormhole Foundation will maintain full discretion on vulnerability payouts. We encourage bug reporters to submit issues outside of the above-mentioned payout structure, though we want to be clear that we’ll exercise discretion on a case-by-case basis regarding whether an issue warrants a payout and what that ultimate payout would be.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -190,7 +190,7 @@
   "rewardsToken": "",
   "slug": "wormhole",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-02-17T17:23:08.979Z",
+  "updatedDate": "2026-02-23T21:53:07.874Z",
   "impactsBody": "For the impact to be permanent, it must result in an effect that the Wormhole team can’t directly fix and must be perpetual. For instance, making a smart contract on Ethereum completely unusable and un-upgradable. An anti-example is taking down Wormchain or the Guardian network—the Wormhole team controls both codebases and can be updated to remediate the reason for the outage. All other effects of denial of service are considered temporary in this program.\n\nBugs that are only triggerable against oneself and don’t affect other users, but are reasonable to be done on accident as an end user or application developer will be considered as no higher than low severity on a case-by-case basis. This excludes sending funds to unintended addresses which will not be rewarded.\n\nNative Token Transfer (NTT) is an open, flexible, and composable framework for transferring tokens across blockchains without liquidity pools. Only the listed GitHub repository is in the scope of this bounty program. Any forks or modifications are out of scope. Furthermore, only tagged releases with version v1.x.x are considered in-scope. The severity of NTT-related findings will be dropped by a single category on the payout scale, such as a critical to a high or a medium to a low.\n\nMultiGov is an extension of the OpenZeppelin Governor contracts that allows token holders to maintain their voting rights after bridging their tokens to another chain. Only the listed GitHub repository is in the scope of this bounty program. Any forks or modifications are out of scope. Furthermore, the rewards for MultiGov related findings will be capped at $100,000 USD.\n\nAny NFT Bridge related reports are no-longer considered in-scope and will be closed.",
   "websiteUrl": null,
   "githubUrl": null,
@@ -480,17 +480,17 @@
   ],
   "rewards": [
     {
-      "id": 33248,
+      "id": 41497,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
-      "maxReward": 5000000,
+      "maxReward": 2000000,
       "minReward": 100000,
       "rewardModel": "range",
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 33249,
+      "id": 41498,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -499,7 +499,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 33250,
+      "id": 41499,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -508,7 +508,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 33251,
+      "id": 41500,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
@@ -516,17 +516,17 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 33252,
+      "id": 41501,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
-      "maxReward": 5000000,
+      "maxReward": 2000000,
       "minReward": 100000,
       "rewardModel": "range",
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 33253,
+      "id": 41502,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -535,7 +535,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 33254,
+      "id": 41503,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -544,7 +544,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 33255,
+      "id": 41504,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
