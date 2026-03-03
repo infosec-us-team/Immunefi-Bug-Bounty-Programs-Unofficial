@@ -399,6 +399,16 @@
       "description": "LBHooksExtraRewarderImplementation",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
+    },
+    {
+      "id": "99118",
+      "url": "https://merchantmoe.com/",
+      "type": "smart_contract",
+      "addedAt": "2026-02-28T09:27:09.371Z",
+      "revision": 0,
+      "description": "Primacy of Impact",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": true
     }
   ],
   "assetsBodyV2": "",
@@ -453,14 +463,22 @@
   "rewardsToken": "USDC",
   "slug": "merchant-moe",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-02-25T12:59:49.551Z",
+  "updatedDate": "2026-02-28T09:27:09.674Z",
   "impactsBody": "",
   "websiteUrl": "https://merchantmoe.com/",
   "githubUrl": "https://github.com/orgs/merchant-moe/",
   "eligibilityCriteria": [],
   "responsiblePublicationCategory": "category_3",
   "description": "Merchant Moe is the cornerstone DEX for Mantle Network, offering seamless trading, discretized liquidity, and real yield all within his intuitive and easy-to-navigate platform. Built with the same robust technology as LFJ Dex, Merchant Moe is a distinct and purpose-built native DEX for the Mantle Network, with unique features and offerings tailored specifically to serve the Mantle Ecosystem.\n\nVulnerabilities discovered in code shared between LFJ and Merchant Moe may only be submitted to one bug bounty program. Duplicate submissions to both programs for the same underlying issue will be rejected.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1260,
+      "link": "https://github.com/merchant-moe/moe-core/blob/main/src/dex/MoeERC20.sol#L23-L31",
+      "description": "Broken EIP712 on Moe Pair.",
+      "lastUpdatedAt": "2026-01-28T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeWebAndApplications": null,
