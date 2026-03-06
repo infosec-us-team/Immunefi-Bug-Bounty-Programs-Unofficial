@@ -6,7 +6,7 @@
       "type": "blockchain_dlt",
       "addedAt": "2026-01-14T17:14:18.070Z",
       "revision": 0,
-      "description": "",
+      "description": null,
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
     },
@@ -39,6 +39,16 @@
       "description": "Primacy of Impact",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": true
+    },
+    {
+      "id": "99132",
+      "url": "https://immunefi.com",
+      "type": "blockchain_dlt",
+      "addedAt": "2026-03-05T12:47:08.831Z",
+      "revision": 0,
+      "description": "Primacy of Impact",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": true
     }
   ],
   "assetsBodyV2": "All code of Sei Foundation can be found at https://github.com/sei-protocol. Documentation for the assets provided in the table can be found at [https://github.com/sei-protocol/sei-chain/blob/main/whitepaper/Sei_Whitepaper.pdf](https://github.com/sei-protocol/sei-chain/blob/main/whitepaper/Sei_Whitepaper.pdf)",
@@ -55,7 +65,8 @@
   "evaluationEndDate": null,
   "features": [
     "Managed Triage: Signal Booster",
-    "Arbitration"
+    "Arbitration",
+    "Subscription Plan: Elite"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -76,7 +87,7 @@
     "blockchain_dlt - low"
   ],
   "primaryPaymentWallet": "EVM",
-  "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+  "prioritizedVulnerabilities": "_blank_",
   "productType": [
     "Bridge",
     "L1",
@@ -98,8 +109,8 @@
   "rewardsToken": "SEI",
   "slug": "sei",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-01-29T22:04:16.066Z",
-  "impactsBody": "__Excluded Giga-Related Functionality__\n\nAny functionality related to **Giga** is currently **out of scope** for this bug bounty program.\n\nSpecifically, the following are excluded from scope:\n\n- Any code paths that require setting **any `GIGA_*` configuration flag to `true`**\n- Any configuration options defined under configuration sections **prefixed with `giga`**\n- All code contained within the **`giga` Go package**\n\nAll Giga-related configuration flags and settings are **disabled by default** in all supported environments.\n\nAs a result:\n- Vulnerabilities that are only exploitable when Giga-related configuration flags are enabled\n- Vulnerabilities that exist exclusively within the `giga` Go package\n- Vulnerabilities reachable solely through execution paths gated by Giga configuration\n\nare **not eligible for rewards** under this bug bounty program.",
+  "updatedDate": "2026-03-05T12:47:08.970Z",
+  "impactsBody": "__Excluded Giga-Related Functionality__\n\nAny functionality related to **Giga** is currently **out of scope** for this bug bounty program.\n\nSpecifically, the following are excluded from scope:\n\n- Any code paths that require setting **any `GIGA_*` configuration flag to `true`**\n- Any configuration options defined under configuration sections **prefixed with `giga`**\n- All code contained within the **`giga` Go package**\n\nAll Giga-related configuration flags and settings are **disabled by default** in all supported environments.\n\nAs a result:\n- Vulnerabilities that are only exploitable when Giga-related configuration flags are enabled\n- Vulnerabilities that exist exclusively within the `giga` Go package\n- Vulnerabilities reachable solely through execution paths gated by Giga configuration\n\nare **not eligible for rewards** under this bug bounty program.\n\n---\n\n__Excluded StateSync Peer Functionality__\n\nAny functionality related to **StateSync Peers** is currently **out of scope** for this bug bounty program.\n\nA StateSync Peer is a trusted node that provides state synchronization data to other nodes during initial sync. These are nodes explicitly configured as RPC servers and persistent peers for the purpose of state sync. They serve trust height, trust hash, and block/state data that the syncing node consumes directly.\n\nSpecifically, the following are excluded from scope:\n\n- Any vulnerabilities that require a **malicious or compromised StateSync Peer** to be exploited\n- Any attack vectors that depend on a StateSync Peer returning **tampered block data, trust hashes, or state snapshots**\n- Any vulnerabilities that rely on **poisoning the persistent peers list** with attacker-controlled node IDs obtained through compromised StateSync Peer RPC responses\n- Any vulnerabilities related to **P2P-mode state sync**, where any connected P2P peer can serve as a state provider. P2P-mode state sync is **disabled by default** and is not used in Sei's supported state sync workflow\n\nStateSync Peers are considered trusted infrastructure within the Sei network's threat model. As a result:\n- Vulnerabilities that assume a StateSync Peer is acting maliciously or has been compromised\n- Vulnerabilities that are only exploitable by controlling or impersonating a StateSync Peer endpoint\n- Vulnerabilities reachable solely through tampered RPC responses from a trusted StateSync Peer\n- Vulnerabilities that exist exclusively within P2P-mode state sync code paths\n\nare **not eligible for rewards** under this bug bounty program.",
   "websiteUrl": null,
   "githubUrl": null,
   "eligibilityCriteria": [
@@ -195,7 +206,8 @@
   ],
   "rewards": [
     {
-      "id": 35251,
+      "id": 40607,
+      "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
       "maxReward": 500000,
@@ -204,21 +216,24 @@
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 35252,
+      "id": 40608,
+      "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
       "fixedReward": 25000,
       "rewardModel": "fixed"
     },
     {
-      "id": 35253,
+      "id": 40609,
+      "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
       "fixedReward": 5000,
       "rewardModel": "fixed"
     },
     {
-      "id": 35254,
+      "id": 40610,
+      "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
       "fixedReward": 1000,
