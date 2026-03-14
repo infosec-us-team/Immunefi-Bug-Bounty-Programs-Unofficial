@@ -103,7 +103,7 @@
   ],
   "launchDate": "2021-12-16T18:00:00.000Z",
   "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4US5CNdpvCjBHHpUbUip3m/7de4ab736d271da97aa27415585755f4/Moonbeam_Icon_White_2x.png",
-  "maxBounty": 25000,
+  "maxBounty": 5000,
   "outOfScopeAndRules": ".",
   "pocPerTypeAndSeverity": [
     "websites_and_applications - high",
@@ -128,7 +128,7 @@
   "projectType": [
     "Blockchain"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll  bug reports must come with a detailed PoC demonstrating the exploit in a real-world scenario; and written instructions to reproduce, in order to be considered for a reward. Theoretical vulnerabilities without a working POC will not be accepted. \n\nFor **Critical vulnerabilities** , rewards are based on how much value is realistically at risk and how quickly that risk can be realized. We first calculate the **base risk ratio**:\n\nFunds at Risk ÷ (Moonbeam market cap + Moonriver market cap) \n\nusing market caps  on the day of the report.\n\nBecause some vulnerabilities can only cause damage gradually over time, the base risk ratio is then scaled down based on how long it would take to actually realize that impact.\n\nTo do this, we divide the base risk ratio by the number of two-day periods required to exploit the issue:\n\n* Impact achievable within 2 days → no reduction\n* Impact achievable within 4 days → divide risk by 2\n* Impact achievable within 6 days → divide risk by 3\n* and so on\n\nOnly full two-day periods are counted, and the minimum assumed time is 2 days.\n\nThis  can be expressed as:\n\nRisk Ratio Over Time = (Funds at Risk / ( Moonbeam Market Cap + Moonriver Market Cap))  / (  D/2)\n\nThe final, risk ratio over time is then used to determine the payout:\n\n  - If the ratio is at or below 0.5, the payout is calculated linearly between 2,500$ and 5K.\n  - If the  ratio is above 0.5, the payout is calculated linearly between $5K and $25K; with a maximum cap of $25K\n\nThis results in the following payout graph:\n![MoonbeamNewGraph](https://imgur.com/a/6AI5wAu)\n\nNote that a bug reported for one of either the Moonbeam or Moonriver networks that applies to both will be treated as a single report and paid only once. \n\nThe Moonbeam Foundation requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed is an ID scan along with a selfie to verify identity. \n\nPayouts are handled by the __Moonbeam Foundation__ team directly and are denominated in USD. However, payouts are done in __USDT__ or __USDC__.\n\nThe Moonriver parachain on Kusama and the Moonbeam parachain on Polkadot (estimated launch in Jan 2022) are both included in the assets-in-scope. \n\nAll source code of Moonbeam can be found at [https://github.com/PureStake/](https://github.com/PureStake/). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll  bug reports must come with a detailed PoC demonstrating the exploit in a real-world scenario; and written instructions to reproduce, in order to be considered for a reward. Theoretical vulnerabilities without a working POC will not be accepted. \n\nFor **Critical vulnerabilities** , rewards are based on how much value is realistically at risk and how quickly that risk can be realized. We first calculate the **base risk ratio**:\n\nFunds at Risk ÷ (Moonbeam market cap + Moonriver market cap) \n\nusing market caps  on the day of the report.\n\nBecause some vulnerabilities can only cause damage gradually over time, the base risk ratio is then scaled down based on how long it would take to actually realize that impact.\n\nTo do this, we divide the base risk ratio by the number of two-day periods required to exploit the issue:\n\n* Impact achievable within 2 days → no reduction\n* Impact achievable within 4 days → divide risk by 2\n* Impact achievable within 6 days → divide risk by 3\n* and so on\n\nOnly full two-day periods are counted, and the minimum assumed time is 2 days.\n\nThis  can be expressed as:\n\nRisk Ratio Over Time = (Funds at Risk / ( Moonbeam Market Cap + Moonriver Market Cap))  / (  D/2)\n\nThe final, risk ratio over time is then used to determine the payout:\n\n  - If the ratio is at or below 0.5, the payout is calculated linearly between 1000$ and 2000$.\n  - If the  ratio is above 0.5, the payout is calculated linearly between $2K and $5K; with a maximum cap of $5K\n\nThis results in the following payout graph:\n![MoonbeamNewGraph](https://imgur.com/a/6AI5wAu)\n\nNote that a bug reported for one of either the Moonbeam or Moonriver networks that applies to both will be treated as a single report and paid only once. \n\nThe Moonbeam Foundation requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed is an ID scan along with a selfie to verify identity. \n\nPayouts are handled by the __Moonbeam Foundation__ team directly and are denominated in USD. However, payouts are done in __USDT__ or __USDC__.\n\nThe Moonriver parachain on Kusama and the Moonbeam parachain on Polkadot (estimated launch in Jan 2022) are both included in the assets-in-scope. \n\nAll source code of Moonbeam can be found at [https://github.com/PureStake/](https://github.com/PureStake/). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -136,7 +136,7 @@
   "rewardsToken": "USDC, USDT",
   "slug": "moonbeamnetwork",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-02-17T19:55:48.084Z",
+  "updatedDate": "2026-03-12T22:49:33.088Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -150,7 +150,7 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "The following vulnerabilities are **explicitly** excluded from the rewards for this bug bounty program:\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n- Attacks relying in whole or in part on  social engineering, deception or phishing attacks\n- Vulnerabilities in third-party dependencies not under Moonbeam Foundation's control, especially when no known fix exists at the time of the report. Such vulnerabilities should be reported to the respective third-party organizations responsible for the code. If we cannot fix the vulnerability, we will not pay a bounty.\n- Bugs or vulnerabilities in external services or platforms that Moonbeam Network uses but does not control.\n- Broken link hijacking is out of scope \n- Non-Production Code: Any code present in the in-scope repositories that has not yet been deployed to the production Moonbeam or Moonriver networks is out of scope.\n- Theoretical Vulnerabilities: Vulnerabilities that are purely theoretical without practical exploitability. This includes exploits requiring unrealistic scenarios, assumptions, or clear human error.\n- Excessive Investment Attacks: Attacks that require an impractically high investment beyond reasonable means (e.g., requiring more than $100 million USD to execute).\n- User Negligence: Issues that arise solely from user misconfiguration or negligence, where exploitation is possible only if users ignore standard security practices.\n- Low-Impact DoS Attacks: Denial-of-Service (DoS) attacks that are temporary and do not result in significant disruption or measurable financial loss.\n- Best Practice Suggestions: Code optimizations, style guidelines, or recommendations that do not have a direct security impact.\n- Cosmetic Issues: Aesthetic issues, including typos, branding inconsistencies, or minor UI glitches that do not lead to security vulnerabilities or exploitation.\n\n__Smart Contracts and Blockchain__\n\n- All smart contracts deployed on Moonbeam or Moonriver\n- Third-Party Oracle Data: Issues arising from incorrect data supplied by third-party oracles\n- Basic economic governance attacks (e.g. 51% attack)\n- Attacks relying on developers committing errors due to how Moonbeam’s EVM implementation differs from the standard EVM implementation\n- Liquidity Issues: Vulnerabilities or attacks that exploit a lack of liquidity.\n- Best Practice Critiques: Suggestions for improvements that do not address specific security vulnerabilities.\n- Sybil Attacks: Attacks involving the creation of multiple fake identities to gain disproportionate influence.\n- Centralization Risks: Risks associated with centralization that do not involve a specific vulnerability.\n- Any bugs or exploits in third party wallets\n\n__Websites and Apps__\n\n- Theoretical Vulnerabilities: Issues without a working proof of concept or demonstration of impact.\n- Content Spoofing/Text Injection: Content spoofing or text injection issues that do not lead to further exploitation.\n- Self-XSS: Cross-Site Scripting attacks that require the victim to self-execute malicious code.\n- Captcha Bypass via OCR: Automated Captcha solving using Optical Character Recognition without direct security impact.\n- Non-Impactful CSRF: Cross-Site Request Forgery vulnerabilities that do not lead to significant security impact (e.g., logout CSRF, changing user preferences).\n- Missing Security Headers: Absence of HTTP security headers or cookie flags that do not lead to an exploitable vulnerability.\n- Server Information Disclosure: Disclosure of server information like IPs, server names, or stack traces that do not reveal sensitive data.\n- User Enumeration: Ability to enumerate or confirm the existence of users or tenants without further impact.\n- Unlikely User Actions: Vulnerabilities that require unrealistic or unlikely actions by the user.\n- Open Redirects: URL redirects unless they can be combined with another vulnerability to escalate the impact.\n- SSL/TLS Best Practices: Recommendations for SSL/TLS improvements without a direct security impact.\n- Low-Impact DDoS: Denial-of-Service vulnerabilities that do not cause significant disruption or financial loss.\n- Internal Privileged Access: Attacks requiring privileged access from within the organization.\n- Email SPF Records: Issues related to SPF, DKIM, or DMARC records for email domains without direct security impact.\n- Feature Requests: Suggestions for new features or enhancements.\n- Best Practice Suggestions: Recommendations for best practices without identifying specific vulnerabilities.\n",
+  "customOutOfScopeInformation": "The following vulnerabilities are **explicitly** excluded from the rewards for this bug bounty program:\n\n- Attacks that the reporter has already exploited themselves, leading to damage\n- Attacks requiring access to leaked keys/credentials\n- Attacks requiring access to privileged addresses (governance, strategist)\n- Attacks relying in whole or in part on  social engineering, deception or phishing attacks\n- Vulnerabilities in third-party dependencies not under Moonbeam Foundation's control, especially when no known fix exists at the time of the report. Such vulnerabilities should be reported to the respective third-party organizations responsible for the code. If we cannot fix the vulnerability, we will not pay a bounty.\n- Bugs or vulnerabilities in external services or platforms that Moonbeam Network uses but does not control.\n- Broken link hijacking is out of scope \n- Non-Production Code: Any code present in the in-scope repositories that has not yet been deployed to the production Moonbeam or Moonriver networks is out of scope.\n- Theoretical Vulnerabilities: Vulnerabilities that are purely theoretical without practical exploitability. This includes exploits requiring unrealistic scenarios, assumptions, or clear human error.\n- Excessive Investment Attacks: Attacks that require an impractically high investment beyond reasonable means (e.g., requiring more than $100 million USD to execute).\n- User Negligence: Issues that arise solely from user misconfiguration or negligence, where exploitation is possible only if users ignore standard security practices.\n- Low-Impact DoS Attacks: Denial-of-Service (DoS) attacks that are temporary and do not result in significant disruption or measurable financial loss.\n- Best Practice Suggestions: Code optimizations, style guidelines, or recommendations that do not have a direct security impact.\n- Cosmetic Issues: Aesthetic issues, including typos, branding inconsistencies, or minor UI glitches that do not lead to security vulnerabilities or exploitation.\n\n__Smart Contracts and Blockchain__\n\n- All smart contracts deployed on Moonbeam or Moonriver\n- Third-Party Oracle Data: Issues arising from incorrect data supplied by third-party oracles\n- Basic economic governance attacks (e.g. 51% attack)\n- Attacks relying on developers committing errors due to how Moonbeam’s EVM implementation differs from the standard EVM implementation\n- Liquidity Issues: Vulnerabilities or attacks that exploit a lack of liquidity.\n- Best Practice Critiques: Suggestions for improvements that do not address specific security vulnerabilities.\n- Sybil Attacks: Attacks involving the creation of multiple fake identities to gain disproportionate influence.\n- Centralization Risks: Risks associated with centralization that do not involve a specific vulnerability.\n- Any bugs or exploits in third party wallets\n\n__Websites and Apps__\n\n- Theoretical Vulnerabilities: Issues without a working proof of concept or demonstration of impact.\n- Content Spoofing/Text Injection: Content spoofing or text injection issues that do not lead to further exploitation.\n- Self-XSS: Cross-Site Scripting attacks that require the victim to self-execute malicious code.\n- Captcha Bypass via OCR: Automated Captcha solving using Optical Character Recognition without direct security impact.\n- Non-Impactful CSRF: Cross-Site Request Forgery vulnerabilities that do not lead to significant security impact (e.g., logout CSRF, changing user preferences).\n- Missing Security Headers: Absence of HTTP security headers or cookie flags that do not lead to an exploitable vulnerability.\n- Server Information Disclosure: Disclosure of server information like IPs, server names, or stack traces that do not reveal sensitive data.\n- User Enumeration: Ability to enumerate or confirm the existence of users or tenants without further impact.\n- Unlikely User Actions: Vulnerabilities that require unrealistic or unlikely actions by the user.\n- Open Redirects: URL redirects unless they can be combined with another vulnerability to escalate the impact.\n- SSL/TLS Best Practices: Recommendations for SSL/TLS improvements without a direct security impact.\n- Low-Impact DDoS: Denial-of-Service vulnerabilities that do not cause significant disruption or financial loss.\n- Internal Privileged Access: Attacks requiring privileged access from within the organization.\n- Email SPF Records: Issues related to SPF, DKIM, or DMARC records for email domains without direct security impact.\n- Feature Requests: Suggestions for new features or enhancements.\n- Best Practice Suggestions: Recommendations for best practices without identifying specific vulnerabilities.",
   "customProhibitedActivities": [],
   "impacts": [
     {
@@ -344,44 +344,50 @@
       "type": "websites_and_applications",
       "severity": "high",
       "title": "Ability to execute system commands"
+    },
+    {
+      "id": 5936,
+      "type": "blockchain_dlt",
+      "severity": "low",
+      "title": "Attacks affecting funds flowing through XCM (Cross Chain Messaging)"
     }
   ],
   "rewards": [
     {
-      "id": 41074,
+      "id": 42804,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
-      "maxReward": 25000,
+      "maxReward": 5000,
       "rewardModel": "up_to",
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 41075,
+      "id": 42805,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
-      "maxReward": 15000,
+      "maxReward": 3000,
       "rewardModel": "up_to"
     },
     {
-      "id": 41076,
+      "id": 42806,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
-      "maxReward": 10000,
+      "maxReward": 2000,
       "rewardModel": "up_to"
     },
     {
-      "id": 41077,
+      "id": 42807,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
-      "maxReward": 2500,
+      "maxReward": 1000,
       "rewardModel": "up_to"
     },
     {
-      "id": 41078,
+      "id": 42808,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -389,7 +395,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 41079,
+      "id": 42809,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
@@ -397,7 +403,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 41080,
+      "id": 42810,
       "primacy": null,
       "severity": "low",
       "assetType": "websites_and_applications",

@@ -51,16 +51,6 @@
       "isPrimacyOfImpact": false
     },
     {
-      "id": "2cbzasOcoX3iD7KNGk4UpY",
-      "url": "https://github.com/stacks-sbtc/wsts/tree/main/src",
-      "type": "blockchain_dlt",
-      "addedAt": "2025-04-30T05:35:48.876Z",
-      "revision": 0,
-      "description": "WSTS implementation, used by sBTC",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
       "id": "37fKz5pvitrjowoaqe7MrN",
       "url": "https://github.com/stacks-network/stacks-core/tree/master/stackslib",
       "type": "blockchain_dlt",
@@ -157,8 +147,8 @@
   ],
   "programOverview": "Stacks is a Bitcoin layer for smart contracts; it enables smart contracts and decentralized applications to use Bitcoin as an asset and settle transactions on the Bitcoin blockchain. Stacks is secured by the entire hash power of Bitcoin, giving it Bitcoin finality.\n\nsBTC is a 1:1 Bitcoin-backed asset, enabling users to put their BTC to work in DeFi, dApps, and other applications. It leverages Stacks’ programmability and Bitcoin finality to enable a new Bitcoin economy.\n\nFor more information about Stacks and sBTC, please visit [https://stacks.org/](https://stacks.org/), [https://www.stacks.co/](https://www.stacks.co/) and [https://www.stacks.co/sbtc](https://www.stacks.co/sbtc)\n\nWe at the Stacks Foundation maintain essential components of the Stacks blockchain infrastructure, including sBTC. Our security team prioritizes the following attack vectors:\n\n  - Theft of funds\n  - Permanent freezing of funds\n  - Total network shutdown or unauthenticated denial-of-service vectors\n  - Chain split or deep fork vectors\n  - Invalid transactions processing successfully or confirming\n  - Consensus failures\n  - Remotely exploitable weaknesses (as triggered through standard Stacks     - RPC and P2P ports only)\n  - (In smart contracts) Vote manipulation\n  - (In smart contracts) Block stuffing attacks\n  - (In smart contracts) Theft or loss of unclaimed rewards",
   "programType": [
-    "Blockchain/DLT",
-    "Smart Contract"
+    "Smart Contract",
+    "Blockchain/DLT"
   ],
   "project": "Stacks",
   "projectType": [
@@ -172,7 +162,7 @@
   "rewardsToken": "STX",
   "slug": "stacks",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-02-16T08:52:54.998Z",
+  "updatedDate": "2026-03-13T08:46:48.508Z",
   "impactsBody": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Please note that all variants of remote denial-of-service attacks will automatically have their impact set to “Low”, regardless of any further downstream impact.__\n\n__Blockchain__\n\n**Critical:**\n- Any network to shut down or otherwise not confirm new valid transactions for multiple blocks\n- Any triggering of a deep fork of 10 or more blocks without spending the requisite Bitcoin\n- Any direct loss of funds other than through any form of freezing\n- Any chain split caused by different nodes processing the same block or transaction and yielding different results\n- Any confirmation of an invalid transaction, such as with an incorrect nonce\n\n**High:**\n- Any unintended chain split or network partition\n- Any remotely-exploitable memory access, disk access, or persistent code execution\n- Attacks are restricted to the Stacks blockchain RPC/P2P ports\n\n**Medium:**\n- Any transient consensus failures\n\n**Low:**\n- Any remotely-exploitable denial of service in a node\n- Any network denial of service impacting more than 10% of miners that does not shut down the network \n\n__Smart Contracts__\n\n**Critical:**\n- Any loss of user funds by permanent freezing or theft\n- Any loss of governance funds (limited to `.cost-vote`)\n- Any governance vote manipulation\n\n**High:**\n- Any theft of an unclaimed reward\n- Any permanent freezing of an unclaimed reward\n\n**Medium:**\n- Any block stuffing without fund transfers being blocked\n- Any block stuffing such that smart contract calls can be blocked but without paying any requisite higher transaction fees\n\n**Low:**\n- Any in-scope smart contract fails to deliver promised returns, but doesn’t lose value\n- Any underpricing or overpricing of smart contract operations\n\nPlease review open PRs before your submission as all duplicate attacks are considered “Out of Scope” as per below.\n\n__sBTC__\n\n**Critical:**\n- Direct loss of funds\n- Permanent freezing of funds\n\n**High:**\n- sBTC not being able to confirm new transactions (total sBTC shutdown)\n\n**Medium:**\n- A bug in the respective layer 1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk\n- Shutdown of greater than or equal to 30% of sBTC signers without brute force actions, but does not shut down the network\n- Temporarily freezing sBTC transactions\n- API crash preventing correct processing of sBTC deposits/withdrawals\n\n**Low:**\n- Modification of transaction fees outside of design parameters\n- Shutdown of greater than 10% or equal to but less than 30% of sBTC signers without brute force actions, but does not shut down the network\n\nPlease review open PRs before your submission as all duplicate attacks are considered “Out of Scope” as per below.",
   "websiteUrl": "https://stacks.co",
   "githubUrl": null,
@@ -312,7 +302,8 @@
   ],
   "rewards": [
     {
-      "id": 29725,
+      "id": 42811,
+      "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
       "maxReward": 250000,
@@ -320,28 +311,32 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 29726,
+      "id": 42812,
+      "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
       "maxReward": 25000,
       "rewardModel": "up_to"
     },
     {
-      "id": 29727,
+      "id": 42813,
+      "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
       "maxReward": 5000,
       "rewardModel": "up_to"
     },
     {
-      "id": 29728,
+      "id": 42814,
+      "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
       "fixedReward": 1000,
       "rewardModel": "fixed"
     },
     {
-      "id": 29729,
+      "id": 42815,
+      "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
       "maxReward": 250000,
@@ -349,21 +344,24 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 29730,
+      "id": 42816,
+      "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
       "maxReward": 25000,
       "rewardModel": "up_to"
     },
     {
-      "id": 29731,
+      "id": 42817,
+      "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
       "maxReward": 5000,
       "rewardModel": "up_to"
     },
     {
-      "id": 29732,
+      "id": 42818,
+      "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
       "fixedReward": 1000,
