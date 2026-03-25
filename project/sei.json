@@ -101,7 +101,7 @@
   "projectType": [
     "Blockchain"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below.\n\n__Reward Calculation for Critical Level Reports__\n\nFor Critical Blockchain/DLT vulnerabilities, rewards are determined based on the ratio between the total funds at risk—including all affected projects built on the Sei blockchain—and the Sei market capitalization, calculated as the average market cap reported by CoinMarketCap and CoinGecko at the time the report is submitted.\n\nA minimum reward of **USD $50,000** is guaranteed for all valid Critical reports in order to incentivize timely and responsible disclosure.\n\nThis ratio is referred to as the **risk ratio**, defined as:\n\nRisk Ratio = Funds at Risk / Sei Market Capitalization\n\nRewards scale linearly from a 0:1 to a 1:1 risk ratio, where a 1:1 ratio corresponds to a maximum reward of **USD $500,000**.  \nIf the funds at risk exceed the market capitalization, the reward remains capped at **USD $500,000**.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs acknowledged below are not eligible for any reward through the bug bounty program.\n- Project operation risk in tokenfactory module\n\n__Previous Audits__\n\nSei Foundation has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [https://github.com/oak-security/audit-reports/blob/master/Sei/2023-05-15%20Audit%20Report%20-%20Sei%20Cosmos%20v1.0.pdf](https://github.com/oak-security/audit-reports/blob/master/Sei/2023-05-15%20Audit%20Report%20-%20Sei%20Cosmos%20v1.0.pdf)\n- [https://github.com/oak-security/audit-reports/blob/master/Sei/2023-05-15%20Audit%20Report%20-%20Sei%20Tendermint%20v1.0.pdf](https://github.com/oak-security/audit-reports/blob/master/Sei/2023-05-15%20Audit%20Report%20-%20Sei%20Tendermint%20v1.0.pdf)\n- [https://github.com/oak-security/audit-reports/blob/master/Sei/2023-05-19%20Audit%20Report%20-%20Sei%20Chain%20and%20CosmWasm%20v1.0.pdf](https://github.com/oak-security/audit-reports/blob/master/Sei/2023-05-19%20Audit%20Report%20-%20Sei%20Chain%20and%20CosmWasm%20v1.0.pdf)\n\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Blockchain/DLT: Critical\n- Blockchain/DLT: High\n- Blockchain/DLT: Medium\n- Blockchain/DLT: Low\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\nFor Medium, High and Critical reports, we ask that whitehats provide a PoC using a local 4-node cluster. You can follow these steps to provide this PoC:\n\n1. Spin up the local testnet with `make docker-cluster-start`\n2. Connect to node0 with `docker exec -it sei-node-0 /bin/bash`\n3. Carry out attack\n\nNote that any PoC submitted against testnet **must not**:\n- Set any `GIGA_*` flag to `true`\n- Explicitly enable any configuration under sections prefixed with `giga`\n\nPoCs that rely on enabling Giga-related functionality will be considered **out of scope** and will not be eligible for a bounty. See [scope](https://immunefi.com/bug-bounty/sei/scope/#top) for further information.\n\n\n__Reward Payment Terms__\n\nRewards are denominated in USD and paid by the Sei Foundation team.\n\nPayouts are made in **SEI** or **USDT/C**, at the Foundation’s discretion. For additional details on payout mechanics and reward amounts, please refer to the **Rewards by Threat Level** section below.",
+  "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below.\n\n__Reward Calculation for Critical Level Reports__\n\nFor Critical Blockchain/DLT vulnerabilities, rewards are determined based on the ratio between the total funds at risk—including all affected projects built on the Sei blockchain—and the Sei market capitalization, calculated as the average market cap reported by CoinMarketCap and CoinGecko at the time the report is submitted.\n\nA minimum reward of **USD $50,000** is guaranteed for all valid Critical reports in order to incentivize timely and responsible disclosure.\n\nThis ratio is referred to as the **risk ratio**, defined as:\n\nRisk Ratio = Funds at Risk / Sei Market Capitalization\n\nRewards scale linearly from a 0:1 to a 1:1 risk ratio, where a 1:1 ratio corresponds to a maximum reward of **USD $500,000**.  \nIf the funds at risk exceed the market capitalization, the reward remains capped at **USD $500,000**.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs acknowledged below are not eligible for any reward through the bug bounty program.\n- Project operation risk in tokenfactory module\n\n__Previous Audits__\n\nSei Foundation has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [https://github.com/oak-security/audit-reports/blob/master/Sei/2023-05-15%20Audit%20Report%20-%20Sei%20Cosmos%20v1.0.pdf](https://github.com/oak-security/audit-reports/blob/master/Sei/2023-05-15%20Audit%20Report%20-%20Sei%20Cosmos%20v1.0.pdf)\n- [https://github.com/oak-security/audit-reports/blob/master/Sei/2023-05-15%20Audit%20Report%20-%20Sei%20Tendermint%20v1.0.pdf](https://github.com/oak-security/audit-reports/blob/master/Sei/2023-05-15%20Audit%20Report%20-%20Sei%20Tendermint%20v1.0.pdf)\n- [https://github.com/oak-security/audit-reports/blob/master/Sei/2023-05-19%20Audit%20Report%20-%20Sei%20Chain%20and%20CosmWasm%20v1.0.pdf](https://github.com/oak-security/audit-reports/blob/master/Sei/2023-05-19%20Audit%20Report%20-%20Sei%20Chain%20and%20CosmWasm%20v1.0.pdf)\n\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Blockchain/DLT: Critical\n- Blockchain/DLT: High\n- Blockchain/DLT: Medium\n- Blockchain/DLT: Low\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\nFor Medium, High and Critical reports, we ask that whitehats provide a PoC using a local 4-node cluster. You can follow these steps to provide this PoC:\n\n1. Spin up the local testnet with `make docker-cluster-start`\n2. Connect to node0 with `docker exec -it sei-node-0 /bin/bash`\n3. Carry out attack\n\nNote that any PoC submitted against testnet **must not**:\n- Set any `GIGA_*` flag to `true`\n- Explicitly enable any configuration under sections prefixed with `giga`\n\nPoCs that rely on enabling Giga-related functionality will be considered **out of scope** and will not be eligible for a bounty. See [scope](https://immunefi.com/bug-bounty/sei/scope/#top) for further information.\n\n\n__Reward Payment Terms__\n\nRewards are denominated in USD and paid by the Sei Foundation team.\n\nPayouts are made in **SEI** or **USDT/C**, at the Foundation’s discretion. For additional details on payout mechanics and reward amounts, please refer to the **Rewards by Threat Level** section below.\n\n__Malicious Proposer Rule__ \n\nIf an attack requires the attacker to be a block proposer (or equivalent privileged validator role), its severity is reduced by one level (e.g. Critical → High, Low → Informational/Out of Scope). \n\n**Note, direct loss of funds remains Critical regardless of attacker role.**",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -109,7 +109,7 @@
   "rewardsToken": "SEI",
   "slug": "sei",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-03-05T12:47:08.970Z",
+  "updatedDate": "2026-03-24T15:26:17.017Z",
   "impactsBody": "__Excluded Giga-Related Functionality__\n\nAny functionality related to **Giga** is currently **out of scope** for this bug bounty program.\n\nSpecifically, the following are excluded from scope:\n\n- Any code paths that require setting **any `GIGA_*` configuration flag to `true`**\n- Any configuration options defined under configuration sections **prefixed with `giga`**\n- All code contained within the **`giga` Go package**\n\nAll Giga-related configuration flags and settings are **disabled by default** in all supported environments.\n\nAs a result:\n- Vulnerabilities that are only exploitable when Giga-related configuration flags are enabled\n- Vulnerabilities that exist exclusively within the `giga` Go package\n- Vulnerabilities reachable solely through execution paths gated by Giga configuration\n\nare **not eligible for rewards** under this bug bounty program.\n\n---\n\n__Excluded StateSync Peer Functionality__\n\nAny functionality related to **StateSync Peers** is currently **out of scope** for this bug bounty program.\n\nA StateSync Peer is a trusted node that provides state synchronization data to other nodes during initial sync. These are nodes explicitly configured as RPC servers and persistent peers for the purpose of state sync. They serve trust height, trust hash, and block/state data that the syncing node consumes directly.\n\nSpecifically, the following are excluded from scope:\n\n- Any vulnerabilities that require a **malicious or compromised StateSync Peer** to be exploited\n- Any attack vectors that depend on a StateSync Peer returning **tampered block data, trust hashes, or state snapshots**\n- Any vulnerabilities that rely on **poisoning the persistent peers list** with attacker-controlled node IDs obtained through compromised StateSync Peer RPC responses\n- Any vulnerabilities related to **P2P-mode state sync**, where any connected P2P peer can serve as a state provider. P2P-mode state sync is **disabled by default** and is not used in Sei's supported state sync workflow\n\nStateSync Peers are considered trusted infrastructure within the Sei network's threat model. As a result:\n- Vulnerabilities that assume a StateSync Peer is acting maliciously or has been compromised\n- Vulnerabilities that are only exploitable by controlling or impersonating a StateSync Peer endpoint\n- Vulnerabilities reachable solely through tampered RPC responses from a trusted StateSync Peer\n- Vulnerabilities that exist exclusively within P2P-mode state sync code paths\n\nare **not eligible for rewards** under this bug bounty program.",
   "websiteUrl": null,
   "githubUrl": null,
@@ -132,81 +132,87 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 3,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Direct loss of funds"
-    },
-    {
-      "id": 9,
+      "id": 6005,
       "type": "blockchain_dlt",
       "severity": "medium",
-      "title": "Increasing network processing node resource consumption by at least 30% without brute force actions, compared to the preceding 24 hours"
+      "title": "Block production delay exceeding 2.5 seconds on realistic validator hardware, caused by crafted transactions or messages"
     },
     {
-      "id": 10,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Shutdown of greater than or equal to 30% of network processing nodes without brute force actions, but does not shut down the network"
-    },
-    {
-      "id": 11,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "A bug in the respective layer 0/1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk"
-    },
-    {
-      "id": 12,
+      "id": 6006,
       "type": "blockchain_dlt",
       "severity": "low",
-      "title": "Shutdown of greater than 10% or equal to but less than 30% of network processing nodes without brute force actions, but does not shut down the network"
+      "title": "Manipulation of transaction fee calculation resulting in fees outside protocol-defined bounds"
     },
     {
-      "id": 13,
+      "id": 6007,
       "type": "blockchain_dlt",
       "severity": "low",
-      "title": "Modification of transaction fees outside of design parameters"
+      "title": "Causing network processing nodes to include or order mempool transactions outside of protocol-defined selection and priority rules"
     },
     {
-      "id": 4559,
+      "id": 6008,
+      "type": "blockchain_dlt",
+      "severity": "low",
+      "title": "Crash or halt of <10% of validators via crafted (non-brute-force) messages, where the network retains liveness"
+    },
+    {
+      "id": 6009,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Malicious proposer block freeze: delay of ≥10 minutes caused by a single proposer beyond simply skipping their own proposal slot(s)"
+    },
+    {
+      "id": 6010,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Bug in layer 0/1/2 network code that causes deterministic unintended smart contract execution, with no funds directly at risk"
+    },
+    {
+      "id": 6011,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Crash of RPC nodes running default configuration via direct unauthenticated network access to RPC/gRPC endpoints"
+    },
+    {
+      "id": 6012,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Crash or halt of ≥10% but <1/3 of validators via crafted (non-brute-force) messages, where the network retains liveness"
+    },
+    {
+      "id": 6013,
       "type": "blockchain_dlt",
       "severity": "high",
-      "title": "RPC API crash affecting projects with greater than or equal to 25% of the market capitalization on top of the respective layer"
+      "title": "Crash or halt of ≥1/3 of validators (assuming no direct network access to validator nodes), resulting in loss of network liveness"
     },
     {
-      "id": 4565,
+      "id": 6014,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Unintended permanent chain split requiring hard fork to resolve (network partition with no automatic recovery)"
+    },
+    {
+      "id": 6015,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Crash of RPC nodes running default configuration without assuming direct network access (e.g. via malicious block/transaction payloads propagated through the network)"
+    },
+    {
+      "id": 6016,
       "type": "blockchain_dlt",
       "severity": "critical",
-      "title": "Permanent freezing of funds (fix requires hard fork)"
+      "title": "Permanent freezing of funds with no on-chain remediation path, excluding general network unavailability (fix requires hard fork)"
     },
     {
-      "id": 5674,
+      "id": 6017,
       "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments"
-    },
-    {
-      "id": 5675,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Causing network processing nodes to process transactions from the mempool beyond set parameters"
-    },
-    {
-      "id": 5676,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
-    },
-    {
-      "id": 5680,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Network not being able to confirm new transactions (total network shutdown)"
+      "severity": "critical",
+      "title": "Direct loss of funds (including but not limited to unauthorized transfers, token minting, or token burning)"
     }
   ],
   "rewards": [
     {
-      "id": 40607,
+      "id": 43619,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -216,7 +222,7 @@
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 40608,
+      "id": 43620,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -224,7 +230,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 40609,
+      "id": 43621,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -232,7 +238,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 40610,
+      "id": 43622,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
