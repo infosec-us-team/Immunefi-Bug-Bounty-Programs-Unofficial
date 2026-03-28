@@ -814,7 +814,7 @@
     "Defi",
     "Infrastructure"
   ],
-  "rewardsBody": "All bug reports must come with a PoC in order to be accepted for a reward. \n\nPayouts are handled by the __Rocket Pool__ team directly and are denominated in USD. However, payouts are done in __RPL__.",
+  "rewardsBody": "Payouts are handled by the __Rocket Pool__ team directly and are denominated in USD. However, payouts are done in __RPL__.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -822,8 +822,8 @@
   "rewardsToken": "RPL",
   "slug": "rocketpool",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-02-17T13:18:36.596Z",
-  "impactsBody": "**Rewards will only be paid if the core team determine that code changes are required.**\n\nThe following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n- Attacks requiring access to privileged actors (guardian, ODAO members)\n- Mentions of secrets in Github, will be considered out of scope without proof that they are in-use in production\n\nPlease note that freezing funds permanently means it cannot be recovered through an upgrade.",
+  "updatedDate": "2026-03-27T08:19:16.541Z",
+  "impactsBody": null,
   "websiteUrl": "https://rocketpool.net",
   "githubUrl": "https://github.com/rocket-pool",
   "eligibilityCriteria": [],
@@ -836,120 +836,80 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Attacks requiring access to privileged actors (guardian, ODAO members)\n  - Mentions of secrets in Github, will be considered out of scope without proof that they are in-use in production",
+  "customOutOfScopeInformation": null,
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 960,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds (with value > $250,000), whether at-rest or in-motion, other than unclaimed yield"
-    },
-    {
-      "id": 961,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of user funds (with value > $250,000)"
-    },
-    {
-      "id": 962,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of DAO owned funds (with value > $250,000), whether at-rest or in-motion"
-    },
-    {
-      "id": 963,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of DAO owned funds (with value > $250,000)"
-    },
-    {
-      "id": 964,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Manipulation of governance voting result deviating from voted outcome and resulting in an cost impact > $250,000"
-    },
-    {
-      "id": 5901,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Temporary freezing of funds"
-    },
-    {
-      "id": 5902,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Manipulation to gain unfair yield or commission advantage"
-    },
-    {
-      "id": 5903,
+      "id": 6018,
       "type": "smart_contract",
       "severity": "low",
       "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
     },
     {
-      "id": 5904,
+      "id": 6019,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Manipulation to gain unfair yield or commission advantage"
+    },
+    {
+      "id": 6020,
       "type": "smart_contract",
       "severity": "medium",
-      "title": "Direct theft (with value < $15,000)"
+      "title": "Manipulation of governance voting result deviating from voted outcome"
     },
     {
-      "id": 5905,
+      "id": 6021,
       "type": "smart_contract",
-      "severity": "high",
-      "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a cost impact > $15,000 and < $250,000"
+      "severity": "medium",
+      "title": "Temporary freezing of funds"
     },
     {
-      "id": 5906,
+      "id": 6022,
       "type": "smart_contract",
       "severity": "high",
-      "title": "Permanent freezing of DAO owned funds (with value > $15,000 and < $250,000)"
+      "title": "Manipulation of governance voting result deviating from voted outcome with cost impact"
     },
     {
-      "id": 5907,
+      "id": 6023,
       "type": "smart_contract",
       "severity": "high",
-      "title": "Direct theft of DAO owned funds (with value > $15,000 and < $250,000), whether at-rest or in-motion"
+      "title": "Direct theft of unclaimed yield, whether at-rest or in-motion"
     },
     {
-      "id": 5908,
+      "id": 6024,
       "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of user funds (with value > $15,000 and < $250,000)"
+      "severity": "critical",
+      "title": "Permanent freezing of funds (cannot be rescued)"
     },
     {
-      "id": 5909,
+      "id": 6025,
       "type": "smart_contract",
-      "severity": "high",
-      "title": "Direct theft of any user funds (with value > $15,000 and < $250,000), whether at-rest or in-motion"
-    },
-    {
-      "id": 23,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of unclaimed yield"
+      "severity": "critical",
+      "title": "Direct theft of principal user funds whether at-rest or in-motion, other than unclaimed yield"
     }
   ],
   "rewards": [
     {
-      "id": 41046,
+      "id": 43710,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
       "maxReward": 150000,
-      "rewardModel": "up_to",
+      "minReward": 15000,
+      "rewardModel": "range",
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 41047,
+      "id": 43711,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
       "maxReward": 15000,
-      "rewardModel": "up_to"
+      "minReward": 5000,
+      "rewardModel": "range"
     },
     {
-      "id": 41048,
+      "id": 43712,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -957,7 +917,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 41049,
+      "id": 43713,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
