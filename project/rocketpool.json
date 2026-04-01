@@ -801,7 +801,7 @@
     "smart_contract - medium"
   ],
   "primaryPaymentWallet": "EVM",
-  "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Smart Contracts__\n\n__Critical__\t \n  - Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield\n  - Permanent freezing of funds\n\n__High__\n  - Theft of unclaimed yield\n\n__Medium__\t\n  - Smart contract unable to operate due to lack of token funds\n  - Block stuffing for profit\n  - Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)\n  - Unbounded gas consumption",
+  "prioritizedVulnerabilities": "_blank_",
   "productType": [
     "Staking"
   ],
@@ -814,7 +814,7 @@
     "Defi",
     "Infrastructure"
   ],
-  "rewardsBody": "Payouts are handled by the __Rocket Pool__ team directly and are denominated in USD. However, payouts are done in __RPL__.",
+  "rewardsBody": "Payouts are handled by the __Rocket Pool__ team directly and are denominated in USD. However, payouts are done in __RPL__.\n\n#### Reward Calculation for Critical Level Reports\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of **USD $150,000**. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of **USD $15,000** is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n#### Repeatable Attack Limitations\n\n* If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward.   \n* The amount of funds at risk will be calculated with the impact of the first attack being at **100%** and then a reduction of **25%** from the amount of the first attack for every \\[**300 blocks\\]** the attack needs for subsequent attacks from the first attack, rounded down.\n\n#### Reward Calculation for High Level Reports\n\nHigh impacts concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of **$5,000** to **$15,000**.  with the reward calculated based on **100%** of the funds at risk, though capped at the maximum high reward. \n\n#### Reward Calculation for Medium Level Reports\n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -822,7 +822,7 @@
   "rewardsToken": "RPL",
   "slug": "rocketpool",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-03-27T08:19:16.541Z",
+  "updatedDate": "2026-03-31T03:00:29.998Z",
   "impactsBody": null,
   "websiteUrl": "https://rocketpool.net",
   "githubUrl": "https://github.com/rocket-pool",
@@ -864,6 +864,12 @@
       "title": "Temporary freezing of funds"
     },
     {
+      "id": 6029,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Direct theft of principal user funds with value < $50,000 (excluding unclaimed yield), whether at-rest or in-motion"
+    },
+    {
       "id": 6022,
       "type": "smart_contract",
       "severity": "high",
@@ -876,21 +882,27 @@
       "title": "Direct theft of unclaimed yield, whether at-rest or in-motion"
     },
     {
+      "id": 6028,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Direct theft of principal user funds with value > $50,000 and <$150,000 (excluding unclaimed yield), whether at-rest or in-motion"
+    },
+    {
+      "id": 6027,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of principal user funds exceeding $150,000 (excluding unclaimed yield), whether at-rest or in-motion"
+    },
+    {
       "id": 6024,
       "type": "smart_contract",
       "severity": "critical",
       "title": "Permanent freezing of funds (cannot be rescued)"
-    },
-    {
-      "id": 6025,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of principal user funds whether at-rest or in-motion, other than unclaimed yield"
     }
   ],
   "rewards": [
     {
-      "id": 43710,
+      "id": 43916,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -900,7 +912,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 43711,
+      "id": 43917,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -909,7 +921,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 43712,
+      "id": 43918,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -917,7 +929,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 43713,
+      "id": 43919,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",

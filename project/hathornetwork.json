@@ -72,15 +72,14 @@
   ],
   "launchDate": "2023-03-15T19:00:00.000Z",
   "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5jW460UDYEbPDo4PZAOuZE/dd602e17d4ff01851c727c387eeecc5a/KEBPir98_400x400.jpg",
-  "maxBounty": 30000,
+  "maxBounty": 20000,
   "outOfScopeAndRules": ".",
   "pocPerTypeAndSeverity": [
     "blockchain_dlt - critical",
     "blockchain_dlt - high",
     "blockchain_dlt - medium",
     "blockchain_dlt - low",
-    "websites_and_applications - critical",
-    "websites_and_applications - low"
+    "websites_and_applications - critical"
   ],
   "primaryPaymentWallet": "OtherNonEVML1",
   "prioritizedVulnerabilities": "_blank_",
@@ -105,7 +104,7 @@
   "rewardsToken": "HTR",
   "slug": "hathornetwork",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-03-24T21:16:43.370Z",
+  "updatedDate": "2026-03-31T16:50:49.435Z",
   "impactsBody": null,
   "websiteUrl": "https://hathor.network/",
   "githubUrl": "https://github.com/HathorNetwork",
@@ -122,6 +121,12 @@
   "customOutOfScopeInformation": null,
   "customProhibitedActivities": [],
   "impacts": [
+    {
+      "id": 3945,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Creation of tokens, including HTR, without following blockchain and consensus rules"
+    },
     {
       "id": 2,
       "type": "blockchain_dlt",
@@ -175,63 +180,21 @@
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Direct theft of user NFTs"
-    },
-    {
-      "id": 3940,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Changing details of other users (including modifying browser local storage) without already-connected wallet interaction and with significant user interaction such as iframing leading to modifying the backend/browser state (demonstrate impact with PoC)"
-    },
-    {
-      "id": 3941,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Transient consensus failures"
-    },
-    {
-      "id": 3942,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Network not being able to confirm new transactions (Total network shutdown)"
-    },
-    {
-      "id": 3943,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Increasing full node resource consumption by at least 40% without brute force actions, compared to the preceding 24 hours"
-    },
-    {
-      "id": 3944,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Shutdown of greater than or equal to 30% of full nodes without brute force actions, but does not shut down the network"
-    },
-    {
-      "id": 3945,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Creation of tokens, including HTR, without following blockchain and consensus rules"
-    },
-    {
-      "id": 3946,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, and submitting malicious transactions"
     }
   ],
   "rewards": [
     {
-      "id": 43641,
+      "id": 43976,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
-      "maxReward": 30000,
+      "maxReward": 20000,
       "minReward": 10000,
       "rewardModel": "range",
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 43642,
+      "id": 43977,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -239,7 +202,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 43643,
+      "id": 43978,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -247,7 +210,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 43644,
+      "id": 43979,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
@@ -255,19 +218,11 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 43645,
+      "id": 43980,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
       "fixedReward": 10000,
-      "rewardModel": "fixed"
-    },
-    {
-      "id": 43646,
-      "primacy": null,
-      "severity": "low",
-      "assetType": "websites_and_applications",
-      "fixedReward": 1000,
       "rewardModel": "fixed"
     }
   ],

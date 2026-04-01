@@ -19,16 +19,6 @@
       "description": "Primacy of Impact",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": true
-    },
-    {
-      "id": "99353",
-      "url": "https://etherscan.io/address/0xAEff0D3f487F0431318d923f691fF9C484C7564E#code",
-      "type": "smart_contract",
-      "addedAt": "2026-03-25T05:46:51.681Z",
-      "revision": 0,
-      "description": "VaultMigrationTool_USD.json",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": "All smart contracts of Alchemix can be found at [https://github.com/alchemix-finance/v2-foundry](https://github.com/alchemix-finance/v2-foundry). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.  The in scope contracts can be found in the “src” folder, [https://github.com/alchemix-finance/v2-foundry/tree/master/src](https://github.com/alchemix-finance/v2-foundry/tree/master/src), but excludes the “external/aave”, “mocks”, and “test” folder. All 3rd party code in any folder is also out of scope.\n\nThough only the proxy contracts are listed as in-scope, current implementation and any further updates to the implementation contracts are considered in scope. When reporting a bug, please make sure to select the relevant proxy smart contract as the target. \n\nIf an impact can be caused to any other asset managed by Alchemix that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project. This only applies to Critical and High impacts.",
@@ -62,9 +52,7 @@
   "maxBounty": 300000,
   "outOfScopeAndRules": null,
   "pocPerTypeAndSeverity": [
-    "smart_contract - critical",
-    "smart_contract - high",
-    "smart_contract - medium"
+    "smart_contract - critical"
   ],
   "primaryPaymentWallet": "EVM",
   "prioritizedVulnerabilities": "_blank_",
@@ -89,7 +77,7 @@
   "rewardsToken": "ALCX",
   "slug": "alchemix",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-03-25T05:46:51.782Z",
+  "updatedDate": "2026-03-30T17:19:49.962Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -107,18 +95,6 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 22,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Protocol insolvency"
-    },
-    {
-      "id": 61,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Smart contract fails to deliver promised returns, but doesn’t lose value"
-    },
-    {
       "id": 15,
       "type": "smart_contract",
       "severity": "critical",
@@ -131,58 +107,21 @@
       "title": "Permanent freezing of funds"
     },
     {
-      "id": 62,
+      "id": 22,
       "type": "smart_contract",
-      "severity": "low",
-      "title": "Unbounded gas consumption, that does not cause a more severe bug"
-    },
-    {
-      "id": 63,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing of funds for at least 1 day"
-    },
-    {
-      "id": 65,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Miner-extractable value (MEV)"
+      "severity": "critical",
+      "title": "Protocol insolvency"
     }
   ],
   "rewards": [
     {
-      "id": 43647,
+      "id": 43792,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
       "maxReward": 300000,
       "rewardModel": "up_to",
       "rewardCalculationPercentage": 10
-    },
-    {
-      "id": 43648,
-      "primacy": null,
-      "severity": "high",
-      "assetType": "smart_contract",
-      "maxReward": 35000,
-      "minReward": 5000,
-      "rewardModel": "range"
-    },
-    {
-      "id": 43649,
-      "primacy": null,
-      "severity": "medium",
-      "assetType": "smart_contract",
-      "fixedReward": 4000,
-      "rewardModel": "fixed"
-    },
-    {
-      "id": 43650,
-      "primacy": null,
-      "severity": "low",
-      "assetType": "smart_contract",
-      "fixedReward": 1000,
-      "rewardModel": "fixed"
     }
   ],
   "audits": []

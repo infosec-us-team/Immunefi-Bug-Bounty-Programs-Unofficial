@@ -79,6 +79,26 @@
       "description": "Smart Contracts",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
+    },
+    {
+      "id": "99452",
+      "url": "https://immunefi.com",
+      "type": "smart_contract",
+      "addedAt": "2026-03-31T18:56:59.134Z",
+      "revision": 0,
+      "description": "Primacy of Impact",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": true
+    },
+    {
+      "id": "99453",
+      "url": "https://immunefi.com",
+      "type": "websites_and_applications",
+      "addedAt": "2026-03-31T18:56:59.134Z",
+      "revision": 0,
+      "description": "Primacy of Impact",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": true
     }
   ],
   "assetsBodyV2": "ENS’s codebase can be found at https://github.com/orgs/ensdomains/repositories. Documentation and further resources can be found on https://docs.ens.domains.",
@@ -129,7 +149,7 @@
   "projectType": [
     "Infrastructure"
   ],
-  "rewardsBody": "Rewards are broadly based on the principles set forth within the [Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\nFor the sake of clarity, in the event of a conflict between that classification system and the rewards schema set forth below, the below language will control. \n\n### Critical Reward Calculation\n\nThe reward for critical smart contract vulnerabilities is calculated as 10% of funds directly affected, up to a maximum of USD 250,000, calculated as follows:\n\n| &nbsp;&nbsp;&nbsp;Base: 10% of funds directly affected, up to $250,000 | Up to $250,000 |\n| :---- | :---- |\n| &nbsp;&nbsp;&nbsp;Where funds directly affected exceed $1,500,000: | Minimum $150,000 |\n| &nbsp;&nbsp;&nbsp;Where funds directly affected are between $500,000 and $1,500,000: | Minimum $75,000 |\n| &nbsp;&nbsp;&nbsp;Where funds directly affected are below $500,000, or not objectively calculable | Minimum $25,000 |\n| &nbsp;&nbsp;&nbsp;Where the vulnerability affects fewer than 50 on-chain assets or accounts: reward may be &nbsp;&nbsp;&nbsp;further adjusted downward at the program’s discretion. | Minimum $10,000 |\n\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused,only the initial attack will be considered for a reward within the mitigation window (12 hours for Security Council, 9 days for DAO vote)\n. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\nFor critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n### High Reward Calculation\n\nThe reward for high-severity smart contract vulnerabilities ranges between USD 25,000 and USD 100,000, based on the assessed impact and funds at risk.\n\n| &nbsp;&nbsp;&nbsp;High vulnerabilities concerning theft or permanent freezing of unclaimed yield or &nbsp;&nbsp;&nbsp;royalties are considered at the full amount of funds at risk, capped at the maximum high &nbsp;&nbsp;&nbsp;reward. This is to encourage security researchers to uncover and responsibly disclose &nbsp;&nbsp;&nbsp;vulnerabilities that may not have significant monetary value today but could still be &nbsp;&nbsp;&nbsp;damaging to the project if left unaddressed. | Up to <br>$100,000 |\n| :---- | :---- |\n| &nbsp;&nbsp;&nbsp;Temporary freezing of funds is classified as High severity. The reward is determined within the &nbsp;&nbsp;&nbsp;High reward range based on the value of funds affected and the estimated duration of the &nbsp;&nbsp;&nbsp;freeze. | Up to<br>$100,000 |\n| &nbsp;&nbsp;&nbsp;For high smart contract bugs on testnet assets, the reward ranges between contingent upon &nbsp;&nbsp;&nbsp;the ability to calculate the equivalent mainnet impact. | Minimum $25,000 Maximum $75,000 |\n| &nbsp;&nbsp;&nbsp;In cases where objective calculation is not feasible, there will be a base reward, with the &nbsp;&nbsp;&nbsp;discretion to increase the amount. | Base $25,000 |\n\n**Track B:  Websites and Applications**\n\n### **Critical Web / App Reward Calculation**\n\nCritical web/application bug reports will be rewarded with USD 50,000, only if the impact leads to:\n\n- A loss of funds involving an attack that does not require any user action  \n- Unauthorized minting of tokens on-chain.  \n- Private key or private key generation leakage leading to unauthorized access to user funds.\n\n__Severity Assessment for XSS Reports:__\n\n- Injection of malicious content into app.ens.domains to initiate a malicious transaction without requiring unusual user interaction will be considered critical.\n- Injection of malicious scripts into other ENS subdomains (besides app.ens.domains) that offer web3 wallet connections will be considered high for stored XSS and medium for reflected XSS.\n- XSS on staging/dev or static ENS websites like metadata.ens.domains, which do not offer web3 functionality, will be considered low unless a direct impact on app.ens.domains is demonstrated.\n\n__Reward Payment Terms__\n\nPayouts are handled by the ENS team directly and are denominated in USD. However, payments are done in USDC.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.\n\n**Eligible Versions** \n\nCommits tagged with vx.x.x-RCX (e.g. v1.2.3-RC0), vx.x.x- (e.g. v1.2.3-testnet) or vx.x.x (e.g. v1.2.3) are potentially eligible for the bug bounty. To be clear this includes testnet releases. For testnet releases, only version numbers greater than or equal to the latest mainnet release are eligible. For mainnet, only the latest release is eligible. See releases here: https://github.com/ensdomains/ens-contracts/releases.",
+  "rewardsBody": "**Classification & Reward Discretion**\n\nRewards are paid in USDC on Ethereum and are determined based on severity under the Immunefi Vulnerability Severity Classification System (V2.3).\n\nRewards are broadly based on the principles set forth within the [Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\nFinal reward amounts are determined by ENS in its sole discretion after assessing factors such as:\n\n- Likelihood of exploitation\n- Scope of affected systems\n- Ease of execution\n- Quality of the report\n- Whether the disclosure was responsible and novel\n- Whether exploitation requires assuming that ENS Labs or its authorized operators act maliciously or are compromised rather than exploiting a flaw in the deployed smart contract logic. \n\nFinal amounts will be no less than the respective minimum amounts of each severity level, based on the final severity classification of the bug report. ENS only pays for the first disclosure of a vulnerability. This discretion is exercised in good faith and is subject to mediation.\n\nDepending on the severity and internal assessment, ENS retains the right to reward above the stated amounts at its discretion.\n\nThe **“10% of funds at risk”** clause **does not apply** to the ENS bug bounty program.\n\n### External Dependency Discount\n\nWhere a valid vulnerability can only be exploited if a third-party system outside ENS's control fails or behaves abnormally (e.g., oracle failures, bridge compromises, or third-party dependency malfunctions), ENS may reduce the reward by up to 50% to reflect the conditional nature of the risk. This discount does not apply where ENS has the ability to mitigate or protect its users through its own action, in such cases, the full reward applies. Any reduction under this clause must be accompanied by a brief written explanation identifying the specific external dependency and the rationale for the discount applied.\n\nFor the sake of clarity, in the event of a conflict between that classification system and the rewards schema set forth below, the below language will control. \n\n### Critical Reward Calculation\n\nThe reward for critical smart contract vulnerabilities is calculated as 10% of funds directly affected, up to a maximum of USD 250,000, calculated as follows:\n\n| &nbsp;&nbsp;&nbsp;Base: 10% of funds directly affected, up to $250,000 | Up to $250,000 |\n| :---- | :---- |\n| &nbsp;&nbsp;&nbsp;Where funds directly affected exceed $1,500,000: | Minimum $150,000 |\n| &nbsp;&nbsp;&nbsp;Where funds directly affected are between $500,000 and $1,500,000: | Minimum $75,000 |\n| &nbsp;&nbsp;&nbsp;Where funds directly affected are below $500,000, or not objectively calculable | Minimum $25,000 |\n| &nbsp;&nbsp;&nbsp;Where the vulnerability affects fewer than 50 on-chain assets or accounts: reward may be &nbsp;&nbsp;&nbsp;further adjusted downward at the program’s discretion. | Minimum $10,000 |\n\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused,only the initial attack will be considered for a reward within the mitigation window (12 hours for Security Council, 9 days for DAO vote)\n. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\nFor critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n### High Reward Calculation\n\nThe reward for high-severity smart contract vulnerabilities ranges between USD 25,000 and USD 100,000, based on the assessed impact and funds at risk.\n\n| &nbsp;&nbsp;&nbsp;High vulnerabilities concerning theft or permanent freezing of unclaimed yield or &nbsp;&nbsp;&nbsp;royalties are considered at the full amount of funds at risk, capped at the maximum high &nbsp;&nbsp;&nbsp;reward. This is to encourage security researchers to uncover and responsibly disclose &nbsp;&nbsp;&nbsp;vulnerabilities that may not have significant monetary value today but could still be &nbsp;&nbsp;&nbsp;damaging to the project if left unaddressed. | Up to <br>$100,000 |\n| :---- | :---- |\n| &nbsp;&nbsp;&nbsp;Temporary freezing of funds is classified as High severity. The reward is determined within the &nbsp;&nbsp;&nbsp;High reward range based on the value of funds affected and the estimated duration of the &nbsp;&nbsp;&nbsp;freeze. | Up to<br>$100,000 |\n| &nbsp;&nbsp;&nbsp;For high smart contract bugs on testnet assets, the reward ranges between contingent upon &nbsp;&nbsp;&nbsp;the ability to calculate the equivalent mainnet impact. | Minimum $25,000 Maximum $75,000 |\n| &nbsp;&nbsp;&nbsp;In cases where objective calculation is not feasible, there will be a base reward, with the &nbsp;&nbsp;&nbsp;discretion to increase the amount. | Base $25,000 |\n\n**Track B:  Websites and Applications**\n\n### **Critical Web / App Reward Calculation**\n\nCritical web/application bug reports will be rewarded with USD 25,000, **only** if the impact leads to:\n\n- A loss of funds involving an attack that does not require any user action  \n- Unauthorized minting of tokens on-chain.  \n- Private key or private key generation leakage leading to unauthorized access to user funds.\n\n__Severity Assessment for XSS Reports:__\n\n- Injection of malicious content into app.ens.domains to initiate a malicious transaction without requiring unusual user interaction will be considered critical.\n- Injection of malicious scripts into other ENS subdomains (besides app.ens.domains) that offer web3 wallet connections will be considered high for stored XSS and medium for reflected XSS.\n- XSS on staging/dev or static ENS websites like metadata.ens.domains, which do not offer web3 functionality, will be considered low unless a direct impact on app.ens.domains is demonstrated.\n\n__Reward Payment Terms__\n\nPayouts are handled by the ENS team directly and are denominated in USD. However, payments are done in USDC.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.\n\n**Eligible Versions** \n\nCommits tagged with vx.x.x-RCX (e.g. v1.2.3-RC0), vx.x.x- (e.g. v1.2.3-testnet) or vx.x.x (e.g. v1.2.3) are potentially eligible for the bug bounty. To be clear this includes testnet releases. For testnet releases, only version numbers greater than or equal to the latest mainnet release are eligible. For mainnet, only the latest release is eligible. See releases here: https://github.com/ensdomains/ens-contracts/releases.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -137,8 +157,8 @@
   "rewardsToken": "USDC",
   "slug": "ens",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-03-11T02:46:34.705Z",
-  "impactsBody": "",
+  "updatedDate": "2026-03-31T19:06:44.545Z",
+  "impactsBody": "Primacy of Impact: Impact is prioritized over specific assets for Critical and High levels. This determines eligibility, not automatically the maximum reward.",
   "websiteUrl": null,
   "githubUrl": null,
   "eligibilityCriteria": [],
@@ -427,7 +447,7 @@
   ],
   "rewards": [
     {
-      "id": 42639,
+      "id": 44016,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -437,7 +457,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 42640,
+      "id": 44017,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -446,24 +466,23 @@
       "rewardModel": "range"
     },
     {
-      "id": 42641,
-      "primacy": null,
+      "id": 44018,
+      "primacy": "primacy_of_rules",
       "severity": "medium",
       "assetType": "smart_contract",
-      "fixedReward": 100000,
+      "fixedReward": 10000,
       "rewardModel": "fixed"
     },
     {
-      "id": 42642,
+      "id": 44019,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
-      "maxReward": 50000,
-      "minReward": 20000,
-      "rewardModel": "range"
+      "fixedReward": 25000,
+      "rewardModel": "fixed"
     },
     {
-      "id": 42643,
+      "id": 44020,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -472,17 +491,16 @@
       "rewardModel": "range"
     },
     {
-      "id": 42644,
-      "primacy": null,
+      "id": 44021,
+      "primacy": "primacy_of_rules",
       "severity": "medium",
       "assetType": "websites_and_applications",
-      "maxReward": 5000,
-      "minReward": 2500,
-      "rewardModel": "range"
+      "fixedReward": 10000,
+      "rewardModel": "fixed"
     },
     {
-      "id": 42645,
-      "primacy": null,
+      "id": 44022,
+      "primacy": "primacy_of_rules",
       "severity": "low",
       "assetType": "websites_and_applications",
       "fixedReward": 1000,
