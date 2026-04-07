@@ -29,6 +29,16 @@
       "description": "Berachain Airdrop Contracts",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_681b9403-134e-4e1b-aae0-5a1e1a6143e0",
+      "url": "https://github.com/berachain/bera-reth",
+      "type": "blockchain_dlt",
+      "addedAt": "2026-04-06T10:56:25.180Z",
+      "revision": 0,
+      "description": "A high-performance Rust execution client for Berachain, built with the Reth SDK.",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": null,
@@ -39,7 +49,8 @@
   "boostedLeaderboard": [],
   "boostedSummaryReport": null,
   "ecosystem": [
-    "ETH"
+    "ETH",
+    "Cosmos"
   ],
   "endDate": null,
   "evaluationEndDate": null,
@@ -82,7 +93,9 @@
   "project": "Berachain",
   "projectType": [
     "Blockchain",
-    "Infrastructure"
+    "Infrastructure",
+    "Defi",
+    "NFT"
   ],
   "rewardsBody": "***STOP!*** **Is your report `Web/Apps` related?**\n\n**If yes, please visit:** https://immunefi.com/bug-bounty/berachain-webapps/information/\n\n___\n\nRewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Blockchain/DLT bugs, the reward amount is 10% of the funds directly affected, capped at the maximum critical reward of $250,000. However, a minimum reward of USD $50,000 is to be rewarded to incentivize security researchers against withholding a bug report.\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD $250,000. Calculating the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD $50,000 is to be rewarded to incentivize security researchers against withholding a critical bug report.\n\n__Repeatable Attack Limitations__\n\n- If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n\n- For critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. The project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High-Level Reports__\n\n- High vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within $10,000 to $50,000 depending on the funds at risk, capped at the maximum high reward.\n\n- In the event of temporary freezing, the reward doubles from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for more significant damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures more substantial incentives for bug disclosure of this nature.\n \n__Reward Payment Terms__\n\nPayouts are handled by the Berachain team directly and are denominated in USD. However, payments are made in BERA on Berachain.\n\nThe net amount rewarded is calculated based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
   "rewardsPool": 0,
@@ -92,9 +105,9 @@
   "rewardsToken": "",
   "slug": "berachain",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-03-17T13:51:55.669Z",
+  "updatedDate": "2026-04-06T18:28:47.985Z",
   "impactsBody": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered in scope, even if they affect something in the assets in the scope table.\n\n__For Blockchain/DLT__\n\nThe set of attack vectors listed in this bullet list represents potential exploits that may result in one or more of the impacts defined in the table.\n\n- Remote code execution on validator node\n- Exposure of cryptographic key material\n- Impersonation of validator’s authenticated actions, e.g. forging of signatures or votes\n- Bugs that would allow the extraction, or the destruction, or the generation of surplus monetary rewards other than what is designated in the protocol\n- Any bug that would lead to a perceivable advantage other than the validator’s voting power, e.g. election bias\n- Confused deputy on equivocating or slashable behavior, e.g. the validator node is induced into voting twice involuntarily\n- Attacks lead a percentage of nodes to crash, halting the chain\n- Bugs leading to a percentage of nodes into an inconsistent state, without stopping the chain\n- Non-generic attacks lead to a chain halt or make the chain unable to progress\n- Safety and correctness flaws that would require the combination of extraordinary conditions to occur\n- Extended degradation of performances by non-generic means \n- Non-generic attacks mean that there must be an omission or a defect in the code that would result in any significant computational advantage.",
-  "websiteUrl": null,
+  "websiteUrl": "https://www.berachain.com",
   "githubUrl": null,
   "eligibilityCriteria": [
     "no_ofac_sdn",
@@ -111,7 +124,7 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "This Program, as it pertains to the [Berachain Airdrops Contract](https://github.com/berachain/airdrop-contracts), is specifically designed to address reports that result in financial loss. In particular, any exploit related to airdrop components already claimed by users, which consequently cannot translate in any financial losses, will not be considered.\n\nThe following assets are OOS of this program:\n - https://github.com/berachain/airdrop-contracts/blob/main/src/Distributor1.sol\n\nFor all other contracts, which means all except the `Airdrops Contract`, the following impacts are out of scope of this bug bounty program.\n\n__All Categories:__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers\n- Impacts relying on theoretical user interactions without any demonstration of regular or significant occurrence\n\n__Blockchain/DLT & Smart Contract Specific:__\n\n- Incorrect data supplied by third-party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n- Node REST API (/eth/v1/beacon/*) is out of scope\n- DoS against default-off components doesn't qualify\n\n__Prohibited Activities:__\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
+  "customOutOfScopeInformation": "This Program, as it pertains to the [Berachain Airdrops Contract](https://github.com/berachain/airdrop-contracts), is specifically designed to address reports that result in financial loss. In particular, any exploit related to airdrop components already claimed by users, which consequently cannot translate in any financial losses, will not be considered.\n\nThe following assets are OOS of this program:\n - https://github.com/berachain/airdrop-contracts/blob/main/src/Distributor1.sol\n\nFor all other contracts, which means all except the `Airdrops Contract`, the following impacts are out of scope of this bug bounty program.\n\n__All Categories:__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers\n- Impacts relying on theoretical user interactions without any demonstration of regular or significant occurrence\n\n__Blockchain/DLT & Smart Contract Specific:__\n\nFor bera-reth, our Berachain fork of the Rust Ethereum client, *any upstream bugs are out of scope*\nPlease report only bugs specific to Berachain's fork\nhttps://github.com/berachain/bera-reth\n\n\n- Incorrect data supplied by third-party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n- Node REST API (/eth/v1/beacon/*) is out of scope\n- DoS against default-off components doesn't qualify\n\n__Prohibited Activities:__\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
   "customProhibitedActivities": [],
   "impacts": [
     {
@@ -309,7 +322,7 @@
   ],
   "rewards": [
     {
-      "id": 43247,
+      "id": 44265,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -319,7 +332,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 43248,
+      "id": 44266,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -328,7 +341,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 43249,
+      "id": 44267,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -337,7 +350,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 43250,
+      "id": 44268,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
@@ -345,7 +358,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 43251,
+      "id": 44269,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -355,7 +368,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 43252,
+      "id": 44270,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -364,7 +377,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 43253,
+      "id": 44271,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -373,7 +386,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 43254,
+      "id": 44272,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
