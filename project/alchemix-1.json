@@ -1,0 +1,290 @@
+{
+  "assets": [
+    {
+      "id": "99115",
+      "url": "https://alchemix.fi/",
+      "type": "smart_contract",
+      "addedAt": "2026-02-26T12:51:33.682Z",
+      "revision": 0,
+      "description": "Primacy of Impact",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": true
+    },
+    {
+      "id": "99471",
+      "url": "https://github.com/alchemix-finance/v3/tree/master/src",
+      "type": "smart_contract",
+      "addedAt": "2026-04-06T18:46:52.218Z",
+      "revision": 0,
+      "description": "V3 Contracts",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    }
+  ],
+  "assetsBodyV2": "",
+  "boostedIntroEvaluating": "",
+  "boostedIntroFinished": "",
+  "boostedIntroLive": "",
+  "boostedIntroStartingIn": "",
+  "boostedLeaderboard": [],
+  "boostedSummaryReport": null,
+  "ecosystem": [
+    "Arbitrum",
+    "ETH",
+    "Optimism",
+    "Base"
+  ],
+  "endDate": null,
+  "evaluationEndDate": null,
+  "features": [],
+  "hideAssetsInScope": null,
+  "immunefiStandard": false,
+  "inviteOnly": false,
+  "kyc": false,
+  "language": [
+    "Solidity"
+  ],
+  "launchDate": "2026-02-26T19:26:00.000Z",
+  "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1n32B4eQNgsTaCpybMEudK/57f8ae5777af97e0e7a91f4b2ec17517/alchemix.png",
+  "maxBounty": 300000,
+  "outOfScopeAndRules": null,
+  "pocPerTypeAndSeverity": [
+    "smart_contract - critical",
+    "smart_contract - high",
+    "smart_contract - medium"
+  ],
+  "primaryPaymentWallet": "EVM",
+  "prioritizedVulnerabilities": "_blank_",
+  "productType": [
+    "CDP",
+    "DAO",
+    "Lending",
+    "Synthetic Assets",
+    "Token",
+    "Yield Aggregator",
+    "Asset Management"
+  ],
+  "programOverview": "Alchemix is your unified platform for saving, earning, borrowing, and fixed-term fixed-yield opportunities—all in one place. Built on years of iteration since launching the original self-repaying loan in 2021, Alchemix v3 brings all three pillars together with a smarter, more flexible design.\n\nFor more information about Alchemix, please visit https://alchemix.fi/\nAlchemix privides rewards on USDC on ETH, Arb and OP. For more details about the payment process, please review the Rewards by Threat Level section further below.\n\n\n__Primacy of Impact vs Primacy of Rules__\n\nAlchemix adheres to the Primacy of Impact for the following impacts:\n- Smart Contracts / Critical\n- Smart Contracts / High\n- Smart Contracts / Medium\n- Smart Contracts / Low\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. \nFor more information, please see Best Practices: Primacy of Impact \n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the Immunefi PoC Guidelines and Rules.\n\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, perform necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk.",
+  "programType": [
+    "Smart Contract"
+  ],
+  "project": "Alchemix",
+  "projectType": [
+    "Defi"
+  ],
+  "rewardsBody": "__Reward Calculation for Critical Level Reports__\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 300,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 50,000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward.\n\n__Reward Calculation for High Level Reports__\nHigh impacts concerning theft/permanent freezing of unclaimed yield/royalties are rewarded with a range of 5,000 to 35,000 with the reward calculated based on 100% of the funds at risk, though capped at the maximum high reward.\n\nIn the event of temporary freezing, the reward doubles from the full frozen vallue for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward.",
+  "rewardsPool": 0,
+  "primaryPool": 0,
+  "allStarsPool": 0,
+  "podiumPool": 0,
+  "rewardsToken": "USDC",
+  "slug": "alchemix-1",
+  "tenPercentEconomicRule": true,
+  "updatedDate": "2026-04-07T19:51:35.824Z",
+  "impactsBody": "",
+  "websiteUrl": "https://alchemix.fi/",
+  "githubUrl": "https://github.com/alchemix-finance",
+  "eligibilityCriteria": [],
+  "responsiblePublicationCategory": "category_3",
+  "description": "Alchemix is your unified platform for saving, earning, borrowing, and fixed-term fixed-yield opportunities—all in one place. Built on years of iteration since launching the original self-repaying loan in 2021, Alchemix v3 brings all three pillars together with a smarter, more flexible design.",
+  "knownIssues": [
+    {
+      "id": 1250,
+      "link": "https://github.com/alchemix-finance/v3-poc/tree/immunefi_audit",
+      "description": "Technically an individual could open numerous small positions at max LTV, hoping that they become eligible for liquidation so they can liquidate themselves and get paid from the feeVault for a net profit. However, the feeVault ONLY pays out when the alchemist is globally undercollateralized, NOT for liquidate individually undercollateralized positions when global collateralization is otherwise acceptable. This is an acceptable risk and therefore not considered in scope. ",
+      "lastUpdatedAt": "2025-10-13T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1251,
+      "link": "https://immunefi.com/audit-competition/alchemix-v3-audit-competition/scope/#top",
+      "description": "We are pricing strategies based on the fundamental backing, rather than dex price, whenever possible. This means there may be scenarios where the fundamental backing has a queue to access (such as the exit queue for wstETH). In these scenarios, as an example, 1 alETH in the transmuter would return 1 ETH worth of MYT, but that 1 ETH of MYT would not be accessible until the withdrawal queue clears, OR the user could sell the 1 ETH of MYT for < 1 ETH. Thus, the MYT market price may be < 1 ETH, which may bring the price of the alAsset < 1 ETH. This is intended behavior, as should the withdrawal queue clear the 1 ETH of MYT value would once again be instantly accessible and thus the alAsset would be redeemable for 1 ETH.",
+      "lastUpdatedAt": "2025-10-01T06:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1252,
+      "link": "https://immunefi.com/audit-competition/alchemix-v3-audit-competition/scope/#top",
+      "description": "IF the price of the MYT drops below the LTV (say 1 ETH of MYT has a market price of 0.85 ETH) due to withdrawal queues, then it would be expected that arbitragers mint alETH to sell at > 100% LTV. However, so long as the value of the MYT these arbitragers collateralize returns to 1:1, there is no bad debt created in the system. Only a situation that returns permanent bad debt, even after MYT recovery, would be in scope (or a situation where the MYT is prevented from recovering).",
+      "lastUpdatedAt": "2025-10-01T06:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1253,
+      "link": "https://alchemix-stats.com/",
+      "description": "The DAO Multisig on each chain, which takes on an admin role in the system, is trusted. ",
+      "lastUpdatedAt": "2025-10-01T06:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1287,
+      "link": "https://docs.alchemix.fi/user",
+      "description": "All curators and allocators are trusted (ie, low/med/high risk strategy cap maximums are not enforced on chain, assumed done by curators/allocators/admin)",
+      "lastUpdatedAt": "2026-04-03T06:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
+  "defaultOutOfScopeBlockchain": null,
+  "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+  "defaultOutOfScopeWebAndApplications": null,
+  "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+  "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+  "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+  "customOutOfScopeInformation": "**Yield Strategies**\nAlchemix v3 is set to go live on 4/13 based on primacy of impact, at which point for yield strategies to be in scope they must be deployed and tied into the MYT. Prior to deployment, only the following yield strategies are in scope:\n\nMainnet USDC - EulerUSD, TokeAutoUSD\nMainnet wETH - EulerwETH, TokeAutoETH, WstETH\nArbitrum - AaveUSDC, EulerUSDc, FluidUSDC\nArbitrum - aaveETH, EulerETH\nOP - AaveUSDC\nOP - no wETH strats\n\nThe following strategies are out of scope prior to deployment:\nMainnet EtherFiEETH, Mainnet siUSD, Mainnet FraxETH, Optimism wstETH\n\n**Trusted Admin**\nAdmin, Curator, Allocator, and Sentinel are all trusted roles. This will change in the future with onchain governance, but for now are assumed trusted. As an example, strategies recieve a high/med/low risk rating, which dictates maximum relative caps. However, these relative caps are not yet enforced onchain and instead are enforced by trusted curators/allocators.\n\n**Perpetual Gauge** Unused and out of scope, related to \"Trusted Admin\" above.",
+  "customProhibitedActivities": [],
+  "impacts": [
+    {
+      "id": 5897,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temproary Freezing of Funds at 0 cost or profit to attacker for greater than 1 day"
+    },
+    {
+      "id": 5898,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing at minimal no to cost to attacker"
+    },
+    {
+      "id": 5899,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Unbounded gas consumption with no additional sever related bugs"
+    },
+    {
+      "id": 5900,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Miner Extractable Value in excess of 0.75%"
+    },
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 16,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user NFTs, whether at-rest or in-motion, other than unclaimed royalties"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 18,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of NFTs"
+    },
+    {
+      "id": 19,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Unauthorized minting of NFTs"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 29,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Smart contract unable to operate due to lack of token funds"
+    },
+    {
+      "id": 34,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
+    }
+  ],
+  "rewards": [
+    {
+      "id": 44361,
+      "primacy": null,
+      "severity": "critical",
+      "assetType": "smart_contract",
+      "maxReward": 300000,
+      "minReward": 50000,
+      "rewardModel": "range",
+      "rewardCalculationPercentage": 10
+    },
+    {
+      "id": 44362,
+      "primacy": null,
+      "severity": "high",
+      "assetType": "smart_contract",
+      "maxReward": 35000,
+      "minReward": 5000,
+      "rewardModel": "range"
+    },
+    {
+      "id": 44363,
+      "primacy": null,
+      "severity": "medium",
+      "assetType": "smart_contract",
+      "fixedReward": 4000,
+      "rewardModel": "fixed"
+    },
+    {
+      "id": 44364,
+      "primacy": null,
+      "severity": "low",
+      "assetType": "smart_contract",
+      "fixedReward": 1000,
+      "rewardModel": "fixed"
+    }
+  ],
+  "audits": [
+    {
+      "id": "1274",
+      "url": "https://hackmd.io/@geistermeister/SkSZiU9ybe",
+      "auditor": "Aleph V",
+      "date": "2025-12-15T00:00:00.000Z"
+    },
+    {
+      "id": "1275",
+      "url": "https://cantina.xyz/portfolio/f638950d-a8ad-4df8-a6ec-8b067e416d7b",
+      "auditor": "Spearbit and Cantina",
+      "date": "2025-05-15T00:00:00.000Z"
+    },
+    {
+      "id": "1331",
+      "url": "https://docs.alchemix.fi/assets/files/v3-yearn-e44c37454c3ba188ea81d6d583c399aa.pdf",
+      "auditor": "yAudit",
+      "date": "2026-03-15T00:00:00.000Z"
+    },
+    {
+      "id": "1332",
+      "url": "https://docs.alchemix.fi/assets/files/v3-nethermind-3195e302f55244d130f49ec41e6d1539.pdf",
+      "auditor": "Nethermind",
+      "date": "2026-02-02T00:00:00.000Z"
+    },
+    {
+      "id": "1333",
+      "url": "https://drive.google.com/file/d/18LmIajwn6NOCbxKQJ49MVLyLSKb9gmD1/view",
+      "auditor": "immunefi",
+      "date": "2026-01-01T00:00:00.000Z"
+    }
+  ]
+}

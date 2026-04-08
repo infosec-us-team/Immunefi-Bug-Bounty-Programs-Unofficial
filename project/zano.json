@@ -114,7 +114,7 @@
   "projectType": [
     "Blockchain"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the Immunefi Vulnerability Severity Classification System V2.3. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Blockchain/DLT bugs, the reward amount is 5% of the funds directly affected, capped at the maximum critical reward USD 10 000. However, a minimum reward of USD 2000 is to be rewarded in order to incentivize security researchers against withholding on a bug report.\n\nFor critical Blockchain/DLT bugs with a non-funds-at risk impact, the reward will be paid out as follows: \n\n- Network not being able to confirm new transactions (total network shutdown) - USD 3 000\n- Unintended permanent chain split requiring hard fork (network partition requiring hard fork) - USD 3 000\n- Permanent freezing of funds (fix requires hardfork) - USD 3 000\n\n__Reward Calculation for High Level Reports__\n\nFor high Blockchain/DLT non-funds-at risk impacts, the reward will be paid out as follows: \n\n- Unintended chain split (network partition) - USD 4 000\n- Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments - USD 4 000\n- Causing network processing nodes to process transactions from the mempool beyond set parameters - USD 2 000\n\nNote for medium and low Blockchain/DLT non-funds-at risk impacts: \n - This program is primarily focused on identifying vulnerabilities in the cryptographic protocol itself. Reports describing DoS or similar attacks that rely on abusing the network/currency protocol layer are generally considered lower priority, as any node serving network requests can potentially be overwhelmed one way or another. Attempting to address every possible variation of such attacks would not be practical and could quickly exhaust the bug bounty allocation. For this reason, reports of this type may be classified as Out of Scope. In limited cases, such reports may be considered valid at the team’s discretion.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Zano team directly and are denominated in **USD**. However, payments are done in **USDC** on **Ethereum**.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the Immunefi Vulnerability Severity Classification System V2.3. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Blockchain/DLT bugs, the reward amount is 5% of the funds directly affected, capped at the maximum critical reward USD 10 000. However, a minimum reward of USD 2000 is to be rewarded in order to incentivize security researchers against withholding on a bug report.\n\nFor critical Blockchain/DLT bugs with a non-funds-at risk impact, the reward will be paid out as follows: \n\n- Network not being able to confirm new transactions (total network shutdown) - USD 3 000\n- Unintended permanent chain split requiring hard fork (network partition requiring hard fork) - USD 3 000\n- Permanent freezing of funds (fix requires hardfork) - USD 3 000\n\n__Reward Calculation for High Level Reports__\n\nFor high Blockchain/DLT non-funds-at risk impacts, the reward will be paid out as follows: \n\n- Unintended chain split (network partition) - USD 4 000\n- Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments - USD 4 000\n- Causing network processing nodes to process transactions from the mempool beyond set parameters - USD 2 000\n\nNote for medium and low Blockchain/DLT non-funds-at risk impacts: \n\n__Reward Payment Terms__\n\nPayouts are handled by the Zano team directly and are denominated in **USD**. However, payments are done in **USDC** on **Ethereum**.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -122,7 +122,7 @@
   "rewardsToken": "",
   "slug": "zano",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-03-31T10:43:33.714Z",
+  "updatedDate": "2026-04-07T19:00:52.001Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -136,7 +136,7 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "Zano Specific: \n- RPC server network/protocol attacks - Attempts to compromise the RPC endpoint at the network or protocol layer are out of scope. The RPC server is an internal component of the daemon and is not intended for direct exposure to the public Internet. In production it must sit behind a securely configured reverse proxy (e.g., nginx) that enforces strict rate-limiting.\n\n- Legacy multisig-based escrow contracts – All code related to multisig-escrow contracts found in wallet2.cpp/h was retired as of Hard-Fork 4 and is no longer executed. Any testing or vulnerability reports that target this legacy logic are therefore out of scope and will not be evaluated.\n\n- Plain wallet API (src/wallet/plain_wallet_api.h and src/wallet/plain_wallet_api.cpp) is out of scope as this is internal library and not considered as part of protocol.\n\n - Any DoS-related abuse of the P2P protocol, including OOM, stack overflows, excessive CPU consumption, or similar resource-exhaustion issues, is out of scope by default. In limited cases, such reports may be considered valid at the team’s discretion.\n\n\n\n- \n- \n-",
+  "customOutOfScopeInformation": "Zano Specific: \n- RPC server network/protocol attacks - Attempts to compromise the RPC endpoint at the network or protocol layer are out of scope. The RPC server is an internal component of the daemon and is not intended for direct exposure to the public Internet. In production it must sit behind a securely configured reverse proxy (e.g., nginx) that enforces strict rate-limiting.\n\n- Legacy multisig-based escrow contracts – All code related to multisig-escrow contracts found in wallet2.cpp/h was retired as of Hard-Fork 4 and is no longer executed. Any testing or vulnerability reports that target this legacy logic are therefore out of scope and will not be evaluated.\n\n- Plain wallet API (src/wallet/plain_wallet_api.h and src/wallet/plain_wallet_api.cpp) is out of scope as this is internal library and not considered as part of protocol.\n\n - Any DoS-related abuse of the P2P protocol, including OOM, stack overflows, excessive CPU consumption, or similar resource-exhaustion issues, is out of scope by default. In limited cases, such reports may be considered valid at the team’s discretion.\n\n - This program is primarily focused on identifying vulnerabilities in the cryptographic protocol itself. Reports describing DoS or similar attacks that rely on abusing the network/currency protocol layer are generally considered lower priority, as any node serving network requests can potentially be overwhelmed one way or another. Attempting to address every possible variation of such attacks would not be practical and could quickly exhaust the bug bounty allocation. For this reason, reports of this type may be classified as Out of Scope. In limited cases, such reports may be considered valid at the team’s discretion.\n\n\n- \n- \n-",
   "customProhibitedActivities": [],
   "impacts": [
     {
@@ -304,7 +304,7 @@
   ],
   "rewards": [
     {
-      "id": 43920,
+      "id": 44339,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -314,7 +314,7 @@
       "rewardCalculationPercentage": 5
     },
     {
-      "id": 43921,
+      "id": 44340,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -322,7 +322,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 43922,
+      "id": 44341,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -330,7 +330,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 43923,
+      "id": 44342,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -339,7 +339,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 43924,
+      "id": 44343,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -347,7 +347,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 43925,
+      "id": 44344,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
