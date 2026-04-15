@@ -2276,7 +2276,7 @@
     "Blockchain",
     "Infrastructure"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Critical and High Smart Contract bug reports require a PoC to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nCritical smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of __USD 20 000__. High smart contract vulnerabilities are capped at 10% of economic damage as well, with a minimum reward of __USD 10 000__.\n\nHyperlane requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed are Name and Identity Proof (Passport, / Driving License / National ID). The collection of this information will be done by the project team.\n\nPayouts are handled by the __Hyperlane__ team directly and are denominated in USD. However, payouts are done in __USDC__.",
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps, smart contracts, and blockchains/DLTs, focusing on the impact of the vulnerability reported.\n\nAll web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Critical and High Smart Contract bug reports require a PoC to be eligible for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nCritical smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of __USD 10 000__. High smart contract vulnerabilities are capped at 10% of economic damage as well, with a minimum reward of __USD 5 000__.\n\nHyperlane requires KYC to be done for all bug bounty hunters submitting a report and wanting a reward. The information needed are Name and Identity Proof (Passport, / Driving License / National ID). The collection of this information will be done by the project team.\n\nPayouts are handled by the __Hyperlane__ team directly and are denominated in USD. However, payouts are done in __USDC__.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -2284,7 +2284,7 @@
   "rewardsToken": "USDC",
   "slug": "hyperlane",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-03-17T08:23:24.106Z",
+  "updatedDate": "2026-04-13T15:32:04.909Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -2298,7 +2298,7 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n- Attacks requiring access to privileged addresses (governance, strategist)\n- Vulnerabilities in components that exist in the codebase but are demonstrably unused or not integrated with production systems will be classified as invalid.\n- Throttling or suppression of operations without loss of user and / or protocol funds\n- Best practice critiques\n- ‘Contract DDoS’",
+  "customOutOfScopeInformation": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n- Attacks requiring access to privileged addresses (governance, owner, etc)\n- Vulnerabilities in components that exist in the codebase but are demonstrably unused or not integrated with production systems will be classified as invalid.\n- Throttling or suppression of operations without loss of user and / or protocol funds\n- Best practice critiques\n- ‘Contract DDoS’",
   "customProhibitedActivities": [],
   "impacts": [
     {
@@ -2312,12 +2312,6 @@
       "type": "smart_contract",
       "severity": "low",
       "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-    },
-    {
-      "id": 3648,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Theft of gas"
     },
     {
       "id": 3649,
@@ -2344,42 +2338,6 @@
       "title": "Temporarily disabling user to access target site, such as locking up the victim from login, cookie bombing, etc."
     },
     {
-      "id": 23,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of unclaimed yield"
-    },
-    {
-      "id": 24,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of unclaimed royalties"
-    },
-    {
-      "id": 25,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of unclaimed yield"
-    },
-    {
-      "id": 26,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of unclaimed royalties"
-    },
-    {
-      "id": 3653,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing of funds for at least 60 minutes"
-    },
-    {
-      "id": 3654,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing NFTs for at least 60 minutes"
-    },
-    {
       "id": 3655,
       "type": "websites_and_applications",
       "severity": "high",
@@ -2398,24 +2356,6 @@
       "title": "Improperly disclosing confidential user information such as email address, phone number, physical address, etc."
     },
     {
-      "id": 29,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Smart contract unable to operate due to lack of token funds"
-    },
-    {
-      "id": 3658,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Block stuffing for profit"
-    },
-    {
-      "id": 33,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Unbounded gas consumption"
-    },
-    {
       "id": 3659,
       "type": "websites_and_applications",
       "severity": "medium",
@@ -2428,12 +2368,6 @@
       "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data"
     },
     {
-      "id": 52,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Redirecting users to malicious websites (open redirect)"
-    },
-    {
       "id": 3661,
       "type": "websites_and_applications",
       "severity": "medium",
@@ -2444,6 +2378,30 @@
       "type": "smart_contract",
       "severity": "critical",
       "title": "Any governance voting result manipulation"
+    },
+    {
+      "id": 3665,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Unauthorized minting of interchain assets, whether fungible or not"
+    },
+    {
+      "id": 3666,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys(this does not include non-sensitive environment variables, open source code, or usernames)"
+    },
+    {
+      "id": 3667,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc."
+    },
+    {
+      "id": 3669,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions"
     },
     {
       "id": 15,
@@ -2470,22 +2428,10 @@
       "title": "Permanent freezing of NFTs"
     },
     {
-      "id": 3663,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Miner-extractable value (MEV)"
-    },
-    {
       "id": 19,
       "type": "smart_contract",
       "severity": "critical",
       "title": "Unauthorized minting of NFTs"
-    },
-    {
-      "id": 3664,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Predictable or manipulable RNG that results in abuse of the principal"
     },
     {
       "id": 21,
@@ -2500,22 +2446,46 @@
       "title": "Protocol insolvency"
     },
     {
-      "id": 3665,
+      "id": 23,
       "type": "smart_contract",
-      "severity": "critical",
-      "title": "Unauthorized minting of interchain assets, whether fungible or not"
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 24,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed royalties"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 26,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed royalties"
+    },
+    {
+      "id": 29,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Smart contract unable to operate due to lack of token funds"
+    },
+    {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
     },
     {
       "id": 35,
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Execute arbitrary system commands"
-    },
-    {
-      "id": 3666,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys(this does not include non-sensitive environment variables, open source code, or usernames)"
     },
     {
       "id": 37,
@@ -2530,18 +2500,6 @@
       "title": "Taking down the NFT URI"
     },
     {
-      "id": 3667,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc."
-    },
-    {
-      "id": 3668,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Changing the NFT metadata"
-    },
-    {
       "id": 41,
       "type": "websites_and_applications",
       "severity": "critical",
@@ -2554,62 +2512,56 @@
       "title": "Direct theft of user funds"
     },
     {
-      "id": 3669,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions"
-    },
-    {
       "id": 44,
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Direct theft of user NFTs"
     },
     {
-      "id": 3670,
+      "id": 52,
       "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Injection of malicious HTML or XSS through NFT metadata"
+      "severity": "medium",
+      "title": "Redirecting users to malicious websites (open redirect)"
     }
   ],
   "rewards": [
     {
-      "id": 43227,
+      "id": 44714,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
       "maxReward": 2500000,
-      "minReward": 20000,
+      "minReward": 10000,
       "rewardModel": "range",
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 43228,
+      "id": 44715,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
       "maxReward": 200000,
-      "minReward": 10000,
+      "minReward": 5000,
       "rewardModel": "range"
     },
     {
-      "id": 43229,
+      "id": 44716,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
-      "fixedReward": 5000,
+      "fixedReward": 2500,
       "rewardModel": "fixed"
     },
     {
-      "id": 43230,
+      "id": 44717,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
-      "fixedReward": 2000,
+      "fixedReward": 1000,
       "rewardModel": "fixed"
     },
     {
-      "id": 43231,
+      "id": 44718,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -2617,7 +2569,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 43232,
+      "id": 44719,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -2625,7 +2577,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 43233,
+      "id": 44720,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
@@ -2633,7 +2585,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 43234,
+      "id": 44721,
       "primacy": null,
       "severity": "low",
       "assetType": "websites_and_applications",
