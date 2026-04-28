@@ -61,7 +61,7 @@
       "isPrimacyOfImpact": false
     }
   ],
-  "assetsBodyV2": "Documentation and further resources can be found on [https://0x.org/docs/](https://0x.org/docs/)\n\nFor brevity regarding Smart Contract Assets\n\n- the source tree on GitHub ([https://github.com/0xProject/0x-settler/tree/master/src](https://github.com/0xProject/0x-settler/tree/master/src)) \n- Deployer:\n    - 0x00000000000004533Fe15556B1E086BB1A72cEae\n    - any contract holding a \"Deployer\" ERC721 token (each a \"Settler\")\n- AllowanceHolder:\n    - 0x0000000000001fF3684f28c67538d4D072C22734\n    - 0x0000000000005E88410CcDFaDe4a5EfaE4b49562\n    - 0x000000000000175a8b9bC6d539B3708EEd92EA6c\n- ERC2771 forwarding MultiCall\n    - 0x00000000000000CF9E3c5A26621af382fA17f24f\n- Cross-chain receiver factory\n    - 0x00000000000000304861c3aDfb80dd5ebeC96325\n- Pauser Safe module\n    - 0x1CeC01DC0fFEE5eB5aF47DbEc1809F2A7c601C30\n \n\nThe scope is limited to these addresses, but *is not limited to any chain*. These contracts are deployed to many mainnet chains (the test-nets are not in scope). Presently the supported mainnet chains are: Ethereum mainnet, Ethereum Sepolia, Polygon, Base, Optimism, Arbitrum, Blast, Bnb, Mode, World Chain, Gnosis, Fantom Sonic, Ink, Monad testnet, Avalanche, Unichain, Berachain, Scroll, HyperEvm, Katana, Mantle, Taiko, and Linea. There will be many new chains added in the near future.",
+  "assetsBodyV2": "Documentation and further resources can be found on [https://0x.org/docs/](https://0x.org/docs/)\n\nFor brevity regarding Smart Contract Assets\n\n- the source tree on GitHub ([https://github.com/0xProject/0x-settler/tree/master/src](https://github.com/0xProject/0x-settler/tree/master/src)) \n- Deployer:\n    - 0x00000000000004533Fe15556B1E086BB1A72cEae\n    - any contract holding a \"Deployer\" ERC721 token (each a \"Settler\") except those holding tokenId 1001\n- AllowanceHolder:\n    - 0x0000000000001fF3684f28c67538d4D072C22734\n    - 0x0000000000005E88410CcDFaDe4a5EfaE4b49562\n    - 0x000000000000175a8b9bC6d539B3708EEd92EA6c\n- ERC2771 forwarding MultiCall\n    - 0x00000000000000CF9E3c5A26621af382fA17f24f\n- Cross-chain receiver factory\n    - 0x00000000000000304861c3aDfb80dd5ebeC96325\n- Pauser Safe module\n    - 0x1CeC01DC0fFEE5eB5aF47DbEc1809F2A7c601C30\n \n\nThe scope is limited to these addresses, but *is not limited to any chain*. These contracts are deployed to many mainnet chains (the test-nets are not in scope). Presently the supported mainnet chains are: Ethereum mainnet, Ethereum Sepolia, Polygon, Base, Optimism, Arbitrum, Bnb, World Chain, Fantom Sonic, Ink, Monad, Avalanche, Unichain, Berachain, Scroll, HyperEvm, Mantle, Linea, Abstract, Tempo, and Plasma. There will be many new chains added in the near future.",
   "boostedIntroEvaluating": "",
   "boostedIntroFinished": "",
   "boostedIntroLive": "",
@@ -73,7 +73,6 @@
     "Avalanche",
     "Arbitrum",
     "Base",
-    "Blast",
     "BSC",
     "ETH",
     "Linea",
@@ -81,8 +80,7 @@
     "Mode",
     "Optimism",
     "Scroll",
-    "Solana",
-    "xDAI / Gnosis Chain"
+    "Solana"
   ],
   "endDate": null,
   "evaluationEndDate": null,
@@ -132,7 +130,7 @@
   "rewardsToken": "USDC",
   "slug": "0x",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-04-16T13:19:02.065Z",
+  "updatedDate": "2026-04-27T15:04:46.034Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -283,7 +281,7 @@
   ],
   "rewards": [
     {
-      "id": 44432,
+      "id": 45316,
       "primacy": "primacy_of_impact",
       "severity": "critical",
       "assetType": "smart_contract",
@@ -293,7 +291,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 44433,
+      "id": 45317,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -302,7 +300,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 44434,
+      "id": 45318,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -310,16 +308,17 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 44435,
+      "id": 45319,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
       "maxReward": 50000,
       "minReward": 15000,
-      "rewardModel": "range"
+      "rewardModel": "range",
+      "otherImpactMaxReward": 0
     },
     {
-      "id": 44436,
+      "id": 45320,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -327,7 +326,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 44437,
+      "id": 45321,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
