@@ -711,7 +711,7 @@
     }
   ],
   "boostedSummaryReport": "https://drive.google.com/file/d/1NI_O0_lJ6w9emEJlDogF5M_BCLkf8mNX/view?usp=sharing",
-  "ecosystem": null,
+  "ecosystem": [],
   "endDate": "2024-08-06T08:00:00.000Z",
   "evaluationEndDate": "2024-08-30T10:30:00.000Z",
   "features": [
@@ -737,13 +737,13 @@
   ],
   "primaryPaymentWallet": "EVM",
   "prioritizedVulnerabilities": "In general all parts of the code should be checked and attack vectors explored. We write here some areas to look at in particular but this is not to discount any other areas.\n\nOne area to explore is the communication between chains. Messages are relayed between the spoke chain and the hub chain via Chainlink CCIP and Wormhole Messaging. In addition, Circle CCTP is used for USDC transfers. It is important to verify that we are using these protocols as intended and have correctly reasoned about the lifecycle of a message. \n\nWe have a contract named “HubAdapter” which mimics the behaviour of the Chainlink CCIP and Wormhole messaging, without actually relaying anything. Its purpose is to have a common interface for interacting with the protocol through the spoke contracts regardless of whether on the hub chain or not.\n\nWe also have a new process for liquidations which should be checked both economically and codewise. The oracle integration is also new and should be checked for resistance against tampering.\n\nOne invariant to ensure that there is sufficient funds such that if all borrowers repaid their loans, all depositors can withdraw their tokens. Not an invariant, but the average stable interest rate should be closely tracking the weighted average of all the stable borrows for a given pool.",
-  "productType": null,
+  "productType": [],
   "programOverview": "Folks Finance is a leading DeFi platform providing innovative tools for lending, borrowing, trading and managing digital assets, all in one place.\n\nFolks Finance are expanding with a new cross-chain lending protocol using a hub and spoke model. The hub chain, Avalanche, contains the main logic and state of the lending protocol. The spoke chains, initially EVM, act as an entry point for a user to interact with the protocol.\n\nChainlink CCIP and Wormhole Messaging are used to communicate between the spoke chains and hub chain. Circle CCTP is used for native cross chain transfers of USDC.\n\nFor more information about Folks Finance and their existing products, please visit https://folks.finance. \nFolks Finance provides rewards in USDC, denominated in USD.",
   "programType": [
     "Smart Contract"
   ],
   "project": "Audit Comp | Folks Finance",
-  "projectType": null,
+  "projectType": [],
   "rewardsBody": "The following reward terms are a summary, for the full details read our [Folks Finance Audit Competition Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/26758465696785-Folks-Finance-Audit-Competition-Reward-Terms)\n\nThe reward pool will be entirely distributed among participants. The size depends on the bugs found:\nIf no High or Critical severity bugs are found the reward pool will be **$50,000 USD**\nIf one or more High severity bugs are found the reward pool will be **$75,000 USD**\nIf one or more Critical severity bugs are found the reward pool will be **$100,000 USD**\n\n\nFor this audit competition, duplicates and private known issues are valid for a reward.\n\nRewards are distributed according to the impact of the vulnerability based on the Immunefi [Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Payment Terms__\n\nPayouts are handled by the Folks Finance team directly and are denominated in USD. However, payments are done in USDC\n\nRewards will be distributed all at once based on Immunefi’s distribution formula after the event has concluded and the final bug reports have been resolved.\n\nFolks Finance’s up to date codebase can be found at https://github.com/Folks-Finance/folks-finance-xchain-contracts.",
   "rewardsPool": 100000,
   "primaryPool": 100000,

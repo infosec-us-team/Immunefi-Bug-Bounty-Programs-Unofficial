@@ -115,14 +115,22 @@
   "rewardsToken": "CAKE or USDT",
   "slug": "pancakeswap",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-03-16T07:28:57.930Z",
+  "updatedDate": "2026-04-29T15:33:33.746Z",
   "impactsBody": null,
   "websiteUrl": "https://pancakeswap.finance/",
   "githubUrl": null,
   "eligibilityCriteria": [],
   "responsiblePublicationCategory": null,
   "description": "PancakeSwap is a decentralized exchange running on Binance Smart Chain and other multiple chains, with lots of other features that let you earn and win tokens. It's fast, cheap, and anyone can use it. It's also got pancakes and rabbits.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1291,
+      "link": "https://cantina.xyz/code/ea552420-8bd6-4119-815d-3d5203d0377a/findings/78",
+      "description": "UniversalRouter “OnlyMintAllowed” bypass drains Infinity CL position fees via INCREASE_FROM_DELTAS + TAKE_PAIR",
+      "lastUpdatedAt": "2026-04-29T12:41:13.361Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeWebAndApplications": "- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n  - This does not exclude reflected HTML injection with or without JavaScript\n  - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering",
@@ -285,7 +293,7 @@
   ],
   "rewards": [
     {
-      "id": 42998,
+      "id": 45390,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -294,7 +302,7 @@
       "rewardCalculationPercentage": 5
     },
     {
-      "id": 42999,
+      "id": 45391,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -302,15 +310,16 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 43000,
+      "id": 45392,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
       "maxReward": 7500,
-      "rewardModel": "up_to"
+      "rewardModel": "up_to",
+      "otherImpactMaxReward": 0
     },
     {
-      "id": 43001,
+      "id": 45393,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -318,7 +327,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 43002,
+      "id": 45394,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
