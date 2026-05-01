@@ -97,7 +97,15 @@
   "eligibilityCriteria": [],
   "responsiblePublicationCategory": "category_1",
   "description": "As the premier crypto cybersecurity technology and services company, we’ve built OpenZeppelin Contracts with our best [security practices](https://contracts.openzeppelin.com/security).",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1292,
+      "link": "https://github.com/OpenZeppelin/uniswap-hooks/blob/2c39623ce5a5103bd314f1380df0443df2523149/src/general/AntiSandwichHook.sol#L44",
+      "description": "In `_beforeSwap`, the hook iterates over all ticks between last tick and current tick. Developers must be aware that for large price changes in pools with small tick spacing, the `for` loop will iterate over a large number of ticks, which could lead to `MemoryOOG` error.",
+      "lastUpdatedAt": "2026-04-30T16:47:37.178Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeWebAndApplications": null,
