@@ -439,7 +439,22 @@
   "eligibilityCriteria": [],
   "responsiblePublicationCategory": null,
   "description": "Balancer is a community-driven protocol, liquidity provider, and price sensor that empowers decentralized exchange and the automated portfolio management of tokens on the Ethereum blockchain and other EVM compatible systems.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1293,
+      "link": "https://github.com/balancer/balancer-v3-monorepo/blob/main/audits/WONTFIX.md#protocol-fee-controller---fee-split-rounding",
+      "description": "Double rounding causes revert at protocol fee controller, but under circumstances that are not really relevant in practice and therefore it's not worth fixing.",
+      "lastUpdatedAt": "2026-05-01T12:46:12.570Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1294,
+      "link": "https://github.com/balancer/balancer-v3-monorepo/blob/main/audits/WONTFIX.md#protocol-fee-controller---fee-split-rounding",
+      "description": "Double rounding at ProtocolFeeController causes revert, but the conditions under which this happens are irrelevant in practice, and therefore it's not worth fixing.",
+      "lastUpdatedAt": "2026-05-01T12:48:12.893Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeWebAndApplications": null,

@@ -117,7 +117,15 @@
   ],
   "responsiblePublicationCategory": "category_3",
   "description": "Berachain is a high-performance EVM-Identical Layer 1 (L1) blockchain utilizing Proof-of-Liquidity (PoL) as a consensus mechanism and built on top of a modular EVM-focused consensus client framework named BeaconKit.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1295,
+      "link": "https://github.com/berachain/contracts/issues/2",
+      "description": "src/pol/BeaconDeposit.sol operator address is prone to front-running",
+      "lastUpdatedAt": "2026-05-04T13:45:54.136Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
   "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeWebAndApplications": null,
