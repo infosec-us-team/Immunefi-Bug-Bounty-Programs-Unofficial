@@ -137,7 +137,8 @@
   "features": [
     "Arbitration",
     "Pay to Submit",
-    "Managed Triage: Expert Assessment"
+    "Managed Triage: Expert Assessment",
+    "Pay to Mediate"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -184,7 +185,7 @@
   "rewardsToken": "STX",
   "slug": "stacks",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-05-01T19:38:55.702Z",
+  "updatedDate": "2026-05-08T15:46:21.772Z",
   "impactsBody": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.\n\n__Please note that any denial of service (DoS) attack which does not cause a direct loss of funds has a maximum bounty of $50,000 USD.__\n\n__Blockchain__\n\n**Critical:**\n- Any network to shut down or otherwise not confirm new valid transactions for multiple miner tenures\n- Any triggering of a deep fork of 3 or more miner tenures without spending the requisite Bitcoin\n- Any direct loss of funds other than through any form of freezing\n- Any chain split caused by different nodes processing the same block or transaction and yielding different results\n- Any confirmation of an invalid transaction, such as with an incorrect nonce\n\n**High:**\n- Any unintended chain split or network partition\n- Any remotely-exploitable memory access, disk access, or persistent code execution\n- Attacks are restricted to the Stacks blockchain RPC/P2P ports\n\n**Medium:**\n- Any transient consensus failures\n\n**Low:**\n- Any remotely-exploitable denial of service in a node\n- Any network denial of service impacting more than 10% of miners that does not shut down the network \n\n__Smart Contracts__\n\n**Critical:**\n- Any loss of user funds by permanent freezing or theft\n- Any loss of governance funds (limited to `.cost-vote`)\n- Any governance vote manipulation\n\n**High:**\n- Any theft of an unclaimed reward\n- Any permanent freezing of an unclaimed reward\n\n**Medium:**\n- Any block stuffing without fund transfers being blocked\n- Any block stuffing such that smart contract calls can be blocked but without paying any requisite higher transaction fees\n\n**Low:**\n- Any in-scope smart contract fails to deliver promised returns, but doesn’t lose value\n- Any underpricing or overpricing of smart contract operations\n\nPlease review open PRs before your submission as all duplicate attacks are considered “Out of Scope” as per below.\n\n__sBTC__\n\n**Critical:**\n- Direct loss of funds\n- Permanent freezing of funds\n\n**High:**\n- sBTC not being able to confirm new transactions (total sBTC shutdown)\n\n**Medium:**\n- A bug in the respective layer 1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk\n- Shutdown of greater than or equal to 30% of sBTC signers without brute force actions, but does not shut down the network\n- Temporarily freezing sBTC transactions\n- API crash preventing correct processing of sBTC deposits/withdrawals\n\n**Low:**\n- Modification of transaction fees outside of design parameters\n- Shutdown of greater than 10% or equal to but less than 30% of sBTC signers without brute force actions, but does not shut down the network\n\nPlease review open PRs before your submission as all duplicate attacks are considered “Out of Scope” as per below.",
   "websiteUrl": "https://stacks.co",
   "githubUrl": "https://github.com/stacks-network/stacks-core",
@@ -206,6 +207,12 @@
       "type": "blockchain_dlt",
       "severity": "low",
       "title": "Any remotely-exploitable denial of service in a node"
+    },
+    {
+      "id": 6102,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Any network to shut down or otherwise not confirm new valid transactions for multiple miner tenures"
     },
     {
       "id": 2271,
@@ -260,12 +267,6 @@
       "type": "smart_contract",
       "severity": "medium",
       "title": "Any block stuffing without fund transfers being blocked"
-    },
-    {
-      "id": 2281,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Any network to shut down or otherwise not confirm new valid transactions for multiple blocks"
     },
     {
       "id": 2282,
@@ -324,7 +325,7 @@
   ],
   "rewards": [
     {
-      "id": 45526,
+      "id": 45751,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -333,7 +334,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 45527,
+      "id": 45752,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -341,7 +342,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 45528,
+      "id": 45753,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -349,7 +350,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 45529,
+      "id": 45754,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
@@ -357,7 +358,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 45530,
+      "id": 45755,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -366,7 +367,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 45531,
+      "id": 45756,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -374,7 +375,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 45532,
+      "id": 45757,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -382,7 +383,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 45533,
+      "id": 45758,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
