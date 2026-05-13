@@ -104,6 +104,13 @@
       "description": "In `_beforeSwap`, the hook iterates over all ticks between last tick and current tick. Developers must be aware that for large price changes in pools with small tick spacing, the `for` loop will iterate over a large number of ticks, which could lead to `MemoryOOG` error.",
       "lastUpdatedAt": "2026-04-30T16:47:37.178Z",
       "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1303,
+      "link": "https://github.com/OpenZeppelin/uniswap-hooks/blob/638c56d9bf1ebd0f3b192b9d0392a70d525a37fa/src/general/ReHypothecationHook.sol#L55",
+      "description": "The RehypothecadedHook relies on the PoolManager singleton token reserves for flash accounting debts and credits during swaps. During `afterSwap`, the hook briefly generates token debts to the PoolManager even before users transfer their swap tokens. As a consequence, the PoolManager singleton may lack sufficient reserves for illiquid tokens in the instants between the swap executed and the posterior payment from the user, preventing swaps from being executed until the PoolManager accumulates enough tokens. Altrough it is very unlikely to happen, it can be mitigated by maintaining some permanent pool liquidity alongside rehypothecated liquidity.",
+      "lastUpdatedAt": "2026-05-12T20:14:43.675Z",
+      "relatedImpactInScope": "smart_contract"
     }
   ],
   "defaultOutOfScopeBlockchain": null,

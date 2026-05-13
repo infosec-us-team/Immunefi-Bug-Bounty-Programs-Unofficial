@@ -82,6 +82,13 @@
       "description": "The configuration templates checked into the Spark repository, including so.template.config.yaml and docker/operator.config.yaml, set service_authz.mode: 1 (AuthzModeDisabled) and leave ip_allowlist empty. These templates are intended as starting points for local development and testing, not as representative production configurations, and Spark is not deployed using them. Reports should not rely on these values.",
       "lastUpdatedAt": "2026-05-08T21:04:54.435Z",
       "relatedImpactInScope": "blockchain_dlt"
+    },
+    {
+      "id": 1304,
+      "link": "https://github.com/buildonspark/spark",
+      "description": "The current Spark implementation doesn't handle L1 re-orgs.",
+      "lastUpdatedAt": "2026-05-12T21:02:32.024Z",
+      "relatedImpactInScope": "blockchain_dlt"
     }
   ],
   "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",

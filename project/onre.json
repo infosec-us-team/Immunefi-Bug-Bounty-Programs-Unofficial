@@ -1,0 +1,257 @@
+{
+  "assets": [
+    {
+      "id": "99592",
+      "url": "https://solscan.io/account/onreuGhHHgVzMWSkj2oQDLDtvvGvoepBPkqyaubFcwe",
+      "type": "smart_contract",
+      "addedAt": "2026-04-30T15:54:47.634Z",
+      "revision": 0,
+      "description": "OnRe Program",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    }
+  ],
+  "assetsBodyV2": "Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production",
+  "boostedIntroEvaluating": "",
+  "boostedIntroFinished": "",
+  "boostedIntroLive": "",
+  "boostedIntroStartingIn": "",
+  "boostedLeaderboard": [],
+  "boostedSummaryReport": null,
+  "ecosystem": [
+    "Solana"
+  ],
+  "endDate": null,
+  "evaluationEndDate": null,
+  "features": [
+    "Pay to Mediate"
+  ],
+  "hideAssetsInScope": null,
+  "immunefiStandard": true,
+  "inviteOnly": false,
+  "kyc": true,
+  "language": [
+    "Rust"
+  ],
+  "launchDate": "2026-05-11T09:00:00.000Z",
+  "logo": "https://qn5bmgziiocgawpp.public.blob.vercel-storage.com/98309-R5QfV8zxRauXHmTjK_B-V.png",
+  "maxBounty": 100000,
+  "outOfScopeAndRules": ".",
+  "pocPerTypeAndSeverity": [
+    "smart_contract - critical",
+    "smart_contract - high",
+    "smart_contract - medium",
+    "smart_contract - low"
+  ],
+  "primaryPaymentWallet": "Solana",
+  "prioritizedVulnerabilities": "_blank_",
+  "productType": [
+    "Insurance"
+  ],
+  "programOverview": "OnRe issues ONyc, a yield-bearing Solana token backed by a portfolio of short-duration reinsurance contracts. Capital is held by On Re SAC Ltd (a Special Purpose Insurer regulated by the Bermuda Monetary Authority) and earns yield from real-world insurance premiums. The Solana program at `onreuGhHHgVzMWSkj2oQDLDtvvGvoepBPkqyaubFcwe` controls minting, redemption, and NAV computation. The collateral itself is held off-chain in the regulated Bermuda SAC and is therefore not reachable from the on-chain program; this bug bounty focuses on the on-chain Solana program and the supporting components listed under Assets in Scope.\n\nFor more information about OnRe, please visit https://onre.finance/. Technical and security documentation is available at https://docs.onre.finance/.\n\nOnRe provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below.\n\n**KYC Requirement**\n\nThe provision of KYC is required to receive a reward for this bug bounty program where the following information will be required to be provided:\n- Identity Document\n- Proof of Address\n\nKYC information is only required on confirmation of the validity of a bug report and will be handled by [Onfido](https://onfido.com/).                                      \n\nResearchers resident in [jurisdictions excluded under OnRe's policy](https://docs.onre.finance/legal/onyc-excluded-jurisdictions) and researchers in OFAC-sanctioned jurisdictions are not eligible to receive rewards.                                                                            \n\n**Primacy of Impact vs Primacy of Rules**\n\nOnRe adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms stated in this page.",
+  "programType": [
+    "Smart Contract"
+  ],
+  "project": "OnRe",
+  "projectType": [
+    "Defi"
+  ],
+  "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below.\n                                                                                                                \n**Reward Calculation for Critical Level Reports**\n\nFor critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 100,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted, and is bounded by on-chain assets exposed by the vulnerability, including but not limited to the offer and redemption vault balances and the value of any ONyc that could be minted without corresponding deposit. Capital held off-chain by On Re SAC Ltd in the regulated Bermuda SAC is not reachable from the Solana program and is therefore excluded from the funds-at-risk calculation. A minimum reward of USD 10,000 applies in order to incentivize security researchers against withholding a bug report.\n\nFor a bug to be deemed critical, the attack must originate from an unknown address. The setup in the PoC may be performed by privileged accounts that exist on-chain (`boss`, `redemption_admin`, `admin`, `approver1`, `approver2`), but the attacking account must be unvetted. Vulnerabilities that require collusion or compromise of one or more privileged accounts to execute are out of scope and treated as governance-layer concerns, not on-chain bugs.\n\n**Repeatable Attack Limitations**\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n                                                                                                                \n**Previous Audits**\n\nOnRe has provided these completed audit reports for reference. Any unfixed vulnerability mentioned in these     \nreports is not eligible for a reward.                                  \n                                                                                                                \n**Proof of Concept (PoC) Requirements**                                                                           \n                                                                                                                \nA PoC is required for the following severity levels:\n- Smart Contract, Critical Severity Level\n- Smart Contract, High Severity Level\n- Smart Contract, Medium Severity Level                                                                         \n- Smart Contract, Low Severity Level\n                                                                                                                \nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\nPoCs for the OnRe Solana program should be runnable in a deterministic local environment such as `solana-program-test`, `anchor-bankrun`, or LiteSVM, against the source at the commit specified in Assets in Scope. \nBug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n**Reward Payment Terms**\n\nPayouts are handled by the OnRe team directly and are denominated in USD. However, payments are done in USDC.",
+  "rewardsPool": 0,
+  "primaryPool": 0,
+  "allStarsPool": 0,
+  "podiumPool": 0,
+  "rewardsToken": "USDC",
+  "slug": "onre",
+  "tenPercentEconomicRule": false,
+  "updatedDate": "2026-05-11T21:35:07.820Z",
+  "impactsBody": null,
+  "websiteUrl": "https://onre.finance",
+  "githubUrl": "https://github.com/onre-finance/onre-sol",
+  "eligibilityCriteria": [
+    "no_ofac_sdn"
+  ],
+  "responsiblePublicationCategory": "category_3",
+  "description": "OnRe issues ONyc, a yield-bearing token on Solana whose value tracks a portfolio of short-duration reinsurance contracts. Capital backing ONyc is held by On Re SAC Ltd, a Special Purpose Insurer regulated by the Bermuda Monetary Authority, and deployed into reinsurance positions where returns come from real-world premium income rather than token emissions or subsidies. The Solana program governs minting, redemption, on-chain NAV calculation, supply caps, vault accounting, and the role-based authority that operates the protocol.",
+  "knownIssues": [],
+  "defaultOutOfScopeBlockchain": null,
+  "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+  "defaultOutOfScopeWebAndApplications": null,
+  "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+  "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+  "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+  "customOutOfScopeInformation": null,
+  "customProhibitedActivities": [],
+  "impacts": [
+    {
+      "id": 4472,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Manipulation of user roles inside the system via unvetted wallet or smart contract that may result in any high severity issue"
+    },
+    {
+      "id": 4473,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield from an unvetted address"
+    },
+    {
+      "id": 4474,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds from an unvetted address"
+    },
+    {
+      "id": 4475,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency from an unvetted address"
+    },
+    {
+      "id": 4476,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Manipulation of user roles inside the system via unvetted wallet or smart contract that may result in any critical severity issue"
+    },
+    {
+      "id": 14,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results"
+    },
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 24,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed royalties"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 26,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed royalties"
+    },
+    {
+      "id": 27,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 32,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of gas"
+    },
+    {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
+    },
+    {
+      "id": 34,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
+    }
+  ],
+  "rewards": [
+    {
+      "id": 45830,
+      "primacy": null,
+      "severity": "critical",
+      "assetType": "smart_contract",
+      "maxReward": 100000,
+      "minReward": 10000,
+      "rewardModel": "range",
+      "rewardCalculationPercentage": 10
+    },
+    {
+      "id": 45831,
+      "primacy": null,
+      "severity": "high",
+      "assetType": "smart_contract",
+      "fixedReward": 5000,
+      "rewardModel": "fixed"
+    },
+    {
+      "id": 45832,
+      "primacy": null,
+      "severity": "medium",
+      "assetType": "smart_contract",
+      "fixedReward": 2000,
+      "rewardModel": "fixed"
+    },
+    {
+      "id": 45833,
+      "primacy": null,
+      "severity": "low",
+      "assetType": "smart_contract",
+      "fixedReward": 1000,
+      "rewardModel": "fixed"
+    }
+  ],
+  "audits": [
+    {
+      "id": "1349",
+      "url": "https://certificate.quantstamp.com/full/onre-re-audit-2/41c2f85f-90ce-42ee-aac8-a810e0f0ec99/index.html",
+      "auditor": "Quantstamp",
+      "date": "2025-12-20T00:00:00.000Z"
+    },
+    {
+      "id": "1350",
+      "url": "https://app.onre.finance/files/ackee-blockchain-onre-onre-report.pdf",
+      "auditor": "Ackee",
+      "date": "2025-11-25T00:00:00.000Z"
+    },
+    {
+      "id": "1351",
+      "url": "https://certificate.quantstamp.com/full/on-re-solana-diff/b36b9c22-ed00-48e4-bbd1-66f98285a37b/index.html",
+      "auditor": "Quantstamp",
+      "date": "2025-08-26T00:00:00.000Z"
+    },
+    {
+      "id": "1352",
+      "url": "https://certificate.quantstamp.com/full/on-re-solana/c31251fd-f107-478d-ac17-6d9ad6bd3faa/index.html",
+      "auditor": "Quantstamp",
+      "date": "2025-05-19T00:00:00.000Z"
+    },
+    {
+      "id": "1353",
+      "url": "https://certificate.quantstamp.com/full/nayms-on-re-offer-redemption-program-spec/caed5b0c-4b32-4d01-9a3a-aa2174f5485f/index.html",
+      "auditor": "Quantstamp",
+      "date": "2025-03-28T00:00:00.000Z"
+    }
+  ]
+}
