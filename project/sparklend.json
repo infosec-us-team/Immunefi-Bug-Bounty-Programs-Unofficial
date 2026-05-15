@@ -3504,7 +3504,8 @@
   "endDate": null,
   "evaluationEndDate": null,
   "features": [
-    "Managed Triage: Time Saver"
+    "Managed Triage: Time Saver",
+    "Pay to Mediate"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -3527,7 +3528,7 @@
   "productType": [
     "Lending"
   ],
-  "programOverview": "Spark is an at-scale stablecoin allocation engine capturing yield across DeFi, RWAs and exchanges. This yield is provided cross-chain to Savings USDS holders.\n\nFor more information about Spark, please visit [https://spark.fi/ ](https://spark.fi/)\n\nSpark provides rewards in DAI. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__Primacy of Impact vs Primacy of Rules__\n\nSpark adheres to the Primacy of Impact for the following impacts:\n- Smart Contract - Critical \n\nIf an impact is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTestnet and mock files are not covered under the Primacy of Impact. \n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n__Known Issue Assurance__\n\nSpark commits to providing Known Issue Assurance to bug submissions through their program. This means that Spark will either disclose known issues publicly or at the very least privately via a self-reported bug submission in order to allow for a more objective and streamlined mediation process to prove that an issue is known. Otherwise, assuming the bug report itself is valid, it would result in the bug report being considered in-scope and due 100% of the reward with respect to the bug bounty program terms. \n\n__Immunefi Standard Badge__\n\nSpark has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209), which is given to projects that adhere to our best practices.",
+  "programOverview": "Spark is an at-scale stablecoin allocation engine capturing yield across DeFi, RWAs and exchanges. This yield is provided cross-chain to Savings USDS holders.\n\nFor more information about Spark, please visit [https://spark.fi/ ](https://spark.fi/)\n\nSpark provides rewards in DAI. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__Primacy of Impact vs Primacy of Rules__\n\nSpark adheres to the Primacy of Impact.\n\nIf an impact is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTestnet and mock files are not covered under the Primacy of Impact. \n\n__Known Issue Assurance__\n\nSpark commits to providing Known Issue Assurance to bug submissions through their program. This means that Spark will either disclose known issues publicly or at the very least privately via a self-reported bug submission in order to allow for a more objective and streamlined mediation process to prove that an issue is known. Otherwise, assuming the bug report itself is valid, it would result in the bug report being considered in-scope and due 100% of the reward with respect to the bug bounty program terms. \n\n__Immunefi Standard Badge__\n\nSpark has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209), which is given to projects that adhere to our best practices.",
   "programType": [
     "Smart Contract",
     "Websites and Applications"
@@ -3544,7 +3545,7 @@
   "rewardsToken": "DAI",
   "slug": "sparklend",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-04-14T13:42:16.045Z",
+  "updatedDate": "2026-05-14T15:57:11.540Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -3561,18 +3562,6 @@
   "customOutOfScopeInformation": null,
   "customProhibitedActivities": [],
   "impacts": [
-    {
-      "id": 23,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of unclaimed yield"
-    },
-    {
-      "id": 25,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of unclaimed yield"
-    },
     {
       "id": 4512,
       "type": "smart_contract",
@@ -3604,18 +3593,6 @@
       "title": "Improperly disclosing confidential user information such as email address, phone number, physical address, etc."
     },
     {
-      "id": 49,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Subdomain takeover without already-connected wallet interaction"
-    },
-    {
-      "id": 52,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Redirecting users to malicious websites (open redirect)"
-    },
-    {
       "id": 4517,
       "type": "websites_and_applications",
       "severity": "medium",
@@ -3626,6 +3603,42 @@
       "type": "websites_and_applications",
       "severity": "medium",
       "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data"
+    },
+    {
+      "id": 4519,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc."
+    },
+    {
+      "id": 4520,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 49,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Subdomain takeover without already-connected wallet interaction"
+    },
+    {
+      "id": 52,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Redirecting users to malicious websites (open redirect)"
     },
     {
       "id": 15,
@@ -3658,27 +3671,15 @@
       "title": "Execute arbitrary system commands"
     },
     {
-      "id": 4519,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc."
-    },
-    {
       "id": 41,
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Subdomain takeover with already-connected wallet interaction"
-    },
-    {
-      "id": 4520,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions"
     }
   ],
   "rewards": [
     {
-      "id": 44762,
+      "id": 45920,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -3688,7 +3689,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 44763,
+      "id": 45921,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -3697,16 +3698,17 @@
       "rewardModel": "range"
     },
     {
-      "id": 44764,
+      "id": 45922,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
       "maxReward": 50000,
       "minReward": 5000,
-      "rewardModel": "range"
+      "rewardModel": "range",
+      "otherImpactMaxReward": 0
     },
     {
-      "id": 44765,
+      "id": 45923,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -3715,7 +3717,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 44766,
+      "id": 45924,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",

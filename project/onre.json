@@ -56,7 +56,7 @@
   "projectType": [
     "Defi"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below.\n                                                                                                                \n**Reward Calculation for Critical Level Reports**\n\nFor critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 100,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted, and is bounded by on-chain assets exposed by the vulnerability, including but not limited to the offer and redemption vault balances and the value of any ONyc that could be minted without corresponding deposit. Capital held off-chain by On Re SAC Ltd in the regulated Bermuda SAC is not reachable from the Solana program and is therefore excluded from the funds-at-risk calculation. A minimum reward of USD 10,000 applies in order to incentivize security researchers against withholding a bug report.\n\nFor a bug to be deemed critical, the attack must originate from an unknown address. The setup in the PoC may be performed by privileged accounts that exist on-chain (`boss`, `redemption_admin`, `admin`, `approver1`, `approver2`), but the attacking account must be unvetted. Vulnerabilities that require collusion or compromise of one or more privileged accounts to execute are out of scope and treated as governance-layer concerns, not on-chain bugs.\n\n**Repeatable Attack Limitations**\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n                                                                                                                \n**Previous Audits**\n\nOnRe has provided these completed audit reports for reference. Any unfixed vulnerability mentioned in these     \nreports is not eligible for a reward.                                  \n                                                                                                                \n**Proof of Concept (PoC) Requirements**                                                                           \n                                                                                                                \nA PoC is required for the following severity levels:\n- Smart Contract, Critical Severity Level\n- Smart Contract, High Severity Level\n- Smart Contract, Medium Severity Level                                                                         \n- Smart Contract, Low Severity Level\n                                                                                                                \nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\nPoCs for the OnRe Solana program should be runnable in a deterministic local environment such as `solana-program-test`, `anchor-bankrun`, or LiteSVM, against the source at the commit specified in Assets in Scope. \nBug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n**Reward Payment Terms**\n\nPayouts are handled by the OnRe team directly and are denominated in USD. However, payments are done in USDC.",
+  "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below.\n                                                                                                                \n**Reward Calculation for Critical Level Reports**\n\nFor critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 100,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted, and is bounded by on-chain assets exposed by the vulnerability, including but not limited to the offer and redemption vault balances and the value of any ONyc that could be minted without corresponding deposit. Capital held off-chain by On Re SAC Ltd in the regulated Bermuda SAC is not reachable from the Solana program and is therefore excluded from the funds-at-risk calculation. A minimum reward of USD 10,000 applies in order to incentivize security researchers against withholding a bug report.\n\n**Deployed Contract Requirement**\n\nTo be eligible for a reward, the reported vulnerability must be present in the most recently deployed smart contract and must produce an eligible impact against an asset in scope.\n\nVulnerabilities that exist only in the GitHub source code, but not in the deployed contract, are not eligible for a reward. This may happen where a vulnerability has already been fixed in the deployed artifact or on-chain program before the public source code or related communication has been updated.\n\nFor the purpose of reward eligibility, the deployed contract takes precedence over the GitHub source code.\n\n**Repeatable Attack Limitations**\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n                                                                                                                \n**Previous Audits**\n\nOnRe has provided these completed audit reports for reference. Any unfixed vulnerability mentioned in these     \nreports is not eligible for a reward.                                  \n                                                                                                                \n**Proof of Concept (PoC) Requirements**                                                                           \n                                                                                                                \nA PoC is required for the following severity levels:\n- Smart Contract, Critical Severity Level\n- Smart Contract, High Severity Level\n- Smart Contract, Medium Severity Level                                                                         \n- Smart Contract, Low Severity Level\n                                                                                                                \nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\nPoCs for the OnRe Solana program should be runnable in a deterministic local environment such as `solana-program-test`, `anchor-bankrun`, or LiteSVM, against the source at the commit specified in Assets in Scope. \nBug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n**Reward Payment Terms**\n\nPayouts are handled by the OnRe team directly and are denominated in USD. However, payments are done in USDC.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -64,7 +64,7 @@
   "rewardsToken": "USDC",
   "slug": "onre",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-05-11T21:35:07.820Z",
+  "updatedDate": "2026-05-14T08:55:46.447Z",
   "impactsBody": null,
   "websiteUrl": "https://onre.finance",
   "githubUrl": "https://github.com/onre-finance/onre-sol",
@@ -73,7 +73,15 @@
   ],
   "responsiblePublicationCategory": "category_3",
   "description": "OnRe issues ONyc, a yield-bearing token on Solana whose value tracks a portfolio of short-duration reinsurance contracts. Capital backing ONyc is held by On Re SAC Ltd, a Special Purpose Insurer regulated by the Bermuda Monetary Authority, and deployed into reinsurance positions where returns come from real-world premium income rather than token emissions or subsidies. The Solana program governs minting, redemption, on-chain NAV calculation, supply caps, vault accounting, and the role-based authority that operates the protocol.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1305,
+      "link": "https://github.com/onre-finance/onre-sol/commit/b1d24ca734b64d60ac72b06f2b69bd10f8aa4d9f",
+      "description": "The update_offer_fee instruction validated the new fee against `MAX_BASIS_POINTS` (10000 bps, 100%) instead of `MAX_ALLOWED_FEE_BPS` (1000 bps, 10%), the constant `make_offer` uses. This let an existing offer be updated to a fee above the protocol's 10% ceiling.\n\nThe instruction is gated to the protocol boss, which on mainnet is the Squads V4 multisig at `45YnzauhsBM8CpUz96Djf8UG5vqq2Dua62wuW9H3jaJ5`. No unprivileged path reaches this code. Fee mutability and timing are also covered by acknowledged finding W8 in the public Ackee Blockchain Security audit, and by the documented trust model (Report Revision 1.0, page 19).\n\nThe constant has been corrected and the cap now matches `make_offer`. Any submission describing the same constant mismatch or the resulting \"fee escalates above 10% via `update_offer_fee`\" behavior is a duplicate of this known issue.",
+      "lastUpdatedAt": "2026-05-13T09:40:31.495Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeWebAndApplications": null,
@@ -188,7 +196,7 @@
   ],
   "rewards": [
     {
-      "id": 45830,
+      "id": 45890,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -198,7 +206,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 45831,
+      "id": 45891,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -206,7 +214,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 45832,
+      "id": 45892,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -214,7 +222,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 45833,
+      "id": 45893,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",

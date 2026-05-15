@@ -535,7 +535,8 @@
     "Subscription Plan: Essential",
     "Managed Triage: Time Saver",
     "Boost",
-    "Safe Harbor Documents Signed"
+    "Safe Harbor Documents Signed",
+    "Pay to Mediate"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -567,7 +568,7 @@
   "rewardsToken": "USDC",
   "slug": "veda",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-03-30T15:39:31.585Z",
+  "updatedDate": "2026-05-14T05:56:33.147Z",
   "impactsBody": null,
   "websiteUrl": "https://veda.tech/",
   "githubUrl": "https://github.com/Veda-Labs/boring-vault/",
@@ -591,6 +592,13 @@
       "id": 1263,
       "link": "https://github.com/veda-Labs/boring-vault",
       "description": "Known Issue: The protocol is aware that certain edge cases exist when vault.totalSupply() == 0. Reports requiring an empty vault as a precondition will not be eligible for reward",
+      "lastUpdatedAt": "2026-01-01T07:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1307,
+      "link": "https://github.com/veda-Labs/boring-vault",
+      "description": "Known Issue: The protocol's yield-streaming accountants (AccountantWithYieldStreaming) distribute recorded yield proportionally over the  share supply that exists at each _updateExchangeRate() call — not over a snapshot of holders at the time the yield was recorded. This is an intentional design choice that makes yield instantly available to depositors upon entry, accepted as a tradeoff against epoch-based or per-user-checkpointed accounting. The symmetric consequence is that depositors who exit during or before a vesting window forfeit their pro-rata share of remaining unvested yield to holders who stay. Reports relying on this behavior will not be eligible for reward.",
       "lastUpdatedAt": "2026-01-01T07:00:00.000Z",
       "relatedImpactInScope": "smart_contract"
     }
@@ -637,7 +645,7 @@
   ],
   "rewards": [
     {
-      "id": 43777,
+      "id": 45888,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -647,7 +655,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 43778,
+      "id": 45889,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
