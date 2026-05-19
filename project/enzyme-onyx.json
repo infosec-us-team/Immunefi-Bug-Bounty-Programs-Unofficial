@@ -306,7 +306,7 @@
   "rewardsToken": "USDC",
   "slug": "enzyme-onyx",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-05-15T11:41:43.708Z",
+  "updatedDate": "2026-05-18T15:25:33.736Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": "https://github.com/enzymefinance/protocol-onyx",
@@ -320,7 +320,7 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": null,
+  "customOutOfScopeInformation": "In addition to Immunefi scope rules, the following are considered out-of-scope:\n\n* everything noted in this document set (e.g., [Risks and Limitations](https://docs.enzyme.finance/onyx-protocol/security/risks-and-limitations))\n* everything noted in [audit reports](https://github.com/enzymefinance/protocol-onyx/tree/main/audits)\n* user error; i.e., inadequate inputs or config, lack of mechanism understanding, etc (see below)\n* unrealistic fund state (see below)\n\n### Examples of out-of-scope \"user error\"\n\nOnyx is designed for flexibility of different setups and administrative needs. The `admin` role is often tasked with ensuring fairness, avoidance of denial-of-service (DoS) and similar ill effects, executing steps in order, and otherwise following manual processes to achieve desired results (e.g., [Suggested Subscription Rounds](https://docs.enzyme.finance/onyx-protocol/general-flows/suggested-subscription-rounds)).\n\n#### Example: deposit and redeem handler DoS due to request cancelations&#x20;\n\nSome deposit and redeem handlers (e.g., `ERC7540LikeDepositQueue` and `ERC7540LikeRedeemQueue`) use a `minRequestDuration`, where a request is cancelable after `minRequestDuration` has elapsed.\n\nAs long as `minRequestDuration` is always set adequately (i.e., greater than the maximum time between batches), there will never be a cancelation DoS opportunity.\n\n#### Example: deposit and redeem handler DoS due to small amounts that round to 0 shares\n\n`admin` has full control to omit requests with amounts that are considered too small.\n\n#### Example: share price staleness/fairness/etc during deposit or redemption\n\n`admin` has full control over the price at which deposits and redemptions are executed, and it must be part of their process to validate that the currently-set share price is adequate for any action according to their needs.\n\n#### Example: failure to initialize contract\n\nContracts are always expected to be properly-initialized, and all proxies are always deployed with their init data bundled into the same call.\n\n### Examples of \"unrealistic fund state\"\n\nOnyx vaults are assumed to operate within common-sense constraints for how managed funds work.\n\nClosely related to [#examples-of-out-of-scope-user-error](#examples-of-out-of-scope-user-error \"mention\").\n\n#### Example: more debt than assets\n\nA reasonable managed fund cannot take on more debt than assets such that `share value <= 0`.\n\n#### Example: shares totalSupply > 0 when share value == 0\n\nAt the point where a fund truly loses all assets (e.g., hack, violent value deprecation that rounds to 0) and shares have no value, a fund would shut down rather than, e.g., accept new depositors who immediately get diluted by the shares totalSupply.",
   "customProhibitedActivities": [],
   "impacts": [
     {
@@ -374,7 +374,7 @@
   ],
   "rewards": [
     {
-      "id": 45948,
+      "id": 46171,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -384,7 +384,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 45949,
+      "id": 46172,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -393,7 +393,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 45950,
+      "id": 46173,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",

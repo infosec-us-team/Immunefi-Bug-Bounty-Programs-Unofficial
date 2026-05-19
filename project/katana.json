@@ -193,7 +193,8 @@
   "evaluationEndDate": null,
   "features": [
     "Subscription Plan: Essential",
-    "Managed Triage: Time Saver"
+    "Managed Triage: Time Saver",
+    "Pay to Mediate"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -226,7 +227,7 @@
   "rewardsToken": "USDC",
   "slug": "katana",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-03-27T10:52:02.210Z",
+  "updatedDate": "2026-05-18T18:08:28.522Z",
   "impactsBody": null,
   "websiteUrl": "https://katana.network/",
   "githubUrl": "https://github.com/katana-network",
@@ -238,7 +239,22 @@
   ],
   "responsiblePublicationCategory": "category_3",
   "description": "Katana is a chain designed specifically for DeFi. It rethinks DeFi to offer what users care about most: deeper liquidity and higher yields, all in a sustainable way. This happens through mechanisms to ensure that all liquidity on Katana is absorbed in only one lending protocol (Morpho), one spot DEX (Sushi), which are the core applications on Katana with hundreds of applications building on top of them. This is achieved with a unique approach to maximizing yield that can be used as incentives on the core applications, including from Vault Bridge, sequencer fees, and Agora USD revenue.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1315,
+      "link": "https://github.com/agglayer/lxly-bridge-and-call/tree/3826c37ea7be36eaeba8decae8ef1479203f71e7/src",
+      "description": "Issue that talks about Destination Address = address(0) AggLayer bridge exploit path relying on where the destinationAddress is set to zero , this is considered OOS.",
+      "lastUpdatedAt": "2026-02-11T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1314,
+      "link": "https://github.com/agglayer/lxly-bridge-and-call/tree/3826c37ea7be36eaeba8decae8ef1479203f71e7/src",
+      "description": "JumpPoint Behavior: Issues that occur within the bridge-and-call logic that lead to funds being \"stuck\" at a JumpPoint contract only.",
+      "lastUpdatedAt": "2026-02-11T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeWebAndApplications": null,
@@ -323,7 +339,7 @@
   ],
   "rewards": [
     {
-      "id": 43714,
+      "id": 45747,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -333,7 +349,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 43715,
+      "id": 45748,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -342,7 +358,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 43716,
+      "id": 45749,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -350,7 +366,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 43717,
+      "id": 45750,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",

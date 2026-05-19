@@ -141,7 +141,9 @@
   "ecosystem": [],
   "endDate": null,
   "evaluationEndDate": null,
-  "features": [],
+  "features": [
+    "Pay to Mediate"
+  ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
   "inviteOnly": false,
@@ -190,14 +192,29 @@
   "rewardsToken": "",
   "slug": "wormhole",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-03-17T08:25:35.684Z",
-  "impactsBody": "Bugs that are only triggerable against oneself and don’t affect other users, but are reasonable to be done on accident as an end user or application developer will be considered as no higher than low severity on a case-by-case basis. This excludes sending funds to unintended addresses which will not be rewarded.\n\nFor bugs related to a potential Governor bypass, this only applies to governed tokens (i.e. ungoverned tokens are deliberately ungoverned).\n\nNative Token Transfer (NTT) is an open, flexible, and composable framework for transferring tokens across blockchains without liquidity pools. Only the listed GitHub repository is in the scope of this bounty program. Any forks or modifications are out of scope. Furthermore, only tagged releases with version v1.x.x are considered in-scope. The severity of NTT-related findings will be dropped by a single category on the payout scale, such as a critical to a high or a medium to a low.\n\nMultiGov is an extension of the OpenZeppelin Governor contracts that allows token holders to maintain their voting rights after bridging their tokens to another chain. Only the listed GitHub repository is in the scope of this bounty program. Any forks or modifications are out of scope. Furthermore, the rewards for MultiGov related findings will be capped at $100,000 USD.\n\nAny NFT Bridge related reports are no-longer considered in-scope and will be closed.",
+  "updatedDate": "2026-05-18T18:30:26.619Z",
+  "impactsBody": "Bugs that are only triggerable against oneself and don’t affect other users, but are reasonable to be done on accident as an end user or application developer will be considered as no higher than low severity on a case-by-case basis. This excludes sending funds to unintended addresses which will not be rewarded.\n\nFor bugs related to a potential Governor bypass, this only applies to governed tokens (i.e. ungoverned tokens are deliberately ungoverned).\n\nNative Token Transfer (NTT) is an open, flexible, and composable framework for transferring tokens across blockchains without liquidity pools. Only the listed GitHub repository is in the scope of this bounty program. Any forks or modifications are out of scope. Furthermore, only tagged releases with version v1.x.x are considered in-scope. The severity of NTT-related findings will be dropped by a single category on the payout scale, such as a critical to a high or a medium to a low.\n\nMultiGov is an extension of the OpenZeppelin Governor contracts that allows token holders to maintain their voting rights after bridging their tokens to another chain. Only the listed GitHub repository is in the scope of this bounty program. Any forks or modifications are out of scope. Furthermore, the rewards for MultiGov related findings will be capped at $100,000 USD.\n\nAny NFT Bridge or Cross Chain Queries (CCQ) reports are no-longer considered in-scope and will be closed.",
   "websiteUrl": null,
   "githubUrl": null,
   "eligibilityCriteria": [],
   "responsiblePublicationCategory": "category_3",
   "description": "Wormhole is a generic cross-chain messaging protocol that allows smart contracts on various blockchains to communicate with each other. Messages are routed from chain to chain by a decentralised group of guardian nodes who sign attestations of the on-chain state.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1312,
+      "link": "https://github.com/asymmetric-research/wormhole/issues/38",
+      "description": "CosmWasm Array Iteration May Lead to gas exhaustion in accountant/ntt accountant",
+      "lastUpdatedAt": "2026-05-18T16:45:31.296Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1313,
+      "link": "https://github.com/asymmetric-research/wormhole/issues/38",
+      "description": "CosmWasm Array Iteration May Lead to gas exhaustion in accountant/ntt accountant",
+      "lastUpdatedAt": "2026-05-18T16:51:01.716Z",
+      "relatedImpactInScope": "blockchain_dlt"
+    }
+  ],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": null,
   "defaultOutOfScopeWebAndApplications": null,
@@ -432,7 +449,7 @@
   ],
   "rewards": [
     {
-      "id": 43235,
+      "id": 46184,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -442,7 +459,7 @@
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 43236,
+      "id": 46185,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -451,7 +468,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 43237,
+      "id": 46186,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -460,7 +477,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 43238,
+      "id": 46187,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
@@ -468,7 +485,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 43239,
+      "id": 46188,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -478,7 +495,7 @@
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 43240,
+      "id": 46189,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -487,7 +504,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 43241,
+      "id": 46190,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -496,7 +513,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 43242,
+      "id": 46191,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
