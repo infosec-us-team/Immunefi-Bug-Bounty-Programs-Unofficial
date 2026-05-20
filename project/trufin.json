@@ -1,36 +1,6 @@
 {
   "assets": [
     {
-      "id": "6HNEgpSPXBhadzW30CnEuz",
-      "url": "https://sepolia.etherscan.io/address/0xc47c71ac21C5C02bc3B67D00Ef6bDA0f3737aefb#readProxyContract",
-      "type": "smart_contract",
-      "addedAt": "2023-08-10T12:05:22.482Z",
-      "revision": 0,
-      "description": "MATIC staker contract on Ethereum Sepolia",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
-      "id": "4q2o9CMIBMMVgKOrl73j1K",
-      "url": "https://sepolia.etherscan.io/address/0x9B46d57ebDb35aC2D59AB500F69127Bb24DA62b1",
-      "type": "smart_contract",
-      "addedAt": "2023-08-10T12:05:36.036Z",
-      "revision": 0,
-      "description": "MATIC whitelist contract on Ethereum Sepolia",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
-      "id": "1Y4gy1UnJxloidE0qV7GXR",
-      "url": "https://github.com/TruFin-io/staking-contracts",
-      "type": "smart_contract",
-      "addedAt": "2023-08-10T12:05:48.683Z",
-      "revision": 0,
-      "description": "MATIC staker and whitelist contracts on GitHub",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
       "id": "4bnP1sh6JnzeOPuSVonu4q",
       "url": "https://explorer.aptoslabs.com/account/0x89f93b7bf55b86e26d62cb508663cd6cb8ceaa8b4ae7509b642db3848824db79/transactions?network=testnet",
       "type": "smart_contract",
@@ -47,26 +17,6 @@
       "addedAt": "2024-09-17T13:55:43.534Z",
       "revision": 0,
       "description": "APTOS whitelist contract on APTOS testnet",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
-      "id": "1fmFIoGCYuiLIa11EGWnmd",
-      "url": "https://testnet.nearblocks.io/address/staker003.trufin.testnet?tab=txns",
-      "type": "smart_contract",
-      "addedAt": "2024-09-17T13:56:04.894Z",
-      "revision": 0,
-      "description": "NEAR staker and whitelist contracts on NEAR testnet",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
-      "id": "4xZCqYU0eHrEiy8IEhGFaD",
-      "url": "https://github.com/TruFin-io/near-staker-audit",
-      "type": "smart_contract",
-      "addedAt": "2024-09-17T13:56:25.082Z",
-      "revision": 0,
-      "description": "NEAR staker and whitelist contracts on GitHub",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
     },
@@ -140,21 +90,25 @@
   "boostedSummaryReport": null,
   "ecosystem": [
     "ETH",
-    "Polygon"
+    "Polygon",
+    "Solana"
   ],
   "endDate": null,
   "evaluationEndDate": null,
-  "features": [],
+  "features": [
+    "Pay to Mediate"
+  ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
   "inviteOnly": false,
   "kyc": true,
   "language": [
-    "Solidity"
+    "Solidity",
+    "Rust"
   ],
   "launchDate": "2023-09-27T14:00:00.000Z",
-  "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7FV6YE7dX8pvcz4F3rj6yd/dbcfe60cd7b7224ea518bc580983d51d/TruFin.png",
-  "maxBounty": 40000,
+  "logo": "https://qn5bmgziiocgawpp.public.blob.vercel-storage.com/49836-qR0lpAJoUui5DAtlyBL4L.png",
+  "maxBounty": 30000,
   "outOfScopeAndRules": "These impacts are out of scope for this bug bounty program. \n\n__All Categories__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n\n__Smart Contracts__\n\n- Incorrect data supplied by third party oracles\n   - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n- Impacts caused by bugs found in external libraries used by the contract\n- Best practice recommendations\n\nThe following activities are prohibited by this bug bounty program:\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
   "pocPerTypeAndSeverity": [
     "smart_contract - critical",
@@ -164,13 +118,14 @@
   "primaryPaymentWallet": "EVM",
   "prioritizedVulnerabilities": "_blank_",
   "productType": [
-    "Staking"
+    "Staking",
+    "Liquid Staking"
   ],
   "programOverview": "The TruFin Protocol builds institutional-grade DeFi primitives that can be used as the foundational building blocks for complex digital asset strategies to reduce risk while generating rewards, securely on-chain.\n\nTruStake vaults provide access to liquid staking on a range of networks:\n\n- MATIC staking on the Ethereum network,\n- APT staking on the Aptos network,\n- NEAR staking on the NEAR network,\n- Injective staking on the Injective network,\n- Solana staking on the Solana network.\n\nThe TruStake vaults have custom functionality that enables the allocation of rewards to designated wallet addresses, as well as auto-restaking that compounds rewards for higher APY.\n\nIn exchange for depositing assets in a TruStake vault, users receive liquid staking tokens: TruMATIC, TruAPT,TruNEAR, TruINJ and TruSOL for MATIC, APT and NEAR, Injective and Solana, respectively. \n\nThis bug bounty program is focused around the TruStake smart contracts and whitelists and is primarily concerned with the loss of user funds.\n\nRewards are allocated based on the severity of the bug disclosed. The scope, terms and rewards are at the sole discretion of the TruFin Protocol.\n\nFor more information about TruFin, please visit [https://trufin.io.](https://trufin.io) \n\nTruFin provides rewards in __USDC__. For more details about the payment process, please view the __Rewards by Threat Level__ section. \n\n\n__Primacy of Impact vs Primacy of Rules__\n\nTruFin adheres to the Primacy of Impact for the following impacts:\n- Smart Contract - Critical\n- Smart Contract - High\n- Smart Contract - Medium\n\nIf an impact is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTestnet and mock files are not covered under the Primacy of Impact. \n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\nIf a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTestnet and mock files are not covered under the Primacy of Impact.\n\nAll other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n__Immunefi Standard Badge__\n\nTruFin has satisfied the requirements for the [Immunefi Standard Badge,](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-) which is given to projects that adhere to our best practices.",
   "programType": [
     "Smart Contract"
   ],
-  "project": "TruFin",
+  "project": "TruYields",
   "projectType": [
     "Defi"
   ],
@@ -182,10 +137,10 @@
   "rewardsToken": "USDC",
   "slug": "trufin",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-04-17T03:27:46.696Z",
+  "updatedDate": "2026-05-19T11:27:15.634Z",
   "impactsBody": null,
-  "websiteUrl": null,
-  "githubUrl": null,
+  "websiteUrl": "https://truyields.com",
+  "githubUrl": "https://github.com/TruFin-io",
   "eligibilityCriteria": [],
   "responsiblePublicationCategory": "category_3",
   "description": "The TruFin Protocol builds institutional-grade DeFi primitives that can be used as the foundational building blocks for complex digital asset strategies to reduce risk while generating rewards, securely on-chain. TruFin’s first product, TruStake, is a MATIC staking vault which provides access to MATIC staking on the Ethereum network.",
@@ -286,24 +241,24 @@
   ],
   "rewards": [
     {
-      "id": 45065,
+      "id": 46265,
       "primacy": "primacy_of_impact",
       "severity": "critical",
       "assetType": "smart_contract",
-      "fixedReward": 40000,
+      "fixedReward": 30000,
       "rewardModel": "fixed",
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 45066,
+      "id": 46266,
       "primacy": "primacy_of_impact",
       "severity": "high",
       "assetType": "smart_contract",
-      "fixedReward": 25000,
+      "fixedReward": 15000,
       "rewardModel": "fixed"
     },
     {
-      "id": 45067,
+      "id": 46267,
       "primacy": "primacy_of_impact",
       "severity": "medium",
       "assetType": "smart_contract",
