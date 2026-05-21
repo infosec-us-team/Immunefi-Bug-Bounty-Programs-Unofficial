@@ -298,11 +298,10 @@
   "maxBounty": 40000,
   "outOfScopeAndRules": ".",
   "pocPerTypeAndSeverity": [
-    "smart_contract - critical",
-    "smart_contract - high"
+    "smart_contract - critical"
   ],
   "primaryPaymentWallet": "EVM",
-  "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+  "prioritizedVulnerabilities": "_blank_",
   "productType": [
     "AMM",
     "DEX",
@@ -327,7 +326,7 @@
   "rewardsToken": "USDC",
   "slug": "gammaswap",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-05-10T14:50:32.777Z",
+  "updatedDate": "2026-05-19T19:33:58.666Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -344,30 +343,6 @@
   "customOutOfScopeInformation": "- Best practice recommendations\n- Impact in UniswapV2 code for DeltaSwap fork (Unless such code was materially changed by GammaSwap or used by the GammaSwap contracts)\n- Impacts affecting only the state of implementation contracts\n- Impacts affecting the value of parameters used to determine whether DeltaSwap will charge a trading fee or not (e.g. liquidityEMA, liquidityTradedEMA, etc.) Because DeltaSwap is set up to always charge a trading fee and the current GammaPool implementation requires that it must always charge a trading fee.\n- GS, GSTimelockController, and Staking contracts are only eligible for at most high severity level rewards.\n- Airdrop contract is not eligible for medium level bugs.",
   "customProhibitedActivities": [],
   "impacts": [
-    {
-      "id": 23,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of unclaimed yield"
-    },
-    {
-      "id": 25,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of unclaimed yield"
-    },
-    {
-      "id": 27,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing of funds"
-    },
-    {
-      "id": 4481,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
-    },
     {
       "id": 15,
       "type": "smart_contract",
@@ -389,7 +364,7 @@
   ],
   "rewards": [
     {
-      "id": 45799,
+      "id": 46374,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -397,23 +372,6 @@
       "minReward": 15000,
       "rewardModel": "range",
       "rewardCalculationPercentage": 10
-    },
-    {
-      "id": 45800,
-      "primacy": null,
-      "severity": "high",
-      "assetType": "smart_contract",
-      "maxReward": 10000,
-      "minReward": 5000,
-      "rewardModel": "range"
-    },
-    {
-      "id": 45801,
-      "primacy": null,
-      "severity": "medium",
-      "assetType": "smart_contract",
-      "fixedReward": 2000,
-      "rewardModel": "fixed"
     }
   ],
   "audits": []

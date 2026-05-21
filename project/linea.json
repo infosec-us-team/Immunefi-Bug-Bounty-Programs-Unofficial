@@ -166,7 +166,15 @@
   ],
   "responsiblePublicationCategory": "category_3",
   "description": "Linea is a type 2 zero knowledge Ethereum Virtual Machine (zkEVM). A zkEVM replicates the Ethereum environment as a rollup and allows developers to build on it as they would on Ethereum mainnet. Linea allows you to deploy any smart contract, use any tool, and develop as if you're building on Ethereum.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1316,
+      "link": "https://diligence.security/audits/2025/12/linea-yield-manager/#inconsistent--_pausestakingifnotalready-conditions-in-withdrawal-functions",
+      "description": "Linea prioritizes withdrawal availability over yield efficiency.",
+      "lastUpdatedAt": "2026-05-20T10:22:25.224Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeWebAndApplications": null,
