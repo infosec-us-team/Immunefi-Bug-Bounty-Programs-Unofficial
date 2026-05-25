@@ -4,37 +4,51 @@
       "id": "50FoOHvttNB5LhAvsgblzI",
       "url": "https://etherscan.io/address/0xfEB516d9D946dD487A9346F6fee11f40C6945eE4",
       "type": "smart_contract",
-      "addedAt": "2023-12-27T09:00:00.000Z",
-      "revision": 1,
+      "addedAt": "2023-12-18T16:39:30.232Z",
+      "revision": 0,
       "description": "WildcatArchController",
-      "isPrimacyOfImpact": null
-    },
-    {
-      "id": "41fw2HSXKThBnDsXDmMFa5",
-      "url": "https://etherscan.io/address/0xFd31007613C9F671df6A8D4234901324986Bfd13",
-      "type": "smart_contract",
-      "addedAt": "2023-12-27T09:00:00.000Z",
-      "revision": 1,
-      "description": "WildcatMarketControllerFactory",
-      "isPrimacyOfImpact": null
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     },
     {
       "id": "44bn0jaMlV7GGPHnrDQ8d2",
       "url": "https://etherscan.io/address/0x437e0551892C2C9b06d3fFd248fe60572e08CD1A",
       "type": "smart_contract",
-      "addedAt": "2023-12-27T09:00:00.000Z",
-      "revision": 1,
+      "addedAt": "2023-12-18T16:39:55.270Z",
+      "revision": 0,
       "description": "WildcatSanctionsSentinel",
-      "isPrimacyOfImpact": null
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     },
     {
       "id": "4EJQWoacsgFByIY1JLuzQs",
       "url": "https://immunefi.com/",
       "type": "smart_contract",
-      "addedAt": "2023-12-27T09:00:00.000Z",
-      "revision": 1,
+      "addedAt": "2023-12-18T16:40:07.343Z",
+      "revision": 0,
       "description": "Primacy of Impact",
+      "isSafeHarbor": false,
       "isPrimacyOfImpact": true
+    },
+    {
+      "id": "99708",
+      "url": "https://etherscan.io/address/0xEA6DE11f8F3F83c79bD9d8Db5517fCFDf2Bb148a",
+      "type": "smart_contract",
+      "addedAt": "2026-05-24T13:34:47.031Z",
+      "revision": 0,
+      "description": "Wildcat4626WrapperFactory",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "99709",
+      "url": "https://etherscan.io/address/0xdd7dd3b5076cf89440d05585ff56d246386207be",
+      "type": "smart_contract",
+      "addedAt": "2026-05-24T13:34:47.031Z",
+      "revision": 0,
+      "description": "WildcatHooksFactory",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": null,
@@ -49,7 +63,9 @@
   ],
   "endDate": null,
   "evaluationEndDate": null,
-  "features": [],
+  "features": [
+    "Pay to Mediate"
+  ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
   "inviteOnly": false,
@@ -60,6 +76,7 @@
   "launchDate": "2023-12-27T09:00:00.000Z",
   "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1R2U4bK3NgSW5iWZEdTTct/c4eded61a678371160198811819eafaf/TIzDmOkk_400x400.png",
   "maxBounty": 10000,
+  "outOfScopeAndRules": null,
   "pocPerTypeAndSeverity": [
     "smart_contract - critical",
     "smart_contract - high",
@@ -72,7 +89,7 @@
     "Lending",
     "Staking"
   ],
-  "programOverview": "The Wildcat Protocol is a hands-off credit facilitation protocol that enables the deployment of markets by pre-authorised (KYC’d through protocol) borrowers. Market parameters are arbitrarily parameterisable subject to these parameters falling within the bounds of controllers registered with the protocol registry. Borrowers must - at present - select their own lender lists explicitly. Participants in markets can optionally choose to sign a master loan agreement that dictates their behaviour. Wildcat markets make use of novel implementations of withdrawals, collateralisation and penalties for failure to maintain adequate reserves. Rebasing ‘market tokens’ are issued in exchange for deposits, inflating according to the active interest rate to ensure 1:1 parity for claiming underlying assets.\n\nFor more information about Wildcat Protocol, please visit [https://www.wildcat.finance/.  ](https://www.wildcat.finance/)\n\nWildcat Protocol provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section further below.  \n\n__KYC Requirement__\n\nThe provision of KYC is required to receive a reward for this bug bounty program where the following information will be required to be provided:\n- Full name\n- Address\n- Passport\n\nKYC information is only required on confirmation of the validity of a bug report.   \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 10 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 7 500 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Primacy of Impact vs Primacy of Rules__\n\nWildcat Protocol adheres to the Primacy of Impact for the following severity levels:\n- Smart Contract, Critical\n- Smart Contract, High\n- Smart Contract, Medium\n- Smart Contract, Low\n\nIf a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTestnet and mock files are not covered under the Primacy of Impact.\n\nAll other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n\n__Immunefi Standard Badge__\n\nWildcat Protocol has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-), which is given to projects that adhere to our best practices. \n\n__Invoicing Information__\n\nIf needed by the security researcher, Wildcat Protocol is able to provide the necessary information for the proper issuance of an invoice. This includes:\n- Company name and address\n- Registered company number (British Virgin Islands)",
+  "programOverview": "Wildcat Protocol is a hands-off credit facilitation protocol for deploying borrower-owned credit markets. Pre-authorized borrowers can create markets with configurable parameters, subject to bounds enforced by protocol-registered controllers.\n\nBorrowers control lender access through registered hook and credential configurations. Market participants may also choose to enter into a Master Loan Agreement that governs their off-chain obligations and conduct.\n\nWildcat markets use custom withdrawal, reserve, delinquency, and penalty mechanics. Lenders receive rebasing market tokens in exchange for deposits; these tokens accrue according to the active market interest rate and represent the lender’s claim through the market’s withdrawal and repayment flow.\n\nFor more information about Wildcat Protocol, please visit [https://www.wildcat.finance/](https://www.wildcat.finance/).\n\nWildcat Protocol provides rewards in USDC. For more details about the payment process, please view the Rewards by Threat Level section below.\n\n__KYC Requirement__\n\nThe provision of KYC is required to receive a reward for this bug bounty program where the following information will be required to be provided:\n- Full name\n- Address\n- Passport\n\nKYC information is only required on confirmation of the validity of a bug report.   \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 10 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 7 500 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Primacy of Impact vs Primacy of Rules__\n\nWildcat Protocol adheres to the Primacy of Impact for the following severity levels:\n- Smart Contract, Critical\n- Smart Contract, High\n- Smart Contract, Medium\n- Smart Contract, Low\n\nIf a category’s severity level is covered within the Primacy of Impact, it means that even if the impacted asset is not in-scope but is owned by the project, then it would be considered as in-scope of the bug bounty program as long as it involves an impact under that respective severity level. When submitting a report, just select the Primacy of Impact asset placeholder. If the team behind this project has multiple projects, those other projects are not covered under the Primacy of Impact of this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nTestnet and mock files are not covered under the Primacy of Impact.\n\nAll other severity levels not listed here are considered under the Primacy of Rules, which means that they are bound by the terms of the bug bounty program.\n\n\n__Immunefi Standard Badge__\n\nWildcat Protocol has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/6427157117713-The-Immunefi-Standard-Badge-), which is given to projects that adhere to our best practices. \n\n__Invoicing Information__\n\nIf needed by the security researcher, Wildcat Protocol is able to provide the necessary information for the proper issuance of an invoice. This includes:\n- Company name and address\n- Registered company number (British Virgin Islands)",
   "programType": [
     "Smart Contract"
   ],
@@ -87,15 +104,16 @@
   "podiumPool": 0,
   "rewardsToken": "USDC",
   "slug": "wildcatprotocol",
-  "updatedDate": "2024-11-18T11:26:29.989Z",
+  "tenPercentEconomicRule": false,
+  "updatedDate": "2026-05-24T13:34:47.130Z",
   "impactsBody": null,
-  "websiteUrl": null,
-  "githubUrl": null,
+  "websiteUrl": "https://wildcat.finance/",
+  "githubUrl": "https://github.com/wildcat-finance/v2-protocol",
   "eligibilityCriteria": [
     "no_ofac_sdn"
   ],
   "responsiblePublicationCategory": "category_2",
-  "description": "The Wildcat Protocol is a hands-off credit facilitation protocol that enables the deployment of markets by pre-authorised (KYC’d through protocol) borrowers. Market parameters are arbitrarily parameterisable subject to these parameters falling within the bounds of controllers registered with the protocol registry. Borrowers must - at present - select their own lender lists explicitly.",
+  "description": "Wildcat Protocol is a hands-off credit facilitation protocol for deploying borrower-owned credit markets. Pre-authorized borrowers can create markets with configurable parameters, subject to bounds enforced by protocol-registered controllers. Borrowers define lender access through registered hook and credential configurations.",
   "knownIssues": [],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
@@ -103,7 +121,7 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": null,
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": null,
+  "customOutOfScopeInformation": "The following are out of scope:\n- Wildcat V1 contracts and source.\n- Contracts that are not deployed on Ethereum mainnet or Plasma mainnet.\n- Any contract deployed only to development, sandbox, forked, or test networks.\n- Non-Solidity code and off-chain components.\n- Individual borrower-created market instances as separate assets. Reports should target protocol source/factory behavior, not instance-specific borrower configuration.\n- Individual ERC-4626 wrapper instances as separate assets. Reports should target wrapper source/factory behavior.\n- Lens/read-only contracts unless a separate covered impact in an in-scope protocol contract is demonstrated.\n- Init-code-storage contracts and hook-template addresses as standalone assets.\n- Reports relying only on unsupported or nonstandard ERC20 behavior, including fee-on-transfer, rebasing, short-transfer, unusual metadata, or zero-transfer behavior.",
   "customProhibitedActivities": [],
   "impacts": [
     {
@@ -145,7 +163,18 @@
   ],
   "rewards": [
     {
-      "id": 6111,
+      "id": 46445,
+      "primacy": null,
+      "severity": "critical",
+      "assetType": "smart_contract",
+      "maxReward": 10000,
+      "minReward": 7500,
+      "rewardModel": "range",
+      "rewardCalculationPercentage": 10
+    },
+    {
+      "id": 46446,
+      "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
       "maxReward": 7500,
@@ -153,27 +182,20 @@
       "rewardModel": "range"
     },
     {
-      "id": 6112,
+      "id": 46447,
+      "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
       "fixedReward": 3000,
       "rewardModel": "fixed"
     },
     {
-      "id": 6113,
+      "id": 46448,
+      "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
       "fixedReward": 2000,
       "rewardModel": "fixed"
-    },
-    {
-      "id": 8280,
-      "severity": "critical",
-      "assetType": "smart_contract",
-      "maxReward": 10000,
-      "minReward": 7500,
-      "rewardModel": "range",
-      "rewardCalculationPercentage": 10
     }
   ],
   "audits": []
