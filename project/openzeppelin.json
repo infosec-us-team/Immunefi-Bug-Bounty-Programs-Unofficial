@@ -111,6 +111,13 @@
       "description": "The RehypothecadedHook relies on the PoolManager singleton token reserves for flash accounting debts and credits during swaps. During `afterSwap`, the hook briefly generates token debts to the PoolManager even before users transfer their swap tokens. As a consequence, the PoolManager singleton may lack sufficient reserves for illiquid tokens in the instants between the swap executed and the posterior payment from the user, preventing swaps from being executed until the PoolManager accumulates enough tokens. Altrough it is very unlikely to happen, it can be mitigated by maintaining some permanent pool liquidity alongside rehypothecated liquidity.",
       "lastUpdatedAt": "2026-05-12T20:14:43.675Z",
       "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1324,
+      "link": "https://github.com/OpenZeppelin/uniswap-hooks/blob/26dc8e53f812a1ca390d470342adb6cd8c3286ad/src/general/AntiSandwichHook.sol#L38",
+      "description": "The Anti-sandwich mechanism only protects swaps in the zeroForOne swap direction. Swaps in the !zeroForOne direction are not protected by this hook design.",
+      "lastUpdatedAt": "2026-05-27T13:11:57.829Z",
+      "relatedImpactInScope": "smart_contract"
     }
   ],
   "defaultOutOfScopeBlockchain": null,
