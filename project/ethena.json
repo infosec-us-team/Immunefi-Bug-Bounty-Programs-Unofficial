@@ -284,7 +284,9 @@
   "features": [
     "Subscription Plan: Elite",
     "Managed Triage: Expert Assessment",
-    "Arbitration"
+    "Arbitration",
+    "Pay to Mediate",
+    "Pay to Submit"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -323,7 +325,7 @@
   "rewardsToken": "USDC",
   "slug": "ethena",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-04-15T13:23:39.668Z",
+  "updatedDate": "2026-05-28T11:34:39.189Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -412,6 +414,24 @@
       "title": "Smart contract unable to operate due to lack of token funds"
     },
     {
+      "id": 4818,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Retrieve sensitive data/files from a running server, such as:   /etc/shadow, database passwords, blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
+    },
+    {
+      "id": 4819,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:   Changing registration information, Commenting, Voting, Making trades, Withdrawals, etc."
+    },
+    {
+      "id": 4820,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Malicious interactions with an already-connected wallet, such as:  Modifying transaction arguments or parameters, Substituting contract addresses, Submitting malicious transactions"
+    },
+    {
       "id": 30,
       "type": "smart_contract",
       "severity": "medium",
@@ -466,22 +486,10 @@
       "title": "Execute arbitrary system commands"
     },
     {
-      "id": 4818,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Retrieve sensitive data/files from a running server, such as:   /etc/shadow, database passwords, blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
-    },
-    {
       "id": 37,
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Taking down the application/website"
-    },
-    {
-      "id": 4819,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:   Changing registration information, Commenting, Voting, Making trades, Withdrawals, etc."
     },
     {
       "id": 41,
@@ -496,12 +504,6 @@
       "title": "Direct theft of user funds"
     },
     {
-      "id": 4820,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Malicious interactions with an already-connected wallet, such as:  Modifying transaction arguments or parameters, Substituting contract addresses, Submitting malicious transactions"
-    },
-    {
       "id": 45,
       "type": "websites_and_applications",
       "severity": "critical",
@@ -510,7 +512,7 @@
   ],
   "rewards": [
     {
-      "id": 44848,
+      "id": 46489,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -520,7 +522,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 44849,
+      "id": 46490,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -529,7 +531,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 44850,
+      "id": 46491,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -537,7 +539,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 44851,
+      "id": 46492,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
@@ -545,16 +547,17 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 44852,
+      "id": 46493,
       "primacy": "primacy_of_impact",
       "severity": "critical",
       "assetType": "websites_and_applications",
       "maxReward": 50000,
       "minReward": 20000,
-      "rewardModel": "range"
+      "rewardModel": "range",
+      "otherImpactMaxReward": 0
     },
     {
-      "id": 44853,
+      "id": 46494,
       "primacy": "primacy_of_rules",
       "severity": "high",
       "assetType": "websites_and_applications",
