@@ -125,7 +125,9 @@
   "evaluationEndDate": null,
   "features": [
     "Subscription Plan: Elite",
-    "Pay to Mediate"
+    "Pay to Mediate",
+    "Pay to Submit",
+    "Managed Triage: Signal Booster"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -171,7 +173,7 @@
   "rewardsToken": "USDC",
   "slug": "ens",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-05-19T12:25:11.053Z",
+  "updatedDate": "2026-06-01T10:30:01.649Z",
   "impactsBody": "# Program Structure\n\nThis program contains two independent reward tracks. Each track has its own severity classifications and reward ranges. A vulnerability shall be classified under one track only.\n\n- **Track A: Smart Contract Vulnerabilities**\n- **Track B: Websites and Applications Vulnerabilities**\n\n**Cross-Track Classification**: Where a vulnerability involves both smart contract and web/application components, it shall be classified under the track corresponding to the root cause of the vulnerability. For example, a signature verification flaw in a smart contract is a Track A vulnerability even if its effects are visible through a web interface.\n\n## Definitions & Calculations\n\n### Impact Assessment\n\nFor many ENS vulnerabilities, the primary impact is to name ownership or resolution integrity rather than direct theft of funds. ENS therefore uses a two-part framework to assess impact: (1) the scope of names affected, and (2) a financial calculation where applicable.\n\n### Part 1: Impact Scope\n\nThe scope of a vulnerability is assessed according to the following tiers:\n\n- Tier 1 — Systemic: The vulnerability affects all ENS names, or all names of a major type (e.g., all .eth 2LDs, all names using a particular resolver). Tier 1 vulnerabilities will generally be assessed at the upper end of the applicable severity range.\n\n- Tier 2 — Class-wide: The vulnerability affects a significant class of names (e.g., all DNS-imported names, all names registered through a specific registrar). Tier 2 vulnerabilities will generally be assessed at the mid-to-upper range.\n\n- Tier 3 — Conditional: The vulnerability affects a subset of names defined by external conditions (e.g., names under TLDs with weak DNSSEC keys, names using a deprecated resolver version). Tier 3 vulnerabilities will generally be assessed at the mid range, subject to the External Dependency Discount where applicable.\n\n- Tier 4 — Narrow: The vulnerability affects fewer than 50 individual names or accounts. Tier 4 vulnerabilities will generally be assessed at the lower end of the applicable severity range.\n\nWithin each tier, ENS will consider the categories of names affected. Not all names carry equal value or risk:\n\n- .eth 2LDs — highest value (primary ENS namespace, active secondary market, significant transaction volume)\n- DNS-imported names — moderate value (tied to external DNS ownership)\n- Subdomains — variable (depends on parent name usage and configuration)\n- Testnet names — lowest value (no real funds at risk)\n\n### Part 2: Financial Calculation\n\nWhere a vulnerability involves direct theft or misdirection of funds (e.g., draining ETH from a contract, redirecting payments), \"funds directly affected\" means the aggregate on-chain value that could be misappropriated, misdirected, locked, or destroyed through exploitation of the vulnerability at the time of report submission.\n\nFor Tier 4 (narrow) vulnerabilities affecting name ownership or resolution, the following supplementary methodology may be used:\n\n- The value of affected names may be calculated based on the most recent secondary market sale price or, if no sale has occurred, the annualized registration/renewal cost.\n\n- Potential misdirection of funds (e.g., payments sent to a wrong address due to hijacked resolution) may be calculated based on the trailing 90-day transaction volume to addresses resolved through the affected names.\n\n- Speculative or theoretical future losses are excluded from all calculations.\n\n### General Provisions\n\nThe following sections apply to all vulnerabilities reported.\n\nPrimacy of Impact vs. Primacy of Rules\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see Best Practices: Primacy of Impact.\n\nPrimacy of Impact submissions remain subject to the program’s reward calculation methodology, including impact-based scaling, the External Dependency Discount, and discretionary adjustment.\n\n\n### Feasibility Limitations\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug’s severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n### Severity Assessment for XSS Reports\n\n- Injection of malicious content into app.ens.domains to initiate a malicious transaction without requiring unusual user interaction will be considered Critical.\n- Injection of malicious scripts into other ENS subdomains (besides app.ens.domains) that offer web3 wallet connections will be considered High for stored XSS and Medium for reflected XSS.\n- XSS on staging/dev or static ENS websites like metadata.ens.domains, which do not offer web3 functionality, will be considered Low unless a direct impact on app.ens.domains is demonstrated.",
   "websiteUrl": null,
   "githubUrl": null,
@@ -479,7 +481,7 @@
   ],
   "rewards": [
     {
-      "id": 46316,
+      "id": 46646,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -489,7 +491,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 46317,
+      "id": 46647,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -498,7 +500,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 46318,
+      "id": 46648,
       "primacy": "primacy_of_rules",
       "severity": "medium",
       "assetType": "smart_contract",
@@ -506,7 +508,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 46319,
+      "id": 46649,
       "primacy": "primacy_of_rules",
       "severity": "low",
       "assetType": "smart_contract",
@@ -514,7 +516,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 46320,
+      "id": 46650,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -523,7 +525,7 @@
       "otherImpactMaxReward": 10000
     },
     {
-      "id": 46321,
+      "id": 46651,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -532,7 +534,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 46322,
+      "id": 46652,
       "primacy": "primacy_of_rules",
       "severity": "medium",
       "assetType": "websites_and_applications",
@@ -540,7 +542,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 46323,
+      "id": 46653,
       "primacy": "primacy_of_rules",
       "severity": "low",
       "assetType": "websites_and_applications",
