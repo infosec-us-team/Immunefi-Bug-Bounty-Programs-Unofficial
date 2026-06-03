@@ -11,16 +11,6 @@
       "isPrimacyOfImpact": false
     },
     {
-      "id": "3qo51DIuByeTQ1aTzbNoyb",
-      "url": "https://github.com/maticnetwork/bor/releases/latest",
-      "type": "blockchain_dlt",
-      "addedAt": "2025-07-23T08:24:16.904Z",
-      "revision": 0,
-      "description": "Polygon POS - Bor",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
       "id": "73nEWN6d8HvJpY5dfkDJ69",
       "url": "https://etherscan.io/address/0x5132A183E9F3CB7C848b0AAC5Ae0c4f0491B7aB2",
       "type": "smart_contract",
@@ -129,6 +119,16 @@
       "description": "POL Token",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
+    },
+    {
+      "id": "99883",
+      "url": "https://github.com/0xPolygon/bor/releases/latest",
+      "type": "blockchain_dlt",
+      "addedAt": "2026-06-02T09:05:14.467Z",
+      "revision": 0,
+      "description": "Polygon POS - Bor",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": "Impacts only apply to assets in active use by the project like contracts on mainnet or web/app assets used in production. \n\n**For GitHub repositories please ensure you are reviewing the latest published releases and not the default branch**\n\nAny impact that applies to assets not in active use, like test or mock files, are out-of-scope of the bug bounty program unless explicitly mentioned as in-scope. In the case of Smart Contracts, please always make sure the code has been deployed and present in scope md files.\n\n__Blockchain/DLT__\n\n  - __Blockchain/DLT - PoC__, Blockchain/DLT bug reports are to include a runnable Proof of Concept (PoC) in order to prove impact.  \n  - For more information on PoCs please visit: [Proof of Concept (PoC) Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n  - __Smart Contracts - PoC__, Smart Contract bug reports are to include a runnable Proof of Concept (PoC) in order to prove impact.  \n  - For more information on PoCs please visit: [Proof of Concept (PoC) Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n__Dev Environment and Documentation__ \n\nPolygon Labs has included dev documentation and/or instructions to help in reviewing code and looking for bugs:\n\n| __Dev or Staging Environment Links__     |\n| ---------- |\n| https://docs.polygon.technology/](https://docs.polygon.technology/)        |",
@@ -144,7 +144,9 @@
   ],
   "endDate": null,
   "evaluationEndDate": null,
-  "features": [],
+  "features": [
+    "Pay to Mediate"
+  ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
   "inviteOnly": false,
@@ -185,7 +187,7 @@
   "rewardsToken": "USDC, POL",
   "slug": "polygon",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-04-17T10:09:17.675Z",
+  "updatedDate": "2026-06-02T09:05:14.672Z",
   "impactsBody": "Important notes:\n- You must be able to prove the real exploitability/severity of a report without doubt or assumptions, and based on the current state of the blockchain at the time of the report.\n- Reports are classified by Impact and Likelihood/Probability and using common frameworks such as CVSS. The combination determines the severity and are determined at Polygon’s sole discretion.\n- Actual reward amounts are determined at Polygon’s sole discretion. Factors influencing payout include report quality, completeness, and severity/exploitability.\n\n__Severity Table__\n\nReports are classified using two dimensions: Impact and Probability (Likelihood) and classified using the following table\n\n|                    | Low Impact | Medium Impact | High Impact |\n|--------------------|------------|----------------|--------------|\n| **High Probability**   | MEDIUM     | HIGH           | CRITICAL     |\n| **Medium Probability** | LOW        | MEDIUM         | HIGH         |\n| **Low Probability**    | LOW        | LOW            | MEDIUM       |\n\n__Understanding Probability__\n\nReports are classified using two dimensions: Impact and Probability (Likelihood). Probability reflects how permissionless and reliably the issue can be exploited against the current production deployment. Critical severity requires both High Impact and High Probability (i.e., a permissionless exploit that can be executed at will).\n\nHigh Probability\n- Permissionless: no privileged role/allowlist or compromised keys required.\n- Exploitable at will on production (reliable/repeatable under normal conditions).\n\nMedium Probability\n- Exploitable, but requires realistic preconditions (e.g., specific state/timing, meaningful capital/positioning, or common MEV/order-dependence).\n- May not succeed every attempt; depends on conditions outside the attacker's full control.\n\nLow Probability\n\n- Requires rare edge conditions or strong assumptions (e.g., very narrow timing, unlikely state/user behavior).\n- Hard to reproduce reliably / low success rate in practice.\n\n__Impacts to other assets__ \n\nHackers are encouraged to submit issues outside of those outlined Impacts and Assets in Scope. \n\nIf Whitehats can demonstrate a critical impact of code in production for an asset not in scope, Polygon Labs encourages you to submit your bug report using the “primacy of impact exception” asset as outlined below.",
   "websiteUrl": "https://polygon.technology",
   "githubUrl": "https://github.com/0xPolygon",
@@ -285,7 +287,7 @@
   ],
   "rewards": [
     {
-      "id": 45083,
+      "id": 46739,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -295,7 +297,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 45084,
+      "id": 46740,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -303,7 +305,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 45085,
+      "id": 46741,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -311,7 +313,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 45086,
+      "id": 46742,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -321,7 +323,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 45087,
+      "id": 46743,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -329,7 +331,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 45088,
+      "id": 46744,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
