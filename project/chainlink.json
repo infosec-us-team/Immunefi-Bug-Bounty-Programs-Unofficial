@@ -342,6 +342,13 @@
       "description": "Lane griefing due to a re-entrancy bug in the CCIP 1.5 OnRamp contract is a known issue, called out internally and by external auditors.",
       "lastUpdatedAt": "2026-05-30T03:43:40.545Z",
       "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1330,
+      "link": "https://github.com/smartcontractkit/chainlink/blob/097c694abcbb5eca7b307a202e43960a7e6c18d0/core/capabilities/ccip/ccipsolana/msghasher.go#L114-L117",
+      "description": "This issue has been previously reported to the program.\n\nThe team is aware of this behavior pattern, the codebase includes explicit documentation in ccipsolana/msghasher.go:115-118:\n```\n  // the map[string]any values go through gRPC protobuf serialization which changes types:\n  // uint32 -> int64...\n```",
+      "lastUpdatedAt": "2026-06-02T16:02:54.099Z",
+      "relatedImpactInScope": "smart_contract"
     }
   ],
   "defaultOutOfScopeBlockchain": null,
