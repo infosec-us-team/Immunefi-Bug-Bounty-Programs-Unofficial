@@ -119,16 +119,6 @@
       "description": "Native Token Transfers",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
-    },
-    {
-      "id": "53UYtlK9FGUQObxSIYT51j",
-      "url": "https://github.com/wormhole-foundation/multigov/tree/main",
-      "type": "smart_contract",
-      "addedAt": "2025-03-12T03:44:50.570Z",
-      "revision": 0,
-      "description": "MultiGov",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": "All Wormhole smart contracts can be found at https://github.com/wormhole-foundation. However, only those in the Assets in Scope table are considered in the bug bounty program's scope. In-scope items are those that are live on-chain or within an active Github release preparing for deployment.",
@@ -192,8 +182,8 @@
   "rewardsToken": "",
   "slug": "wormhole",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-05-18T18:30:26.619Z",
-  "impactsBody": "Bugs that are only triggerable against oneself and don’t affect other users, but are reasonable to be done on accident as an end user or application developer will be considered as no higher than low severity on a case-by-case basis. This excludes sending funds to unintended addresses which will not be rewarded.\n\nFor bugs related to a potential Governor bypass, this only applies to governed tokens (i.e. ungoverned tokens are deliberately ungoverned).\n\nNative Token Transfer (NTT) is an open, flexible, and composable framework for transferring tokens across blockchains without liquidity pools. Only the listed GitHub repository is in the scope of this bounty program. Any forks or modifications are out of scope. Furthermore, only tagged releases with version v1.x.x are considered in-scope. The severity of NTT-related findings will be dropped by a single category on the payout scale, such as a critical to a high or a medium to a low.\n\nMultiGov is an extension of the OpenZeppelin Governor contracts that allows token holders to maintain their voting rights after bridging their tokens to another chain. Only the listed GitHub repository is in the scope of this bounty program. Any forks or modifications are out of scope. Furthermore, the rewards for MultiGov related findings will be capped at $100,000 USD.\n\nAny NFT Bridge or Cross Chain Queries (CCQ) reports are no-longer considered in-scope and will be closed.",
+  "updatedDate": "2026-06-18T08:30:54.748Z",
+  "impactsBody": "Bugs that are only triggerable against oneself and don’t affect other users, but are reasonable to be done on accident as an end user or application developer will be considered as no higher than low severity on a case-by-case basis. This excludes sending funds to unintended addresses which will not be rewarded.\n\nFor bugs related to a potential Governor bypass, this only applies to governed tokens (i.e. ungoverned tokens are deliberately ungoverned).\n\nNative Token Transfer (NTT) is an open, flexible, and composable framework for transferring tokens across blockchains without liquidity pools. Only the listed GitHub repository is in the scope of this bounty program. Any forks or modifications are out of scope. Furthermore, only tagged releases with version v1.x.x and v2.x.x are considered in-scope. The severity of NTT-related findings will be dropped by a single category on the payout scale, such as a critical to a high or a medium to a low.\n\nThe IBC ICS20 token bridge is deprecated and thus out of scope. This includes the ICS20 IBC handling code in the Wormchain subdirectory, the ibc-translator CosmWasm smart contract, and anything else the team deems as part of this flow.\n\nAny NFT Bridge or Cross Chain Queries (CCQ) reports are no-longer considered in-scope and will be closed.",
   "websiteUrl": null,
   "githubUrl": null,
   "eligibilityCriteria": [],
@@ -221,14 +211,14 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Vulnerabilities that have been exploited, leading to damage.     \n  - Network denial of service on Guardians is not eligible for bug bounty rewards.\n  - Wormhole is an open source project with open development. We welcome feedback and PRs on features that are in development. Code that has not been deployed in production is generally out-of-scope.\n  - Reports regarding bugs that the Wormhole project was previously aware of are not eligible for a reward.\n  - In-scope assets with a \"pre-release\" tag are exempt from the above-mentioned deployed requirement and are aimed at allowing early access for white-hat community contribution. Once the chain is deployed in the mainnet, the new scope is whatever is deployed on the chain, which is often what is present in the main branch. Rewards for “pre-release” candidates will be eligible within the same reward structure as mainnet contracts.\n\nThe following person(s) are ineligible to receive bug bounty payout rewards: Staff, Auditors, Contractors, persons possessing privileged information, and all associated parties.\n\n__Prohibited Activities__\n\n  - Any testing with mainnet or public testnets; all testing should be done on private nets.\n  - Public disclosure of a vulnerability before an embargo has been lifted. Wormhole follows the category 3 requirements for Immunefi Disclosure, requiring all public disclosure of valid bugs to be approved for publication.\n  - Any testing with third-party smart contracts or infrastructure and websites.\n  - Attempting phishing or other social engineering attacks against our employees and/or customers.\n  - Any denial of service attacks.\n  - Violating the privacy of any organization or individual.\n  - Automated testing of services that generate significant amounts of traffic.\n  - Any activity that violates any law or disrupts or compromises any data or property that is not yours.",
+  "customOutOfScopeInformation": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Vulnerabilities that have been exploited, leading to damage.     \n  - Network denial of service on Guardians is not eligible for bug bounty rewards.\n  - Wormhole is an open source project with open development. We welcome feedback and PRs on features that are in development. Code that has not been deployed in production is generally out-of-scope.\n  - Reports regarding bugs that the Wormhole project was previously aware of are not eligible for a reward.\n  - In-scope assets with a \"pre-release\" tag are exempt from the above-mentioned deployed requirement and are aimed at allowing early access for white-hat community contribution. Once the chain is deployed in the mainnet, the new scope is whatever is deployed on the chain, which is often what is present in the main branch. Rewards for “pre-release” candidates will be eligible within the same reward structure as mainnet contracts.\n\nThe following person(s) are ineligible to receive bug bounty payout rewards: Staff, Auditors, Contractors, persons possessing privileged information, and all associated parties.\n\n__Prohibited Activities__\n\n  - Any testing with mainnet or public testnets; all testing should be done on private nets.\n  - Public disclosure of a vulnerability before an embargo has been lifted. Wormhole follows the category 3 requirements for Immunefi Disclosure, requiring all public disclosure of valid bugs to be approved for publication.\n  - Any testing with third-party smart contracts or infrastructure and websites.\n  - Attempting phishing or other social engineering attacks against our employees and/or customers.\n  - Any denial of service attacks.\n  - Violating the privacy of any organization or individual.\n  - Automated testing of services that generate significant amounts of traffic.\n  - Any activity that violates any law or disrupts or compromises any data or property that is not yours.\n",
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 5957,
+      "id": 5345,
       "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Attacks that would be critical if a super minority of Guardians were malicious, excluding denial of service vulnerabilities."
+      "severity": "low",
+      "title": "Bugs that are unlikely to occur but would have a significant impact if so, e.g. race conditions"
     },
     {
       "id": 5965,
@@ -241,24 +231,6 @@
       "type": "blockchain_dlt",
       "severity": "low",
       "title": "Unrestricted bypass of the Transfer Verifier (https://github.com/wormhole-foundation/wormhole/blob/main/whitepapers/0014_transfer_verifier.md)"
-    },
-    {
-      "id": 5345,
-      "type": "blockchain_dlt",
-      "severity": "low",
-      "title": "Bugs that are unlikely to occur but would have a significant impact if so, e.g. race conditions"
-    },
-    {
-      "id": 5959,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Exploits resulting in the locking, loss, or theft of user funds from the Portal Token Bridge (locking only applies to non-upgradeable smart contracts)"
-    },
-    {
-      "id": 5958,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Bugs that allow forging signed messages from a super-minority of Guardians"
     },
     {
       "id": 5963,
@@ -283,6 +255,24 @@
       "type": "blockchain_dlt",
       "severity": "high",
       "title": "Unrestricted bypass of rate limiters, including the Governor module (https://github.com/wormhole-foundation/wormhole/tree/main/node/pkg/governor])"
+    },
+    {
+      "id": 5959,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Exploits resulting in the locking, loss, or theft of user funds from the Portal Token Bridge (locking only applies to non-upgradeable smart contracts)"
+    },
+    {
+      "id": 5958,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Bugs that allow forging signed messages from a super-minority of Guardians"
+    },
+    {
+      "id": 5957,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Attacks that would be critical if a super minority of Guardians were malicious, excluding denial of service vulnerabilities."
     },
     {
       "id": 5346,
@@ -417,12 +407,6 @@
       "title": "Forging of wormhole messages (i.e. VAAs) or circumventing VAA verification logic in the smart contracts"
     },
     {
-      "id": 1874,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Determinism bugs that could lead to inconsistent bridge states"
-    },
-    {
       "id": 1875,
       "type": "smart_contract",
       "severity": "critical",
@@ -449,7 +433,7 @@
   ],
   "rewards": [
     {
-      "id": 46184,
+      "id": 47827,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -459,7 +443,7 @@
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 46185,
+      "id": 47828,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -468,7 +452,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 46186,
+      "id": 47829,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -477,7 +461,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 46187,
+      "id": 47830,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
@@ -485,7 +469,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 46188,
+      "id": 47831,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -495,7 +479,7 @@
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 46189,
+      "id": 47832,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -504,7 +488,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 46190,
+      "id": 47833,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -513,7 +497,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 46191,
+      "id": 47834,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
