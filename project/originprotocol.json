@@ -91,16 +91,6 @@
       "isPrimacyOfImpact": false
     },
     {
-      "id": "3rlCPsfrwJ0cp90wI7YNZN",
-      "url": "https://etherscan.io/address/0xaF04828Ed923216c77dC22a2fc8E077FDaDAA87d",
-      "type": "smart_contract",
-      "addedAt": "2025-11-04T14:59:53.438Z",
-      "revision": 0,
-      "description": "CompoundingStakingSSVStrategyProxy",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
       "id": "42bL1xMz1ZyunjGHQlVMOy",
       "url": "https://etherscan.io/address/0x7609c88e5880e934dd3a75bcfef44e31b1badb8b#code",
       "type": "smart_contract",
@@ -211,16 +201,6 @@
       "isPrimacyOfImpact": false
     },
     {
-      "id": "6xsXNp9ePRFYzozIW83qpD",
-      "url": "https://etherscan.io/address/0xEDf495F92c2eBdEE8B797E9C503aA7A3302A9c88",
-      "type": "smart_contract",
-      "addedAt": "2025-11-04T15:00:14.744Z",
-      "revision": 0,
-      "description": "CompoundingStakingStrategyView",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
       "id": "6zQwNer4SzbXjwttM3msNW",
       "url": "https://etherscan.io/address/0xc4444C5D9e7C1a5A0a01c5E4b11692d589DcAF22",
       "type": "smart_contract",
@@ -319,6 +299,26 @@
       "description": "OUSD Morpho V2 CrossChain Remote Strategy",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
+    },
+    {
+      "id": "100207",
+      "url": "https://etherscan.io/address/0xb7992eFDa9aBBaC3522336A626191D198fa37145",
+      "type": "smart_contract",
+      "addedAt": "2026-06-22T07:43:33.430Z",
+      "revision": 0,
+      "description": "Compounding Staking Strategy View",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "100208",
+      "url": "https://etherscan.io/address/0x25e1d468B14005716111d5e8464573e5135275f4",
+      "type": "smart_contract",
+      "addedAt": "2026-06-22T07:43:33.430Z",
+      "revision": 0,
+      "description": "Compounding Staking Strategy",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": "In addition, the current implementation contracts of all the listed proxy contracts are in scope. \n\nAll smart contracts of Origin Dollar can be found at [https://docs.originprotocol.com/registry/contracts](https://docs.originprotocol.com/registry/contracts). However, only those in the Assets in Scope table are considered as in-scope of the bug bounty program.",
@@ -378,7 +378,7 @@
   "rewardsToken": "OUSD",
   "slug": "originprotocol",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-05-13T10:37:28.164Z",
+  "updatedDate": "2026-06-22T07:43:33.641Z",
   "impactsBody": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n   - including flash loan attacks\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Missing access controls / unprotected internal or debugging interfaces\n\n__Websites and Apps__\n\n  - Remote Code Execution\n  - Trusting trust/dependency vulnerabilities\n  - Vertical Privilege Escalation\n  - XML External Entities Injection\n  - SQL Injection\n  - LFI/RFI\n  - Horizontal Privilege Escalation\n  - Stored XSS\n  - Reflective XSS with impact\n  - CSRF with impact\n  - Direct object reference\n  - Internal SSRF\n  - Session fixation\n  - Insecure Deserialization\n  - DOM XSS\n  - SSL misconfigurations\n  - SSL/TLS issues (weak crypto, improper setup)\n  - URL redirect\n  - Clickjacking (must be accompanied with PoC)\n  - Misleading Unicode text (e.g. using right to left override characters)",
   "websiteUrl": null,
   "githubUrl": null,
@@ -503,7 +503,7 @@
   ],
   "rewards": [
     {
-      "id": 45875,
+      "id": 47915,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -512,7 +512,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 45876,
+      "id": 47916,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -520,7 +520,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 45877,
+      "id": 47917,
       "primacy": "primacy_of_rules",
       "severity": "critical",
       "assetType": "websites_and_applications",
