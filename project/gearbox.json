@@ -67,7 +67,7 @@
   "projectType": [
     "Defi"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Calculation for Critical Level Reports__\n\nCritical smart contract vulnerabilities are capped at __10%__ of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of __USD 20 000__\n\n__Repeatable Attack Limitations__\n\n  - If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n  - For critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Level Reports__\n\n  - High vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of __USD 5 000__ to __USD 20 000__ depending on the funds at risk, capped at the maximum high reward.  \n\n  - In the event of temporary freezing, the reward doubles from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\n__Reward Payment Terms__\n\nPayouts are handled by the __Gearbox__ team directly and are denominated in __USD__. However, payments are done in __USDC__\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Calculation for Critical Level Reports__\n\n- Critical smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team.\nFor Critical vulnerabilities affecting assets with no funds currently at risk (for example, integrations not yet launched or systems with no active exposure), rewards will be calculated using the minimum Critical reward amount. \n\n__Repeatable Attack Limitations__\n\n  - If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n  - For critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Level Reports__\n\n  - High vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of __USD 3 000__ to __USD 6 000__ depending on the funds at risk, capped at the maximum high reward.  \n\n  - In the event of temporary freezing, the reward doubles from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\n__Reward Payment Terms__\n\nPayouts are handled by the __Gearbox__ team directly and are denominated in __USD__. However, payments are done in __USDC__\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -75,7 +75,7 @@
   "rewardsToken": "USDC",
   "slug": "gearbox",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-06-22T08:06:46.281Z",
+  "updatedDate": "2026-06-24T20:22:04.329Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -97,6 +97,24 @@
   "customOutOfScopeInformation": null,
   "customProhibitedActivities": [],
   "impacts": [
+    {
+      "id": 1807,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing for profit"
+    },
+    {
+      "id": 1808,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Any governance voting result manipulation (unless related to Snapshot)"
+    },
+    {
+      "id": 1809,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Miner-extractable value (MEV)"
+    },
     {
       "id": 34,
       "type": "smart_contract",
@@ -128,12 +146,6 @@
       "title": "Smart contract unable to operate due to lack of token funds"
     },
     {
-      "id": 1807,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Block stuffing for profit"
-    },
-    {
       "id": 31,
       "type": "smart_contract",
       "severity": "medium",
@@ -152,12 +164,6 @@
       "title": "Unbounded gas consumption"
     },
     {
-      "id": 1808,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Any governance voting result manipulation (unless related to Snapshot)"
-    },
-    {
       "id": 15,
       "type": "smart_contract",
       "severity": "critical",
@@ -170,12 +176,6 @@
       "title": "Permanent freezing of funds"
     },
     {
-      "id": 1809,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Miner-extractable value (MEV)"
-    },
-    {
       "id": 22,
       "type": "smart_contract",
       "severity": "critical",
@@ -184,26 +184,26 @@
   ],
   "rewards": [
     {
-      "id": 47918,
+      "id": 48035,
       "primacy": "primacy_of_impact",
       "severity": "critical",
       "assetType": "smart_contract",
       "maxReward": 150000,
-      "minReward": 7500,
+      "minReward": 6000,
       "rewardModel": "range",
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 47919,
+      "id": 48036,
       "primacy": "primacy_of_impact",
       "severity": "high",
       "assetType": "smart_contract",
-      "maxReward": 7500,
+      "maxReward": 6000,
       "minReward": 3000,
       "rewardModel": "range"
     },
     {
-      "id": 47920,
+      "id": 48037,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -212,12 +212,13 @@
       "rewardModel": "range"
     },
     {
-      "id": 47921,
+      "id": 48038,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
-      "fixedReward": 1000,
-      "rewardModel": "fixed"
+      "maxReward": 1000,
+      "minReward": 1000,
+      "rewardModel": "range"
     }
   ],
   "audits": []
