@@ -100,7 +100,7 @@
   "rewardsToken": "SEI",
   "slug": "sei",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-06-16T05:10:07.545Z",
+  "updatedDate": "2026-06-27T04:41:48.807Z",
   "impactsBody": "__Giga-Related Functionality__\n\nWith the exception of the **Giga executor**, all functionality related to **Giga** is currently **out of scope** for this bug bounty program.\n\n**The Giga executor is in scope.** The Giga executor is **enabled by default**. The following are in scope:\n\n- The `giga/executor` Go package (and its subpackages)\n- The `[giga_executor]` configuration section, including both the `enabled` and `occ_enabled` options\n\nThe following are **out of scope** even though they relate to the Giga executor, and are **not eligible for rewards**:\n\n- **EVMone**: any functionality related to the evmone-based execution backend, including the `evmone` VM integration and any code paths specific to it. EVMone is not used in production and has not been extensively tested.\n- **Transaction result differences (including `LastResultsHash` divergence) between the Giga and V2 executors**: the two execution implementations are not guaranteed to produce identical transaction results or an identical `LastResultsHash`. This is a known difference.\n- **Block delay impacts that rely on the current fallback from Giga to V2 execution**: the current fallback from Giga to V2 execution can increase EVM transaction execution time, and block delay impacts that depend on this fallback are not in scope.\n\n**All other Giga functionality is out of scope.** Every Giga feature other than the executor remains **disabled by default** in all supported environments. Specifically, the following are excluded from scope:\n\n- The **Autobahn** multi-proposer consensus protocol\n- **Giga storage**\n- Any code paths that require setting a `GIGA_*` configuration flag to `true`, other than enabling the Giga executor\n- Any configuration options under `giga`-prefixed sections other than `[giga_executor]`\n- Any code contained within `giga` packages other than `giga/executor`\n\nAs a result:\n- Vulnerabilities that are only exploitable when Giga functionality other than the executor is enabled\n- Vulnerabilities that exist exclusively within `giga` packages other than `giga/executor`\n- Vulnerabilities reachable solely through execution paths gated by non-executor Giga configuration\n\nare **not eligible for rewards** under this bug bounty program.\n\n---\n\n__Excluded StateSync Peer Functionality__\n\nAny functionality related to **StateSync Peers** is currently **out of scope** for this bug bounty program.\n\nA StateSync Peer is a trusted node that provides state synchronization data to other nodes during initial sync. These are nodes explicitly configured as RPC servers and persistent peers for the purpose of state sync. They serve trust height, trust hash, and block/state data that the syncing node consumes directly.\n\nSpecifically, the following are excluded from scope:\n\n- Any vulnerabilities that require a **malicious or compromised StateSync Peer** to be exploited\n- Any attack vectors that depend on a StateSync Peer returning **tampered block data, trust hashes, or state snapshots**\n- Any vulnerabilities that rely on **poisoning the persistent peers list** with attacker-controlled node IDs obtained through compromised StateSync Peer RPC responses\n- Any vulnerabilities related to **P2P-mode state sync**, where any connected P2P peer can serve as a state provider. P2P-mode state sync is **disabled by default** and is not used in Sei's supported state sync workflow\n\nStateSync Peers are considered trusted infrastructure within the Sei network's threat model. As a result:\n- Vulnerabilities that assume a StateSync Peer is acting maliciously or has been compromised\n- Vulnerabilities that are only exploitable by controlling or impersonating a StateSync Peer endpoint\n- Vulnerabilities reachable solely through tampered RPC responses from a trusted StateSync Peer\n- Vulnerabilities that exist exclusively within P2P-mode state sync code paths\n\nare **not eligible for rewards** under this bug bounty program.",
   "websiteUrl": null,
   "githubUrl": null,
@@ -112,106 +112,7 @@
   ],
   "responsiblePublicationCategory": "category_3",
   "description": "Sei is the fastest Layer 1 blockchain, designed to scale with the industry. Pushing the boundaries of blockchain technology through open source development, Sei stands to unlock a brand new design space for consumer facing applications.",
-  "knownIssues": [
-    {
-      "id": 1344,
-      "link": "https://bugs.immunefi.com/magnus/826/projects/337/reports/72697",
-      "description": "72697",
-      "lastUpdatedAt": "2026-04-08T07:00:00.000Z",
-      "relatedImpactInScope": "blockchain_dlt"
-    },
-    {
-      "id": 1332,
-      "link": "https://bugs.immunefi.com/magnus/826/projects/337/reports/76845",
-      "description": "76845",
-      "lastUpdatedAt": "2026-06-09T14:57:57.463Z",
-      "relatedImpactInScope": "blockchain_dlt"
-    },
-    {
-      "id": 1333,
-      "link": "https://bugs.immunefi.com/magnus/826/projects/337/reports/72569",
-      "description": "72569",
-      "lastUpdatedAt": "2026-06-09T15:00:45.399Z",
-      "relatedImpactInScope": "blockchain_dlt"
-    },
-    {
-      "id": 1334,
-      "link": "https://bugs.immunefi.com/magnus/826/projects/337/reports/69368",
-      "description": "69368",
-      "lastUpdatedAt": "2026-06-09T15:01:20.983Z",
-      "relatedImpactInScope": "blockchain_dlt"
-    },
-    {
-      "id": 1335,
-      "link": "https://bugs.immunefi.com/magnus/826/projects/337/reports/64419",
-      "description": "64419",
-      "lastUpdatedAt": "2026-06-09T15:03:13.743Z",
-      "relatedImpactInScope": "blockchain_dlt"
-    },
-    {
-      "id": 1336,
-      "link": "https://bugs.immunefi.com/magnus/826/projects/337/reports/74309",
-      "description": "74309",
-      "lastUpdatedAt": "2026-06-09T15:04:04.845Z",
-      "relatedImpactInScope": "blockchain_dlt"
-    },
-    {
-      "id": 1337,
-      "link": "https://bugs.immunefi.com/magnus/826/projects/337/reports/80673",
-      "description": "80673",
-      "lastUpdatedAt": "2026-06-09T15:04:45.396Z",
-      "relatedImpactInScope": "blockchain_dlt"
-    },
-    {
-      "id": 1338,
-      "link": "https://bugs.immunefi.com/magnus/826/projects/337/reports/79947",
-      "description": "79947",
-      "lastUpdatedAt": "2026-06-09T15:05:24.137Z",
-      "relatedImpactInScope": "blockchain_dlt"
-    },
-    {
-      "id": 1339,
-      "link": "https://bugs.immunefi.com/magnus/826/projects/337/reports/71097",
-      "description": "71097",
-      "lastUpdatedAt": "2026-06-09T15:06:03.712Z",
-      "relatedImpactInScope": "blockchain_dlt"
-    },
-    {
-      "id": 1340,
-      "link": "https://bugs.immunefi.com/magnus/826/projects/337/reports/80674",
-      "description": "80674",
-      "lastUpdatedAt": "2026-06-09T15:06:35.709Z",
-      "relatedImpactInScope": "blockchain_dlt"
-    },
-    {
-      "id": 1341,
-      "link": "https://bugs.immunefi.com/magnus/826/projects/337/reports/71926",
-      "description": "71926",
-      "lastUpdatedAt": "2026-06-09T15:07:08.169Z",
-      "relatedImpactInScope": "blockchain_dlt"
-    },
-    {
-      "id": 1342,
-      "link": "https://bugs.immunefi.com/magnus/826/projects/337/reports/80676",
-      "description": "80676",
-      "lastUpdatedAt": "2026-06-09T15:07:46.101Z",
-      "relatedImpactInScope": "blockchain_dlt"
-    },
-    {
-      "id": 1358,
-      "link": "https://bugs.immunefi.com/magnus/826/projects/337/reports/61241",
-      "description": "61241",
-      "lastUpdatedAt": "2026-06-23T17:28:41.888Z",
-      "relatedImpactInScope": "blockchain_dlt"
-    },
-    {
-      "id": 1359,
-      "link": "https://bugs.immunefi.com/magnus/826/projects/337/reports/81259",
-      "description": "81259",
-      "lastUpdatedAt": "2026-06-23T17:30:27.250Z",
-      "relatedImpactInScope": "blockchain_dlt"
-    }
-  ],
+  "knownIssues": [],
   "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeSmartContract": null,
   "defaultOutOfScopeWebAndApplications": null,
@@ -314,7 +215,7 @@
   ],
   "rewards": [
     {
-      "id": 47714,
+      "id": 48174,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -324,7 +225,7 @@
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 47715,
+      "id": 48175,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -332,7 +233,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 47716,
+      "id": 48176,
       "primacy": "primacy_of_rules",
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -340,7 +241,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 47717,
+      "id": 48177,
       "primacy": "primacy_of_rules",
       "severity": "low",
       "assetType": "blockchain_dlt",
