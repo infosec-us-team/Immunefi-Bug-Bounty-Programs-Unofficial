@@ -165,7 +165,7 @@
   "rewardsToken": "USDC",
   "slug": "strata",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-06-30T19:26:16.960Z",
+  "updatedDate": "2026-07-06T11:17:23.151Z",
   "impactsBody": null,
   "websiteUrl": "https://strata.markets",
   "githubUrl": "https://github.com/Strata-Markets",
@@ -177,7 +177,15 @@
   ],
   "responsiblePublicationCategory": "category_3",
   "description": "Strata is a general-purpose risk-tranching protocol that brings structured yield products to  \ndiverse on-chain and off-chain yield strategies by splitting underlying yield into tokenized Senior and Junior tranches, each tailored to distinct risk–reward profiles.  \n\nSince launching its first markets on Ethena USDe and later on Neutrl NUSD, Strata has grown to over $250M in TVL with 13,000+ users participating across both markets. Over the coming months, Strata plans to expand horizontally to additional yield products, including curated lending vaults, managed multi-strategy vaults, exotic delta-neutral strategies, tokenized private credit, high-yield RWAs etc.  \n\nFor more information about Strata, please visit https://strata.markets",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1369,
+      "link": "https://github.com/Strata-Markets/contracts-internal/blob/tranches/contracts/tranches/oracles/providers/ChainlinkAprProviderLib.sol#L36",
+      "description": "ChainlinkAprProviderLib returns base APRs down to -100% (BOUND_MIN = -1e12), but AprPairFeed.ensureValid only accepts down to -50% (APR_BOUNDARY_MIN = -0.5e12), so any APR in [-100%, -50%) passes the provider but reverts the feed. Since Accounting.fetchAprs() reads the feed on every deposit/withdraw with no try/catch, a sufficiently negative base APR (from an underlying pps decline) freezes all deposits and withdrawals until the APR recovers or a keeper pushes a valid round.",
+      "lastUpdatedAt": "2026-06-30T21:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeWebAndApplications": null,
@@ -244,7 +252,7 @@
   ],
   "rewards": [
     {
-      "id": 48296,
+      "id": 48446,
       "primacy": "primacy_of_rules",
       "severity": "critical",
       "assetType": "smart_contract",
@@ -254,7 +262,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 48297,
+      "id": 48447,
       "primacy": "primacy_of_rules",
       "severity": "high",
       "assetType": "smart_contract",
@@ -263,7 +271,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 48298,
+      "id": 48448,
       "primacy": "primacy_of_rules",
       "severity": "medium",
       "assetType": "smart_contract",
@@ -272,7 +280,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 48299,
+      "id": 48449,
       "primacy": "primacy_of_rules",
       "severity": "low",
       "assetType": "smart_contract",
