@@ -4,19 +4,11 @@
       "id": "2J91J0Fz7AlXeSylq0C4EL",
       "url": "https://docs.pareto.credit/developers/addresses/product/credit-vaults",
       "type": "smart_contract",
-      "addedAt": "2024-12-12T11:36:22.094Z",
-      "revision": 2,
+      "addedAt": "2024-12-12T11:36:21.828Z",
+      "revision": 0,
       "description": null,
-      "isPrimacyOfImpact": null
-    },
-    {
-      "id": "78BeyyEf1qYkMkTl8yAl4N",
-      "url": "https://docs.pareto.credit/developers/addresses/product/usp",
-      "type": "smart_contract",
-      "addedAt": "2024-12-12T11:36:31.719Z",
-      "revision": 2,
-      "description": null,
-      "isPrimacyOfImpact": null
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": "Only Senior Best Yield contracts will be considered in scope for the Best Yield. Governance and Utilities and ERC-4626 wrappers contracts are not covered under this bug bounty program. **Paused** contracts and contract market as **Deprecated**/**Decommissioned** in doc are not considered in scope",
@@ -31,9 +23,11 @@
   ],
   "endDate": null,
   "evaluationEndDate": null,
-  "features": [],
+  "features": [
+    "Pay to Mediate"
+  ],
   "hideAssetsInScope": null,
-  "immunefiStandard": null,
+  "immunefiStandard": false,
   "inviteOnly": false,
   "kyc": false,
   "language": [
@@ -42,6 +36,7 @@
   "launchDate": "2021-03-25T07:00:00.000Z",
   "logo": "https://images.ctfassets.net/t3wqy70tc3bv/52eX2vYXd4Q7PBZ7WCxhjL/062d7f630b8f0decfd1d4746e0dc96ab/Screenshot_2025-06-03_at_4.20.18_pm.png",
   "maxBounty": 50000,
+  "outOfScopeAndRules": null,
   "pocPerTypeAndSeverity": [
     "smart_contract - critical",
     "smart_contract - high",
@@ -52,7 +47,7 @@
   "productType": [
     "Yield Aggregator"
   ],
-  "programOverview": "Pareto is a private credit marketplace that connects institutional lenders and borrowers, providing scalable, yield-generating opportunities and bridging institutional capital on-chain.\n\nTailored for asset managers, digital asset funds, and other professional investors, Pareto offers seamless access to regulatory-compliant alternative credit products. Its infrastructure emphasizes transparency, automation, and flexibility. Credit Vaults are the core primitive: they eliminate utilization-based inefficiencies, reduce operational overhead, and improve capital efficiency for both lenders and borrowers.\n\nCurrently, Pareto Credit product suite includes: :\n- Credit Vaults  a suite of smart contracts built to simplify on-chain lending and credit position management for borrowers and lenders. They provide the infrastructure for real-world financing, making it more transparent and efficient.\n- USP: a synthetic dollar protocol backed by real-world institutional-grade private credit, alongside a globally accessible savings asset, sUSP.\n\nPayouts are handled by Pareto Credit directly and are denominated in USD, payouts are done in stablecoins.",
+  "programOverview": "Pareto is a private credit marketplace that connects institutional lenders and borrowers, providing scalable, yield-generating opportunities and bridging institutional capital on-chain.\n\nTailored for asset managers, digital asset funds, and other professional investors, Pareto offers seamless access to regulatory-compliant alternative credit products. Its infrastructure emphasizes transparency, automation, and flexibility. Credit Vaults are the core primitive: they eliminate utilization-based inefficiencies, reduce operational overhead, and improve capital efficiency for both lenders and borrowers.\n\nCurrently, Pareto Credit product suite includes: :\n- Credit Vaults  a suite of smart contracts built to simplify on-chain lending and credit position management for borrowers and lenders. They provide the infrastructure for real-world financing, making it more transparent and efficient.\n\nPayouts are handled by Pareto Credit directly and are denominated in USD, payouts are done in stablecoins.",
   "programType": [
     "Smart Contract"
   ],
@@ -68,9 +63,9 @@
   "rewardsToken": "USDC, IDLE",
   "slug": "pareto",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2025-06-03T15:23:16.105Z",
-  "impactsBody": "For Credit Vaults  contract marked in the description as “Queue” should be considered out of scope while for USP “Queue” contract is in scope. . Paused contracts and contract market as Deprecated/Decommissioned in doc are not considered in scope",
-  "websiteUrl": null,
+  "updatedDate": "2026-07-06T20:33:03.061Z",
+  "impactsBody": "For Credit Vaults  contract marked in the description as “Queue” should be considered out of scope. Paused contracts and contract market as Deprecated/Decommissioned in doc are not considered in scope",
+  "websiteUrl": "https://pareto.credit/",
   "githubUrl": null,
   "eligibilityCriteria": [],
   "responsiblePublicationCategory": "category_2",
@@ -136,7 +131,8 @@
   ],
   "rewards": [
     {
-      "id": 30309,
+      "id": 48458,
+      "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
       "maxReward": 50000,
@@ -144,14 +140,16 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 30310,
+      "id": 48459,
+      "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
       "maxReward": 20000,
       "rewardModel": "up_to"
     },
     {
-      "id": 30311,
+      "id": 48460,
+      "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
       "maxReward": 5000,
