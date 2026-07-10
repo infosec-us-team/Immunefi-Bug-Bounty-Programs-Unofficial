@@ -346,9 +346,9 @@
   "evaluationEndDate": null,
   "features": [
     "Subscription Plan: Essential",
-    "Managed Triage: Signal Booster",
     "Pay to Mediate",
-    "Pay to Submit"
+    "Pay to Submit",
+    "Managed Triage: Expert Assessment"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -396,7 +396,7 @@
   "rewardsToken": "USDC",
   "slug": "optimism",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-06-26T04:42:53.116Z",
+  "updatedDate": "2026-07-09T15:58:57.656Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -474,7 +474,7 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "The following are considered out-of-scope for the bug bounty:\n\n__Blockchain / DLT__:\n- Vulnerabilities requiring the user to have publicly exposed an API, such as JSON-RPC or the Beacon API\n- Vulnerabilities requiring the chain operator to violate recommended best practices as described on our docs website, for example around network topology, proxy configuration and so on. See here https://docs.optimism.io/chain-operators/reference/architecture#network-design-example\n- The Alt-DA feature of op-node and op-batcher.\n- All execution layer clients which have reached end-of-service (e.g. op-geth).\n- op-reth depends on several crates sourced from https://github.com/paradigmxyz/reth/. Issues which are responsibly disclosed to the upstream reth team or the Ethereum Foundation Bug Bounty Program (https://bbp-form.ethereum.org/) cannot be \"replayed\" against Optimism’s bug bounty program if the vulnerability has already been made public. If the vulnerability is disclosed to Optimism at the same time as upstream, the vulnerability is eligible for the bug bounty program.\n - All currently known issues with devp2p here: [https://github.com/ethereum/devp2p/blob/master/rlpx.md#known-issues-in-the-current-version](https://github.com/ethereum/devp2p/blob/master/rlpx.md#known-issues-in-the-current-version)\n- There are scenarios where, if an attacker can predict an L1 reorg, they could exploit it to reorder dispute game transactions in a way that causes the honest challenger to respond incorrectly and therefore lose its bond — although the dispute game itself will still resolve correctly.\n\n__Smart Contracts__:\n- Vulnerabilities in the implementation of ‘custom token bridges’ which are written by third parties for bridging tokens to their network\n- Bugs in op-challenger that result in \"Incorrectly resolved dispute game, detected by op-dispute-mon\", because of existing ability to detect and resolve these issues.\n- Proof of whale based attacks on Fault Proofs.\n- There appears to be an obvious bug which would allow an attacker to withdraw a fake ERC20 token from L2 in exchange for a real ERC20 (such as WBTC) token on L1. There is no check in the L2StandardBridge, however the withdrawal is prevented from finalizing by a check in the L1StandardBridge. Naturally if you do find a way to circumvent our protections, then we would reward you.\n- A bug in ResolvedDelegateProxy.sol which could result in a storage slot key collision overwriting the address of the implementation. This bug is dependent on the layout of the implementation contract, and Optimism is not affected.\n- There is an edge case in which ETH deposited to the OptimismPortal by a contract can be irrecoverably stranded:\n  - When a deposit transaction fails to execute, the sender’s account balance is still credited with the mint value. However, if the deposit’s L1 sender is a contract, the tx.origin on L2 will be aliased, and this aliased address will receive the minted on L2. In general the contract on L1 will not be able to recover these funds. We have documented this risk and encourage users to take advantage of our CrossDomainMessenger contracts which provide additional safety measures.\n- Sending cross-chain messages with very large amounts of data, or very specific amounts of gas can open up griefing attacks causing the sender’s funds to be stuck and requiring an upgrade to release them.\n- Deposit transactions can be griefed at a cost to the attacker, by filling up the MAX_RESOURCE_LIMIT. This issue is mitigated by PR 5064, which does not completely resolve the issue but does increase the cost of a sustained griefing attack. A more complete fix will require architectural changes.\n- There are various ‘foot guns’ in the bridge which may arise from misconfiguration of a token. To minimize complexity our bridge design does not try to prevent all forms of developer and user error. Examples of such foot guns include:\n  - Having both (or neither of) the local and remote tokens be OptimismMintable.\n  - Tokens which dynamically alter the amount of a token held by an account, such as fee-on-transfer and rebasing tokens.\n\n__Web & App__:\n- explorer.optimism.io\n- testnet-explorer.optimism.io\n- retrofunding.optimism.io\n- public-grafana.optimism.io\n- discord.optimism.io\n- kyc.optimism.io\n- kyb.optimism.io\n- raas.optimism.io\n- contribute.optimism.io\n- superfest.optimism.io\n- welovetheart.optimism.io\n- Additionally, any other asset belonging to Optimism but not under Optimism’s control will also be out of scope.\n\n__The following domains, operated by Agora__:\n- vote.optimism.io\n- atlas.optimism.io\n\n*Security researchers who discover vulnerabilities on these domains are encouraged to report them directly to Agora at security@voteagora.com. However, if a vulnerability on these domains leads to a direct financial impact on the OP Stack or the Optimism protocol itself, the impact remains in scope under the Primacy of Impact and should be submitted through this bug bounty program.*",
+  "customOutOfScopeInformation": "The following are considered out-of-scope for the bug bounty:\n\n__Blockchain / DLT__:\n- Vulnerabilities requiring the user to have publicly exposed an API, such as JSON-RPC or the Beacon API\n- Vulnerabilities requiring the chain operator to violate recommended best practices as described on our docs website, for example around network topology, proxy configuration and so on. See here https://docs.optimism.io/chain-operators/reference/architecture#network-design-example\n- The Alt-DA feature of op-node and op-batcher.\n- All execution layer clients which have reached end-of-service (e.g. op-geth).\n- op-reth depends on several crates sourced from https://github.com/paradigmxyz/reth/. Issues which are responsibly disclosed to the upstream reth team or the Ethereum Foundation Bug Bounty Program (https://bbp-form.ethereum.org/) cannot be \"replayed\" against Optimism’s bug bounty program if the vulnerability has already been made public. If the vulnerability is disclosed to Optimism at the same time as upstream, the vulnerability is eligible for the bug bounty program.\n - All currently known issues with devp2p here: [https://github.com/ethereum/devp2p/blob/master/rlpx.md#known-issues-in-the-current-version](https://github.com/ethereum/devp2p/blob/master/rlpx.md#known-issues-in-the-current-version)\n- There are scenarios where, if an attacker can predict an L1 reorg, they could exploit it to reorder dispute game transactions in a way that causes the honest challenger to respond incorrectly and therefore lose its bond — although the dispute game itself will still resolve correctly.\n\n__Smart Contracts__:\n- Vulnerabilities in the implementation of ‘custom token bridges’ which are written by third parties for bridging tokens to their network\n- Bugs in op-challenger or other off-chain components that result in \"Incorrectly resolved dispute game, detected by op-dispute-mon\".\n- Proof of whale based attacks on Fault Proofs.\n- There appears to be an obvious bug which would allow an attacker to withdraw a fake ERC20 token from L2 in exchange for a real ERC20 (such as WBTC) token on L1. There is no check in the L2StandardBridge, however the withdrawal is prevented from finalizing by a check in the L1StandardBridge. Naturally if you do find a way to circumvent our protections, then we would reward you.\n- A bug in ResolvedDelegateProxy.sol which could result in a storage slot key collision overwriting the address of the implementation. This bug is dependent on the layout of the implementation contract, and Optimism is not affected.\n- There is an edge case in which ETH deposited to the OptimismPortal by a contract can be irrecoverably stranded:\n  - When a deposit transaction fails to execute, the sender’s account balance is still credited with the mint value. However, if the deposit’s L1 sender is a contract, the tx.origin on L2 will be aliased, and this aliased address will receive the minted on L2. In general the contract on L1 will not be able to recover these funds. We have documented this risk and encourage users to take advantage of our CrossDomainMessenger contracts which provide additional safety measures.\n- Sending cross-chain messages with very large amounts of data, or very specific amounts of gas can open up griefing attacks causing the sender’s funds to be stuck and requiring an upgrade to release them.\n- Deposit transactions can be griefed at a cost to the attacker, by filling up the MAX_RESOURCE_LIMIT. This issue is mitigated by PR 5064, which does not completely resolve the issue but does increase the cost of a sustained griefing attack. A more complete fix will require architectural changes.\n- There are various ‘foot guns’ in the bridge which may arise from misconfiguration of a token. To minimize complexity our bridge design does not try to prevent all forms of developer and user error. Examples of such foot guns include:\n  - Having both (or neither of) the local and remote tokens be OptimismMintable.\n  - Tokens which dynamically alter the amount of a token held by an account, such as fee-on-transfer and rebasing tokens.\n\n__Web & App__:\n- explorer.optimism.io\n- testnet-explorer.optimism.io\n- retrofunding.optimism.io\n- public-grafana.optimism.io\n- discord.optimism.io\n- kyc.optimism.io\n- kyb.optimism.io\n- raas.optimism.io\n- contribute.optimism.io\n- superfest.optimism.io\n- welovetheart.optimism.io\n- Additionally, any other asset belonging to Optimism but not under Optimism’s control will also be out of scope.\n\n__The following domains, operated by Agora__:\n- vote.optimism.io\n- atlas.optimism.io\n\n*Security researchers who discover vulnerabilities on these domains are encouraged to report them directly to Agora at security@voteagora.com. However, if a vulnerability on these domains leads to a direct financial impact on the OP Stack or the Optimism protocol itself, the impact remains in scope under the Primacy of Impact and should be submitted through this bug bounty program.*",
   "customProhibitedActivities": [],
   "impacts": [
     {
@@ -482,12 +482,6 @@
       "type": "websites_and_applications",
       "severity": "high",
       "title": "Subdomain takeover without already-connected wallet interaction"
-    },
-    {
-      "id": 5850,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Protocol insolvency, not including proposer/challenger bonds or fee vaults"
     },
     {
       "id": 5851,
@@ -538,22 +532,16 @@
       "title": "Incorrectly resolved dispute game, not detected by op-dispute-mon, does not allow proving invalid withdrawal"
     },
     {
-      "id": 5861,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Incorrectly resolved dispute game, detected by op-dispute-mon"
-    },
-    {
       "id": 48,
       "type": "websites_and_applications",
       "severity": "high",
       "title": "Improperly disclosing confidential user information, such as:\n- Email address\n- Phone number\n- Physical address, etc."
     },
     {
-      "id": 5849,
+      "id": 5850,
       "type": "smart_contract",
-      "severity": "medium",
-      "title": "Incorrectly resolved dispute game, detected by op-dispute-mon, excluding bugs in op-challenger"
+      "severity": "critical",
+      "title": "Protocol insolvency, not including proposer/challenger bonds or fee vaults"
     },
     {
       "id": 5910,
@@ -578,6 +566,12 @@
       "type": "blockchain_dlt",
       "severity": "medium",
       "title": "Network not being able to confirm new transactions on L2, while forced-inclusion via L1 is still possible"
+    },
+    {
+      "id": 6193,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Incorrectly resolved dispute game, detected by op-dispute-mon, excluding bugs in off-chain components"
     },
     {
       "id": 35,
@@ -642,7 +636,7 @@
   ],
   "rewards": [
     {
-      "id": 47907,
+      "id": 48535,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -651,7 +645,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 47908,
+      "id": 48536,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -660,7 +654,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 47909,
+      "id": 48537,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -669,7 +663,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 47910,
+      "id": 48538,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -678,7 +672,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 47911,
+      "id": 48539,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -687,7 +681,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 47912,
+      "id": 48540,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -696,7 +690,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 47913,
+      "id": 48541,
       "primacy": "primacy_of_rules",
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -706,7 +700,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 47914,
+      "id": 48542,
       "primacy": "primacy_of_rules",
       "severity": "high",
       "assetType": "websites_and_applications",

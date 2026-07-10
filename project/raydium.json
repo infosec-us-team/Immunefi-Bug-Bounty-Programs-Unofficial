@@ -773,7 +773,7 @@
     "smart_contract - medium"
   ],
   "primaryPaymentWallet": "Solana",
-  "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+  "prioritizedVulnerabilities": "_blank_",
   "productType": [
     "AMM"
   ],
@@ -793,7 +793,7 @@
   "rewardsToken": "RAY, SOL, USDC",
   "slug": "raydium",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-06-10T09:44:43.996Z",
+  "updatedDate": "2026-07-09T15:21:35.875Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -811,18 +811,6 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 23,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of unclaimed yield"
-    },
-    {
-      "id": 25,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of unclaimed yield"
-    },
-    {
       "id": 4157,
       "type": "smart_contract",
       "severity": "high",
@@ -835,16 +823,34 @@
       "title": "Vulnerabilities that could freeze user funds temporarily or intentionally alter the value of user funds"
     },
     {
-      "id": 29,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Smart contract unable to operate due to lack of token funds"
-    },
-    {
       "id": 4159,
       "type": "smart_contract",
       "severity": "medium",
       "title": "Block stuffing for profit"
+    },
+    {
+      "id": 4160,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Vulnerabilities that could freeze user funds permanently or involve the draining or theft of funds without user transaction approval"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 29,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Smart contract unable to operate due to lack of token funds"
     },
     {
       "id": 31,
@@ -875,17 +881,11 @@
       "type": "smart_contract",
       "severity": "critical",
       "title": "Permanent freezing of funds"
-    },
-    {
-      "id": 4160,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Vulnerabilities that could freeze user funds permanently or involve the draining or theft of funds without user transaction approval"
     }
   ],
   "rewards": [
     {
-      "id": 47026,
+      "id": 48532,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -895,15 +895,16 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 47027,
+      "id": 48533,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
-      "fixedReward": 40000,
-      "rewardModel": "fixed"
+      "maxReward": 40000,
+      "minReward": 5000,
+      "rewardModel": "range"
     },
     {
-      "id": 47028,
+      "id": 48534,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
