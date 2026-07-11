@@ -39,7 +39,8 @@
   "features": [
     "Managed Triage: Expert Assessment",
     "Pay to Mediate",
-    "Subscription Plan: Elite"
+    "Subscription Plan: Elite",
+    "Pay to Submit"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": false,
@@ -50,7 +51,7 @@
   ],
   "launchDate": "2026-02-26T19:26:00.000Z",
   "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1n32B4eQNgsTaCpybMEudK/57f8ae5777af97e0e7a91f4b2ec17517/alchemix.png",
-  "maxBounty": 300000,
+  "maxBounty": 150000,
   "outOfScopeAndRules": null,
   "pocPerTypeAndSeverity": [
     "smart_contract - critical",
@@ -76,7 +77,7 @@
   "projectType": [
     "Defi"
   ],
-  "rewardsBody": "__Reward Calculation for Critical Level Reports__\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 300,000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 50,000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward.\n\n__Reward Calculation for High Level Reports__\nHigh impacts concerning theft/permanent freezing of unclaimed yield/royalties are rewarded with a range of 5,000 to 35,000 with the reward calculated based on 100% of the funds at risk, though capped at the maximum high reward.\n\nIn the event of temporary freezing, the reward doubles from the full frozen vallue for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward.",
+  "rewardsBody": "__Reward Calculation for Critical Level Reports__\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to the maximum listed. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward.\n\n__Reward Calculation for High Level Reports__\nHigh impacts concerning theft/permanent freezing of unclaimed yield/royalties are rewarded with a range of 5,000 to 35,000 with the reward calculated based on 100% of the funds at risk, though capped at the maximum high reward.\n\nIn the event of temporary freezing, the reward doubles from the full frozen vallue for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -84,7 +85,7 @@
   "rewardsToken": "USDC",
   "slug": "alchemix-1",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-06-08T10:25:38.064Z",
+  "updatedDate": "2026-07-10T17:27:42.210Z",
   "impactsBody": null,
   "websiteUrl": "https://alchemix.fi/",
   "githubUrl": "https://github.com/alchemix-finance",
@@ -224,34 +225,34 @@
   ],
   "rewards": [
     {
-      "id": 47006,
+      "id": 48588,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
-      "maxReward": 300000,
-      "minReward": 50000,
+      "maxReward": 150000,
+      "minReward": 20000,
       "rewardModel": "range",
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 47007,
+      "id": 48589,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
-      "maxReward": 35000,
+      "maxReward": 20000,
       "minReward": 5000,
       "rewardModel": "range"
     },
     {
-      "id": 47008,
+      "id": 48590,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
-      "fixedReward": 4000,
+      "fixedReward": 3000,
       "rewardModel": "fixed"
     },
     {
-      "id": 47009,
+      "id": 48591,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
