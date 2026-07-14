@@ -39,6 +39,16 @@
       "description": "A high-performance Rust execution client for Berachain, built with the Reth SDK.",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_7114e825-018a-49db-b596-ebf2bfb8752c",
+      "url": "https://github.com/berachain/contracts-staking-pools",
+      "type": "smart_contract",
+      "addedAt": "2026-07-10T20:36:57.449Z",
+      "revision": 0,
+      "description": "Berachain Staking Pools",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": null,
@@ -55,7 +65,8 @@
   "endDate": null,
   "evaluationEndDate": null,
   "features": [
-    "Subscription Plan: Essential"
+    "Subscription Plan: Essential",
+    "Pay to Mediate"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -68,11 +79,10 @@
   ],
   "launchDate": "2025-02-06T11:58:00.000Z",
   "logo": "https://images.ctfassets.net/t3wqy70tc3bv/28aHSz4GDuMcAuSR8VmJ4P/b943afe474489ec74fab8cf921f17118/NEW_Berachain.png",
-  "maxBounty": 250000,
+  "maxBounty": 100000,
   "outOfScopeAndRules": "These impacts are out of scope of this bug bounty program. \n\n__All Categories:__\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers\n- Impacts relying on theoretical user interactions without any demonstration of regular or significant occurrence\n\n__Blockchain/DLT & Smart Contract Specific:__\n\n- Incorrect data supplied by third-party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n\n__Prohibited Activities:__\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
   "pocPerTypeAndSeverity": [
     "blockchain_dlt - critical",
-    "blockchain_dlt - high",
     "blockchain_dlt - medium",
     "blockchain_dlt - low",
     "smart_contract - critical",
@@ -105,7 +115,7 @@
   "rewardsToken": "",
   "slug": "berachain",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-04-06T18:28:47.985Z",
+  "updatedDate": "2026-07-13T13:05:35.888Z",
   "impactsBody": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered in scope, even if they affect something in the assets in the scope table.\n\n__For Blockchain/DLT__\n\nThe set of attack vectors listed in this bullet list represents potential exploits that may result in one or more of the impacts defined in the table.\n\n- Remote code execution on validator node\n- Exposure of cryptographic key material\n- Impersonation of validator’s authenticated actions, e.g. forging of signatures or votes\n- Bugs that would allow the extraction, or the destruction, or the generation of surplus monetary rewards other than what is designated in the protocol\n- Any bug that would lead to a perceivable advantage other than the validator’s voting power, e.g. election bias\n- Confused deputy on equivocating or slashable behavior, e.g. the validator node is induced into voting twice involuntarily\n- Attacks lead a percentage of nodes to crash, halting the chain\n- Bugs leading to a percentage of nodes into an inconsistent state, without stopping the chain\n- Non-generic attacks lead to a chain halt or make the chain unable to progress\n- Safety and correctness flaws that would require the combination of extraordinary conditions to occur\n- Extended degradation of performances by non-generic means \n- Non-generic attacks mean that there must be an omission or a defect in the code that would result in any significant computational advantage.",
   "websiteUrl": "https://www.berachain.com",
   "githubUrl": null,
@@ -136,58 +146,10 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 10,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Shutdown of greater than or equal to 30% of network processing nodes without brute force actions, but does not shut down the network"
-    },
-    {
-      "id": 34,
+      "id": 14,
       "type": "smart_contract",
-      "severity": "low",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
-    },
-    {
-      "id": 5291,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments"
-    },
-    {
-      "id": 3,
-      "type": "blockchain_dlt",
       "severity": "critical",
-      "title": "Direct loss of funds"
-    },
-    {
-      "id": 4,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Permanent freezing of funds (fix requires hardfork)"
-    },
-    {
-      "id": 8,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "RPC API crash affecting programs with greater than or equal to 25% of the market capitalization on top of the respective layer"
-    },
-    {
-      "id": 9,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Increasing network processing node resource consumption by at least 30% without brute force actions, compared to the preceding 24 hours"
-    },
-    {
-      "id": 11,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "A bug in the respective layer 0/1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk"
-    },
-    {
-      "id": 12,
-      "type": "blockchain_dlt",
-      "severity": "low",
-      "title": "Shutdown of greater than 10% or equal to but less than 30% of network processing nodes without brute force actions, but does not shut down the network"
+      "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results"
     },
     {
       "id": 13,
@@ -196,10 +158,64 @@
       "title": "Modification of transaction fees outside of design parameters"
     },
     {
-      "id": 14,
+      "id": 5291,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments"
+    },
+    {
+      "id": 27,
       "type": "smart_contract",
-      "severity": "critical",
-      "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results"
+      "severity": "high",
+      "title": "Temporary freezing of funds"
+    },
+    {
+      "id": 28,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of NFTs"
+    },
+    {
+      "id": 29,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Smart contract unable to operate due to lack of token funds"
+    },
+    {
+      "id": 30,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 32,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of gas"
+    },
+    {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
+    },
+    {
+      "id": 34,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
+    },
+    {
+      "id": 10,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Shutdown of greater than or equal to 30% of network processing nodes without brute force actions, but does not shut down the network"
     },
     {
       "id": 15,
@@ -274,46 +290,34 @@
       "title": "Permanent freezing of unclaimed royalties"
     },
     {
-      "id": 27,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing of funds"
+      "id": 3,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Direct loss of funds"
     },
     {
-      "id": 28,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing of NFTs"
+      "id": 4,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Permanent freezing of funds (fix requires hardfork)"
     },
     {
-      "id": 29,
-      "type": "smart_contract",
+      "id": 9,
+      "type": "blockchain_dlt",
       "severity": "medium",
-      "title": "Smart contract unable to operate due to lack of token funds"
+      "title": "Increasing network processing node resource consumption by at least 30% without brute force actions, compared to the preceding 24 hours"
     },
     {
-      "id": 30,
-      "type": "smart_contract",
+      "id": 11,
+      "type": "blockchain_dlt",
       "severity": "medium",
-      "title": "Block stuffing"
+      "title": "A bug in the respective layer 0/1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk"
     },
     {
-      "id": 31,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-    },
-    {
-      "id": 32,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Theft of gas"
-    },
-    {
-      "id": 33,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Unbounded gas consumption"
+      "id": 12,
+      "type": "blockchain_dlt",
+      "severity": "low",
+      "title": "Shutdown of greater than 10% or equal to but less than 30% of network processing nodes without brute force actions, but does not shut down the network"
     },
     {
       "id": 5292,
@@ -330,26 +334,17 @@
   ],
   "rewards": [
     {
-      "id": 44265,
+      "id": 48714,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
-      "maxReward": 250000,
-      "minReward": 50000,
+      "maxReward": 100000,
+      "minReward": 10000,
       "rewardModel": "range",
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 44266,
-      "primacy": null,
-      "severity": "high",
-      "assetType": "blockchain_dlt",
-      "maxReward": 50000,
-      "minReward": 10000,
-      "rewardModel": "range"
-    },
-    {
-      "id": 44267,
+      "id": 48715,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -358,7 +353,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 44268,
+      "id": 48716,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
@@ -366,26 +361,26 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 44269,
+      "id": 48717,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
-      "maxReward": 250000,
-      "minReward": 50000,
+      "maxReward": 100000,
+      "minReward": 10000,
       "rewardModel": "range",
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 44270,
+      "id": 48718,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
-      "maxReward": 50000,
-      "minReward": 10000,
+      "maxReward": 25000,
+      "minReward": 5000,
       "rewardModel": "range"
     },
     {
-      "id": 44271,
+      "id": 48719,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -394,7 +389,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 44272,
+      "id": 48720,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",

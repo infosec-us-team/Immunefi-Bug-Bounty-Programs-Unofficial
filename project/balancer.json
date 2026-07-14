@@ -315,6 +315,13 @@
       "description": "The way the surge fees are computed in the stable surge hook is an approximation that keeps the computation simple. For big swaps and large max surge swap fee, the approximation breaks exact in / exact out equivalence. In other words:  swap_in(Ai) = Ao  swap_out(Ao) != Ai Since this happens only in extreme cases that are not relevant in practice, simplicity is preferred over accuracy in this case. By no means this constitutes a security issue: any error computing a dynamic swap fee above the static swap fee percentage cannot lead to theft of funds.",
       "lastUpdatedAt": "2025-01-21T05:00:00.000Z",
       "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1374,
+      "link": "https://github.com/balancer/reclamm/blob/reclamm-2.1/audits/cantina/2026-04-13.pdf",
+      "description": "Centeredness-preserving price-ratio updates in ReClamm pools can shift spot price in edge cases (issue 3.2.13).",
+      "lastUpdatedAt": "2026-07-12T15:50:58.692Z",
+      "relatedImpactInScope": "smart_contract"
     }
   ],
   "defaultOutOfScopeBlockchain": null,

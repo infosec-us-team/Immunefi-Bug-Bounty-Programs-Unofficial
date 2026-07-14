@@ -191,6 +191,13 @@
       "description": "AprPairFeed::updateRoundData() accepts timestamo that can be 60 seconds in the future and if the UPDATER_FEED_ROLE passes such timestamp deposits  and withdrawals will be blocked for up to 60 sec. The updater feed role is trusted to not do this. Also if it occurs the issues is self-healing - after the time passes operations would be unfrozen",
       "lastUpdatedAt": "2026-07-07T21:00:00.000Z",
       "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1373,
+      "link": "https://github.com/Strata-Markets/contracts/blob/tranches/contracts/tranches/DiscreteAccounting.sol#L470",
+      "description": "In DiscreteAccounting.calculateNAVSplitProjected (the path taken when strategy NAV is flat between rewards), the live on-chain contract caps Senior's projected target gain by projected Junior NAV but debits it from real Junior (flooring real Junior to 0) and credits Senior the full amount, with no solvency check. If Senior's accrued target over a continuous rewardless stretch ever exceeds real Junior, the stored tranche NAVs sum to more than actual assets, and the next realized-yield update reverts InvalidNavSplit permanently — freezing all deposits and withdrawals. This is already fixed in the repo (commit 6aee201 caps by real Junior instead), but that fix was never deployed to the live MHyper/MM1USD impls. In practice the trigger is effectively unreachable — it requires Junior thinned to the ~5% floor and exactly-flat NAV (zero realized yield) continuously for ≥1 year — so it's a latent, deploy-the-fix issue rather than a live threat.",
+      "lastUpdatedAt": "2026-07-12T12:37:10.606Z",
+      "relatedImpactInScope": "smart_contract"
     }
   ],
   "defaultOutOfScopeBlockchain": null,
