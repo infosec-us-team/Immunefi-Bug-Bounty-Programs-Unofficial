@@ -1,0 +1,242 @@
+{
+  "assets": [
+    {
+      "id": "100251",
+      "url": "https://github.com/gmsol-labs/gmx-solana/tree/main/programs/store",
+      "type": "smart_contract",
+      "addedAt": "2026-07-01T12:57:20.452Z",
+      "revision": 0,
+      "description": "Store",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "100252",
+      "url": "https://github.com/gmsol-labs/gmx-solana/tree/main/programs/treasury",
+      "type": "smart_contract",
+      "addedAt": "2026-07-01T12:57:20.452Z",
+      "revision": 0,
+      "description": "Treasury",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "100253",
+      "url": "https://github.com/gmsol-labs/gmx-solana/tree/main/programs/timelock",
+      "type": "smart_contract",
+      "addedAt": "2026-07-01T12:57:20.452Z",
+      "revision": 0,
+      "description": "Timelock",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "100254",
+      "url": "https://github.com/gmsol-labs/gmx-solana/tree/main/programs/liquidity-provider",
+      "type": "smart_contract",
+      "addedAt": "2026-07-01T12:57:20.452Z",
+      "revision": 0,
+      "description": "Liquidity-provider",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_e5f349f7-23ee-4604-83b2-331a71a71267",
+      "url": "https://explorer.solana.com/address/Gmso1uvJnLbawvw7yezdfCDcPydwW2s2iqG3w6MDucLo/verified-build",
+      "type": "smart_contract",
+      "addedAt": "2026-07-07T05:42:43.902Z",
+      "revision": 0,
+      "description": "Store",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_a2d47f3d-2a02-4fa4-8712-9215a968a2ee",
+      "url": "https://explorer.solana.com/address/LPMWczEVgXyQ3979XaqqEttanCXmYGvtJqPVtw1PvC8/verified-build",
+      "type": "smart_contract",
+      "addedAt": "2026-07-07T05:43:19.333Z",
+      "revision": 0,
+      "description": "Liquidity Provider",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_8b5d04bb-14e0-431f-8deb-b1e79e01cc0a",
+      "url": "https://explorer.solana.com/address/GTuvYD5SxkTq4FLG6JV1FQ5dkczr1AfgDcBHaFsBdtBg/verified-build",
+      "type": "smart_contract",
+      "addedAt": "2026-07-07T05:43:43.769Z",
+      "revision": 0,
+      "description": "Treasury",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_5013be1e-e4e0-4216-8212-9181e3afddda",
+      "url": "https://explorer.solana.com/address/2AxuNr6euZPKQbTwNsLBjzFTZFAevA85F4PW9m9Dv8pc/verified-build",
+      "type": "smart_contract",
+      "addedAt": "2026-07-07T05:44:32.822Z",
+      "revision": 0,
+      "description": "Competition",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    }
+  ],
+  "assetsBodyV2": null,
+  "boostedIntroEvaluating": "",
+  "boostedIntroFinished": "",
+  "boostedIntroLive": "",
+  "boostedIntroStartingIn": "",
+  "boostedLeaderboard": [],
+  "boostedSummaryReport": null,
+  "ecosystem": [
+    "Solana"
+  ],
+  "endDate": null,
+  "evaluationEndDate": null,
+  "features": [],
+  "hideAssetsInScope": null,
+  "immunefiStandard": false,
+  "inviteOnly": false,
+  "kyc": false,
+  "language": [
+    "Rust"
+  ],
+  "launchDate": "2026-07-06T00:00:00.000Z",
+  "logo": "https://qn5bmgziiocgawpp.public.blob.vercel-storage.com/109982-JkUubvelMtdWlXGDV-SYa.png",
+  "maxBounty": 100000,
+  "outOfScopeAndRules": null,
+  "pocPerTypeAndSeverity": [],
+  "primaryPaymentWallet": "Solana",
+  "prioritizedVulnerabilities": "_blank_",
+  "productType": [
+    "Perpetuals"
+  ],
+  "programOverview": "The GMTrade system primarily consists of on-chain programs and off-chain keepers, along with price and risk oracles. User market operations are generally executed in two steps: first, users submit on-chain transactions to create market operation requests; then, keepers monitor the network, submit the necessary price updates, and finalize the verification and execution of these requests via additional on-chain transactions. Protocol security is ensured by oracle-provided data and on-chain program logic that validates both user requests and keeper actions, supplemented by mechanisms such as price impacts (to mitigate price manipulation risk and maintain pool and open interest balance) and adaptive funding fees (to ensure long-term balance in open interest).\n\nThe core market operations include:\n\nDeposits and withdrawals to market pools: Liquidity providers (LPs) contribute liquidity to a market pool by depositing long or short tokens and receive market tokens representing their share of the pool. LPs can redeem market tokens at any time to withdraw their proportional share of assets.\n\nOpening and closing perpetual positions: Traders post collateral to open positions against the market pool's index. When closing a position, profits are withdrawn from the market pool based on index price movement, while losses are deducted from the trader's collateral. The deducted collateral is then deposited into the market pools to cover counterparty profits and maintain liquidity.\n\nSwapping assets: Traders can swap long tokens for short tokens (or vice versa) within the market pools.\n\nLPs primarily earn revenue from order fees and borrowing fees paid by traders when opening or closing positions, or when swapping assets. Traders can also earn by helping maintain market balance, receiving positive price impacts and funding fees paid by the side that increases the imbalance in open interest or the liquidity pool.",
+  "programType": [
+    "Smart Contract"
+  ],
+  "project": "GMTrade",
+  "projectType": [
+    "Defi"
+  ],
+  "rewardsBody": "**Maximum Payout Cap (Treasury-based). The total payout for any single valid report shall not exceed 10% of the protocol Treasury balance at the time the report is submitted. Where the standard calculation (including \"% of funds at risk\" for Critical) yields more, this cap controls. Minimum rewards remain payable. **\n\n** Treasury balance is publicly verifiable on-chain at 4tf9zEjvj2BUR9ZaAr53sQdULDWGGpJTr2zngSrmjtN6.**",
+  "rewardsPool": 0,
+  "primaryPool": 0,
+  "allStarsPool": 0,
+  "podiumPool": 0,
+  "rewardsToken": "USDC",
+  "slug": "gmtrade",
+  "tenPercentEconomicRule": true,
+  "updatedDate": "2026-07-14T06:30:00.093Z",
+  "impactsBody": null,
+  "websiteUrl": "https://gmtrade.xyz",
+  "githubUrl": "https://github.com/gmsol-labs/gmx-solana",
+  "eligibilityCriteria": [],
+  "responsiblePublicationCategory": "category_3",
+  "description": "GMXTrade is a decentralized leveraged trading platform built on the Solana blockchain, drawing inspiration from the technical innovations introduced by GMX V2. The platform aims to provide a seamless trading experience with fast transaction times and low fees, while maintaining security and decentralization.",
+  "knownIssues": [
+    {
+      "id": 1365,
+      "link": "https://github.com/gmsol-labs/gmx-solana/blob/main/README.md#known-issues",
+      "description": "Smart Contract Known Issues",
+      "lastUpdatedAt": "2025-12-31T16:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
+  "defaultOutOfScopeBlockchain": null,
+  "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+  "defaultOutOfScopeWebAndApplications": null,
+  "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+  "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+  "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+  "customOutOfScopeInformation": "Known Issues\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. Every issue opened in the repo, closed PRs, previous contests and audits are out of scope.\n\nAll issues submitted by wardens to the GMTrade bounty will be added to this repo once they have been reviewed by the sponsors. These are considered known issues and are out-of-scope for bounty rewards.\n\nhttps://github.com/gmsol-labs/gmx-solana/blob/main/README.md#known-issues\n\n\nPrevious Audits\nAny previously reported vulnerabilities mentioned in past audit reports are not eligible for a reward.\n\nGMTrade previous audits can be found below:\n\nhttps://github.com/gmsol-labs/gmx-solana-audits\n\n\nSpecific Types of Issues\n• Informational findings.\n• Design choices or expected design behaviors related to protocol.\n• Issues that are ultimately user errors and can easily be caught in the frontend. For example, transfers to the System Program.\n• Rounding errors.\n• Relatively high gas consumption.\n• Attacks requiring access to Timelock or Oracles.\n• Risk of loss due to decline in pool asset prices.\n• Price manipulation on third-party exchanges.\n• Exploits based on delayed or extreme price feed updates.\n• Attacks that are not economically feasible.\n• Vulnerabilities related to hosting providers.\n\n\nTrusted Roles\n• Program upgrade authorities responsible for deploying and upgrading program code.\n• The administrators with control over the default store account authority, typically protected by multisig and timelock mechanisms.\n• Any program-defined privileged roles granted or managed by the administrators.\n• Keeper accounts responsible for critical operations or maintaining service availability.",
+  "customProhibitedActivities": [],
+  "impacts": [
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 27,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
+    }
+  ],
+  "rewards": [
+    {
+      "id": 48552,
+      "primacy": null,
+      "severity": "critical",
+      "assetType": "smart_contract",
+      "maxReward": 100000,
+      "minReward": 25000,
+      "rewardModel": "range",
+      "rewardCalculationPercentage": 10
+    },
+    {
+      "id": 48553,
+      "primacy": null,
+      "severity": "high",
+      "assetType": "smart_contract",
+      "maxReward": 20000,
+      "minReward": 10000,
+      "rewardModel": "range"
+    },
+    {
+      "id": 48554,
+      "primacy": null,
+      "severity": "medium",
+      "assetType": "smart_contract",
+      "maxReward": 7500,
+      "minReward": 2500,
+      "rewardModel": "range"
+    }
+  ],
+  "audits": [
+    {
+      "id": "1387",
+      "url": "https://github.com/gmsol-labs/gmx-solana-audits",
+      "auditor": "Zenith",
+      "date": "2026-03-17"
+    }
+  ]
+}

@@ -257,7 +257,15 @@
   ],
   "responsiblePublicationCategory": "category_3",
   "description": "Kamino is a first-of-its-kind DeFi protocol that unifies Lending, Liquidity, and Leverage into a single, secure DeFi product suite.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1387,
+      "link": "https://kamino-corp.slack.com/archives/C0AGBC53PDM/p1779367037000309?thread_ts=1779364049.057839&cid=C0AGBC53PDM",
+      "description": "Website users can contact our Support Team in an anonymous way and claim they own an arbitrary wallet address.\n\nIn particular, when using the Intercom support widget, the support tickets and chat history are associated with the reported wallet address - all user sessions that use this address end up under a single, shared support account.\n\nSupport conversations are, by policy, not used to transmit sensitive data (we treat all these exchanges as anonymous). This is a known and previously-accepted design tradeoff stemming from the app's non-custodial architecture (we do not authenticate users at our backend servers).\n\nIn terms of fixing this: a wallet-signature authentication flow is planned as part of an upcoming UI redesign.",
+      "lastUpdatedAt": "2026-07-14T16:11:56.198Z",
+      "relatedImpactInScope": "websites_and_applications"
+    }
+  ],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeWebAndApplications": "- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n  - This does not exclude reflected HTML injection with or without JavaScript\n  - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering",
