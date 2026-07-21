@@ -292,7 +292,6 @@
   "endDate": null,
   "evaluationEndDate": null,
   "features": [
-    "Managed Triage: Time Saver",
     "Subscription Plan: Pro",
     "Pay to Mediate",
     "Pay to Submit"
@@ -336,7 +335,7 @@
   "rewardsToken": "AVAX",
   "slug": "avalanche",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-06-01T17:26:44.767Z",
+  "updatedDate": "2026-07-20T11:27:29.158Z",
   "impactsBody": "**Expected resource-intensive operations including but not limited to:**\n- Node synchronization after being offline or behind on block height\n- Initial blockchain sync or historical data loading\n- Large database migrations or reindexing operations\n- Batch processing of accumulated transactions or events\n\n**Valid DoS vulnerabilities must demonstrate:**\n- An exploitable vulnerability beyond normal resource consumption\n- Malicious input or actions that cause disproportionate resource usage\n- A realistic attack scenario that differs from standard operational load\n- Impact that prevents legitimate users from accessing the service beyond expected operational delays\n- Disproportionate resource consumption relative to the cost paid (e.g., spending $1 in gas to cause $1000 in computational cost)",
   "websiteUrl": null,
   "githubUrl": null,
@@ -348,7 +347,15 @@
   ],
   "responsiblePublicationCategory": "category_3",
   "description": "Ava Labs makes it simple to deploy high-performance solutions for Web3, led by innovations on Avalanche. The company was founded by Cornell computer scientists, who partnered with Wall Street veterans and early Web3 leaders to execute a promising vision for redefining the way people build and use open, permissionless networks.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1354,
+      "link": "https://github.com/ava-labs/avalanchego-internal/pull/2964",
+      "description": "The Diff.Apply Ordering issue is known from #71513 we have a PR for the fix of this in the works since April 1st",
+      "lastUpdatedAt": "2026-06-23T00:54:23.277Z",
+      "relatedImpactInScope": "blockchain_dlt"
+    }
+  ],
   "defaultOutOfScopeBlockchain": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeWebAndApplications": null,
@@ -499,7 +506,7 @@
   ],
   "rewards": [
     {
-      "id": 46732,
+      "id": 49214,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -509,7 +516,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 46733,
+      "id": 49215,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -518,7 +525,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 46734,
+      "id": 49216,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -526,7 +533,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 46735,
+      "id": 49217,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
@@ -534,7 +541,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 46736,
+      "id": 49218,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -544,7 +551,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 46737,
+      "id": 49219,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -553,7 +560,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 46738,
+      "id": 49220,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",

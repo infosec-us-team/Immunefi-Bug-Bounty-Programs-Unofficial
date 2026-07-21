@@ -42,7 +42,10 @@
   "endDate": null,
   "evaluationEndDate": null,
   "features": [
-    "Pay to Mediate"
+    "Pay to Mediate",
+    "Managed Triage: Signal Booster",
+    "Subscription Plan: Elite",
+    "Pay to Mediate - No Free Mediations"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": false,
@@ -76,7 +79,7 @@
   "rewardsToken": "USDC",
   "slug": "1inch-wallet",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-07-15T12:01:02.011Z",
+  "updatedDate": "2026-07-19T15:27:01.812Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -98,48 +101,6 @@
   "customOutOfScopeInformation": "These impacts are out of scope for this bug bounty program. \n\n**All Categories:**\n\n* Impacts requiring attacks that the reporter has already exploited themselves, leading to damage  \n* Impacts caused by attacks requiring access to leaked keys/credentials  \n* Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n* Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code  \n* Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production  \n* Best practice recommendations  \n* Feature requests  \n* Impacts on test files and configuration files unless stated otherwise in the bug bounty program  \n* Impacts requiring phishing or other social engineering attacks against project's employees and/or customers\n\n**Websites and Apps**\n\n* Theoretical impacts without any proof or demonstration  \n* Impacts involving attacks requiring physical access to the victim device  \n* Impacts involving attacks requiring access to the local network of the victim  \n* Reflected plain text injection (e.g. url parameters, path, etc.)  \n  * This does not exclude reflected HTML injection with or without JavaScript  \n  * This does not exclude persistent plain text injection  \n* Any impacts involving self-XSS  \n* Captcha bypass using OCR without impact demonstration  \n* CSRF with no state modifying security impact (e.g. logout CSRF)  \n* Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact  \n* Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces  \n* Impacts causing only the enumeration or confirmation of the existence of users or tenants  \n* Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows  \n* Impacts that only require DDoS  \n* UX and UI impacts that do not materially disrupt use of the platform  \n* Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)  \n* Automated scanner reports without demonstrated impact  \n* UI/UX best practice recommendations  \n* Vulnerabilities requiring a rooted or jailbroken device, unless the impact occurs on a non-rooted device through the rooted attacker's actions  \n* Lack of binary obfuscation, code protection, or anti-tampering controls  \n* Lack of root or jailbreak detection  \n* Bypass of certificate pinning on rooted or jailbroken devices  \n* Lack of exploit mitigations in the binary (e.g., PIE, ARC, stack canaries)  \n* Path disclosure within the app binary  \n* Sensitive data in URLs or request bodies when transmitted over TLS  \n* OAuth secrets or app secrets hard-coded in the IPA/APK without demonstrated critical impact  \n* Sensitive information retained as plaintext in device memory without demonstrated extraction by an unprivileged attacker  \n* Crashes caused by malformed URL schemes, intents, or messages sent to exported activities/services/broadcast receivers without further impact  \n* Sensitive data stored in the app's private directory accessible only to the app itself  \n* Runtime hacking exploits (Frida, Appmon, etc.) requiring a jailbroken or rooted environment  \n* Shared content leaked through the system clipboard  \n* Reports based purely on static analysis of the binary without a runnable PoC demonstrating business logic impact\n* Exposure of non-sensitive data on the device\n\n**Prohibited Activities:**\n\n* Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet  \n* Any testing with pricing oracles or third-party smart contracts  \n* Attempting phishing or other social engineering attacks against our employees and/or customers  \n* Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)  \n* Any denial of service attacks that are executed against project assets  \n* Automated testing of services that generates significant amounts of traffic  \n* Public disclosure of an unpatched vulnerability in an embargoed bounty  \n* Accessing or modifying data belonging to other users  \n* Submitting AI-generated reports  \n* Spamming forms or account creation flows (even with low volume)",
   "customProhibitedActivities": [],
   "impacts": [
-    {
-      "id": 6140,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Extraction of user's seed phrase, private keys, or other key material from the device by another app, remote attacker, or via insecure storage"
-    },
-    {
-      "id": 42,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Direct theft of user funds"
-    },
-    {
-      "id": 35,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Execute arbitrary system commands"
-    },
-    {
-      "id": 36,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Retrieve sensitive data/files from a running server, such as:\n- /etc/shadow\n- database passwords\n- blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
-    },
-    {
-      "id": 39,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Taking and/modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:\n- Changing registration information\n- Commenting\n- Voting\n- Making trades\n- Withdrawals, etc."
-    },
-    {
-      "id": 43,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Malicious interactions with an already-connected wallet, such as:\n- Modifying transaction arguments or parameters\n- Substituting contract addresses\n- Submitting malicious transactions"
-    },
-    {
-      "id": 46,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:\n- HTML injection without JavaScript\n- Replacing existing text with arbitrary text\n- Arbitrary file uploads, etc."
-    },
     {
       "id": 47,
       "type": "websites_and_applications",
@@ -181,6 +142,48 @@
       "type": "websites_and_applications",
       "severity": "low",
       "title": "Taking over broken or expired outgoing links, such as:\n- Social media handles, etc."
+    },
+    {
+      "id": 6140,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Extraction of user's seed phrase, private keys, or other key material from the device by another app, remote attacker, or via insecure storage"
+    },
+    {
+      "id": 42,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Direct theft of user funds"
+    },
+    {
+      "id": 35,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Execute arbitrary system commands"
+    },
+    {
+      "id": 36,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Retrieve sensitive data/files from a running server, such as:\n- /etc/shadow\n- database passwords\n- blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
+    },
+    {
+      "id": 39,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Taking and/modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:\n- Changing registration information\n- Commenting\n- Voting\n- Making trades\n- Withdrawals, etc."
+    },
+    {
+      "id": 43,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Malicious interactions with an already-connected wallet, such as:\n- Modifying transaction arguments or parameters\n- Substituting contract addresses\n- Submitting malicious transactions"
+    },
+    {
+      "id": 46,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:\n- HTML injection without JavaScript\n- Replacing existing text with arbitrary text\n- Arbitrary file uploads, etc."
     },
     {
       "id": 6141,
@@ -287,7 +290,7 @@
   ],
   "rewards": [
     {
-      "id": 48245,
+      "id": 49139,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -296,7 +299,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 48246,
+      "id": 49140,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -305,7 +308,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 48247,
+      "id": 49141,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
@@ -314,7 +317,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 48248,
+      "id": 49142,
       "primacy": null,
       "severity": "low",
       "assetType": "websites_and_applications",
