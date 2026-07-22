@@ -164,7 +164,7 @@
   "projectType": [
     "Blockchain"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below.\n\n__Repeatable Attack Limitations__\n\nGiven that the reward for High is flat, there is no distinction between a one-time attack and an attack that is repeated and the reward stays the same. \n\n__Restrictions on Security Researcher Eligibility__\n\nSecurity researchers who fall under any of the following are ineligible for a reward:\n\n- Compensated team members of the Obyte Foundation\n- Employees and team members of third-party suppliers to an Obyte Foundation affiliate that operate in a technical capacity and have assets covered in this bug bounty program\n\n__Reward Calculation for Critical Level Reports__\n\nFor Blockchain/DLT bug reports, in order to qualify for the reward of USD 50 000, the bug reported must be able to cause unrecoverable total network shutdown of the entire Obyte network or allow the unpermitted execution of transactions from accounts of other users without their private keys. All other critical bug reports are capped at a flat rate of USD 2 500.\n\nFor Critical Smart Contract and Web/App reports, the reward amount is 10% of the funds directly affected up to a maximum of USD 2 500.\n\n__Other Restrictions__\n\nFor all impacts directly involving funds being lost or frozen, the minimum impact is USD 1000. Anything below is considered out-of-scope. \n\nFor Blockchain/DLT bug reports, temporary disruptions of network availability, such as node crashes and DoS, are out of scope. This includes disruptions that can be resolved by deploying a fix without network coordination required.\n\nThe web/app  impacts of “Stealing User Cookies” and “Bypassing Authentication” are only accepted if they result in a loss of at least USD 1 000. The web/app impact of “Ability to execute system commands” is only accepted if the actions are done as root.\n\n\n__Poc Requirements__\nAll web and app bug reports must come with a PoC. All bug reports submitted without PoC will be rejected with instructions to provide PoC.\n\nPayouts are handled by the Obyte Foundation directly and are denominated in USD. The payout can be completed in GBYTE, BTC, or USDT.",
+  "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below.\n\n__Repeatable Attack Limitations__\n\nGiven that the reward for High is flat, there is no distinction between a one-time attack and an attack that is repeated and the reward stays the same. \n\n__Restrictions on Security Researcher Eligibility__\n\nSecurity researchers who fall under any of the following are ineligible for a reward:\n\n- Compensated team members of the Obyte Foundation\n- Employees and team members of third-party suppliers to an Obyte Foundation affiliate that operate in a technical capacity and have assets covered in this bug bounty program\n\n__Reward Calculation for Critical Level Reports__\n\nFor Blockchain/DLT bug reports, in order to qualify for the reward of USD 50 000, the bug reported must be able to cause **unrecoverable total network shutdown of the entire Obyte network or allow the unpermitted execution of transactions from accounts of other users without their private keys**. All other critical bug reports are capped at a flat rate of USD 2 500.\n\nFor Critical Smart Contract and Web/App reports, the reward amount is 10% of the funds directly affected up to a maximum of USD 2 500.\n\n__Poc Requirements__\nAll web and app bug reports must come with a PoC. All bug reports submitted without PoC will be rejected with instructions to provide PoC.\n\nPayouts are handled by the Obyte Foundation directly and are denominated in USD. The payout can be completed in GBYTE, BTC, or USDT.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -172,7 +172,7 @@
   "rewardsToken": "GBYTE, BTC, USDT",
   "slug": "obyte",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-07-20T19:02:45.626Z",
+  "updatedDate": "2026-07-21T05:25:15.795Z",
   "impactsBody": "All Smart Contract impacts are only related to the Autonomous Agent assets.",
   "websiteUrl": "https://obyte.org",
   "githubUrl": "https://github.com/byteball",
@@ -186,62 +186,14 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "- Impacts with direct financial damage whereby the total is less than or equal to 200% of the total expense used by the attacker",
+  "customOutOfScopeInformation": "__Out of Scope__\n\n- For all impacts directly involving funds being lost or frozen, the minimum impact is USD 1000. Anything below is considered out-of-scope. \n\n-For Blockchain/DLT bug reports, temporary disruptions of network availability, such as node crashes and DoS, are out of scope when they can be resolved by deploying a fix without network coordination. Temporary disruptions that require network coordination to resolve are in scope and are assessed under the 'Temporary freezing of network transactions' impacts in the Impacts in Scope table\n\n- The web/app  impacts of “Stealing User Cookies” and “Bypassing Authentication” are only accepted if they result in a loss of at least USD 1 000. The web/app impact of “Ability to execute system commands” is only accepted if the actions are done as root.\n\n- Impacts with direct financial damage whereby the total is less than or equal to 200% of the total expense used by the attacker",
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 218,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Temporary freezing of network transactions by delaying adequate processing for at least 1 day"
-    },
-    {
-      "id": 219,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing of funds for at least 1 year"
-    },
-    {
-      "id": 220,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:         - HTML injection without JavaScript         - Replacing existing text with arbitrary text         - Arbitrary file uploads, etc."
-    },
-    {
-      "id": 222,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Temporary freezing of network transactions by delaying adequate processing for at least 1 hour"
-    },
-    {
-      "id": 224,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Temporary freezing of funds"
-    },
-    {
-      "id": 227,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:         - Reflected HTML injection         - Loading external site data"
-    },
-    {
-      "id": 228,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Retrieve sensitive data/files from a running server, such as:         - database passwords usable from the open internet ,        - wallet private keys (this does not include non-sensitive environment variables, open source code, or usernames)"
-    },
-    {
-      "id": 229,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Taking state-modifying authenticated actions that lead to loss of funds on behalf of other users without any interaction by that user."
-    },
-    {
-      "id": 5912,
+      "id": 2,
       "type": "blockchain_dlt",
       "severity": "critical",
-      "title": "Network permanently unable to confirm new transactions (total network shutdown)"
+      "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
     },
     {
       "id": 3,
@@ -292,15 +244,63 @@
       "title": "Direct theft of user funds"
     },
     {
-      "id": 2,
+      "id": 5912,
       "type": "blockchain_dlt",
       "severity": "critical",
-      "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
+      "title": "Network permanently unable to confirm new transactions (total network shutdown)"
+    },
+    {
+      "id": 228,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Retrieve sensitive data/files from a running server, such as:         - database passwords usable from the open internet ,        - wallet private keys (this does not include non-sensitive environment variables, open source code, or usernames)"
+    },
+    {
+      "id": 229,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Taking state-modifying authenticated actions that lead to loss of funds on behalf of other users without any interaction by that user."
+    },
+    {
+      "id": 6238,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Temporary freezing of network transactions by delaying adequate processing for at least 1 day. Requires network coordination to resolve"
+    },
+    {
+      "id": 219,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds for at least 1 year"
+    },
+    {
+      "id": 220,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:         - HTML injection without JavaScript         - Replacing existing text with arbitrary text         - Arbitrary file uploads, etc."
+    },
+    {
+      "id": 224,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Temporary freezing of funds"
+    },
+    {
+      "id": 227,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:         - Reflected HTML injection         - Loading external site data"
+    },
+    {
+      "id": 6239,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Temporary freezing of network transactions by delaying adequate processing for at least 1 hour. Requires network coordination to resolve."
     }
   ],
   "rewards": [
     {
-      "id": 49312,
+      "id": 49330,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -310,7 +310,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 49313,
+      "id": 49331,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -318,7 +318,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 49314,
+      "id": 49332,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -326,7 +326,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 49315,
+      "id": 49333,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -335,7 +335,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 49316,
+      "id": 49334,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -343,7 +343,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 49317,
+      "id": 49335,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -351,7 +351,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 49318,
+      "id": 49336,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -360,7 +360,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 49319,
+      "id": 49337,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -368,7 +368,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 49320,
+      "id": 49338,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
