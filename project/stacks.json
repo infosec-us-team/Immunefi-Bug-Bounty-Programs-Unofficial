@@ -1,36 +1,6 @@
 {
   "assets": [
     {
-      "id": "1Mup8pvSb4mJNMIzzqspvM",
-      "url": "https://github.com/stacks-sbtc/sbtc/tree/main/signer/src",
-      "type": "blockchain_dlt",
-      "addedAt": "2025-04-30T05:35:20.507Z",
-      "revision": 0,
-      "description": "sBTC signer implementation",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
-      "id": "1i3ZFwpjYVTIZUZlAt3SEX",
-      "url": "https://github.com/stacks-sbtc/sbtc/tree/main/emily/src",
-      "type": "blockchain_dlt",
-      "addedAt": "2025-04-30T05:35:35.740Z",
-      "revision": 0,
-      "description": "sBTC Emily implementation",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
-      "id": "1wf5EgCM3ZemiZtx4wya65",
-      "url": "https://github.com/stacks-sbtc/sbtc/tree/main/contracts",
-      "type": "smart_contract",
-      "addedAt": "2025-04-30T05:34:35.039Z",
-      "revision": 0,
-      "description": "sBTC contracts",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
       "id": "21yykxBnBDpN6Q8HuV5TV2",
       "url": "https://github.com/stacks-network/stacks-core/tree/master/stacks-common",
       "type": "blockchain_dlt",
@@ -87,16 +57,6 @@
       "addedAt": "2022-05-10T15:55:19.323Z",
       "revision": 0,
       "description": "POX contract",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
-      "id": "hpu4keYNL2n2NsQzg1ybl",
-      "url": "https://github.com/stacks-sbtc/sbtc/tree/main/sbtc/src",
-      "type": "blockchain_dlt",
-      "addedAt": "2025-04-30T05:35:05.730Z",
-      "revision": 0,
-      "description": "sBTC signer implementation",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
     },
@@ -169,10 +129,10 @@
   "productType": [
     "L1"
   ],
-  "programOverview": "Stacks is a Bitcoin layer for smart contracts; it enables smart contracts and decentralized applications to use Bitcoin as an asset and settle transactions on the Bitcoin blockchain. Stacks is secured by the entire hash power of Bitcoin, giving it Bitcoin finality.\n\nsBTC is a 1:1 Bitcoin-backed asset, enabling users to put their BTC to work in DeFi, dApps, and other applications. It leverages Stacks’ programmability and Bitcoin finality to enable a new Bitcoin economy.\n\nFor more information about Stacks and sBTC, please visit [https://stacks.org/](https://stacks.org/), [https://www.stacks.co/](https://www.stacks.co/) and [https://www.stacks.co/sbtc](https://www.stacks.co/sbtc)\n\nWe at the Stacks Foundation maintain essential components of the Stacks blockchain infrastructure, including sBTC. Our security team prioritizes the following attack vectors:\n\n  - Theft of funds\n  - Permanent freezing of funds\n  - Total network shutdown or unauthenticated denial-of-service vectors\n  - Chain split or deep fork vectors\n  - Invalid transactions processing successfully or confirming\n  - Consensus failures\n  - Remotely exploitable weaknesses (as triggered through standard Stacks     - RPC and P2P ports only)\n  - (In smart contracts) Vote manipulation\n  - (In smart contracts) Block stuffing attacks\n  - (In smart contracts) Theft or loss of unclaimed rewards",
+  "programOverview": "Stacks is a Bitcoin layer for smart contracts; it enables smart contracts and decentralized applications to use Bitcoin as an asset and settle transactions on the Bitcoin blockchain. Stacks is secured by the entire hash power of Bitcoin, giving it Bitcoin finality.\n\nsBTC is a 1:1 Bitcoin-backed asset, enabling users to put their BTC to work in DeFi, dApps, and other applications. It leverages Stacks’ programmability and Bitcoin finality to enable a new Bitcoin economy. \n\nFor more information about Stacks and sBTC, please visit [https://stacks.org/](https://stacks.org/), [https://www.stacks.co/](https://www.stacks.co/) and [https://www.stacks.co/sbtc](https://www.stacks.co/sbtc)\n\nWe at the Stacks Foundation maintain essential components of the Stacks blockchain infrastructure, including sBTC. Our security team prioritizes the following attack vectors:\n\n  - Theft of funds\n  - Permanent freezing of funds\n  - Total network shutdown or unauthenticated denial-of-service vectors\n  - Chain split or deep fork vectors\n  - Invalid transactions processing successfully or confirming\n  - Consensus failures\n  - Remotely exploitable weaknesses (as triggered through standard Stacks     - RPC and P2P ports only)\n  - (In smart contracts) Vote manipulation\n  - (In smart contracts) Block stuffing attacks\n  - (In smart contracts) Theft or loss of unclaimed rewards",
   "programType": [
-    "Smart Contract",
-    "Blockchain/DLT"
+    "Blockchain/DLT",
+    "Smart Contract"
   ],
   "project": "Stacks",
   "projectType": [
@@ -186,7 +146,7 @@
   "rewardsToken": "STX",
   "slug": "stacks",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-07-24T19:32:06.960Z",
+  "updatedDate": "2026-07-28T19:57:58.545Z",
   "impactsBody": "",
   "websiteUrl": "https://stacks.co",
   "githubUrl": "https://github.com/stacks-network/stacks-core",
@@ -204,52 +164,10 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 5,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Unintended chain split (network partition)"
-    },
-    {
-      "id": 25,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of unclaimed yield"
-    },
-    {
-      "id": 23,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of unclaimed yield"
-    },
-    {
       "id": 2270,
       "type": "blockchain_dlt",
       "severity": "low",
       "title": "Any remotely-exploitable denial of service in a node"
-    },
-    {
-      "id": 11,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "A bug in the respective layer 0/1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk"
-    },
-    {
-      "id": 13,
-      "type": "blockchain_dlt",
-      "severity": "low",
-      "title": "Modification of transaction fees outside of design parameters"
-    },
-    {
-      "id": 17,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
-    },
-    {
-      "id": 15,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
     },
     {
       "id": 14,
@@ -262,6 +180,48 @@
       "type": "smart_contract",
       "severity": "low",
       "title": "Contract fails to deliver promised returns, but doesn't lose value"
+    },
+    {
+      "id": 5,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Unintended chain split (network partition)"
+    },
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 13,
+      "type": "blockchain_dlt",
+      "severity": "low",
+      "title": "Modification of transaction fees outside of design parameters"
+    },
+    {
+      "id": 11,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "A bug in the respective layer 0/1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
     },
     {
       "id": 6102,
@@ -342,22 +302,10 @@
       "title": "Any causing the direct loss of funds"
     },
     {
-      "id": 6179,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "sBTC not being able to confirm new transactions (total sBTC shutdown)"
-    },
-    {
       "id": 6181,
       "type": "smart_contract",
       "severity": "medium",
       "title": "Shutdown of ≥ 30% of sBTC signers"
-    },
-    {
-      "id": 6182,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "API crash preventing correct processing of sBTC deposits/withdrawals"
     },
     {
       "id": 6183,
@@ -370,29 +318,11 @@
       "type": "smart_contract",
       "severity": "medium",
       "title": "Any block stuffing such that smart contract calls can be blocked but without paying any requisite higher transaction fees"
-    },
-    {
-      "id": 6240,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "sBTC not being able to confirm new transactions (total sBTC shutdown)"
-    },
-    {
-      "id": 6241,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Temporarily freezing sBTC transactions"
-    },
-    {
-      "id": 6242,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Emily API crash preventing correct processing of sBTC deposits/withdrawals"
     }
   ],
   "rewards": [
     {
-      "id": 49483,
+      "id": 49580,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -401,7 +331,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 49484,
+      "id": 49581,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -409,7 +339,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 49485,
+      "id": 49582,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -417,7 +347,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 49486,
+      "id": 49583,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
@@ -425,7 +355,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 49487,
+      "id": 49584,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -434,7 +364,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 49488,
+      "id": 49585,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -442,7 +372,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 49489,
+      "id": 49586,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -450,7 +380,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 49490,
+      "id": 49587,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
