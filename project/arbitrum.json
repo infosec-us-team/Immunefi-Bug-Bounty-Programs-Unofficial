@@ -1865,7 +1865,7 @@
   "rewardsToken": "USDC",
   "slug": "arbitrum",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-07-29T18:11:30.932Z",
+  "updatedDate": "2026-07-30T13:48:34.594Z",
   "impactsBody": "In addition to the versions of these smart contracts on GitHub, this bug bounty also covers the deployments of these contracts presently in use by the Arbitrum One and Arbitrum Nova networks to the extent that any vulnerability impacts said networks (e.g. if only Arbitrum One's deployment had out of date vulnerable code relating to the Data Availability Service which is not enabled on Arbitrum One and this made the vulnerability unusable to harm Arbitrum One, it would not be in scope). This bug bounty also covers any upgrades to those in scope deployments which have been scheduled by a passed on-chain constitutional DAO vote or the non-emergency security council multisig, as long as that action is currently waiting in the L2 governance timelock, the bridge to L1, or the L1 governance timelock (i.e. it has passed and is set to go through, and has not been canceled).",
   "websiteUrl": null,
   "githubUrl": null,
@@ -1879,7 +1879,7 @@
   "defaultOutOfScopeGeneral": null,
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "## Out of Scope and Rules\n\n#### Smart Contract specific\n\n- Incorrect data supplied by third party oracles\n- Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n\n#### All categories\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers\n\n__Informational__\n  - Changes or bugs found or related to Tutorials maintained by Offchain Labs\n  - Changes or bugs regarding the arbitrum-sdk\n  - Inconsistencies found between documentation and smart contracts and other blockchain code\n  - Best practice critiques\n  - Denial of Service (DoS) Attacks that only affects some nodes, or cause only some nodes to crash\n  - Problems caused by L1 Gas Pricing\n  - Issues that affect geth and are not caused by changes made in the Nitro implementation\n  - Issues that affect Arbitrum One and Arbitrum Nova will be treated as a single issue, and a report of the same issue with the only difference being the network will be treated as a duplicate.\n - Impacts only reachable under a non-default node or chain configuration, or in a feature not currently enabled on Arbitrum One or Arbitrum Nova\n - Impacts that only manifest during a node-software upgrade/rollout window, historical block replay, or archive/from-genesis sync, and do not affect the live canonical chain\n- Impacts affecting only validator/assertion stakes, challenge bonds, or protocol fee accounts (theft, loss, or freezing) — these funds are excluded from the user-fund impact tiers\n- Impacts caused by attacks requiring access to privileged addresses/roles (including, but not limited to: governance, sequencer, batch poster and feed relays and strategist contracts) without additional modifications to the privileges attributed",
+  "customOutOfScopeInformation": "## Out of Scope and Rules\n\n#### Smart Contract specific\n\n- Incorrect data supplied by third party oracles\n- Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n\n#### All categories\n\n - Impacts only reachable under a non-default node or chain configuration, or in a feature not currently enabled on Arbitrum One or Arbitrum Nova\n - Impacts that only manifest during a node-software upgrade/rollout window, historical block replay, or archive/from-genesis sync, and do not affect the live canonical chain\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses/roles (including, but not limited to: governance, sequencer, batch poster and feed relays and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers\n- Impacts affecting only validator/assertion stakes, challenge bonds, or protocol fee accounts (theft, loss, or freezing) — these funds are excluded from the user-fund impact tiers\n\n__Informational__\n  - Changes or bugs found or related to Tutorials maintained by Offchain Labs\n  - Changes or bugs regarding the arbitrum-sdk\n  - Inconsistencies found between documentation and smart contracts and other blockchain code\n  - Best practice critiques\n  - Denial of Service (DoS) Attacks that only affects some nodes, or cause only some nodes to crash\n  - Problems caused by L1 Gas Pricing\n  - Issues that affect geth and are not caused by changes made in the Nitro implementation\n  - Issues that affect Arbitrum One and Arbitrum Nova will be treated as a single issue, and a report of the same issue with the only difference being the network will be treated as a duplicate.",
   "customProhibitedActivities": [],
   "impacts": [
     {
@@ -1981,7 +1981,7 @@
   ],
   "rewards": [
     {
-      "id": 49634,
+      "id": 49654,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -1990,17 +1990,16 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 49635,
+      "id": 49655,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
       "maxReward": 30000,
       "minReward": 10000,
-      "fixedReward": 30000,
       "rewardModel": "range"
     },
     {
-      "id": 49636,
+      "id": 49656,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -2008,7 +2007,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 49637,
+      "id": 49657,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
