@@ -126,7 +126,7 @@
   "rewardsToken": "STX",
   "slug": "leather",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-07-30T13:47:09.718Z",
+  "updatedDate": "2026-08-04T15:02:01.371Z",
   "impactsBody": null,
   "websiteUrl": "https://leather.io/",
   "githubUrl": "https://github.com/leather-io/mono",
@@ -148,6 +148,48 @@
   "customOutOfScopeInformation": "**All reports must include a working proof of concept demonstrated against testnet or a local build, clear reproduction steps, and the specific in-scope asset and impact affected.** Reports that are theoretical, that consist of unmodified automated scanner or AI-generated output, or that lack a working PoC will be closed as informational or spam without further review, regardless of claimed severity. Mass-submitted, templated, or duplicate reports will be closed.\n\n**Only the current production releases are in scope:** the latest published build of the Leather extension on the Chrome Web Store, and the latest published build of the Leather mobile app on the Apple App Store and Google Play Store. Pre-release and beta builds, unreleased or experimental code, and any earlier version other than the current published release are out of scope. Reports must demonstrate the issue against the current published build; findings that only affect older versions or unreleased code will be closed as out of scope.\n\nThe following are out of scope for this program:\n\n### Assets and surfaces\n- The Bitcoin, Ordinals, Runes, and Stacks protocols themselves (report Stacks blockchain issues via the Stacks Immunefi program)\n- Third-party dApps, exchanges, or websites that connect to Leather. Only Leather's own provider and connection layer is in scope\n- Third-party services such as fiat onramps, node/RPC providers, and price feeds\n- Marketing or documentation pages on leather.io\n\n### Wallet threat model\n- Anything requiring physical access to an unlocked device, an already compromised, rooted, or jailbroken device, or pre-existing malware on the user's machine\n- Loss of funds from user action, such as sending to the wrong address, approving a transaction after a clear and accurate confirmation screen, choosing a compromised password, using non-mainnet netrworks, or disclosing the secret recovery phrase\n- Any issue requiring a modified, unofficial, or side-loaded build\n\n### On-chain data rendering\n- Misleading token names, scam airdrops, and spoofed NFT or contract metadata. Leather renders what exists on-chain and is not responsible for the accuracy or intent of that data, unless the rendering itself enables code execution or a signing bypass\n\n### Low-value and noise reports\n- Automated scanner or dependency-version output without a working exploit against production\n- Missing security headers or cookie flags, SSL/TLS best practices, and SPF/DKIM/DMARC misconfigurations without a demonstrated exploit chain\n- Version disclosure, fingerprinting, and verbose error messages\n- Rate-limiting and brute-force concerns, including on local wallet unlock\n- CORS, host header injection, content spoofing, tab-nabbing, and clickjacking unless chained to a demonstrated impact on funds, keys, or an active signing session\n- Issues only exploitable on end-of-life browsers or OS versions\n- Self-XSS, and DOM-based XSS unless demonstrated in a stored or privileged context\n- Any theoretical chain without each link demonstrated by a working PoC\n- Denial of service that does not lead to a loss of funds or a signing compromise.\n\n### Prohibited\n- Testing against mainnet with real user funds (use testnet or your own wallets)\n- Phishing or social engineering against Leather staff, contributors, or users\n- Testing third-party systems as the primary attack vector\n- Public disclosure of an unpatched vulnerability before resolution and authorization",
   "customProhibitedActivities": [],
   "impacts": [
+    {
+      "id": 6251,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Interacting with the wallet's RPC/provider interface from an origin that was never granted permission, or spoofing another origin's granted permissions"
+    },
+    {
+      "id": 35,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Execute arbitrary system commands"
+    },
+    {
+      "id": 36,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Retrieve sensitive data/files from a running server, such as:\n- /etc/shadow\n- database passwords\n- blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
+    },
+    {
+      "id": 39,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Taking and/modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:\n- Changing registration information\n- Commenting\n- Voting\n- Making trades\n- Withdrawals, etc."
+    },
+    {
+      "id": 41,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Subdomain takeover with already-connected wallet interaction"
+    },
+    {
+      "id": 43,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Malicious interactions with an already-connected wallet, such as:\n- Modifying transaction arguments or parameters\n- Substituting contract addresses\n- Submitting malicious transactions"
+    },
+    {
+      "id": 45,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Injection of malicious HTML or XSS through metadata"
+    },
     {
       "id": 47,
       "type": "websites_and_applications",
@@ -191,42 +233,6 @@
       "title": "Private key or private key generation leakage leading to unauthorized access to user funds"
     },
     {
-      "id": 35,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Execute arbitrary system commands"
-    },
-    {
-      "id": 36,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Retrieve sensitive data/files from a running server, such as:\n- /etc/shadow\n- database passwords\n- blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
-    },
-    {
-      "id": 39,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Taking and/modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:\n- Changing registration information\n- Commenting\n- Voting\n- Making trades\n- Withdrawals, etc."
-    },
-    {
-      "id": 41,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Subdomain takeover with already-connected wallet interaction"
-    },
-    {
-      "id": 43,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Malicious interactions with an already-connected wallet, such as:\n- Modifying transaction arguments or parameters\n- Substituting contract addresses\n- Submitting malicious transactions"
-    },
-    {
-      "id": 45,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Injection of malicious HTML or XSS through metadata"
-    },
-    {
       "id": 6205,
       "type": "websites_and_applications",
       "severity": "critical",
@@ -237,12 +243,6 @@
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Wallet interaction modification resulting in financial loss"
-    },
-    {
-      "id": 6207,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Interacting with the wallet's RPC/provider interface from an origin that was never granted permission, or spoofing another origin's granted permissions"
     },
     {
       "id": 6208,
@@ -301,7 +301,7 @@
   ],
   "rewards": [
     {
-      "id": 49650,
+      "id": 49700,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -311,7 +311,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 49651,
+      "id": 49701,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -320,7 +320,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 49652,
+      "id": 49702,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
@@ -329,12 +329,10 @@
       "rewardModel": "range"
     },
     {
-      "id": 49653,
+      "id": 49703,
       "primacy": null,
       "severity": "low",
       "assetType": "websites_and_applications",
-      "maxReward": 1000,
-      "minReward": 1000,
       "fixedReward": 1000,
       "rewardModel": "fixed"
     }
