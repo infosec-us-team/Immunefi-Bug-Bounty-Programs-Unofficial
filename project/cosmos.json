@@ -308,7 +308,15 @@
   ],
   "responsiblePublicationCategory": "category_3",
   "description": "Cosmos Labs believes that proactively finding and fixing bugs is a vital part of building strong, resilient blockchain protocols. This program exists as a public good to actively reward the people who discover bugs in the Cosmos Stack. Our stack includes distributed systems protocols, cryptography, a smart contract platform, a consensus algorithm, and an interoperability protocol. As such, this program is not the right place to search for web application vulnerabilities like XSS, CSRF, and header misconfigurations.The focus of this program is on surfacing vulnerabilities in the protocols, modules, and infrastructure that make up the Cosmos Stack. Assets in scope include source code for integral components of Cosmos, and do not include third-party services or IT assets. These assets are fully defined in our Scope section. Bounty rewards are based on multiple factors, including impact, risk, likelihood of exploitation, and report quality. We use an impact/likelihood framework to assess criticality, available [here](https://github.com/cosmos/security/blob/main/SECURITY.md#vulnerability-severity-levels).",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1400,
+      "link": "https://github.com/cosmos/ledger-cosmos/pull/203",
+      "description": "The displayed item count was not aligned with the range supported by the UI item index. viewfunc_getItem_t accepts an int8_t index, meaning only items with indices 0–127 can be requested. Previously, items beyond this limit were included in the total count but could not be retrieved or displayed, causing them to be omitted during review.\nThis fix we applied ensures the reported item count is capped to the maximum addressable UI index range, preventing inaccessible items from being counted.",
+      "lastUpdatedAt": "2026-08-05T14:09:59.828Z",
+      "relatedImpactInScope": "blockchain_dlt"
+    }
+  ],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": null,
   "defaultOutOfScopeWebAndApplications": null,
