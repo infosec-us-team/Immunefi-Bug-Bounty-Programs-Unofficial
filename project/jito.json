@@ -4,73 +4,71 @@
       "id": "1of8wnI30dVq2qtL8ICZCV",
       "url": "https://github.com/jito-foundation/jito-solana",
       "type": "blockchain_dlt",
-      "addedAt": "2024-08-28T13:00:00.000Z",
-      "revision": 1,
+      "addedAt": "2024-08-27T16:53:19.328Z",
+      "revision": 0,
       "description": "jito-solana",
-      "isPrimacyOfImpact": null
-    },
-    {
-      "id": "0Qp2HpMRuvM8XCbebSG23",
-      "url": "https://github.com/jito-foundation/jito-relayer",
-      "type": "blockchain_dlt",
-      "addedAt": "2024-08-28T13:00:00.000Z",
-      "revision": 1,
-      "description": "jito-relayer",
-      "isPrimacyOfImpact": null
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     },
     {
       "id": "m1xM0rzWApxFmcIiBUVag",
       "url": "https://github.com/jito-foundation/jito-programs/tree/master/mev-programs",
       "type": "smart_contract",
-      "addedAt": "2024-08-28T13:00:00.000Z",
-      "revision": 1,
+      "addedAt": "2024-08-27T16:53:57.279Z",
+      "revision": 0,
       "description": "jito-programs",
-      "isPrimacyOfImpact": null
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     },
     {
       "id": "2jPnpb64nNVdczc6zol1Cj",
       "url": "https://github.com/jito-foundation/restaking/tree/master/restaking_core",
       "type": "smart_contract",
-      "addedAt": "2025-01-21T14:48:19.694Z",
-      "revision": 1,
+      "addedAt": "2025-01-21T14:48:19.474Z",
+      "revision": 0,
       "description": "Restaking: restaking-core",
-      "isPrimacyOfImpact": null
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     },
     {
       "id": "2EPC2hlQekOJ2cjWvz1e1y",
       "url": "https://github.com/jito-foundation/restaking/tree/master/restaking_program",
       "type": "smart_contract",
-      "addedAt": "2025-01-21T14:48:36.001Z",
-      "revision": 1,
+      "addedAt": "2025-01-21T14:48:35.757Z",
+      "revision": 0,
       "description": "Restaking: restaking-program",
-      "isPrimacyOfImpact": null
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     },
     {
       "id": "6xDMjXnQ5jPAsXyrYoP86j",
       "url": "https://github.com/jito-foundation/restaking/tree/master/vault_core",
       "type": "smart_contract",
-      "addedAt": "2025-01-21T14:48:49.288Z",
-      "revision": 1,
+      "addedAt": "2025-01-21T14:48:49.091Z",
+      "revision": 0,
       "description": "Restaking: vault-core",
-      "isPrimacyOfImpact": null
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     },
     {
       "id": "2uArh11Q2DqbyP9gRVJKvy",
       "url": "https://github.com/jito-foundation/restaking/tree/master/vault_program",
       "type": "smart_contract",
-      "addedAt": "2025-01-21T14:49:05.958Z",
-      "revision": 1,
+      "addedAt": "2025-01-21T14:49:05.723Z",
+      "revision": 0,
       "description": "Restaking: vault-program",
-      "isPrimacyOfImpact": null
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     },
     {
       "id": "3xLNblrVm9l2uvYMLUc4tl",
       "url": "https://github.com/jito-foundation/stake-deposit-interceptor",
       "type": "smart_contract",
-      "addedAt": "2025-01-21T14:49:21.774Z",
-      "revision": 1,
+      "addedAt": "2025-01-21T14:49:21.575Z",
+      "revision": 0,
       "description": "Stake Deposit Interceptor",
-      "isPrimacyOfImpact": null
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": null,
@@ -85,7 +83,10 @@
   ],
   "endDate": null,
   "evaluationEndDate": null,
-  "features": [],
+  "features": [
+    "Subscription Plan: Essential",
+    "Pay to Mediate"
+  ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
   "inviteOnly": false,
@@ -110,12 +111,12 @@
     "smart_contract - high",
     "smart_contract - medium"
   ],
-  "primaryPaymentWallet": "EVM",
-  "prioritizedVulnerabilities": "Vulnerabilities are prioritized based on severity and impact.",
+  "primaryPaymentWallet": "Solana",
+  "prioritizedVulnerabilities": "_blank_",
   "productType": [
     "Liquid Staking"
   ],
-  "programOverview": "__Jito-Solana__\n\nJito-Solana is standing on the shoulders of giants — Solana Labs. \n\nWe’ve modified the Solana Labs validator client to allow validators to efficiently collect and distribute MEV to their stakers. \n\nThe validator client supports lists of transactions (bundles) which gives searchers and high frequency traders the flexibility in expressing transaction ordering. It tightly integrates with the relayer and third party  block engines to improve the network performance for all.\n\nSetting it up is as simple as downloading our validator client and passing the closest Block Engine URL on the command line.\n\n__Relayer__\n\nThe relayer provides a layer of protection between your validator’s transaction processing unit and spam from the network. The relayer works seamlessly with QUIC and allows one to separate receiving and verification of packets from the transaction processing inside your validator. \n\nRun your own or use our hosted version.\n\n__Tip Payment & Distribution__\n\nThe tip payment and distribution smart contracts are responsible for enabling and distributing validator tips.\n\n__Re-Staking / Vault__\n\nJito (Re)staking is a multi-asset staking protocol for node consensus networks. The system is made of two programs: the restaking program and the vault program.\n\nThe restaking program acts as a node consensus network and operator registry. The program leverages a flexible system of admins so NCNs can customize the operators and vaults supported and operators can customize the NCNs they stake to and vaults they can receive delegations from.\n\nThe vault program manages the minting and burning of vault receipt tokens (VRTs). VRTs are SPL tokens that represent a pro-rata stake of assets in the vault. VRTs provide enhanced liquidity, composability, and interoperability with other Solana programs. The program also leverages a flexible system of admins so vaults can customize the capacity, operators that can receive delegations from the vault, the NCNs supported by the vault, and the fee structure for staking and unstaking.\n\n__Interceptor__\n\nInterceptor is a program designed to help SPL Stake Pool LSTs avoid the impacts of toxic decentralized exchange flow resulting from socialized liquidity. \n\nFor more information about Jito Foundation, please visit [https://www.jito.network/](https://www.jito.network/).\n\nJito provides rewards in JTO on Solana, denominated in USD. For more details about the payment process, please view the __Rewards by Threat Level__ section further below.\n\n__Known Issue Guidelines__\n\nTo ensure fairness and transparency in the bug reporting process, Jito is prohibited from claiming that a bug report is a known or duplicate issue without providing clear and verifiable evidence. This measure is crucial to maintaining the integrity of the bug bounty program. Jito must present specific proof that an issue has been previously reported and acknowledged even if not disclosed publicly or privately as a known issue. Without such evidence, the bug report will be considered valid and eligible for the appropriate reward as per the bug bounty program terms. For detailed information as what qualifies as acceptable proof of known issues, refer to the article on Immunefi Support: [Report Closed for Known Issues](https://immunefisupport.zendesk.com/hc/en-us/articles/10644746170897-Report-Closed-for-Known-Issues).\n\n__Previous Audits__\n\nJito Foundation’s completed audit reports can be found at [https://jito-foundation.gitbook.io/mev/resources/audits](https://jito-foundation.gitbook.io/mev/resources/audits). Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Jito has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209).",
+  "programOverview": "__Jito-Solana__\n\nJito-Solana is standing on the shoulders of giants — Solana Labs. \n\nWe’ve modified the agave validator client to allow validators to efficiently collect and distribute MEV to their stakers. \n\nThe validator client supports lists of transactions (bundles) which gives searchers and high frequency traders the flexibility in expressing transaction ordering. It tightly integrates with BAM, our block assembly marketplace nodes which brings transparency, privacy, and verifiable block‑building to Solana. \n\n__Firebam__\nSame as jito solana except this modifies the firedancer validator client from jump crypto.\n\n__Tip Payment & Distribution__\n\nThe tip payment and distribution smart contracts are responsible for enabling and distributing validator tips.\n\n__Re-Staking / Vault__\n\nJito (Re)staking is a multi-asset staking protocol for node consensus networks. The system is made of two programs: the restaking program and the vault program.\n\nThe restaking program acts as a node consensus network and operator registry. The program leverages a flexible system of admins so NCNs can customize the operators and vaults supported and operators can customize the NCNs they stake to and vaults they can receive delegations from.\n\nThe vault program manages the minting and burning of vault receipt tokens (VRTs). VRTs are SPL tokens that represent a pro-rata stake of assets in the vault. VRTs provide enhanced liquidity, composability, and interoperability with other Solana programs. The program also leverages a flexible system of admins so vaults can customize the capacity, operators that can receive delegations from the vault, the NCNs supported by the vault, and the fee structure for staking and unstaking.\n\n__Interceptor__\n\nInterceptor is a program designed to help SPL Stake Pool LSTs avoid the impacts of toxic decentralized exchange flow resulting from socialized liquidity. \n\nFor more information about Jito Foundation, please visit [https://www.jito.network/](https://www.jito.network/).\n\nJito provides rewards in JTO on Solana, denominated in USD. For more details about the payment process, please view the __Rewards by Threat Level__ section further below.\n\n__Known Issue Guidelines__\n\nTo ensure fairness and transparency in the bug reporting process, Jito is prohibited from claiming that a bug report is a known or duplicate issue without providing clear and verifiable evidence. This measure is crucial to maintaining the integrity of the bug bounty program. Jito must present specific proof that an issue has been previously reported and acknowledged even if not disclosed publicly or privately as a known issue. Without such evidence, the bug report will be considered valid and eligible for the appropriate reward as per the bug bounty program terms. For detailed information as what qualifies as acceptable proof of known issues, refer to the article on Immunefi Support: [Report Closed for Known Issues](https://immunefisupport.zendesk.com/hc/en-us/articles/10644746170897-Report-Closed-for-Known-Issues).\n\n__Previous Audits__\n\nJito Foundation’s completed audit reports can be found at [https://jito-foundation.gitbook.io/mev/resources/audits](https://jito-foundation.gitbook.io/mev/resources/audits). Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n\n__Feasibility Limitations__\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of [feasibility limitation standards](https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377-Feasibility-Limitation-Standards) which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Jito has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209).",
   "programType": [
     "Blockchain/DLT",
     "Smart Contract"
@@ -132,7 +133,7 @@
   "rewardsToken": "JTO",
   "slug": "jito",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2025-02-17T05:08:03.251Z",
+  "updatedDate": "2026-08-12T20:15:12.758Z",
   "impactsBody": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
   "websiteUrl": null,
   "githubUrl": null,
@@ -159,44 +160,26 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "- Any affected code, from dependant Solana client implementations (eg. Agave) should be reported upstream.\n- Example code ([https://github.com/jito-foundation/jito-programs/tree/master/example-programs](https://github.com/jito-foundation/jito-programs/tree/master/example-programs))\n",
+  "customOutOfScopeInformation": "- Any affected code, from dependant Solana client implementations (eg. Agave or Firedancer) should be reported upstream.\n- Example code ([https://github.com/jito-foundation/jito-programs/tree/master/example-programs](https://github.com/jito-foundation/jito-programs/tree/master/example-programs))\n- any findings should be exploitable without being a trusted third party, findings involving a trusted third party for example BAM node may be considered on a discretionary basis since these would be more defense in depth controls rather than a direct exploit path\n- any findings which assume misconfiguration, for example a deployment of a program gone wrong or a validator misconfigured are not in scope\n- any findings which can only be demonstrated using unit tests only are out of scope. The attack must be a possible attack vector under realistic network/deployment conditions to be considered. A unit test can be used to demonistrat and can be a sufficient POC if it meets this criteria but can not be the sole determining factor.",
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 12,
-      "type": "blockchain_dlt",
-      "severity": "low",
-      "title": "Shutdown of greater than 10% or equal to but less than 30% of network processing nodes without brute force actions, but does not shut down the network"
-    },
-    {
-      "id": 13,
-      "type": "blockchain_dlt",
-      "severity": "low",
-      "title": "Modification of transaction fees outside of design parameters"
-    },
-    {
-      "id": 5,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Unintended chain split (network partition)"
-    },
-    {
-      "id": 6,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments"
-    },
-    {
-      "id": 5057,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of protocol revenue"
-    },
-    {
-      "id": 5058,
+      "id": 6283,
       "type": "blockchain_dlt",
       "severity": "medium",
-      "title": "Causing network processing nodes to process transactions from the mempool beyond set parameters"
+      "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time"
+    },
+    {
+      "id": 3,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Direct loss of funds"
+    },
+    {
+      "id": 4,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Permanent freezing of funds (fix requires hardfork)"
     },
     {
       "id": 9,
@@ -217,6 +200,30 @@
       "title": "A bug in the respective layer 0/1/2 network code that results in unintended smart contract behavior with no concrete funds at direct risk"
     },
     {
+      "id": 12,
+      "type": "blockchain_dlt",
+      "severity": "low",
+      "title": "Shutdown of greater than 10% or equal to but less than 30% of network processing nodes without brute force actions, but does not shut down the network"
+    },
+    {
+      "id": 13,
+      "type": "blockchain_dlt",
+      "severity": "low",
+      "title": "Modification of transaction fees outside of design parameters"
+    },
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
       "id": 31,
       "type": "smart_contract",
       "severity": "medium",
@@ -235,28 +242,22 @@
       "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
     },
     {
-      "id": 3,
+      "id": 5,
       "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Direct loss of funds"
+      "severity": "high",
+      "title": "Unintended chain split (network partition)"
     },
     {
-      "id": 4,
+      "id": 5058,
       "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Permanent freezing of funds (fix requires hardfork)"
+      "severity": "medium",
+      "title": "Causing network processing nodes to process transactions from the mempool beyond set parameters"
     },
     {
-      "id": 17,
+      "id": 5057,
       "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
-    },
-    {
-      "id": 15,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+      "severity": "high",
+      "title": "Theft of protocol revenue"
     },
     {
       "id": 5298,
@@ -267,7 +268,8 @@
   ],
   "rewards": [
     {
-      "id": 11209,
+      "id": 49953,
+      "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
       "maxReward": 250000,
@@ -276,7 +278,8 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 11210,
+      "id": 49954,
+      "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
       "maxReward": 100000,
@@ -284,23 +287,26 @@
       "rewardModel": "range"
     },
     {
-      "id": 11211,
+      "id": 49955,
+      "primacy": null,
       "severity": "medium",
-      "assetType": "blockchain_dlt",
-      "maxReward": 25000,
-      "minReward": 5000,
-      "rewardModel": "range"
-    },
-    {
-      "id": 11212,
-      "severity": "low",
       "assetType": "blockchain_dlt",
       "maxReward": 5000,
       "minReward": 1000,
       "rewardModel": "range"
     },
     {
-      "id": 11213,
+      "id": 49956,
+      "primacy": null,
+      "severity": "low",
+      "assetType": "blockchain_dlt",
+      "maxReward": 5000,
+      "minReward": 500,
+      "rewardModel": "range"
+    },
+    {
+      "id": 49957,
+      "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
       "maxReward": 250000,
@@ -309,7 +315,8 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 11214,
+      "id": 49958,
+      "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
       "maxReward": 100000,
@@ -317,11 +324,12 @@
       "rewardModel": "range"
     },
     {
-      "id": 11215,
+      "id": 49959,
+      "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
-      "maxReward": 25000,
-      "minReward": 5000,
+      "maxReward": 5000,
+      "minReward": 1000,
       "rewardModel": "range"
     }
   ],

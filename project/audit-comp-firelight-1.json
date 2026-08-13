@@ -1,0 +1,406 @@
+{
+  "assets": [
+    {
+      "id": "db_c28d532e-d482-4a83-bf46-c32aeab342c0",
+      "url": "https://github.com/immunefi-team/audit-comp-firelight/blob/v1_audit_ready/contracts/core/FirelightVault.sol",
+      "type": "smart_contract",
+      "addedAt": "2026-08-08T04:24:53.244Z",
+      "revision": 0,
+      "description": "Upgradeable ERC4626-compatible vault with delayed withdrawals, deposits/mints, blocklist and rescue controls, pausing, historical checkpoints, incident gating, and payout execution. V2 upgrade implementation for the deployed legacy predeposit vault.",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_194ea7ec-10bd-4b15-b439-b54b2f544894",
+      "url": "https://github.com/immunefi-team/audit-comp-firelight/blob/v1_audit_ready/contracts/core/FirelightVaultStorage.sol",
+      "type": "smart_contract",
+      "addedAt": "2026-08-08T04:25:12.530Z",
+      "revision": 0,
+      "description": "V2 FirelightVault storage structs, role constants, and period configuration. Storage compatibility with the deployed legacy predeposit vault storage is part of the upgrade context.",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_cd5ae9ca-3fa4-483e-a25b-cdd8b7937190",
+      "url": "https://github.com/immunefi-team/audit-comp-firelight/blob/v1_audit_ready/contracts/core/CoverOrderAllocator.sol",
+      "type": "smart_contract",
+      "addedAt": "2026-08-08T04:25:28.035Z",
+      "revision": 0,
+      "description": "Cover order lifecycle, premium collection, off-chain matching Merkle commitments, settlement, CoverNFT minting, capacity configuration, market support, protocol concentration caps, and recommit/cancel controls.",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_d83afc61-36e0-4f1d-a3a4-1e83de7be3fa",
+      "url": "https://github.com/immunefi-team/audit-comp-firelight/blob/v1_audit_ready/contracts/core/CoverNFT.sol",
+      "type": "smart_contract",
+      "addedAt": "2026-08-08T04:25:47.294Z",
+      "revision": 0,
+      "description": "Upgradeable ERC721 enumerable/pausable cover receipt NFT minted by the allocator.",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_e54d7562-1182-41f4-b1d4-0f24368969ef",
+      "url": "https://github.com/immunefi-team/audit-comp-firelight/blob/v1_audit_ready/contracts/core/IncidentManager.sol",
+      "type": "smart_contract",
+      "addedAt": "2026-08-08T04:26:02.379Z",
+      "revision": 0,
+      "description": "Incident creation, confirmation, assessment rounds, approval/rejection/cancel flows, FIFO incident ordering, payout waterfall, and payout receiver/oracle administration.",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_f7bfd984-cefa-4823-92d8-0fe1b1e48b20",
+      "url": "https://github.com/immunefi-team/audit-comp-firelight/blob/v1_audit_ready/contracts/core/VaultRewardDistributor.sol",
+      "type": "smart_contract",
+      "addedAt": "2026-08-08T04:26:16.846Z",
+      "revision": 0,
+      "description": "Pulls vault assets from authorized distributors and forwards rewards/incentives to the vault with accounting events and vault checkpointing.",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_cbf4a6b7-049f-40eb-ab73-ba0614b2a4eb",
+      "url": "https://github.com/immunefi-team/audit-comp-firelight/blob/v1_audit_ready/contracts/oracle/FtsoChainlinkAdapter.sol",
+      "type": "smart_contract",
+      "addedAt": "2026-08-08T04:26:33.828Z",
+      "revision": 0,
+      "description": "Flare FTSO v2 to Chainlink AggregatorV3-style adapter for live price reads.",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_2cfbedf5-4b62-4830-8fe9-4436454957dc",
+      "url": "https://github.com/immunefi-team/audit-comp-firelight/blob/v1_audit_ready/contracts/core/lib/Decimals.sol",
+      "type": "smart_contract",
+      "addedAt": "2026-08-08T04:26:47.340Z",
+      "revision": 0,
+      "description": "Decimal conversion helper.",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_594b1cd4-b6db-4e75-9ee6-9215d2baa3a7",
+      "url": "https://github.com/immunefi-team/audit-comp-firelight/blob/v1_audit_ready/contracts/core/lib/PriceFeed.sol",
+      "type": "smart_contract",
+      "addedAt": "2026-08-08T04:27:12.156Z",
+      "revision": 0,
+      "description": "Price feed freshness/positivity helper.",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_29049100-f5ae-4817-82d3-11d26f728a33",
+      "url": "https://github.com/immunefi-team/audit-comp-firelight/blob/v1_audit_ready/contracts/core/lib/Checkpoints.sol",
+      "type": "smart_contract",
+      "addedAt": "2026-08-08T04:27:35.785Z",
+      "revision": 0,
+      "description": "Local checkpoint lookup/push library used for historical vault accounting.",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_1b00db8a-7597-4243-9de7-d01174c1e6b9",
+      "url": "https://github.com/immunefi-team/audit-comp-firelight/blob/v1_audit_ready/contracts/core/interfaces/IFirelightVault.sol",
+      "type": "smart_contract",
+      "addedAt": "2026-08-08T04:27:52.417Z",
+      "revision": 0,
+      "description": "Interface for the FirelightVault contract.",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_1df24e76-4bd3-410f-99a3-8c39643aaeb6",
+      "url": "https://github.com/immunefi-team/audit-comp-firelight/blob/v1_audit_ready/contracts/core/interfaces/ICoverOrderAllocator.sol",
+      "type": "smart_contract",
+      "addedAt": "2026-08-08T04:28:04.284Z",
+      "revision": 0,
+      "description": "Interface for the CoverOrderAllocator contract.",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_21cb4119-ec77-481d-a53f-bd81e77e32de",
+      "url": "https://github.com/immunefi-team/audit-comp-firelight/blob/v1_audit_ready/contracts/core/interfaces/IIncidentManager.sol",
+      "type": "smart_contract",
+      "addedAt": "2026-08-08T04:28:18.134Z",
+      "revision": 0,
+      "description": "Interface for the IncidentManager contract.",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_37017ec3-80f9-466c-9d1f-7759c546b72a",
+      "url": "https://github.com/immunefi-team/audit-comp-firelight/blob/v1_audit_ready/contracts/core/interfaces/IAggregatorV3.sol",
+      "type": "smart_contract",
+      "addedAt": "2026-08-08T04:28:31.343Z",
+      "revision": 0,
+      "description": "Chainlink AggregatorV3-style interface consumed by the FTSO adapter.",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    }
+  ],
+  "assetsBodyV2": "##Technical Walkthrough\nhttps://drive.google.com/file/d/1b1AWKE-ZeML5VWdIzzNczY3s0Bd4MeJv/view\n\n## Build, Test, and Run\n\nPrerequisites: Node.js and npm.\n\nClone the repository and check out the audit branch:\n\n```\ngit clone https://github.com/immunefi-team/audit-comp-firelight.git\ncd audit-comp-firelight\ngit checkout v1_audit_ready\n```\n\nInstall dependencies and run the tests:\n\n```\nnpm install\nnpm test\n```\n\nNo `.env` file is needed to run local tests; Hardhat uses its default accounts.\n\n### Educational resources\n\n- Official Firelight documentation: https://docs.firelight.finance/\n- Phase 1 / Phase 2 overview: https://docs.firelight.finance/#phase-1-and-phase-2\n- How Firelight works: https://docs.firelight.finance/introduction/how-firelight-works\n- Vault architecture: https://docs.firelight.finance/core-concepts/vault-architecture\n- Staking deposits and withdrawals: https://docs.firelight.finance/for-stakers/deployments-and-withdrawals\n- Program-operator Cover Tokens: https://docs.firelight.finance/for-program-operators/cover-tokens\n- Claims process: https://docs.firelight.finance/for-program-operators/claims-process\n- Protocol architecture / on-chain components: https://docs.firelight.finance/protocol-architecture/on-chain-components\n- Claims liquidation and payout waterfall: https://docs.firelight.finance/protocol-architecture/claims-liquidation",
+  "boostedIntroEvaluating": "",
+  "boostedIntroFinished": "",
+  "boostedIntroLive": "Competition timeline  \nThis timeline may change depending on the competition progress and Immunefi needs\n\n| Milestone | Date |\n| :---- | :---- |\n| Announcement | Aug 10, 2026 |\n| Launch (competition goes live) | Aug 12, 2026 |\n| Competition ends | Aug 25, 2026 |\n| Project deadline to resolve all reports | Aug 31, 2026 |\n| Results frozen and calculated | Aug 31, 2026 |\n| Final 48-hour dispute deadline | Sep 11, 2026 |\n| Payment complete | Sep 30, 2026 |\n| Results published | Sep 30, 2026 |",
+  "boostedIntroStartingIn": "",
+  "boostedLeaderboard": [],
+  "boostedSummaryReport": null,
+  "ecosystem": [],
+  "endDate": "2026-08-25T10:00:00.000Z",
+  "evaluationEndDate": "2026-09-30T00:00:00.000Z",
+  "features": [
+    "Boost",
+    "Pay to Mediate",
+    "Pay to Submit",
+    "Vault",
+    "Managed Triage: Expert Assessment",
+    "Pay to Mediate - No Free Mediations"
+  ],
+  "hideAssetsInScope": null,
+  "immunefiStandard": false,
+  "inviteOnly": false,
+  "kyc": false,
+  "language": [],
+  "launchDate": "2026-08-12T08:30:00.000Z",
+  "logo": "https://qn5bmgziiocgawpp.public.blob.vercel-storage.com/program-logos/sebastian%40immunefi.com-nF_8WB1ELqVKO22AAk_4Q.png",
+  "maxBounty": null,
+  "outOfScopeAndRules": "To be determined",
+  "pocPerTypeAndSeverity": [
+    "smart_contract - low",
+    "smart_contract - medium",
+    "smart_contract - high",
+    "smart_contract - critical"
+  ],
+  "primaryPaymentWallet": "EVM",
+  "prioritizedVulnerabilities": "_blank_",
+  "productType": [],
+  "programOverview": "Firelight is an on-chain cover protocol. The contracts implement an upgradeable ERC4626-compatible vault for staked collateral, an off-chain-matched cover order allocation flow, cover receipt NFTs, incident assessment and payout execution, a vault reward distributor, and a Flare FTSO v2 price adapter exposed through a Chainlink AggregatorV3-compatible read surface.\n\nThe MVP is intentionally permissioned: trusted operators create and settle cover orders, submit matching commitments, assess incidents, and execute approved payouts. The contracts enforce role boundaries, capacity checks, settlement constraints, payout accounting, withdrawal delays, blocklist/rescue controls, and asset transfer paths.\n\nThis audit covers Firelight Phase 2, as described in the [Firelight documentation](https://docs.firelight.finance/#phase-1-and-phase-2). For more information about Firelight, please visit https://docs.firelight.finance.\n\n## Technical Project Information\n\n### System overview and upgrade context\n\nOne existing deployed contract is being upgraded: the legacy predeposit vault (`contracts/legacy/FirelightVaultPredeposits.sol`, with storage in `contracts/legacy/FirelightVaultStoragePredeposits.sol`). The upgrade implementation is `contracts/core/FirelightVault.sol`, with V2 storage in `contracts/core/FirelightVaultStorage.sol`. Reviewers should compare the legacy vault and the V2 vault for storage compatibility and behavior changes. All other in-scope Phase 2 contracts are new deployments.\n\n### Upgrade context\n\n`FirelightVault.sol` is the V2 upgrade implementation for the already-deployed legacy predeposit vault (`contracts/legacy/FirelightVaultPredeposits.sol`), deployed on Flare at [`0x4C18Ff3C89632c3Dd62E796c0aFA5c07c4c1B2b3`](https://flare-explorer.flare.network/address/0x4C18Ff3C89632c3Dd62E796c0aFA5c07c4c1B2b3). Reviewers should examine both the new V2 behavior and its compatibility with the legacy vault storage/layout. The legacy contracts (`contracts/legacy/FirelightVaultPredeposits.sol` and `contracts/legacy/FirelightVaultStoragePredeposits.sol`) are included to support upgrade-diff and storage-compatibility review. All other in-scope Phase 2 contracts are new deployments.\n\n### Priority areas of concern\n\nFirelight is most concerned about:\n\n- Commitment and settlement correctness in `CoverOrderAllocator`.\n- Capacity calculation and solvency constraints.\n- Incident/payout accounting: FIFO priority, payout-window behavior, assessment loss validation, first-loss buffer waterfall, vault payout bounds, and interaction between multiple incidents in the same period.\n- Upgradeability safety for the upgradeable contracts.\n- External price and token assumptions, especially FTSO adapter behavior.\n\n## Standardized Rules\n\nThis program follows Immunefi's standard competition rules. For the full default rules on validity, duplicates, known issues, severity, disputes, KYC, payments, and publication, read How Audit Competitions Work: Rules and Policies. Where this program page defines a specific rule, the program page prevails.\n\n## Proof of Concept (PoC) Requirements\n\nA runnable PoC is required. For more information, please read the [Web3 PoC Guidelines](https://immunefisupport.zendesk.com/hc/en-us/articles/18722863230353).\n\n## Insight Reporting\n\n- Insight reports may be submitted to this program. Runnable code is not required, but the PoC section must describe the conditions under which the insight is valuable.\n- The Insight severity cannot be self-selected at submission. Immunefi or the project team designates a report as an Insight when applicable.\n- Only the best report of a given Insight is rewarded. Duplicates of Insights are not rewarded.\n- Insights are rewarded according to Immunefi's [Standardized Competition Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/31657285001873) and are not eligible for mediation or appeal.\n\n## Dispute Resolution\n\n- Disputes may only address report validity, duplicate determinations, and severity.\n- If a researcher disagrees with a closure decision while the competition is live, they may request mediation. A mediation fee, set by Immunefi, is required to initiate the review.\n- After the evaluation phase, a dispute period opens for appealing decisions. Immunefi announces a final 48-hour deadline for the last disputes. Once the window closes, results are final.\n- Immunefi has final say on validity, duplicates, and severity, based on the terms of this program. Insights are not eligible for mediation or appeal.\n\n## Responsible Publication Policy\n\nImmunefi will publish bug reports, earnings, and a leaderboard for this Audit Competition. Security researchers may publish their bug reports as well, but only after Immunefi has published the valid bug reports as part of the competition results.\n\n## Eligibility Criteria\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n\n- On OFAC's SDN list.\n- An official contributor, past or present.\n- Employees and/or individuals closely associated with the project.\n- Security auditors that directly or indirectly participated in an audit review of the code in scope (such auditors may participate only if they receive project permission).\n- From a restricted country or territory per Immunefi's [Terms of Use](https://immunefi.com/terms-of-use/).\n- Under 18 years of age. Participants under 18 cannot pass KYC and will not receive rewards.\n\n## Submission Fees\n\nA submission fee, set and managed by Immunefi, applies to each report and is shown at submission time. If a researcher disagrees with a closure decision, initiating a mediation also requires a fee set by Immunefi.",
+  "programType": [
+    "Smart Contract"
+  ],
+  "project": "Audit Comp | Firelight",
+  "projectType": [],
+  "rewardsBody": "Rewards are distributed among SRs according to [Immunefi's Standardized Competition Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/31657285001873-Standardized-Competition-Reward-Terms), and include the All Star Pool and Podium Pool reserved for All Star Program participants. Rewards are denominated in USD and distributed in USDC on Ethereum.\n\n- If any valid bug is found — even a single Low-severity bug — the full reward pool of **$20,000 USD** is unlocked and must be fully distributed among security researchers.\n- If no security vulnerability is found (Insights do not count as bugs), the reward pool is **$3,000 USD**.\n\n### Private Known Issues Reward Policy\n\nPrivate known issues — known issues that were not publicly disclosed — are valid for a reward at their full severity and unlock the corresponding reward pool without any downgrade. Public known issues are invalid.",
+  "rewardsPool": 20000,
+  "primaryPool": 14000,
+  "allStarsPool": 4000,
+  "podiumPool": 2000,
+  "rewardsToken": "USDC",
+  "slug": "audit-comp-firelight-1",
+  "tenPercentEconomicRule": false,
+  "updatedDate": "2026-08-12T11:21:09.910Z",
+  "impactsBody": "## Program Assurances\n\n### Asset Accuracy Assurance\n\nBugs found on assets incorrectly listed in scope are valid.\n\n### Code Update Assurance\n\nDuplicate submissions of bugs are valid until the relevant bug fix is public. Once a fix is public, the bug is out of scope and later submissions of it are invalid. Duplicate submissions of Insights are invalid.\n\nThe project commits to keeping all information about bug findings private until each fix is disclosed through the process described in the Bug Fix Policy. This includes bug findings found independently by the project or from concurrent private audits.\n\n### Code Freeze Assurance\n\nCode of the assets in scope is frozen while the program is live.\n\nIf a bug found during the competition requires an immediate fix, the bug will be considered a publicly known issue as soon as the fix is deployed. Submissions of the same bug after the fix is public are invalid, and a bypass of the fix is considered a new, valid bug.\n\nDuplicate submissions of bugs are valid. Duplicate submissions of Insights are invalid.\n\nThe project commits to keeping private all information related to bug findings until this program is over. This means the project will not leak information about any bug findings or planned bug fixes, including bug findings found independently by the project or from concurrent private audits.\n\n### Token standards\n\n- ERC-20: the vault asset, premium tokens, and first-loss-buffer token are ERC-20 tokens.\n- ERC-721: CoverNFT is an ERC-721 enumerable, pausable, upgradeable cover receipt NFT.\n\n### Privileged actors\n\n- Any bug report that requires a privileged role holder to act within the permissions explicitly granted to that role is out of scope, unless the report demonstrates that the role can exceed its intended permissions or bypass an intended protocol constraint.\n- There are no actors whose involvement is out of scope when they exceed their attributed privileges. Reports where a privileged role, admin, or operator can exceed the privileges attributed to them remain in scope.\n\n### Emergency actions and severity downgrades\n\nEmergency actions may be used to fix or mitigate an issue, but they are not intended as an automatic reason to downgrade an otherwise valid report.\n\n### Deployment\n\nThe Phase 1 vault proxy is deployed on Flare mainnet. The in-scope Phase 2 code is intended for deployment/upgrade on Flare mainnet.\n\nPhase 1 vault proxy:\nhttps://flare-explorer.flare.network/address/0x4C18Ff3C89632c3Dd62E796c0aFA5c07c4c1B2b3\n\n### External dependencies\n\n- An off-chain matching engine that reads pending cover orders, computes Merkle allocation commitments, submits allocation commitments, and settles matched cover orders.\n- An off-chain premium conversion service that converts collected premiums into the vault asset and forwards rewards.\n- Off-chain/manual payout distribution from the configured payout receiver in the MVP model.\n- Flare FTSO v2, accessed via the Flare Contract Registry and read through `FtsoChainlinkAdapter`.",
+  "websiteUrl": null,
+  "githubUrl": null,
+  "eligibilityCriteria": [],
+  "responsiblePublicationCategory": null,
+  "description": "Firelight is an on-chain cover protocol. The contracts implement an upgradeable ERC4626-compatible vault for staked collateral, an off-chain-matched cover order allocation flow, cover receipt NFTs, incident assessment and payout execution, a vault reward distributor, and a Flare FTSO v2 price adapter exposed through a Chainlink AggregatorV3-compatible read surface.",
+  "knownIssues": [
+    {
+      "id": 1408,
+      "link": "https://immunefi.com/audit-competition/audit-comp-firelight-1/information/#:~:text=29%20July%202026-,Known%20Issues,-Reports%20covering%20previously",
+      "description": "The first-loss-buffer token is treated as USD-pegged and valued through decimal conversion, without a token-specific on-chain price oracle. Depeg-only reports, absent a protocol bug causing or mishandling the depeg, are ineligible.",
+      "lastUpdatedAt": "2026-08-10T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1407,
+      "link": "https://immunefi.com/audit-competition/audit-comp-firelight-1/information/#:~:text=29%20July%202026-,Known%20Issues,-Reports%20covering%20previously",
+      "description": "The first-loss buffer is an external, unescrowed wallet; the protocol relies on it remaining funded and holding the required token approvals when approved claims are paid.",
+      "lastUpdatedAt": "2026-08-10T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1406,
+      "link": "https://immunefi.com/audit-competition/audit-comp-firelight-1/information/#:~:text=29%20July%202026-,Known%20Issues,-Reports%20covering%20previously",
+      "description": "Aggregate claims are not capped on-chain against total cover sold; the MVP relies on trusted incident/assessment roles and the approval process to prevent duplicate, excessive, or otherwise invalid claims.",
+      "lastUpdatedAt": "2026-08-10T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
+  "defaultOutOfScopeBlockchain": null,
+  "defaultOutOfScopeSmartContract": null,
+  "defaultOutOfScopeWebAndApplications": null,
+  "defaultOutOfScopeGeneral": null,
+  "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+  "defaultProhibitedActivities": null,
+  "customOutOfScopeInformation": "### Public Disclosure of Known Issues\n\nBug reports for publicly disclosed bugs are not eligible for a reward. The following describe the intended, permissioned design of the Phase 2 MVP and are not eligible unless a report demonstrates a protocol-constraint bypass or unauthorized privilege escalation:\n\n- Firelight Phase 2 is intentionally permissioned and operationally centralized for the MVP. Trusted operators and role holders create and settle cover orders, submit matching commitments, assess incidents, approve or reject assessments, configure risk parameters, operate the first-loss buffer, and execute or coordinate payouts. Reports requiring these trusted parties to act maliciously or incorrectly within their documented privileges are not eligible unless they demonstrate that the role can exceed its intended authority or bypass an intended protocol constraint.\n- Cover purchasers (referred to as \"Program Operators\" in the official docs) do not author orders directly in the MVP. Cover orders are authored by the operator/curator, with the purchaser's on-chain consent limited to premium token approval.\n- The first-loss-buffer token is treated as USD-pegged and valued through decimal conversion, without a token-specific on-chain price oracle. Reports based only on the first-loss buffer token depegging, without a protocol bug causing or mishandling that depeg, are not eligible.\n- The first-loss buffer (address) is an external, unescrowed wallet. The protocol relies on that wallet remaining funded and having the required token approvals when approved claims are paid.\n- If the underlying staked asset decreases in USD value, available capital and the Capital Adequacy Ratio decrease. Severe collateral drawdowns can reduce coverage capacity and may cause shortfalls or undercollateralization relative to outstanding cover obligations.\n- Aggregate claims are not capped on-chain against total cover sold. The MVP relies on trusted incident/assessment roles and the approval process to prevent duplicate, excessive, or otherwise invalid claims.\n- Incident assessment and payout execution are permissioned. Reports requiring trusted assessors, approvers, operators, or payout coordinators to make intentionally incorrect business decisions are not eligible unless they demonstrate a protocol-constraint bypass or unauthorized privilege escalation.\n- Final distribution from the configured payout receiver to end beneficiaries may involve off-chain/manual operational processes in the MVP.\n\n### Scope boundaries (out-of-scope code that may look in-scope)\n\n- The legacy vault is not intended to be an in-scope asset. It is mentioned only as contextual upgrade reference for reviewing `FirelightVault.sol` and storage compatibility and new functionality.\n\nThe repository includes tests, local mocks, harness contracts, archived/reference contract copies, and third-party Flare/FAsset interfaces. Unless a file is explicitly listed in the Assets in Scope table, it is provided for context only and is not a competition target.\n\n### Notes for researchers (unusual design points)\n\n- Program operators do not author their own cover orders in the MVP. Orders are submitted by a permissioned Firelight operator role (named `curator` in the contracts) on the program operator's behalf. The program operator's only on-chain action is the premium token allowance.\n- `FirelightVault` intentionally deviates from standard ERC4626 withdrawal semantics. Withdraw and redeem create delayed withdrawal requests; users later call `claimWithdraw`.\n- Matching is off-chain, while settlement is verified on-chain through Merkle proofs.\n- A settled cover order mints an ERC721 receipt NFT; the NFT is not itself the payout asset.\n- Incident payouts are assessed/approved by permissioned roles and paid to a configured payout receiver; beneficiary distribution is off-chain/manual in the MVP.\n- The first-loss buffer is an external wallet, not escrowed in the protocol.\n- The first-loss buffer token is assumed to be USD-pegged and is valued by decimal conversion rather than a token-specific oracle.\n- `CoverNFT` pausing affects settlement, because settlement mints NFTs.\n- Deposits are blocked during active incidents for the relevant period.\n- First-loss buffer payouts use the configured buffer balance first, up to the approved assessment loss. Insufficient allowance is treated as an operational misconfiguration and may cause payout execution to revert. The payout logic intentionally does not cap the first-loss buffer leg by allowance before calling `safeTransferFrom`; if the wallet is funded but allowance is insufficient, payout reverts as an operational misconfiguration rather than falling back to the vault.\n\n## General Out of Scope and Rules\n\nThese impacts are out of scope for this program.\n\n### All categories\n\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage.\n- Impacts caused by attacks requiring access to leaked keys/credentials.\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist), except in cases where the contracts are intended to have no privileged access to functions that make the attack possible.\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code.\n- Mentions of secrets, access tokens, API keys, private keys, etc. in GitHub will be considered out of scope without proof that they are in use in production.\n- Best practice recommendations.\n- Feature requests.\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program.\n\n### Blockchain/DLT and smart contract specific\n\n- Incorrect data supplied by third-party oracles (this does not exclude oracle manipulation / flash loan attacks).\n- Impacts requiring basic economic and governance attacks (e.g., 51% attack).\n- Lack of liquidity impacts.\n- Impacts from Sybil attacks.\n- Impacts involving centralization risks.\n\n### Websites and apps\n\n- Theoretical impacts without any proof or demonstration.\n- Impacts involving attacks requiring physical access to the victim device.\n- Impacts involving attacks requiring access to the local network of the victim.\n- Reflected plain text injection (e.g., url parameters, path). This does not exclude reflected HTML injection with or without JavaScript, or persistent plain text injection.\n- Any impacts involving self-XSS.\n- Captcha bypass using OCR without impact demonstration.\n- CSRF with no state-modifying security impact (e.g., logout CSRF).\n- Impacts related to missing HTTP security headers (such as X-FRAME-OPTIONS) or cookie security flags (such as \"httponly\") without demonstration of impact.\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces.\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants.\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows.\n- Lack of SSL/TLS best practices.\n- Impacts that only require DDoS.\n- UX and UI impacts that do not materially disrupt use of the platform.\n- Impacts primarily caused by browser/plugin defects.\n- Leakage of non-sensitive API keys (e.g., Etherscan, Infura, Alchemy).\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g., CSP bypass).\n- SPF/DMARC misconfigured records.\n- Missing HTTP headers without demonstrated impact.\n- Automated scanner reports without demonstrated impact.\n- UI/UX best practice recommendations.\n- Non-future-proof NFT rendering.\n\n### Prohibited activities\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local forks of either public testnet or mainnet.\n- Any testing with pricing oracles or third-party smart contracts.\n- Attempting phishing or other social engineering attacks against the project's employees and/or customers.\n- Any testing with third-party systems and applications (e.g., browser extensions) as well as websites (e.g., SSO providers, advertising networks).\n- Any denial-of-service attacks executed against project assets.\n- Automated testing of services that generates significant amounts of traffic.\n- Public disclosure of an unpatched vulnerability in an embargoed bounty.",
+  "customProhibitedActivities": [],
+  "impacts": [
+    {
+      "id": 20,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Predictable or manipulable RNG that results in abuse of the principal or NFT"
+    },
+    {
+      "id": 18,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of NFTs"
+    },
+    {
+      "id": 19,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Unauthorized minting of NFTs"
+    },
+    {
+      "id": 6261,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds for at least 24 hours"
+    },
+    {
+      "id": 34,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
+    },
+    {
+      "id": 21,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Unintended alteration of what the NFT represents (e.g. token URI, payload, artistic content)"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
+    },
+    {
+      "id": 26,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed royalties"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 24,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed royalties"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 32,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of gas"
+    },
+    {
+      "id": 29,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Smart contract unable to operate due to lack of token funds"
+    },
+    {
+      "id": 30,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
+    },
+    {
+      "id": 14,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results"
+    },
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 16,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user NFTs, whether at-rest or in-motion, other than unclaimed royalties"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 6262,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of NFTs for at least 24 hours"
+    },
+    {
+      "id": 6263,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Temporary freezing of funds for at least 1 hour"
+    },
+    {
+      "id": 6264,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Temporary freezing of NFTs for at least 1 hour"
+    }
+  ],
+  "rewards": [
+    {
+      "level": "critical",
+      "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
+      "pocRequired": false
+    },
+    {
+      "level": "high",
+      "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
+      "pocRequired": false
+    },
+    {
+      "level": "medium",
+      "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
+      "pocRequired": false
+    },
+    {
+      "level": "low",
+      "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
+      "pocRequired": false
+    }
+  ],
+  "audits": [
+    {
+      "id": "db_e589cd7b-1da5-45eb-acf9-c78fd54ca770",
+      "url": "https://library-pr-440.onrender.com/library/audits/firelight-1",
+      "auditor": "Macro",
+      "date": "2026-07-29T00:00:00.000Z"
+    }
+  ]
+}
