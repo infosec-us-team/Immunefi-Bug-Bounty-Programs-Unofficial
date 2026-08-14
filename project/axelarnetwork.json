@@ -276,8 +276,8 @@
     "smart_contract - medium",
     "smart_contract - low"
   ],
-  "primaryPaymentWallet": "OtherNonEVML1",
-  "prioritizedVulnerabilities": "__Impacts in Scope__\n\nOnly the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table. Any Critical impact needs to demonstrate a loss of funds of over or equal to $500K to be eligible. Due to the complexity of the system, not all possible concerns have been described. Impacts causing severe issues not listed below might be eligible for a bounty at the full discretion of the team.\n\n__Blockchain/DLT__\n\n__Critical__\n  - Network not being able to confirm new transactions (Total network shutdown)\n  - Unintended permanent chain split requiring hard fork (Network partition requiring hard fork)\n  - Direct loss of funds\n  - Permanent freezing of funds (fix requires hardfork)\n  - Any governance voting result manipulation\n  - Non-determinism in the network and consensus failure\n  - Cryptographic vulnerabilities\n  - Vulnerabilities related to validator voting manipulation on external chain events\n\n__High__\n  - Unintended chain split (Network partition)\n  - Transient consensus failures\n  - Privilege escalation\n  - Theft or freezing of inflation rewards\n\n__Medium__\n  - High compute consumption by validator/mining nodes\n  - Attacks against thin clients\n  - DoS of greater than 30% of validator or miner nodes and does not shut down the network\n  - Miner-extractable value (MEV)\n\n__Low__\n  - DoS of greater than 10% but less than 30% of validator or miner nodes and does not shut down the network\n  - Underpricing transaction fees relative to computation time\n\n__Smart Contracts__\n\n__Critical__\n  - Direct theft of any user funds, whether at-rest or in-motion\n  - Permanent freezing of funds\n  - Insolvency\n  - Unauthorized mint/burn/transfer of wrapped assets\n  - Privilege escalation\n\n__High__\n  - Temporary freezing of funds for a minimum of 1 hour\n\n__Medium__\n  - Smart contract unable to operate due to lack of funds \n  - Block stuffing for profit\n  - Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)\n  - Theft of gas\n  - Unbounded gas consumption \n\n__Low__\n  - Smart contract fails to deliver promised returns, but doesn’t lose value\n\nIn case of discrepancy between [Immunefi Vulnerability Severity Classification System V2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2/) and Axelar Network’s classification above, Axelar Network’s classification will be followed.",
+  "primaryPaymentWallet": "EVM",
+  "prioritizedVulnerabilities": "_blank_",
   "productType": [
     "Bridge",
     "Crosschain Liquidity",
@@ -302,7 +302,7 @@
   "rewardsToken": "USDC",
   "slug": "axelarnetwork",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-06-03T13:08:45.817Z",
+  "updatedDate": "2026-08-13T11:03:12.836Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -319,6 +319,36 @@
   "customOutOfScopeInformation": "The following vulnerabilities are excluded from the rewards for this bug bounty program:\n\n  - Third party dependencies, especially Cosmos SDK dependencies\n  - In the tofn repository, the only thing in scope is src/ecdsa/mod.rs and it’s project dependencies, excluding third-party dependencies\n  - In the tofnd repository, the only thing in scope is parts related to src/ecdsa/mod.rs in tofn repository\n  - Off-chain components, such as relayer, and vald, are out of scope. Any reports related to these will only be accepted at the discretion of the project.\n  - Vulnerabilities in forks of third-party dependencies are OUT OF SCOPE. Please report such vulnerabilities directly to the maintainers of the upstream repository",
   "customProhibitedActivities": [],
   "impacts": [
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 32,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of gas"
+    },
+    {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
+    },
+    {
+      "id": 3,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Direct loss of funds"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
     {
       "id": 2022,
       "type": "blockchain_dlt",
@@ -422,30 +452,6 @@
       "title": "Block stuffing for profit"
     },
     {
-      "id": 31,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-    },
-    {
-      "id": 32,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Theft of gas"
-    },
-    {
-      "id": 33,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Unbounded gas consumption"
-    },
-    {
-      "id": 3,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Direct loss of funds"
-    },
-    {
       "id": 2039,
       "type": "blockchain_dlt",
       "severity": "critical",
@@ -470,12 +476,6 @@
       "title": "Insolvency"
     },
     {
-      "id": 17,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
-    },
-    {
       "id": 2043,
       "type": "smart_contract",
       "severity": "critical",
@@ -484,7 +484,7 @@
   ],
   "rewards": [
     {
-      "id": 46757,
+      "id": 49997,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -493,7 +493,7 @@
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 46758,
+      "id": 49998,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -502,7 +502,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 46759,
+      "id": 49999,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -510,7 +510,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 46760,
+      "id": 50000,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
@@ -518,7 +518,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 46761,
+      "id": 50001,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -527,7 +527,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 46762,
+      "id": 50002,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -536,7 +536,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 46763,
+      "id": 50003,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -544,7 +544,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 46764,
+      "id": 50004,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",

@@ -231,7 +231,7 @@
       "isPrimacyOfImpact": false
     }
   ],
-  "assetsBodyV2": "Only the contracts in the Assets in Scope table on the Scope tab are considered in-scope of the bug bounty program. Target (implementation) contracts are not listed because they change on upgrade. They can be looked up in the Controller contract listed in that table. Reports are evaluated against the implementation live at the time of submission.",
+  "assetsBodyV2": "Only the contracts in the Assets in Scope table on the Scope tab are considered in-scope of the bug bounty program. Target (implementation) contracts are not listed because they change on upgrade. They can be looked up in the Controller contract listed in that table. Reports are evaluated against the implementation live at the time of submission.\n\nLivepeer migrated to Arbitrum One under LIP-73, and the L1 protocol contracts on Ethereum mainnet have been paused since February 2022 and remain paused. L1 staking, round progression and ticket redemption are halted, so no exploit path can execute against these contracts.",
   "boostedIntroEvaluating": "",
   "boostedIntroFinished": "",
   "boostedIntroLive": "",
@@ -285,7 +285,7 @@
   "rewardsToken": "USDC",
   "slug": "livepeer",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-08-12T23:06:49.739Z",
+  "updatedDate": "2026-08-13T13:22:06.193Z",
   "impactsBody": "## Repeatable attack limitations\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward.\n\nThe amount of funds at risk will be calculated with the impact of the first attack being at **100**% and then a reduction of **100**% from the amount of the first attack for every **24** hours the attack needs for subsequent attacks from the first attack, rounded down.",
   "websiteUrl": "https://livepeer.org",
   "githubUrl": "https://github.com/livepeer/protocol",
@@ -410,7 +410,7 @@
   ],
   "rewards": [
     {
-      "id": 49965,
+      "id": 50011,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -419,7 +419,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 49966,
+      "id": 50012,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -427,7 +427,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 49967,
+      "id": 50013,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -435,7 +435,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 49968,
+      "id": 50014,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
