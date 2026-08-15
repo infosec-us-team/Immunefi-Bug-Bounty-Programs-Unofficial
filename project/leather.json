@@ -127,7 +127,7 @@
   "rewardsToken": "STX",
   "slug": "leather",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-08-13T10:48:52.552Z",
+  "updatedDate": "2026-08-14T14:43:13.900Z",
   "impactsBody": null,
   "websiteUrl": "https://leather.io/",
   "githubUrl": "https://github.com/leather-io/mono",
@@ -146,14 +146,26 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "**All reports must include a working proof of concept demonstrated against testnet or a local build, clear reproduction steps, and the specific in-scope asset and impact affected.** Reports that are theoretical, that consist of unmodified automated scanner or AI-generated output, or that lack a working PoC will be closed as informational or spam without further review, regardless of claimed severity. Mass-submitted, templated, or duplicate reports will be closed.\n\n**Only the current production releases are in scope:** the latest published build of the Leather extension on the Chrome Web Store, and the latest published build of the Leather mobile app on the Apple App Store and Google Play Store. Pre-release and beta builds, unreleased or experimental code, and any earlier version other than the current published release are out of scope. Reports must demonstrate the issue against the current published build; findings that only affect older versions or unreleased code will be closed as out of scope.\n\nThe following are out of scope for this program:\n\n### Assets and surfaces\n- The Bitcoin, Ordinals, Runes, and Stacks protocols themselves (report Stacks blockchain issues via the Stacks Immunefi program)\n- Third-party dApps, exchanges, or websites that connect to Leather. Only Leather's own provider and connection layer is in scope\n- Third-party services such as fiat onramps, node/RPC providers, and price feeds\n- Marketing or documentation pages on leather.io\n\n### Wallet threat model\n- Anything requiring physical access to an unlocked device, an already compromised, rooted, or jailbroken device, or pre-existing malware on the user's machine\n- Loss of funds from user action, such as sending to the wrong address, approving a transaction after a clear and accurate confirmation screen, choosing a compromised password, using non-mainnet netrworks, or disclosing the secret recovery phrase\n- Any issue requiring a modified, unofficial, or side-loaded build\n\n### On-chain data rendering\n- Misleading token names, scam airdrops, and spoofed NFT or contract metadata. Leather renders what exists on-chain and is not responsible for the accuracy or intent of that data, unless the rendering itself enables code execution or a signing bypass\n\n### Low-value and noise reports\n- Automated scanner or dependency-version output without a working exploit against production\n- Missing security headers or cookie flags, SSL/TLS best practices, and SPF/DKIM/DMARC misconfigurations without a demonstrated exploit chain\n- Version disclosure, fingerprinting, and verbose error messages\n- Rate-limiting and brute-force concerns, including on local wallet unlock\n- CORS, host header injection, content spoofing, tab-nabbing, and clickjacking unless chained to a demonstrated impact on funds, keys, or an active signing session\n- Issues only exploitable on end-of-life browsers or OS versions\n- Self-XSS, and DOM-based XSS unless demonstrated in a stored or privileged context\n- Any theoretical chain without each link demonstrated by a working PoC\n- Denial of service that does not lead to a loss of funds or a signing compromise.\n\n### Prohibited\n- Testing against mainnet with real user funds (use testnet or your own wallets)\n- Phishing or social engineering against Leather staff, contributors, or users\n- Testing third-party systems as the primary attack vector\n- Public disclosure of an unpatched vulnerability before resolution and authorization",
+  "customOutOfScopeInformation": "**All reports must include a working proof of concept demonstrated against testnet or a local build, clear reproduction steps, and the specific in-scope asset and impact affected.** Reports that are theoretical, that consist of unmodified automated scanner or AI-generated output, or that lack a working PoC will be closed as informational or spam without further review, regardless of claimed severity. Mass-submitted, templated, or duplicate reports will be closed.\n\n**Only the current production releases are in scope:** the latest published build of the Leather extension on the Chrome Web Store, and the latest published build of the Leather mobile app on the Apple App Store and Google Play Store. Pre-release and beta builds, unreleased or experimental code, and any earlier version other than the current published release are out of scope. Reports must demonstrate the issue against the current published build; findings that only affect older versions or unreleased code will be closed as out of scope.\n\nBefore submitting, check our open issues (https://github.com/leather-io/mono/issues) and pull requests (https://github.com/leather-io/mono/pulls). Any issue already reported or already being fixed is out of scope.\n\nThe following are out of scope for this program:\n\n### Assets and surfaces\n- The Bitcoin, Ordinals, Runes, and Stacks protocols themselves (report Stacks blockchain issues via the Stacks Immunefi program)\n- Third-party dApps, exchanges, or websites that connect to Leather. Only Leather's own provider and connection layer is in scope\n- Third-party services such as fiat onramps, node/RPC providers, and price feeds\n- Marketing or documentation pages on leather.io\n\n### Wallet threat model\n- Anything requiring physical access to an unlocked device, an already compromised, rooted, or jailbroken device, or pre-existing malware on the user's machine\n- Loss of funds from user action, such as sending to the wrong address, approving a transaction after a clear and accurate confirmation screen, choosing a compromised password, using non-mainnet netrworks, or disclosing the secret recovery phrase\n- Any issue requiring a modified, unofficial, or side-loaded build\n\n### On-chain data rendering\n- Misleading token names, scam airdrops, and spoofed NFT or contract metadata. Leather renders what exists on-chain and is not responsible for the accuracy or intent of that data, unless the rendering itself enables code execution or a signing bypass\n\n### Low-value and noise reports\n- Automated scanner or dependency-version output without a working exploit against production\n- Missing security headers or cookie flags, SSL/TLS best practices, and SPF/DKIM/DMARC misconfigurations without a demonstrated exploit chain\n- Version disclosure, fingerprinting, and verbose error messages\n- Rate-limiting and brute-force concerns, including on local wallet unlock\n- CORS, host header injection, content spoofing, tab-nabbing, and clickjacking unless chained to a demonstrated impact on funds, keys, or an active signing session\n- Issues only exploitable on end-of-life browsers or OS versions\n- Self-XSS, and DOM-based XSS unless demonstrated in a stored or privileged context\n- Any theoretical chain without each link demonstrated by a working PoC\n- Denial of service that does not lead to a loss of funds or a signing compromise.\n\n### Prohibited\n- Testing against mainnet with real user funds (use testnet or your own wallets)\n- Phishing or social engineering against Leather staff, contributors, or users\n- Testing third-party systems as the primary attack vector\n- Public disclosure of an unpatched vulnerability before resolution and authorization",
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 6251,
+      "id": 6297,
       "type": "websites_and_applications",
       "severity": "medium",
-      "title": "Interacting with the wallet's RPC/provider interface from an origin that was never granted permission, or spoofing another origin's granted permissions"
+      "title": "A misleading destination in one field where corrective information is present elsewhere on the same approval (the called contract id, the post-condition asset, the raw args), so an attentive user can detect it; or the attack needs extra preconditions (an attacker-deployed contract the user must choose to interact with, a specific token holding, a phishing step)."
+    },
+    {
+      "id": 6298,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "The wallet displays a benign destination while signing a materially different transfer, and the true destination is disclosed on no part of the approval, so a user exercising normal care is deceived. Requires an approval, but the approval is actively misleading with no corrective signal anywhere."
+    },
+    {
+      "id": 6299,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "The wallet constructs, signs, broadcasts, or derives a transaction or address that moves/receives funds at an attacker-influenced destination, and the correct destination appears nowhere the user could catch it. The substitution is in the bytes/derived address the wallet uses, not a label; no user deception step is required (or it's silent, like a receive-address swap)."
     },
     {
       "id": 35,
@@ -234,6 +246,12 @@
       "title": "Private key or private key generation leakage leading to unauthorized access to user funds"
     },
     {
+      "id": 6251,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Interacting with the wallet's RPC/provider interface from an origin that was never granted permission, or spoofing another origin's granted permissions"
+    },
+    {
       "id": 6205,
       "type": "websites_and_applications",
       "severity": "critical",
@@ -262,12 +280,6 @@
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Tampering with transactions between user approval and signing/broadcast (the signed transaction differs from what was displayed and approved)"
-    },
-    {
-      "id": 6211,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Redirection of user deposits or withdrawals (e.g., substitution or tampering of receive/send addresses displayed or used by the wallet)"
     },
     {
       "id": 6212,
@@ -302,7 +314,7 @@
   ],
   "rewards": [
     {
-      "id": 49872,
+      "id": 50087,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -312,7 +324,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 49873,
+      "id": 50088,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -321,7 +333,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 49874,
+      "id": 50089,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
@@ -330,7 +342,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 49875,
+      "id": 50090,
       "primacy": null,
       "severity": "low",
       "assetType": "websites_and_applications",
