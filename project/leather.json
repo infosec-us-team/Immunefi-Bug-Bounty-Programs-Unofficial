@@ -100,6 +100,9 @@
     "Typescript"
   ],
   "launchDate": "2026-07-30T07:43:00.000Z",
+  "isPaused": false,
+  "pausedAt": null,
+  "pausedMessage": null,
   "logo": "https://qn5bmgziiocgawpp.public.blob.vercel-storage.com/83952-PR6ezgemOROgH6HV6JX5u.png",
   "maxBounty": 5000,
   "outOfScopeAndRules": null,
@@ -113,7 +116,7 @@
   "productType": [
     "Wallet"
   ],
-  "programOverview": "This program covers the Leather wallet applications and their supporting code. We prioritizes the following attack vectors:\n\n- Extraction or leakage of a user's secret recovery phrase or private keys\n- Unauthorized transaction signing, or signing without clear and accurate user consent\n- Manipulation of transaction details (recipient, amount, asset) between what the user approves and what is broadcast\n- Bypass of wallet lock, authentication, or approval flows\n- Compromise of the dApp connection or provider layer leading to any of the above",
+  "programOverview": "This program covers the Leather wallet applications and their supporting code. We prioritizes the following attack vectors:\n\n- Extraction or leakage of a user's secret recovery phrase or private keys\n- Unauthorized transaction signing, or signing without clear and accurate user consent\n- Manipulation of transaction details (recipient, amount, asset) between what the user approves and what is broadcast\n- Bypass of wallet lock, authentication, or approval flows\n- Compromise of the dApp connection or provider layer leading to any of the above\n\n__Program Response SLA__ \nLeather defines its own response and resolution SLA's as described below:\n\n| Severity | Acknowledgement + Triage SLA | Resolution + Payment SLA (starting from date ack'd by Leather) |\n|---|---|---|\n| Critical | 2 weeks | 5 weeks |\n| High | 2 weeks | 6 weeks |\n| Medium | 2 weeks | 7 weeks |\n| Low | 2 weeks | 8 weeks |",
   "programType": [
     "Websites and Applications"
   ],
@@ -127,7 +130,7 @@
   "rewardsToken": "STX",
   "slug": "leather",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-08-14T14:43:13.900Z",
+  "updatedDate": "2026-08-17T10:48:53.384Z",
   "impactsBody": null,
   "websiteUrl": "https://leather.io/",
   "githubUrl": "https://github.com/leather-io/mono",
@@ -166,6 +169,30 @@
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "The wallet constructs, signs, broadcasts, or derives a transaction or address that moves/receives funds at an attacker-influenced destination, and the correct destination appears nowhere the user could catch it. The substitution is in the bytes/derived address the wallet uses, not a label; no user deception step is required (or it's silent, like a receive-address swap)."
+    },
+    {
+      "id": 54,
+      "type": "websites_and_applications",
+      "severity": "low",
+      "title": "Taking over broken or expired outgoing links, such as:\n- Social media handles, etc."
+    },
+    {
+      "id": 6089,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "A loss of funds involving an attack that does not require any user action"
+    },
+    {
+      "id": 6090,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Private key or private key generation leakage leading to unauthorized access to user funds"
+    },
+    {
+      "id": 6251,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Interacting with the wallet's RPC/provider interface from an origin that was never granted permission, or spoofing another origin's granted permissions"
     },
     {
       "id": 35,
@@ -226,30 +253,6 @@
       "type": "websites_and_applications",
       "severity": "medium",
       "title": "Redirecting users to malicious websites (open redirect)"
-    },
-    {
-      "id": 54,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Taking over broken or expired outgoing links, such as:\n- Social media handles, etc."
-    },
-    {
-      "id": 6089,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "A loss of funds involving an attack that does not require any user action"
-    },
-    {
-      "id": 6090,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Private key or private key generation leakage leading to unauthorized access to user funds"
-    },
-    {
-      "id": 6251,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Interacting with the wallet's RPC/provider interface from an origin that was never granted permission, or spoofing another origin's granted permissions"
     },
     {
       "id": 6205,
@@ -314,7 +317,7 @@
   ],
   "rewards": [
     {
-      "id": 50087,
+      "id": 50127,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -324,7 +327,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 50088,
+      "id": 50128,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -333,7 +336,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50089,
+      "id": 50129,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
@@ -342,7 +345,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50090,
+      "id": 50130,
       "primacy": null,
       "severity": "low",
       "assetType": "websites_and_applications",
