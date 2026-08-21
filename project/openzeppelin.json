@@ -114,6 +114,13 @@
   "description": "As the premier crypto cybersecurity technology and services company, we’ve built OpenZeppelin Contracts with our best [security practices](https://contracts.openzeppelin.com/security).",
   "knownIssues": [
     {
+      "id": 1488,
+      "link": "https://github.com/OpenZeppelin/openzeppelin-contracts/issues/6515",
+      "description": "RLP's `decodeBool`, `decodeUint256`, `decodeBytes32`, `decodeBytes`, and `decodeString` accept trailing bytes",
+      "lastUpdatedAt": "2026-08-20T14:06:45.662Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
       "id": 1292,
       "link": "https://github.com/OpenZeppelin/uniswap-hooks/blob/2c39623ce5a5103bd314f1380df0443df2523149/src/general/AntiSandwichHook.sol#L44",
       "description": "In `_beforeSwap`, the hook iterates over all ticks between last tick and current tick. Developers must be aware that for large price changes in pools with small tick spacing, the `for` loop will iterate over a large number of ticks, which could lead to `MemoryOOG` error.",

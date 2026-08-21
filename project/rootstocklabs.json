@@ -256,7 +256,7 @@
   "rewardsToken": "USDC",
   "slug": "rootstocklabs",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-08-19T15:27:03.230Z",
+  "updatedDate": "2026-08-20T10:11:18.052Z",
   "impactsBody": "__Vector Definition__\n\n__Deployment assumptions__\n\n- HSM, middleware, and Powpeg-Node run on the same host.\n- HSM and middleware expose no external network interfaces (no inbound remote access paths).\n- Powpeg-Node is the only externally connected component, used to sync blockchain data and forward it to the middleware, and its public exposure is limited.\n\n__Remote__\n\n“Remote” means the attacker cannot directly reach the HSM or middleware over the network and has no local access to the host. The only realistic remote reachability is indirect, via untrusted but consensus-valid on-chain data produced and propagated by the RSK network, synchronized by Powpeg-Node, and forwarded to the middleware (and subsequently to the HSM) for processing, where it may trigger vulnerable parsing/validation/logic.\n\n__Local__\n\n“Local” means the attacker has obtained root (or equivalent) control of the host running Powpeg-Node, the middleware, and the HSM (for example via shell/SSH access, a compromised account, or malware), but does not require physical access to the machine or device. With this level of access, the attacker can directly issue commands to the HSM via its local interfaces, ultimately affecting HSM operations.\n\n__Physical__\n\n“Physical” means the attacker has obtained physical access to the HSM device, enabling direct interaction and potential hardware tampering. With this level of access, the attacker may be able to probe, manipulate, reset, fault, or modify the device or its connections, potentially bypassing logical protections and ultimately affecting HSM operations.",
   "websiteUrl": "https://www.rootstocklabs.com/",
   "githubUrl": "https://github.com/rsksmart",
@@ -607,7 +607,7 @@
   ],
   "rewards": [
     {
-      "id": 50196,
+      "id": 50216,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -617,7 +617,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 50197,
+      "id": 50217,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -626,7 +626,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50198,
+      "id": 50218,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -635,7 +635,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50199,
+      "id": 50219,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
@@ -644,7 +644,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50200,
+      "id": 50220,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -654,7 +654,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 50201,
+      "id": 50221,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -663,7 +663,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50202,
+      "id": 50222,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -671,7 +671,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 50203,
+      "id": 50223,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
@@ -679,7 +679,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 50204,
+      "id": 50224,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -689,7 +689,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 50205,
+      "id": 50225,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -697,7 +697,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 50206,
+      "id": 50226,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
@@ -705,7 +705,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 50207,
+      "id": 50227,
       "primacy": null,
       "severity": "low",
       "assetType": "websites_and_applications",
