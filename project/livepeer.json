@@ -229,9 +229,19 @@
       "description": "L1Migrator",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
+    },
+    {
+      "id": "100850",
+      "url": "https://github.com/livepeer/go-livepeer",
+      "type": "websites_and_applications",
+      "addedAt": "2026-08-28T16:07:08.110Z",
+      "revision": 0,
+      "description": "go-livepeer node client",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     }
   ],
-  "assetsBodyV2": "Only the contracts in the Assets in Scope table on the Scope tab are considered in-scope of the bug bounty program. Target (implementation) contracts are not listed because they change on upgrade. They can be looked up in the Controller contract listed in that table. Reports are evaluated against the implementation live at the time of submission.\n\nLivepeer migrated to Arbitrum One under LIP-73, and the L1 protocol contracts on Ethereum mainnet have been paused since February 2022 and remain paused. L1 staking, round progression and ticket redemption are halted, so no exploit path can execute against these contracts.",
+  "assetsBodyV2": "Only the contracts in the Assets in Scope table on the Scope tab are considered in-scope of the bug bounty program. Target (implementation) contracts are not listed because they change on upgrade. They can be looked up in the Controller contract listed in that table. Reports are evaluated against the implementation live at the time of submission.\n\nLivepeer migrated to Arbitrum One under LIP-73, and the L1 protocol contracts on Ethereum mainnet have been paused since February 2022 and remain paused. L1 staking, round progression and ticket redemption are halted, so no exploit path can execute against these contracts.\n\nCritical vulnerabilities in the go-livepeer client were recently added to the scope of the program. This scope also includes any direct livepeer hosted and developed dependencies within go-livepeer that lead to the direct critical exploits listed in the program.",
   "boostedIntroEvaluating": "",
   "boostedIntroFinished": "",
   "boostedIntroLive": "",
@@ -252,12 +262,13 @@
   "inviteOnly": false,
   "kyc": true,
   "language": [
-    "Solidity"
+    "Solidity",
+    "Go"
   ],
   "launchDate": "2022-02-25T04:00:00.000Z",
-  "isPaused": false,
-  "pausedAt": null,
-  "pausedMessage": null,
+  "isPaused": true,
+  "pausedAt": "2026-08-28T17:57:18.639Z",
+  "pausedMessage": "Report submissions to Livepeer are temporarily paused while the team reviews their pending items. Stay tuned for updates on Immunefi's Discord",
   "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3UUkKoNVTz0RMrIhQnL0v8/042be0217ef163209cec501313440815/Livepeer_logo.jpeg",
   "maxBounty": 40000,
   "outOfScopeAndRules": null,
@@ -272,9 +283,10 @@
   "productType": [
     "Services"
   ],
-  "programOverview": "Livepeer is a decentralized video streaming network built on the Ethereum blockchain. The Livepeer network already includes over 70,000 GPUs, which is enough aggregated power to encode all of the video streaming through Twitch, YouTube and Facebook combined. Through the power of open source software, the harnessing of underutilized resources like compute and bandwidth, and the use of cryptoeconomic incentives for bootstrapping and participation, there is an opportunity to deliver an infrastructure that can power video streaming applications at a highly efficient price, and infinite scale.\n\nFor more information about Livepeer, please visit [https://livepeer.org/](https://livepeer.org/).  \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield\n  - Permanent freezing of funds\n  - Insolvency\n  - Unintended issuance of LPT on L1\n  - Unexpected calls to functions that should only be called by authorized addresses (i.e. Governor)",
+  "programOverview": "Livepeer is a decentralized video streaming network built on the Ethereum blockchain. The Livepeer network already includes over 70,000 GPUs, which is enough aggregated power to encode all of the video streaming through Twitch, YouTube and Facebook combined. Through the power of open source software, the harnessing of underutilized resources like compute and bandwidth, and the use of cryptoeconomic incentives for bootstrapping and participation, there is an opportunity to deliver an infrastructure that can power video streaming applications at a highly efficient price, and infinite scale.\n\nFor more information about Livepeer, please visit [https://livepeer.org/](https://livepeer.org/).  \n\nThis bug bounty program is focused on their smart contracts and infrastructure client and is focused on preventing:\n\n  - Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield\n  - Permanent freezing of funds\n  - Insolvency\n  - Unintended issuance of LPT on L1\n  - Unexpected calls to functions that should only be called by authorized addresses (i.e. Governor)\n  - Key theft\n  - Unauthorized transaction signing",
   "programType": [
-    "Smart Contract"
+    "Smart Contract",
+    "Websites and Applications"
   ],
   "project": "Livepeer",
   "projectType": [
@@ -288,13 +300,13 @@
   "rewardsToken": "USDC",
   "slug": "livepeer",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-08-13T13:22:06.193Z",
+  "updatedDate": "2026-08-28T16:07:08.349Z",
   "impactsBody": "## Repeatable attack limitations\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward.\n\nThe amount of funds at risk will be calculated with the impact of the first attack being at **100**% and then a reduction of **100**% from the amount of the first attack for every **24** hours the attack needs for subsequent attacks from the first attack, rounded down.",
   "websiteUrl": "https://livepeer.org",
   "githubUrl": "https://github.com/livepeer/protocol",
   "eligibilityCriteria": [],
   "responsiblePublicationCategory": null,
-  "description": "Livepeer is a decentralized video streaming network built on the Ethereum blockchain. The Livepeer network already includes over 70,000 GPUs, which is enough aggregated power to encode all of the video streaming through Twitch, YouTube and Facebook combined.",
+  "description": "Livepeer is a decentralized video streaming and AI infrastructure network built on the Ethereum blockchain. The Livepeer network already includes over 70,000 GPUs, which is enough aggregated power to encode all of the video streaming through Twitch, YouTube and Facebook combined.",
   "knownIssues": [
     {
       "id": 1355,
@@ -317,7 +329,7 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "- Best practice critiques\n  - Oracle failure/manipulation\n  - Consensus failure",
+  "customOutOfScopeInformation": "- Best practice critiques\n  - Oracle failure/manipulation\n  - Consensus failure\n\n- Client usability bugs not effecting theft of user value or keys",
   "customProhibitedActivities": [],
   "impacts": [
     {
@@ -327,40 +339,10 @@
       "title": "Smart contract has unexpected behavior but doesn’t lose value"
     },
     {
-      "id": 23,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of unclaimed yield"
-    },
-    {
-      "id": 25,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of unclaimed yield"
-    },
-    {
-      "id": 27,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Temporary freezing of funds"
-    },
-    {
       "id": 1931,
       "type": "smart_contract",
       "severity": "high",
       "title": "Any unexpected balance inflation when transitioning between L1 and L2"
-    },
-    {
-      "id": 31,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-    },
-    {
-      "id": 32,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Theft of gas"
     },
     {
       "id": 1932,
@@ -373,18 +355,6 @@
       "type": "smart_contract",
       "severity": "medium",
       "title": "Manipulation of protocol governance vote or treasury voting that does not effect the result of the vote"
-    },
-    {
-      "id": 15,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-    },
-    {
-      "id": 17,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
     },
     {
       "id": 1934,
@@ -409,11 +379,95 @@
       "type": "smart_contract",
       "severity": "critical",
       "title": "Direct manipulation treasury voting that manipulate the outcome of the vote resulting in drained funds from the treasury"
+    },
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 27,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 32,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of gas"
+    },
+    {
+      "id": 35,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Execute arbitrary system commands"
+    },
+    {
+      "id": 36,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Retrieve sensitive data/files from a running server, such as:\n- /etc/shadow\n- database passwords\n- blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
+    },
+    {
+      "id": 39,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Taking and/modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:\n- Changing registration information\n- Commenting\n- Voting\n- Making trades\n- Withdrawals, etc."
+    },
+    {
+      "id": 42,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Direct theft of user funds"
+    },
+    {
+      "id": 43,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Malicious interactions with an already-connected wallet, such as:\n- Modifying transaction arguments or parameters\n- Substituting contract addresses\n- Submitting malicious transactions"
+    },
+    {
+      "id": 6089,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "A loss of funds involving an attack that does not require any user action"
+    },
+    {
+      "id": 6090,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Private key or private key generation leakage leading to unauthorized access to user funds"
     }
   ],
   "rewards": [
     {
-      "id": 50011,
+      "id": 50509,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -422,7 +476,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 50012,
+      "id": 50510,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -430,7 +484,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 50013,
+      "id": 50511,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -438,12 +492,21 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 50014,
+      "id": 50512,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
       "fixedReward": 1000,
       "rewardModel": "fixed"
+    },
+    {
+      "id": 50513,
+      "primacy": null,
+      "severity": "critical",
+      "assetType": "websites_and_applications",
+      "maxReward": 40000,
+      "rewardModel": "up_to",
+      "otherImpactMaxReward": 0
     }
   ],
   "audits": []
