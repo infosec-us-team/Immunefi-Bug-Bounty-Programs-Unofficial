@@ -85,7 +85,8 @@
   "evaluationEndDate": null,
   "features": [
     "Subscription Plan: Essential",
-    "Pay to Mediate"
+    "Pay to Mediate",
+    "Pay to Submit"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -99,8 +100,8 @@
     "Python"
   ],
   "launchDate": "2024-08-28T13:00:00.000Z",
-  "isPaused": true,
-  "pausedAt": "2026-08-28T06:43:25.311Z",
+  "isPaused": false,
+  "pausedAt": null,
   "pausedMessage": null,
   "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7rNleS7nuHpc97aucvjUbp/8f9a7d9fbab73c7295370d1900cc5fe4/JitoFoundation.png",
   "maxBounty": 250000,
@@ -136,7 +137,7 @@
   "rewardsToken": "JTO",
   "slug": "jito",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-08-12T20:15:12.758Z",
+  "updatedDate": "2026-08-30T06:23:14.627Z",
   "impactsBody": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
   "websiteUrl": null,
   "githubUrl": null,
@@ -167,10 +168,16 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 6283,
+      "id": 2,
       "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time"
+      "severity": "critical",
+      "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
+    },
+    {
+      "id": 5,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Unintended chain split (network partition)"
     },
     {
       "id": 3,
@@ -209,6 +216,24 @@
       "title": "Shutdown of greater than 10% or equal to but less than 30% of network processing nodes without brute force actions, but does not shut down the network"
     },
     {
+      "id": 5058,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Causing network processing nodes to process transactions from the mempool beyond set parameters"
+    },
+    {
+      "id": 1,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Network not being able to confirm new transactions (total network shutdown)"
+    },
+    {
+      "id": 6283,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time"
+    },
+    {
       "id": 13,
       "type": "blockchain_dlt",
       "severity": "low",
@@ -233,30 +258,6 @@
       "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
     },
     {
-      "id": 1,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Network not being able to confirm new transactions (total network shutdown)"
-    },
-    {
-      "id": 2,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
-    },
-    {
-      "id": 5,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Unintended chain split (network partition)"
-    },
-    {
-      "id": 5058,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Causing network processing nodes to process transactions from the mempool beyond set parameters"
-    },
-    {
       "id": 5057,
       "type": "smart_contract",
       "severity": "high",
@@ -271,7 +272,7 @@
   ],
   "rewards": [
     {
-      "id": 49953,
+      "id": 50521,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -281,7 +282,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 49954,
+      "id": 50522,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -290,7 +291,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 49955,
+      "id": 50523,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -299,7 +300,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 49956,
+      "id": 50524,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
@@ -308,7 +309,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 49957,
+      "id": 50525,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -318,7 +319,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 49958,
+      "id": 50526,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -327,7 +328,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 49959,
+      "id": 50527,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
