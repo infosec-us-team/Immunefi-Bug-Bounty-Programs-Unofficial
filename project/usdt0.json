@@ -419,6 +419,26 @@
       "description": "Primacy of Impact - Critical - Direct theft of funds",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": true
+    },
+    {
+      "id": "100910",
+      "url": "https://stellar.expert/explorer/public/contract/CA3GUWLOS3QKN6WNRAELSUDSKLDTVTWEDJ3KLGAJG3SIWGA5L3KZYWGJ",
+      "type": "smart_contract",
+      "addedAt": "2026-09-01T13:34:36.600Z",
+      "revision": 0,
+      "description": "SAC Manager Stellar",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "100911",
+      "url": "https://stellar.expert/explorer/public/contract/CBOWOLFSDM5PZXNFIVDMP5NZ7U2GSIHED6H6R446QOHF266XINKUMMF6",
+      "type": "smart_contract",
+      "addedAt": "2026-09-01T13:34:36.600Z",
+      "revision": 0,
+      "description": "OApp Stellar",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": null,
@@ -433,7 +453,8 @@
   "evaluationEndDate": null,
   "features": [
     "Subscription Plan: Pro",
-    "Managed Triage: Signal Booster"
+    "Managed Triage: Signal Booster",
+    "Pay to Mediate"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -469,7 +490,7 @@
     "Defi",
     "Infrastructure"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Calculation for Critical Level Reports__\n\nCritical Smart Contracts reports are reports that affect USDT redemptions on Ethereum, by either exploiting the Lockbox on ETH, or minting unbacked USDT0 on receival chains that will then be able to be redeemed on ETH.\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 6 000 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 50 000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n\nUSDT0 is built on LayerZero, using the OFT v2 standard. Reports with impacts that are  already covered under the LayerZero Bug Bounty Program will be forwarded to the relevant LayerZero Bug Bounty Program. If the report is accepted by LayerZero's program, rewards will be determined and paid through their bounty program. Additional rewards from the USDT0 program for such issues are discretionary and may be awarded by the USDT0 team.\n\n\nFor the Protocol Insolvency impact, the amount considered at risk is the amount of USDT tokens kept in the USDT0 lockbox on ETH.\n\n__Repeatable Attack Limitations__\n\n- If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n- For critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the USDT0 team directly and are denominated in USD. However, payments are done in Fiat USD via wire transfer or USDT and USDT0.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Calculation for Critical Level Reports__\n\nCritical Smart Contracts reports are reports that affect USDT redemptions on Ethereum, by either exploiting the Lockbox on ETH, or minting unbacked USDT0 on receival chains that will then be able to be redeemed on ETH.\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected, up to a maximum of USD 6 000 000 for vulnerabilities affecting EVM-compatible chains and USD 1 000 000 for vulnerabilities affecting non-EVM chains. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 50 000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n\nUSDT0 is built on LayerZero, using the OFT v2 standard. Reports with impacts that are  already covered under the LayerZero Bug Bounty Program will be forwarded to the relevant LayerZero Bug Bounty Program. If the report is accepted by LayerZero's program, rewards will be determined and paid through their bounty program. Additional rewards from the USDT0 program for such issues are discretionary and may be awarded by the USDT0 team.\n\n\nFor the Protocol Insolvency impact, the amount considered at risk is the amount of USDT tokens kept in the USDT0 lockbox on ETH.\n\n__Repeatable Attack Limitations__\n\n- If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n- For critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the USDT0 team directly and are denominated in USD. However, payments are done in Fiat USD via wire transfer or USDT and USDT0.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -477,7 +498,7 @@
   "rewardsToken": "",
   "slug": "usdt0",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-04-15T14:44:16.852Z",
+  "updatedDate": "2026-09-01T13:34:37.189Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -526,7 +547,7 @@
   ],
   "rewards": [
     {
-      "id": 44898,
+      "id": 50564,
       "primacy": "primacy_of_impact",
       "severity": "critical",
       "assetType": "smart_contract",
@@ -536,7 +557,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 44899,
+      "id": 50565,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
