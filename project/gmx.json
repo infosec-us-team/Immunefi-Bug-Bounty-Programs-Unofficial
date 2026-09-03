@@ -2517,7 +2517,8 @@
   "features": [
     "Managed Triage: Signal Booster",
     "Subscription Plan: Pro",
-    "Pay to Mediate"
+    "Pay to Mediate",
+    "Pay to Submit"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -2566,7 +2567,7 @@
   "rewardsToken": "ETH or USDC",
   "slug": "gmx",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-08-28T13:53:07.712Z",
+  "updatedDate": "2026-09-02T08:15:27.630Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -2609,14 +2610,14 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "**Smart Contracts and Blockchain**\n  - Best practice critiques\n  - If the GLP pool has a high utilization not all GLP tokens will be immediately redeemable, the borrowing fee should increase in this case and is \n    considered regular operation\n  - Denial of service attacks are out of scope if the attack can be bypassed, for example, an attacker can front-run a user proposal with identical \n    parameters to ProtocolGovernor, this can be bypassed by ending the proposal with #proposer=0x…, these kinds of attacks are out of scope\n\n\n**Websites and Apps**\n  - Attacks requiring privileged access from within the organization\n  - Feature requests\n  - Best practices\n  - Vulnerabilities primarily caused by browser/plugin defects\n  - Any vulnerability exploit requiring CSP bypass resulting from a browser bug\n  - Vulnerabilities that require compromise of the user’s machine / browser \n  - Community-developed applications such as those on the ecosystem page\n  - Clickjacking Vulnerabilities\n  - Denial of service attacks on services used by the interface will be given a low classification unless the attack prevents trading or withdrawal of \n    liquidity using the interface\n",
+  "customOutOfScopeInformation": "**Smart Contracts and Blockchain**\n  - Best practice critiques\n  - If the GLP pool has a high utilization not all GLP tokens will be immediately redeemable, the borrowing fee should increase in this case and is \n    considered regular operation\n  - Denial of service attacks are out of scope if the attack can be bypassed, for example, an attacker can front-run a user proposal with identical \n    parameters to ProtocolGovernor, this can be bypassed by ending the proposal with #proposer=0x…, these kinds of attacks are out of scope\n\n\n**Websites and Apps**\n  - Attacks requiring privileged access from within the organization\n  - Feature requests\n  - Best practices\n  - Vulnerabilities primarily caused by browser/plugin defects\n  - Any vulnerability exploit requiring CSP bypass resulting from a browser bug\n  - Vulnerabilities that require compromise of the user’s machine / browser \n  - Community-developed applications such as those on the ecosystem page\n  - Clickjacking Vulnerabilities\n  - Denial of service attacks on services used by the interface will be given a low classification unless the attack prevents trading or withdrawal of \n    liquidity using the interface",
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 41,
-      "type": "websites_and_applications",
+      "id": 5178,
+      "type": "smart_contract",
       "severity": "critical",
-      "title": "Subdomain takeover with already-connected wallet interaction"
+      "title": "Loss of user funds by freezing, theft, or manipulation of the price of GLP"
     },
     {
       "id": 15,
@@ -2709,28 +2710,22 @@
       "title": "Redirecting users to malicious websites (open redirect)"
     },
     {
-      "id": 5178,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Loss of user funds by freezing, theft, or manipulation of the price of GLP"
-    },
-    {
-      "id": 50,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Changing the first/last name of user\n- Enabling/disabling notifications"
-    },
-    {
-      "id": 46,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:\n- HTML injection without JavaScript\n- Replacing existing text with arbitrary text\n- Arbitrary file uploads, etc."
-    },
-    {
       "id": 35,
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Execute arbitrary system commands"
+    },
+    {
+      "id": 37,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Taking down the application/website"
+    },
+    {
+      "id": 41,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Subdomain takeover with already-connected wallet interaction"
     },
     {
       "id": 43,
@@ -2739,10 +2734,16 @@
       "title": "Malicious interactions with an already-connected wallet, such as:\n- Modifying transaction arguments or parameters\n- Substituting contract addresses\n- Submitting malicious transactions"
     },
     {
-      "id": 37,
+      "id": 46,
       "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Taking down the application/website"
+      "severity": "high",
+      "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:\n- HTML injection without JavaScript\n- Replacing existing text with arbitrary text\n- Arbitrary file uploads, etc."
+    },
+    {
+      "id": 50,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Changing the first/last name of user\n- Enabling/disabling notifications"
     },
     {
       "id": 5179,
@@ -2813,7 +2814,7 @@
   ],
   "rewards": [
     {
-      "id": 50496,
+      "id": 50639,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -2822,7 +2823,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 50497,
+      "id": 50640,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -2830,7 +2831,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 50498,
+      "id": 50641,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -2838,7 +2839,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 50499,
+      "id": 50642,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -2847,7 +2848,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 50500,
+      "id": 50643,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -2855,7 +2856,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 50501,
+      "id": 50644,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
