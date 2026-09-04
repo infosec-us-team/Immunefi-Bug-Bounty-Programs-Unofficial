@@ -629,6 +629,16 @@
       "description": "Origin Website",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
+    },
+    {
+      "id": "100917",
+      "url": "https://etherscan.io/address/0xad2b1657E2c3243750B32Cb9A51169575945b05B",
+      "type": "smart_contract",
+      "addedAt": "2026-09-03T16:36:15.337Z",
+      "revision": 0,
+      "description": "OETH Vault Lens",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": "The Assets in Scope list is the source of truth. An asset is covered only at the address and on the chain shown in the list. If the same address is deployed on more than one chain, each deployment must be listed separately.\n\nFor proxies, the implementation active when the report was submitted is covered through the listed proxy. Researchers do not need a separate entry for that implementation, but must demonstrate the impact through the production proxy or against user funds held by the implementation itself.\n\nThe contract registry and repositories are references only and do not add assets to scope. Undeployed contracts and test deployments are not covered.\n\nExternal tokens, pools, lending markets, bridges, withdrawal queues, oracles, validators, and other third-party systems are not Origin assets unless listed. A vulnerability in Origin's integration with one of these systems can still qualify through the affected Origin contract.\n\nExcept for Smart Contract Critical reports that qualify under Primacy of Impact as described in the Rewards section, unlisted assets are not covered. High, Medium, and Low impacts against unlisted assets remain ineligible.",
@@ -694,7 +704,7 @@
   "rewardsToken": "OUSD",
   "slug": "originprotocol",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-09-02T15:15:29.856Z",
+  "updatedDate": "2026-09-03T16:36:15.643Z",
   "impactsBody": "We use the Immunefi Vulnerability Severity Classification System V2.3 (the Immunefi V2.3 risk matrix), together with Origin's rules on production exploitability. The final severity depends on what the bug can do and how realistic the exploit was in production when the report arrived.\n\nWe are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n**Smart Contracts and Blockchain**\n\n- Re-entrancy\n- Logic errors\n  - including user authentication errors\n- Solidity/EVM details not considered\n  - including integer over-/under-flow\n  - including unhandled exceptions\n- Trusting trust/dependency vulnerabilities\n  - including composability vulnerabilities\n- Oracle failure/manipulation\n- Novel governance attacks\n- Economic/financial attacks\n  - including flash loan attacks\n- Cryptography problems\n  - Signature malleability\n  - Susceptibility to replay attacks\n  - Weak randomness\n  - Weak encryption\n- Missing access controls / unprotected internal or debugging interfaces\n\nA financial issue is Critical only if the loss path worked on mainnet at submission, put at least USD 50,000 immediately at risk, and is classified as Critical under the Immunefi V2.3 risk matrix. Otherwise we classify it as High, Medium, Low, or ineligible based on the facts.\n\nLoss socialization is Medium at most and is unlikely to receive a reward. A theoretical concern, accounting mismatch, or best-practice issue is not enough without a reproducible impact that works in the current state.\n\n**Websites and Apps**\n\n- Remote Code Execution\n- Trusting trust/dependency vulnerabilities\n- Vertical Privilege Escalation\n- XML External Entities Injection\n- SQL Injection\n- LFI/RFI\n- Horizontal Privilege Escalation\n- Stored XSS\n- Reflective XSS with impact\n- CSRF with impact\n- Direct object reference\n- Internal SSRF\n- Session fixation\n- Insecure Deserialization\n- DOM XSS\n- SSL misconfigurations\n- SSL/TLS issues (weak crypto, improper setup)\n- URL redirect\n- Clickjacking (must be accompanied with PoC)\n- Misleading Unicode text (e.g. using right to left override characters)\n\nFor websites and apps, eligible impacts include command execution, signing or submitting malicious transactions for users, redirecting deposits or withdrawals, changing wallet interactions to cause a loss, or taking over an Origin-controlled subdomain in a way that causes a financial impact.",
   "websiteUrl": "https://www.originprotocol.com/",
   "githubUrl": "https://github.com/OriginProtocol",
@@ -798,7 +808,7 @@
   ],
   "rewards": [
     {
-      "id": 50657,
+      "id": 50696,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -807,7 +817,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 50658,
+      "id": 50697,
       "primacy": "primacy_of_rules",
       "severity": "high",
       "assetType": "smart_contract",
@@ -816,7 +826,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50659,
+      "id": 50698,
       "primacy": "primacy_of_rules",
       "severity": "critical",
       "assetType": "websites_and_applications",
