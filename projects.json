@@ -2,6 +2,259 @@
   {
     "assets": [
       {
+        "id": "98981",
+        "url": "https://polygonscan.com/address/0xfdc7b8bFe0DD3513Cc669bB8d601Cb83e2F69cB0",
+        "type": "smart_contract",
+        "addedAt": "2026-02-17T15:53:24.620Z",
+        "revision": 0,
+        "description": "PoolFactory and linked contracts",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "98982",
+        "url": "https://optimistic.etherscan.io/address/0x5e61a079A178f0E5784107a4963baAe0c5a680c6",
+        "type": "smart_contract",
+        "addedAt": "2026-02-17T15:53:24.620Z",
+        "revision": 0,
+        "description": "PoolFactory and linked contracts",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "98983",
+        "url": "https://etherscan.io/address/0x96D33bCF84DdE326014248E2896F79bbb9c13D6d",
+        "type": "smart_contract",
+        "addedAt": "2026-02-17T15:53:24.620Z",
+        "revision": 0,
+        "description": "PoolFactory and linked contracts",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "98984",
+        "url": "https://basescan.org/address/0x49Afe3abCf66CF09Fab86cb1139D8811C8afe56F",
+        "type": "smart_contract",
+        "addedAt": "2026-02-17T15:53:24.620Z",
+        "revision": 0,
+        "description": "PoolFactory and linked contracts",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "98985",
+        "url": "https://arbiscan.io/address/0xffFb5fB14606EB3a548C113026355020dDF27535",
+        "type": "smart_contract",
+        "addedAt": "2026-02-17T15:53:24.620Z",
+        "revision": 0,
+        "description": "PoolFactory and linked contracts",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100928",
+        "url": "https://dhedge.org/",
+        "type": "smart_contract",
+        "addedAt": "2026-09-06T18:41:15.051Z",
+        "revision": 0,
+        "description": "Primacy of Impact",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": true
+      },
+      {
+        "id": "100929",
+        "url": "https://hyperevmscan.io/address/0x615037C2Df6FA97634c5aD2d8144708b9dd3B176",
+        "type": "smart_contract",
+        "addedAt": "2026-09-06T18:41:15.051Z",
+        "revision": 0,
+        "description": "PoolFactory and linked contracts",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      }
+    ],
+    "assetsBodyV2": "Deployed contracts that are currently linked to the PoolFactory are considered in scope. Linked contracts include, but not limited to: vault implementation contracts (PoolLogic, PoolManagerLogic), numerous contract/asset guards (3rd party integrations related code) and price aggregator contracts used for assets pricing.",
+    "boostedIntroEvaluating": "",
+    "boostedIntroFinished": "",
+    "boostedIntroLive": "",
+    "boostedIntroStartingIn": "",
+    "boostedLeaderboard": [],
+    "boostedSummaryReport": null,
+    "ecosystem": [
+      "Arbitrum",
+      "Base",
+      "ETH",
+      "Optimism",
+      "Polygon"
+    ],
+    "endDate": null,
+    "evaluationEndDate": null,
+    "features": [
+      "Pay to Mediate"
+    ],
+    "hideAssetsInScope": null,
+    "immunefiStandard": true,
+    "inviteOnly": false,
+    "kyc": false,
+    "language": [
+      "Solidity"
+    ],
+    "launchDate": "2021-11-09T12:00:00.000Z",
+    "isPaused": false,
+    "pausedAt": null,
+    "pausedMessage": null,
+    "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7jfCx6b5D8nfAMemuBnaOW/25d35d4095909785d015401d8cff263f/dHEDGE_logo.jpeg",
+    "maxBounty": 50000,
+    "outOfScopeAndRules": null,
+    "pocPerTypeAndSeverity": [],
+    "primaryPaymentWallet": "EVM",
+    "prioritizedVulnerabilities": "_blank_",
+    "productType": [
+      "Asset Management"
+    ],
+    "programOverview": "dHEDGE is a one-stop location for managing investment activities on the blockchain where you can put your capital to work in different strategies based on a transparent track record. Multi-chain, non-custodial, decentralized asset management integrated with multiple protocols; allowing for trades, providing liquidity and yield farming.\n\nFor more information about dHEDGE, please visit [https://app.dhedge.org/](https://app.dhedge.org/).   \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Loss of user funds by freezing or theft\n  - Loss of governance funds\n  - Theft of unclaimed yield\n  - Freezing of unclaimed yield\n  - Temporary freezing of funds for any amount of time\n  - Deposit and withdrawal bugs\n  - Protocol integration bugs",
+    "programType": [
+      "Smart Contract"
+    ],
+    "project": "dHEDGE",
+    "projectType": [
+      "Defi"
+    ],
+    "rewardsBody": "If a vulnerability is found in integration-related contracts (such as contract guards or asset guards), the funds at risk should be calculated per chain, based on which deployments actually include the affected integration.\n\nIn the dHEDGE system, managers/traders are generally not considered trusted, and issues exploitable by a manager/trader are typically treated as putting user funds at risk. However, this assumption does not apply to vaults managed directly by the protocol team. Vaults operated by dHEDGE itself or by incubated protocols under its operational control (e.g., Toros, mStable) should be considered trusted. Therefore, if a vulnerability is exploitable only by a permissioned manager/trader, the funds at risk should exclude vaults under direct team management.\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk.",
+    "rewardsPool": 0,
+    "primaryPool": 0,
+    "allStarsPool": 0,
+    "podiumPool": 0,
+    "rewardsToken": "USDC",
+    "slug": "dhedge",
+    "tenPercentEconomicRule": false,
+    "updatedDate": "2026-09-06T18:41:15.176Z",
+    "impactsBody": "dHEDGE vaults are trust minimized, meaning that the vault manager may not follow a set strategy, or may make bad trades, including trades with poor slippage. A complete loss of funds is possible via poor risk-management strategies by the manager. These types of losses are not in scope for the bounty.",
+    "websiteUrl": "https://dhedge.org/",
+    "githubUrl": "https://github.com/dhedge/V2-Public",
+    "eligibilityCriteria": [],
+    "responsiblePublicationCategory": "category_3",
+    "description": "dHEDGE is a one-stop location for managing investment activities on the blockchain where you can put your capital to work in different strategies based on a transparent track record. Multi-chain, non-custodial, decentralized asset management integrated with multiple protocols; allowing for trades, providing liquidity and yield farming.",
+    "knownIssues": [],
+    "defaultOutOfScopeBlockchain": null,
+    "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+    "defaultOutOfScopeWebAndApplications": null,
+    "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+    "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+    "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+    "customOutOfScopeInformation": "  - Attacks by privileged manager accounts which relate to poor trading practices or slippage. \n  - Best practice critiques",
+    "customProhibitedActivities": [],
+    "impacts": [
+      {
+        "id": 15,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+      },
+      {
+        "id": 17,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Permanent freezing of funds"
+      },
+      {
+        "id": 27,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Temporary freezing of funds"
+      }
+    ],
+    "rewards": [
+      {
+        "id": 50711,
+        "primacy": null,
+        "severity": "critical",
+        "assetType": "smart_contract",
+        "maxReward": 50000,
+        "minReward": 2000,
+        "rewardModel": "range",
+        "rewardCalculationPercentage": 0.1
+      },
+      {
+        "id": 50712,
+        "primacy": null,
+        "severity": "high",
+        "assetType": "smart_contract",
+        "fixedReward": 1000,
+        "rewardModel": "fixed"
+      }
+    ],
+    "audits": [
+      {
+        "id": "1296",
+        "url": "https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Ff03kK69OTEEthfwi6VoC%2Fuploads%2FoacAphKLdPdHKiU9sPIw%2FSherlock%20Audit%20%E2%80%93%20mStable%20Pendled%20sUSDe%20(via%20dHEDGE).pdf?alt=media&token=b53f3638-0019-48a8-af2a-b8affc8471f5",
+        "auditor": "Sherlock",
+        "date": "2025-09-06T00:00:00.000Z"
+      },
+      {
+        "id": "1297",
+        "url": "https://github.com/santipu03/santipu03/blob/main/private-audits/dHEDGE_GMX.md",
+        "auditor": "Santipu",
+        "date": "2025-01-20T00:00:00.000Z"
+      },
+      {
+        "id": "1298",
+        "url": "https://github.com/santipu03/santipu03/blob/main/private-audits/dHEDGE_Aave.md",
+        "auditor": "Santipu",
+        "date": "2025-01-15T00:00:00.000Z"
+      },
+      {
+        "id": "1299",
+        "url": "https://github.com/santipu03/santipu03/blob/main/private-audits/dHEDGE_SAW.md",
+        "auditor": "Santipu",
+        "date": "2024-10-07T00:00:00.000Z"
+      },
+      {
+        "id": "1300",
+        "url": "https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Ff03kK69OTEEthfwi6VoC%2Fuploads%2F5G6Izg7noSGT7QsvSeho%2FdHEDGE%20Trust%20Security%20Audit.pdf?alt=media&token=66115a16-ef90-47af-b01d-f757248ddcea",
+        "auditor": "Trust Security",
+        "date": "2024-09-04T00:00:00.000Z"
+      },
+      {
+        "id": "1301",
+        "url": "https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Ff03kK69OTEEthfwi6VoC%2Fuploads%2Fo3epQZwV9tbnGp8EclE2%2FSherlock%20dhedge-audit-report.pdf?alt=media&token=9b5fed38-6f68-4274-9b9b-4eed9920c908",
+        "auditor": "Sherlock",
+        "date": "2024-06-01T00:00:00.000Z"
+      },
+      {
+        "id": "1302",
+        "url": "https://iosiro.com/audits/dhedge-synthetix-v3-integration-smart-contract-audit",
+        "auditor": "iosiro",
+        "date": "2023-12-03T00:00:00.000Z"
+      },
+      {
+        "id": "1303",
+        "url": "https://github.com/zobront/audits/blob/main/reports/dhedge.md",
+        "auditor": "Zach Obront",
+        "date": "2023-05-31T00:00:00.000Z"
+      },
+      {
+        "id": "1304",
+        "url": "https://skynet.certik.com/projects/dhedge?auditId=dHEDGE%20V2#code-security",
+        "auditor": "CertiK",
+        "date": "2021-07-03T00:00:00.000Z"
+      },
+      {
+        "id": "1305",
+        "url": "https://iosiro.com/audits/dhedge-differential-smart-contract-audit",
+        "auditor": "iosiro",
+        "date": "2021-03-06T00:00:00.000Z"
+      },
+      {
+        "id": "1306",
+        "url": "https://iosiro.com/audits/dhedge-platform-smart-contract-audit",
+        "auditor": "iosiro",
+        "date": "2020-09-01T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "assets": [
+      {
         "id": "24Esrb8lfc3jwweS901NYx",
         "url": "https://etherscan.io/address/0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
         "type": "smart_contract",
@@ -94700,237 +94953,6 @@
         "url": "https://github.com/solidity-labs-io/kleidi/tree/main/audit",
         "auditor": "All Audits",
         "date": "2026-02-13T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "assets": [
-      {
-        "id": "98981",
-        "url": "https://polygonscan.com/address/0xfdc7b8bFe0DD3513Cc669bB8d601Cb83e2F69cB0",
-        "type": "smart_contract",
-        "addedAt": "2026-02-17T15:53:24.620Z",
-        "revision": 0,
-        "description": "PoolFactory and linked contracts",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "98982",
-        "url": "https://optimistic.etherscan.io/address/0x5e61a079A178f0E5784107a4963baAe0c5a680c6",
-        "type": "smart_contract",
-        "addedAt": "2026-02-17T15:53:24.620Z",
-        "revision": 0,
-        "description": "PoolFactory and linked contracts",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "98983",
-        "url": "https://etherscan.io/address/0x96D33bCF84DdE326014248E2896F79bbb9c13D6d",
-        "type": "smart_contract",
-        "addedAt": "2026-02-17T15:53:24.620Z",
-        "revision": 0,
-        "description": "PoolFactory and linked contracts",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "98984",
-        "url": "https://basescan.org/address/0x49Afe3abCf66CF09Fab86cb1139D8811C8afe56F",
-        "type": "smart_contract",
-        "addedAt": "2026-02-17T15:53:24.620Z",
-        "revision": 0,
-        "description": "PoolFactory and linked contracts",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "98985",
-        "url": "https://arbiscan.io/address/0xffFb5fB14606EB3a548C113026355020dDF27535",
-        "type": "smart_contract",
-        "addedAt": "2026-02-17T15:53:24.620Z",
-        "revision": 0,
-        "description": "PoolFactory and linked contracts",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      }
-    ],
-    "assetsBodyV2": "Deployed contracts that are currently linked to the PoolFactory are considered in scope. Linked contracts include, but not limited to: vault implementation contracts (PoolLogic, PoolManagerLogic), numerous contract/asset guards (3rd party integrations related code) and price aggregator contracts used for assets pricing.",
-    "boostedIntroEvaluating": "",
-    "boostedIntroFinished": "",
-    "boostedIntroLive": "",
-    "boostedIntroStartingIn": "",
-    "boostedLeaderboard": [],
-    "boostedSummaryReport": null,
-    "ecosystem": [
-      "Arbitrum",
-      "Base",
-      "ETH",
-      "Optimism",
-      "Polygon"
-    ],
-    "endDate": null,
-    "evaluationEndDate": null,
-    "features": [],
-    "hideAssetsInScope": null,
-    "immunefiStandard": true,
-    "inviteOnly": false,
-    "kyc": false,
-    "language": [
-      "Solidity"
-    ],
-    "launchDate": "2021-11-09T12:00:00.000Z",
-    "isPaused": false,
-    "pausedAt": null,
-    "pausedMessage": null,
-    "logo": "https://images.ctfassets.net/t3wqy70tc3bv/7jfCx6b5D8nfAMemuBnaOW/25d35d4095909785d015401d8cff263f/dHEDGE_logo.jpeg",
-    "maxBounty": 50000,
-    "outOfScopeAndRules": null,
-    "pocPerTypeAndSeverity": [],
-    "primaryPaymentWallet": "EVM",
-    "prioritizedVulnerabilities": "_blank_",
-    "productType": [
-      "Asset Management"
-    ],
-    "programOverview": "dHEDGE is a one-stop location for managing investment activities on the blockchain where you can put your capital to work in different strategies based on a transparent track record. Multi-chain, non-custodial, decentralized asset management integrated with multiple protocols; allowing for trades, providing liquidity and yield farming.\n\nFor more information about dHEDGE, please visit [https://app.dhedge.org/](https://app.dhedge.org/).   \n\nThis bug bounty program is focused on their smart contracts and is focused on preventing:\n\n  - Loss of user funds by freezing or theft\n  - Loss of governance funds\n  - Theft of unclaimed yield\n  - Freezing of unclaimed yield\n  - Temporary freezing of funds for any amount of time\n  - Deposit and withdrawal bugs\n  - Protocol integration bugs",
-    "programType": [
-      "Smart Contract"
-    ],
-    "project": "dHEDGE",
-    "projectType": [
-      "Defi"
-    ],
-    "rewardsBody": "If a vulnerability is found in integration-related contracts (such as contract guards or asset guards), the funds at risk should be calculated per chain, based on which deployments actually include the affected integration.\n\nIn the dHEDGE system, managers/traders are generally not considered trusted, and issues exploitable by a manager/trader are typically treated as putting user funds at risk. However, this assumption does not apply to vaults managed directly by the protocol team. Vaults operated by dHEDGE itself or by incubated protocols under its operational control (e.g., Toros, mStable) should be considered trusted. Therefore, if a vulnerability is exploitable only by a permissioned manager/trader, the funds at risk should exclude vaults under direct team management.\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk.",
-    "rewardsPool": 0,
-    "primaryPool": 0,
-    "allStarsPool": 0,
-    "podiumPool": 0,
-    "rewardsToken": "USDC",
-    "slug": "dhedge",
-    "tenPercentEconomicRule": false,
-    "updatedDate": "2026-02-17T16:15:11.006Z",
-    "impactsBody": "dHEDGE vaults are trust minimized, meaning that the vault manager may not follow a set strategy, or may make bad trades, including trades with poor slippage. A complete loss of funds is possible via poor risk-management strategies by the manager. These types of losses are not in scope for the bounty.",
-    "websiteUrl": "https://dhedge.org/",
-    "githubUrl": "https://github.com/dhedge/V2-Public",
-    "eligibilityCriteria": [],
-    "responsiblePublicationCategory": "category_3",
-    "description": "dHEDGE is a one-stop location for managing investment activities on the blockchain where you can put your capital to work in different strategies based on a transparent track record. Multi-chain, non-custodial, decentralized asset management integrated with multiple protocols; allowing for trades, providing liquidity and yield farming.",
-    "knownIssues": [],
-    "defaultOutOfScopeBlockchain": null,
-    "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-    "defaultOutOfScopeWebAndApplications": null,
-    "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
-    "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-    "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-    "customOutOfScopeInformation": "  - Attacks by privileged manager accounts which relate to poor trading practices or slippage. \n  - Best practice critiques",
-    "customProhibitedActivities": [],
-    "impacts": [
-      {
-        "id": 15,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-      },
-      {
-        "id": 17,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Permanent freezing of funds"
-      },
-      {
-        "id": 27,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Temporary freezing of funds"
-      }
-    ],
-    "rewards": [
-      {
-        "id": 41068,
-        "primacy": null,
-        "severity": "critical",
-        "assetType": "smart_contract",
-        "maxReward": 50000,
-        "minReward": 2000,
-        "rewardModel": "range",
-        "rewardCalculationPercentage": 0.1
-      },
-      {
-        "id": 41069,
-        "primacy": null,
-        "severity": "high",
-        "assetType": "smart_contract",
-        "fixedReward": 1000,
-        "rewardModel": "fixed"
-      }
-    ],
-    "audits": [
-      {
-        "id": "1296",
-        "url": "https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Ff03kK69OTEEthfwi6VoC%2Fuploads%2FoacAphKLdPdHKiU9sPIw%2FSherlock%20Audit%20%E2%80%93%20mStable%20Pendled%20sUSDe%20(via%20dHEDGE).pdf?alt=media&token=b53f3638-0019-48a8-af2a-b8affc8471f5",
-        "auditor": "Sherlock",
-        "date": "2025-09-06T00:00:00.000Z"
-      },
-      {
-        "id": "1297",
-        "url": "https://github.com/santipu03/santipu03/blob/main/private-audits/dHEDGE_GMX.md",
-        "auditor": "Santipu",
-        "date": "2025-01-20T00:00:00.000Z"
-      },
-      {
-        "id": "1298",
-        "url": "https://github.com/santipu03/santipu03/blob/main/private-audits/dHEDGE_Aave.md",
-        "auditor": "Santipu",
-        "date": "2025-01-15T00:00:00.000Z"
-      },
-      {
-        "id": "1299",
-        "url": "https://github.com/santipu03/santipu03/blob/main/private-audits/dHEDGE_SAW.md",
-        "auditor": "Santipu",
-        "date": "2024-10-07T00:00:00.000Z"
-      },
-      {
-        "id": "1300",
-        "url": "https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Ff03kK69OTEEthfwi6VoC%2Fuploads%2F5G6Izg7noSGT7QsvSeho%2FdHEDGE%20Trust%20Security%20Audit.pdf?alt=media&token=66115a16-ef90-47af-b01d-f757248ddcea",
-        "auditor": "Trust Security",
-        "date": "2024-09-04T00:00:00.000Z"
-      },
-      {
-        "id": "1301",
-        "url": "https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Ff03kK69OTEEthfwi6VoC%2Fuploads%2Fo3epQZwV9tbnGp8EclE2%2FSherlock%20dhedge-audit-report.pdf?alt=media&token=9b5fed38-6f68-4274-9b9b-4eed9920c908",
-        "auditor": "Sherlock",
-        "date": "2024-06-01T00:00:00.000Z"
-      },
-      {
-        "id": "1302",
-        "url": "https://iosiro.com/audits/dhedge-synthetix-v3-integration-smart-contract-audit",
-        "auditor": "iosiro",
-        "date": "2023-12-03T00:00:00.000Z"
-      },
-      {
-        "id": "1303",
-        "url": "https://github.com/zobront/audits/blob/main/reports/dhedge.md",
-        "auditor": "Zach Obront",
-        "date": "2023-05-31T00:00:00.000Z"
-      },
-      {
-        "id": "1304",
-        "url": "https://skynet.certik.com/projects/dhedge?auditId=dHEDGE%20V2#code-security",
-        "auditor": "CertiK",
-        "date": "2021-07-03T00:00:00.000Z"
-      },
-      {
-        "id": "1305",
-        "url": "https://iosiro.com/audits/dhedge-differential-smart-contract-audit",
-        "auditor": "iosiro",
-        "date": "2021-03-06T00:00:00.000Z"
-      },
-      {
-        "id": "1306",
-        "url": "https://iosiro.com/audits/dhedge-platform-smart-contract-audit",
-        "auditor": "iosiro",
-        "date": "2020-09-01T00:00:00.000Z"
       }
     ]
   },
