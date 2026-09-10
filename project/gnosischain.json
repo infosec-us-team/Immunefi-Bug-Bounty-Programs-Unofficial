@@ -4,37 +4,41 @@
       "id": "39I4UubBcljARlt90OaRGQ",
       "url": "https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016",
       "type": "smart_contract",
-      "addedAt": "2022-05-10T15:42:40.273Z",
-      "revision": 2,
+      "addedAt": "2022-05-10T15:42:40.006Z",
+      "revision": 0,
       "description": "XDaiForeignBridge: DAI-xDAI TokenBridge contract on the Ethereum Mainnet ",
-      "isPrimacyOfImpact": null
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     },
     {
       "id": "6VGumskpUySCP01OvbYYMn",
       "url": "https://blockscout.com/xdai/mainnet/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6",
       "type": "smart_contract",
-      "addedAt": "2022-05-10T15:42:41.409Z",
-      "revision": 2,
+      "addedAt": "2022-05-10T15:42:40.965Z",
+      "revision": 0,
       "description": "HomeBridgeErcToNative: DAI-xDAI TokenBridge contract on the Gnosis chain",
-      "isPrimacyOfImpact": null
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     },
     {
       "id": "4oQoN6nat7OLKqL8ib88eC",
       "url": "https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671",
       "type": "smart_contract",
-      "addedAt": "2022-05-10T15:42:42.480Z",
-      "revision": 2,
+      "addedAt": "2022-05-10T15:42:42.104Z",
+      "revision": 0,
       "description": "ForeignOmnibridge: OmniBridge contract on the Ethereum Mainnet",
-      "isPrimacyOfImpact": null
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     },
     {
       "id": "1TEVjuzA8DmpOMImDZWzs3",
       "url": "https://blockscout.com/xdai/mainnet/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d",
       "type": "smart_contract",
-      "addedAt": "2022-05-10T15:42:43.435Z",
-      "revision": 2,
+      "addedAt": "2022-05-10T15:42:43.182Z",
+      "revision": 0,
       "description": "HomeOmnibridge: OmniBridge contract on the Gnosis chain",
-      "isPrimacyOfImpact": null
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": "The smart contract regarding native xDAI bridging (XDaiForeignBridge and HomeBridgeErcToNative)  can be found at [https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge-upgrade-sda](https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge-upgrade-sda). The smart contracts regarding arbitrary ERC20 bridging (ForeignOmnibridge and HomeOmnibridge) can be found at [https://github.com/gnosischain/omnibridge/tree/master](https://github.com/gnosischain/omnibridge/tree/master).\n\nOnly those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf an impact can be caused to any other asset managed by Gnosis that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.",
@@ -50,7 +54,9 @@
   ],
   "endDate": null,
   "evaluationEndDate": null,
-  "features": [],
+  "features": [
+    "Pay to Mediate"
+  ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
   "inviteOnly": false,
@@ -91,15 +97,44 @@
   "podiumPool": 0,
   "rewardsToken": "USDC or xDAI",
   "slug": "gnosischain",
-  "tenPercentEconomicRule": null,
-  "updatedDate": "2024-11-18T12:02:21.416Z",
+  "tenPercentEconomicRule": false,
+  "updatedDate": "2026-09-10T05:27:01.917Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
   "eligibilityCriteria": [],
   "responsiblePublicationCategory": null,
   "description": "Gnosis Chain is an EVM compatible, community-owned network that prioritizes credible neutrality and resiliency, open to everyone without privilege or prejudice. Secured by over 165k validators around the world, Gnosis Chain has all the tooling you are used to and trust-minimized bridges to mainnet.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1505,
+      "link": "https://immunefi.com/bug-bounty/gnosischain/information/",
+      "description": "callback through onTokenBridged() is not checked for success. Any failure in onTokenBridged() is silently swallowed.",
+      "lastUpdatedAt": "2026-09-09T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1504,
+      "link": "https://immunefi.com/bug-bounty/gnosischain/information/",
+      "description": "Validator signature collection on Home uses a static validator set defined at the time of transaction execution while signature verification uses the currently active validator set (potentially updated).",
+      "lastUpdatedAt": "2026-09-09T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1503,
+      "link": "https://immunefi.com/bug-bounty/gnosischain/information/",
+      "description": "Omnibridge onTokenTransfer() function does not verify msg.sender and anyone can call this function to create fake bridge token.",
+      "lastUpdatedAt": "2026-09-09T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1502,
+      "link": "https://immunefi.com/bug-bounty/gnosischain/information/",
+      "description": "The minter allowance granted by tokens to the USDCTransmuter can be exhausted to prevent successful USDC.e and EURC.e transfers.",
+      "lastUpdatedAt": "2026-09-09T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeWebAndApplications": null,
@@ -233,6 +268,7 @@
   "rewards": [
     {
       "id": 6154,
+      "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
       "maxReward": 50000,
@@ -241,6 +277,7 @@
     },
     {
       "id": 6155,
+      "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
       "maxReward": 10000,
@@ -249,6 +286,7 @@
     },
     {
       "id": 8288,
+      "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
       "maxReward": 2000000,
