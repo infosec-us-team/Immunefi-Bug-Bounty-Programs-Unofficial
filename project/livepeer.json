@@ -229,16 +229,6 @@
       "description": "L1Migrator",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
-    },
-    {
-      "id": "100850",
-      "url": "https://github.com/livepeer/go-livepeer",
-      "type": "websites_and_applications",
-      "addedAt": "2026-08-28T16:07:08.110Z",
-      "revision": 0,
-      "description": "go-livepeer node client",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": "Only the contracts in the Assets in Scope table on the Scope tab are considered in-scope of the bug bounty program. Target (implementation) contracts are not listed because they change on upgrade. They can be looked up in the Controller contract listed in that table. Reports are evaluated against the implementation live at the time of submission.\n\nLivepeer migrated to Arbitrum One under LIP-73, and the L1 protocol contracts on Ethereum mainnet have been paused since February 2022 and remain paused. L1 staking, round progression and ticket redemption are halted, so no exploit path can execute against these contracts.\n\nCritical vulnerabilities in the go-livepeer client were recently added to the scope of the program. This scope also includes any direct livepeer hosted and developed dependencies within go-livepeer that lead to the direct critical exploits listed in the program.",
@@ -266,9 +256,9 @@
     "Go"
   ],
   "launchDate": "2022-02-25T04:00:00.000Z",
-  "isPaused": true,
-  "pausedAt": "2026-08-28T17:57:18.639Z",
-  "pausedMessage": "Report submissions to Livepeer are temporarily paused while the team reviews their pending items. Stay tuned for updates on Immunefi's Discord",
+  "isPaused": false,
+  "pausedAt": null,
+  "pausedMessage": null,
   "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3UUkKoNVTz0RMrIhQnL0v8/042be0217ef163209cec501313440815/Livepeer_logo.jpeg",
   "maxBounty": 40000,
   "outOfScopeAndRules": null,
@@ -283,10 +273,9 @@
   "productType": [
     "Services"
   ],
-  "programOverview": "Livepeer is a decentralized video streaming network built on the Ethereum blockchain. The Livepeer network already includes over 70,000 GPUs, which is enough aggregated power to encode all of the video streaming through Twitch, YouTube and Facebook combined. Through the power of open source software, the harnessing of underutilized resources like compute and bandwidth, and the use of cryptoeconomic incentives for bootstrapping and participation, there is an opportunity to deliver an infrastructure that can power video streaming applications at a highly efficient price, and infinite scale.\n\nFor more information about Livepeer, please visit [https://livepeer.org/](https://livepeer.org/).  \n\nThis bug bounty program is focused on their smart contracts and infrastructure client and is focused on preventing:\n\n  - Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield\n  - Permanent freezing of funds\n  - Insolvency\n  - Unintended issuance of LPT on L1\n  - Unexpected calls to functions that should only be called by authorized addresses (i.e. Governor)\n  - Key theft\n  - Unauthorized transaction signing",
+  "programOverview": "## Important Note\n\n***The go-livepeer node client is temporarily out of scope while its asset definition and reward structure are revised. Reports submitted before the pause are unaffected and will be triaged and paid as normal. The client scope will be announced on Immunefi's Discord when it returns.***\n\n---\n\nLivepeer is a decentralized video streaming network built on the Ethereum blockchain. The Livepeer network already includes over 70,000 GPUs, which is enough aggregated power to encode all of the video streaming through Twitch, YouTube and Facebook combined. Through the power of open source software, the harnessing of underutilized resources like compute and bandwidth, and the use of cryptoeconomic incentives for bootstrapping and participation, there is an opportunity to deliver an infrastructure that can power video streaming applications at a highly efficient price, and infinite scale.\n\nFor more information about Livepeer, please visit [https://livepeer.org/](https://livepeer.org/).  \n\nThis bug bounty program is focused on their smart contracts and infrastructure client and is focused on preventing:\n\n  - Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield\n  - Permanent freezing of funds\n  - Insolvency\n  - Unintended issuance of LPT on L1\n  - Unexpected calls to functions that should only be called by authorized addresses (i.e. Governor)\n  - Key theft\n  - Unauthorized transaction signing",
   "programType": [
-    "Smart Contract",
-    "Websites and Applications"
+    "Smart Contract"
   ],
   "project": "Livepeer",
   "projectType": [
@@ -300,7 +289,7 @@
   "rewardsToken": "USDC",
   "slug": "livepeer",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-08-28T16:07:08.349Z",
+  "updatedDate": "2026-09-10T21:34:04.290Z",
   "impactsBody": "## Repeatable attack limitations\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward.\n\nThe amount of funds at risk will be calculated with the impact of the first attack being at **100**% and then a reduction of **100**% from the amount of the first attack for every **24** hours the attack needs for subsequent attacks from the first attack, rounded down.",
   "websiteUrl": "https://livepeer.org",
   "githubUrl": "https://github.com/livepeer/protocol",
@@ -320,6 +309,20 @@
       "link": "https://github.com/livepeer/protocol/issues/656",
       "description": "MixinReserve.claimableReserve() can produce per-claimant reserve caps above or below the fair R/N allocation when the live transcoder pool size and the current-round active set diverge mid-round (e.g. during resignation or activation). Overclaim is bounded by the ticket face value. No theft is possible.",
       "lastUpdatedAt": "2019-09-19T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1506,
+      "link": "https://github.com/livepeer/protocol/issues/663",
+      "description": "Winning tickets can settle for less than their face value once the recipient’s reserve is exhausted.",
+      "lastUpdatedAt": "2019-09-19T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1507,
+      "link": "https://github.com/livepeer/protocol/issues/664",
+      "description": "Missing freshness check in L2LPTDataCache.finalizeCacheTotalSupply leads to underpaid (or overpaid) rewards in the next rounds.",
+      "lastUpdatedAt": "2026-06-28T22:00:00.000Z",
       "relatedImpactInScope": "smart_contract"
     }
   ],
@@ -421,53 +424,11 @@
       "type": "smart_contract",
       "severity": "medium",
       "title": "Theft of gas"
-    },
-    {
-      "id": 35,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Execute arbitrary system commands"
-    },
-    {
-      "id": 36,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Retrieve sensitive data/files from a running server, such as:\n- /etc/shadow\n- database passwords\n- blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
-    },
-    {
-      "id": 39,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Taking and/modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:\n- Changing registration information\n- Commenting\n- Voting\n- Making trades\n- Withdrawals, etc."
-    },
-    {
-      "id": 42,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Direct theft of user funds"
-    },
-    {
-      "id": 43,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Malicious interactions with an already-connected wallet, such as:\n- Modifying transaction arguments or parameters\n- Substituting contract addresses\n- Submitting malicious transactions"
-    },
-    {
-      "id": 6089,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "A loss of funds involving an attack that does not require any user action"
-    },
-    {
-      "id": 6090,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Private key or private key generation leakage leading to unauthorized access to user funds"
     }
   ],
   "rewards": [
     {
-      "id": 50509,
+      "id": 50838,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -476,7 +437,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 50510,
+      "id": 50839,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -484,7 +445,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 50511,
+      "id": 50840,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -492,21 +453,12 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 50512,
+      "id": 50841,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
       "fixedReward": 1000,
       "rewardModel": "fixed"
-    },
-    {
-      "id": 50513,
-      "primacy": null,
-      "severity": "critical",
-      "assetType": "websites_and_applications",
-      "maxReward": 40000,
-      "rewardModel": "up_to",
-      "otherImpactMaxReward": 0
     }
   ],
   "audits": []
