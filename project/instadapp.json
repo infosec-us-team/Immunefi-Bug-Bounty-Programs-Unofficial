@@ -77,7 +77,9 @@
   ],
   "endDate": null,
   "evaluationEndDate": null,
-  "features": [],
+  "features": [
+    "Pay to Mediate"
+  ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
   "inviteOnly": false,
@@ -114,7 +116,7 @@
   "projectType": [
     "Defi"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract vulnerabilities, the reward is 10% of the directly affected funds, up to a maximum of USD 500,000. The calculation considers the funds at risk based on the bug report submission date and time. There is a minimum guaranteed reward of USD 25,000 to encourage reporting even for smaller valued critical bugs.\n\n\n__Reward Calculation for High Level Reports__\n\nFor high smart contract impacts, the reward is capped at $100,000 and is based on 50% of the value of the affected funds. The calculation considers the funds at risk based on the bug report submission date and time. There is a minimum guaranteed reward of USD 5,000 to encourage reporting even for smaller valued critical bugs.\n\n__Secondary/Market Attack on Fluid__\n\nFluid as a lending protocol utilizes different aspects of the blockchain which may indirectly affect the protocol. The following outline conditions for particular secondary attacks that are not directly on the Fluid contracts, but that have secondary or associated effects to the Fluid contracts may be considered for a reward:\n\n- The attack must directly impact Fluid i.e an attack which affects the broader market such as price manipulation but is not targeting Fluid would not qualify.\n\nExamples of secondary attacks would be:\n\n- Manipulation of a DEX or on Chain price oracle from a secondary source, which results in the immediate and total loss of funds of the Fluid protocol, where the attack is specifically targeting Fluid protocol.\n- Flash Loan based attack that would cause immediate and irreversible financial loss to Fluid protocol; where the attack is specifically targeting the Fluid protocol, this would exclude attacks which manipulate the price of a single token used on Fluid.\n\nPrior published audits are here for review, any noted vulnerability or bugs in previously completed audits are not eligible for a reward.\n\nDefi Smart Accounts (DSA)/Instadapp PRO\n- [Peckshield - Mar 16, 2021](https://github.com/Instadapp/dsa-contracts/blob/master/audits/v2_PeckShield_Mar_2021.pdf)\n- [Peckshield - Mar 18, 2020](https://github.com/Instadapp/dsa-contracts/blob/master/audits/v1_PeckShield_Mar_2020.pdf)\n- [Samczun Audit - Mar 2020](https://github.com/Instadapp/dsa-contracts/blob/master/audits/v1_samczsun_Mar_2020.md)\n\nAvocado\n- [Statemind - Sept 28, 2023](https://github.com/Instadapp/avocado-audits/blob/main/Statemind-Audit-Report-Avocado-v3.pdf)\n- [Peckshield - June 12, 2023](https://github.com/Instadapp/avocado-audits/blob/main/PeckShield-Audit-Report-Avocado-v3.pdf)\n\nFluid\n- [Statemind - Dec 29th, 2023](https://github.com/statemindio/public-audits/blob/main/Instadapp/2023-12-29_Instadapp_Fluid.pdf)\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n\n- Smart Contract - Critical\n- Smart Contract - High\n\nWhen calculating the USD value of total value locked (TVL) to determine funds at risk, outstanding borrows are excluded.\n\nTo be eligible for a reward, the vulnerability must exist in the deployed smart contract.\n\nBugs resulting in temporary freezing of funds are not eligible for a reward. \n\nPayouts are handled by the Instadapp team directly and are denominated in USD. However, payouts are done in stablecoins like, USDC, USDT and DAI at the discretion of the team.",
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract vulnerabilities, the reward is 10% of the directly affected funds, up to a maximum of USD 500,000. The calculation considers the funds at risk based on the bug report submission date and time. There is a minimum guaranteed reward of USD 25,000 to encourage reporting even for smaller valued critical bugs.\n\n\n__Reward Calculation for High Level Reports__\n\nFor high smart contract impacts, the reward is capped at $100,000 and is based on 50% of the value of the affected funds. The calculation considers the funds at risk based on the bug report submission date and time. There is a minimum guaranteed reward of USD 5,000 to encourage reporting even for smaller valued high severity bugs.\n\n__Secondary/Market Attack on Fluid__\n\nFluid as a lending protocol utilizes different aspects of the blockchain which may indirectly affect the protocol. The following outline conditions for particular secondary attacks that are not directly on the Fluid contracts, but that have secondary or associated effects to the Fluid contracts may be considered for a reward:\n\n- The attack must directly impact Fluid i.e an attack which affects the broader market such as price manipulation but is not targeting Fluid would not qualify.\n\nExamples of secondary attacks would be:\n\n- Manipulation of a DEX or on Chain price oracle from a secondary source, which results in the immediate and total loss of funds of the Fluid protocol, where the attack is specifically targeting Fluid protocol.\n- Flash Loan based attack that would cause immediate and irreversible financial loss to Fluid protocol; where the attack is specifically targeting the Fluid protocol, this would exclude attacks which manipulate the price of a single token used on Fluid.\n\n__Repeatable Attacks on Pausable Contracts__\n\nFluid contracts can be paused by the protocol guardians. Where the vulnerable contract can be paused or upgraded, only the initial attack is considered for the reward, as Fluid can mitigate further exploitation by pausing or upgrading the affected component; repeated or looped extraction after the first attack is not compounded into severity or reward. For contracts that cannot be paused or upgraded, the Repeatable Attack Limitations configured for this program apply (25% reduction per additional attack, 1-hour interval).\n\n__Audits__\n\nPrior published audits are here for review, any noted vulnerability or bugs in previously completed audits are not eligible for a reward.\n\nDefi Smart Accounts (DSA)/Instadapp PRO\n- [Peckshield - Mar 16, 2021](https://github.com/Instadapp/dsa-contracts/blob/master/audits/v2_PeckShield_Mar_2021.pdf)\n- [Peckshield - Mar 18, 2020](https://github.com/Instadapp/dsa-contracts/blob/master/audits/v1_PeckShield_Mar_2020.pdf)\n- [Samczun Audit - Mar 2020](https://github.com/Instadapp/dsa-contracts/blob/master/audits/v1_samczsun_Mar_2020.md)\n\nAvocado\n- [Statemind - Sept 28, 2023](https://github.com/Instadapp/avocado-audits/blob/main/Statemind-Audit-Report-Avocado-v3.pdf)\n- [Peckshield - June 12, 2023](https://github.com/Instadapp/avocado-audits/blob/main/PeckShield-Audit-Report-Avocado-v3.pdf)\n\nFluid\n- [Statemind - Dec 29th, 2023](https://github.com/statemindio/public-audits/blob/main/Instadapp/2023-12-29_Instadapp_Fluid.pdf)\n\n__Proof of Concept (PoC) Requirements__\n\nA Proof of Concept is required for all severity levels (Critical, High, Medium and Low), for every asset type in scope.\n\nWhen calculating the USD value of total value locked (TVL) to determine funds at risk, outstanding borrows are excluded.\n\nTo be eligible for a reward, the vulnerability must exist in the deployed smart contract.\n\nBugs resulting in temporary freezing of funds for under 10 days are not eligible for a reward. Temporary freezing of funds for more than 10 days is assessed under the in-scope High impact.\n\nPayouts are handled by the Instadapp team directly. Payouts are made in USDC, USDT or DAI on Ethereum, denominated in USD.\n\n__Scope Clarifications__\n\n- Issues affecting the first or last user of a pool or vault that arise from dust amounts, in any protocol other than DexV2, are classified at most as Low, since the standard production setup includes seeding a dust position that serves as the first and last user.\n\n- A vulnerability present in both the EVM and Solana codebases is treated as a single finding and rewarded once, not as two separate reports.\n\n- Deployed contract addresses are listed in [deployments.md](https://github.com/Instadapp/fluid-contracts-public/blob/main/deployments/deployments.md) in the public repository; funds at risk is assessed against the deployed contracts referenced there.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -122,7 +124,7 @@
   "rewardsToken": "USDC, USDT, DAI",
   "slug": "instadapp",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-04-13T22:18:07.630Z",
+  "updatedDate": "2026-09-11T20:28:30.647Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -136,7 +138,7 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "- Best practice critiques\n  - Griefing involving gas fees alone\n  - DexLite Protocol: https://github.com/Instadapp/fluid-contracts-public/tree/main/contracts/protocols/dexLite",
+  "customOutOfScopeInformation": "- Best practice critiques\n  - Griefing involving gas fees alone\n  - DexLite Protocol: https://github.com/Instadapp/fluid-contracts-public/tree/main/contracts/protocols/dexLite\n- Chainlink oracle feed `updatedAt` staleness check on Oracles V1\n- Chainlink oracle feed reporting a negative price on Oracles V1\n- Avocado: input asymmetry between `signMessage` and `removeSignedMessage`\n- Avocado: additional information in the signing screens are new features, not security bugs",
   "customProhibitedActivities": [],
   "impacts": [
     {
@@ -274,7 +276,7 @@
   ],
   "rewards": [
     {
-      "id": 44730,
+      "id": 50866,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -284,7 +286,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 44731,
+      "id": 50867,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -293,16 +295,17 @@
       "rewardModel": "range"
     },
     {
-      "id": 44732,
+      "id": 50868,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
       "maxReward": 50000,
       "minReward": 5000,
-      "rewardModel": "range"
+      "rewardModel": "range",
+      "otherImpactMaxReward": 0
     },
     {
-      "id": 44733,
+      "id": 50869,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -311,5 +314,12 @@
       "rewardModel": "range"
     }
   ],
-  "audits": []
+  "audits": [
+    {
+      "id": "1510",
+      "url": "https://docs.fluid.io/audits-and-security.html",
+      "auditor": "Fluid Technical Docs — all audits",
+      "date": "2026-09-08T00:00:00.000Z"
+    }
+  ]
 }
