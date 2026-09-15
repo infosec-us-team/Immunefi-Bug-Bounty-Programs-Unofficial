@@ -3100,7 +3100,7 @@
   "rewardsToken": "USDC",
   "slug": "enzymefinance",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-08-26T12:36:06.783Z",
+  "updatedDate": "2026-09-14T17:15:14.045Z",
   "impactsBody": "These accepted impacts are then based on the severity classification system of this bug bounty program. When submitting a bug report, please select the severity level you feel best corresponds to the severity classification system as long as the impact itself is one of the listed items.",
   "websiteUrl": null,
   "githubUrl": "https://github.com/enzymefinance/protocol",
@@ -3117,12 +3117,6 @@
   "customOutOfScopeInformation": "Out of Scope reports:\n- GatedRedemptionQueueSharesWrapperLib used with sharesActionTimelock\n- first depositor share inflation attack\n- missing wrapped-native fallback in redeemFromQueue dispersal leads to griefing of native-asset batch redemptions\n- malicious vault owner\n- external position can be removed with negative value (debt)\n- taking ETH/tokens accidentally sent directly to the contract outside intended protocol flows, without demonstrating how such funds can be introduced through valid protocol interactions. Common example: reports claiming an attacker can drain tokens from an adapter due to a missing onlyIntegrationManager check are invalid if the funds can only exist there via accidental direct transfers, or other non-protocol flows.\n- front-running contract initialization during deployment. Contracts are deployed via factory contracts, which invoke the init function in the same transaction as the deployment, preventing attackers from front-running the initialization step.\n- griefing queues by spamming requests, or by sending requests that revert on the execution. Both SingleAssetRedemptionQueueLib and GatedRedemptionQueueSharesWrapperLib have a mechanism to skip requests.\n\nKnown issues:\n1) Incorrect share price for depositors and redeemers if \"auto-buyback of protocol fee shares\" is used\nIssue: During deposit and redeem, if a fund has autoProtocolFeeSharesBuyback turned on, an incorrect share price is constructed as: pre-buyback GAV / post-buyback total supply.\n\nEffect: Results in too-high share price used to deposit or redeem shares\n\nMitigation: while mis-pricing should generally be small, unless you are confident in assessing impact, avoid using autoProtocolFeeSharesBuyback .",
   "customProhibitedActivities": [],
   "impacts": [
-    {
-      "id": 15,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-    },
     {
       "id": 17,
       "type": "smart_contract",
@@ -3164,11 +3158,17 @@
       "type": "smart_contract",
       "severity": "medium",
       "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
     }
   ],
   "rewards": [
     {
-      "id": 50434,
+      "id": 50898,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -3178,7 +3178,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 50435,
+      "id": 50899,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -3187,7 +3187,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50436,
+      "id": 50900,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
