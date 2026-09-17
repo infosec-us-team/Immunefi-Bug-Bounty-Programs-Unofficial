@@ -352,7 +352,7 @@
   "projectType": [
     "Blockchain"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the[ Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Blockchain/DLT bugs, the reward amount is 10% of the funds directly affected, capped at the maximum critical reward $150,000 . However, a minimum reward of USD $100,000 is to be rewarded in order to incentivize security researchers against withholding on a bug report.\n\nAll rewards for this Program are scaled based on a set of criteria, taking into account factors like: ease of exploitation of the bug, impact of the bug, likelihood of the vulnerability (particularly for bug reports where the vulnerability would require multiple conditions to be met), and report quality.\n\nReported security vulnerabilities will be eligible for a bounty amount based on severity, calculated based on its impact and likelihood using the OWASP Risk Rating model (https://owasp.org/www-community/OWASP_Risk_Rating_Methodology).",
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the[ Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Blockchain/DLT bugs, the reward amount is 10% of the funds directly affected, capped at the maximum critical reward $150,000 . However, a minimum reward of USD $100,000 is to be rewarded in order to incentivize security researchers against withholding on a bug report.\n\nFindings with the Critical impact \"Unintended permanent chain split requiring hard fork (network partition persisting after affected nodes restart on patched binaries, reconcilable only by hard fork or state rollback)\" will be rewarded with a flat reward of $50,000 USD.\n\nAll rewards for this Program are scaled based on a set of criteria, taking into account factors like: ease of exploitation of the bug, impact of the bug, likelihood of the vulnerability (particularly for bug reports where the vulnerability would require multiple conditions to be met), and report quality.\n\nReported security vulnerabilities will be eligible for a bounty amount based on severity, calculated based on its impact and likelihood using the OWASP Risk Rating model (https://owasp.org/www-community/OWASP_Risk_Rating_Methodology).",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -360,7 +360,7 @@
   "rewardsToken": "USDC",
   "slug": "filecoin",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-09-01T17:23:01.942Z",
+  "updatedDate": "2026-09-16T23:28:50.705Z",
   "impactsBody": null,
   "websiteUrl": "https://filecoin.io",
   "githubUrl": "https://github.com/filecoin-project",
@@ -382,40 +382,10 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 3,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Direct loss of funds"
-    },
-    {
-      "id": 2562,
-      "type": "blockchain_dlt",
-      "severity": "low",
-      "title": "DoS of greater than 10% but less than 30% of validator or miner nodes and does not shut down the network"
-    },
-    {
       "id": 6192,
       "type": "blockchain_dlt",
       "severity": "medium",
       "title": "High compute consumption by validator/mining nodes where a crash, memory exhaustion, or any other demonstrated lasting effect involving network availability is demonstrated."
-    },
-    {
-      "id": 2,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
-    },
-    {
-      "id": 4,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Permanent freezing of funds (fix requires hardfork)"
-    },
-    {
-      "id": 2563,
-      "type": "blockchain_dlt",
-      "severity": "low",
-      "title": "Underpricing transaction fees relative to computation time"
     },
     {
       "id": 2564,
@@ -424,64 +394,10 @@
       "title": "Contract on the platform fails to deliver promised returns, but doesn’t lose values"
     },
     {
-      "id": 2565,
-      "type": "blockchain_dlt",
-      "severity": "low",
-      "title": "EVM instruction fails to execute when provided with concrete parameters"
-    },
-    {
-      "id": 2566,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Unintended chain split (Network partition) with localized impacts (which would require hard fork but doesn’t affect the chain as whole)"
-    },
-    {
-      "id": 2567,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Transient consensus failures (Temporary halt in transactions leading to consensus failure)"
-    },
-    {
       "id": 2568,
       "type": "blockchain_dlt",
       "severity": "high",
       "title": "Protocol-level bug preventing contracts from using their funds"
-    },
-    {
-      "id": 2569,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Protocol-level bug causing the inability for developers to deploy new smart contracts"
-    },
-    {
-      "id": 2570,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Protocol-level bug rendering a single contract unusable after the exploit (i.e. contract bricked)"
-    },
-    {
-      "id": 2573,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "DoS of greater than 30% of validator or miner nodes and does not shut down the network"
-    },
-    {
-      "id": 2574,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "EVM instruction fails to execute, in a general way"
-    },
-    {
-      "id": 2575,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Inability to deploy a contract under a specific circumstances"
-    },
-    {
-      "id": 2576,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Total Chain halt"
     },
     {
       "id": 2577,
@@ -490,21 +406,105 @@
       "title": "Protocol-level bug that causes a general breakage of all contracts deployed on the chain"
     },
     {
-      "id": 2578,
+      "id": 6338,
       "type": "blockchain_dlt",
       "severity": "critical",
-      "title": "Protocol-level bug that enables tricking contracts into sending funds to arbitrary addresses"
+      "title": "Direct loss of funds belonging to a party other than the attacker, moved without that party's authorization"
     },
     {
-      "id": 5559,
+      "id": 6339,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Unintended permanent chain split requiring hard fork (network partition persisting after affected nodes restart on patched binaries, reconcilable only by hard fork or state rollback)"
+    },
+    {
+      "id": 6340,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Permanent freezing of funds (fix requires hardfork; funds belong to a party other than the attacker and are recovered by no protocol mechanism, node upgrade, hot patch, or operator action)"
+    },
+    {
+      "id": 6341,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Permanent total chain halt where no new messages can be included in any tipset, the halt does not clear on restart of unmodified nodes or by a hot patch applied by operators, and recovery requires a hard fork or a rollback of chain state already produced or finalized"
+    },
+    {
+      "id": 6342,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Protocol-level bug that enables tricking contracts into sending funds to an address their own code and state do not authorize"
+    },
+    {
+      "id": 6343,
       "type": "blockchain_dlt",
       "severity": "high",
-      "title": "Inability to propagate new transactions (limited to fraction of the network)"
+      "title": "Unintended chain split (Network partition) with localized impacts (which would require hard fork but doesn't affect the chain as whole, and the canonical chain continues to advance)"
+    },
+    {
+      "id": 6344,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Transient consensus failures (Temporary halt in transactions leading to consensus failure, restored without hard fork or state rollback, on restart of unmodified nodes, or via a hot patch applied individually by operators)"
+    },
+    {
+      "id": 6345,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Protocol-level bug causing the inability to deploy new smart contracts network wide"
+    },
+    {
+      "id": 6346,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Protocol-level bug rendering a single contract the attacker does not control permanently unusable after the exploit (i.e. contract bricked)"
+    },
+    {
+      "id": 6347,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Inability to propagate new transactions (limited to a fraction of the network), persisting after attack traffic stops or indefinitely sustainable, demonstrated on the Filecoin Audit Kit devnet running a mainnet-equivalent configuration at default resource limits."
+    },
+    {
+      "id": 6348,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "DoS of greater than 30% of validator or miner nodes and does not shut down the network, where the affected surface is publicly reachable under a default configuration without attacker-controlled preconditions."
+    },
+    {
+      "id": 6349,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "EVM instruction fails to execute, in a general way, contradicting the governing FIP"
+    },
+    {
+      "id": 6350,
+      "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "Inability to deploy a contract under specific, concretely demonstrable circumstances"
+    },
+    {
+      "id": 6351,
+      "type": "blockchain_dlt",
+      "severity": "low",
+      "title": "DoS of greater than 10% but less than 30% of validator or miner nodes and does not shut down the network, where the affected surface is publicly reachable under a default configuration without attacker-controlled preconditions."
+    },
+    {
+      "id": 6352,
+      "type": "blockchain_dlt",
+      "severity": "low",
+      "title": "Underpricing transaction fees relative to computation time, demonstrated with a measured ratio of execution cost to gas charged on the Filecoin Audit Kit devnet."
+    },
+    {
+      "id": 6353,
+      "type": "blockchain_dlt",
+      "severity": "low",
+      "title": "EVM instruction fails to execute when provided with concrete parameters, contradicting the governing FIP for those parameters"
     }
   ],
   "rewards": [
     {
-      "id": 50575,
+      "id": 50918,
       "primacy": "primacy_of_impact",
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -514,7 +514,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 50576,
+      "id": 50919,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -523,7 +523,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50577,
+      "id": 50920,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -532,7 +532,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50578,
+      "id": 50921,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
