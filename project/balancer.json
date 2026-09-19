@@ -306,6 +306,13 @@
   "description": "Balancer is a decentralized automated market maker (AMM) and liquidity protocol on Ethereum and other EVM-compatible networks. It is permissionless and non-custodial: anyone can trade tokens or provide liquidity through smart contracts, with no intermediary holding funds.\n\nBalancer V3 is the current protocol. It is built around a single Vault that holds all pool assets and enforces the core accounting and safety checks, which keeps pool contracts small and makes custom pool types simpler to build and review. V3 adds a hooks framework for extending pool behavior, native ERC4626 boosted liquidity through internal buffers, and pool types including Weighted, Stable, StableSurge, Gyro (E-CLP and 2-CLP), AutoRange (ReClamm), and Liquidity Bootstrapping Pools. Trades and liquidity operations are routed through a set of Routers.\n\nBalancer V2, the prior generation, remains in operation for residual liquidity (mainly weighted pools) and is also built around a Vault. This program covers the in-scope V3 and V2 smart contracts listed under Assets in Scope.",
   "knownIssues": [
     {
+      "id": 1513,
+      "link": "https://github.com/balancer/balancer-v3-monorepo/pull/1673",
+      "description": "LBP swaps can leave a token's real Vault balance below the minimum trade amount, causing subsequent proportional exits to revert until Recovery Mode is enabled. FixedPriceLBPool does not enforce a minimum remaining balance after a swap. In seedless bidirectional LBPool configurations, the virtual reserve balance can satisfy the inherited minimum-balance check while the real reserve falls below the minimum.",
+      "lastUpdatedAt": "2026-09-19T02:47:28.986Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
       "id": 1356,
       "link": "https://github.com/balancer/balancer-v3-monorepo/blob/main/audits/WONTFIX.md#protocol-fee-controller---fee-split-rounding",
       "description": "When the aggregate fees are split between protocol and pool creator, rounding effects can make the transaction revert under specific circumstances.  These typically happen when the pool creator fee is low, and low amount of fees are collected.  In this case, the cost of fixing an obscure edge case and migrating the fee controller is not justified by the potential impact. In practice:  Most pools do not use pool creator fees While the fee split to trigger the problem is technically valid, fee splits in practice tend to use larger numbers Fees are collected after they reach certain threshold, not right after each operation generates any amount of fees",
