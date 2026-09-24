@@ -256,7 +256,7 @@
   "rewardsToken": "USDC",
   "slug": "rootstocklabs",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-09-03T04:30:53.792Z",
+  "updatedDate": "2026-09-23T11:23:43.263Z",
   "impactsBody": "__Vector Definition__\n\n__Deployment assumptions__\n\n- HSM, middleware, and Powpeg-Node run on the same host.\n- HSM and middleware expose no external network interfaces (no inbound remote access paths).\n- Powpeg-Node is the only externally connected component, used to sync blockchain data and forward it to the middleware, and its public exposure is limited.\n\n__Remote__\n\n“Remote” means the attacker cannot directly reach the HSM or middleware over the network and has no local access to the host. The only realistic remote reachability is indirect, via untrusted but consensus-valid on-chain data produced and propagated by the RSK network, synchronized by Powpeg-Node, and forwarded to the middleware (and subsequently to the HSM) for processing, where it may trigger vulnerable parsing/validation/logic.\n\n__Local__\n\n“Local” means the attacker has obtained root (or equivalent) control of the host running Powpeg-Node, the middleware, and the HSM (for example via shell/SSH access, a compromised account, or malware), but does not require physical access to the machine or device. With this level of access, the attacker can directly issue commands to the HSM via its local interfaces, ultimately affecting HSM operations.\n\n__Physical__\n\n“Physical” means the attacker has obtained physical access to the HSM device, enabling direct interaction and potential hardware tampering. With this level of access, the attacker may be able to probe, manipulate, reset, fault, or modify the device or its connections, potentially bypassing logical protections and ultimately affecting HSM operations.",
   "websiteUrl": "https://www.rootstocklabs.com/",
   "githubUrl": "https://github.com/rsksmart",
@@ -287,10 +287,10 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 6115,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Taking down the application/website"
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
     },
     {
       "id": 14,
@@ -357,30 +357,6 @@
       "type": "smart_contract",
       "severity": "medium",
       "title": "Block stuffing"
-    },
-    {
-      "id": 31,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-    },
-    {
-      "id": 32,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Theft of gas"
-    },
-    {
-      "id": 33,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Unbounded gas consumption"
-    },
-    {
-      "id": 34,
-      "type": "smart_contract",
-      "severity": "low",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
     },
     {
       "id": 35,
@@ -497,22 +473,34 @@
       "title": "Temporary freezing of network transactions by sustainably and substantially delaying block production (that could affect the network's gas consumption capabilities)"
     },
     {
-      "id": 5933,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Total network shutdown (network not being able to confirm new transactions) via propagated/chained effect"
+      "id": 32,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of gas"
     },
     {
-      "id": 5934,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Permanent freezing of funds (fix requires hardfork)"
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
     },
     {
-      "id": 6032,
+      "id": 34,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
+    },
+    {
+      "id": 6301,
       "type": "blockchain_dlt",
+      "severity": "medium",
+      "title": "A bug in the VM implementation that results in incorrect smart contract execution relative to expected VM semantics, with demonstrable security impact, but no direct risk to funds"
+    },
+    {
+      "id": 6115,
+      "type": "websites_and_applications",
       "severity": "high",
-      "title": "A bug in the respective layer 0/1/2 network code that results in unintended smart contract behavior resulting in direct, exploitable risk to user funds (e.g., unauthorized transfer, permanent loss)"
+      "title": "Taking down the application/website"
     },
     {
       "id": 6035,
@@ -521,16 +509,22 @@
       "title": "Extraction of seed or private keys through local access to the HSM device or middleware"
     },
     {
-      "id": 6036,
+      "id": 6032,
       "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Direct loss of significant non recoverable funds"
+      "severity": "high",
+      "title": "A bug in the respective layer 0/1/2 network code that results in unintended smart contract behavior resulting in direct, exploitable risk to user funds (e.g., unauthorized transfer, permanent loss)"
     },
     {
-      "id": 6301,
+      "id": 5934,
       "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "A bug in the VM implementation that results in incorrect smart contract execution relative to expected VM semantics, with demonstrable security impact, but no direct risk to funds"
+      "severity": "high",
+      "title": "Permanent freezing of funds (fix requires hardfork)"
+    },
+    {
+      "id": 5933,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Total network shutdown (network not being able to confirm new transactions) via propagated/chained effect"
     },
     {
       "id": 5925,
@@ -603,6 +597,12 @@
       "type": "blockchain_dlt",
       "severity": "low",
       "title": "Local access to HSM device resulting in crash due to memory corruption issues in secure element part"
+    },
+    {
+      "id": 6371,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Direct loss of equally or more than $100,000 non-recoverable funds"
     }
   ],
   "rewards": [
