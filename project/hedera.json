@@ -125,7 +125,7 @@
   ],
   "project": "Hedera",
   "projectType": [],
-  "rewardsBody": "__Reward Calculation for Critical Level Reports__\n\nFor critical Blockchain/DLT bugs, the reward amount is 10% of the funds directly affected, capped at the maximum critical reward [$30,000]. However, a minimum reward of USD [$10,000] is to be rewarded in order to incentivize security researchers against withholding on a bug report.",
+  "rewardsBody": "__Reward Calculation for Critical Level Reports__\n\nFor critical Blockchain/DLT bug reports with the impact “Direct theft of funds” and “Unintended permanent freezing of fund\", the reward amount is 10% of the funds directly affected, capped at the maximum critical reward [$30,000]. However, a minimum reward of USD [$10,000] is to be rewarded in order to incentivize security researchers against withholding on a bug report. All other reports that demonstrate a critical impact are rewarded within the range of USD [$10,000] to USD [$30,000] at the discretion of the Hedera team.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -133,8 +133,8 @@
   "rewardsToken": "USDC",
   "slug": "hedera",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-08-31T18:10:37.120Z",
-  "impactsBody": "The Critical Blockchian/DLT impact “Network not being able to confirm new transactions (total network shutdown)” is only able to be considered at Critical if the fix requires a manual rollback. Otherwise, the severity level may be downgraded by at least one severity level.  The same applies for the Critical Blockchain/DLT impact “Unintended permanent freezing of funds”. \n\nAny impact requiring an attack vector that involves a privileged account, defined as one that is of the Hedera team or one that is required to receive approval from the Hedera team, directly or indirectly, may be downgraded by at least one severity level or be considered as out of scope entirely due to certain permissioned aspects of the Hedera network.\n\nFor the Medium Blockchain/DLT impact “Incorrect or missing records exported to mirror nodes”, this is limited to consensus-critical or financially significant records, including, but not limited to account balances, token balances, or other authoritative ledger state. All others, such as incorrect or missing records that are non-authoritative, derived, informational, or statistical in nature, may be considered as out of scope.\n\nThe following list is the max we pay for a specific impact. It can only be less, not more.\n\n\n__Suggestions for places to start__\n\n- Ability to execute system commands\n- Signing transactions for other users\n- Redirection of user deposits and withdrawals\n- Tamper/manipulate Hashgraph history to invalidate transactions\n- Tampering with submitted transactions\n- Authorizing transactions without approval from the required signers/owners\n- Preventing network from reaching consensus on transactions that are submitted\n- Preventing gossip of a transaction or multiple transactions\n- Bugs that cause the in-scope service to crash (e.g., Non-network-based DoS)\n- Remote code execution vulnerabilities\n- Attacks that cause a probabilistic consensus failure; or a deterministic consensus failure in reconnected nodes\n- Effective non-network-bandwidth-flooding DDoS attacks (e.g., transaction hammering)\n- Malicious capabilities of Hedera Token Service functions exposed via System contracts (e.g. transferring assets out of an account without permissions).\n- System Smart contract modifiers not respected\n- Bugs in the economic system to defraud other participants (e.g. avoid transaction fees to full nodes)\n- Prevent node from accessing the network\n- Incorrect or missing records exported to mirror nodes\n- Correct transaction fees not being applied\n- Unauthorized Hedera Token Service (HTS) activity\n- Overpayment or underpayment of staking rewards\n- Theft of unpaid staking rewards\n- Sensitive information leakage (e.g., private keys, wallets credentials etc). Public keys are excluded from this scope",
+  "updatedDate": "2026-09-24T15:45:06.560Z",
+  "impactsBody": "The Critical Blockchian/DLT impact “Network not being able to confirm new transactions (total network shutdown)” is only able to be considered at Critical if the fix requires a manual rollback. Otherwise, the severity level may be downgraded by at least one severity level.\n\nAny impact requiring an attack vector that involves a privileged account, defined as one that is of the Hedera team or one that is required to receive approval from the Hedera team, directly or indirectly, may be downgraded by at least one severity level or be considered as out of scope entirely due to certain permissioned aspects of the Hedera network. This includes attack vectors requiring a roster-admitted consensus node peer or an authenticated gossip connection. Additionally, any bug report with no attacker-induced action is considered as out of scope for this bug bounty program.\n\nFor the Medium Blockchain/DLT impact “Incorrect or missing records exported to mirror nodes”, this is limited to consensus-critical or financially significant records, including, but not limited to account balances, token balances, or other authoritative ledger state. All others, such as incorrect or missing records that are non-authoritative, derived, informational, or statistical in nature, may be considered as out of scope.\n\nThe following list is the max we pay for a specific impact. It can only be less, not more. In addition to the standard Feasibility Limitations applied to this bug bounty program, the following terms also apply:\n \n__Network Impact Proof__\nBug reports with demonstrated impact on only a single node, including nodes in a reconnecting or transitional state, rather than network-wide behavior, are considered as out-of-scope.\n\n__Functionality Not Active in Production__\nSeverity is assessed against the exploitability of the impact in the current mainnet production environment at the time of submission. Where a bug report demonstrates a valid impact that cannot presently be reached in production, such as where the affected functionality is gated behind a feature flag, is not yet enabled, or depends on a future release, the severity may be downgraded by at least one severity level at the discretion of the Hedera team. Bug reports of this nature remain in scope and are encouraged, as identifying issues in functionality that is not yet active in production is valuable and will be assessed on its merits. Any downgrade under this clause reflects only the current exploitability of the impact in production and not the validity of the bug report itself.\n\n__Economic Viability of an Attack__\nSeverity is calibrated to the economic viability and financial impact of an attack rather than solely to its technical possibility. Where the investment required to execute an attack, whether in capital, resources, or fees, is disproportionate to the value an attacker could realistically extract or the damage they could realistically inflict, such that the attack yields no meaningful net gain or a net loss to a rational attacker, the severity may be downgraded by at least one severity level or may be considered as out of scope entirely at the discretion of the Hedera team. The same applies where the funds or value realistically at risk, or the financial loss the attack could realistically cause, is negligible in absolute terms, including where the impact is limited to low-value amounts such as transaction fees. This assessment is made against the realistic cost and realizable impact of the attack at the time of submission.\n\n\n__Suggestions for places to start__\n\n- Ability to execute system commands\n- Signing transactions for other users\n- Redirection of user deposits and withdrawals\n- Tamper/manipulate Hashgraph history to invalidate transactions\n- Tampering with submitted transactions\n- Authorizing transactions without approval from the required signers/owners\n- Preventing network from reaching consensus on transactions that are submitted\n- Preventing gossip of a transaction or multiple transactions\n- Bugs that cause the in-scope service to crash (e.g., Non-network-based DoS)\n- Remote code execution vulnerabilities\n- Attacks that cause a probabilistic consensus failure; or a deterministic consensus failure in reconnected nodes\n- Effective non-network-bandwidth-flooding DDoS attacks (e.g., transaction hammering)\n- Malicious capabilities of Hedera Token Service functions exposed via System contracts (e.g. transferring assets out of an account without permissions).\n- System Smart contract modifiers not respected\n- Bugs in the economic system to defraud other participants (e.g. avoid transaction fees to full nodes)\n- Prevent node from accessing the network\n- Incorrect or missing records exported to mirror nodes\n- Correct transaction fees not being applied\n- Unauthorized Hedera Token Service (HTS) activity\n- Overpayment or underpayment of staking rewards\n- Theft of unpaid staking rewards\n- Sensitive information leakage (e.g., private keys, wallets credentials etc). Public keys are excluded from this scope",
   "websiteUrl": "https://hedera.com/",
   "githubUrl": "https://github.com/hiero-ledger",
   "eligibilityCriteria": [
@@ -156,16 +156,22 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 6,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments"
-    },
-    {
-      "id": 3,
+      "id": 5320,
       "type": "blockchain_dlt",
       "severity": "critical",
-      "title": "Direct loss of funds"
+      "title": "Unintended permanent freezing of funds"
+    },
+    {
+      "id": 6331,
+      "type": "websites_and_applications",
+      "severity": "low",
+      "title": "Private key or private key generation leakage leading to unauthorized access to user funds  Added"
+    },
+    {
+      "id": 6332,
+      "type": "websites_and_applications",
+      "severity": "low",
+      "title": "Application-wide DoS via (component)"
     },
     {
       "id": 9,
@@ -186,22 +192,10 @@
       "title": "Network not being able to confirm new transactions (total network shutdown)"
     },
     {
-      "id": 5320,
+      "id": 6,
       "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Unintended permanent freezing of funds"
-    },
-    {
-      "id": 6331,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Private key or private key generation leakage leading to unauthorized access to user funds  Added"
-    },
-    {
-      "id": 6332,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Application-wide DoS via (component)"
+      "severity": "high",
+      "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments"
     },
     {
       "id": 5323,
@@ -232,11 +226,35 @@
       "type": "blockchain_dlt",
       "severity": "medium",
       "title": "Permanently crashing a mirror node with records from a consensus node without the ability to automatically restart"
+    },
+    {
+      "id": 6368,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Direct theft of funds"
+    },
+    {
+      "id": 6369,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Network partition caused outside of design parameters"
+    },
+    {
+      "id": 6370,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Any material impact caused by Tampering/Manipulating Hashgraph history"
+    },
+    {
+      "id": 6372,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Authorizing transactions without approval from signers/owners"
     }
   ],
   "rewards": [
     {
-      "id": 50542,
+      "id": 51058,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -246,7 +264,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 50543,
+      "id": 51059,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -255,7 +273,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50544,
+      "id": 51060,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -263,7 +281,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 50545,
+      "id": 51061,
       "primacy": null,
       "severity": "low",
       "assetType": "websites_and_applications",

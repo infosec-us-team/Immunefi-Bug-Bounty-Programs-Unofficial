@@ -166,6 +166,13 @@
       "relatedImpactInScope": "smart_contract"
     },
     {
+      "id": 1521,
+      "link": "https://audits.openzeppelin.com/openzeppelin-solidity/project/uniswap-hooks/2da25c3b-6073-4085-a42f-0e33736a166a/issue/swaps-without-jit-liquidity-allow-seeded-assets-to-be-exchanged-at-a-poisoned-price",
+      "description": "Swaps without JIT liquidity allow seeded assets to be exchanged at a poisoned price\n\nRoot Cause: _beforeSwap lets a swap continue when no JIT liquidity is available, allowing the pool price to move without any token exchange before assets are seeded.\n\nToy example:\n\nA tick-spacing-60 pool is initialized without liquidity.\nAn attacker uses a zero-liquidity swap to move slot0 above the hook's upper tick without paying assets.\nAn LP seeds 100e18 units of each token.\nThe attacker reverses the price and receives approximately 91.99e18 token1 for six wei of token0, including the pool fee.\nLocation: ReHypothecationHook._beforeSwap\n\nThe ReHypothecationHook._beforeSwap function temporarily provides liquidity from the hook's yield sources before each swap. When _getLiquidityToUse returns zero, _beforeSwap skips _modifyLiquidity but unconditionally allows the swap to continue. This state necessarily exists between pool initialization and the permissionless seedLiquidity call.\n\nIn Uniswap v4, a nonzero swap with zero active liquidity can advance the price to the caller's valid price limit while producing zero input, output, and fee amounts. For tick spacing 60, valid prices exist above the hook's getTickUpper boundary. An attacker can therefore move slot0 above the JIT range without paying assets and wait for seedLiquidity, which deposits the supplied assets but neither validates nor resets slot0. At the poisoned price, _getLiquidityToUse converts the balanced seed into one-sided JIT liquidity. The attacker can then reverse the swap, cross into that liquidity, and extract most of the seeded asset at the extreme price. With a 0.3% pool fee and 100e18 units of each token seeded, the reverse swap can receive approximately 91.990778322506861783e18 token1 for five wei of token0 plus one wei of fee.\n\nConsider reverting in _beforeSwap whenever the computed JIT liquidity is zero. Also consider enforcing atomic initialization and seeding, or requiring slot0 to remain inside the active range and the seed ratio to match the current price.",
+      "lastUpdatedAt": "2026-09-24T18:51:14.887Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
       "id": 1509,
       "link": "https://github.com/OpenZeppelin/uniswap-hooks/issues/140",
       "description": "https://github.com/OpenZeppelin/uniswap-hooks/issues/140",

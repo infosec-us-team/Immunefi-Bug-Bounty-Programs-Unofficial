@@ -151,7 +151,7 @@
   "rewardsToken": "USDC",
   "slug": "horizen",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-07-21T15:59:33.631Z",
+  "updatedDate": "2026-09-24T18:16:36.895Z",
   "impactsBody": "NFT-related and governance-voting impacts are not applicable to this program in Phase 1: there are no NFTs, and delegation surrogates are non-voting (ZenDelegationSurrogate), so governance-manipulation impacts cannot arise. Server-side web impacts do not apply to the staking frontend, which is a static export with no server runtime.",
   "websiteUrl": "https://horizen.io",
   "githubUrl": "https://github.com/HorizenOfficial",
@@ -164,6 +164,20 @@
   "responsiblePublicationCategory": "category_2",
   "description": "Horizen is an EVM-native, privacy-first blockchain ecosystem: an OP Stack L3\nthat settles to Base, enabling regulatory-compliant, auditable private\nexecution for onchain businesses and privacy-minded users. ZEN, the\necosystem's governance and utility token, lives as an ERC-20 on Base and on\nthe Horizen L3. This bug bounty program focuses on the official ZEN staking\nprogram: the ZenStaker smart contracts and the staking web application.",
   "knownIssues": [
+    {
+      "id": 1520,
+      "link": "https://github.com/HorizenOfficial/staker/blob/main/src/RewardAccumulator.sol",
+      "description": "RewardAccumulator open mode (whitelistEnabled = false). Anyone may contribute rewards and anyone may call sendRewardsToStaker() once the window elapses. The following consequences of this permissionless design are ACCEPTED and OUT OF SCOPE regardless of the impact a report selects (incl. \"temporary freezing of funds\", \"permanent freezing\", \"reward DoS\", \"griefing\", \"bricking\", \"theft\"): (a) Empty / zero-reward flush advancing the schedule — calling sendRewardsToStaker() while accumulatedRewards == 0 transfers nothing but still advances lastRewardTime by whole windows, so rewards funded later that window are delivered at the next boundary (<= one timeWindow = 30 days). Timing only: full delivery, principal unaffected, self-healing. (b) Sub-REWARD_DURATION (\"dust\") contribution reverting the flush — a total below REWARD_DURATION (2,592,000 wei) makes the inherited, audited Staker.notifyRewardAmount round the rate to zero and revert with Staker__InvalidRewardRate. NOT permanent and NOT theft: the revert is atomic (lastRewardTime does not advance), accumulatedRewards is monotonic, anyone can top the balance over the threshold and the next flush then distributes everything. Tokens only flow contributor -> accumulator -> staker -> stakers. In production both (a) and (b) are moreover unreachable by operational design: the next window's reward tranche is funded into the accumulator early in the current window and an off-chain keeper flushes the moment the window gate opens, so the accumulator always holds a full legitimate tranche at each boundary — never empty, and far above the dust threshold. Still IN scope (any whitelist setting): loss or incorrect attribution of principal or rewards, permanent denial of distribution via a DIFFERENT mechanism, over-extraction, or theft.",
+      "lastUpdatedAt": "2026-07-23T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1394,
+      "link": "https://github.com/HorizenOfficial/staker/blob/bc369be9acf7c76906cc837e4eabc9eada44be4d/src/ZenStaker.sol",
+      "description": "permitAndStake / permitAndStakeMore wrap the EIP-2612 permit call in try/catch. Production ZEN has no permit, so a failed permit does not itself revert: with no allowance the later transferFrom reverts (the gasless single-tx path is simply unavailable on a non-permit token); with a prior normal zen.approve allowance, staking succeeds even with dummy signature args. Both outcomes are expected. Reports that 'permit is ignored / silently swallowed' describe this documented, audited try/catch design.",
+      "lastUpdatedAt": "2026-07-13T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
     {
       "id": 1390,
       "link": "https://github.com/HorizenOfficial/staker/blob/bc369be9acf7c76906cc837e4eabc9eada44be4d/src/Staker.sol",
@@ -179,9 +193,9 @@
       "relatedImpactInScope": "smart_contract"
     },
     {
-      "id": 1392,
+      "id": 1396,
       "link": "https://github.com/HorizenOfficial/staker/blob/bc369be9acf7c76906cc837e4eabc9eada44be4d/src/ZenStaker.sol",
-      "description": "alterDelegatee updates the deposit's delegatee and its surrogate assignment, but Phase 1 surrogates are non-voting (ZenDelegationSurrogate), so no governance power is conferred or movable. Reports that delegation does nothing, or that it enables governance manipulation, are invalid for Phase 1.",
+      "description": "Phase 1 configuration: bumping disabled (maxBumpTip=0), claim fees 0 and immutable (MAX_CLAIM_FEE=0), identity earning power (earning power = staked balance), non-voting delegation surrogates, and governance delegation not surfaced. Reports that assume a non-Phase-1 configuration are invalid.",
       "lastUpdatedAt": "2026-07-13T22:00:00.000Z",
       "relatedImpactInScope": "smart_contract"
     },
@@ -193,13 +207,6 @@
       "relatedImpactInScope": "smart_contract"
     },
     {
-      "id": 1394,
-      "link": "https://github.com/HorizenOfficial/staker/blob/bc369be9acf7c76906cc837e4eabc9eada44be4d/src/ZenStaker.sol",
-      "description": "permitAndStake / permitAndStakeMore wrap the EIP-2612 permit call in try/catch. Production ZEN has no permit, so a failed permit does not itself revert: with no allowance the later transferFrom reverts (the gasless single-tx path is simply unavailable on a non-permit token); with a prior normal zen.approve allowance, staking succeeds even with dummy signature args. Both outcomes are expected. Reports that 'permit is ignored / silently swallowed' describe this documented, audited try/catch design.",
-      "lastUpdatedAt": "2026-07-13T22:00:00.000Z",
-      "relatedImpactInScope": "smart_contract"
-    },
-    {
       "id": 1395,
       "link": "https://github.com/HorizenOfficial/staker/blob/bc369be9acf7c76906cc837e4eabc9eada44be4d/src/ZenStaker.sol",
       "description": "ZenStaker admin and RewardAccumulator owner are Horizen Safe multisigs. Findings that require a malicious or compromised admin/owner are out of scope (standard trusted-role assumption).",
@@ -207,16 +214,9 @@
       "relatedImpactInScope": "smart_contract"
     },
     {
-      "id": 1396,
+      "id": 1392,
       "link": "https://github.com/HorizenOfficial/staker/blob/bc369be9acf7c76906cc837e4eabc9eada44be4d/src/ZenStaker.sol",
-      "description": "Phase 1 configuration: bumping disabled (maxBumpTip=0), claim fees 0 and immutable (MAX_CLAIM_FEE=0), identity earning power (earning power = staked balance), non-voting delegation surrogates, and governance delegation not surfaced. Reports that assume a non-Phase-1 configuration are invalid.",
-      "lastUpdatedAt": "2026-07-13T22:00:00.000Z",
-      "relatedImpactInScope": "smart_contract"
-    },
-    {
-      "id": 1397,
-      "link": "https://github.com/HorizenOfficial/staker/blob/bc369be9acf7c76906cc837e4eabc9eada44be4d/src/RewardAccumulator.sol",
-      "description": "RewardAccumulator open mode: deployed with whitelistEnabled=false, so anyone may contribute rewards (transferAndNotifyRewards / notifyAlreadyTransferredRewards) and anyone may call sendRewardsToStaker after the time window. Timing/rate effects, zero-reward triggering, and crediting of direct transfers are accepted and out of scope. Loss or incorrect attribution of principal or rewards, permanent denial of distribution (bricking), over-extraction, or theft remain IN scope regardless of the whitelist setting.",
+      "description": "alterDelegatee updates the deposit's delegatee and its surrogate assignment, but Phase 1 surrogates are non-voting (ZenDelegationSurrogate), so no governance power is conferred or movable. Reports that delegation does nothing, or that it enables governance manipulation, are invalid for Phase 1.",
       "lastUpdatedAt": "2026-07-13T22:00:00.000Z",
       "relatedImpactInScope": "smart_contract"
     }
@@ -293,7 +293,7 @@
   ],
   "rewards": [
     {
-      "id": 49363,
+      "id": 51121,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -304,7 +304,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 49364,
+      "id": 51122,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -312,7 +312,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 49365,
+      "id": 51123,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -321,7 +321,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 49366,
+      "id": 51124,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",

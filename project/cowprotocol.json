@@ -189,86 +189,6 @@
       "description": "IVault.sol",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
-    },
-    {
-      "id": "101249",
-      "url": "https://github.com/cowprotocol/cow-sdk",
-      "type": "websites_and_applications",
-      "addedAt": "2026-09-22T16:10:43.952Z",
-      "revision": 0,
-      "description": "CoW Protocol SDK monorepo, including published npm packages built from this repository",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
-      "id": "101250",
-      "url": "https://github.com/cowprotocol/cowswap/tree/main/libs/widget-lib",
-      "type": "websites_and_applications",
-      "addedAt": "2026-09-22T16:10:43.952Z",
-      "revision": 0,
-      "description": "@cowprotocol/widget-lib",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
-      "id": "101251",
-      "url": "https://github.com/cowprotocol/cowswap/tree/main/libs/widget-react",
-      "type": "websites_and_applications",
-      "addedAt": "2026-09-22T16:10:43.952Z",
-      "revision": 0,
-      "description": "@cowprotocol/widget-react",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
-      "id": "101252",
-      "url": "https://github.com/cowprotocol/cowswap/tree/main/libs/iframe-transport",
-      "type": "websites_and_applications",
-      "addedAt": "2026-09-22T16:10:43.952Z",
-      "revision": 0,
-      "description": "@cowprotocol/iframe-transport",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
-      "id": "101253",
-      "url": "https://github.com/cowprotocol/cowswap/tree/main/apps/cowswap-frontend",
-      "type": "websites_and_applications",
-      "addedAt": "2026-09-22T16:10:43.952Z",
-      "revision": 0,
-      "description": "CoW Swap frontend",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
-      "id": "101254",
-      "url": "https://github.com/cowprotocol/cowswap/tree/main/apps/cow-fi",
-      "type": "websites_and_applications",
-      "addedAt": "2026-09-22T16:10:43.952Z",
-      "revision": 0,
-      "description": "CoW Protocol website",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
-      "id": "101255",
-      "url": "https://swap.cow.fi",
-      "type": "websites_and_applications",
-      "addedAt": "2026-09-22T16:10:43.952Z",
-      "revision": 0,
-      "description": "CoW Swap hosted application and embedded widget origin",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
-      "id": "101256",
-      "url": "https://cow.fi",
-      "type": "websites_and_applications",
-      "addedAt": "2026-09-22T16:10:43.952Z",
-      "revision": 0,
-      "description": "CoW Protocol website",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": "## For Smart Contracts:\n\nWe only accept reports for issues that can be reproduced in the smart contracts deployed at the following addresses:\n0x9008d19f58aabd9ed0d60971565aa8510560ab41\n\n- Ethereum: https://etherscan.io/address/0x9008d19f58aabd9ed0d60971565aa8510560ab41#code\n- Gnosis Chain: https://gnosis.blockscout.com/address/0x9008d19f58aabd9ed0d60971565aa8510560ab41?tab=contract\n0x9e7ae8bdba9aa346739792d219a808884996db67\n\n- Ethereum: https://etherscan.io/address/0x9e7ae8bdba9aa346739792d219a808884996db67#code\n- Gnosis Chain: https://gnosis.blockscout.com/address/0x9e7ae8bdba9aa346739792d219a808884996db67?tab=contract\n0xc92e8bdf79f0507f65a392b0ab4667716bfe0110\n\n- Ethereum: https://etherscan.io/address/0xc92e8bdf79f0507f65a392b0ab4667716bfe0110#code\n- Gnosis Chain: https://gnosis.blockscout.com/address/0xc92e8bdf79f0507f65a392b0ab4667716bfe0110?tab=contract\n0x2c4c28ddbdac9c5e7055b4c863b72ea0149d8afe\n\n- Ethereum: https://etherscan.io/address/0x2c4c28ddbdac9c5e7055b4c863b72ea0149d8afe#code\n- Gnosis Chain: https://gnosis.blockscout.com/address/0x2c4c28ddbdac9c5e7055b4c863b72ea0149d8afe?tab=contract\n\nThis corresponds to commit 6ebbd810ff2da635fb6f88e9a15fde196f8c852a in the [official repository](https://github.com/cowprotocol/contracts/blob/6ebbd810ff2da635fb6f88e9a15fde196f8c852a/src/contracts/).\n\nFor the Initializable, ReentrancyGuard, SafeCast, SafeMath, IERC20, and IVault smart contracts, this bug bounty program only accepts bug reports for the changes that were performed compared to the original, as well as any improper use of them that leads to actual issues in the contracts previously mentioned to be in scope. Any bug that is reproducible in the original vendored contract is out of scope.\n\nAny vulnerabilities mentioned in this [audit report](https://github.com/gnosis/gp-v2-contracts/blob/main/audits/GnosisProtocolV2May2021.pdf) are considered as out-of-scope.\n\n## For Web & Applications:\n\nThe following versions are eligible:\n\nFor repository assets, the release branch at the time of submission, currently `main`. The `develop` branch is not in scope unless the finding also reproduces on the release branch.\n\n- For a CoW-controlled deployment, the code served by that deployment at the time of submission.\n- For a published npm package, its latest public version at the time of submission.\n- A tag or release that does not satisfy one of these rules is not independently in scope. Superseded, deprecated, yanked and unpublished versions are otherwise out of scope.\n\nPreview, pull-request, staging, testnet and other non-production deployments are out of scope.\n\nThe `npm` scope is limited to packages whose source is contained in one of the repositories or paths listed above. A package is not in scope merely because it is published under the `@cowprotocol` namespace.\n\nThe CoW Swap service worker and its `emergency.js` reset path are in scope.\n\nFor a report to be eligible, both the affected asset and the demonstrated impact must be listed in scope, and no Out of Scope rule may apply.",
@@ -302,13 +222,9 @@
   "maxBounty": 1000000,
   "outOfScopeAndRules": "",
   "pocPerTypeAndSeverity": [
-    "smart_contract - critical",
-    "websites_and_applications - critical",
     "smart_contract - high",
-    "websites_and_applications - high",
     "smart_contract - medium",
-    "websites_and_applications - medium",
-    "websites_and_applications - low"
+    "smart_contract - critical"
   ],
   "primaryPaymentWallet": "EVM",
   "prioritizedVulnerabilities": "_blank_",
@@ -318,8 +234,7 @@
   ],
   "programOverview": "The CoW team, for and on behalf of and at the expense of [CoW DAO](https://forum.cow.fi/), is running a bug bounty program focused on CoW Protocol, a fully permissionless protocol that leverages batch auctions to provide MEV protection, plus integrates with on-chain liquidity sources to offer traders the best prices.\n\nFor background information, please refer to [the docs](https://docs.cow.fi/).\n\nThe bug bounty program is focused around the smart contracts and web components and is mostly concerned with the loss of user funds. It is a seamless continuation of the bug bounty program formerly run by Gnosis.",
   "programType": [
-    "Smart Contract",
-    "Websites and Applications"
+    "Smart Contract"
   ],
   "project": "CoW Protocol",
   "projectType": [
@@ -333,7 +248,7 @@
   "rewardsToken": "USDC",
   "slug": "cowprotocol",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-09-23T19:20:10.502Z",
+  "updatedDate": "2026-09-24T11:50:17.182Z",
   "impactsBody": "Rewards and severity are determined according to the demonstrated impact under the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/), including its rules concerning elevated privileges and uncommon user interaction.\n\nOnly the following Smart Contracts and Websites & Applications impacts are accepted. All other impacts are out of scope, even if they affect an asset listed above.",
   "websiteUrl": "https://cow.fi/",
   "githubUrl": "http://github.com/cowprotocol",
@@ -348,7 +263,7 @@
   "knownIssues": [],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-  "defaultOutOfScopeWebAndApplications": "- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n  - This does not exclude reflected HTML injection with or without JavaScript\n  - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering",
+  "defaultOutOfScopeWebAndApplications": null,
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
@@ -420,107 +335,11 @@
       "type": "smart_contract",
       "severity": "critical",
       "title": "Access to user funds outside of a trade."
-    },
-    {
-      "id": 49,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Subdomain takeover without already-connected wallet interaction"
-    },
-    {
-      "id": 50,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Changing the first/last name of user\n- Enabling/disabling notifications"
-    },
-    {
-      "id": 51,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:\n- Reflected HTML Injection\n- Loading external site data"
-    },
-    {
-      "id": 52,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Redirecting users to malicious websites (open redirect)"
-    },
-    {
-      "id": 53,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Changing details of other users (including modifying browser local storage) without already-connected wallet interaction and with significant user interaction, such as:\n- Iframing leading to modifying the backend/browser state (must demonstrate impact with PoC)"
-    },
-    {
-      "id": 54,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Taking over broken or expired outgoing links, such as:\n- Social media handles, etc."
-    },
-    {
-      "id": 55,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Temporarily disabling user to access target site, such as:\n- Locking up the victim from login\n- Cookie bombing, etc."
-    },
-    {
-      "id": 35,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Execute arbitrary system commands"
-    },
-    {
-      "id": 36,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Retrieve sensitive data/files from a running server, such as:\n- /etc/shadow\n- database passwords\n- blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
-    },
-    {
-      "id": 37,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Taking down the application/website"
-    },
-    {
-      "id": 41,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Subdomain takeover with already-connected wallet interaction"
-    },
-    {
-      "id": 42,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Direct theft of user funds"
-    },
-    {
-      "id": 43,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Malicious interactions with an already-connected wallet, such as:\n- Modifying transaction arguments or parameters\n- Substituting contract addresses\n- Submitting malicious transactions"
-    },
-    {
-      "id": 46,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Injecting/modifying the static content on the target application without JavaScript (persistent), such as:\n- HTML injection without JavaScript\n- Replacing existing text with arbitrary text\n- Arbitrary file uploads, etc."
-    },
-    {
-      "id": 47,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Email\n- Password of the victim etc."
-    },
-    {
-      "id": 48,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Improperly disclosing confidential user information, such as:\n- Email address\n- Phone number\n- Physical address, etc."
     }
   ],
   "rewards": [
     {
-      "id": 51085,
+      "id": 51101,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -530,7 +349,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 51086,
+      "id": 51102,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -539,48 +358,11 @@
       "rewardModel": "range"
     },
     {
-      "id": 51087,
+      "id": 51103,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
       "maxReward": 10000,
-      "minReward": 1000,
-      "rewardModel": "range"
-    },
-    {
-      "id": 51088,
-      "primacy": "primacy_of_rules",
-      "severity": "critical",
-      "assetType": "websites_and_applications",
-      "maxReward": 50000,
-      "minReward": 20000,
-      "rewardModel": "range",
-      "otherImpactMaxReward": 0
-    },
-    {
-      "id": 51089,
-      "primacy": "primacy_of_rules",
-      "severity": "high",
-      "assetType": "websites_and_applications",
-      "maxReward": 20000,
-      "minReward": 5000,
-      "rewardModel": "range"
-    },
-    {
-      "id": 51090,
-      "primacy": "primacy_of_rules",
-      "severity": "medium",
-      "assetType": "websites_and_applications",
-      "maxReward": 5000,
-      "minReward": 1000,
-      "rewardModel": "range"
-    },
-    {
-      "id": 51091,
-      "primacy": "primacy_of_rules",
-      "severity": "low",
-      "assetType": "websites_and_applications",
-      "maxReward": 1000,
       "minReward": 1000,
       "rewardModel": "range"
     }
