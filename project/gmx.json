@@ -2559,7 +2559,7 @@
   "projectType": [
     "Defi"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nAll web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nCritical smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team. However, there is a minimum reward of __USD 50 000__.\n\nThe following vulnerabilities are not eligible for a reward:\n\n  - Exploits that require access to the Timelock admin keys or Fast Price Feed admin keys\n  - Cases involving risks of losses to the GLP pool in case the assets in the pool decrease in price\n  - Cases involving price manipulation on exchanges\n  - Vesting schedules might be slightly faster for multiple deposits\n  - Vault.includeAmmPrice and Vault.useSwapPricing are not reset to default values for certain cases, these variables will not be used\n  - Vault.liquidatePosition does not pay the transaction sender for certain cases, this is intentional\n  - Exploits that are not economically practical to execute\n  - Exploits due to delays or sizes of price feed updates\n  - In general, we assume that the fees earned from swaps and leverage trading over a period of a few months will be larger than any potential losses from price updates, we will be analyzing past data to adjust the fees and parameters for this. Additionally, any changes relating to the minimum price movement for profit as well as the cooldown duration for redeeming GLP will only be done after this analysis.  This analysis will also consider cases where opening both a long and short position within the minimum price movement may result in a higher probability of profit. Reports relating to these should be excluded.\n  - Calling Vault.setTokenConfig, Vault.clearTokenConfig, Vault.setTokenConfig on the same token would lead to double counting of the token amounts in GlpManager, Vault.clearTokenConfig will not be used\n  - GlpManager.getAum may return a slightly higher value until a liquidation occurs\n  - GlpManager.getAum may return a slightly lower value when there are shorts in profit but the price movement is below the 1.5% threshold\n  - It is possible for a user to burn and then mint GLP to frontrun price movements, the fees are assumed to be sufficient to prevent this from being profitable\n  - There will be some deviation of Vault.globalShortAveragePrices from the true average price if users increase their short position while the mark price is within 1.5% of their position’s average price, it is evaluated to not be economical for users to do this intentionally whether in combination with GLP minting or otherwise, GlpManager.setAumAdjustment can be used to correct this drift if required\n  - Vault.CollectSwapFees (_ token, feeAmount, tokenToUsdMin ( _ token, feeAmount))\n  - It is expected that liquidators, order executors and other keepers will validate that transactions succeed before sending them to avoid gas griefing attacks\n  - Exploits due to issues with hosting providers e.g. Netlify, Cloudflare Pages, IPFS and which cannot be fixed by changing any configuration on our side will be given an Informational classification, these exploits should be reported using the bug bounty program of the hosting providers instead\n\nPayouts are handled by the __GMX__ team directly and are denominated in USD. However, payouts are done in __ETH__ or __USDC__",
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nAll web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nCritical smart contract vulnerabilities are capped at 10% of economic damage, primarily\ntaking into consideration funds at risk, but also PR and branding aspects, at the\ndiscretion of the team. However, there is a minimum reward of USD 50 000.\n\nHigh and Medium smart contract vulnerabilities are rewarded within the range shown\nfor their threat level. The exact amount is determined by the exploitability and reach of\nthe issue, at the discretion of the team: a vulnerability that is readily exploitable\nunder normal conditions and broad in reach is rewarded toward the top of its range, while\none that requires narrow or unusual preconditions, affects only users or positions meeting\nspecific conditions, or has a limited or reversible effect is rewarded toward the bottom.\nExploitability factors already used by the classification system to downgrade or reject a\nreport, such as the need for elevated privileges or uncommon user interaction, are not\napplied again when determining the reward amount.\n\nThe following vulnerabilities are not eligible for a reward:\n\n  - Exploits that require access to the Timelock admin keys or Fast Price Feed admin keys\n  - Cases involving risks of losses to the GLP pool in case the assets in the pool decrease in price\n  - Cases involving price manipulation on exchanges\n  - Vesting schedules might be slightly faster for multiple deposits\n  - Vault.includeAmmPrice and Vault.useSwapPricing are not reset to default values for certain cases, these variables will not be used\n  - Vault.liquidatePosition does not pay the transaction sender for certain cases, this is intentional\n  - Exploits that are not economically practical to execute\n  - Exploits due to delays or sizes of price feed updates\n  - In general, we assume that the fees earned from swaps and leverage trading over a period of a few months will be larger than any potential losses from price updates, we will be analyzing past data to adjust the fees and parameters for this. Additionally, any changes relating to the minimum price movement for profit as well as the cooldown duration for redeeming GLP will only be done after this analysis.  This analysis will also consider cases where opening both a long and short position within the minimum price movement may result in a higher probability of profit. Reports relating to these should be excluded.\n  - Calling Vault.setTokenConfig, Vault.clearTokenConfig, Vault.setTokenConfig on the same token would lead to double counting of the token amounts in GlpManager, Vault.clearTokenConfig will not be used\n  - GlpManager.getAum may return a slightly higher value until a liquidation occurs\n  - GlpManager.getAum may return a slightly lower value when there are shorts in profit but the price movement is below the 1.5% threshold\n  - It is possible for a user to burn and then mint GLP to frontrun price movements, the fees are assumed to be sufficient to prevent this from being profitable\n  - There will be some deviation of Vault.globalShortAveragePrices from the true average price if users increase their short position while the mark price is within 1.5% of their position’s average price, it is evaluated to not be economical for users to do this intentionally whether in combination with GLP minting or otherwise, GlpManager.setAumAdjustment can be used to correct this drift if required\n  - Vault.CollectSwapFees (_ token, feeAmount, tokenToUsdMin ( _ token, feeAmount))\n  - It is expected that liquidators, order executors and other keepers will validate that transactions succeed before sending them to avoid gas griefing attacks\n  - Exploits due to issues with hosting providers e.g. Netlify, Cloudflare Pages, IPFS and which cannot be fixed by changing any configuration on our side will be given an Informational classification, these exploits should be reported using the bug bounty program of the hosting providers instead\n  - Subaccounts for users must always be trusted as they can create arbitrary orders for a user’s position, potentially forcing their position closer to liquidation.\n\nPayouts are handled by the __GMX__ team directly and are denominated in USD. However, payouts are done in __ETH__ or __USDC__",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -2567,7 +2567,7 @@
   "rewardsToken": "ETH or USDC",
   "slug": "gmx",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-09-02T08:15:27.630Z",
+  "updatedDate": "2026-09-30T03:15:30.283Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -2821,7 +2821,7 @@
   ],
   "rewards": [
     {
-      "id": 50639,
+      "id": 51248,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -2830,23 +2830,25 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 50640,
+      "id": 51249,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
-      "fixedReward": 25000,
-      "rewardModel": "fixed"
+      "maxReward": 25000,
+      "minReward": 10000,
+      "rewardModel": "range"
     },
     {
-      "id": 50641,
+      "id": 51250,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
-      "fixedReward": 10000,
-      "rewardModel": "fixed"
+      "maxReward": 10000,
+      "minReward": 2500,
+      "rewardModel": "range"
     },
     {
-      "id": 50642,
+      "id": 51251,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -2855,19 +2857,19 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 50643,
+      "id": 51252,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
-      "fixedReward": 25000,
+      "fixedReward": 10000,
       "rewardModel": "fixed"
     },
     {
-      "id": 50644,
+      "id": 51253,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
-      "fixedReward": 10000,
+      "fixedReward": 1000,
       "rewardModel": "fixed"
     }
   ],
