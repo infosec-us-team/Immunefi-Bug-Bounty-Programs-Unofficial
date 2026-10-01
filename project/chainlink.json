@@ -317,8 +317,8 @@
   ],
   "programOverview": "__Program Overview__\n\nChainlink is the industry-standard Web3 services platform. It has enabled trillions of dollars in transaction volume across DeFi, on-chain finance, gaming, NFTs, and other major industries. As the leading decentralized oracle network, Chainlink empowers developers to build feature-rich Web3 applications with seamless access to real-world data and off-chain computation across any blockchain and provides global enterprises with a universal gateway to all blockchains.\n\nLearn more about Chainlink by visiting [chain.link](https://chain.link/) or reading the developer documentation at [docs.chain.link](https://docs.chain.link/). To discuss an integration, [reach out to an expert](https://chainlinkcommunity.typeform.com/to/OYQO67EF?page=announcement&typeform-source=www.google.com).\n\n\n__Primacy of Impact vs Primacy of Rules__\n\nChainlink adheres to the Primacy of Impact, meaning that if you believe you have found a bug that causes an “In-scope Impact”, even if the affected system is not strictly within the assets listed, we still encourage you to submit it to the program for consideration. Chainlink adheres to the Primacy of Impact for the following severity levels:\n- Smart Contract - Critical\n- Smart Contract - High\n- Websites and Applications - Critical\n- Websites and Applications - High",
   "programType": [
-    "Smart Contract",
-    "Websites and Applications"
+    "Websites and Applications",
+    "Smart Contract"
   ],
   "project": "Chainlink",
   "projectType": [
@@ -332,7 +332,7 @@
   "rewardsToken": "USDC",
   "slug": "chainlink",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-09-28T19:30:56.327Z",
+  "updatedDate": "2026-09-30T21:01:53.517Z",
   "impactsBody": "Only the following impacts are accepted within this bug bounty program. All other impacts are out of scope, even if they affect an in scope asset.",
   "websiteUrl": null,
   "githubUrl": null,
@@ -370,12 +370,6 @@
       "title": "Redirecting users to malicious websites (open redirect)"
     },
     {
-      "id": 404,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of protocol revenue"
-    },
-    {
       "id": 405,
       "type": "smart_contract",
       "severity": "high",
@@ -404,12 +398,6 @@
       "type": "websites_and_applications",
       "severity": "high",
       "title": "Taking down the application/website with methods other than DDoS"
-    },
-    {
-      "id": 411,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Loss of protocol revenue (i.e skipping all or part of protocol fees)"
     },
     {
       "id": 412,
@@ -484,46 +472,28 @@
       "title": "RMN onchain curse bypass"
     },
     {
-      "id": 6194,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Rate limit violations"
-    },
-    {
-      "id": 6195,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Theft of protocol revenue"
-    },
-    {
-      "id": 6196,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Delaying delivery of oracle price feed updates unrelated to congestion of the underlying blockchain and unrelated to CCIP"
-    },
-    {
-      "id": 6197,
+      "id": 6375,
       "type": "smart_contract",
       "severity": "high",
-      "title": "Delaying delivery of oracle price feed updates unrelated to congestion of the underlying blockchain and unrelated to CCIP"
+      "title": "Theft of protocol revenue unrelated to CCIP"
     },
     {
-      "id": 6218,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Griefing in the condition where the cost of carrying out attack is more than the damage"
+      "id": 6377,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Loss of protocol revenue unrelated to CCIP (i.e skipping all or part of protocol fees)"
     },
     {
-      "id": 6219,
+      "id": 6378,
       "type": "websites_and_applications",
       "severity": "medium",
-      "title": "Griefing in the condition where the cost of carrying out attack is less than or equal to the damage"
+      "title": "Loss of protocol revenue unrelated to CCIP (i.e skipping all or part of protocol fees)"
     },
     {
-      "id": 6220,
+      "id": 6380,
       "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Loss of protocol revenue (i.e skipping all or part of protocol fees)"
+      "severity": "high",
+      "title": "Theft of protocol revenue unrelated to CCIP"
     },
     {
       "id": 15,
@@ -554,11 +524,53 @@
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Execute arbitrary system commands"
+    },
+    {
+      "id": 6382,
+      "type": "websites_and_applications",
+      "severity": "low",
+      "title": "Loss or theft of protocol revenue for CCIP (i.e skipping all or part of protocol fees)"
+    },
+    {
+      "id": 6383,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Loss or theft of protocol revenue for CCIP (i.e skipping all or part of protocol fees)"
+    },
+    {
+      "id": 6194,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Rate limit violations"
+    },
+    {
+      "id": 6196,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Delaying delivery of oracle price feed updates unrelated to congestion of the underlying blockchain and unrelated to CCIP"
+    },
+    {
+      "id": 6197,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Delaying delivery of oracle price feed updates unrelated to congestion of the underlying blockchain and unrelated to CCIP"
+    },
+    {
+      "id": 6218,
+      "type": "websites_and_applications",
+      "severity": "low",
+      "title": "Griefing in the condition where the cost of carrying out attack is more than the damage"
+    },
+    {
+      "id": 6219,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Griefing in the condition where the cost of carrying out attack is less than or equal to the damage"
     }
   ],
   "rewards": [
     {
-      "id": 51191,
+      "id": 51301,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -568,7 +580,7 @@
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 51192,
+      "id": 51302,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -576,7 +588,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 51193,
+      "id": 51303,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -584,7 +596,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 51194,
+      "id": 51304,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
@@ -592,7 +604,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 51195,
+      "id": 51305,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -601,7 +613,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 51196,
+      "id": 51306,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -609,7 +621,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 51197,
+      "id": 51307,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
@@ -617,7 +629,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 51198,
+      "id": 51308,
       "primacy": null,
       "severity": "low",
       "assetType": "websites_and_applications",
