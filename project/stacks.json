@@ -142,7 +142,7 @@
   "projectType": [
     "Blockchain"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for each category, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\n## Stacks DoS Severity Classification\n\nFor Blockchain/DLT reports, the denial-of-service (DoS) severity classification combines blast radius (B) and recovery needed to restore chain progression or valid confirmations (R). The matrix determines the final severity.\n\n### Blast Radius\n\n- **B1 (Local or short-lived DoS)**: One miner or signer fails without preventing other honest participants from confirming proposals, or the disruption is resolved with a new bitcoin-anchored tenure won by a different miner.  \n- **B2 (Partial confirmation failure)**: The attack prevents some valid transactions or honest proposals from reaching the canonical chain while other transactions confirm and the chain progresses. The inclusion of the affected transactions or proposals is not restored after a different miner wins a new Bitcoin-anchored tenure.  \n- **B3 (Network shutdown)**: The attack prevents the network from confirming new valid transactions. The network’s ability to confirm transactions is not restored after a different miner wins a new Bitcoin-anchored tenure.\n\nAn issue with no material effect on a supported production service is Informational or out of scope.\n\n### Recovery\n\n- **R1 (Automatic recovery)**: Default automation restores chain progress and confirmations without operator action. It remains effective if the attacker repeats the attack.  \n- **R2 (Existing-software recovery)**: Miners, signers, or nodes restore confirmations by restarting, reconfiguring, or activating a prepared backup. Recovery requires no new software or consensus change. To cause another incident, the attacker must re-establish the attack's preconditions.  \n- **R3 (Non-consensus-changing software recovery)**: Confirmations cannot resume until the mining or signing set deploys a new build, patch, or other artifact that does not change consensus.  \n- **R4 (Consensus-changing recovery)**: Confirmations cannot resume without a consensus change.\n\n### Severity\n\n| B / R | R1 (auto-recovery) | R2 (restart) | R3 (sw upgrade) | R4 (permanent freeze / hard fork) |\n| :---- | :---- | :---- | :---- | :---- |\n| **B1 (local)** | LOW | LOW | LOW | LOW |\n| **B2 (partial)** | LOW | LOW | MEDIUM | MEDIUM |\n| **B3 (complete)** | LOW | MEDIUM | MEDIUM | HIGH |\n\n### Notes on DoS Vectors Classification\n\n- A coordinated restart is R2 when it clears the attack state and another incident requires a new attacker action, such as resubmitting the trigger or winning another sortition (meaning it has to rebuild the attack preconditions). A patch installed after confirmations resume is remediation and does not change that recovery grade.  \n- To demonstrate a partial confirmation failure (B2), a valid transaction or honest proposal that the attack is claimed to block must reach the canonical chain in a test without the attack and fail to reach it in an otherwise equivalent test with the attack. An unrelated valid transaction must continue to confirm while the attack is active, showing that the chain continues to progress.  \n- A network shutdown (B3) must be demonstrated across the independent production roles required to stop confirmations. A test node hosting both miner and signer roles represents one failure domain unless the supported production deployment uses the same topology. A malicious miner can always withhold blocks during its own tenure, so that behavior alone does not demonstrate a DoS vulnerability.  \n- To demonstrate a network shutdown (B3), the proof of concept must reproduce the halt with miner and signer roles running separately.  \n- A malicious miner can always withhold blocks during its own tenure, so that behavior alone does not demonstrate a DoS vulnerability.  \n- Default timeouts and resource guards must remain enabled because they determine the effect of the attack. An underpriced transaction that reaches a default timeout and is rejected while other transactions continue to confirm does not establish B2 or B3. Reserving virtual address space alone does not demonstrate memory exhaustion; the proof of concept must produce an out-of-memory (OOM) condition or process termination under the recommended configuration [https://docs.stacks.co/operate/run-a-node](https://docs.stacks.co/operate/run-a-node).  \n- A report may describe multiple distinct attack vectors. Each vector will be graded using its own demonstrated impact and recovery; evidence from separate vectors will not be combined. Multiple steps required to execute one attack form a single vector will be assessed together. The report is classified at the highest severity established by any eligible vector.\n\n## Critical Finding Limits\n\nPlease note that Critical finding bounties are capped at 10% of the damage resulting from the finding. This mostly takes into account technical and financial damage but also includes the “human” impact, including reputational risk.\n\nWe guarantee a minimum payout of $15,000 USD for all valid Critical findings.\n\n## We Will\n\n  - Respond meaningfully to all reported issues in a timely manner.\n  - Not pursue legal action against or “counter-hack” any researchers acting in good faith and abiding by this program’s rules.\n  - Consider theoretical attacks and findings without proof-of-concept code as long as technically meaningful, evidence-based arguments are provided.\n\n## You Must\n\n  - Undergo full KYC. We are based in the Cayman Islands and abide by strict AML law, including OFAC controls/sanctions and onchain wallet address screening.\n  - Not be based or test from an OFAC-sanctioned country or region or (be a sanctioned individual or organization) as defined here: [https://ofac.treasury.gov/sanctions-programs-and-country-information](https://ofac.treasury.gov/sanctions-programs-and-country-information)\n  - Report all bugs using this template. __All fields are required unless otherwise marked__.\n    - Executive summary of issue: \n    - Finding details: \n    - Repository, file, and line of code where finding is found:  \n    - Steps to replicate: \n    - Impact of finding (short term): \n    - Impact of finding (long term): \n    - Mitigation suggestions (short term):\n    - Mitigation suggestions (long term): \n    - (Optional) Suggested patch:\n    - (Optional) Any useful links or resources:\n    - (Optional) Do you want a shout-out on our Security Wall of Fame? \n    - (Optional, if approved) Do you want a cybersecurity-themed NFT sent to your Stacks wallet?\n  - Use a private testnet. Testing on mainnet or public testnets is forbidden.\n\nA proof-of-concept is required for all submissions. Please include it in the corresponding form field.\n\n## Payments\n\nPayouts are handled by the _Stacks Endowment team_ directly and are denominated in _USD_. However, payments will be made in the _USD_ equivalent in the _Stacks_ token (STX).",
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for each category, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\n## Stacks DoS Severity Classification\n\nFor Blockchain/DLT reports, the denial-of-service (DoS) severity classification combines blast radius (B) and recovery needed to restore chain progression or valid confirmations (R). The matrix determines the final severity.\n\n### Blast Radius\n\n- **B1 (Local or short-lived DoS)**: One miner or signer fails without preventing other honest participants from confirming proposals, or the disruption is resolved with a new bitcoin-anchored tenure won by a different miner.  \n- **B2 (Partial confirmation failure)**: The attack prevents some valid transactions or honest proposals from reaching the canonical chain while other transactions confirm and the chain progresses. The inclusion of the affected transactions or proposals is not restored after a different miner wins a new Bitcoin-anchored tenure.  \n- **B3 (Network shutdown)**: The attack prevents the network from confirming new valid transactions. The network’s ability to confirm transactions is not restored after a different miner wins a new Bitcoin-anchored tenure.\n\nAn issue with no material effect on a supported production service is Informational or out of scope.\n\n### Recovery\n\n- **R1 (Automatic recovery)**: Default automation restores chain progress and confirmations without operator action. It remains effective if the attacker repeats the attack.  \n- **R2 (Existing-software recovery)**: Miners, signers, or nodes restore confirmations by restarting, reconfiguring, or activating a prepared backup. Recovery requires no new software or consensus change. To cause another incident, the attacker must re-establish the attack's preconditions.  \n- **R3 (Non-consensus-changing software recovery)**: Confirmations cannot resume until the mining or signing set deploys a new build, patch, or other artifact that does not change consensus.  \n- **R4 (Consensus-changing recovery)**: Confirmations cannot resume without a consensus change.\n\n### Severity\n\n| B / R | R1 (auto-recovery) | R2 (restart) | R3 (sw upgrade) | R4 (permanent freeze / hard fork) |\n| :---- | :---- | :---- | :---- | :---- |\n| **B1 (local)** | LOW | LOW | LOW | LOW |\n| **B2 (partial)** | LOW | LOW | MEDIUM | MEDIUM |\n| **B3 (complete)** | LOW | MEDIUM | MEDIUM | HIGH |\n\n### Notes on DoS Vectors Classification\n\n- A coordinated restart is R2 when it clears the attack state and another incident requires a new attacker action, such as resubmitting the trigger or winning another sortition (meaning it has to rebuild the attack preconditions). A patch installed after confirmations resume is remediation and does not change that recovery grade.  \n- To demonstrate a partial confirmation failure (B2), a valid transaction or honest proposal that the attack is claimed to block must reach the canonical chain in a test without the attack and fail to reach it in an otherwise equivalent test with the attack. An unrelated valid transaction must continue to confirm while the attack is active, showing that the chain continues to progress.  \n- A network shutdown (B3) must be demonstrated across the independent production roles required to stop confirmations. A test node hosting both miner and signer roles represents one failure domain unless the supported production deployment uses the same topology. A malicious miner can always withhold blocks during its own tenure, so that behavior alone does not demonstrate a DoS vulnerability.  \n- To demonstrate a network shutdown (B3), the proof of concept must reproduce the halt with miner and signer roles running separately.  \n- A malicious miner can always withhold blocks during its own tenure, so that behavior alone does not demonstrate a DoS vulnerability.  \n- Default timeouts and resource guards must remain enabled because they determine the effect of the attack. An underpriced transaction that reaches a default timeout and is rejected while other transactions continue to confirm does not establish B2 or B3. Reserving virtual address space alone does not demonstrate memory exhaustion; the proof of concept must produce an out-of-memory (OOM) condition or process termination under the recommended configuration [https://docs.stacks.co/operate/run-a-node](https://docs.stacks.co/operate/run-a-node).  \n- A report may describe multiple distinct attack vectors. Each vector will be graded using its own demonstrated impact and recovery; evidence from separate vectors will not be combined. Multiple steps required to execute one attack form a single vector will be assessed together. The report is classified at the highest severity established by any eligible vector.\n- In any report which argues that a DoS attack can turn into a complete chain halt and consensus failure by preventing chain progress for an entire PoX prepare phase, we will only consider the DoS vector itself and not the chain impacts.\n  - It is well known - and by design - that the chain will not make progress past a completely empty prepare phase.\n\n## Critical Finding Limits\n\nPlease note that Critical finding bounties are capped at 10% of the damage resulting from the finding. This mostly takes into account technical and financial damage but also includes the “human” impact, including reputational risk.\n\nWe guarantee a minimum payout of $15,000 USD for all valid Critical findings.\n\n## We Will\n\n  - Respond meaningfully to all reported issues in a timely manner.\n  - Not pursue legal action against or “counter-hack” any researchers acting in good faith and abiding by this program’s rules.\n  - Consider theoretical attacks and findings without proof-of-concept code as long as technically meaningful, evidence-based arguments are provided.\n\n## You Must\n\n  - Undergo full KYC. We are based in the Cayman Islands and abide by strict AML law, including OFAC controls/sanctions and onchain wallet address screening.\n  - Not be based or test from an OFAC-sanctioned country or region or (be a sanctioned individual or organization) as defined here: [https://ofac.treasury.gov/sanctions-programs-and-country-information](https://ofac.treasury.gov/sanctions-programs-and-country-information)\n  - Report all bugs using this template. __All fields are required unless otherwise marked__.\n    - Executive summary of issue: \n    - Finding details: \n    - Repository, file, and line of code where finding is found:  \n    - Steps to replicate: \n    - Impact of finding (short term): \n    - Impact of finding (long term): \n    - Mitigation suggestions (short term):\n    - Mitigation suggestions (long term): \n    - (Optional) Suggested patch:\n    - (Optional) Any useful links or resources:\n    - (Optional) Do you want a shout-out on our Security Wall of Fame? \n    - (Optional, if approved) Do you want a cybersecurity-themed NFT sent to your Stacks wallet?\n  - Use a private testnet. Testing on mainnet or public testnets is forbidden.\n\nA proof-of-concept is required for all submissions. Please include it in the corresponding form field.\n\n## Payments\n\nPayouts are handled by the _Stacks Endowment team_ directly and are denominated in _USD_. However, payments will be made in the _USD_ equivalent in the _Stacks_ token (STX).",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -150,7 +150,7 @@
   "rewardsToken": "STX",
   "slug": "stacks",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-09-08T20:15:26.321Z",
+  "updatedDate": "2026-10-01T13:53:39.828Z",
   "impactsBody": "",
   "websiteUrl": "https://stacks.co",
   "githubUrl": "https://github.com/stacks-network/stacks-core",
@@ -326,7 +326,7 @@
   ],
   "rewards": [
     {
-      "id": 50742,
+      "id": 51313,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -336,7 +336,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 50743,
+      "id": 51314,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -345,7 +345,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50744,
+      "id": 51315,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -354,7 +354,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50745,
+      "id": 51316,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
@@ -363,7 +363,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50746,
+      "id": 51317,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -373,7 +373,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 50747,
+      "id": 51318,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -382,7 +382,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50748,
+      "id": 51319,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -391,7 +391,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50749,
+      "id": 51320,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
