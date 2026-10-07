@@ -340,7 +340,7 @@
   "rewardsToken": "AVAX",
   "slug": "avalanche",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-09-18T11:52:32.615Z",
+  "updatedDate": "2026-10-07T01:53:49.368Z",
   "impactsBody": "**Expected resource-intensive operations including but not limited to:**\n- Node synchronization after being offline or behind on block height\n- Initial blockchain sync or historical data loading\n- Large database migrations or reindexing operations\n- Batch processing of accumulated transactions or events\n\n**Valid DoS vulnerabilities must demonstrate:**\n- An exploitable vulnerability beyond normal resource consumption\n- Malicious input or actions that cause disproportionate resource usage\n- A realistic attack scenario that differs from standard operational load\n- Impact that prevents legitimate users from accessing the service beyond expected operational delays\n- Disproportionate resource consumption relative to the cost paid (e.g., spending $1 in gas to cause $1000 in computational cost)",
   "websiteUrl": null,
   "githubUrl": null,
@@ -371,28 +371,10 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 1,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Network not being able to confirm new transactions (total network shutdown)"
-    },
-    {
       "id": 4648,
       "type": "blockchain_dlt",
       "severity": "high",
       "title": "Ability to produce a disproportionate number of blocks compared to the amount of controlled stake (High) Assuming the blockchain is using the Snowman++ congestion control mechanism."
-    },
-    {
-      "id": 4649,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Delay message handling of other validators due to sending messages over the P2P network"
-    },
-    {
-      "id": 4650,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Ability to circumvent P2P network message throttling"
     },
     {
       "id": 4651,
@@ -413,12 +395,6 @@
       "title": "Ability to exfiltrate a node's staking keys (TLS or BLS) without direct machine access"
     },
     {
-      "id": 2,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
-    },
-    {
       "id": 3,
       "type": "blockchain_dlt",
       "severity": "critical",
@@ -429,30 +405,6 @@
       "type": "blockchain_dlt",
       "severity": "critical",
       "title": "Permanent freezing of funds (fix requires hardfork)"
-    },
-    {
-      "id": 5,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Unintended chain split (network partition)"
-    },
-    {
-      "id": 6,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments"
-    },
-    {
-      "id": 7,
-      "type": "blockchain_dlt",
-      "severity": "high",
-      "title": "Causing network processing nodes to process transactions from the mempool beyond set parameters"
-    },
-    {
-      "id": 9,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Increasing network processing node resource consumption by at least 30% without brute force actions, compared to the preceding 24 hours"
     },
     {
       "id": 10,
@@ -507,11 +459,35 @@
       "type": "smart_contract",
       "severity": "medium",
       "title": "Unbounded gas consumption"
+    },
+    {
+      "id": 1,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Network not being able to confirm new transactions (total network shutdown)"
+    },
+    {
+      "id": 2,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Unintended permanent chain split requiring hard fork (network partition requiring hard fork)"
+    },
+    {
+      "id": 5,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Unintended chain split (network partition)"
+    },
+    {
+      "id": 7,
+      "type": "blockchain_dlt",
+      "severity": "high",
+      "title": "Causing network processing nodes to process transactions from the mempool beyond set parameters"
     }
   ],
   "rewards": [
     {
-      "id": 50958,
+      "id": 51429,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -521,7 +497,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 50959,
+      "id": 51430,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -530,7 +506,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50960,
+      "id": 51431,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -538,7 +514,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 50961,
+      "id": 51432,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
@@ -546,7 +522,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 50962,
+      "id": 51433,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -556,7 +532,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 50963,
+      "id": 51434,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -565,7 +541,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50964,
+      "id": 51435,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
