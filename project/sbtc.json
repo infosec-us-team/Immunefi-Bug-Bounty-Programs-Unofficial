@@ -92,9 +92,7 @@
     "blockchain_dlt - critical",
     "smart_contract - critical",
     "blockchain_dlt - high",
-    "smart_contract - high",
-    "blockchain_dlt - medium",
-    "blockchain_dlt - low"
+    "smart_contract - high"
   ],
   "primaryPaymentWallet": "Stacks",
   "prioritizedVulnerabilities": "_blank_",
@@ -119,8 +117,8 @@
   "rewardsToken": "STX",
   "slug": "sbtc",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-10-05T05:11:33.019Z",
-  "impactsBody": "Rewards are distributed based on the vulnerability's impact, as defined in the Impacts in Scope section. If there is any discrepancy between the classification in the Impacts in Scope section and the Immunefi Vulnerability Severity Classification System, the classification in the Impacts in Scope section will take precedence.\n\nStipulations:\n- Vulnerabilities that can be objectively determined to affect <1% of users may be downgraded by 1 severity.\n- Impacts that depend on execution involving a malicious signer may be downgraded by 1 severity level.\n- Impacts on availability (e.g., denial-of-service) that depend on execution involving a malicious signer will be downgraded by 1 or more severity levels, to no lower than Low.\n\nMalicious signer threat model: An attacker operates one or more signers whose public keys are members of the current on-chain sBTC signer set. The attacker controls those signers' legitimate credentials. They may run modified software, deviate from the protocol, and craft, replay, withhold, or reorder messages.",
+  "updatedDate": "2026-10-07T09:17:34.719Z",
+  "impactsBody": "Rewards are distributed based on the vulnerability's impact, as defined in the Impacts in Scope section. If there is any discrepancy between the classification in the Impacts in Scope section and the Immunefi Vulnerability Severity Classification System, the classification in the Impacts in Scope section will take precedence.\n\nStipulations: \n- Vulnerabilities that can be objectively determined to affect <1% of users may be downgraded by 1 severity.\n- Impacts that depend on execution involving a malicious signer may be downgraded by 1 severity level.\n- Impacts on availability (e.g., denial-of-service) that depend on execution involving a malicious signer will be downgraded by 1 or more severity levels, to no lower than Low.\n\nMalicious signer threat model: An attacker operates one or more signers whose public keys are members of the current on-chain sBTC signer set. The attacker controls those signers' legitimate credentials. They may run modified software, deviate from the protocol, and craft, replay, withhold, or reorder messages.",
   "websiteUrl": "https://www.stacks.co/sbtc",
   "githubUrl": "https://github.com/stacks-sbtc/sbtc",
   "eligibilityCriteria": [
@@ -199,30 +197,6 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 6187,
-      "type": "blockchain_dlt",
-      "severity": "low",
-      "title": "Denial of service caused by brute-force or simple resource exhaustion (for example, by connection flooding)"
-    },
-    {
-      "id": 6188,
-      "type": "blockchain_dlt",
-      "severity": "low",
-      "title": "Modification of STX transaction fees outside of design parameters"
-    },
-    {
-      "id": 6189,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Emily API crash preventing correct processing of sBTC deposits/withdrawals"
-    },
-    {
-      "id": 6190,
-      "type": "blockchain_dlt",
-      "severity": "medium",
-      "title": "Temporarily freezing sBTC transactions"
-    },
-    {
       "id": 6198,
       "type": "blockchain_dlt",
       "severity": "high",
@@ -267,7 +241,7 @@
   ],
   "rewards": [
     {
-      "id": 51364,
+      "id": 51465,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -277,7 +251,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 51365,
+      "id": 51466,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -286,24 +260,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 51366,
-      "primacy": null,
-      "severity": "medium",
-      "assetType": "blockchain_dlt",
-      "maxReward": 5000,
-      "minReward": 1000,
-      "rewardModel": "range"
-    },
-    {
-      "id": 51367,
-      "primacy": null,
-      "severity": "low",
-      "assetType": "blockchain_dlt",
-      "fixedReward": 1000,
-      "rewardModel": "fixed"
-    },
-    {
-      "id": 51368,
+      "id": 51467,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -313,7 +270,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 51369,
+      "id": 51468,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
