@@ -99,6 +99,26 @@
       "description": "Primacy of Impact",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": true
+    },
+    {
+      "id": "101349",
+      "url": "https://docs.ens.domains/",
+      "type": "websites_and_applications",
+      "addedAt": "2026-10-08T08:44:51.757Z",
+      "revision": 0,
+      "description": null,
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101350",
+      "url": "https://basics.ensdao.org/",
+      "type": "websites_and_applications",
+      "addedAt": "2026-10-08T08:44:51.757Z",
+      "revision": 0,
+      "description": null,
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": "ENS’s codebase can be found at https://github.com/orgs/ensdomains/repositories. Documentation and further resources can be found on https://docs.ens.domains",
@@ -165,9 +185,9 @@
   "rewardsToken": "USDC",
   "slug": "ens",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-08-27T11:44:18.481Z",
+  "updatedDate": "2026-10-08T13:43:39.663Z",
   "impactsBody": "# Program Structure\n\nThis program contains two independent reward tracks. Each track has its own severity classifications and reward ranges. A vulnerability shall be classified under one track only.\n\n- **Track A: Smart Contract Vulnerabilities**\n- **Track B: Websites and Applications Vulnerabilities**\n\n**Cross-Track Classification**: Where a vulnerability involves both smart contract and web/application components, it shall be classified under the track corresponding to the root cause of the vulnerability. For example, a signature verification flaw in a smart contract is a Track A vulnerability even if its effects are visible through a web interface.\n\n## Definitions & Calculations\n\n### Impact Assessment\n\nFor many ENS vulnerabilities, the primary impact is to name ownership or resolution integrity rather than direct theft of funds. ENS therefore uses a two-part framework to assess impact: (1) the scope of names affected, and (2) a financial calculation where applicable.\n\n### Part 1: Impact Scope\n\nThe scope of a vulnerability is assessed according to the following tiers:\n\n- Tier 1 — Systemic: The vulnerability affects all ENS names, or all names of a major type (e.g., all .eth 2LDs, all names using a particular resolver). Tier 1 vulnerabilities will generally be assessed at the upper end of the applicable severity range.\n\n- Tier 2 — Class-wide: The vulnerability affects a significant class of names (e.g., all DNS-imported names, all names registered through a specific registrar). Tier 2 vulnerabilities will generally be assessed at the mid-to-upper range.\n\n- Tier 3 — Conditional: The vulnerability affects a subset of names defined by external conditions (e.g., names under TLDs with weak DNSSEC keys, names using a deprecated resolver version). Tier 3 vulnerabilities will generally be assessed at the mid range, subject to the External Dependency Discount where applicable.\n\n- Tier 4 — Narrow: The vulnerability affects fewer than 50 individual names or accounts. Tier 4 vulnerabilities will generally be assessed at the lower end of the applicable severity range.\n\nWithin each tier, ENS will consider the categories of names affected. Not all names carry equal value or risk:\n\n- .eth 2LDs — highest value (primary ENS namespace, active secondary market, significant transaction volume)\n- DNS-imported names — moderate value (tied to external DNS ownership)\n- Subdomains — variable (depends on parent name usage and configuration)\n- Testnet names — lowest value (no real funds at risk)\n\n### Part 2: Financial Calculation\n\nWhere a vulnerability involves direct theft or misdirection of funds (e.g., draining ETH from a contract, redirecting payments), \"funds directly affected\" means the aggregate on-chain value that could be misappropriated, misdirected, locked, or destroyed through exploitation of the vulnerability at the time of report submission.\n\nFor Tier 4 (narrow) vulnerabilities affecting name ownership or resolution, the following supplementary methodology may be used:\n\n- The value of affected names may be calculated based on the most recent secondary market sale price or, if no sale has occurred, the annualized registration/renewal cost.\n\n- Potential misdirection of funds (e.g., payments sent to a wrong address due to hijacked resolution) may be calculated based on the trailing 90-day transaction volume to addresses resolved through the affected names.\n\n- Speculative or theoretical future losses are excluded from all calculations.\n\n### General Provisions\n\nThe following sections apply to all vulnerabilities reported.\n\nPrimacy of Impact vs. Primacy of Rules\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see Best Practices: Primacy of Impact.\n\nPrimacy of Impact submissions remain subject to the program’s reward calculation methodology, including impact-based scaling, the External Dependency Discount, and discretionary adjustment.\n\n\n### Feasibility Limitations\n\nThe project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug’s severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n\n### Severity Assessment for XSS Reports\n\n- Injection of malicious content into app.ens.domains to initiate a malicious transaction without requiring unusual user interaction will be considered Critical.\n- Injection of malicious scripts into other ENS subdomains (besides app.ens.domains) that offer web3 wallet connections will be considered High for stored XSS and Medium for reflected XSS.\n- XSS on static ENS websites like metadata.ens.domains, which do not offer web3 functionality, will be considered low.",
-  "websiteUrl": null,
+  "websiteUrl": "https://ens.domains",
   "githubUrl": null,
   "eligibilityCriteria": [],
   "responsiblePublicationCategory": "category_3",
@@ -201,7 +221,7 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "It is recommended to keep an eye on the audits secction, as the listed audits are constantly updated.\n\n**For the avoidance of doubt, this Out of Scope exclusion controls over the Primacy of Impact provision.**\n\n- Taking over broken links from sources that are no longer considered active, such as links related to meeting minutes, past events etc., as this content is left up for archival purposes and should not be changed. \n\n- Products funded or maintained by the DAO that are not on the published asset list are excluded regardless of impact",
+  "customOutOfScopeInformation": "It is recommended to keep an eye on the audits secction, as the listed audits are constantly updated.\n\n**For the avoidance of doubt, this Out of Scope exclusion controls over the Primacy of Impact provision.**\n\n- Taking over broken links from sources that are no longer considered active, such as links related to meeting minutes, past events etc., as this content is left up for archival purposes and should not be changed. \n\n- Products funded or maintained by the DAO that are not on the published asset list are excluded regardless of impact.\n\n**Beta and Preview Environments**\n\nWeb applications deployed under dev.ens.domains, and any subdomain thereof, are subject to the following scope limitation: only Critical severity impacts are in scope. High, Medium and Low severity impacts affecting these subdomains are out of scope and not eligible for a reward.\n\nFor the avoidance of doubt, this limitation takes precedence over the Primacy of Impact provision. Assets deployed under dev.ens.domains are not brought into full scope by virtue of being owned or operated by ENS.\n\nThis limitation applies to web applications only. No smart contracts are deployed under these subdomains, and smart contracts remain in full scope wherever they are deployed.\n\n\n\nThe HCA session key is a delegated signer with a bounded grant: a fixed validity window, a single resolver, a single payment token, and owner signed ceilings on the gas refund. Within that grant the session key acts for the owner by design. A browser compromise that extracts the session key therefore allows an attacker to act with that granted authority until the session expires, including spending the account's approved balance on the actions the grant permits and claiming gas refunds up to the owner signed ceilings. This is accepted design and is not eligible.\n\nIn scope is any weakness that lets a session key act outside that grant: operating past its stated validity, reaching a resolver or token it was not granted, claiming a refund above the owner signed ceilings, escalating to account owner authority, or producing a state change the grant does not cover.",
   "customProhibitedActivities": [
     "https://ens.dev is Out of Scope of the Bug bounty program"
   ],
@@ -473,15 +493,7 @@
   ],
   "rewards": [
     {
-      "id": 50451,
-      "primacy": "primacy_of_rules",
-      "severity": "low",
-      "assetType": "websites_and_applications",
-      "fixedReward": 1000,
-      "rewardModel": "fixed"
-    },
-    {
-      "id": 50452,
+      "id": 51522,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -491,7 +503,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 50453,
+      "id": 51523,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -500,7 +512,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50454,
+      "id": 51524,
       "primacy": "primacy_of_rules",
       "severity": "medium",
       "assetType": "smart_contract",
@@ -508,7 +520,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 50455,
+      "id": 51525,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
@@ -516,7 +528,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 50456,
+      "id": 51526,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -525,7 +537,7 @@
       "otherImpactMaxReward": 10000
     },
     {
-      "id": 50457,
+      "id": 51527,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -534,11 +546,19 @@
       "rewardModel": "range"
     },
     {
-      "id": 50458,
+      "id": 51528,
       "primacy": "primacy_of_rules",
       "severity": "medium",
       "assetType": "websites_and_applications",
       "fixedReward": 2500,
+      "rewardModel": "fixed"
+    },
+    {
+      "id": 51529,
+      "primacy": "primacy_of_rules",
+      "severity": "low",
+      "assetType": "websites_and_applications",
+      "fixedReward": 1000,
       "rewardModel": "fixed"
     }
   ],
@@ -554,6 +574,12 @@
       "url": "https://code4rena.com/reports/2022-07-ens",
       "auditor": "Code4rena audit",
       "date": "2022-07-18T00:00:00.000Z"
+    },
+    {
+      "id": "1536",
+      "url": "https://immunefi.com/audit-competition/audit-competition-ens/leaderboard/#top",
+      "auditor": "Immunefi",
+      "date": "2026-10-07T00:00:00.000Z"
     }
   ]
 }
