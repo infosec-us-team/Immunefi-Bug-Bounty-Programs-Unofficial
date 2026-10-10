@@ -2,6 +2,1470 @@
   {
     "assets": [
       {
+        "id": "3lhpWqv4OFtxrcFTl0pIj5",
+        "url": "https://github.com/OpenZeppelin/uniswap-hooks",
+        "type": "smart_contract",
+        "addedAt": "2025-10-09T11:43:14.849Z",
+        "revision": 0,
+        "description": null,
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "3jyyGKuBiXhHwlmi9ZT9ar",
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts",
+        "type": "smart_contract",
+        "addedAt": "2022-02-12T09:40:13.911Z",
+        "revision": 0,
+        "description": "Smart Contract",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "6ETI0ohXTF3lFiZdx90vei",
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable",
+        "type": "smart_contract",
+        "addedAt": "2024-04-21T11:53:30.551Z",
+        "revision": 0,
+        "description": "Smart Contract",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100792",
+        "url": "https://github.com/OpenZeppelin/openzeppelin-confidential-contracts/releases/tag/v0.5.3",
+        "type": "smart_contract",
+        "addedAt": "2026-08-18T04:42:08.777Z",
+        "revision": 0,
+        "description": "OpenZeppelin Confidential Contracts (only the latest release v.0.5.3 (4a4f6c71f58b75e391899b57e42e3b73d288dfe3) is in-scope, mocks and examples are also out-of-scope)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100930",
+        "url": "https://github.com/OpenZeppelin/openzeppelin-community-contracts/blob/master/contracts/crosschain/axelar/AxelarGatewayAdapter.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-09-08T17:10:25.781Z",
+        "revision": 0,
+        "description": "Axelar Gateway Adapter (only commit 0361935dc5edd233adbb9fbae5871ccbb8c739d8 in scope)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100931",
+        "url": "https://github.com/OpenZeppelin/openzeppelin-community-contracts/blob/master/contracts/crosschain/ERC7786OpenBridge.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-09-08T17:10:25.781Z",
+        "revision": 0,
+        "description": "ERC7786OpenBridge (only commit 0361935dc5edd233adbb9fbae5871ccbb8c739d8 in scope)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      }
+    ],
+    "assetsBodyV2": "All smart contracts in the “contracts” directory are included in the bug bounty, except those under “contracts/mocks”, which are testing artifacts, and those under “contracts/vendor”.",
+    "boostedIntroEvaluating": "",
+    "boostedIntroFinished": "",
+    "boostedIntroLive": "",
+    "boostedIntroStartingIn": "",
+    "boostedLeaderboard": [],
+    "boostedSummaryReport": null,
+    "ecosystem": [],
+    "endDate": null,
+    "evaluationEndDate": null,
+    "features": [
+      "Pay to Mediate",
+      "Pay to Submit"
+    ],
+    "hideAssetsInScope": null,
+    "immunefiStandard": true,
+    "inviteOnly": false,
+    "kyc": true,
+    "language": [
+      "Solidity"
+    ],
+    "launchDate": "2021-11-15T15:00:00.000Z",
+    "isPaused": false,
+    "pausedAt": null,
+    "pausedMessage": null,
+    "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4tl7aEnEwJyvmUxPKqR2KH/2ad9232b3e2e462c88aa27262ce93deb/OpenZeppelin_Logo.jpeg",
+    "maxBounty": 25000,
+    "outOfScopeAndRules": null,
+    "pocPerTypeAndSeverity": [
+      "smart_contract - critical",
+      "smart_contract - high"
+    ],
+    "primaryPaymentWallet": "EVM",
+    "prioritizedVulnerabilities": "_blank_",
+    "productType": [
+      "Services"
+    ],
+    "programOverview": "As the premier crypto cybersecurity technology and services company, we’ve built OpenZeppelin Contracts with our best [security practices](https://contracts.openzeppelin.com/security). We are committed to ensuring the utmost security in our community-vetted smart contracts, and our bounty program provides rewards of up to $25,000 USD for reporting critical vulnerabilities in our smart contracts library.\nThis bug bounty program is focused on OpenZeppelin Contracts and mainly intends to prevent:\n\n- Loss of funds by freezing another user’s funds, or theft of another user’s funds\n- Permanent denial of service (smart contract is made unable to operate)\n- Access control bypass, including privilege escalation\n- Smart contract not behaving as intended\n\nThis is an overlay bug bounty program for OpenZeppelin’s Contracts library. A vulnerability in an OpenZeppelin contract would likely affect many other projects and could trigger various other bounties. This program would be potentially additive to those cases. \n\nOpenZeppelin may issue [GHSA/CVEs](https://cve.report/vendor/openzeppelin) for reported vulnerabilities and will offer to credit issue reports in those public reports.\n\n\n__Primacy of Impact vs Primacy of Rules__\n\nOpenZeppelin adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page. \n\n__Previous Audits__\n\nOpenZeppelin’s completed audit reports can be found at [OpenZeppelin Contracts’ Security Center](https://contracts.openzeppelin.com/security) while previous security advisories are available at [GHSA/CVEs](https://github.com/OpenZeppelin/openzeppelin-contracts/security/advisories). OpenZeppelin will offer to credit issue reports in those public reports. Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n__Feasibility Limitations__\n\nOpenZeppelin will assess likelihood depending on the complexity of the steps involved in its execution and the exposure created by the vulnerability, as well as impact depending on the assets or systems at risk, capped to the worst-case impacted instance using the affected code.\n\nOpenZeppelin will evaluate the vulnerability of the affected code considering whether the issue arises directly from the library code while used as provided or if it requires a custom user implementation. Determining the likelihood of exploit on custom implementations will depend on how likely a library user is to make such an implementation and how common is the pattern leading to it.\n\nFor example, if a data structure can be cleared by any caller of a smart contract, its likelihood will be **high** if it holds user balances, although, if the vulnerability allows overriding non-critical values such as an already executed governor proposal flag, its likelihood will be **low** but can escalate to **medium** if it comes with side effects that increase the incentives of exploitation (e.g. proposal re-execution).\n\nSimilarly, if an instance of an AccessManager can be made unusable, its impact will be **high** but could be lowered to **medium** if the attacker requires special permissions in the system, and finally, it will be considered **low** if the contract is frozen only during 1 block before a threshold is met.\n\nThe final threat level will be decided based on the matrix above. For a vulnerability with **low** impact, if its likelihood is **high** because the cost of exploiting a single instance is negligible, then its final threat level will be **medium severity**.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, OpenZeppelin has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).\n\n__KYC Requirements__\n\nOpenZeppelin’s bug bounty program requires an invoice to be submitted and a KYC screen to be performed prior to OpenZeppelin providing a bug bounty reward. Once a payout is confirmed, a member of OpenZeppelin will reach out to you directly to collect the necessary information, including:\n- Full Legal Name\n- Email Address\n- Mailing Address\n- Wallet Address (Ethereum Mainnet Only)",
+    "programType": [
+      "Smart Contract"
+    ],
+    "project": "OpenZeppelin",
+    "projectType": [
+      "Defi",
+      "Exchange",
+      "NFT"
+    ],
+    "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nThe rewards stated here are additive to any existing bug bounty programs hosted by projects that are currently using OpenZeppelin contracts. \n\nBounty rewards are given according to an impact/likelihood [matrix for assessing threat levels.](https://raw.githubusercontent.com/OpenZeppelin/immunefi-assets/main/impact-likelihood-matrix.png) Each issue is assessed considering the likelihood of the vulnerability being successfully exploited and the expected impact in scope to a single instance of the affected smart contract. Note that, as can be seen in the matrix, if the impact is Critical then the threat is always Critical, for other impacts the maximum reduction is one level only if the likelihood is low, and if the likelihood is high then the threat is increased one level above the impact. \n\n__Proof of Concept (PoC) Requirements__\n\nA PoC compliant with [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) is required for the following severity levels:\n- Smart Contract: Critical\n- Smart Contract: High\n\nBugs introduced by a release candidate version and reported during the review period, the dates for which will be declared by OpenZeppelin on each release, will receive a 50% bonus.\n\nPayouts are handled by the __OpenZeppelin__ team directly and are denominated in USD. However, payouts are done in __ETH__ or __USDC__.",
+    "rewardsPool": 0,
+    "primaryPool": 0,
+    "allStarsPool": 0,
+    "podiumPool": 0,
+    "rewardsToken": "USDC",
+    "slug": "openzeppelin",
+    "tenPercentEconomicRule": false,
+    "updatedDate": "2026-10-09T13:53:37.525Z",
+    "impactsBody": null,
+    "websiteUrl": null,
+    "githubUrl": null,
+    "eligibilityCriteria": [],
+    "responsiblePublicationCategory": "category_1",
+    "description": "As the premier crypto cybersecurity technology and services company, we’ve built OpenZeppelin Contracts with our best [security practices](https://contracts.openzeppelin.com/security).",
+    "knownIssues": [
+      {
+        "id": 1488,
+        "link": "https://github.com/OpenZeppelin/openzeppelin-contracts/issues/6515",
+        "description": "RLP's `decodeBool`, `decodeUint256`, `decodeBytes32`, `decodeBytes`, and `decodeString` accept trailing bytes",
+        "lastUpdatedAt": "2026-08-20T14:06:45.662Z",
+        "relatedImpactInScope": "smart_contract"
+      },
+      {
+        "id": 1292,
+        "link": "https://github.com/OpenZeppelin/uniswap-hooks/blob/2c39623ce5a5103bd314f1380df0443df2523149/src/general/AntiSandwichHook.sol#L44",
+        "description": "In `_beforeSwap`, the hook iterates over all ticks between last tick and current tick. Developers must be aware that for large price changes in pools with small tick spacing, the `for` loop will iterate over a large number of ticks, which could lead to `MemoryOOG` error.",
+        "lastUpdatedAt": "2026-04-30T16:47:37.178Z",
+        "relatedImpactInScope": "smart_contract"
+      },
+      {
+        "id": 1303,
+        "link": "https://github.com/OpenZeppelin/uniswap-hooks/blob/638c56d9bf1ebd0f3b192b9d0392a70d525a37fa/src/general/ReHypothecationHook.sol#L55",
+        "description": "The RehypothecadedHook relies on the PoolManager singleton token reserves for flash accounting debts and credits during swaps. During `afterSwap`, the hook briefly generates token debts to the PoolManager even before users transfer their swap tokens. As a consequence, the PoolManager singleton may lack sufficient reserves for illiquid tokens in the instants between the swap executed and the posterior payment from the user, preventing swaps from being executed until the PoolManager accumulates enough tokens. Altrough it is very unlikely to happen, it can be mitigated by maintaining some permanent pool liquidity alongside rehypothecated liquidity.",
+        "lastUpdatedAt": "2026-05-12T20:14:43.675Z",
+        "relatedImpactInScope": "smart_contract"
+      },
+      {
+        "id": 1324,
+        "link": "https://github.com/OpenZeppelin/uniswap-hooks/blob/26dc8e53f812a1ca390d470342adb6cd8c3286ad/src/general/AntiSandwichHook.sol#L38",
+        "description": "The Anti-sandwich mechanism only protects swaps in the zeroForOne swap direction. Swaps in the !zeroForOne direction are not protected by this hook design.",
+        "lastUpdatedAt": "2026-05-27T13:11:57.829Z",
+        "relatedImpactInScope": "smart_contract"
+      },
+      {
+        "id": 1372,
+        "link": "https://github.com/OpenZeppelin/uniswap-hooks/issues/127",
+        "description": "Final cancel clears accounting while the hook still holds accrued fee claims",
+        "lastUpdatedAt": "2026-07-10T17:30:42.333Z",
+        "relatedImpactInScope": "smart_contract"
+      },
+      {
+        "id": 1386,
+        "link": "https://github.com/OpenZeppelin/uniswap-hooks/issues/129",
+        "description": "Withdrawal accounting can underflow after earlier withdrawals, permanently blocking some participants",
+        "lastUpdatedAt": "2026-07-14T13:59:11.961Z",
+        "relatedImpactInScope": "smart_contract"
+      },
+      {
+        "id": 1521,
+        "link": "https://audits.openzeppelin.com/openzeppelin-solidity/project/uniswap-hooks/2da25c3b-6073-4085-a42f-0e33736a166a/issue/swaps-without-jit-liquidity-allow-seeded-assets-to-be-exchanged-at-a-poisoned-price",
+        "description": "Swaps without JIT liquidity allow seeded assets to be exchanged at a poisoned price\n\nRoot Cause: _beforeSwap lets a swap continue when no JIT liquidity is available, allowing the pool price to move without any token exchange before assets are seeded.\n\nToy example:\n\nA tick-spacing-60 pool is initialized without liquidity.\nAn attacker uses a zero-liquidity swap to move slot0 above the hook's upper tick without paying assets.\nAn LP seeds 100e18 units of each token.\nThe attacker reverses the price and receives approximately 91.99e18 token1 for six wei of token0, including the pool fee.\nLocation: ReHypothecationHook._beforeSwap\n\nThe ReHypothecationHook._beforeSwap function temporarily provides liquidity from the hook's yield sources before each swap. When _getLiquidityToUse returns zero, _beforeSwap skips _modifyLiquidity but unconditionally allows the swap to continue. This state necessarily exists between pool initialization and the permissionless seedLiquidity call.\n\nIn Uniswap v4, a nonzero swap with zero active liquidity can advance the price to the caller's valid price limit while producing zero input, output, and fee amounts. For tick spacing 60, valid prices exist above the hook's getTickUpper boundary. An attacker can therefore move slot0 above the JIT range without paying assets and wait for seedLiquidity, which deposits the supplied assets but neither validates nor resets slot0. At the poisoned price, _getLiquidityToUse converts the balanced seed into one-sided JIT liquidity. The attacker can then reverse the swap, cross into that liquidity, and extract most of the seeded asset at the extreme price. With a 0.3% pool fee and 100e18 units of each token seeded, the reverse swap can receive approximately 91.990778322506861783e18 token1 for five wei of token0 plus one wei of fee.\n\nConsider reverting in _beforeSwap whenever the computed JIT liquidity is zero. Also consider enforcing atomic initialization and seeding, or requiring slot0 to remain inside the active range and the seed ratio to match the current price.",
+        "lastUpdatedAt": "2026-09-24T18:51:14.887Z",
+        "relatedImpactInScope": "smart_contract"
+      },
+      {
+        "id": 1509,
+        "link": "https://github.com/OpenZeppelin/uniswap-hooks/issues/140",
+        "description": "https://github.com/OpenZeppelin/uniswap-hooks/issues/140",
+        "lastUpdatedAt": "2026-09-14T18:36:28.716Z",
+        "relatedImpactInScope": "smart_contract"
+      }
+    ],
+    "defaultOutOfScopeBlockchain": null,
+    "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+    "defaultOutOfScopeWebAndApplications": null,
+    "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+    "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+    "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+    "customOutOfScopeInformation": "- Best practice critiques\n- ERC mandated behaviors",
+    "customProhibitedActivities": [],
+    "impacts": [
+      {
+        "id": 34,
+        "type": "smart_contract",
+        "severity": "low",
+        "title": "Contract fails to deliver promised returns, but doesn't lose value"
+      },
+      {
+        "id": 1325,
+        "type": "smart_contract",
+        "severity": "low",
+        "title": "Temporary denial of service (smart contract is made unable to operate for one block, functionality is restored in the next block)"
+      },
+      {
+        "id": 1326,
+        "type": "smart_contract",
+        "severity": "low",
+        "title": "Invalid events are emitted, potentially confusing indexers (internal storage is unaffected)"
+      },
+      {
+        "id": 1327,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Governance voting result manipulation"
+      },
+      {
+        "id": 1328,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Permanent freezing of funds"
+      },
+      {
+        "id": 1329,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Permanent denial of service (smart contract is made unable to operate)"
+      },
+      {
+        "id": 1330,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Theft of unclaimed yield / Permanent freezing of unclaimed yield - Impact severity is determined by potential yield lost"
+      },
+      {
+        "id": 1331,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Temporary freezing of funds - Impact severity depends on funds at risk"
+      },
+      {
+        "id": 29,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Smart contract unable to operate due to lack of token funds"
+      },
+      {
+        "id": 31,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+      },
+      {
+        "id": 32,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Theft of gas"
+      },
+      {
+        "id": 33,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Unbounded gas consumption"
+      },
+      {
+        "id": 1332,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Direct theft of user funds, whether at-rest or in-motion, other than unclaimed yield"
+      },
+      {
+        "id": 1333,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Access control is bypassed, including privilege escalation"
+      }
+    ],
+    "rewards": [
+      {
+        "id": 51582,
+        "primacy": null,
+        "severity": "critical",
+        "assetType": "smart_contract",
+        "maxReward": 25000,
+        "minReward": 5000,
+        "rewardModel": "range",
+        "rewardCalculationPercentage": 10
+      },
+      {
+        "id": 51583,
+        "primacy": null,
+        "severity": "high",
+        "assetType": "smart_contract",
+        "maxReward": 5000,
+        "minReward": 2500,
+        "rewardModel": "range"
+      },
+      {
+        "id": 51584,
+        "primacy": null,
+        "severity": "medium",
+        "assetType": "smart_contract",
+        "fixedReward": 2500,
+        "rewardModel": "fixed"
+      },
+      {
+        "id": 51585,
+        "primacy": null,
+        "severity": "low",
+        "assetType": "smart_contract",
+        "fixedReward": 1000,
+        "rewardModel": "fixed"
+      }
+    ],
+    "audits": [
+      {
+        "id": "1330",
+        "url": "https://github.com/OpenZeppelin/openzeppelin-confidential-contracts/tree/master/audits",
+        "auditor": "OpenZeppelin",
+        "date": "2025-12-26T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "assets": [
+      {
+        "id": "1gIGZr1iB6BscTqJXpd1eF",
+        "url": "https://github.com/OpenZeppelin/stellar-contracts/releases",
+        "type": "smart_contract",
+        "addedAt": "2026-01-29T06:34:50.151Z",
+        "revision": 0,
+        "description": "OpenZeppelin Stellar Contracts Library (only the packages folder of the latest release is in scope)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      }
+    ],
+    "assetsBodyV2": null,
+    "boostedIntroEvaluating": "",
+    "boostedIntroFinished": "",
+    "boostedIntroLive": "",
+    "boostedIntroStartingIn": "",
+    "boostedLeaderboard": [],
+    "boostedSummaryReport": null,
+    "ecosystem": [],
+    "endDate": null,
+    "evaluationEndDate": null,
+    "features": [
+      "Pay to Mediate",
+      "Pay to Submit"
+    ],
+    "hideAssetsInScope": null,
+    "immunefiStandard": false,
+    "inviteOnly": false,
+    "kyc": true,
+    "language": [],
+    "launchDate": "2025-05-08T02:51:06.000Z",
+    "isPaused": false,
+    "pausedAt": null,
+    "pausedMessage": null,
+    "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5dlUG1E6sheSJXTj8T3pbh/810c198bb74efdb222d701da00d91957/oz.png",
+    "maxBounty": 25000,
+    "outOfScopeAndRules": null,
+    "pocPerTypeAndSeverity": [],
+    "primaryPaymentWallet": "EVM",
+    "prioritizedVulnerabilities": "_blank_",
+    "productType": [],
+    "programOverview": "As the premier crypto cybersecurity technology and services company, we’ve built OpenZeppelin Contracts with our best security practices. We are committed to ensuring the utmost security in our community-vetted smart contracts, and our bounty program provides rewards of up to $25,000 USD for reporting critical vulnerabilities in our smart contracts library. \n\nThis bug bounty program is focused on OpenZeppelin Stellar Contracts and mainly intends to prevent:\n- Loss of funds by freezing another user’s funds, or theft of another user’s funds\n- Permanent denial of service (smart contract is made unable to operate)\n- Access control bypass, including privilege escalation\n- Smart contract not behaving as intended\n\nFor more information about OpenZeppelin on Stellar, please visit https://docs.openzeppelin.com/stellar-contracts/0.1.0/.\n\nOpenZeppelin on Stellar provides rewards in XLM on Stellar, denominated in USD.\n\nFor more details about the payment process, please view the Rewards by Threat Level section further below.\n\n__Previous Audits__\nOpenZeppelin on Stellar’s completed audit reports can be found at https://github.com/OpenZeppelin/stellar-contracts/tree/main/audits. Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n\n__KYC Requirement__\n\nOpenZeppelin’s bug bounty program requires an invoice to be submitted and a KYC screen to be performed prior to OpenZeppelin providing a bug bounty reward. Once a payout is confirmed, a member of OpenZeppelin will reach out to you directly to collect the necessary information, including:\n- Full Legal Name\n- Email Address\n- Mailing Address\n- Wallet Address (Stellar Only)\n\n__Proof of Concept (PoC) Requirements__\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the Immunefi PoC Guidelines and Rules.\nA PoC compliant with Immunefi PoC Guidelines and Rules is required for the following severity levels:\n- Smart Contract: Critical\n- Smart Contract: High\n\nBugs introduced by a release candidate version and reported during the review period, the dates for which will be declared by OpenZeppelin on each release, will receive a 50% bonus.",
+    "programType": [
+      "Smart Contract"
+    ],
+    "project": "OpenZeppelin on Stellar",
+    "projectType": [],
+    "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the Immunefi Vulnerability Severity Classification System V2.3. This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nThe rewards stated here are additive to any existing bug bounty programs hosted by projects that are currently using OpenZeppelin on Stellar contracts.\n\nBounty rewards are given according to an [impact/likelihood matrix for assessing threat levels. ](https://raw.githubusercontent.com/OpenZeppelin/immunefi-assets/main/impact-likelihood-matrix.png?utm_source=immunefi)Each issue is assessed considering the likelihood of the vulnerability being successfully exploited and the expected impact in scope to a single instance of the affected smart contract. Note that, as can be seen in the matrix, if the impact is Critical then the threat is always Critical, for other impacts the maximum reduction is one level only if the likelihood is low, and if the likelihood is high then the threat is increased one level above the impact.\n\n__Critical Reward Calculation__\nMainnet assets:\n- Reward amount is 10% of the funds directly affected up to a maximum of: $25,000\n- Minimum reward to discourage security researchers from withholding a bug report: $5,000\n\n__Reward Payment Terms__\n\n- Total maximum payout for this bug bounty contest is $250,000.\n- Maximum single bounty payout is capped at $25,000.",
+    "rewardsPool": 0,
+    "primaryPool": 0,
+    "allStarsPool": 0,
+    "podiumPool": 0,
+    "rewardsToken": "XLM",
+    "slug": "openzeppelin-stellar",
+    "tenPercentEconomicRule": false,
+    "updatedDate": "2026-10-09T13:53:24.625Z",
+    "impactsBody": null,
+    "websiteUrl": null,
+    "githubUrl": null,
+    "eligibilityCriteria": [],
+    "responsiblePublicationCategory": "category_1",
+    "description": "As the premier crypto cybersecurity technology and services company, we’ve built OpenZeppelin Contracts with our best [security practices](https://contracts.openzeppelin.com/security?utm_source=immunefi). We are committed to ensuring the utmost security in our community-vetted smart contracts, and our bounty program provides rewards of up to $25,000 USD for reporting critical vulnerabilities in our smart contracts library.",
+    "knownIssues": [
+      {
+        "id": 1499,
+        "link": "https://github.com/OpenZeppelin/stellar-contracts/pull/837",
+        "description": "This issue is being addressed in the following PR.",
+        "lastUpdatedAt": "2026-09-07T16:24:53.029Z",
+        "relatedImpactInScope": "smart_contract"
+      },
+      {
+        "id": 1500,
+        "link": "https://github.com/OpenZeppelin/stellar-contracts/pull/868",
+        "description": "Added the signing contract as part of `AuthDigestPreimage`",
+        "lastUpdatedAt": "2026-09-07T16:27:52.393Z",
+        "relatedImpactInScope": "smart_contract"
+      }
+    ],
+    "defaultOutOfScopeBlockchain": null,
+    "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+    "defaultOutOfScopeWebAndApplications": null,
+    "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+    "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+    "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+    "customOutOfScopeInformation": null,
+    "customProhibitedActivities": [],
+    "impacts": [
+      {
+        "id": 23,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Theft of unclaimed yield"
+      },
+      {
+        "id": 15,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+      },
+      {
+        "id": 29,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Smart contract unable to operate due to lack of token funds"
+      },
+      {
+        "id": 32,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Theft of gas"
+      },
+      {
+        "id": 31,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+      },
+      {
+        "id": 33,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Unbounded gas consumption"
+      },
+      {
+        "id": 34,
+        "type": "smart_contract",
+        "severity": "low",
+        "title": "Contract fails to deliver promised returns, but doesn't lose value"
+      },
+      {
+        "id": 27,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Temporary freezing of funds"
+      },
+      {
+        "id": 5520,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Access control is bypassed, including privilege escalation"
+      },
+      {
+        "id": 25,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Permanent freezing of unclaimed yield"
+      },
+      {
+        "id": 5521,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Governance voting result manipulation"
+      },
+      {
+        "id": 5522,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Permanent freezing of funds"
+      },
+      {
+        "id": 5523,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Permanent denial of service (smart contract is made unable to operate)"
+      },
+      {
+        "id": 5524,
+        "type": "smart_contract",
+        "severity": "low",
+        "title": "Temporary denial of service (smart contract is made unable to operate for one block, functionality is restored in the next block)"
+      },
+      {
+        "id": 5525,
+        "type": "smart_contract",
+        "severity": "low",
+        "title": "Invalid events are emitted, potentially confusing indexers (internal storage is unaffected)"
+      }
+    ],
+    "rewards": [
+      {
+        "id": 51578,
+        "primacy": null,
+        "severity": "critical",
+        "assetType": "smart_contract",
+        "maxReward": 25000,
+        "minReward": 5000,
+        "rewardModel": "range",
+        "rewardCalculationPercentage": 10
+      },
+      {
+        "id": 51579,
+        "primacy": null,
+        "severity": "high",
+        "assetType": "smart_contract",
+        "maxReward": 5000,
+        "minReward": 2500,
+        "rewardModel": "range"
+      },
+      {
+        "id": 51580,
+        "primacy": null,
+        "severity": "medium",
+        "assetType": "smart_contract",
+        "fixedReward": 2500,
+        "rewardModel": "fixed"
+      },
+      {
+        "id": 51581,
+        "primacy": null,
+        "severity": "low",
+        "assetType": "smart_contract",
+        "fixedReward": 1000,
+        "rewardModel": "fixed"
+      }
+    ],
+    "audits": [
+      {
+        "id": "1340",
+        "url": "https://github.com/OpenZeppelin/stellar-contracts/tree/main/audits",
+        "auditor": "OpenZeppelin",
+        "date": "2026-04-06T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "assets": [
+      {
+        "id": "39I4UubBcljARlt90OaRGQ",
+        "url": "https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016",
+        "type": "smart_contract",
+        "addedAt": "2022-05-10T15:42:40.006Z",
+        "revision": 0,
+        "description": "XDaiForeignBridge: DAI-xDAI TokenBridge contract on the Ethereum Mainnet ",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "6VGumskpUySCP01OvbYYMn",
+        "url": "https://blockscout.com/xdai/mainnet/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6",
+        "type": "smart_contract",
+        "addedAt": "2022-05-10T15:42:40.965Z",
+        "revision": 0,
+        "description": "HomeBridgeErcToNative: DAI-xDAI TokenBridge contract on the Gnosis chain",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "4oQoN6nat7OLKqL8ib88eC",
+        "url": "https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671",
+        "type": "smart_contract",
+        "addedAt": "2022-05-10T15:42:42.104Z",
+        "revision": 0,
+        "description": "ForeignOmnibridge: OmniBridge contract on the Ethereum Mainnet",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "1TEVjuzA8DmpOMImDZWzs3",
+        "url": "https://blockscout.com/xdai/mainnet/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d",
+        "type": "smart_contract",
+        "addedAt": "2022-05-10T15:42:43.182Z",
+        "revision": 0,
+        "description": "HomeOmnibridge: OmniBridge contract on the Gnosis chain",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      }
+    ],
+    "assetsBodyV2": "The smart contract regarding native xDAI bridging (XDaiForeignBridge and HomeBridgeErcToNative)  can be found at [https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge](https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge). The smart contracts regarding arbitrary ERC20 bridging (ForeignOmnibridge and HomeOmnibridge) can be found at [https://github.com/gnosischain/omnibridge/tree/master](https://github.com/gnosischain/omnibridge/tree/master).\n\nOnly those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf an impact can be caused to any other asset managed by Gnosis that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.",
+    "boostedIntroEvaluating": "",
+    "boostedIntroFinished": "",
+    "boostedIntroLive": "",
+    "boostedIntroStartingIn": "",
+    "boostedLeaderboard": [],
+    "boostedSummaryReport": null,
+    "ecosystem": [
+      "BSC",
+      "ETH"
+    ],
+    "endDate": null,
+    "evaluationEndDate": null,
+    "features": [
+      "Pay to Mediate"
+    ],
+    "hideAssetsInScope": null,
+    "immunefiStandard": true,
+    "inviteOnly": false,
+    "kyc": false,
+    "language": [
+      "Solidity"
+    ],
+    "launchDate": "2022-02-11T04:00:00.000Z",
+    "isPaused": false,
+    "pausedAt": null,
+    "pausedMessage": null,
+    "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6ibSou9KOCjwRMOviQ4op0/76c3c2bda63a9c0c8c8432d71f234f8c/Aatar_green_white.png",
+    "maxBounty": 2000000,
+    "outOfScopeAndRules": null,
+    "pocPerTypeAndSeverity": [
+      "smart_contract - high",
+      "smart_contract - critical",
+      "smart_contract - medium"
+    ],
+    "primaryPaymentWallet": "EVM",
+    "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the\nfollowing types:\n\n**Smart Contracts/Blockchain:**\n\n- Re-entrancy\n- Logic errors\n  - including user authentication errors\n- Solidity/EVM details not considered\n  - including integer over-/under-flow\n  - including unhandled exceptions\n- Trusting trust/dependency vulnerabilities\n  - including composability vulnerabilities\n- Oracle failure/manipulation\n- Novel governance attacks\n- Economic/financial attacks\n  - including flash loan attacks\n- Congestion and scalability\n  - including running out of gas\n  - including block stuffing\n  - including susceptibility to frontrunning\n- Consensus failures\n- Cryptography problems\n  - Signature malleability\n  - Susceptibility to replay attacks\n  - Weak randomness\n  - Weak encryption\n- Susceptibility to block timestamp manipulation\n- Missing access controls / unprotected internal or debugging interfaces",
+    "productType": [
+      "Crosschain Liquidity",
+      "L1"
+    ],
+    "programOverview": "Gnosis Chain is an EVM compatible, community-owned network that prioritizes credible neutrality and resiliency, open to everyone without privilege or prejudice. Secured by over 165k validators around the world, Gnosis Chain has all the tooling you are used to and trust-minimized bridges to mainnet.\n\nFor more information about Gnosis Chain, please visit [https://www.gnosis.io/](https://www.gnosis.io/).\n\nThis bug bounty program is focused on the bridges smart contracts that move assets in between Mainnet and Gnosis chain. The xDai bridge is used to bridge DAI on mainnet and the native xDai coin on Gnosis chain. For more information see [https://docs.gnosischain.com/bridges/tokenbridge/xdai-bridge](https://docs.gnosischain.com/bridges/tokenbridge/xdai-bridge). The OmniBridge is a native token bridge that mints the canonical representation of bridged assets on Gnosis. For more information see [https://docs.gnosischain.com/bridges/tokenbridge/omnibridge](https://docs.gnosischain.com/bridges/tokenbridge/omnibridge).\n\n__Disclosure of Information relating to Bug Reports:__ Security researchers may not publish any information about their bug reports (even after any vulnerabilities have been fixed and the security researcher has been paid) unless Gnosis provides written consent in the bug report submission thread.",
+    "programType": [
+      "Smart Contract"
+    ],
+    "project": "Gnosis Chain",
+    "projectType": [
+      "Defi"
+    ],
+    "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll smart contract bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward.\n\nCritical and High smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team.\n\nPayouts are handled by the __Gnosis Chain__ team directly and are denominated in __USD__. However, payouts are done in __USDC or xDAI__.",
+    "rewardsPool": 0,
+    "primaryPool": 0,
+    "allStarsPool": 0,
+    "podiumPool": 0,
+    "rewardsToken": "USDC or xDAI",
+    "slug": "gnosischain",
+    "tenPercentEconomicRule": false,
+    "updatedDate": "2026-10-09T12:38:06.358Z",
+    "impactsBody": null,
+    "websiteUrl": null,
+    "githubUrl": null,
+    "eligibilityCriteria": [],
+    "responsiblePublicationCategory": null,
+    "description": "Gnosis Chain is an EVM compatible, community-owned network that prioritizes credible neutrality and resiliency, open to everyone without privilege or prejudice. Secured by over 165k validators around the world, Gnosis Chain has all the tooling you are used to and trust-minimized bridges to mainnet.",
+    "knownIssues": [
+      {
+        "id": 1505,
+        "link": "https://immunefi.com/bug-bounty/gnosischain/information/",
+        "description": "callback through onTokenBridged() is not checked for success. Any failure in onTokenBridged() is silently swallowed.",
+        "lastUpdatedAt": "2026-09-09T00:00:00.000Z",
+        "relatedImpactInScope": "smart_contract"
+      },
+      {
+        "id": 1504,
+        "link": "https://immunefi.com/bug-bounty/gnosischain/information/",
+        "description": "Validator signature collection on Home uses a static validator set defined at the time of transaction execution while signature verification uses the currently active validator set (potentially updated).",
+        "lastUpdatedAt": "2026-09-09T00:00:00.000Z",
+        "relatedImpactInScope": "smart_contract"
+      },
+      {
+        "id": 1503,
+        "link": "https://immunefi.com/bug-bounty/gnosischain/information/",
+        "description": "Omnibridge onTokenTransfer() function does not verify msg.sender and anyone can call this function to create fake bridge token.",
+        "lastUpdatedAt": "2026-09-09T00:00:00.000Z",
+        "relatedImpactInScope": "smart_contract"
+      },
+      {
+        "id": 1502,
+        "link": "https://immunefi.com/bug-bounty/gnosischain/information/",
+        "description": "The minter allowance granted by tokens to the USDCTransmuter can be exhausted to prevent successful USDC.e and EURC.e transfers.",
+        "lastUpdatedAt": "2026-09-09T00:00:00.000Z",
+        "relatedImpactInScope": "smart_contract"
+      }
+    ],
+    "defaultOutOfScopeBlockchain": null,
+    "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+    "defaultOutOfScopeWebAndApplications": null,
+    "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+    "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+    "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+    "customOutOfScopeInformation": "- Best practice critiques\n- The minter allowance granted by tokens to the `USDCTransmuter` can be exhausted to prevent successful USDC.e and EURC.e transfers.\n- Omnibridge `onTokenTransfer()` function does not verify `msg.sender` and anyone can call this function to create fake bridge token.\n- Validator signature collection on Home uses a static validator set defined at the time of transaction execution while signature verification uses the currently active validator set (potentially updated).\n- callback through `onTokenBridged()` is not checked for success. Any failure in `onTokenBridged()` is silently swallowed.\n\ntest",
+    "customProhibitedActivities": [],
+    "impacts": [
+      {
+        "id": 56,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Temporary freezing of funds for at least  1 week"
+      },
+      {
+        "id": 57,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Temporary freezing NFTs for at least  1 week"
+      },
+      {
+        "id": 58,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Miner-extractable value (MEV)"
+      },
+      {
+        "id": 59,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Block stuffing for profit"
+      },
+      {
+        "id": 60,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Any governance voting result manipulation"
+      },
+      {
+        "id": 15,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+      },
+      {
+        "id": 16,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Direct theft of any user NFTs, whether at-rest or in-motion, other than unclaimed royalties"
+      },
+      {
+        "id": 17,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Permanent freezing of funds"
+      },
+      {
+        "id": 18,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Permanent freezing of NFTs"
+      },
+      {
+        "id": 19,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Unauthorized minting of NFTs"
+      },
+      {
+        "id": 20,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Predictable or manipulable RNG that results in abuse of the principal or NFT"
+      },
+      {
+        "id": 21,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Unintended alteration of what the NFT represents (e.g. token URI, payload, artistic content)"
+      },
+      {
+        "id": 23,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Theft of unclaimed yield"
+      },
+      {
+        "id": 24,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Theft of unclaimed royalties"
+      },
+      {
+        "id": 25,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Permanent freezing of unclaimed yield"
+      },
+      {
+        "id": 26,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Permanent freezing of unclaimed royalties"
+      },
+      {
+        "id": 29,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Smart contract unable to operate due to lack of token funds"
+      },
+      {
+        "id": 31,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+      },
+      {
+        "id": 32,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Theft of gas"
+      },
+      {
+        "id": 33,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Unbounded gas consumption"
+      }
+    ],
+    "rewards": [
+      {
+        "id": 51562,
+        "primacy": null,
+        "severity": "critical",
+        "assetType": "smart_contract",
+        "maxReward": 2000000,
+        "minReward": 50000,
+        "rewardModel": "range",
+        "rewardCalculationPercentage": 10
+      },
+      {
+        "id": 51563,
+        "primacy": null,
+        "severity": "high",
+        "assetType": "smart_contract",
+        "maxReward": 50000,
+        "minReward": 10000,
+        "rewardModel": "range"
+      },
+      {
+        "id": 51564,
+        "primacy": null,
+        "severity": "medium",
+        "assetType": "smart_contract",
+        "maxReward": 10000,
+        "minReward": 1000,
+        "rewardModel": "range"
+      }
+    ],
+    "audits": []
+  },
+  {
+    "assets": [
+      {
+        "id": "cC2hBNCF0nM2dQNqYbgJ0",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/85570db648edb66240564ae844d88d5a3f8fe610/src/components/value/position-trackers/LinearCreditDebtTracker.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-01-26T17:05:24.474Z",
+        "revision": 0,
+        "description": "LinearCreditDebtTracker",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "1GpqXEyFR1csrwRt8qhkOe",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/components/roles/LimitedAccessLimitedCallForwarder.sol",
+        "type": "smart_contract",
+        "addedAt": "2025-09-03T17:48:17.365Z",
+        "revision": 0,
+        "description": "LimitedAccessLimitedCallForwarder",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "3a2KMVVFmlxV04qJR275Bq",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/utils/StorageHelpersLib.sol",
+        "type": "smart_contract",
+        "addedAt": "2025-09-03T17:48:19.116Z",
+        "revision": 0,
+        "description": "StorageHelpersLib",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "47gqDfHbzTZ8g3qzco0Lx2",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/components/value/ValuationHandler.sol",
+        "type": "smart_contract",
+        "addedAt": "2025-09-03T17:48:17.333Z",
+        "revision": 0,
+        "description": "ValuationHandler",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "4vZ8TyuGH5uc7Zgxzokycz",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/components/fees/management-fee-trackers/ContinuousFlatRateManagementFeeTracker.sol",
+        "type": "smart_contract",
+        "addedAt": "2025-09-03T17:48:17.428Z",
+        "revision": 0,
+        "description": "ContinuousFlatRateManagementFeeTracker",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "50sciYr24pFjZuDUXscQFW",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/infra/oracles/OneToOneAggregator.sol",
+        "type": "smart_contract",
+        "addedAt": "2025-09-03T17:48:18.995Z",
+        "revision": 0,
+        "description": "OneToOneAggregator",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "5GgSOotezBM7jd26IKHXUz",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/components/value/position-trackers/AccountERC20Tracker.sol",
+        "type": "smart_contract",
+        "addedAt": "2025-09-03T17:48:18.934Z",
+        "revision": 0,
+        "description": "AccountERC20Tracker",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "5RFLShgqBX1Za1455zTrVn",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/components/roles/OpenAccessLimitedCallForwarder.sol",
+        "type": "smart_contract",
+        "addedAt": "2025-09-03T17:48:19.354Z",
+        "revision": 0,
+        "description": "OpenAccessLimitedCallForwarder",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "5wZaa27Bav3oatoFBQwLQ5",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/components/fees/FeeHandler.sol",
+        "type": "smart_contract",
+        "addedAt": "2025-09-03T17:48:17.366Z",
+        "revision": 0,
+        "description": "FeeHandler",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "66B33THY54dkcAmiiwsHZe",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/global/Global.sol",
+        "type": "smart_contract",
+        "addedAt": "2025-09-03T17:48:19.031Z",
+        "revision": 0,
+        "description": "Global",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "7hDKBBZmjL7Eqep9n50eBD",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/factories/ComponentBeaconProxy.sol",
+        "type": "smart_contract",
+        "addedAt": "2025-09-03T17:48:17.373Z",
+        "revision": 0,
+        "description": "ComponentBeaconProxy",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "cjldh6LXFfMxrHoWa7JDk",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/6bde0489b1a3196e6290b59e119748ecbeb8b8e4/src/components/fees/performance-fee-trackers/ContinuousFlatRatePerformanceFeeTracker.sol",
+        "type": "smart_contract",
+        "addedAt": "2025-12-08T07:58:36.370Z",
+        "revision": 0,
+        "description": "ContinuousFlatRatePerformanceFeeTracker",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "98716",
+        "url": "https://immunefi.com/",
+        "type": "smart_contract",
+        "addedAt": "2026-02-06T15:58:36.804Z",
+        "revision": 0,
+        "description": "Primacy of Impact",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": true
+      },
+      {
+        "id": "99109",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/61ef53d2dfd17d83183d832529b148e6e15c26ab/src/infra/lists/address-list/OwnableAddressList.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-02-24T13:14:13.104Z",
+        "revision": 0,
+        "description": "OwnableAddressList",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "99111",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/61ef53d2dfd17d83183d832529b148e6e15c26ab/src/components/lists/SharesOwnedAddressList.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-02-24T13:14:13.104Z",
+        "revision": 0,
+        "description": "SharesOwnedAddressList",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "99113",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/61ef53d2dfd17d83183d832529b148e6e15c26ab/src/components/automations/chainlink-cre/CreWorkflowConsumer.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-02-24T13:14:13.104Z",
+        "revision": 0,
+        "description": "CreWorkflowConsumer",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "99133",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/df697194bdfbb883b6eff7a667b08debfcf467a0/src/utils/ValueHelpersLib.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-03-05T12:48:01.994Z",
+        "revision": 0,
+        "description": "ValueHelpersLib",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "99628",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/d1141ff017ec95d33ec46669f404413a0304edb7/src/factories/DeterministicBeaconFactory.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-05-15T11:41:43.496Z",
+        "revision": 0,
+        "description": "DeterministicBeaconFactory",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "99629",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/d1141ff017ec95d33ec46669f404413a0304edb7/src/components/ccip/WalletsManager.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-05-15T11:41:43.496Z",
+        "revision": 0,
+        "description": "WalletsManager",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "99630",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/d1141ff017ec95d33ec46669f404413a0304edb7/src/ccip/DepositorWallet.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-05-15T11:41:43.496Z",
+        "revision": 0,
+        "description": "DepositorWallet",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100281",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/8ae6f589b13a19d8390eb0956836c6a9f48fadab/src/components/automations/chainlink-cre/CreWorkflowConsumer.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-02T12:20:58.286Z",
+        "revision": 0,
+        "description": "CreWorkflowConsumer",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100657",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/shares-transfer-validators/ChainlinkAceSharesTransferValidator.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "ChainlinkAceSharesTransferValidator",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100658",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/shares-transfer-validators/ChainlinkAceSharesTransferExtractor.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "ChainlinkAceSharesTransferExtractor",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100659",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/shares-transfer-validators/AddressListsSharesTransferValidator.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "AddressListsSharesTransferValidator",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100660",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/redeem-handlers/SharesBurnHandler.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "SharesBurnHandler",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100661",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/redeem-handlers/ERC7540LikeRedeemQueue.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "ERC7540LikeRedeemQueue",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100662",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/deposit-handlers/SharesMintHandler.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "SharesMintHandler",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100663",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/deposit-handlers/ERC7540LikeDepositQueue.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "ERC7540LikeDepositQueue",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100664",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/deposit-handlers/SyncDepositHandler.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "SyncDepositHandler",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100665",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/ChainlinkAceERC7540LikeDepositQueuePostExecuteDepositRequestValidator.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "ChainlinkAceERC7540LikeDepositQueuePostExecuteDepositRequestValidator",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100666",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/ChainlinkAceERC7540LikeDepositQueuePreRequestDepositValidator.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "ChainlinkAceERC7540LikeDepositQueuePreRequestDepositValidator",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100667",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/ChainlinkAceERC7540LikeRedeemQueuePostExecuteRedeemRequestValidator.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "ChainlinkAceERC7540LikeRedeemQueuePostExecuteRedeemRequestValidator",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100668",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/ChainlinkAceERC7540LikeRedeemQueuePreRequestRedeemValidator.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "ChainlinkAceERC7540LikeRedeemQueuePreRequestRedeemValidator",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100669",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/ChainlinkAceSharesBurnHandlerPreBurnValidator.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "ChainlinkAceSharesBurnHandlerPreBurnValidator",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100670",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/ChainlinkAceSharesMintHandlerPreMintValidator.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "ChainlinkAceSharesMintHandlerPreMintValidator",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100671",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/ChainlinkAceSyncDepositHandlerPostDepositValidator.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "ChainlinkAceSyncDepositHandlerPostDepositValidator",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100672",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/extractors/ChainlinkAceERC7540LikeDepositQueuePostExecuteDepositRequestExtractor.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "ChainlinkAceERC7540LikeDepositQueuePostExecuteDepositRequestExtractor",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100673",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/extractors/ChainlinkAceERC7540LikeDepositQueuePreRequestDepositExtractor.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "ChainlinkAceERC7540LikeDepositQueuePreRequestDepositExtractor",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100674",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/extractors/ChainlinkAceERC7540LikeRedeemQueuePostExecuteRedeemRequestExtractor.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "ChainlinkAceERC7540LikeRedeemQueuePostExecuteRedeemRequestExtractor",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100675",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/extractors/ChainlinkAceERC7540LikeRedeemQueuePreRequestRedeemExtractor.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "ChainlinkAceERC7540LikeRedeemQueuePreRequestRedeemExtractor",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100676",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/extractors/ChainlinkAceSharesBurnHandlerPreBurnExtractor.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "ChainlinkAceSharesBurnHandlerPreBurnExtractor",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100677",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/extractors/ChainlinkAceSharesMintHandlerPreMintExtractor.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "ChainlinkAceSharesMintHandlerPreMintExtractor",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100678",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/extractors/ChainlinkAceSyncDepositHandlerPostDepositExtractor.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "ChainlinkAceSyncDepositHandlerPostDepositExtractor",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100679",
+        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/shares/Shares.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-07-30T11:03:36.987Z",
+        "revision": 0,
+        "description": "Shares",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101351",
+        "url": "https://github.com/enzymefinance/protocol-onyx-dev/blob/d8a522d6ca58af9dbb831dad2b8045a88952e468/src/components/issuance/redeem-handlers/SyncRedeemHandler.sol",
+        "type": "smart_contract",
+        "addedAt": "2026-10-09T08:02:03.018Z",
+        "revision": 0,
+        "description": "SyncRedeemHandler",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      }
+    ],
+    "assetsBodyV2": null,
+    "boostedIntroEvaluating": "",
+    "boostedIntroFinished": "",
+    "boostedIntroLive": "",
+    "boostedIntroStartingIn": "",
+    "boostedLeaderboard": [],
+    "boostedSummaryReport": null,
+    "ecosystem": [
+      "ETH"
+    ],
+    "endDate": null,
+    "evaluationEndDate": null,
+    "features": [
+      "Subscription Plan: Essential",
+      "Managed Triage: Time Saver",
+      "Safe Harbor Documents Signed",
+      "Pay to Mediate"
+    ],
+    "hideAssetsInScope": null,
+    "immunefiStandard": false,
+    "inviteOnly": false,
+    "kyc": false,
+    "language": [
+      "Solidity"
+    ],
+    "launchDate": "2025-09-04T10:00:00.000Z",
+    "isPaused": false,
+    "pausedAt": null,
+    "pausedMessage": null,
+    "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3iP5zSqWcE9ivBa4KHRO7o/f6b068029c43b748115d87919d8387fc/S5wC58QC_400x400.png",
+    "maxBounty": 200000,
+    "outOfScopeAndRules": null,
+    "pocPerTypeAndSeverity": [
+      "smart_contract - critical",
+      "smart_contract - high",
+      "smart_contract - medium"
+    ],
+    "primaryPaymentWallet": "EVM",
+    "prioritizedVulnerabilities": "_blank_",
+    "productType": [
+      "Asset Management"
+    ],
+    "programOverview": "Onyx by Enzyme Finance is a tokenization protocol for asset management vehicles. It facilitates bespoke ERC20 shares issuance, including fees and tools for valuation accounting.\n\nDeployed contracts [here](https://github.com/enzymefinance/onyx-sdk/tree/main/packages/environment/src/deployments). Networks in scope: Ethereum, Arbitrum, Base, MegaETH, Plume",
+    "programType": [
+      "Smart Contract"
+    ],
+    "project": "Enzyme Onyx",
+    "projectType": [
+      "Defi"
+    ],
+    "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System v2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/).",
+    "rewardsPool": 0,
+    "primaryPool": 0,
+    "allStarsPool": 0,
+    "podiumPool": 0,
+    "rewardsToken": "USDC",
+    "slug": "enzyme-onyx",
+    "tenPercentEconomicRule": false,
+    "updatedDate": "2026-10-09T08:02:03.438Z",
+    "impactsBody": null,
+    "websiteUrl": null,
+    "githubUrl": "https://github.com/enzymefinance/protocol-onyx",
+    "eligibilityCriteria": [],
+    "responsiblePublicationCategory": null,
+    "description": "Onyx by Enzyme Finance is a tokenization protocol for asset management vehicles. It facilitates bespoke ERC20 shares issuance, including fees and tools for valuation accounting.\n\n**Before submitting a report, please review our Bug Bounty program guidelines carefully. Reports that only cover issues already listed in the program scope will be closed and marked as spam.**\n\nSmart contracts may have both a currently deployed version and the latest audited version that is scheduled for deployment. These are labeled as follows:\n- Live — the smart contract that is currently deployed and in use\n- Latest audited — the most recently audited smart contract, not yet deployed but planned for future release\nIf no labels are present, it means the deployed (live) smart contract is already up to date with the latest audited version.\n\n**Proof of Concept (PoC) Requirements**\n\nAll reports must include a complete, reproducible Proof of Concept (PoC). The PoC must be performed either:\n- On a fork of the live deployment; or\n - Against deployed contracts using the actual production code (e.g., testnet deployments that match the deployed codebase).\n\nPoCs that rely solely on mocked contracts, heavily modified code, hypothetical scenarios, incomplete snippets, or partial demonstrations will not be accepted.\n\nThe PoC must be self-contained and documented in a way that allows reviewers to read and reproduce the issue from start to finish without requiring additional assumptions or missing steps.\n\n**Reports that do not include a complete and reproducible PoC meeting the above requirements will be automatically closed as invalid.**",
+    "knownIssues": [],
+    "defaultOutOfScopeBlockchain": null,
+    "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+    "defaultOutOfScopeWebAndApplications": null,
+    "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+    "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+    "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+    "customOutOfScopeInformation": "In addition to Immunefi scope rules, the following are considered out-of-scope:\n\n* everything noted in this document set (e.g., [Risks and Limitations](https://docs.enzyme.finance/onyx-protocol/security/risks-and-limitations))\n* everything noted in [audit reports](https://github.com/enzymefinance/protocol-onyx/tree/main/audits)\n* user error; i.e., inadequate inputs or config, lack of mechanism understanding, etc (see below)\n* unrealistic fund state (see below)\n\n### Examples of out-of-scope \"user error\"\n\nOnyx is designed for flexibility of different setups and administrative needs. The `admin` role is often tasked with ensuring fairness, avoidance of denial-of-service (DoS) and similar ill effects, executing steps in order, and otherwise following manual processes to achieve desired results (e.g., [Suggested Subscription Rounds](https://docs.enzyme.finance/onyx-protocol/general-flows/suggested-subscription-rounds)).\n\n#### Example: deposit and redeem handler DoS due to request cancelations&#x20;\n\nSome deposit and redeem handlers (e.g., `ERC7540LikeDepositQueue` and `ERC7540LikeRedeemQueue`) use a `minRequestDuration`, where a request is cancelable after `minRequestDuration` has elapsed.\n\nAs long as `minRequestDuration` is always set adequately (i.e., greater than the maximum time between batches), there will never be a cancelation DoS opportunity.\n\n#### Example: deposit and redeem handler DoS due to small amounts that round to 0 shares\n\n`admin` has full control to omit requests with amounts that are considered too small.\n\n#### Example: share price staleness/fairness/etc during deposit or redemption\n\n`admin` has full control over the price at which deposits and redemptions are executed, and it must be part of their process to validate that the currently-set share price is adequate for any action according to their needs.\n\n#### Example: failure to initialize contract\n\nContracts are always expected to be properly-initialized, and all proxies are always deployed with their init data bundled into the same call.\n\n### Examples of \"unrealistic fund state\"\n\nOnyx vaults are assumed to operate within common-sense constraints for how managed funds work.\n\nClosely related to [#examples-of-out-of-scope-user-error](#examples-of-out-of-scope-user-error \"mention\").\n\n#### Example: more debt than assets\n\nA reasonable managed fund cannot take on more debt than assets such that `share value <= 0`.\n\n#### Example: shares totalSupply > 0 when share value == 0\n\nAt the point where a fund truly loses all assets (e.g., hack, violent value deprecation that rounds to 0) and shares have no value, a fund would shut down rather than, e.g., accept new depositors who immediately get diluted by the shares totalSupply.",
+    "customProhibitedActivities": [],
+    "impacts": [
+      {
+        "id": 15,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+      },
+      {
+        "id": 17,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Permanent freezing of funds"
+      },
+      {
+        "id": 22,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Protocol insolvency"
+      },
+      {
+        "id": 23,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Theft of unclaimed yield"
+      },
+      {
+        "id": 25,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Permanent freezing of unclaimed yield"
+      },
+      {
+        "id": 27,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Temporary freezing of funds"
+      },
+      {
+        "id": 29,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Smart contract unable to operate due to lack of token funds"
+      },
+      {
+        "id": 31,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+      }
+    ],
+    "rewards": [
+      {
+        "id": 51559,
+        "primacy": null,
+        "severity": "critical",
+        "assetType": "smart_contract",
+        "maxReward": 200000,
+        "minReward": 20000,
+        "rewardModel": "range",
+        "rewardCalculationPercentage": 10
+      },
+      {
+        "id": 51560,
+        "primacy": null,
+        "severity": "high",
+        "assetType": "smart_contract",
+        "maxReward": 20000,
+        "minReward": 5000,
+        "rewardModel": "range"
+      },
+      {
+        "id": 51561,
+        "primacy": null,
+        "severity": "medium",
+        "assetType": "smart_contract",
+        "maxReward": 5000,
+        "minReward": 1000,
+        "rewardModel": "range"
+      }
+    ],
+    "audits": [
+      {
+        "id": "1276",
+        "url": "https://github.com/enzymefinance/protocol-onyx/tree/main/audits",
+        "auditor": "ChainSecurity",
+        "date": "2025-09-01T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "assets": [
+      {
         "id": "5iIIQoLUKXqf6EZAd5vpyG",
         "url": "https://github.com/compound-finance/compound-protocol/pull/127",
         "type": "smart_contract",
@@ -11022,305 +12486,6 @@
         "date": "2026-05-07T00:00:00.000Z"
       }
     ]
-  },
-  {
-    "assets": [
-      {
-        "id": "39I4UubBcljARlt90OaRGQ",
-        "url": "https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016",
-        "type": "smart_contract",
-        "addedAt": "2022-05-10T15:42:40.006Z",
-        "revision": 0,
-        "description": "XDaiForeignBridge: DAI-xDAI TokenBridge contract on the Ethereum Mainnet ",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "6VGumskpUySCP01OvbYYMn",
-        "url": "https://blockscout.com/xdai/mainnet/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6",
-        "type": "smart_contract",
-        "addedAt": "2022-05-10T15:42:40.965Z",
-        "revision": 0,
-        "description": "HomeBridgeErcToNative: DAI-xDAI TokenBridge contract on the Gnosis chain",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "4oQoN6nat7OLKqL8ib88eC",
-        "url": "https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671",
-        "type": "smart_contract",
-        "addedAt": "2022-05-10T15:42:42.104Z",
-        "revision": 0,
-        "description": "ForeignOmnibridge: OmniBridge contract on the Ethereum Mainnet",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "1TEVjuzA8DmpOMImDZWzs3",
-        "url": "https://blockscout.com/xdai/mainnet/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d",
-        "type": "smart_contract",
-        "addedAt": "2022-05-10T15:42:43.182Z",
-        "revision": 0,
-        "description": "HomeOmnibridge: OmniBridge contract on the Gnosis chain",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      }
-    ],
-    "assetsBodyV2": "The smart contract regarding native xDAI bridging (XDaiForeignBridge and HomeBridgeErcToNative)  can be found at [https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge](https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge). The smart contracts regarding arbitrary ERC20 bridging (ForeignOmnibridge and HomeOmnibridge) can be found at [https://github.com/gnosischain/omnibridge/tree/master](https://github.com/gnosischain/omnibridge/tree/master).\n\nOnly those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nIf an impact can be caused to any other asset managed by Gnosis that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.",
-    "boostedIntroEvaluating": "",
-    "boostedIntroFinished": "",
-    "boostedIntroLive": "",
-    "boostedIntroStartingIn": "",
-    "boostedLeaderboard": [],
-    "boostedSummaryReport": null,
-    "ecosystem": [
-      "BSC",
-      "ETH"
-    ],
-    "endDate": null,
-    "evaluationEndDate": null,
-    "features": [
-      "Pay to Mediate"
-    ],
-    "hideAssetsInScope": null,
-    "immunefiStandard": true,
-    "inviteOnly": false,
-    "kyc": false,
-    "language": [
-      "Solidity"
-    ],
-    "launchDate": "2022-02-11T04:00:00.000Z",
-    "isPaused": false,
-    "pausedAt": null,
-    "pausedMessage": null,
-    "logo": "https://images.ctfassets.net/t3wqy70tc3bv/6ibSou9KOCjwRMOviQ4op0/76c3c2bda63a9c0c8c8432d71f234f8c/Aatar_green_white.png",
-    "maxBounty": 2000000,
-    "outOfScopeAndRules": null,
-    "pocPerTypeAndSeverity": [
-      "smart_contract - high",
-      "smart_contract - critical",
-      "smart_contract - medium"
-    ],
-    "primaryPaymentWallet": "EVM",
-    "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the\nfollowing types:\n\n**Smart Contracts/Blockchain:**\n\n- Re-entrancy\n- Logic errors\n  - including user authentication errors\n- Solidity/EVM details not considered\n  - including integer over-/under-flow\n  - including unhandled exceptions\n- Trusting trust/dependency vulnerabilities\n  - including composability vulnerabilities\n- Oracle failure/manipulation\n- Novel governance attacks\n- Economic/financial attacks\n  - including flash loan attacks\n- Congestion and scalability\n  - including running out of gas\n  - including block stuffing\n  - including susceptibility to frontrunning\n- Consensus failures\n- Cryptography problems\n  - Signature malleability\n  - Susceptibility to replay attacks\n  - Weak randomness\n  - Weak encryption\n- Susceptibility to block timestamp manipulation\n- Missing access controls / unprotected internal or debugging interfaces",
-    "productType": [
-      "Crosschain Liquidity",
-      "L1"
-    ],
-    "programOverview": "Gnosis Chain is an EVM compatible, community-owned network that prioritizes credible neutrality and resiliency, open to everyone without privilege or prejudice. Secured by over 165k validators around the world, Gnosis Chain has all the tooling you are used to and trust-minimized bridges to mainnet.\n\nFor more information about Gnosis Chain, please visit [https://www.gnosis.io/](https://www.gnosis.io/).\n\nThis bug bounty program is focused on the bridges smart contracts that move assets in between Mainnet and Gnosis chain. The xDai bridge is used to bridge DAI on mainnet and the native xDai coin on Gnosis chain. For more information see [https://docs.gnosischain.com/bridges/tokenbridge/xdai-bridge](https://docs.gnosischain.com/bridges/tokenbridge/xdai-bridge). The OmniBridge is a native token bridge that mints the canonical representation of bridged assets on Gnosis. For more information see [https://docs.gnosischain.com/bridges/tokenbridge/omnibridge](https://docs.gnosischain.com/bridges/tokenbridge/omnibridge).\n\n__Disclosure of Information relating to Bug Reports:__ Security researchers may not publish any information about their bug reports (even after any vulnerabilities have been fixed and the security researcher has been paid) unless Gnosis provides written consent in the bug report submission thread.",
-    "programType": [
-      "Smart Contract"
-    ],
-    "project": "Gnosis Chain",
-    "projectType": [
-      "Defi"
-    ],
-    "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll smart contract bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward.\n\nCritical and High smart contract vulnerabilities are capped at 10% of economic damage, primarily taking into consideration funds at risk, but also PR and branding aspects, at the discretion of the team.\n\nPayouts are handled by the __Gnosis Chain__ team directly and are denominated in __USD__. However, payouts are done in __USDC or xDAI__.",
-    "rewardsPool": 0,
-    "primaryPool": 0,
-    "allStarsPool": 0,
-    "podiumPool": 0,
-    "rewardsToken": "USDC or xDAI",
-    "slug": "gnosischain",
-    "tenPercentEconomicRule": false,
-    "updatedDate": "2026-10-07T14:52:50.236Z",
-    "impactsBody": null,
-    "websiteUrl": null,
-    "githubUrl": null,
-    "eligibilityCriteria": [],
-    "responsiblePublicationCategory": null,
-    "description": "Gnosis Chain is an EVM compatible, community-owned network that prioritizes credible neutrality and resiliency, open to everyone without privilege or prejudice. Secured by over 165k validators around the world, Gnosis Chain has all the tooling you are used to and trust-minimized bridges to mainnet.",
-    "knownIssues": [
-      {
-        "id": 1505,
-        "link": "https://immunefi.com/bug-bounty/gnosischain/information/",
-        "description": "callback through onTokenBridged() is not checked for success. Any failure in onTokenBridged() is silently swallowed.",
-        "lastUpdatedAt": "2026-09-09T00:00:00.000Z",
-        "relatedImpactInScope": "smart_contract"
-      },
-      {
-        "id": 1504,
-        "link": "https://immunefi.com/bug-bounty/gnosischain/information/",
-        "description": "Validator signature collection on Home uses a static validator set defined at the time of transaction execution while signature verification uses the currently active validator set (potentially updated).",
-        "lastUpdatedAt": "2026-09-09T00:00:00.000Z",
-        "relatedImpactInScope": "smart_contract"
-      },
-      {
-        "id": 1503,
-        "link": "https://immunefi.com/bug-bounty/gnosischain/information/",
-        "description": "Omnibridge onTokenTransfer() function does not verify msg.sender and anyone can call this function to create fake bridge token.",
-        "lastUpdatedAt": "2026-09-09T00:00:00.000Z",
-        "relatedImpactInScope": "smart_contract"
-      },
-      {
-        "id": 1502,
-        "link": "https://immunefi.com/bug-bounty/gnosischain/information/",
-        "description": "The minter allowance granted by tokens to the USDCTransmuter can be exhausted to prevent successful USDC.e and EURC.e transfers.",
-        "lastUpdatedAt": "2026-09-09T00:00:00.000Z",
-        "relatedImpactInScope": "smart_contract"
-      }
-    ],
-    "defaultOutOfScopeBlockchain": null,
-    "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-    "defaultOutOfScopeWebAndApplications": null,
-    "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
-    "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-    "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-    "customOutOfScopeInformation": "- Best practice critiques\n- The minter allowance granted by tokens to the `USDCTransmuter` can be exhausted to prevent successful USDC.e and EURC.e transfers.\n- Omnibridge `onTokenTransfer()` function does not verify `msg.sender` and anyone can call this function to create fake bridge token.\n- Validator signature collection on Home uses a static validator set defined at the time of transaction execution while signature verification uses the currently active validator set (potentially updated).\n- callback through `onTokenBridged()` is not checked for success. Any failure in `onTokenBridged()` is silently swallowed.\n\ntest",
-    "customProhibitedActivities": [],
-    "impacts": [
-      {
-        "id": 56,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Temporary freezing of funds for at least  1 week"
-      },
-      {
-        "id": 57,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Temporary freezing NFTs for at least  1 week"
-      },
-      {
-        "id": 58,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Miner-extractable value (MEV)"
-      },
-      {
-        "id": 59,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Block stuffing for profit"
-      },
-      {
-        "id": 60,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Any governance voting result manipulation"
-      },
-      {
-        "id": 15,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-      },
-      {
-        "id": 16,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Direct theft of any user NFTs, whether at-rest or in-motion, other than unclaimed royalties"
-      },
-      {
-        "id": 17,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Permanent freezing of funds"
-      },
-      {
-        "id": 18,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Permanent freezing of NFTs"
-      },
-      {
-        "id": 19,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Unauthorized minting of NFTs"
-      },
-      {
-        "id": 20,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Predictable or manipulable RNG that results in abuse of the principal or NFT"
-      },
-      {
-        "id": 21,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Unintended alteration of what the NFT represents (e.g. token URI, payload, artistic content)"
-      },
-      {
-        "id": 23,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Theft of unclaimed yield"
-      },
-      {
-        "id": 24,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Theft of unclaimed royalties"
-      },
-      {
-        "id": 25,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Permanent freezing of unclaimed yield"
-      },
-      {
-        "id": 26,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Permanent freezing of unclaimed royalties"
-      },
-      {
-        "id": 29,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Smart contract unable to operate due to lack of token funds"
-      },
-      {
-        "id": 31,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-      },
-      {
-        "id": 32,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Theft of gas"
-      },
-      {
-        "id": 33,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Unbounded gas consumption"
-      }
-    ],
-    "rewards": [
-      {
-        "id": 51472,
-        "primacy": null,
-        "severity": "critical",
-        "assetType": "smart_contract",
-        "maxReward": 2000000,
-        "minReward": 50000,
-        "rewardModel": "range",
-        "rewardCalculationPercentage": 10
-      },
-      {
-        "id": 51473,
-        "primacy": null,
-        "severity": "high",
-        "assetType": "smart_contract",
-        "maxReward": 50000,
-        "minReward": 10000,
-        "rewardModel": "range"
-      },
-      {
-        "id": 51474,
-        "primacy": null,
-        "severity": "medium",
-        "assetType": "smart_contract",
-        "maxReward": 10000,
-        "minReward": 1000,
-        "rewardModel": "range"
-      }
-    ],
-    "audits": []
   },
   {
     "assets": [
@@ -32093,328 +33258,6 @@
         "url": "https://github.com/LoopscaleLabs/audits",
         "auditor": "Adevar",
         "date": "2026-06-25T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "assets": [
-      {
-        "id": "3lhpWqv4OFtxrcFTl0pIj5",
-        "url": "https://github.com/OpenZeppelin/uniswap-hooks",
-        "type": "smart_contract",
-        "addedAt": "2025-10-09T11:43:14.849Z",
-        "revision": 0,
-        "description": null,
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "3jyyGKuBiXhHwlmi9ZT9ar",
-        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts",
-        "type": "smart_contract",
-        "addedAt": "2022-02-12T09:40:13.911Z",
-        "revision": 0,
-        "description": "Smart Contract",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "6ETI0ohXTF3lFiZdx90vei",
-        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable",
-        "type": "smart_contract",
-        "addedAt": "2024-04-21T11:53:30.551Z",
-        "revision": 0,
-        "description": "Smart Contract",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100792",
-        "url": "https://github.com/OpenZeppelin/openzeppelin-confidential-contracts/releases/tag/v0.5.3",
-        "type": "smart_contract",
-        "addedAt": "2026-08-18T04:42:08.777Z",
-        "revision": 0,
-        "description": "OpenZeppelin Confidential Contracts (only the latest release v.0.5.3 (4a4f6c71f58b75e391899b57e42e3b73d288dfe3) is in-scope, mocks and examples are also out-of-scope)",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100930",
-        "url": "https://github.com/OpenZeppelin/openzeppelin-community-contracts/blob/master/contracts/crosschain/axelar/AxelarGatewayAdapter.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-09-08T17:10:25.781Z",
-        "revision": 0,
-        "description": "Axelar Gateway Adapter (only commit 0361935dc5edd233adbb9fbae5871ccbb8c739d8 in scope)",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100931",
-        "url": "https://github.com/OpenZeppelin/openzeppelin-community-contracts/blob/master/contracts/crosschain/ERC7786OpenBridge.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-09-08T17:10:25.781Z",
-        "revision": 0,
-        "description": "ERC7786OpenBridge (only commit 0361935dc5edd233adbb9fbae5871ccbb8c739d8 in scope)",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      }
-    ],
-    "assetsBodyV2": "All smart contracts in the “contracts” directory are included in the bug bounty, except those under “contracts/mocks”, which are testing artifacts, and those under “contracts/vendor”.",
-    "boostedIntroEvaluating": "",
-    "boostedIntroFinished": "",
-    "boostedIntroLive": "",
-    "boostedIntroStartingIn": "",
-    "boostedLeaderboard": [],
-    "boostedSummaryReport": null,
-    "ecosystem": [],
-    "endDate": null,
-    "evaluationEndDate": null,
-    "features": [
-      "Pay to Mediate"
-    ],
-    "hideAssetsInScope": null,
-    "immunefiStandard": true,
-    "inviteOnly": false,
-    "kyc": true,
-    "language": [
-      "Solidity"
-    ],
-    "launchDate": "2021-11-15T15:00:00.000Z",
-    "isPaused": false,
-    "pausedAt": null,
-    "pausedMessage": null,
-    "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4tl7aEnEwJyvmUxPKqR2KH/2ad9232b3e2e462c88aa27262ce93deb/OpenZeppelin_Logo.jpeg",
-    "maxBounty": 25000,
-    "outOfScopeAndRules": null,
-    "pocPerTypeAndSeverity": [
-      "smart_contract - critical",
-      "smart_contract - high"
-    ],
-    "primaryPaymentWallet": "EVM",
-    "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. They refer to a regular impact rating in our likelihood/impact matrix (up to high severity) and will partially define the report’s final threat. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
-    "productType": [
-      "Services"
-    ],
-    "programOverview": "As the premier crypto cybersecurity technology and services company, we’ve built OpenZeppelin Contracts with our best [security practices](https://contracts.openzeppelin.com/security). We are committed to ensuring the utmost security in our community-vetted smart contracts, and our bounty program provides rewards of up to $25,000 USD for reporting critical vulnerabilities in our smart contracts library.\nThis bug bounty program is focused on OpenZeppelin Contracts and mainly intends to prevent:\n\n- Loss of funds by freezing another user’s funds, or theft of another user’s funds\n- Permanent denial of service (smart contract is made unable to operate)\n- Access control bypass, including privilege escalation\n- Smart contract not behaving as intended\n\nThis is an overlay bug bounty program for OpenZeppelin’s Contracts library. A vulnerability in an OpenZeppelin contract would likely affect many other projects and could trigger various other bounties. This program would be potentially additive to those cases. \n\nOpenZeppelin may issue [GHSA/CVEs](https://cve.report/vendor/openzeppelin) for reported vulnerabilities and will offer to credit issue reports in those public reports.\n\n\n__Primacy of Impact vs Primacy of Rules__\n\nOpenZeppelin adheres to the Primacy of Rules, which means that the whole bug bounty program is run strictly under the terms and conditions stated within this page. \n\n__Previous Audits__\n\nOpenZeppelin’s completed audit reports can be found at [OpenZeppelin Contracts’ Security Center](https://contracts.openzeppelin.com/security) while previous security advisories are available at [GHSA/CVEs](https://github.com/OpenZeppelin/openzeppelin-contracts/security/advisories). OpenZeppelin will offer to credit issue reports in those public reports. Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n__Feasibility Limitations__\n\nOpenZeppelin will assess likelihood depending on the complexity of the steps involved in its execution and the exposure created by the vulnerability, as well as impact depending on the assets or systems at risk, capped to the worst-case impacted instance using the affected code.\n\nOpenZeppelin will evaluate the vulnerability of the affected code considering whether the issue arises directly from the library code while used as provided or if it requires a custom user implementation. Determining the likelihood of exploit on custom implementations will depend on how likely a library user is to make such an implementation and how common is the pattern leading to it.\n\nFor example, if a data structure can be cleared by any caller of a smart contract, its likelihood will be **high** if it holds user balances, although, if the vulnerability allows overriding non-critical values such as an already executed governor proposal flag, its likelihood will be **low** but can escalate to **medium** if it comes with side effects that increase the incentives of exploitation (e.g. proposal re-execution).\n\nSimilarly, if an instance of an AccessManager can be made unusable, its impact will be **high** but could be lowered to **medium** if the attacker requires special permissions in the system, and finally, it will be considered **low** if the contract is frozen only during 1 block before a threshold is met.\n\nThe final threat level will be decided based on the matrix above. For a vulnerability with **low** impact, if its likelihood is **high** because the cost of exploiting a single instance is negligible, then its final threat level will be **medium severity**.\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, OpenZeppelin has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209-The-Immunefi-Standard-Badge).\n\n__KYC Requirements__\n\nOpenZeppelin’s bug bounty program requires an invoice to be submitted and a KYC screen to be performed prior to OpenZeppelin providing a bug bounty reward. Once a payout is confirmed, a member of OpenZeppelin will reach out to you directly to collect the necessary information, including:\n- Full Legal Name\n- Email Address\n- Mailing Address\n- Wallet Address (Ethereum Mainnet Only)",
-    "programType": [
-      "Smart Contract"
-    ],
-    "project": "OpenZeppelin",
-    "projectType": [
-      "Defi",
-      "Exchange",
-      "NFT"
-    ],
-    "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nThe rewards stated here are additive to any existing bug bounty programs hosted by projects that are currently using OpenZeppelin contracts. \n\nBounty rewards are given according to an impact/likelihood [matrix for assessing threat levels.](https://raw.githubusercontent.com/OpenZeppelin/immunefi-assets/main/impact-likelihood-matrix.png) Each issue is assessed considering the likelihood of the vulnerability being successfully exploited and the expected impact in scope to a single instance of the affected smart contract. Note that, as can be seen in the matrix, if the impact is Critical then the threat is always Critical, for other impacts the maximum reduction is one level only if the likelihood is low, and if the likelihood is high then the threat is increased one level above the impact. \n\n__Proof of Concept (PoC) Requirements__\n\nA PoC compliant with [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) is required for the following severity levels:\n- Smart Contract: Critical\n- Smart Contract: High\n\nBugs introduced by a release candidate version and reported during the review period, the dates for which will be declared by OpenZeppelin on each release, will receive a 50% bonus.\n\nPayouts are handled by the __OpenZeppelin__ team directly and are denominated in USD. However, payouts are done in __ETH__ or __USDC__.",
-    "rewardsPool": 0,
-    "primaryPool": 0,
-    "allStarsPool": 0,
-    "podiumPool": 0,
-    "rewardsToken": "USDC",
-    "slug": "openzeppelin",
-    "tenPercentEconomicRule": false,
-    "updatedDate": "2026-09-08T17:10:25.882Z",
-    "impactsBody": null,
-    "websiteUrl": null,
-    "githubUrl": null,
-    "eligibilityCriteria": [],
-    "responsiblePublicationCategory": "category_1",
-    "description": "As the premier crypto cybersecurity technology and services company, we’ve built OpenZeppelin Contracts with our best [security practices](https://contracts.openzeppelin.com/security).",
-    "knownIssues": [
-      {
-        "id": 1488,
-        "link": "https://github.com/OpenZeppelin/openzeppelin-contracts/issues/6515",
-        "description": "RLP's `decodeBool`, `decodeUint256`, `decodeBytes32`, `decodeBytes`, and `decodeString` accept trailing bytes",
-        "lastUpdatedAt": "2026-08-20T14:06:45.662Z",
-        "relatedImpactInScope": "smart_contract"
-      },
-      {
-        "id": 1292,
-        "link": "https://github.com/OpenZeppelin/uniswap-hooks/blob/2c39623ce5a5103bd314f1380df0443df2523149/src/general/AntiSandwichHook.sol#L44",
-        "description": "In `_beforeSwap`, the hook iterates over all ticks between last tick and current tick. Developers must be aware that for large price changes in pools with small tick spacing, the `for` loop will iterate over a large number of ticks, which could lead to `MemoryOOG` error.",
-        "lastUpdatedAt": "2026-04-30T16:47:37.178Z",
-        "relatedImpactInScope": "smart_contract"
-      },
-      {
-        "id": 1303,
-        "link": "https://github.com/OpenZeppelin/uniswap-hooks/blob/638c56d9bf1ebd0f3b192b9d0392a70d525a37fa/src/general/ReHypothecationHook.sol#L55",
-        "description": "The RehypothecadedHook relies on the PoolManager singleton token reserves for flash accounting debts and credits during swaps. During `afterSwap`, the hook briefly generates token debts to the PoolManager even before users transfer their swap tokens. As a consequence, the PoolManager singleton may lack sufficient reserves for illiquid tokens in the instants between the swap executed and the posterior payment from the user, preventing swaps from being executed until the PoolManager accumulates enough tokens. Altrough it is very unlikely to happen, it can be mitigated by maintaining some permanent pool liquidity alongside rehypothecated liquidity.",
-        "lastUpdatedAt": "2026-05-12T20:14:43.675Z",
-        "relatedImpactInScope": "smart_contract"
-      },
-      {
-        "id": 1324,
-        "link": "https://github.com/OpenZeppelin/uniswap-hooks/blob/26dc8e53f812a1ca390d470342adb6cd8c3286ad/src/general/AntiSandwichHook.sol#L38",
-        "description": "The Anti-sandwich mechanism only protects swaps in the zeroForOne swap direction. Swaps in the !zeroForOne direction are not protected by this hook design.",
-        "lastUpdatedAt": "2026-05-27T13:11:57.829Z",
-        "relatedImpactInScope": "smart_contract"
-      },
-      {
-        "id": 1372,
-        "link": "https://github.com/OpenZeppelin/uniswap-hooks/issues/127",
-        "description": "Final cancel clears accounting while the hook still holds accrued fee claims",
-        "lastUpdatedAt": "2026-07-10T17:30:42.333Z",
-        "relatedImpactInScope": "smart_contract"
-      },
-      {
-        "id": 1386,
-        "link": "https://github.com/OpenZeppelin/uniswap-hooks/issues/129",
-        "description": "Withdrawal accounting can underflow after earlier withdrawals, permanently blocking some participants",
-        "lastUpdatedAt": "2026-07-14T13:59:11.961Z",
-        "relatedImpactInScope": "smart_contract"
-      },
-      {
-        "id": 1521,
-        "link": "https://audits.openzeppelin.com/openzeppelin-solidity/project/uniswap-hooks/2da25c3b-6073-4085-a42f-0e33736a166a/issue/swaps-without-jit-liquidity-allow-seeded-assets-to-be-exchanged-at-a-poisoned-price",
-        "description": "Swaps without JIT liquidity allow seeded assets to be exchanged at a poisoned price\n\nRoot Cause: _beforeSwap lets a swap continue when no JIT liquidity is available, allowing the pool price to move without any token exchange before assets are seeded.\n\nToy example:\n\nA tick-spacing-60 pool is initialized without liquidity.\nAn attacker uses a zero-liquidity swap to move slot0 above the hook's upper tick without paying assets.\nAn LP seeds 100e18 units of each token.\nThe attacker reverses the price and receives approximately 91.99e18 token1 for six wei of token0, including the pool fee.\nLocation: ReHypothecationHook._beforeSwap\n\nThe ReHypothecationHook._beforeSwap function temporarily provides liquidity from the hook's yield sources before each swap. When _getLiquidityToUse returns zero, _beforeSwap skips _modifyLiquidity but unconditionally allows the swap to continue. This state necessarily exists between pool initialization and the permissionless seedLiquidity call.\n\nIn Uniswap v4, a nonzero swap with zero active liquidity can advance the price to the caller's valid price limit while producing zero input, output, and fee amounts. For tick spacing 60, valid prices exist above the hook's getTickUpper boundary. An attacker can therefore move slot0 above the JIT range without paying assets and wait for seedLiquidity, which deposits the supplied assets but neither validates nor resets slot0. At the poisoned price, _getLiquidityToUse converts the balanced seed into one-sided JIT liquidity. The attacker can then reverse the swap, cross into that liquidity, and extract most of the seeded asset at the extreme price. With a 0.3% pool fee and 100e18 units of each token seeded, the reverse swap can receive approximately 91.990778322506861783e18 token1 for five wei of token0 plus one wei of fee.\n\nConsider reverting in _beforeSwap whenever the computed JIT liquidity is zero. Also consider enforcing atomic initialization and seeding, or requiring slot0 to remain inside the active range and the seed ratio to match the current price.",
-        "lastUpdatedAt": "2026-09-24T18:51:14.887Z",
-        "relatedImpactInScope": "smart_contract"
-      },
-      {
-        "id": 1509,
-        "link": "https://github.com/OpenZeppelin/uniswap-hooks/issues/140",
-        "description": "https://github.com/OpenZeppelin/uniswap-hooks/issues/140",
-        "lastUpdatedAt": "2026-09-14T18:36:28.716Z",
-        "relatedImpactInScope": "smart_contract"
-      }
-    ],
-    "defaultOutOfScopeBlockchain": null,
-    "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-    "defaultOutOfScopeWebAndApplications": null,
-    "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
-    "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-    "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-    "customOutOfScopeInformation": "- Best practice critiques\n- ERC mandated behaviors",
-    "customProhibitedActivities": [],
-    "impacts": [
-      {
-        "id": 34,
-        "type": "smart_contract",
-        "severity": "low",
-        "title": "Contract fails to deliver promised returns, but doesn't lose value"
-      },
-      {
-        "id": 1325,
-        "type": "smart_contract",
-        "severity": "low",
-        "title": "Temporary denial of service (smart contract is made unable to operate for one block, functionality is restored in the next block)"
-      },
-      {
-        "id": 1326,
-        "type": "smart_contract",
-        "severity": "low",
-        "title": "Invalid events are emitted, potentially confusing indexers (internal storage is unaffected)"
-      },
-      {
-        "id": 1327,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Governance voting result manipulation"
-      },
-      {
-        "id": 1328,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Permanent freezing of funds"
-      },
-      {
-        "id": 1329,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Permanent denial of service (smart contract is made unable to operate)"
-      },
-      {
-        "id": 1330,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Theft of unclaimed yield / Permanent freezing of unclaimed yield - Impact severity is determined by potential yield lost"
-      },
-      {
-        "id": 1331,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Temporary freezing of funds - Impact severity depends on funds at risk"
-      },
-      {
-        "id": 29,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Smart contract unable to operate due to lack of token funds"
-      },
-      {
-        "id": 31,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-      },
-      {
-        "id": 32,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Theft of gas"
-      },
-      {
-        "id": 33,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Unbounded gas consumption"
-      },
-      {
-        "id": 1332,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Direct theft of user funds, whether at-rest or in-motion, other than unclaimed yield"
-      },
-      {
-        "id": 1333,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Access control is bypassed, including privilege escalation"
-      }
-    ],
-    "rewards": [
-      {
-        "id": 50738,
-        "primacy": null,
-        "severity": "critical",
-        "assetType": "smart_contract",
-        "maxReward": 25000,
-        "minReward": 5000,
-        "rewardModel": "range",
-        "rewardCalculationPercentage": 10
-      },
-      {
-        "id": 50739,
-        "primacy": null,
-        "severity": "high",
-        "assetType": "smart_contract",
-        "maxReward": 5000,
-        "minReward": 2500,
-        "rewardModel": "range"
-      },
-      {
-        "id": 50740,
-        "primacy": null,
-        "severity": "medium",
-        "assetType": "smart_contract",
-        "fixedReward": 2500,
-        "rewardModel": "fixed"
-      },
-      {
-        "id": 50741,
-        "primacy": null,
-        "severity": "low",
-        "assetType": "smart_contract",
-        "fixedReward": 1000,
-        "rewardModel": "fixed"
-      }
-    ],
-    "audits": [
-      {
-        "id": "1330",
-        "url": "https://github.com/OpenZeppelin/openzeppelin-confidential-contracts/tree/master/audits",
-        "auditor": "OpenZeppelin",
-        "date": "2025-12-26T00:00:00.000Z"
       }
     ]
   },
@@ -59998,229 +60841,6 @@
   {
     "assets": [
       {
-        "id": "1gIGZr1iB6BscTqJXpd1eF",
-        "url": "https://github.com/OpenZeppelin/stellar-contracts/releases",
-        "type": "smart_contract",
-        "addedAt": "2026-01-29T06:34:50.151Z",
-        "revision": 0,
-        "description": "OpenZeppelin Stellar Contracts Library (only the packages folder of the latest release is in scope)",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      }
-    ],
-    "assetsBodyV2": null,
-    "boostedIntroEvaluating": "",
-    "boostedIntroFinished": "",
-    "boostedIntroLive": "",
-    "boostedIntroStartingIn": "",
-    "boostedLeaderboard": [],
-    "boostedSummaryReport": null,
-    "ecosystem": [],
-    "endDate": null,
-    "evaluationEndDate": null,
-    "features": [],
-    "hideAssetsInScope": null,
-    "immunefiStandard": false,
-    "inviteOnly": false,
-    "kyc": true,
-    "language": [],
-    "launchDate": "2025-05-08T02:51:06.000Z",
-    "isPaused": false,
-    "pausedAt": null,
-    "pausedMessage": null,
-    "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5dlUG1E6sheSJXTj8T3pbh/810c198bb74efdb222d701da00d91957/oz.png",
-    "maxBounty": 25000,
-    "outOfScopeAndRules": null,
-    "pocPerTypeAndSeverity": [],
-    "primaryPaymentWallet": "EVM",
-    "prioritizedVulnerabilities": "deprecated",
-    "productType": [],
-    "programOverview": "As the premier crypto cybersecurity technology and services company, we’ve built OpenZeppelin Contracts with our best security practices. We are committed to ensuring the utmost security in our community-vetted smart contracts, and our bounty program provides rewards of up to $25,000 USD for reporting critical vulnerabilities in our smart contracts library. \n\nThis bug bounty program is focused on OpenZeppelin Stellar Contracts and mainly intends to prevent:\n- Loss of funds by freezing another user’s funds, or theft of another user’s funds\n- Permanent denial of service (smart contract is made unable to operate)\n- Access control bypass, including privilege escalation\n- Smart contract not behaving as intended\n\nFor more information about OpenZeppelin on Stellar, please visit https://docs.openzeppelin.com/stellar-contracts/0.1.0/.\n\nOpenZeppelin on Stellar provides rewards in XLM on Stellar, denominated in USD.\n\nFor more details about the payment process, please view the Rewards by Threat Level section further below.\n\n__Previous Audits__\nOpenZeppelin on Stellar’s completed audit reports can be found at https://github.com/OpenZeppelin/stellar-contracts/tree/main/audits. Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.\n\n__KYC Requirement__\n\nOpenZeppelin’s bug bounty program requires an invoice to be submitted and a KYC screen to be performed prior to OpenZeppelin providing a bug bounty reward. Once a payout is confirmed, a member of OpenZeppelin will reach out to you directly to collect the necessary information, including:\n- Full Legal Name\n- Email Address\n- Mailing Address\n- Wallet Address (Stellar Only)\n\n__Proof of Concept (PoC) Requirements__\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the Immunefi PoC Guidelines and Rules.\nA PoC compliant with Immunefi PoC Guidelines and Rules is required for the following severity levels:\n- Smart Contract: Critical\n- Smart Contract: High\n\nBugs introduced by a release candidate version and reported during the review period, the dates for which will be declared by OpenZeppelin on each release, will receive a 50% bonus.",
-    "programType": [
-      "Smart Contract"
-    ],
-    "project": "OpenZeppelin on Stellar",
-    "projectType": [],
-    "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the Immunefi Vulnerability Severity Classification System V2.3. This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nThe rewards stated here are additive to any existing bug bounty programs hosted by projects that are currently using OpenZeppelin on Stellar contracts.\n\nBounty rewards are given according to an [impact/likelihood matrix for assessing threat levels. ](https://raw.githubusercontent.com/OpenZeppelin/immunefi-assets/main/impact-likelihood-matrix.png?utm_source=immunefi)Each issue is assessed considering the likelihood of the vulnerability being successfully exploited and the expected impact in scope to a single instance of the affected smart contract. Note that, as can be seen in the matrix, if the impact is Critical then the threat is always Critical, for other impacts the maximum reduction is one level only if the likelihood is low, and if the likelihood is high then the threat is increased one level above the impact.\n\n__Critical Reward Calculation__\nMainnet assets:\n- Reward amount is 10% of the funds directly affected up to a maximum of: $25,000\n- Minimum reward to discourage security researchers from withholding a bug report: $5,000\n\n__Reward Payment Terms__\n\n- Total maximum payout for this bug bounty contest is $250,000.\n- Maximum single bounty payout is capped at $25,000.",
-    "rewardsPool": 0,
-    "primaryPool": 0,
-    "allStarsPool": 0,
-    "podiumPool": 0,
-    "rewardsToken": "XLM",
-    "slug": "openzeppelin-stellar",
-    "tenPercentEconomicRule": false,
-    "updatedDate": "2026-04-21T06:29:21.890Z",
-    "impactsBody": null,
-    "websiteUrl": null,
-    "githubUrl": null,
-    "eligibilityCriteria": [],
-    "responsiblePublicationCategory": "category_1",
-    "description": "As the premier crypto cybersecurity technology and services company, we’ve built OpenZeppelin Contracts with our best [security practices](https://contracts.openzeppelin.com/security?utm_source=immunefi). We are committed to ensuring the utmost security in our community-vetted smart contracts, and our bounty program provides rewards of up to $25,000 USD for reporting critical vulnerabilities in our smart contracts library.",
-    "knownIssues": [
-      {
-        "id": 1499,
-        "link": "https://github.com/OpenZeppelin/stellar-contracts/pull/837",
-        "description": "This issue is being addressed in the following PR.",
-        "lastUpdatedAt": "2026-09-07T16:24:53.029Z",
-        "relatedImpactInScope": "smart_contract"
-      },
-      {
-        "id": 1500,
-        "link": "https://github.com/OpenZeppelin/stellar-contracts/pull/868",
-        "description": "Added the signing contract as part of `AuthDigestPreimage`",
-        "lastUpdatedAt": "2026-09-07T16:27:52.393Z",
-        "relatedImpactInScope": "smart_contract"
-      }
-    ],
-    "defaultOutOfScopeBlockchain": null,
-    "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-    "defaultOutOfScopeWebAndApplications": null,
-    "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
-    "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-    "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-    "customOutOfScopeInformation": null,
-    "customProhibitedActivities": [],
-    "impacts": [
-      {
-        "id": 15,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-      },
-      {
-        "id": 29,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Smart contract unable to operate due to lack of token funds"
-      },
-      {
-        "id": 32,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Theft of gas"
-      },
-      {
-        "id": 31,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-      },
-      {
-        "id": 33,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Unbounded gas consumption"
-      },
-      {
-        "id": 34,
-        "type": "smart_contract",
-        "severity": "low",
-        "title": "Contract fails to deliver promised returns, but doesn't lose value"
-      },
-      {
-        "id": 27,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Temporary freezing of funds"
-      },
-      {
-        "id": 5520,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Access control is bypassed, including privilege escalation"
-      },
-      {
-        "id": 25,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Permanent freezing of unclaimed yield"
-      },
-      {
-        "id": 23,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Theft of unclaimed yield"
-      },
-      {
-        "id": 5521,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Governance voting result manipulation"
-      },
-      {
-        "id": 5522,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Permanent freezing of funds"
-      },
-      {
-        "id": 5523,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Permanent denial of service (smart contract is made unable to operate)"
-      },
-      {
-        "id": 5524,
-        "type": "smart_contract",
-        "severity": "low",
-        "title": "Temporary denial of service (smart contract is made unable to operate for one block, functionality is restored in the next block)"
-      },
-      {
-        "id": 5525,
-        "type": "smart_contract",
-        "severity": "low",
-        "title": "Invalid events are emitted, potentially confusing indexers (internal storage is unaffected)"
-      }
-    ],
-    "rewards": [
-      {
-        "id": 45189,
-        "primacy": null,
-        "severity": "critical",
-        "assetType": "smart_contract",
-        "maxReward": 25000,
-        "minReward": 5000,
-        "rewardModel": "range",
-        "rewardCalculationPercentage": 10
-      },
-      {
-        "id": 45190,
-        "primacy": null,
-        "severity": "high",
-        "assetType": "smart_contract",
-        "maxReward": 5000,
-        "minReward": 2500,
-        "rewardModel": "range"
-      },
-      {
-        "id": 45191,
-        "primacy": null,
-        "severity": "medium",
-        "assetType": "smart_contract",
-        "fixedReward": 2500,
-        "rewardModel": "fixed"
-      },
-      {
-        "id": 45192,
-        "primacy": null,
-        "severity": "low",
-        "assetType": "smart_contract",
-        "fixedReward": 1000,
-        "rewardModel": "fixed"
-      }
-    ],
-    "audits": [
-      {
-        "id": "1340",
-        "url": "https://github.com/OpenZeppelin/stellar-contracts/tree/main/audits",
-        "auditor": "OpenZeppelin",
-        "date": "2026-04-06T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "assets": [
-      {
         "id": "3J2MlNDdNTk1g17pBqWoRX",
         "url": "https://immunefi.com",
         "type": "smart_contract",
@@ -76094,612 +76714,6 @@
         "url": "https://github.com/roycoprotocol/royco-day/tree/main/audit",
         "auditor": "Royco Day audits",
         "date": "2026-08-11T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "assets": [
-      {
-        "id": "cC2hBNCF0nM2dQNqYbgJ0",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/85570db648edb66240564ae844d88d5a3f8fe610/src/components/value/position-trackers/LinearCreditDebtTracker.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-01-26T17:05:24.474Z",
-        "revision": 0,
-        "description": "LinearCreditDebtTracker",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "1GpqXEyFR1csrwRt8qhkOe",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/components/roles/LimitedAccessLimitedCallForwarder.sol",
-        "type": "smart_contract",
-        "addedAt": "2025-09-03T17:48:17.365Z",
-        "revision": 0,
-        "description": "LimitedAccessLimitedCallForwarder",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "3a2KMVVFmlxV04qJR275Bq",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/utils/StorageHelpersLib.sol",
-        "type": "smart_contract",
-        "addedAt": "2025-09-03T17:48:19.116Z",
-        "revision": 0,
-        "description": "StorageHelpersLib",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "47gqDfHbzTZ8g3qzco0Lx2",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/components/value/ValuationHandler.sol",
-        "type": "smart_contract",
-        "addedAt": "2025-09-03T17:48:17.333Z",
-        "revision": 0,
-        "description": "ValuationHandler",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "4vZ8TyuGH5uc7Zgxzokycz",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/components/fees/management-fee-trackers/ContinuousFlatRateManagementFeeTracker.sol",
-        "type": "smart_contract",
-        "addedAt": "2025-09-03T17:48:17.428Z",
-        "revision": 0,
-        "description": "ContinuousFlatRateManagementFeeTracker",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "50sciYr24pFjZuDUXscQFW",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/infra/oracles/OneToOneAggregator.sol",
-        "type": "smart_contract",
-        "addedAt": "2025-09-03T17:48:18.995Z",
-        "revision": 0,
-        "description": "OneToOneAggregator",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "5GgSOotezBM7jd26IKHXUz",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/components/value/position-trackers/AccountERC20Tracker.sol",
-        "type": "smart_contract",
-        "addedAt": "2025-09-03T17:48:18.934Z",
-        "revision": 0,
-        "description": "AccountERC20Tracker",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "5RFLShgqBX1Za1455zTrVn",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/components/roles/OpenAccessLimitedCallForwarder.sol",
-        "type": "smart_contract",
-        "addedAt": "2025-09-03T17:48:19.354Z",
-        "revision": 0,
-        "description": "OpenAccessLimitedCallForwarder",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "5wZaa27Bav3oatoFBQwLQ5",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/components/fees/FeeHandler.sol",
-        "type": "smart_contract",
-        "addedAt": "2025-09-03T17:48:17.366Z",
-        "revision": 0,
-        "description": "FeeHandler",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "66B33THY54dkcAmiiwsHZe",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/global/Global.sol",
-        "type": "smart_contract",
-        "addedAt": "2025-09-03T17:48:19.031Z",
-        "revision": 0,
-        "description": "Global",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "7hDKBBZmjL7Eqep9n50eBD",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/b98576fa39213b3c8aecb8b5b104c9acaa24eff0/src/factories/ComponentBeaconProxy.sol",
-        "type": "smart_contract",
-        "addedAt": "2025-09-03T17:48:17.373Z",
-        "revision": 0,
-        "description": "ComponentBeaconProxy",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "cjldh6LXFfMxrHoWa7JDk",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/6bde0489b1a3196e6290b59e119748ecbeb8b8e4/src/components/fees/performance-fee-trackers/ContinuousFlatRatePerformanceFeeTracker.sol",
-        "type": "smart_contract",
-        "addedAt": "2025-12-08T07:58:36.370Z",
-        "revision": 0,
-        "description": "ContinuousFlatRatePerformanceFeeTracker",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "98716",
-        "url": "https://immunefi.com/",
-        "type": "smart_contract",
-        "addedAt": "2026-02-06T15:58:36.804Z",
-        "revision": 0,
-        "description": "Primacy of Impact",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": true
-      },
-      {
-        "id": "99109",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/61ef53d2dfd17d83183d832529b148e6e15c26ab/src/infra/lists/address-list/OwnableAddressList.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-02-24T13:14:13.104Z",
-        "revision": 0,
-        "description": "OwnableAddressList",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "99111",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/61ef53d2dfd17d83183d832529b148e6e15c26ab/src/components/lists/SharesOwnedAddressList.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-02-24T13:14:13.104Z",
-        "revision": 0,
-        "description": "SharesOwnedAddressList",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "99113",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/61ef53d2dfd17d83183d832529b148e6e15c26ab/src/components/automations/chainlink-cre/CreWorkflowConsumer.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-02-24T13:14:13.104Z",
-        "revision": 0,
-        "description": "CreWorkflowConsumer",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "99133",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/df697194bdfbb883b6eff7a667b08debfcf467a0/src/utils/ValueHelpersLib.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-03-05T12:48:01.994Z",
-        "revision": 0,
-        "description": "ValueHelpersLib",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "99628",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/d1141ff017ec95d33ec46669f404413a0304edb7/src/factories/DeterministicBeaconFactory.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-05-15T11:41:43.496Z",
-        "revision": 0,
-        "description": "DeterministicBeaconFactory",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "99629",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/d1141ff017ec95d33ec46669f404413a0304edb7/src/components/ccip/WalletsManager.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-05-15T11:41:43.496Z",
-        "revision": 0,
-        "description": "WalletsManager",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "99630",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/d1141ff017ec95d33ec46669f404413a0304edb7/src/ccip/DepositorWallet.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-05-15T11:41:43.496Z",
-        "revision": 0,
-        "description": "DepositorWallet",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100281",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/8ae6f589b13a19d8390eb0956836c6a9f48fadab/src/components/automations/chainlink-cre/CreWorkflowConsumer.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-02T12:20:58.286Z",
-        "revision": 0,
-        "description": "CreWorkflowConsumer",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100657",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/shares-transfer-validators/ChainlinkAceSharesTransferValidator.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "ChainlinkAceSharesTransferValidator",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100658",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/shares-transfer-validators/ChainlinkAceSharesTransferExtractor.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "ChainlinkAceSharesTransferExtractor",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100659",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/shares-transfer-validators/AddressListsSharesTransferValidator.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "AddressListsSharesTransferValidator",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100660",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/redeem-handlers/SharesBurnHandler.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "SharesBurnHandler",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100661",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/redeem-handlers/ERC7540LikeRedeemQueue.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "ERC7540LikeRedeemQueue",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100662",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/deposit-handlers/SharesMintHandler.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "SharesMintHandler",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100663",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/deposit-handlers/ERC7540LikeDepositQueue.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "ERC7540LikeDepositQueue",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100664",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/deposit-handlers/SyncDepositHandler.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "SyncDepositHandler",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100665",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/ChainlinkAceERC7540LikeDepositQueuePostExecuteDepositRequestValidator.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "ChainlinkAceERC7540LikeDepositQueuePostExecuteDepositRequestValidator",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100666",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/ChainlinkAceERC7540LikeDepositQueuePreRequestDepositValidator.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "ChainlinkAceERC7540LikeDepositQueuePreRequestDepositValidator",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100667",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/ChainlinkAceERC7540LikeRedeemQueuePostExecuteRedeemRequestValidator.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "ChainlinkAceERC7540LikeRedeemQueuePostExecuteRedeemRequestValidator",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100668",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/ChainlinkAceERC7540LikeRedeemQueuePreRequestRedeemValidator.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "ChainlinkAceERC7540LikeRedeemQueuePreRequestRedeemValidator",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100669",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/ChainlinkAceSharesBurnHandlerPreBurnValidator.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "ChainlinkAceSharesBurnHandlerPreBurnValidator",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100670",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/ChainlinkAceSharesMintHandlerPreMintValidator.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "ChainlinkAceSharesMintHandlerPreMintValidator",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100671",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/ChainlinkAceSyncDepositHandlerPostDepositValidator.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "ChainlinkAceSyncDepositHandlerPostDepositValidator",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100672",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/extractors/ChainlinkAceERC7540LikeDepositQueuePostExecuteDepositRequestExtractor.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "ChainlinkAceERC7540LikeDepositQueuePostExecuteDepositRequestExtractor",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100673",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/extractors/ChainlinkAceERC7540LikeDepositQueuePreRequestDepositExtractor.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "ChainlinkAceERC7540LikeDepositQueuePreRequestDepositExtractor",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100674",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/extractors/ChainlinkAceERC7540LikeRedeemQueuePostExecuteRedeemRequestExtractor.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "ChainlinkAceERC7540LikeRedeemQueuePostExecuteRedeemRequestExtractor",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100675",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/extractors/ChainlinkAceERC7540LikeRedeemQueuePreRequestRedeemExtractor.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "ChainlinkAceERC7540LikeRedeemQueuePreRequestRedeemExtractor",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100676",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/extractors/ChainlinkAceSharesBurnHandlerPreBurnExtractor.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "ChainlinkAceSharesBurnHandlerPreBurnExtractor",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100677",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/extractors/ChainlinkAceSharesMintHandlerPreMintExtractor.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "ChainlinkAceSharesMintHandlerPreMintExtractor",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100678",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/components/issuance/hooks/chainlink-ace/extractors/ChainlinkAceSyncDepositHandlerPostDepositExtractor.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "ChainlinkAceSyncDepositHandlerPostDepositExtractor",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100679",
-        "url": "https://github.com/enzymefinance/protocol-onyx/blob/7b48d243f505b362cd6f1fcf723c21bc8b047c06/src/shares/Shares.sol",
-        "type": "smart_contract",
-        "addedAt": "2026-07-30T11:03:36.987Z",
-        "revision": 0,
-        "description": "Shares",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      }
-    ],
-    "assetsBodyV2": null,
-    "boostedIntroEvaluating": "",
-    "boostedIntroFinished": "",
-    "boostedIntroLive": "",
-    "boostedIntroStartingIn": "",
-    "boostedLeaderboard": [],
-    "boostedSummaryReport": null,
-    "ecosystem": [
-      "ETH"
-    ],
-    "endDate": null,
-    "evaluationEndDate": null,
-    "features": [
-      "Subscription Plan: Essential",
-      "Managed Triage: Time Saver",
-      "Safe Harbor Documents Signed",
-      "Pay to Mediate"
-    ],
-    "hideAssetsInScope": null,
-    "immunefiStandard": false,
-    "inviteOnly": false,
-    "kyc": false,
-    "language": [
-      "Solidity"
-    ],
-    "launchDate": "2025-09-04T10:00:00.000Z",
-    "isPaused": false,
-    "pausedAt": null,
-    "pausedMessage": null,
-    "logo": "https://images.ctfassets.net/t3wqy70tc3bv/3iP5zSqWcE9ivBa4KHRO7o/f6b068029c43b748115d87919d8387fc/S5wC58QC_400x400.png",
-    "maxBounty": 200000,
-    "outOfScopeAndRules": null,
-    "pocPerTypeAndSeverity": [
-      "smart_contract - critical",
-      "smart_contract - high",
-      "smart_contract - medium"
-    ],
-    "primaryPaymentWallet": "EVM",
-    "prioritizedVulnerabilities": "_blank_",
-    "productType": [
-      "Asset Management"
-    ],
-    "programOverview": "Onyx by Enzyme Finance is a tokenization protocol for asset management vehicles. It facilitates bespoke ERC20 shares issuance, including fees and tools for valuation accounting.\n\nDeployed contracts [here](https://github.com/enzymefinance/onyx-sdk/tree/main/packages/environment/src/deployments). Networks in scope: Ethereum, Arbitrum, Base, MegaETH, Plume",
-    "programType": [
-      "Smart Contract"
-    ],
-    "project": "Enzyme Onyx",
-    "projectType": [
-      "Defi"
-    ],
-    "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System v2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/).",
-    "rewardsPool": 0,
-    "primaryPool": 0,
-    "allStarsPool": 0,
-    "podiumPool": 0,
-    "rewardsToken": "USDC",
-    "slug": "enzyme-onyx",
-    "tenPercentEconomicRule": false,
-    "updatedDate": "2026-08-11T10:20:44.552Z",
-    "impactsBody": null,
-    "websiteUrl": null,
-    "githubUrl": "https://github.com/enzymefinance/protocol-onyx",
-    "eligibilityCriteria": [],
-    "responsiblePublicationCategory": null,
-    "description": "Onyx by Enzyme Finance is a tokenization protocol for asset management vehicles. It facilitates bespoke ERC20 shares issuance, including fees and tools for valuation accounting.\n\n**Before submitting a report, please review our Bug Bounty program guidelines carefully. Reports that only cover issues already listed in the program scope will be closed and marked as spam.**\n\nSmart contracts may have both a currently deployed version and the latest audited version that is scheduled for deployment. These are labeled as follows:\n- Live — the smart contract that is currently deployed and in use\n- Latest audited — the most recently audited smart contract, not yet deployed but planned for future release\nIf no labels are present, it means the deployed (live) smart contract is already up to date with the latest audited version.\n\n**Proof of Concept (PoC) Requirements**\n\nAll reports must include a complete, reproducible Proof of Concept (PoC). The PoC must be performed either:\n- On a fork of the live deployment; or\n - Against deployed contracts using the actual production code (e.g., testnet deployments that match the deployed codebase).\n\nPoCs that rely solely on mocked contracts, heavily modified code, hypothetical scenarios, incomplete snippets, or partial demonstrations will not be accepted.\n\nThe PoC must be self-contained and documented in a way that allows reviewers to read and reproduce the issue from start to finish without requiring additional assumptions or missing steps.\n\n**Reports that do not include a complete and reproducible PoC meeting the above requirements will be automatically closed as invalid.**",
-    "knownIssues": [],
-    "defaultOutOfScopeBlockchain": null,
-    "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-    "defaultOutOfScopeWebAndApplications": null,
-    "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
-    "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-    "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-    "customOutOfScopeInformation": "In addition to Immunefi scope rules, the following are considered out-of-scope:\n\n* everything noted in this document set (e.g., [Risks and Limitations](https://docs.enzyme.finance/onyx-protocol/security/risks-and-limitations))\n* everything noted in [audit reports](https://github.com/enzymefinance/protocol-onyx/tree/main/audits)\n* user error; i.e., inadequate inputs or config, lack of mechanism understanding, etc (see below)\n* unrealistic fund state (see below)\n\n### Examples of out-of-scope \"user error\"\n\nOnyx is designed for flexibility of different setups and administrative needs. The `admin` role is often tasked with ensuring fairness, avoidance of denial-of-service (DoS) and similar ill effects, executing steps in order, and otherwise following manual processes to achieve desired results (e.g., [Suggested Subscription Rounds](https://docs.enzyme.finance/onyx-protocol/general-flows/suggested-subscription-rounds)).\n\n#### Example: deposit and redeem handler DoS due to request cancelations&#x20;\n\nSome deposit and redeem handlers (e.g., `ERC7540LikeDepositQueue` and `ERC7540LikeRedeemQueue`) use a `minRequestDuration`, where a request is cancelable after `minRequestDuration` has elapsed.\n\nAs long as `minRequestDuration` is always set adequately (i.e., greater than the maximum time between batches), there will never be a cancelation DoS opportunity.\n\n#### Example: deposit and redeem handler DoS due to small amounts that round to 0 shares\n\n`admin` has full control to omit requests with amounts that are considered too small.\n\n#### Example: share price staleness/fairness/etc during deposit or redemption\n\n`admin` has full control over the price at which deposits and redemptions are executed, and it must be part of their process to validate that the currently-set share price is adequate for any action according to their needs.\n\n#### Example: failure to initialize contract\n\nContracts are always expected to be properly-initialized, and all proxies are always deployed with their init data bundled into the same call.\n\n### Examples of \"unrealistic fund state\"\n\nOnyx vaults are assumed to operate within common-sense constraints for how managed funds work.\n\nClosely related to [#examples-of-out-of-scope-user-error](#examples-of-out-of-scope-user-error \"mention\").\n\n#### Example: more debt than assets\n\nA reasonable managed fund cannot take on more debt than assets such that `share value <= 0`.\n\n#### Example: shares totalSupply > 0 when share value == 0\n\nAt the point where a fund truly loses all assets (e.g., hack, violent value deprecation that rounds to 0) and shares have no value, a fund would shut down rather than, e.g., accept new depositors who immediately get diluted by the shares totalSupply.",
-    "customProhibitedActivities": [],
-    "impacts": [
-      {
-        "id": 15,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-      },
-      {
-        "id": 17,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Permanent freezing of funds"
-      },
-      {
-        "id": 22,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Protocol insolvency"
-      },
-      {
-        "id": 23,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Theft of unclaimed yield"
-      },
-      {
-        "id": 25,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Permanent freezing of unclaimed yield"
-      },
-      {
-        "id": 27,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Temporary freezing of funds"
-      },
-      {
-        "id": 29,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Smart contract unable to operate due to lack of token funds"
-      },
-      {
-        "id": 31,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-      }
-    ],
-    "rewards": [
-      {
-        "id": 49839,
-        "primacy": null,
-        "severity": "critical",
-        "assetType": "smart_contract",
-        "maxReward": 200000,
-        "minReward": 20000,
-        "rewardModel": "range",
-        "rewardCalculationPercentage": 10
-      },
-      {
-        "id": 49840,
-        "primacy": null,
-        "severity": "high",
-        "assetType": "smart_contract",
-        "maxReward": 20000,
-        "minReward": 5000,
-        "rewardModel": "range"
-      },
-      {
-        "id": 49841,
-        "primacy": null,
-        "severity": "medium",
-        "assetType": "smart_contract",
-        "maxReward": 5000,
-        "minReward": 1000,
-        "rewardModel": "range"
-      }
-    ],
-    "audits": [
-      {
-        "id": "1276",
-        "url": "https://github.com/enzymefinance/protocol-onyx/tree/main/audits",
-        "auditor": "ChainSecurity",
-        "date": "2025-09-01T00:00:00.000Z"
       }
     ]
   },
