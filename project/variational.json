@@ -73,7 +73,9 @@
   "evaluationEndDate": null,
   "features": [
     "Subscription Plan: Essential",
-    "Managed Triage: Signal Booster"
+    "Managed Triage: Signal Booster",
+    "Pay to Mediate",
+    "Pay to Submit"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -114,7 +116,7 @@
   "rewardsToken": "USDC",
   "slug": "variational",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-03-17T07:32:57.475Z",
+  "updatedDate": "2026-10-15T04:08:19.475Z",
   "impactsBody": null,
   "websiteUrl": "https://www.variational.io/",
   "githubUrl": "https://github.com/variational-research",
@@ -137,10 +139,52 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 5938,
-      "type": "smart_contract",
+      "id": 6398,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Quoting and economic logic: Exploitable implementation or design flaws in Variational-operated quoting, pricing, execution, margin, liquidation, funding, accounting, or settlement systems are in scope where they demonstrably enable unauthorized extraction or loss of user, OLP, or protocol treasury funds, or protocol insolvency. This includes off-chain services, APIs, web applications, and smart contracts."
+    },
+    {
+      "id": 49,
+      "type": "websites_and_applications",
       "severity": "high",
-      "title": "Temporary freezing of funds for at least 24 hours"
+      "title": "Subdomain takeover without already-connected wallet interaction"
+    },
+    {
+      "id": 50,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Changing the first/last name of user\n- Enabling/disabling notifications"
+    },
+    {
+      "id": 51,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:\n- Reflected HTML Injection\n- Loading external site data"
+    },
+    {
+      "id": 52,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Redirecting users to malicious websites (open redirect)"
+    },
+    {
+      "id": 53,
+      "type": "websites_and_applications",
+      "severity": "low",
+      "title": "Changing details of other users (including modifying browser local storage) without already-connected wallet interaction and with significant user interaction, such as:\n- Iframing leading to modifying the backend/browser state (must demonstrate impact with PoC)"
+    },
+    {
+      "id": 54,
+      "type": "websites_and_applications",
+      "severity": "low",
+      "title": "Taking over broken or expired outgoing links, such as:\n- Social media handles, etc."
+    },
+    {
+      "id": 55,
+      "type": "websites_and_applications",
+      "severity": "low",
+      "title": "Temporarily disabling user to access target site, such as:\n- Locking up the victim from login\n- Cookie bombing, etc."
     },
     {
       "id": 15,
@@ -269,51 +313,15 @@
       "title": "Improperly disclosing confidential user information, such as:\n- Email address\n- Phone number\n- Physical address, etc."
     },
     {
-      "id": 49,
-      "type": "websites_and_applications",
+      "id": 5938,
+      "type": "smart_contract",
       "severity": "high",
-      "title": "Subdomain takeover without already-connected wallet interaction"
-    },
-    {
-      "id": 50,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Changing the first/last name of user\n- Enabling/disabling notifications"
-    },
-    {
-      "id": 51,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:\n- Reflected HTML Injection\n- Loading external site data"
-    },
-    {
-      "id": 52,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Redirecting users to malicious websites (open redirect)"
-    },
-    {
-      "id": 53,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Changing details of other users (including modifying browser local storage) without already-connected wallet interaction and with significant user interaction, such as:\n- Iframing leading to modifying the backend/browser state (must demonstrate impact with PoC)"
-    },
-    {
-      "id": 54,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Taking over broken or expired outgoing links, such as:\n- Social media handles, etc."
-    },
-    {
-      "id": 55,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Temporarily disabling user to access target site, such as:\n- Locking up the victim from login\n- Cookie bombing, etc."
+      "title": "Temporary freezing of funds for at least 24 hours"
     }
   ],
   "rewards": [
     {
-      "id": 43220,
+      "id": 51716,
       "primacy": "primacy_of_impact",
       "severity": "critical",
       "assetType": "smart_contract",
@@ -323,7 +331,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 43221,
+      "id": 51717,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -332,7 +340,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 43222,
+      "id": 51718,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -340,16 +348,17 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 43223,
+      "id": 51719,
       "primacy": "primacy_of_impact",
       "severity": "critical",
       "assetType": "websites_and_applications",
       "maxReward": 50000,
       "minReward": 10000,
-      "rewardModel": "range"
+      "rewardModel": "range",
+      "otherImpactMaxReward": 10000
     },
     {
-      "id": 43224,
+      "id": 51720,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -357,7 +366,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 43225,
+      "id": 51721,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
@@ -365,7 +374,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 43226,
+      "id": 51722,
       "primacy": null,
       "severity": "low",
       "assetType": "websites_and_applications",
