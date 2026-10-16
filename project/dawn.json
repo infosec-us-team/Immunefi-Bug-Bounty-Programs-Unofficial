@@ -59,6 +59,16 @@
       "description": "Loopscale credit vault holding InfraFi capital - loan book, NAV and share price computed on-chain by Loopscale; DAWN is the sole whitelisted borrower via a Squads V4 multisig. On-chain Anchor IDL fetchable. In scope: InfraFi's vault configuration and integration — deposit/withdraw, borrow/repay, and deal-valuation integration; borrower authorization; and the exchange-rate/share-price semantics DAWN reads and publishes. Loopscale protocol and program internals are out of scope (see below).",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101425",
+      "url": "https://bscscan.com/address/0x8b7eA48F5F528F5bCf256f75623dA98152Ec95f3",
+      "type": "smart_contract",
+      "addedAt": "2026-10-15T12:19:29.324Z",
+      "revision": 0,
+      "description": "InfraFi's on-chain contract on BNB Chain that receives, validates and stores the vault exchange rate published by infrafi-api, implements additional sanity checks and is used for downstream oracle consumption. In scope: rate-publishing authorization, staleness/validation, and any path to posting a manipulated or ripcord-blocked rate. Feed is purely informational.",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": null,
@@ -127,7 +137,7 @@
   "rewardsToken": "USDC",
   "slug": "dawn",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-09-28T02:55:18.424Z",
+  "updatedDate": "2026-10-15T12:19:29.449Z",
   "impactsBody": "-",
   "websiteUrl": "https://app.infrastructure.finance/",
   "githubUrl": null,
@@ -141,6 +151,13 @@
       "description": "LocalStorage JWT storage in the manager (accepted XSS trade-off behind the VPN).",
       "lastUpdatedAt": "2026-05-31T00:00:00.000Z",
       "relatedImpactInScope": "websites_and_applications"
+    },
+    {
+      "id": 1529,
+      "link": "https://bscscan.com/address/0x15a6f1f2705b3916b5b1d2b19b10f320778744c1",
+      "description": "USDTelExchangeRate (0x15a6f1f2705b3916b5b1d2b19b10f320778744c1, BNB Smart Chain) is stale, its stored rate is above the vault's current NAV, and it cannot be corrected. It has been replaced by a new deployment.\n\nThe old USDTelExchangeRate feed has not received a rate update since 2026-08-06 00:00:20 UTC. Its last posted value, 1009565510281362300 (about 1.00957), is higher than the vault's current NAV. The contract only accepts non-decreasing rates: setExchangeRate reverts on any decrease, and there is no admin override. So no role (owner, updater or the owning Safe) can lower the stored value. This is the intended, documented design of the feed. Correcting a feed whose stored rate is too high requires a new deployment, not an admin action. The same monotonic, no-override design applies to the replacement feed.\n\nThe feed is informational only. It holds no funds or tokens and makes no external calls, and no on-chain contract or integration reads getExchangeRate(). The stale and overstated value therefore cannot cause loss or freezing of funds.\n\nResolution: the feed has been replaced by USDinfraExchangeRate at 0x8b7eA48F5F528F5bCf256f75623dA98152Ec95f3 (BNB Smart Chain). It is owned by the same Safe and updated through the same separate updater role. The old contract is no longer maintained and will be removed from the program's scope.\n\nThis known issue covers reports that the old feed is stale, that its rate is above NAV, or that no role can correct it.",
+      "lastUpdatedAt": "2026-10-15T11:45:42.959Z",
+      "relatedImpactInScope": "smart_contract"
     },
     {
       "id": 1383,
@@ -447,7 +464,7 @@
   ],
   "rewards": [
     {
-      "id": 51140,
+      "id": 51749,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -457,7 +474,7 @@
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 51141,
+      "id": 51750,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -465,7 +482,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 51142,
+      "id": 51751,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -473,7 +490,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 51143,
+      "id": 51752,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
@@ -481,7 +498,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 51144,
+      "id": 51753,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -491,7 +508,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 51145,
+      "id": 51754,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -499,7 +516,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 51146,
+      "id": 51755,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
@@ -507,7 +524,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 51147,
+      "id": 51756,
       "primacy": null,
       "severity": "low",
       "assetType": "websites_and_applications",

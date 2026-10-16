@@ -471,16 +471,6 @@
       "isPrimacyOfImpact": false
     },
     {
-      "id": "db_e9de04d2-c2b4-4f24-ade0-c87f5de399d4",
-      "url": "https://www.lombard.finance/",
-      "type": "smart_contract",
-      "addedAt": "2026-06-25T14:49:24.941Z",
-      "revision": 0,
-      "description": "Primacy of Impact",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": true
-    },
-    {
       "id": "100390",
       "url": "https://github.com/lombard-finance/evm-smart-contracts/blob/main/contracts/strategy/shards/Shard.sol",
       "type": "smart_contract",
@@ -519,9 +509,29 @@
       "description": "Strategy Asset Converters (0x6647Bf1C4214096B97145E0B23CF41C54A46CDd3 BTC.b, 0xecc0282C71bA63d58c0dD2282125566045A8F777 StakedLBTC on Ethereum) — value deposit assets into base units for PPS",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101426",
+      "url": "https://github.com/lombard-finance/evm-smart-contracts/blob/main/contracts/strategy/MultiAssetWithAsyncRedemptionStrategy.sol",
+      "type": "smart_contract",
+      "addedAt": "2026-10-15T19:31:04.365Z",
+      "revision": 0,
+      "description": "Strategy (0xf14F678d9c05798ba61652a950a05D74aD2E0A6C on Ethereum) — BTCoc vault and share token: deposits, async redemptions, price per share and fees",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101427",
+      "url": "https://www.lombard.finance/",
+      "type": "smart_contract",
+      "addedAt": "2026-10-15T19:31:36.292Z",
+      "revision": 0,
+      "description": "Primacy of Impact",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": true
     }
   ],
-  "assetsBodyV2": "---\n\nThe scope references GitHub URLs to specific contract source files. The same contracts are deployed across multiple chains — deployed addresses can be found in our public mainnet.json files.\n\n**EVM chains:** Ethereum, BNB Chain, Base, Berachain, Sonic, Morph, Etherlink, Ink, Katana, TAC, Scroll, BOB, Avalanche, Monad, Stable, MegaETH — https://github.com/lombard-finance/evm-smart-contracts/blob/main/mainnet.json\n\n**Sui** — https://github.com/lombard-finance/sui-move-contracts/blob/main/mainnet.json\n\n**Starknet** — https://github.com/lombard-finance/starknet-cairo-contracts/blob/main/mainnet.json\n\nNote: not all contracts listed in mainnet.json are in scope — only those explicitly included in the scope section above.",
+  "assetsBodyV2": "---\n\nThe scope references GitHub URLs to specific contract source files. The same contracts are deployed across multiple chains — deployed addresses can be found in our public mainnet.json files.\n\n**EVM chains:** Ethereum, BNB Chain, Base, Berachain, Sonic, Morph, Etherlink, Katana, TAC, Scroll, BOB, Avalanche, Monad, Stable, MegaETH — https://github.com/lombard-finance/evm-smart-contracts/blob/main/mainnet.json\n\n**Solana** — https://github.com/lombard-finance/sol-svm-contracts/blob/main/mainnet.json\n\n**Sui** — https://github.com/lombard-finance/sui-move-contracts/blob/main/mainnet.json\n\n**Starknet** — https://github.com/lombard-finance/starknet-cairo-contracts/blob/main/mainnet.json\n\nNote: not all contracts listed in mainnet.json are in scope — only those explicitly included in the scope section above.",
   "boostedIntroEvaluating": "",
   "boostedIntroFinished": "",
   "boostedIntroLive": "",
@@ -550,7 +560,7 @@
   "pausedAt": null,
   "pausedMessage": null,
   "logo": "https://qn5bmgziiocgawpp.public.blob.vercel-storage.com/62368-OIo8lLqnFjUCyS2rK1Azh.png",
-  "maxBounty": 250000,
+  "maxBounty": 500000,
   "outOfScopeAndRules": null,
   "pocPerTypeAndSeverity": [
     "smart_contract - critical",
@@ -573,7 +583,7 @@
   "projectType": [
     "Defi"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Calculation for Critical Level Reports__\n\nAny reward beyond the minimum for the assigned criticality rating is at the sole discretion of Lombard Finance. Hence, for critical bug reports, a minimum reward of USD 50 000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report. The default Critical reward calculation shown is therefore not applicable or guaranteed.\n\n__Repeatable Attack Limitations__\n\n- If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n- For critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done.\n\n__Reward Calculation for High Level Reports__\n\n- High vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of $10,000 to $50,000 depending on the funds at risk, capped at the maximum high reward.  \n- In the event of temporary freezing, the reward doubles from the full frozen value for every additional [24h] that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\n__For critical web/apps bug reports will be rewarded with USD 30 000, only if the impact leads to:__\n- A loss of funds involving an attack that does not require any user action\n- Private key or private key generation leakage leading to unauthorized access to user funds \n\nAll other impacts that would be classified as Critical would be rewarded a flat amount of USD 15 000. The rest of the severity levels are paid out according to the Impact in Scope table.  \n\n__Reward Payment Terms__\n\nPayouts are handled by the Lombard team directly and are denominated in USD. However, payments are done in USDC on Ethereum.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Calculation for Critical Level Reports__\n\nAny reward beyond the minimum for the assigned criticality rating is at the sole discretion of Lombard Finance. Hence, for critical bug reports, a minimum reward of USD 50 000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report. The default Critical reward calculation shown is therefore not applicable or guaranteed.\n\n__Repeatable Attack Limitations__\n\n- If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n- For critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done.\n\n__Reward Calculation for High Level Reports__\n\n- High vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of $10,000 to $50,000 depending on the funds at risk, capped at the maximum high reward.  \n- In the event of temporary freezing, the reward doubles from the full frozen value for every additional [24h] that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature\n\n__Critical web/app reports are rewarded only when the report demonstrates that the impact puts users' funds at risk:\n- USD 30,000 for a loss of users' funds through an attack that does not require any user action, or for private key or private key generation leakage leading to unauthorized access to users' funds\n- USD 15,000 for any other Critical impact that leads to a loss of users' funds\n\nAn impact that cannot affect users' funds is assessed at a severity below Critical.The rest of the severity levels are paid out according to the Impact in Scope table.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Lombard team directly and are denominated in USD. However, payments are done in USDC on Ethereum.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -581,7 +591,7 @@
   "rewardsToken": "USDC",
   "slug": "lombard-finance",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-09-11T14:51:36.520Z",
+  "updatedDate": "2026-10-15T19:31:58.175Z",
   "impactsBody": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
   "websiteUrl": "https://www.lombard.finance/",
   "githubUrl": "https://github.com/lombard-finance/",
@@ -780,17 +790,17 @@
   ],
   "rewards": [
     {
-      "id": 50859,
+      "id": 51782,
       "primacy": "primacy_of_impact",
       "severity": "critical",
       "assetType": "smart_contract",
-      "maxReward": 250000,
+      "maxReward": 500000,
       "minReward": 50000,
       "rewardModel": "range",
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 50860,
+      "id": 51783,
       "primacy": "primacy_of_impact",
       "severity": "high",
       "assetType": "smart_contract",
@@ -799,7 +809,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 50861,
+      "id": 51784,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -807,7 +817,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 50862,
+      "id": 51785,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
@@ -815,7 +825,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 50863,
+      "id": 51786,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -825,7 +835,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 50864,
+      "id": 51787,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -833,7 +843,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 50865,
+      "id": 51788,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",

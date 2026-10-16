@@ -4,37 +4,21 @@
       "id": "6BIog3fUoB93zxhc698VpW",
       "url": "https://voyager.online/contract/0x02a85bd616f912537c50a49a4076db02c00b29b2cdc8a197ce92ed1837fa875b",
       "type": "smart_contract",
-      "addedAt": "2023-11-22T09:00:00.000Z",
-      "revision": 2,
+      "addedAt": "2023-11-21T11:35:16.476Z",
+      "revision": 0,
       "description": "Oracle",
-      "isPrimacyOfImpact": null
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     },
     {
       "id": "742rjptdkZAf6nRxWXIe3v",
       "url": "https://voyager.online/contract/0x024a55b928496ef83468fdb9a5430fe031ac386b8f62f5c2eb7dd20ef7237415",
       "type": "smart_contract",
-      "addedAt": "2023-11-22T09:00:00.000Z",
-      "revision": 2,
+      "addedAt": "2023-11-21T11:35:29.106Z",
+      "revision": 0,
       "description": "PublisherRegistry",
-      "isPrimacyOfImpact": null
-    },
-    {
-      "id": "7tnaYPAVjZrvaB5EefH4mb",
-      "url": "https://voyager.online/contract/0x49eefafae944d07744d07cc72a5bf14728a6fb463c3eae5bca13552f5d455fd#readContract",
-      "type": "smart_contract",
-      "addedAt": "2023-11-22T09:00:00.000Z",
-      "revision": 2,
-      "description": "TWAP/Volatility",
-      "isPrimacyOfImpact": null
-    },
-    {
-      "id": "6e50pM12ySv8CccgRgLTxK",
-      "url": "https://immunefi.com/",
-      "type": "smart_contract",
-      "addedAt": "2023-11-22T09:00:00.000Z",
-      "revision": 1,
-      "description": "Primacy of Impact",
-      "isPrimacyOfImpact": true
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": null,
@@ -45,29 +29,30 @@
   "boostedLeaderboard": [],
   "boostedSummaryReport": null,
   "ecosystem": [
-    "ETH"
+    "Starknet"
   ],
   "endDate": null,
   "evaluationEndDate": null,
-  "features": [],
+  "features": [
+    "Pay to Mediate"
+  ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
   "inviteOnly": false,
   "kyc": true,
   "language": [
-    "Solidity"
+    "Cairo"
   ],
   "launchDate": "2023-11-22T09:00:00.000Z",
   "isPaused": false,
   "pausedAt": null,
   "pausedMessage": null,
   "logo": "https://images.ctfassets.net/t3wqy70tc3bv/4oI0gXaVamuG4KdqVG0LC1/fd67ba15a8d6811a385faa1c2a175bf0/Group__3_.png",
-  "maxBounty": 50000,
+  "maxBounty": 10000,
   "outOfScopeAndRules": null,
   "pocPerTypeAndSeverity": [
     "smart_contract - critical",
-    "smart_contract - high",
-    "smart_contract - medium"
+    "smart_contract - high"
   ],
   "primaryPaymentWallet": "EVM",
   "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
@@ -82,15 +67,15 @@
   "projectType": [
     "Defi"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 50 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 5 000 is to be rewarded in order to incentivize security researchers against withholding a bug report.   \n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract + Critical + PoC Required\n- Smart Contract + High + PoC Required\n- Smart Contract + Medium + PoC Required\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules) Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs acknowledged below are not eligible for any reward through the bug bounty program. \n- [https://github.com/NethermindEth/PublicAuditReports/blob/main/NM0147-FINAL_PRAGMA.pdf](https://github.com/NethermindEth/PublicAuditReports/blob/main/NM0147-FINAL_PRAGMA.pdf)\n\n__Reward Payment Terms__\n\nPayouts are handled by the Pragma team directly and are denominated in USD. However, payments are done in USDC.",
+  "rewardsBody": "Rewards depend on the vulnerability’s impact, as defined in the Impacts in Scope table below.\n\n- **Critical smart contract bugs:** the reward amount is % of the funds directly affected up to a maximum of $10000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of $10000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n- **Repeatable attacks:** Only the first attack counts, even if the contract can be upgraded, paused, or disabled.\n- **Proof of Concept (PoC):** Critical and High smart contract reports require a PoC that follows [Immunefi’s guidelines](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules). Reports missing a required PoC receive no reward.\n- **Known issues:** Bugs identified in [this audit report](https://github.com/NethermindEth/PublicAuditReports/blob/main/NM0147-FINAL_PRAGMA.pdf) are not eligible for rewards.\n- **Payment:** Pragma pays rewards directly in USDC, based on their USD value.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
   "podiumPool": 0,
   "rewardsToken": "USDC",
   "slug": "pragmaoracle",
-  "tenPercentEconomicRule": null,
-  "updatedDate": "2024-11-11T13:44:29.750Z",
+  "tenPercentEconomicRule": false,
+  "updatedDate": "2026-10-15T09:36:29.787Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -108,28 +93,10 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 23,
+      "id": 17,
       "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of unclaimed yield"
-    },
-    {
-      "id": 24,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of unclaimed royalties"
-    },
-    {
-      "id": 25,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of unclaimed yield"
-    },
-    {
-      "id": 26,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of unclaimed royalties"
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
     },
     {
       "id": 27,
@@ -138,40 +105,10 @@
       "title": "Temporary freezing of funds"
     },
     {
-      "id": 29,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Smart contract unable to operate due to lack of token funds"
-    },
-    {
-      "id": 32,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Theft of gas"
-    },
-    {
-      "id": 33,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Unbounded gas consumption"
-    },
-    {
       "id": 4596,
       "type": "smart_contract",
       "severity": "critical",
       "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results."
-    },
-    {
-      "id": 4597,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield."
-    },
-    {
-      "id": 17,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
     },
     {
       "id": 4598,
@@ -182,27 +119,21 @@
   ],
   "rewards": [
     {
-      "id": 3830,
+      "id": 51723,
+      "primacy": "primacy_of_rules",
+      "severity": "critical",
+      "assetType": "smart_contract",
+      "fixedReward": 10000,
+      "rewardModel": "fixed",
+      "rewardCalculationPercentage": 10
+    },
+    {
+      "id": 51724,
+      "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
       "fixedReward": 5000,
       "rewardModel": "fixed"
-    },
-    {
-      "id": 3831,
-      "severity": "medium",
-      "assetType": "smart_contract",
-      "fixedReward": 2500,
-      "rewardModel": "fixed"
-    },
-    {
-      "id": 8123,
-      "severity": "critical",
-      "assetType": "smart_contract",
-      "maxReward": 50000,
-      "minReward": 10000,
-      "rewardModel": "range",
-      "rewardCalculationPercentage": 10
     }
   ],
   "audits": []
