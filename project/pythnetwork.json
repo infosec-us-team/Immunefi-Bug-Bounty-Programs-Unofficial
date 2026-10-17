@@ -116,7 +116,7 @@
   "pausedAt": null,
   "pausedMessage": null,
   "logo": "https://images.ctfassets.net/t3wqy70tc3bv/5MjWJd5jcGHtNLtAZnYNN0/0c111c048c5b2452457756f172948bb9/pyth-network-pyth-logo.png",
-  "maxBounty": 250000,
+  "maxBounty": 125000,
   "outOfScopeAndRules": ".",
   "pocPerTypeAndSeverity": [
     "smart_contract - critical",
@@ -142,7 +142,7 @@
   "projectType": [
     "Infrastructure"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\n__Reward Calculation for Critical Smart Contract Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of 250 000 USDC. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted.  For the avoidance of doubt, directly affected funds calculation does not include downstream protocols or users of the Pyth protocol or any effects on the $PYTH token price.\n\n__Reward Calculation for Critical Websites and Applications Reports__\n\nFor Critical web/apps bug reports will be rewarded with **USD 50 000**, only if the impact leads to:\n\n- A loss of funds involving an attack that does not require any user action\n- Unauthorized minting of tokens on-chain\n- Private key or private key generation leakage leading to unauthorized access to user funds\n- The impact occurs on a user facing application, generally hosted under pyth.network\n\nAll other impacts that would be classified as **Critical** would be rewarded a flat amount of **USD 30 000**.\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attacks within the first hour will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n\nFor critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Smart Contract Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded up to $50,000 USDC depending on the funds at risk, capped at the maximum high reward.  \n\n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\n__Reward Calculation for High Websites and Applications Reports__\n\nFor High web/app impacts, the maximum reward of **USD 20 000** will only be paid out for issues that affect our main user-facing applications, generally hosted under pyth.network.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Pyth Data Association directly and are denominated in USD. However, payments are done in USDC. \n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\n__Reward Calculation for Critical Smart Contract Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of 125 000 USDC. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted.  For the avoidance of doubt, directly affected funds calculation does not include downstream protocols or users of the Pyth protocol or any effects on the $PYTH token price.\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attacks within the first hour will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n\nFor critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Smart Contract Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded up to $50,000 USDC depending on the funds at risk, capped at the maximum high reward.  \n\n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\n__Reward Calculation for High Websites and Applications Reports__\n\nFor High web/app impacts, the maximum reward of **USD 20 000** will only be paid out for issues that affect our main user-facing applications, generally hosted under pyth.network.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Pyth Data Association directly and are denominated in USD. However, payments are done in USDC. \n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -150,7 +150,7 @@
   "rewardsToken": "USDC",
   "slug": "pythnetwork",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-09-14T16:54:13.098Z",
+  "updatedDate": "2026-10-16T16:12:03.061Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -355,35 +355,35 @@
   ],
   "rewards": [
     {
-      "id": 50890,
+      "id": 51805,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
-      "maxReward": 250000,
-      "minReward": 50000,
+      "maxReward": 125000,
+      "minReward": 10000,
       "rewardModel": "range",
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 50891,
+      "id": 51806,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
       "maxReward": 50000,
-      "minReward": 10000,
+      "minReward": 5000,
       "rewardModel": "range"
     },
     {
-      "id": 50892,
+      "id": 51807,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
       "maxReward": 10000,
-      "minReward": 2500,
+      "minReward": 1000,
       "rewardModel": "range"
     },
     {
-      "id": 50893,
+      "id": 51808,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
@@ -392,26 +392,26 @@
       "rewardModel": "range"
     },
     {
-      "id": 50894,
+      "id": 51809,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
       "maxReward": 50000,
-      "minReward": 20000,
+      "minReward": 5000,
       "rewardModel": "range",
       "otherImpactMaxReward": 30000
     },
     {
-      "id": 50895,
+      "id": 51810,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
       "maxReward": 20000,
-      "minReward": 5000,
+      "minReward": 2500,
       "rewardModel": "range"
     },
     {
-      "id": 50896,
+      "id": 51811,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
@@ -419,7 +419,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 50897,
+      "id": 51812,
       "primacy": null,
       "severity": "low",
       "assetType": "websites_and_applications",

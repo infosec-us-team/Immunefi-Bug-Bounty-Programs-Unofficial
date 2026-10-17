@@ -105,7 +105,15 @@
   ],
   "responsiblePublicationCategory": "category_3",
   "description": "The 1inch Business is a Web3 cloud SaaS (software as a service) platform offering multiple software services.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1530,
+      "link": "https://github.com/x402-foundation/x402/pull/2883",
+      "description": "Go batch-settlement VerifyDeposit was returning balance + deposit in verify extra before the deposit was mined, so AfterVerifyHook could cache unconfirmed escrow and later approve over-escrow vouchers.",
+      "lastUpdatedAt": "2026-10-16T12:31:45.372Z",
+      "relatedImpactInScope": "websites_and_applications"
+    }
+  ],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": null,
   "defaultOutOfScopeWebAndApplications": null,
