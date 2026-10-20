@@ -2623,7 +2623,15 @@
   ],
   "responsiblePublicationCategory": "category_3",
   "description": "Compound is a protocol on the Ethereum blockchain that establishes money markets, which are pools of assets with algorithmically derived interest rates, based on the supply and demand for the asset. Suppliers (and borrowers) of an asset interact directly with the protocol, earning (and paying) a floating interest rate, without having to negotiate terms such as maturity, interest rate, or collateral with a peer or counterparty.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1532,
+      "link": "https://www.certora.com/reports/compound-comet-erc4626-wrapper",
+      "description": "Zero-value transfer can reduce the recipient’s Comet principal",
+      "lastUpdatedAt": "2026-10-19T15:57:45.024Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeWebAndApplications": null,

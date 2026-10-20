@@ -1309,6 +1309,16 @@
       "description": "UpgradeableBeaconDeployer.sol",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101428",
+      "url": "https://www.tally.xyz/gov/zksync/proposal/39818012355511486328740463691883430307761328158522613751057493126514636439545?govId=eip155:324:0x76705327e682F2d96943280D99464Ab61219e34f",
+      "type": "smart_contract",
+      "addedAt": "2026-10-19T08:31:53.648Z",
+      "revision": 0,
+      "description": "ZKsync Governance Proposal (Tally)",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": "- __Smart Contracts - PoC__, Smart Contract bug reports are to include a runnable Proof of Concept (PoC) in order to prove impact.  \n- For more information on PoCs please visit: [Proof of Concept (PoC) Guidelines and Rules.](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\n- __Web/App__ - Bug reports are to include a runnable Proof of Concept (PoC) in order to prove impact. All web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope in order to be considered for a reward. All PoC content must adhere to the [PoC guidelines and rules of Immunefi](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules). In the event that a PoC requires an attack on a web/app asset provided, they must still adhere to the rules provided, otherwise eligibility for a reward may be revoked. \n\n- For more information on PoCs please visit: [Proof of Concept (PoC) Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules)\n\nWhitehats we highly encourage you to review any potential subdomains and what specific port(s) are in scope. Even though the domain may be the same, different ports may point to different assets.  \n\n__Dev Environment and Documentation:__\n\nZKsync has included dev documentation and/or instructions to help in reviewing code and exploring for bugs:\n\n- [https://github.com/matter-labs/zksync-era](https://github.com/matter-labs/zksync-era)\n- [https://github.com/matter-labs/era-contracts](https://github.com/matter-labs/era-contracts)\n- [https://github.com/matter-labs/era-zkevm_circuits](https://github.com/matter-labs/era-zkevm_circuits)\n- [https://github.com/matter-labs/era-zkevm_opcode_defs](https://github.com/matter-labs/era-zkevm_opcode_defs)\n- [https://github.com/matter-labs/era-zkEVM-assembly](https://github.com/matter-labs/era-zkEVM-assembly)\n- [https://github.com/matter-labs/era-zkevm_test_harness](https://github.com/matter-labs/era-zkevm_test_harness)\n- [https://github.com/matter-labs/era-zk_evm](https://github.com/matter-labs/era-zk_evm)\n\n__Impacts to other assets:__\n\nHackers are encouraged to submit issues outside of the outlined Impacts and Assets in Scope. \n\nIf whitehats can demonstrate a critical and high impact for an asset not in scope, ZKsync encourages you to submit your bug report using the “primacy of impact exception” asset.",
@@ -1349,7 +1359,6 @@
     "smart_contract - critical",
     "smart_contract - high",
     "smart_contract - medium",
-    "smart_contract - low",
     "blockchain_dlt - critical",
     "blockchain_dlt - high"
   ],
@@ -1360,8 +1369,8 @@
   ],
   "programOverview": "ZKsync Era is a layer 2 rollup that uses zero-knowledge proofs to scale Ethereum without compromising on security or decentralization. Since it's EVM compatible (Solidity/Vyper), 99% of Ethereum projects can redeploy without refactoring or re-auditing a single line of code. ZKsync Era also uses an LLVM-based compiler that will eventually let developers write smart contracts in C++, Rust and other popular languages.\n\nFor more information about ZKsync Era, please visit [https://zksync.io/](https://zksync.io/)\n\n__For Whitehats__: It is highly recommended that you review the details of this program in full. Although many Bug Bounty programs have standard terms and conditions, each also has their own unique details that are critical to your success. \n\nPrior to submitting a report please review the Immunefi [Bug Report Template and Best Practices. ](https://immunefisupport.zendesk.com/hc/en-us/articles/12435277406481-Bug-Report-Template)",
   "programType": [
-    "Blockchain/DLT",
-    "Smart Contract"
+    "Smart Contract",
+    "Blockchain/DLT"
   ],
   "project": "ZKsync Era",
   "projectType": [
@@ -1375,7 +1384,7 @@
   "rewardsToken": "USDC",
   "slug": "zksyncera",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-10-16T11:07:29.079Z",
+  "updatedDate": "2026-10-19T16:45:46.333Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -1396,10 +1405,34 @@
   ],
   "impacts": [
     {
-      "id": 34,
+      "id": 3,
+      "type": "blockchain_dlt",
+      "severity": "critical",
+      "title": "Direct loss of funds"
+    },
+    {
+      "id": 22,
       "type": "smart_contract",
-      "severity": "low",
-      "title": "Contract fails to deliver promised returns, but doesn't lose value"
+      "severity": "critical",
+      "title": "Protocol insolvency"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 32,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of gas"
+    },
+    {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
     },
     {
       "id": 3947,
@@ -1432,24 +1465,6 @@
       "title": "Block stuffing for profit"
     },
     {
-      "id": 31,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-    },
-    {
-      "id": 32,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Theft of gas"
-    },
-    {
-      "id": 33,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Unbounded gas consumption"
-    },
-    {
       "id": 3955,
       "type": "smart_contract",
       "severity": "critical",
@@ -1460,32 +1475,20 @@
       "type": "smart_contract",
       "severity": "critical",
       "title": "Permanent freezing of funds (that cannot be fixed by upgrade)"
-    },
-    {
-      "id": 22,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Protocol insolvency"
-    },
-    {
-      "id": 3,
-      "type": "blockchain_dlt",
-      "severity": "critical",
-      "title": "Direct loss of funds"
     }
   ],
   "rewards": [
     {
-      "id": 51795,
+      "id": 51863,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
-      "fixedReward": 50000,
+      "fixedReward": 20000,
       "rewardModel": "fixed",
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 51796,
+      "id": 51864,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -1493,7 +1496,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 51797,
+      "id": 51865,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -1503,28 +1506,20 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 51798,
+      "id": 51866,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
-      "maxReward": 50000,
-      "minReward": 20000,
+      "maxReward": 20000,
+      "minReward": 10000,
       "rewardModel": "range"
     },
     {
-      "id": 51799,
+      "id": 51867,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
-      "fixedReward": 5000,
-      "rewardModel": "fixed"
-    },
-    {
-      "id": 51800,
-      "primacy": null,
-      "severity": "low",
-      "assetType": "smart_contract",
-      "fixedReward": 1000,
+      "fixedReward": 2000,
       "rewardModel": "fixed"
     }
   ],
