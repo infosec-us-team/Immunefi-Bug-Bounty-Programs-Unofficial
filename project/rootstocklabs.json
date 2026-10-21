@@ -61,26 +61,6 @@
       "isPrimacyOfImpact": false
     },
     {
-      "id": "db_cc77dd69-9a77-4bce-9a4b-6c72fc9d3f40",
-      "url": "https://github.com/rsksmart/2wp-api",
-      "type": "websites_and_applications",
-      "addedAt": "2026-02-10T11:15:49.329Z",
-      "revision": 0,
-      "description": "2wp-api",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
-      "id": "db_b7d49efa-8e25-4ab2-be72-22b13fe1e47e",
-      "url": "https://github.com/rsksmart/2wp-app",
-      "type": "websites_and_applications",
-      "addedAt": "2026-02-10T11:16:03.208Z",
-      "revision": 0,
-      "description": "2wp-app",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
       "id": "db_70ee9995-6d01-49a8-ab94-964bc13dc02a",
       "url": "https://immunefi.com/bug-bounty/rootstocklabs",
       "type": "smart_contract",
@@ -217,6 +197,7 @@
     "Subscription Plan: Essential",
     "Pay to Mediate",
     "Pay to Submit",
+    "Pay to Mediate - No Free Mediations",
     "Managed Triage: Expert Assessment"
   ],
   "hideAssetsInScope": null,
@@ -257,7 +238,7 @@
   "rewardsToken": "USDC",
   "slug": "rootstocklabs",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-10-19T16:11:30.875Z",
+  "updatedDate": "2026-10-21T04:19:09.944Z",
   "impactsBody": "For the Critical impact \"Direct loss of significant non recoverable funds\", the word \"significant\" here is defined as **USD 100,000** or more. Therefore, any report where the theft is below USD 100,000 may be downgraded or considered as out of scope.\n\n__Vector Definition__\n\n__Deployment assumptions__\n\n- HSM, middleware, and Powpeg-Node run on the same host.\n- HSM and middleware expose no external network interfaces (no inbound remote access paths).\n- Powpeg-Node is the only externally connected component, used to sync blockchain data and forward it to the middleware, and its public exposure is limited.\n\n__Remote__\n\n“Remote” means the attacker cannot directly reach the HSM or middleware over the network and has no local access to the host. The only realistic remote reachability is indirect, via untrusted but consensus-valid on-chain data produced and propagated by the RSK network, synchronized by Powpeg-Node, and forwarded to the middleware (and subsequently to the HSM) for processing, where it may trigger vulnerable parsing/validation/logic.\n\n__Local__\n\n“Local” means the attacker has obtained root (or equivalent) control of the host running Powpeg-Node, the middleware, and the HSM (for example via shell/SSH access, a compromised account, or malware), but does not require physical access to the machine or device. With this level of access, the attacker can directly issue commands to the HSM via its local interfaces, ultimately affecting HSM operations.\n\n__Physical__\n\n“Physical” means the attacker has obtained physical access to the HSM device, enabling direct interaction and potential hardware tampering. With this level of access, the attacker may be able to probe, manipulate, reset, fault, or modify the device or its connections, potentially bypassing logical protections and ultimately affecting HSM operations.",
   "websiteUrl": "https://www.rootstocklabs.com/",
   "githubUrl": "https://github.com/rsksmart",
@@ -608,7 +589,7 @@
   ],
   "rewards": [
     {
-      "id": 51851,
+      "id": 51936,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -618,7 +599,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 51852,
+      "id": 51937,
       "primacy": null,
       "severity": "high",
       "assetType": "blockchain_dlt",
@@ -627,7 +608,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 51853,
+      "id": 51938,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -636,7 +617,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 51854,
+      "id": 51939,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
@@ -645,7 +626,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 51855,
+      "id": 51940,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -655,7 +636,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 51856,
+      "id": 51941,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -664,7 +645,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 51857,
+      "id": 51942,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -672,7 +653,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 51858,
+      "id": 51943,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
@@ -680,7 +661,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 51859,
+      "id": 51944,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -690,7 +671,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 51860,
+      "id": 51945,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -698,7 +679,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 51861,
+      "id": 51946,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
@@ -706,7 +687,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 51862,
+      "id": 51947,
       "primacy": null,
       "severity": "low",
       "assetType": "websites_and_applications",
