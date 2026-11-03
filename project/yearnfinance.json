@@ -479,10 +479,7 @@
   "boostedLeaderboard": [],
   "boostedSummaryReport": null,
   "ecosystem": [
-    "Arbitrum",
-    "ETH",
-    "Fantom",
-    "Optimism"
+    "ETH"
   ],
   "endDate": null,
   "evaluationEndDate": null,
@@ -503,7 +500,10 @@
   "logo": "https://qn5bmgziiocgawpp.public.blob.vercel-storage.com/46652-poMYBlE470F3ANFEzLX3a-PhDjdUVamAGgfjv2TMLhs2M2H40O54.png",
   "maxBounty": 200000,
   "outOfScopeAndRules": null,
-  "pocPerTypeAndSeverity": [],
+  "pocPerTypeAndSeverity": [
+    "smart_contract - high",
+    "smart_contract - critical"
+  ],
   "primaryPaymentWallet": "EVM",
   "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n- Re-entrancy\n- Logic errors\n  - including user authentication errors\n- Solidity/EVM details not considered\n  - including integer over-/under-flow\n  - including unhandled exceptions\n- Trusting trust/dependency vulnerabilities\n  - including composability vulnerabilities\n- Oracle failure/manipulation\n- Novel governance attacks\n- Economic/financial attacks\n  - including flash loan attacks\n- Congestion and scalability\n  - including running out of gas\n  - including block stuffing\n  - including susceptibility to frontrunning\n- Consensus failures\n- Cryptography problems\n- Signature malleability\n- Susceptibility to replay attacks\n- Weak randomness\n- Weak encryption\n- Susceptibility to block timestamp manipulation\n- Missing access controls / unprotected internal or debugging interfaces",
   "productType": [
@@ -527,10 +527,10 @@
   "rewardsToken": "USDC, DAI, YFI",
   "slug": "yearnfinance",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-07-25T16:07:08.619Z",
+  "updatedDate": "2026-11-02T14:36:24.713Z",
   "impactsBody": null,
-  "websiteUrl": null,
-  "githubUrl": null,
+  "websiteUrl": "https://yearn.fi/",
+  "githubUrl": "https://github.com/yearn/",
   "eligibilityCriteria": [],
   "responsiblePublicationCategory": null,
   "description": "Yearn Finance is a suite of products in Decentralized Finance (DeFi) that provides lending aggregation and yield generation on the Ethereum blockchain. The protocol is maintained by various independent developers and is governed by YFI holders. Their products include: ",
@@ -553,18 +553,6 @@
   ],
   "impacts": [
     {
-      "id": 23,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of unclaimed yield"
-    },
-    {
-      "id": 25,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of unclaimed yield"
-    },
-    {
       "id": 612,
       "type": "smart_contract",
       "severity": "high",
@@ -575,24 +563,6 @@
       "type": "smart_contract",
       "severity": "high",
       "title": "Definite losses due to Miner-extractable value (MEV) on user actions without any external factors"
-    },
-    {
-      "id": 31,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-    },
-    {
-      "id": 32,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Theft of gas"
-    },
-    {
-      "id": 33,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Unbounded gas consumption"
     },
     {
       "id": 614,
@@ -613,6 +583,18 @@
       "title": "Any governance voting result manipulation"
     },
     {
+      "id": 617,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Miner-extractable value (MEV)"
+    },
+    {
+      "id": 618,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Indefinite losses due to Miner-extractable value (MEV) on user actions without any external factors."
+    },
+    {
       "id": 15,
       "type": "smart_contract",
       "severity": "critical",
@@ -625,27 +607,27 @@
       "title": "Permanent freezing of funds"
     },
     {
-      "id": 617,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Miner-extractable value (MEV)"
-    },
-    {
       "id": 22,
       "type": "smart_contract",
       "severity": "critical",
       "title": "Protocol insolvency"
     },
     {
-      "id": 618,
+      "id": 23,
       "type": "smart_contract",
-      "severity": "critical",
-      "title": "Indefinite losses due to Miner-extractable value (MEV) on user actions without any external factors."
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
     }
   ],
   "rewards": [
     {
-      "id": 49491,
+      "id": 52097,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -655,7 +637,7 @@
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 49492,
+      "id": 52098,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -664,7 +646,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 49493,
+      "id": 52099,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",

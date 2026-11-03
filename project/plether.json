@@ -1,0 +1,334 @@
+{
+  "assets": [
+    {
+      "id": "db_526c3944-fcc2-4260-a360-2bc3328297fa",
+      "url": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/packages/perps/src/MarginClearinghouse.sol",
+      "type": "smart_contract",
+      "addedAt": "2026-10-29T05:00:33.101Z",
+      "revision": 0,
+      "description": "MarginClearinghouse.sol - Holds trader USDG - 1,343 nSLOC",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_46759f99-b51f-4713-80fc-53fb7f9100af",
+      "url": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/packages/perps/src/HousePool.sol",
+      "type": "smart_contract",
+      "addedAt": "2026-10-29T05:00:44.436Z",
+      "revision": 0,
+      "description": "HousePool.sol - Holds active LP USDG - 1,427 nSLOC",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_32da977a-f9d5-4a28-a206-aba8ebb40984",
+      "url": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/packages/perps/src/TrancheVault.sol",
+      "type": "smart_contract",
+      "addedAt": "2026-10-29T05:00:57.791Z",
+      "revision": 0,
+      "description": "TrancheVault.sol - Handles pending LP deposits and funded withdrawals. Deployed as two instances, one per tranche; both are in scope - 1,657 nSLOC",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "db_a7f9ae81-0d31-4203-b096-c606b3fe978a",
+      "url": "https://github.com/immunefi-team/audit-comp-plether/tree/a82d4fefb02768e5b3bddcc97dee371eee24fea8/packages/perps/src",
+      "type": "smart_contract",
+      "addedAt": "2026-10-29T05:01:06.750Z",
+      "revision": 0,
+      "description": "All other contracts, libraries, router contracts and interfaces in packages/perps/src, except the six view-only contracts listed as out of scope below - about 17,000 nSLOC",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    }
+  ],
+  "assetsBodyV2": "## Build Commands, Test Commands, and How to Run Them\n\n```\nRequirements: Foundry (Forge 1.5.1). Contracts use Solidity 0.8.35, compiled with via-IR.\n\ngit clone --recurse-submodules https://github.com/immunefi-team/audit-comp-plether.git\ncd audit-comp-plether\n# Check out the exact commit and its pinned submodules\ngit checkout --detach a82d4fefb02768e5b3bddcc97dee371eee24fea8\ngit submodule update --init --recursive\n# Build perps; downloads Solidity 0.8.35 if needed\nmake build-perps\n# Run the perps quick test suite\nmake test-perps\n\nWithout make: forge build --root packages/perps and forge test --root packages/perps.\n```\n\n`make test-perps` runs the quick test suite.\n\n**Fork testing.** Release v2.0.0 deploys the in-scope perps contracts to Arbitrum Sepolia, to make fork testing with Anvil easier. The release was built from commit 1209ca8a5b94a4fb6323c7c4585846ed93db3932, and packages/perps/src is identical at the commit in scope, so the deployed contracts match the code in scope. Contract addresses and the deployment manifest are in https://github.com/immunefi-team/audit-comp-plether/tree/a82d4fefb02768e5b3bddcc97dee371eee24fea8/deployments/releases/2026-10-28-perps-arbitrum-sepolia-v2.0.0 and in the release: https://github.com/Plether-Fi/plether-core/releases/tag/v2.0.0\n\nThis deployment is for testing only. Its configuration (a single owner address, test liquidity, mock USDG) is not the production configuration, and severity is assessed with the parameters stated on this page. Run tests on a local fork; do not send transactions to the deployed contracts.",
+  "boostedIntroEvaluating": "| Milestone | Date |\n| :---- | :---- |\n| Announcement | Oct 27, 2026 |\n| Launch (competition goes live) | Nov 2, 2026 |\n| Competition ends | Nov 15, 2026 |\n| Project deadline to resolve all reports | Nov 20, 2026 |\n| Results frozen and calculated | Nov 27, 2026 |\n| Final 48-hour dispute deadline | Nov 30, 2026 |\n| Results published | Dec 17, 2026 |\n| Payment complete | Dec 18, 2026 |\n*The dates in this calendar may be adjusted by Immunefi as needed for the execution of the competition.*",
+  "boostedIntroFinished": "| Milestone | Date |\n| :---- | :---- |\n| Announcement | Oct 27, 2026 |\n| Launch (competition goes live) | Nov 2, 2026 |\n| Competition ends | Nov 15, 2026 |\n| Project deadline to resolve all reports | Nov 20, 2026 |\n| Results frozen and calculated | Nov 27, 2026 |\n| Final 48-hour dispute deadline | Nov 30, 2026 |\n| Results published | Dec 17, 2026 |\n| Payment complete | Dec 18, 2026 |\n*The dates in this calendar may be adjusted by Immunefi as needed for the execution of the competition.*",
+  "boostedIntroLive": "| Milestone | Date |\n| :---- | :---- |\n| Announcement | Oct 27, 2026 |\n| Launch (competition goes live) | Nov 2, 2026 |\n| Competition ends | Nov 15, 2026 |\n| Project deadline to resolve all reports | Nov 20, 2026 |\n| Results frozen and calculated | Nov 27, 2026 |\n| Final 48-hour dispute deadline | Nov 30, 2026 |\n| Results published | Dec 17, 2026 |\n| Payment complete | Dec 18, 2026 |\n*The dates in this calendar may be adjusted by Immunefi as needed for the execution of the competition.*",
+  "boostedIntroStartingIn": "| Milestone | Date |\n| :---- | :---- |\n| Announcement | Oct 27, 2026 |\n| Launch (competition goes live) | Nov 2, 2026 |\n| Competition ends | Nov 15, 2026 |\n| Project deadline to resolve all reports | Nov 20, 2026 |\n| Results frozen and calculated | Nov 27, 2026 |\n| Final 48-hour dispute deadline | Nov 30, 2026 |\n| Results published | Dec 17, 2026 |\n| Payment complete | Dec 18, 2026 |\n*The dates in this calendar may be adjusted by Immunefi as needed for the execution of the competition.*",
+  "boostedLeaderboard": [],
+  "boostedSummaryReport": null,
+  "ecosystem": [
+    "Arbitrum"
+  ],
+  "endDate": "2026-11-16T10:00:00.000Z",
+  "evaluationEndDate": "2026-12-17T14:00:00.000Z",
+  "features": [
+    "Boost",
+    "Pay to Mediate",
+    "Managed Triage: Expert Assessment",
+    "Pay to Submit",
+    "Pay to Mediate - No Free Mediations"
+  ],
+  "hideAssetsInScope": null,
+  "immunefiStandard": false,
+  "inviteOnly": false,
+  "kyc": false,
+  "language": [
+    "Solidity"
+  ],
+  "launchDate": "2026-11-02T14:00:00.000Z",
+  "isPaused": false,
+  "pausedAt": null,
+  "pausedMessage": null,
+  "logo": "https://qn5bmgziiocgawpp.public.blob.vercel-storage.com/program-logos/mateus.paderes%40immunefi.com-NWi4RZQfBg2lTGYq3FyUr.png",
+  "maxBounty": 80000,
+  "outOfScopeAndRules": "To be determined",
+  "pocPerTypeAndSeverity": [
+    "smart_contract - critical",
+    "smart_contract - high",
+    "smart_contract - medium",
+    "smart_contract - low"
+  ],
+  "primaryPaymentWallet": "EVM",
+  "prioritizedVulnerabilities": "_blank_",
+  "productType": [],
+  "programOverview": "For more information about Plether, please visit https://plether.com and https://docs.plether.com.\n\n### Operational context\n\nPlether Perps has been exercised in a public testnet environment. During the September 13–25, 2026 trading competition, v1.2.3 on Arbitrum Sepolia recorded:\n\n- 16,852 executions\n- 11,716 unique trading accounts\n- 52,524 on-chain transactions involving the perps contracts\n- 435,283 contract events\n\nThese totals include all users, not only registered competitors. Researchers can use the release’s contract addresses and public transaction history to examine actual execution patterns and protocol behavior. This activity used mock collateral and an earlier protocol version.\n\nhttps://github.com/Plether-Fi/plether-core/releases/tag/v1.2.3\n\n### Scope notes\n\nCfdEngineLens and CfdEngineProtocolLens are in scope even though their names contain “Lens”, because the router and the pool use them on execution paths. The six view contracts listed under Out of Scope are excluded. Code in packages/shared, spot, options, perps-aa and perps-aa-client is out of scope.\n\n### Deployment and upgradeability\n\nPlether Perps is a new system and is not deployed on mainnet. Earlier versions run on Arbitrum Sepolia. Release v2.0.0 (October 28, 2026) deploys the code in scope to Arbitrum Sepolia for testing. Perps contracts are not upgradeable.\n\n### Token standards\n\nUSDG (6 decimals) is the only collateral. LP shares are ERC-20 tokens issued by ERC-4626 vaults that implement ERC-7540 and ERC-7575 asynchronous requests.\n\n### Unusual points\n\nSee Operating Assumptions and Downgrade Criteria (Scope tab) and packages/perps/SECURITY.md, in particular market hours (frozen markets on weekends and holidays), binding orders in one global queue, and trader claims.\n\n### Educational resources\n\nhttps://docs.plether.com. In packages/perps: README.md, SECURITY.md, INTERNAL_ARCHITECTURE_MAP.md, WHITEPAPER.md and ACCOUNTING_SPEC.md. Technical walkthrough: https://www.youtube.com/watch?v=bdXfmfQADdA.\n\n## Program Assurances\n\n### Asset Accuracy Assurance\n\nBugs found on assets incorrectly listed in-scope are valid.\n\n### Code Update Assurance\n\nDuplicate submissions of bugs are valid until the relevant bug fix is public. Once a fix is public, the bug is out of scope and later submissions of it are invalid. Duplicate submissions of Insights are invalid.\n\nThe project commits to keeping all information about bug findings private until the competition results are published. This includes bug findings found independently by the project or from concurrent private audits.\n\n### Code Freeze Assurance\n\nCode of the assets in scope is frozen at commit a82d4fefb02768e5b3bddcc97dee371eee24fea8 while the program is live.\n\n### Standardized Rules\n\nThis program follows Immunefi's standard competition rules. For the full default rules on validity, duplicates, known issues, severity, disputes, KYC, payments, and publication, read How Audit Competitions Work: Rules and Policies. Where this program page defines a specific rule, the program page prevails.\n\nThe rules on this page do not change after launch. If a clarification is needed, it applies to every report already received.\n\n### Insight Reporting\n\nInsight reports may be submitted to this program. Runnable code is not required, but the PoC section must describe the conditions under which the insight is valuable.\n\nOnly the best report of a given Insight is rewarded. Duplicates of Insights are not rewarded. Insights are rewarded according to Immunefi's Standardized Competition Reward Terms (link: https://immunefisupport.zendesk.com/hc/en-us/articles/31657285001873) and are not eligible for mediation or appeal.\n\n### Dispute Resolution\n\nDisputes may only address report validity, duplicate determinations, and severity.\n\nIf a researcher disagrees with a closure decision while the competition is live, they may request mediation. A mediation fee, set by Immunefi, is required to initiate the review.\n\nAfter the evaluation phase, a dispute period opens for appealing decisions. Immunefi announces a final 48-hour deadline for the last disputes. Once the window closes, results are final.\n\nImmunefi has final say on validity, duplicates, and severity, based on the terms of this program. Insights are not eligible for mediation or appeal.\n\n### Responsible Publication Policy\n\nImmunefi will publish bug reports, earnings, and a leaderboard for this Audit Competition.\n\nSecurity Researchers may publish their bug reports as well, but only after Immunefi has published the valid bug reports as part of the competition results.\n\n### Eligibility Criteria\n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n\n- On OFACs SDN list\n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project\n- Security auditors that directly or indirectly participated in an audit review of the code in scope (Such auditors may still participate in this program only if they receive project permission)\n- From a restricted country or territory per Immunefi's Terms of Use (link: https://immunefi.com/terms-of-use/)\n- Under 18 years of age. Participants under 18 cannot pass KYC and will not receive rewards.\n\n### Submission Fees\n\nA submission fee, set and managed by Immunefi, applies to each report and is shown at submission time. If a researcher disagrees with a closure decision, initiating a mediation also requires a fee set by Immunefi.",
+  "programType": [
+    "Smart Contract"
+  ],
+  "project": "Audit Competition | Plether",
+  "projectType": [],
+  "rewardsBody": "# Rewards Terms\n\nRewards are distributed among SRs according to [Immunefi’s Standardized Competition Reward Terms](https://immunefisupport.zendesk.com/hc/en-us/articles/31657285001873)\n\nRewards are denominated in USD and distributed in USDC on Ethereum.\n\nThe reward pool is **$80,000 USD** if any bug is found. That means that even if 1 Low severity bug is found, the whole reward pool is unlocked and has to be fully distributed between security researchers.\n\nIf not a single security vulnerability is found (Insights do not count as bugs) the reward pool is **15% of the Reward Pool.**\n\n## Private Known Issues Reward Policy\n\nPrivate known issues, meaning known issues that were not publicly disclosed, are valid for a reward at their full severity and unlock the corresponding reward pool without any downgrade.\n\nPublic known issues are invalid.",
+  "rewardsPool": 80000,
+  "primaryPool": 56000,
+  "allStarsPool": 16000,
+  "podiumPool": 8000,
+  "rewardsToken": "USDC",
+  "slug": "plether",
+  "tenPercentEconomicRule": false,
+  "updatedDate": "2026-11-01T07:02:21.163Z",
+  "impactsBody": "## Known Issues and Previous Audits\n\nIssues in the known-issues list below, or in Plether's previous audit reports (including their accepted-risk and acknowledged sections), are not eligible for a reward. Only entries published before the submission count.\n\nPrevious audit reports:\n\n- Cecuro AI audit (October 16, 2026): https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/audits/plether-ai-audit-report-2026-10-26.pdf\n- SC Audit Studio pre-audit: https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/audits/plether-pre-audit-report.pdf\n- AI scan findings (October 15, 2026): https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/audits/scan-plether-fi-plether-core-d4541b49.md\n\nKnown Issues:\n\n- For findings marked as fixed or Acknowledged in the reports above, a report on the same root cause is valid only if it shows that the fix at commit a82d4fefb02768e5b3bddcc97dee371eee24fea8 is incomplete or introduces a new bug.\n- Open findings from the Cecuro audit: MED-7 (partly fixed: a caller can still pick an older valid signed price per feed), MED-13 (a governance oracle rotation retargets armed stop-losses), MED-16 and LOW-57 (opens committed against a stale cached price, and the keeper bounty sized from it), MED-22 (carry rounding), MED-24 and MED-29 (LP refund epochs and redemption rounding), MED-30 (partly fixed: stop-losses have no automatic frozen-market trigger).\n- Arbitrum and Pyth clock alignment (HIGH-1): commit time is the Arbitrum block timestamp, which can trail a Pyth price that is already published. A trader may commit after seeing a price and be filled at it. A new report on this root cause is valid only with a proof of concept showing a repeatable, net-profitable extraction from LPs beyond this limitation.\n- Limitations documented in packages/perps/SECURITY.md (https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/packages/perps/SECURITY.md): Known Limitations, Router and keeper limitations, Known limitation: live basket component selection, and Arbitrum and Pyth clock alignment.\n\nFindings from an audit running in parallel become known issues only once they are added to this list. A report submitted before a finding is added remains eligible for a reward.\n\nA report is invalid if its root cause was publicly disclosed in the program's listed repositories before the submission timestamp (merged or open PR, public commit, or public issue). A fix dated after the submission does not invalidate it.\n\n## Trusted Roles and Non-Public Services\n\nThe following roles and addresses are trusted:\n\n- Owner of each perps contract (set by Plether at deployment): after a 72-hour delay, can change risk, fee, carry, calendar, price freshness and router settings, and rotate the oracle contract. Immediately, can pause and unpause, set the treasury, recapitalize the pool, clear degraded mode, seed the tranches and activate trading, admit or sweep unaccounted USDG, assign ownerless pool assets, and rescue tokens other than USDG.\n- Pauser (the EmergencyPauseCoordinator): can pause; cannot unpause.\n- Guardian (set by Plether at deployment): can trigger three fixed actions through the EmergencyPauseCoordinator (emergency pause, LP epoch settlement hold, full containment). Cannot unpause, change settings, set prices or move funds.\n- Protocol treasury and Junior fee recipient: receive fees.\n\nThe following services are operated by Plether and are out of scope: keepers, oracle worker, gas sponsor (paymaster) and bundler.\n\nOut of scope: attacks that require a trusted role to act maliciously, to be compromised, or to act outside its documented operational procedures, and attacks that require direct access to a service listed above.\n\nIn scope: a legitimate, documented action by a trusted role that triggers a bug harming users or the protocol. A bug that grants an address privileges it did not originally hold is also in scope, and may be downgraded by one severity level.\n\nA report is not out of scope only because a privileged address is affected by the exploit. Reference: Attacks Involving Access to Privileged Addresses (https://immunefisupport.zendesk.com/hc/en-us/articles/27383440951313).\n\nSetting a parameter to a value the code allows is a trusted action, not a bug. Keepers are not trusted: anyone can execute orders, liquidations, price updates and protections, so harm caused by any caller acting as a keeper is in scope.\n\n## Active Features and Networks\n\nThe code in scope is commit a82d4fefb02768e5b3bddcc97dee371eee24fea8, to be deployed on Arbitrum One with USDG as the settlement token. Active at launch: trading on the six-currency basket, Senior and Junior tranches, take-profit and stop-loss, and permissionless keepers. Not active at launch: the Across bridge route. Severity is assessed with the release parameters in packages/perps/DEPLOYMENT.md at this commit: maintenance margin 0.1%, initial margin 0.2%, frozen-market margin 3%, execution fee 0.04%, frozen-close spread 0.50%, Senior cap 40M USDG and 80% of the pool. Issues reachable only through features, flags, configurations or networks that are not active on the listed deployment are out of scope.\n\n## Third-Party and Underlying Protocol Code\n\nPlether provides reference keepers for permissionless order execution, liquidations, position protection, oracle updates, LP settlement, and queue cleanup. Trading workers live in plether-app; this repository includes operator tooling and an LP keeper script.\n\nKeepers have no special privileges: all actions remain subject to on-chain checks. Researchers should consider any contract-permitted behavior, including deviations from the reference implementation.\n\nThe reference setup requires funded keepers and paid Hermes API access for signed Pyth updates, separately from gas and on-chain oracle fees. Some actions pay no bounty, so availability depends on operator funding.\n\nhttps://github.com/Plether-Fi/plether-app/blob/master/apps/backend/README.md\n\n## Operating Assumptions and Downgrade Criteria\n\nBookkeeping inconsistency and emergency containment: Independent off-chain checks can compare reconstructed positions, liabilities, and NAV against on-chain accounting. If an inconsistency is detected, an authorized guardian can pause new trading risk, LP deposits, and LP epoch settlement. This safeguard may justify reduced severity only where demonstrated monitoring coverage and response timing establish that containment limits the reported exploit. All impact achievable before containment, or through paths unaffected by the selected pause, remains assessable. Closes, liquidations, and already-funded claims remain available.\n\nThe existence of monitoring or pause functionality alone does not justify a downgrade. No detection or response deadline is assumed unless explicitly documented for the competition.\n\n## Feasibility Limitations\n\nA report may be valid, cite an in-scope asset, and demonstrate an in-scope impact, while still facing real-world obstacles to executing the attack. Feasibility limitations define what may and may not be cited when evaluating those obstacles.\n\nImpact is calculated first, separately from feasibility. Feasibility limitations do not change the impact or severity of a finding, only the amount paid for it. A finding with a large impact that is infeasible retains that impact and severity, but is rewarded at a reduced amount.\n\nThe following standards apply to this competition. Where this program page defines a specific rule, the program page prevails.\n\n**Attack Investment Amount**\nA high capital requirement is generally not a valid reason to downgrade a report. Attacks requiring USD 100 million or more to execute are considered case by case. Flashloan-based attacks are valid where sufficient liquidity exists at submission or is expected within 12 months.\nhttps://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265\n\n**Attacks With A Financial Risk To The Attacker**\nFinancial risk to the attacker only justifies a downgrade where the risk massively outweighs the reward. Low return on investment alone is not sufficient, and high risk alongside high return is not sufficient either. Evaluation is made from the perspective of an external user, not from information only the project holds.\nhttps://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401\n\n**When Is An Impactful Attack Downgraded To Griefing?**\nApplies to High or Critical findings where the attacker gains no profit. The baseline is that spending USD 1 to cause USD 10 or less in damage is Griefing, while spending USD 1 to cause USD 100 or more in damage is not. Ratios between these are evaluated case by case.\nhttps://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305\n\n**Chain Rollbacks**\nThe ability to roll the chain back to a previous state is not a valid reason to downgrade impact, severity, or payout. Projects intending to rely on rollbacks as a safety mechanism should reflect that in their reward amounts rather than citing it after a report is submitted.\nhttps://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721\n\n**Pre-Impact Bug Monitoring**\nWhere a project can objectively prove that automated tooling would prevent an exploit with 100 percent certainty, this may justify a downgrade of one severity level. Where prevention depends on human action following automated detection, the project must demonstrate 100 percent objective certainty of both detection and prevention.\nhttps://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401\n\n**Attacks Involving Access to Privileged Addresses for Smart Contract Impacts**\nA report is out of scope where the attack vector itself requires the use of a privileged address. It is not out of scope merely because a privileged address is affected by the exploit. Exceptions apply where a code vulnerability grants privileges the address did not originally hold, which may result in a one-level downgrade, and where an in-scope impact arises from a logic error that a privileged address can trigger, which remains valid.\nhttps://immunefisupport.zendesk.com/hc/en-us/articles/27383440951313\n\n**Attacks Involving Undeployed Code on GitHub or Equivalent for Smart Contract Impacts**\nBugs in undeployed code are valid only where the project has publicly stated the code will be deployed without further changes and the asset is in scope. In those cases the impact is treated as real, but any scaling element of the reward, such as funds at risk or freezing duration, is scaled to the minimum.\nhttps://immunefisupport.zendesk.com/hc/en-us/articles/27871612917649\n\n**Theft of Unclaimed Yield**\nhttps://immunefisupport.zendesk.com/hc/en-us/articles/18753869210641\n\n**Theft Of Unclaimed Royalties**\nhttps://immunefisupport.zendesk.com/hc/en-us/articles/18753902288785\n\n**Calculating the value of NFTs at risk**\nhttps://immunefisupport.zendesk.com/hc/en-us/articles/19055304658065\n\nFor the full set of standards, see Feasibility Limitation Standards: https://immunefisupport.zendesk.com/hc/en-us/articles/16913132495377\n\n## Proof of Concept (PoC) Requirements\n\nEvery report must include a proof of concept that demonstrates the impact it claims. If the PoC does not prove that impact, the report is invalid, whatever its description says.\n\nPoC or it is not a finding. Observations that code “looks wrong”, without a PoC that shows the impact, do not count as findings.\n\nThese rules do not apply to Insights, which follow the Insight Reporting rules on the Information tab.\n\nPoCs must run either in the repository's Foundry test suite at the commit in scope, or on a local Anvil fork of the Arbitrum Sepolia v2.0.0 deployment (see Build Commands), without modifying the contracts in scope. Mocks may only replace components outside the scope, such as Pyth price updates and USDG.\n\nNo PoC requires testing on production or a public testnet. Where an impact depends on a production configuration, the configuration stated on this page applies.\n\nA runnable PoC is required. For more information, please read the Web3 PoC Guidelines (link: https://immunefisupport.zendesk.com/hc/en-us/articles/18722863230353).",
+  "websiteUrl": "https://plether.com",
+  "githubUrl": "https://github.com/immunefi-team/audit-comp-plether/tree/a82d4fefb02768e5b3bddcc97dee371eee24fea8",
+  "eligibilityCriteria": [],
+  "responsiblePublicationCategory": "category_3",
+  "description": "Plether lets users trade and hedge the strength of the US dollar onchain. Plether Perps is a perpetual market on a dollar index built from a basket of six major currencies: EUR, JPY, GBP, CAD, SEK and CHF. Traders open LONG USD positions, which gain when the dollar strengthens against the basket, or SHORT USD positions, which gain when it weakens. Margin and settlement are in USDG, and orders are priced by Pyth through a delayed-order model.\n\nLiquidity providers deposit USDG into a shared pool that takes the other side of trader positions. The pool has two tranches: a Senior tranche, which earns a targeted coupon and absorbs losses last, and a Junior tranche, which absorbs losses first and receives the remaining upside.",
+  "knownIssues": [
+    {
+      "id": 1568,
+      "link": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/audits/plether-ai-audit-report-2026-10-26.pdf",
+      "description": "Cecuro MED-24 and MED-29: LP refund epochs and redemption rounding.",
+      "lastUpdatedAt": "2026-10-26T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1567,
+      "link": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/audits/scan-plether-fi-plether-core-d4541b49.md",
+      "description": "All findings in the AI scan findings (October 15, 2026), including accepted-risk and acknowledged sections.",
+      "lastUpdatedAt": "2026-10-26T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1566,
+      "link": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/audits/plether-pre-audit-report.pdf",
+      "description": "All findings in the SC Audit Studio pre-audit report, including accepted-risk and acknowledged sections.",
+      "lastUpdatedAt": "2026-10-26T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1565,
+      "link": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/audits/plether-ai-audit-report-2026-10-26.pdf",
+      "description": "All findings in the Cecuro AI audit report, including accepted-risk and acknowledged sections.",
+      "lastUpdatedAt": "2026-10-26T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1564,
+      "link": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/packages/perps/SECURITY.md",
+      "description": "SECURITY.md: Known limitation: live basket component selection.",
+      "lastUpdatedAt": "2026-10-26T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1563,
+      "link": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/packages/perps/SECURITY.md",
+      "description": "SECURITY.md: Router and keeper limitations.",
+      "lastUpdatedAt": "2026-10-26T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1562,
+      "link": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/packages/perps/SECURITY.md",
+      "description": "SECURITY.md: Known Limitations.",
+      "lastUpdatedAt": "2026-10-26T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1561,
+      "link": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/packages/perps/SECURITY.md",
+      "description": "Arbitrum and Pyth clock alignment (HIGH-1): commit time is the Arbitrum block timestamp, which can trail a Pyth price that is already published. A trader may commit after seeing a price and be filled at it. A new report on this root cause is valid only with a proof of concept showing a repeatable, net-profitable extraction from LPs beyond this limitation.",
+      "lastUpdatedAt": "2026-10-26T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1560,
+      "link": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/audits/plether-ai-audit-report-2026-10-26.pdf",
+      "description": "Cecuro MED-30 (partly fixed): stop-losses have no automatic frozen-market trigger.",
+      "lastUpdatedAt": "2026-10-26T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1559,
+      "link": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/audits/plether-ai-audit-report-2026-10-26.pdf",
+      "description": "Cecuro MED-22: carry rounding.",
+      "lastUpdatedAt": "2026-10-26T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1558,
+      "link": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/audits/plether-ai-audit-report-2026-10-26.pdf",
+      "description": "Cecuro MED-16 and LOW-57: opens committed against a stale cached price, and the keeper bounty sized from it.",
+      "lastUpdatedAt": "2026-10-26T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1557,
+      "link": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/audits/plether-ai-audit-report-2026-10-26.pdf",
+      "description": "Cecuro MED-13: a governance oracle rotation retargets armed stop-losses.",
+      "lastUpdatedAt": "2026-10-26T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1556,
+      "link": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/audits/plether-ai-audit-report-2026-10-26.pdf",
+      "description": "Cecuro MED-7 (partly fixed): a caller can still pick an older valid signed price per feed.",
+      "lastUpdatedAt": "2026-10-26T00:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
+  "defaultOutOfScopeBlockchain": null,
+  "defaultOutOfScopeSmartContract": null,
+  "defaultOutOfScopeWebAndApplications": null,
+  "defaultOutOfScopeGeneral": null,
+  "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+  "defaultProhibitedActivities": null,
+  "customOutOfScopeInformation": "## Out of Scope\n\nOnly the code listed in the Assets in Scope table is in scope. Everything else in the repository is out of scope, including:\n\n- These six view-only contracts in packages/perps/src, which hold no funds:\n    - CfdEngineAccountLens.sol: https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/packages/perps/src/CfdEngineAccountLens.sol\n    - PerpsPublicLens.sol: https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/packages/perps/src/PerpsPublicLens.sol\n    - CfdClosePreview.sol: https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/packages/perps/src/CfdClosePreview.sol\n    - SettlementMonitorLens.sol: https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/packages/perps/src/SettlementMonitorLens.sol\n    - SettlementMonitorLensSidecar.sol: https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/packages/perps/src/SettlementMonitorLensSidecar.sol\n    - CfdEngineOpenQuoter.sol: https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/packages/perps/src/CfdEngineOpenQuoter.sol\n- The other packages in the repository: packages/shared, packages/spot, packages/options, packages/perps-aa and packages/perps-aa-client. They are not part of this audit or of the next deployment.\n- Everything in packages/perps outside the src folder: tests, scripts, deployment files and documentation.\n- All other folders in the repository, including integration/src, script, scripts, tasks and deployments, and the dependencies in lib (OpenZeppelin, Morpho Blue, forge-std and halmos-cheatcodes).\n- Keepers and the oracle worker (in the separate plether-app repository), the Across bridge route (disabled at launch) and the frontend.\n\nIn-scope perps code imports DecimalConstants and the IPyth interface from packages/shared. A bug in how in-scope perps code uses them is in scope. A bug inside packages/shared itself is not.\n\n**All Categories:**\n\n- Theoretical impacts without any proof or demonstration\n- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (governance, strategist) except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations, except when submitted as Insights under the Insight Reporting section.\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Issues reachable only through feature gates, flags, configurations or networks that are not active on the listed deployment are out of scope.\n- Attacks that require a malicious or compromised privileged role (admin, operator, sequencer, prover, guardian, governance), or direct access to a service that is not publicly exposed, are out of scope.\n\n**Smart Contract Specific:**\n\n- Incorrect data supplied by third party oracles\n    - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks\n\n**Prohibited Activities:**\n\n- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty",
+  "customProhibitedActivities": [],
+  "impacts": [
+    {
+      "id": 32,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of gas"
+    },
+    {
+      "id": 29,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Smart contract unable to operate due to lack of token funds"
+    },
+    {
+      "id": 30,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
+    },
+    {
+      "id": 34,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
+    },
+    {
+      "id": 6400,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds for at least 24 hours"
+    },
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 6401,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Temporary freezing of funds for at least 1 hour"
+    }
+  ],
+  "rewards": [
+    {
+      "level": "critical",
+      "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
+      "pocRequired": false
+    },
+    {
+      "level": "high",
+      "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
+      "pocRequired": false
+    },
+    {
+      "level": "medium",
+      "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
+      "pocRequired": false
+    },
+    {
+      "level": "low",
+      "payout": "Portion of the Reward Pool",
+      "assetType": "smart_contract",
+      "pocRequired": false
+    }
+  ],
+  "audits": [
+    {
+      "id": "db_d3da166d-85ce-4f32-aaa0-b907a3b4a059",
+      "url": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/audits/plether-ai-audit-report-2026-10-26.pdf",
+      "auditor": "Cecuro AI audit",
+      "date": "2026-10-26T00:00:00.000Z"
+    },
+    {
+      "id": "db_aff3e50d-dc50-4aa9-a328-09be933b06e1",
+      "url": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/audits/plether-pre-audit-report.pdf",
+      "auditor": "SC Audit Studio pre-audit",
+      "date": "2026-10-26T00:00:00.000Z"
+    },
+    {
+      "id": "db_004d9a41-5343-4111-a248-3024fdd70666",
+      "url": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/audits/scan-plether-fi-plether-core-d4541b49.md",
+      "auditor": "AI scan findings",
+      "date": "2026-10-26T00:00:00.000Z"
+    }
+  ]
+}
