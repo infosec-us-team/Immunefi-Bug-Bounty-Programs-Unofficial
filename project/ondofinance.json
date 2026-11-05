@@ -1245,7 +1245,9 @@
   "endDate": null,
   "evaluationEndDate": null,
   "features": [
-    "Pay to Mediate"
+    "Pay to Mediate",
+    "Pay to Submit",
+    "Pay to Mediate - No Free Mediations"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -1269,7 +1271,7 @@
     "smart_contract - low"
   ],
   "primaryPaymentWallet": "EVM",
-  "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+  "prioritizedVulnerabilities": "_blank_",
   "productType": [
     "Yield Aggregator"
   ],
@@ -1289,7 +1291,7 @@
   "rewardsToken": "USDC",
   "slug": "ondofinance",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-09-29T13:23:03.744Z",
+  "updatedDate": "2026-11-05T07:08:43.593Z",
   "impactsBody": "If an impact can be caused to any other asset managed by Ondo Finance that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for consideration by the project.\n\n\nFor the USDY Token (Noble) asset, please refer to https://github.com/ondoprotocol/usdy-noble for the source code.\n\nSeveral in-scope contracts are the same code deployed on more than one chain , or the same implementation behind several instances. A vulnerability with the same root cause is treated as a single issue no matter how many deployments or instances it affects, and is rewarded once. Please include every affected deployment in one submission. The first valid report is eligible; later reports of the same root cause that differ only by chain, address or instance are duplicates. For Critical reports, funds at risk are calculated across all in-scope deployments where the root cause is exploitable at the time of submission, subject to the program maximum. A vulnerability that exists only on one chain because of chain-specific code or configuration is a distinct issue.",
   "websiteUrl": null,
   "githubUrl": null,
@@ -1324,18 +1326,6 @@
       "title": "Theft of gas"
     },
     {
-      "id": 23,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of unclaimed yield"
-    },
-    {
-      "id": 25,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of unclaimed yield"
-    },
-    {
       "id": 1737,
       "type": "smart_contract",
       "severity": "high",
@@ -1354,12 +1344,6 @@
       "title": "Block stuffing for profit"
     },
     {
-      "id": 31,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-    },
-    {
       "id": 1740,
       "type": "smart_contract",
       "severity": "medium",
@@ -1370,6 +1354,24 @@
       "type": "smart_contract",
       "severity": "medium",
       "title": "Bypassing the Noble USDY IBC channel blocklist, successfully allowing USDY on Noble to be bridged out through a blocked channel via IBC (note: use of wrappers does not constitute a bypass)"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
     },
     {
       "id": 15,
@@ -1392,7 +1394,7 @@
   ],
   "rewards": [
     {
-      "id": 51220,
+      "id": 52167,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -1402,7 +1404,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 51221,
+      "id": 52168,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -1411,7 +1413,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 51222,
+      "id": 52169,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -1419,7 +1421,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 51223,
+      "id": 52170,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
