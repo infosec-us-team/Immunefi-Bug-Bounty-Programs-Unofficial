@@ -1,0 +1,321 @@
+{
+  "assets": [
+    {
+      "id": "101475",
+      "url": "https://github.com/Metricxyz/periphery-contracts",
+      "type": "smart_contract",
+      "addedAt": "2026-10-29T16:31:30.859Z",
+      "revision": 0,
+      "description": "Periphery Contracts that facilitate the protocol",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101476",
+      "url": "https://github.com/Metricxyz/pool-contracts",
+      "type": "smart_contract",
+      "addedAt": "2026-10-29T16:31:30.859Z",
+      "revision": 0,
+      "description": "Pool Contracts",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101477",
+      "url": "https://www.metric.xyz",
+      "type": "smart_contract",
+      "addedAt": "2026-10-29T16:31:30.859Z",
+      "revision": 0,
+      "description": "Primacy of Impact",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": true
+    },
+    {
+      "id": "db_756435fe-dd07-40cc-a62d-9f402940239d",
+      "url": "https://github.com/Metricxyz/oracle-contracts",
+      "type": "smart_contract",
+      "addedAt": "2026-10-29T16:35:09.358Z",
+      "revision": 0,
+      "description": "Oracle and Price Provider Contracts",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    }
+  ],
+  "assetsBodyV2": null,
+  "boostedIntroEvaluating": "",
+  "boostedIntroFinished": "",
+  "boostedIntroLive": "",
+  "boostedIntroStartingIn": "",
+  "boostedLeaderboard": [],
+  "boostedSummaryReport": null,
+  "ecosystem": [
+    "ETH",
+    "BSC"
+  ],
+  "endDate": null,
+  "evaluationEndDate": null,
+  "features": [
+    "Subscription Plan: Essential",
+    "Pay to Mediate",
+    "Pay to Submit",
+    "Pay to Mediate - No Free Mediations"
+  ],
+  "hideAssetsInScope": null,
+  "immunefiStandard": false,
+  "inviteOnly": false,
+  "kyc": false,
+  "language": [
+    "Solidity"
+  ],
+  "launchDate": "2026-11-10T13:10:00.000Z",
+  "isPaused": false,
+  "pausedAt": null,
+  "pausedMessage": null,
+  "logo": "https://qn5bmgziiocgawpp.public.blob.vercel-storage.com/124090-Ij52DGnN8s_juawGV2dR1.png",
+  "maxBounty": 500000,
+  "outOfScopeAndRules": null,
+  "pocPerTypeAndSeverity": [
+    "smart_contract - critical",
+    "smart_contract - high",
+    "smart_contract - medium",
+    "smart_contract - low"
+  ],
+  "primaryPaymentWallet": "EVM",
+  "prioritizedVulnerabilities": "_blank_",
+  "productType": [
+    "DEX"
+  ],
+  "programOverview": "We're launching this bug bounty alongside our mainnet deployment. We want whitehats to look for vulnerabilities that could cause loss or freezing of user or LP funds, swaps at the wrong price, abuse of the oracle or extension logic, or a way around access controls and timelocks. Our main concerns are the pool, factory, oracles, extension and router contracts.",
+  "programType": [
+    "Smart Contract"
+  ],
+  "project": "Metric",
+  "projectType": [
+    "Defi"
+  ],
+  "rewardsBody": "Rewards for High and Medium smart contract vulnerabilities are 20% of the funds directly affected. Each amount is capped at its tier’s maximum and floored at its tier’s minimum.\n\nPermanent freezing of funds critical is capped at 200 000$.\n\nMalicious price provider implementations are out of scope. We still encourage research in this area: the team may, at its discretion, award individual valid findings hence why we added it to the scope as low.",
+  "rewardsPool": 0,
+  "primaryPool": 0,
+  "allStarsPool": 0,
+  "podiumPool": 0,
+  "rewardsToken": "USDC",
+  "slug": "metric",
+  "tenPercentEconomicRule": false,
+  "updatedDate": "2026-11-10T14:07:48.032Z",
+  "impactsBody": null,
+  "websiteUrl": "https://www.metric.xyz",
+  "githubUrl": "https://github.com/Metricxyz/",
+  "eligibilityCriteria": [],
+  "responsiblePublicationCategory": "category_3",
+  "description": "Metric is a decentralized exchange for active pools: pools with custom pricing and liquidity that proactively change with new information.",
+  "knownIssues": [
+    {
+      "id": 1554,
+      "link": "https://github.com/Metricxyz/Known_issues/tree/main/other",
+      "description": "This document + all issues mentioned int any of the audit reports",
+      "lastUpdatedAt": "2026-08-12T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1555,
+      "link": "https://audits.sherlock.xyz/contests/1279?p=3d1041a8897184d70afd42ef032bc5f0c5b5f0fe4670aed8e94e945834476ef0",
+      "description": "Audit contest results include a lot of issues that are known as well",
+      "lastUpdatedAt": "2026-08-29T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
+  "defaultOutOfScopeBlockchain": null,
+  "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+  "defaultOutOfScopeWebAndApplications": null,
+  "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+  "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+  "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+  "customOutOfScopeInformation": "Additional Out of Scope Information\n\nThe following are out of scope and not eligible for rewards:\n\n1. Trusted roles and configuration\n- Issues requiring a malicious, compromised or careless trusted role: Factory Owner, Oracle ADMIN_ROLE (blacklist, integrators, approved factories, registration fee, withdrawEth), and the PriceProvider / AnchoredProvider factory admins.\n- Pool Admin actions within their allowed bounds (admin fees up to the cap, timelocked price-provider changes, pausing their own pool, bin and extension settings). Only bypassing the caps or an honestly configured timelock is in scope, and only at Medium severity or higher.\n- Pools created or configured with unreasonable or malicious parameters. Users are expected to do their own due diligence; pool risk tiers (red, unverified curator, unverified price provider) are informational.\n\n2. Oracles and off-chain components\n- Incorrect, manipulated or stale prices from oracle providers (Chainlink, Pyth, compressed or pushed oracles) or from off-chain pushers and signers. Oracle data is assumed correct and fresh.\n- Pools halting because a feed is stale or down (FeedStalled, staleness checks, Chainlink deviation or sequencer checks). This is intended behaviour, not denial of service.\n- Off-chain infrastructure: price pushers, quote and maker services (including protected execution lanes and pamm-quote), keepers, indexers, the API (api.metric.xyz), SDK, app, admin dashboard and docs.\n\n3. Tokens and third-party code\n- Non-standard ERC-20 tokens: fee-on-transfer, rebasing, tokens with transfer hooks (ERC-777), tokens with fewer than 6 or more than 18 decimals, tokens that revert on zero transfers. USDC and USDT are in scope; the effect of their issuers blocklisting an address is not.\n- Price providers, sources and extensions written and deployed by third parties, and anything that depends on them.\n- External protocols and routers (aggregators, other DEXes, routes through externalSwap / ExternalSwapExecutor). Losses caused by external routers or integrators, including insufficient gas limits, are out of scope.\n\n4. Market and execution risk\n- Front-running, sandwiching and other MEV within the user's slippage or deadline settings; gas griefing; block stuffing; reorgs; sequencer or builder behaviour.\n- Liquidity-provider losses from normal market risk: adverse selection, unfavourable price-provider or spread settings, impermanent loss.\n- Rounding dust or precision loss below the Medium threshold (0.01% and $10), unless it can be repeated to reach Medium or higher.\n\n5. Already known or not deployed\n- Issues listed in previous audits or known-issue documents, and any report sharing a root cause with them. https://github.com/Metricxyz/Known_issues for all known issues.\n- Contracts not listed as in-scope assets, superseded or deprecated deployments, test files, mocks, scripts, deployment tooling and testnet deployments.\n- Issues in code that is not deployed, or already fixed in the deployed version.\n\n6. General exclusions\n- Gas optimisations, code style, missing events, informational or best-practice findings, and centralisation concerns about trusted roles.\n- Attacks requiring stolen private keys, phishing, social engineering or physical access; denial-of-service on websites or APIs; rate-limit or spam issues on off-chain services.\n- Bugs in the underlying blockchain, the EVM, compilers or standard libraries (e.g. OpenZeppelin), unless Metric's code uses them incorrectly.\n\n7. Severity and feasibility rules\n\n- Critical requires at least $10,000 of funds directly at risk; otherwise the report is assessed as High at most.\n- Attacks that require a user to interact with a pool, extension or price provider created by the attacker are downgraded by one severity level.\n- Immunefi’s standard feasibility limitations apply, including Attack Investment Amount: if the capital required exceeds the potential gain, severity may be downgraded.\n- Reports must include a runnable proof of concept on a local fork. Testing against mainnet or testnet deployments is prohibited.",
+  "customProhibitedActivities": [],
+  "impacts": [
+    {
+      "id": 6402,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Bypassing the admin fee caps or the price-provider timelock."
+    },
+    {
+      "id": 6403,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "bypassing the deposit or swap allowlist extensions."
+    },
+    {
+      "id": 6404,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Swap on a Metric anchored price provider pool executes outside the band or beyond its configured staleness limit"
+    },
+    {
+      "id": 6405,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Successful swap on a paused pool"
+    },
+    {
+      "id": 6406,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Fees reach the wrong destination: protocol or admin fees go somewhere other than the configured receiver."
+    },
+    {
+      "id": 6407,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Unauthorized use of protocol roles: factory owner, oracle ADMIN_ROLE, propAMM adapter admin"
+    },
+    {
+      "id": 6408,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "An oracle accepts a price update without a valid Pyth or Chainlink signature, or a compressed-feed push from an unauthorized pusher"
+    },
+    {
+      "id": 6409,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "A configured stop-loss check is bypassed."
+    },
+    {
+      "id": 6410,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Malicious Price Provider implementation that can lead to significant losses of funds for LPs"
+    },
+    {
+      "id": 6411,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 27,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds"
+    },
+    {
+      "id": 30,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 32,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of gas"
+    },
+    {
+      "id": 33,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Unbounded gas consumption"
+    },
+    {
+      "id": 34,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
+    },
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 24,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed royalties"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 26,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed royalties"
+    }
+  ],
+  "rewards": [
+    {
+      "id": 52284,
+      "primacy": "primacy_of_impact",
+      "severity": "critical",
+      "assetType": "smart_contract",
+      "maxReward": 500000,
+      "minReward": 50000,
+      "rewardModel": "range",
+      "rewardCalculationPercentage": 20
+    },
+    {
+      "id": 52285,
+      "primacy": "primacy_of_impact",
+      "severity": "high",
+      "assetType": "smart_contract",
+      "maxReward": 50000,
+      "minReward": 10000,
+      "rewardModel": "range"
+    },
+    {
+      "id": 52286,
+      "primacy": "primacy_of_impact",
+      "severity": "medium",
+      "assetType": "smart_contract",
+      "maxReward": 10000,
+      "minReward": 2500,
+      "rewardModel": "range"
+    },
+    {
+      "id": 52287,
+      "primacy": "primacy_of_impact",
+      "severity": "low",
+      "assetType": "smart_contract",
+      "fixedReward": 1000,
+      "rewardModel": "fixed"
+    }
+  ],
+  "audits": [
+    {
+      "id": "1543",
+      "url": "https://github.com/Metricxyz/Known_issues/tree/main/sherlock",
+      "auditor": "Sherlock",
+      "date": "2026-10-09T00:00:00.000Z"
+    },
+    {
+      "id": "1544",
+      "url": "https://github.com/Metricxyz/Known_issues/tree/main/zellic",
+      "auditor": "Zellic",
+      "date": "2026-06-28T00:00:00.000Z"
+    }
+  ]
+}
