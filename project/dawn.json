@@ -84,7 +84,9 @@
   "endDate": null,
   "evaluationEndDate": null,
   "features": [
-    "Pay to Mediate"
+    "Pay to Mediate",
+    "Pay to Submit",
+    "Pay to Mediate - No Free Mediations"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": false,
@@ -137,7 +139,7 @@
   "rewardsToken": "USDC",
   "slug": "dawn",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-10-15T12:19:29.449Z",
+  "updatedDate": "2026-11-12T19:50:29.015Z",
   "impactsBody": "-",
   "websiteUrl": "https://app.infrastructure.finance/",
   "githubUrl": null,
@@ -197,6 +199,12 @@
   "customOutOfScopeInformation": "- **Upstream / third-party program code:** the M0 wrapped-M / Token-2022 program internals (only\n  USD.infra mint configuration and pause-authority operation are in scope); and the Loopscale\n  credit-vault program, its vault/loan/NAV/share-price primitives, and its oracle keeper, authored and\n  operated by Loopscale (only InfraFi's vault configuration and integration are in scope). Also\n  excludes Squads V4, Pyth/Chainlink, wallet libraries (reown/AppKit), and all npm/cargo dependencies.\n\n- Off-chain internal services (infrafi-manager, indexer) and anything behind the WireGuard VPN, except\n  as reachable via the public web/API assets.\n- Known issues listed\n- Findings requiring compromise of an operator's machine, Slack workspace account, hardware wallet, or\n  multisig/Squads signer key, or of Loopscale's protocol-admin co-signer (assumed-trusted operators\n  and counterparty).\n- Debug-build-only behavior (e.g. the in-process change-request auto-apply path); production ships\n  `--release`.\n- NAV read staleness within the documented snapshot window (historical NAV is served from local\n  snapshots), and fee-accrual / share-price drift within the documented conservation tolerance.\n- Best-practice / missing-hardening reports with no demonstrated exploit; and standard web boilerplate\n  (missing security headers, CSRF on unauthenticated reads, self-XSS, clickjacking on stateless pages,\n  SPF/DKIM, rate-limiting on public reads, automated-scanner output).\n\n## infrafi-manager & api.infrastructure.finance — admin surface\n\nOut of scope:\n\nThe VPN-gated admin/manager surface (infrafi-manager) and all authenticated/admin API routes — including /admin/*, project/building mutations, valuation posting, borrow/repay proposals, and the /slack/interactive callback — when performed by a trusted operator acting within the four-eyes approval flow and the post-time delta bounds.\n\nIn scope:\n\nThe public, unauthenticated read routes of api.infrastructure.finance.\nAny bug that bypasses the four-eyes approval or the post-time delta bounds.\nAny path that lets deal valuations (or borrow/repay / mutations) be executed or manipulated without the trusted-operator role.\n\n## Program Rules — Relationship to Loopscale's Bug Bounty Program\n\nInfraFi's credit vault runs on Loopscale's on-chain program, which is covered by Loopscale's own bug\nbounty program. Vulnerabilities in the Loopscale protocol, program, vault primitives, oracle keeper,\nor any Loopscale-operated infrastructure are out of scope here and must be reported to Loopscale. Only\nDAWN / InfraFi's own vault configuration and integration — as defined under *Assets in Scope* — are\neligible under this program.\n\n**No double payment.** A report describing the same underlying vulnerability (same root cause) that is\neligible for, has been submitted to, or has been rewarded by Loopscale's bug bounty program will not\nreceive a separate reward from InfraFi. Where a single issue touches both programs, the researcher may\nbe compensated under one program only; InfraFi will coordinate with Loopscale on attribution and will\nnot duplicate a bounty already paid or payable by Loopscale for the same root cause. Deliberately\nsubmitting the same finding to both programs to obtain two payouts is considered abuse and may result\nin disqualification.",
   "customProhibitedActivities": [],
   "impacts": [
+    {
+      "id": 54,
+      "type": "websites_and_applications",
+      "severity": "low",
+      "title": "Taking over broken or expired outgoing links, such as:\n- Social media handles, etc."
+    },
     {
       "id": 21,
       "type": "smart_contract",
@@ -454,17 +462,11 @@
       "type": "websites_and_applications",
       "severity": "medium",
       "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Changing the first/last name of user\n- Enabling/disabling notifications"
-    },
-    {
-      "id": 54,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Taking over broken or expired outgoing links, such as:\n- Social media handles, etc."
     }
   ],
   "rewards": [
     {
-      "id": 51749,
+      "id": 52460,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -474,7 +476,7 @@
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 51750,
+      "id": 52461,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -482,7 +484,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 51751,
+      "id": 52462,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -490,7 +492,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 51752,
+      "id": 52463,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
@@ -498,7 +500,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 51753,
+      "id": 52464,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -508,7 +510,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 51754,
+      "id": 52465,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -516,7 +518,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 51755,
+      "id": 52466,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
@@ -524,7 +526,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 51756,
+      "id": 52467,
       "primacy": null,
       "severity": "low",
       "assetType": "websites_and_applications",

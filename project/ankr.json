@@ -86,7 +86,9 @@
   "endDate": null,
   "evaluationEndDate": null,
   "features": [
-    "Pay to Mediate"
+    "Pay to Mediate",
+    "Pay to Submit",
+    "Pay to Mediate - No Free Mediations"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -109,7 +111,7 @@
     "websites_and_applications - medium"
   ],
   "primaryPaymentWallet": "EVM",
-  "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+  "prioritizedVulnerabilities": "_blank_",
   "productType": [
     "Services",
     "Liquid Staking"
@@ -131,7 +133,7 @@
   "rewardsToken": "ANKR, USDT and USDC",
   "slug": "ankr",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-05-27T11:56:16.787Z",
+  "updatedDate": "2026-11-12T19:53:49.642Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -209,6 +211,42 @@
       "title": "Block stuffing for profit"
     },
     {
+      "id": 3010,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as changing the first/last name of user, or en/disabling notification"
+    },
+    {
+      "id": 3011,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data"
+    },
+    {
+      "id": 3012,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Miner-extractable value (MEV)"
+    },
+    {
+      "id": 3013,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys(this does not include non-sensitive environment variables, open source code, or usernames)"
+    },
+    {
+      "id": 3014,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc."
+    },
+    {
+      "id": 3015,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions"
+    },
+    {
       "id": 31,
       "type": "smart_contract",
       "severity": "medium",
@@ -225,18 +263,6 @@
       "type": "smart_contract",
       "severity": "medium",
       "title": "Unbounded gas consumption"
-    },
-    {
-      "id": 3010,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as changing the first/last name of user, or en/disabling notification"
-    },
-    {
-      "id": 3011,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data"
     },
     {
       "id": 52,
@@ -257,12 +283,6 @@
       "title": "Permanent freezing of funds"
     },
     {
-      "id": 3012,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Miner-extractable value (MEV)"
-    },
-    {
       "id": 20,
       "type": "smart_contract",
       "severity": "critical",
@@ -281,39 +301,21 @@
       "title": "Execute arbitrary system commands"
     },
     {
-      "id": 3013,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys(this does not include non-sensitive environment variables, open source code, or usernames)"
-    },
-    {
       "id": 37,
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Taking down the application/website"
     },
     {
-      "id": 3014,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc."
-    },
-    {
       "id": 42,
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Direct theft of user funds"
-    },
-    {
-      "id": 3015,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions"
     }
   ],
   "rewards": [
     {
-      "id": 46535,
+      "id": 52482,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -322,7 +324,7 @@
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 46536,
+      "id": 52483,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -330,7 +332,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 46537,
+      "id": 52484,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -338,7 +340,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 46538,
+      "id": 52485,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
@@ -346,7 +348,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 46539,
+      "id": 52486,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -355,7 +357,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 46540,
+      "id": 52487,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -363,7 +365,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 46541,
+      "id": 52488,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
