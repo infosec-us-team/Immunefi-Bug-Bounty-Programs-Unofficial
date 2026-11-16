@@ -101,7 +101,7 @@
   "rewardsToken": "USDC",
   "slug": "metric",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-11-15T06:01:11.360Z",
+  "updatedDate": "2026-11-16T05:14:50.078Z",
   "impactsBody": null,
   "websiteUrl": "https://www.metric.xyz",
   "githubUrl": "https://github.com/Metricxyz/",
@@ -130,7 +130,7 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "Additional Out of Scope Information\n\nThe following are out of scope and not eligible for rewards:\n\n1. Trusted roles and configuration\n- Issues requiring a malicious, compromised or careless trusted role: Factory Owner, Oracle ADMIN_ROLE (blacklist, integrators, approved factories, registration fee, withdrawEth), and the PriceProvider / AnchoredProvider factory admins.\n- Pool Admin actions within their allowed bounds (admin fees up to the cap, timelocked price-provider changes, pausing their own pool, bin and extension settings). Only bypassing the caps or an honestly configured timelock is in scope, and only at Medium severity or higher.\n- Pools created or configured with unreasonable or malicious parameters. Users are expected to do their own due diligence; pool risk tiers (red, unverified curator, unverified price provider) are informational.\n\n2. Oracles and off-chain components\n- Incorrect, manipulated or stale prices from oracle providers (Chainlink, Pyth, compressed or pushed oracles) or from off-chain pushers and signers. Oracle data is assumed correct and fresh.\n- Pools halting because a feed is stale or down (FeedStalled, staleness checks, Chainlink deviation or sequencer checks). This is intended behaviour, not denial of service.\n- Off-chain infrastructure: price pushers, quote and maker services (including protected execution lanes and pamm-quote), keepers, indexers, the API (api.metric.xyz), SDK, app, admin dashboard and docs.\n\n3. Tokens and third-party code\n- Non-standard ERC-20 tokens: fee-on-transfer, rebasing, tokens with transfer hooks (ERC-777), tokens with fewer than 6 or more than 18 decimals, tokens that revert on zero transfers. USDC and USDT are in scope; the effect of their issuers blocklisting an address is not.\n- Price providers, sources and extensions written and deployed by third parties, and anything that depends on them.\n- External protocols and routers (aggregators, other DEXes, routes through externalSwap / ExternalSwapExecutor). Losses caused by external routers or integrators, including insufficient gas limits, are out of scope.\n\n4. Market and execution risk\n- Front-running, sandwiching and other MEV within the user's slippage or deadline settings; gas griefing; block stuffing; reorgs; sequencer or builder behaviour.\n- Liquidity-provider losses from normal market risk: adverse selection, unfavourable price-provider or spread settings, impermanent loss.\n- Rounding dust or precision loss below the Medium threshold (0.01% and $10), unless it can be repeated to reach Medium or higher.\n\n5. Already known or not deployed\n- Issues listed in previous audits or known-issue documents, and any report sharing a root cause with them. https://github.com/Metricxyz/Known_issues for all known issues.\n- Contracts not listed as in-scope assets, superseded or deprecated deployments, test files, mocks, scripts, deployment tooling and testnet deployments.\n- Issues in code that is not deployed, or already fixed in the deployed version.\n\n6. General exclusions\n- Gas optimisations, code style, missing events, informational or best-practice findings, and centralisation concerns about trusted roles.\n- Attacks requiring stolen private keys, phishing, social engineering or physical access; denial-of-service on websites or APIs; rate-limit or spam issues on off-chain services.\n- Bugs in the underlying blockchain, the EVM, compilers or standard libraries (e.g. OpenZeppelin), unless Metric's code uses them incorrectly.\n\n7. Severity and feasibility rules\n\n- Critical requires at least $10,000 of funds directly at risk; otherwise the report is assessed as High at most.\n- Attacks that require a user to interact with a pool, extension or price provider created by the attacker are downgraded by one severity level.\n- Immunefi’s standard feasibility limitations apply, including Attack Investment Amount: if the capital required exceeds the potential gain, severity may be downgraded.\n- Reports must include a runnable proof of concept on a local fork. Testing against mainnet or testnet deployments is prohibited.",
+  "customOutOfScopeInformation": "Additional Out of Scope Information\n\nThe following are out of scope and not eligible for rewards:\n\n1. Trusted roles and configuration\n- Issues requiring a malicious, compromised or careless trusted role: Factory Owner, Oracle ADMIN_ROLE (blacklist, integrators, approved factories, registration fee, withdrawEth), and the PriceProvider / AnchoredProvider factory admins.\n- Pool Admin actions within their allowed bounds (admin fees up to the cap, timelocked price-provider changes, pausing their own pool, bin and extension settings). Only bypassing the caps or an honestly configured timelock is in scope, and only at Medium severity or higher.\n- Pools created or configured with unreasonable or malicious parameters. Users are expected to do their own due diligence; pool risk tiers (red, unverified curator, unverified price provider) are informational.\n\n2. Oracles and off-chain components\n- Incorrect, manipulated or stale prices from oracle providers (Chainlink, Pyth, compressed or pushed oracles) or from off-chain pushers and signers. Oracle data is assumed correct and fresh.\n- Pools halting because a feed is stale or down (FeedStalled, staleness checks, Chainlink deviation or sequencer checks). This is intended behaviour, not denial of service.\n- Off-chain infrastructure: price pushers, quote and maker services (including protected execution lanes and pamm-quote), keepers, indexers, the API (api.metric.xyz), SDK, app, admin dashboard and docs.\n\n3. Tokens and third-party code\n- Non-standard ERC-20 tokens: fee-on-transfer, rebasing, tokens with transfer hooks (ERC-777), tokens with fewer than 6 or more than 18 decimals, tokens that revert on zero transfers. USDC and USDT are in scope; the effect of their issuers blocklisting an address is not.\n- Price providers, sources and extensions written and deployed by third parties, and anything that depends on them.\n- External protocols and routers (aggregators, other DEXes, routes through externalSwap / ExternalSwapExecutor). Losses caused by external routers or integrators, including insufficient gas limits, are out of scope.\n\n4. Market and execution risk\n- Front-running, sandwiching and other MEV within the user's slippage or deadline settings; gas griefing; block stuffing; reorgs; sequencer or builder behaviour.\n- Liquidity-provider losses from normal market risk: adverse selection, unfavourable price-provider or spread settings, impermanent loss.\n- Rounding dust or precision loss below the Medium threshold (0.01% and $10), unless it can be repeated to reach Medium or higher.\n\n5. Already known or not deployed\n- Issues listed in previous audits or known-issue documents, and any report sharing a root cause with them. https://github.com/Metricxyz/Known_issues for all known issues.\n- Contracts not listed as in-scope assets, superseded or deprecated deployments, test files, mocks, scripts, deployment tooling and testnet deployments.\n- Issues in code that is not deployed, or already fixed in the deployed version.\n\n6. General exclusions\n- Gas optimisations, code style, missing events, informational or best-practice findings, and centralisation concerns about trusted roles.\n- Attacks requiring stolen private keys, phishing, social engineering or physical access; denial-of-service on websites or APIs; rate-limit or spam issues on off-chain services.\n- Bugs in the underlying blockchain, the EVM, compilers or standard libraries (e.g. OpenZeppelin), unless Metric's code uses them incorrectly.\n\n7. Severity and feasibility rules\n\n- Critical requires at least $10,000 of funds directly at risk; otherwise the report is assessed as High at most.\n- Attacks that require a user to interact with a pool, extension or price provider created by the attacker are downgraded by one severity level.\n- Immunefi’s standard feasibility limitations apply, including Attack Investment Amount: if the capital required exceeds the potential gain, severity may be downgraded.\n- Reports must include a runnable proof of concept on a local fork. Testing against mainnet or testnet deployments is prohibited.\n\n8. OracleValueStopLossExtension: intended behaviour (documented in the contract header). Reports that rely only on the following are out of scope:\n- Watermarks are not seeded when liquidity is added. They initialise on the first swap that touches a live bin, so that first swap is not drawdown-protected.\n- Watermarks are not cleared when liquidity is removed. An emptied bin keeps its old watermark until a later swap crosses it, so liquidity re-added before that crossing can cause swaps to be blocked.\n- After an empty bin is crossed and its watermark resets to zero, the next swap on that bin is again unprotected.\n- Only bins crossed by a swap are checked, a breach blocks only the affected direction, and a drawdown setting of 0 disables the check.\n- Watermarks decay lazily per bin. Drawdown, decay, timelock and watermark changes by the pool admin are timelocked by design.",
   "customProhibitedActivities": [],
   "impacts": [
     {
@@ -188,10 +188,46 @@
       "title": "Malicious Price Provider implementation that can lead to significant losses of funds for LPs"
     },
     {
-      "id": 6411,
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
+    },
+    {
+      "id": 23,
       "type": "smart_contract",
       "severity": "high",
-      "title": "Permanent freezing of funds"
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 24,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed royalties"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 26,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed royalties"
     },
     {
       "id": 27,
@@ -228,47 +264,11 @@
       "type": "smart_contract",
       "severity": "low",
       "title": "Contract fails to deliver promised returns, but doesn't lose value"
-    },
-    {
-      "id": 15,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-    },
-    {
-      "id": 22,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Protocol insolvency"
-    },
-    {
-      "id": 23,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of unclaimed yield"
-    },
-    {
-      "id": 24,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of unclaimed royalties"
-    },
-    {
-      "id": 25,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of unclaimed yield"
-    },
-    {
-      "id": 26,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Permanent freezing of unclaimed royalties"
     }
   ],
   "rewards": [
     {
-      "id": 52514,
+      "id": 52520,
       "primacy": "primacy_of_impact",
       "severity": "critical",
       "assetType": "smart_contract",
@@ -278,7 +278,7 @@
       "rewardCalculationPercentage": 20
     },
     {
-      "id": 52515,
+      "id": 52521,
       "primacy": "primacy_of_impact",
       "severity": "high",
       "assetType": "smart_contract",
@@ -287,7 +287,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 52516,
+      "id": 52522,
       "primacy": "primacy_of_impact",
       "severity": "medium",
       "assetType": "smart_contract",
@@ -296,7 +296,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 52517,
+      "id": 52523,
       "primacy": "primacy_of_impact",
       "severity": "low",
       "assetType": "smart_contract",

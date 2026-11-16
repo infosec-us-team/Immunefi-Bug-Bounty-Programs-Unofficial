@@ -2,6 +2,2068 @@
   {
     "assets": [
       {
+        "id": "101475",
+        "url": "https://github.com/Metricxyz/periphery-contracts",
+        "type": "smart_contract",
+        "addedAt": "2026-10-29T16:31:30.859Z",
+        "revision": 0,
+        "description": "Periphery Contracts that facilitate the protocol",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101476",
+        "url": "https://github.com/Metricxyz/pool-contracts",
+        "type": "smart_contract",
+        "addedAt": "2026-10-29T16:31:30.859Z",
+        "revision": 0,
+        "description": "Pool Contracts",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101477",
+        "url": "https://www.metric.xyz",
+        "type": "smart_contract",
+        "addedAt": "2026-10-29T16:31:30.859Z",
+        "revision": 0,
+        "description": "Primacy of Impact",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": true
+      },
+      {
+        "id": "db_756435fe-dd07-40cc-a62d-9f402940239d",
+        "url": "https://github.com/Metricxyz/oracle-contracts",
+        "type": "smart_contract",
+        "addedAt": "2026-10-29T16:35:09.358Z",
+        "revision": 0,
+        "description": "Oracle and Price Provider Contracts",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      }
+    ],
+    "assetsBodyV2": null,
+    "boostedIntroEvaluating": "",
+    "boostedIntroFinished": "",
+    "boostedIntroLive": "",
+    "boostedIntroStartingIn": "",
+    "boostedLeaderboard": [],
+    "boostedSummaryReport": null,
+    "ecosystem": [
+      "ETH",
+      "BSC"
+    ],
+    "endDate": null,
+    "evaluationEndDate": null,
+    "features": [
+      "Subscription Plan: Essential",
+      "Pay to Mediate",
+      "Pay to Submit",
+      "Pay to Mediate - No Free Mediations"
+    ],
+    "hideAssetsInScope": null,
+    "immunefiStandard": false,
+    "inviteOnly": false,
+    "kyc": false,
+    "language": [
+      "Solidity"
+    ],
+    "launchDate": "2026-11-10T13:10:00.000Z",
+    "isPaused": false,
+    "pausedAt": null,
+    "pausedMessage": null,
+    "logo": "https://qn5bmgziiocgawpp.public.blob.vercel-storage.com/124090-Ij52DGnN8s_juawGV2dR1.png",
+    "maxBounty": 500000,
+    "outOfScopeAndRules": null,
+    "pocPerTypeAndSeverity": [
+      "smart_contract - critical",
+      "smart_contract - high",
+      "smart_contract - medium",
+      "smart_contract - low"
+    ],
+    "primaryPaymentWallet": "EVM",
+    "prioritizedVulnerabilities": "_blank_",
+    "productType": [
+      "DEX"
+    ],
+    "programOverview": "We're launching this bug bounty alongside our mainnet deployment. We want whitehats to look for vulnerabilities that could cause loss or freezing of user or LP funds, swaps at the wrong price, abuse of the oracle or extension logic, or a way around access controls and timelocks. Our main concerns are the pool, factory, oracles, extension and router contracts.",
+    "programType": [
+      "Smart Contract"
+    ],
+    "project": "Metric",
+    "projectType": [
+      "Defi"
+    ],
+    "rewardsBody": "Rewards for High and Medium smart contract vulnerabilities are 20% of the funds directly affected. Each amount is capped at its tier’s maximum and floored at its tier’s minimum.\n\nPermanent freezing of funds critical is capped at 200 000$.\n\nMalicious price provider implementations are out of scope. We still encourage research in this area: the team may, at its discretion, award individual valid findings hence why we added it to the scope as low.",
+    "rewardsPool": 0,
+    "primaryPool": 0,
+    "allStarsPool": 0,
+    "podiumPool": 0,
+    "rewardsToken": "USDC",
+    "slug": "metric",
+    "tenPercentEconomicRule": false,
+    "updatedDate": "2026-11-16T05:14:50.078Z",
+    "impactsBody": null,
+    "websiteUrl": "https://www.metric.xyz",
+    "githubUrl": "https://github.com/Metricxyz/",
+    "eligibilityCriteria": [],
+    "responsiblePublicationCategory": "category_3",
+    "description": "Metric is a decentralized exchange for active pools: pools with custom pricing and liquidity that proactively change with new information.",
+    "knownIssues": [
+      {
+        "id": 1554,
+        "link": "https://github.com/Metricxyz/Known_issues/tree/main/other",
+        "description": "This document + all issues mentioned int any of the audit reports",
+        "lastUpdatedAt": "2026-08-12T22:00:00.000Z",
+        "relatedImpactInScope": "smart_contract"
+      },
+      {
+        "id": 1555,
+        "link": "https://audits.sherlock.xyz/contests/1279?p=3d1041a8897184d70afd42ef032bc5f0c5b5f0fe4670aed8e94e945834476ef0",
+        "description": "Audit contest results include a lot of issues that are known as well",
+        "lastUpdatedAt": "2026-08-29T22:00:00.000Z",
+        "relatedImpactInScope": "smart_contract"
+      }
+    ],
+    "defaultOutOfScopeBlockchain": null,
+    "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+    "defaultOutOfScopeWebAndApplications": null,
+    "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+    "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+    "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+    "customOutOfScopeInformation": "Additional Out of Scope Information\n\nThe following are out of scope and not eligible for rewards:\n\n1. Trusted roles and configuration\n- Issues requiring a malicious, compromised or careless trusted role: Factory Owner, Oracle ADMIN_ROLE (blacklist, integrators, approved factories, registration fee, withdrawEth), and the PriceProvider / AnchoredProvider factory admins.\n- Pool Admin actions within their allowed bounds (admin fees up to the cap, timelocked price-provider changes, pausing their own pool, bin and extension settings). Only bypassing the caps or an honestly configured timelock is in scope, and only at Medium severity or higher.\n- Pools created or configured with unreasonable or malicious parameters. Users are expected to do their own due diligence; pool risk tiers (red, unverified curator, unverified price provider) are informational.\n\n2. Oracles and off-chain components\n- Incorrect, manipulated or stale prices from oracle providers (Chainlink, Pyth, compressed or pushed oracles) or from off-chain pushers and signers. Oracle data is assumed correct and fresh.\n- Pools halting because a feed is stale or down (FeedStalled, staleness checks, Chainlink deviation or sequencer checks). This is intended behaviour, not denial of service.\n- Off-chain infrastructure: price pushers, quote and maker services (including protected execution lanes and pamm-quote), keepers, indexers, the API (api.metric.xyz), SDK, app, admin dashboard and docs.\n\n3. Tokens and third-party code\n- Non-standard ERC-20 tokens: fee-on-transfer, rebasing, tokens with transfer hooks (ERC-777), tokens with fewer than 6 or more than 18 decimals, tokens that revert on zero transfers. USDC and USDT are in scope; the effect of their issuers blocklisting an address is not.\n- Price providers, sources and extensions written and deployed by third parties, and anything that depends on them.\n- External protocols and routers (aggregators, other DEXes, routes through externalSwap / ExternalSwapExecutor). Losses caused by external routers or integrators, including insufficient gas limits, are out of scope.\n\n4. Market and execution risk\n- Front-running, sandwiching and other MEV within the user's slippage or deadline settings; gas griefing; block stuffing; reorgs; sequencer or builder behaviour.\n- Liquidity-provider losses from normal market risk: adverse selection, unfavourable price-provider or spread settings, impermanent loss.\n- Rounding dust or precision loss below the Medium threshold (0.01% and $10), unless it can be repeated to reach Medium or higher.\n\n5. Already known or not deployed\n- Issues listed in previous audits or known-issue documents, and any report sharing a root cause with them. https://github.com/Metricxyz/Known_issues for all known issues.\n- Contracts not listed as in-scope assets, superseded or deprecated deployments, test files, mocks, scripts, deployment tooling and testnet deployments.\n- Issues in code that is not deployed, or already fixed in the deployed version.\n\n6. General exclusions\n- Gas optimisations, code style, missing events, informational or best-practice findings, and centralisation concerns about trusted roles.\n- Attacks requiring stolen private keys, phishing, social engineering or physical access; denial-of-service on websites or APIs; rate-limit or spam issues on off-chain services.\n- Bugs in the underlying blockchain, the EVM, compilers or standard libraries (e.g. OpenZeppelin), unless Metric's code uses them incorrectly.\n\n7. Severity and feasibility rules\n\n- Critical requires at least $10,000 of funds directly at risk; otherwise the report is assessed as High at most.\n- Attacks that require a user to interact with a pool, extension or price provider created by the attacker are downgraded by one severity level.\n- Immunefi’s standard feasibility limitations apply, including Attack Investment Amount: if the capital required exceeds the potential gain, severity may be downgraded.\n- Reports must include a runnable proof of concept on a local fork. Testing against mainnet or testnet deployments is prohibited.\n\n8. OracleValueStopLossExtension: intended behaviour (documented in the contract header). Reports that rely only on the following are out of scope:\n- Watermarks are not seeded when liquidity is added. They initialise on the first swap that touches a live bin, so that first swap is not drawdown-protected.\n- Watermarks are not cleared when liquidity is removed. An emptied bin keeps its old watermark until a later swap crosses it, so liquidity re-added before that crossing can cause swaps to be blocked.\n- After an empty bin is crossed and its watermark resets to zero, the next swap on that bin is again unprotected.\n- Only bins crossed by a swap are checked, a breach blocks only the affected direction, and a drawdown setting of 0 disables the check.\n- Watermarks decay lazily per bin. Drawdown, decay, timelock and watermark changes by the pool admin are timelocked by design.",
+    "customProhibitedActivities": [],
+    "impacts": [
+      {
+        "id": 6402,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Bypassing the admin fee caps or the price-provider timelock."
+      },
+      {
+        "id": 6403,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "bypassing the deposit or swap allowlist extensions."
+      },
+      {
+        "id": 6404,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Swap on a Metric anchored price provider pool executes outside the band or beyond its configured staleness limit"
+      },
+      {
+        "id": 6405,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Successful swap on a paused pool"
+      },
+      {
+        "id": 6406,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Fees reach the wrong destination: protocol or admin fees go somewhere other than the configured receiver."
+      },
+      {
+        "id": 6407,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Unauthorized use of protocol roles: factory owner, oracle ADMIN_ROLE, propAMM adapter admin"
+      },
+      {
+        "id": 6408,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "An oracle accepts a price update without a valid Pyth or Chainlink signature, or a compressed-feed push from an unauthorized pusher"
+      },
+      {
+        "id": 6409,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "A configured stop-loss check is bypassed."
+      },
+      {
+        "id": 6410,
+        "type": "smart_contract",
+        "severity": "low",
+        "title": "Malicious Price Provider implementation that can lead to significant losses of funds for LPs"
+      },
+      {
+        "id": 15,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+      },
+      {
+        "id": 17,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Permanent freezing of funds"
+      },
+      {
+        "id": 22,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Protocol insolvency"
+      },
+      {
+        "id": 23,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Theft of unclaimed yield"
+      },
+      {
+        "id": 24,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Theft of unclaimed royalties"
+      },
+      {
+        "id": 25,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Permanent freezing of unclaimed yield"
+      },
+      {
+        "id": 26,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Permanent freezing of unclaimed royalties"
+      },
+      {
+        "id": 27,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Temporary freezing of funds"
+      },
+      {
+        "id": 30,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Block stuffing"
+      },
+      {
+        "id": 31,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+      },
+      {
+        "id": 32,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Theft of gas"
+      },
+      {
+        "id": 33,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Unbounded gas consumption"
+      },
+      {
+        "id": 34,
+        "type": "smart_contract",
+        "severity": "low",
+        "title": "Contract fails to deliver promised returns, but doesn't lose value"
+      }
+    ],
+    "rewards": [
+      {
+        "id": 52520,
+        "primacy": "primacy_of_impact",
+        "severity": "critical",
+        "assetType": "smart_contract",
+        "maxReward": 500000,
+        "minReward": 50000,
+        "rewardModel": "range",
+        "rewardCalculationPercentage": 20
+      },
+      {
+        "id": 52521,
+        "primacy": "primacy_of_impact",
+        "severity": "high",
+        "assetType": "smart_contract",
+        "maxReward": 50000,
+        "minReward": 10000,
+        "rewardModel": "range"
+      },
+      {
+        "id": 52522,
+        "primacy": "primacy_of_impact",
+        "severity": "medium",
+        "assetType": "smart_contract",
+        "maxReward": 10000,
+        "minReward": 2500,
+        "rewardModel": "range"
+      },
+      {
+        "id": 52523,
+        "primacy": "primacy_of_impact",
+        "severity": "low",
+        "assetType": "smart_contract",
+        "fixedReward": 1000,
+        "rewardModel": "fixed"
+      }
+    ],
+    "audits": [
+      {
+        "id": "1543",
+        "url": "https://github.com/Metricxyz/Known_issues/tree/main/sherlock",
+        "auditor": "Sherlock",
+        "date": "2026-10-09T00:00:00.000Z"
+      },
+      {
+        "id": "1544",
+        "url": "https://github.com/Metricxyz/Known_issues/tree/main/zellic",
+        "auditor": "Zellic",
+        "date": "2026-06-28T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "assets": [
+      {
+        "id": "6ZyuP63lnWlRAJFkwc0SHS",
+        "url": "https://etherscan.io/address/0x7613D202Af490c3d1cE1873b0a7022a34E89815f",
+        "type": "smart_contract",
+        "addedAt": "2026-01-21T11:27:22.127Z",
+        "revision": 0,
+        "description": "eWSTETH Intermediate Credit Vault",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "6tytRoQFSHmzwDbJ1d2JUq",
+        "url": "https://etherscan.io/address/0x75029a47f28550C93Ad5A3BbD2d9b5315204B561",
+        "type": "smart_contract",
+        "addedAt": "2026-01-21T11:27:22.140Z",
+        "revision": 0,
+        "description": "aWSTETH Intermediate Credit Vault",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "2QlIEVqh8EXvdcNtDsvYs7",
+        "url": "https://etherscan.io/address/0x87b8081A3ace680f35125F469526Ac10f5418Ca7",
+        "type": "smart_contract",
+        "addedAt": "2025-10-09T11:25:02.005Z",
+        "revision": 0,
+        "description": "eWETH Intermediate Credit Vault",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "3KPWTCbSspspP26TgaiPQ0",
+        "url": "https://etherscan.io/address/0xB5Eb1d005e389Bef38161691E2083b4d86FF647a",
+        "type": "smart_contract",
+        "addedAt": "2025-10-09T11:24:34.990Z",
+        "revision": 0,
+        "description": "Intermediate Vault Factory",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "60tZnpcchN6yiO6hOpU41V",
+        "url": "https://etherscan.io/address/0xb001f039D76bA48E577A17c04b6940DB37aF8648",
+        "type": "smart_contract",
+        "addedAt": "2025-10-09T11:25:14.895Z",
+        "revision": 0,
+        "description": "Euler Oracle Router",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "6Yf3WyBHvvFQsfQ6sWweXs",
+        "url": "https://etherscan.io/address/0x0acd3A3c8Ab6a5F7b5A594C88DFa28999dA858aC",
+        "type": "smart_contract",
+        "addedAt": "2025-10-09T11:25:25.946Z",
+        "revision": 0,
+        "description": "Vault Manager",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "6kyGbPvccklgygiMtEDdD7",
+        "url": "https://etherscan.io/address/0xa1517cCe0bE75700A8838EA1cEE0dc383cd3A332",
+        "type": "smart_contract",
+        "addedAt": "2025-10-09T11:24:48.946Z",
+        "revision": 0,
+        "description": "Collateral Vault Factory",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "98749",
+        "url": "https://immunefi.com/",
+        "type": "smart_contract",
+        "addedAt": "2026-02-06T15:58:36.804Z",
+        "revision": 0,
+        "description": "Primacy of Impact",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": true
+      },
+      {
+        "id": "98826",
+        "url": "https://etherscan.io/address/0xFaBA8f777996C0C28fe9e6554D84cB30ca3e1881",
+        "type": "smart_contract",
+        "addedAt": "2026-02-13T08:58:12.349Z",
+        "revision": 0,
+        "description": "awstETH Wrapper",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "98827",
+        "url": "https://etherscan.io/address/0x868a21426852A775395d4b90De23B3e3E662bd78",
+        "type": "smart_contract",
+        "addedAt": "2026-02-13T08:58:12.349Z",
+        "revision": 0,
+        "description": "Aave V3 Teleport Operator",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "98829",
+        "url": "https://etherscan.io/address/0x229fE10bC00bBE99Ac99703647D4f74F31605e91",
+        "type": "smart_contract",
+        "addedAt": "2026-02-13T08:58:12.349Z",
+        "revision": 0,
+        "description": "Aave V3 Deleverage Operator",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100234",
+        "url": "https://etherscan.io/address/0xef39D6493884C4C84D38a4bFF879Ce16CEdE702a",
+        "type": "smart_contract",
+        "addedAt": "2026-06-24T09:37:16.167Z",
+        "revision": 0,
+        "description": "Twyne EVC",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100243",
+        "url": "https://etherscan.io/address/0x79CF33e623555E899d4EE122b9BfA0214fa5A4A1",
+        "type": "smart_contract",
+        "addedAt": "2026-06-25T11:37:11.660Z",
+        "revision": 0,
+        "description": "aPT22Oct2026 Intermediate Credit Vault",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "100244",
+        "url": "https://etherscan.io/address/0x0aF56aFBDDCb140323445BD7211Ba90E54e5FD1C",
+        "type": "smart_contract",
+        "addedAt": "2026-06-25T11:37:11.660Z",
+        "revision": 0,
+        "description": "aPT22Oct2026 Wrapper",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101347",
+        "url": "https://etherscan.io/address/0xd07e1dd26f415fed3e8c490623a80ab55cf7bdbb",
+        "type": "smart_contract",
+        "addedAt": "2026-10-06T16:45:49.646Z",
+        "revision": 0,
+        "description": "Euler Leverage Operator",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101348",
+        "url": "https://etherscan.io/address/0xb7a7Cf5EB16C124562857632F8f86Ed627e6cc35",
+        "type": "smart_contract",
+        "addedAt": "2026-10-06T16:45:49.646Z",
+        "revision": 0,
+        "description": "Aave V3 Leverage Operator",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      }
+    ],
+    "assetsBodyV2": null,
+    "boostedIntroEvaluating": "",
+    "boostedIntroFinished": "",
+    "boostedIntroLive": "",
+    "boostedIntroStartingIn": "",
+    "boostedLeaderboard": [],
+    "boostedSummaryReport": null,
+    "ecosystem": [
+      "ETH"
+    ],
+    "endDate": null,
+    "evaluationEndDate": null,
+    "features": [
+      "Pay to Mediate"
+    ],
+    "hideAssetsInScope": null,
+    "immunefiStandard": true,
+    "inviteOnly": false,
+    "kyc": false,
+    "language": [
+      "Solidity"
+    ],
+    "launchDate": "2026-01-16T14:30:00.000Z",
+    "isPaused": false,
+    "pausedAt": null,
+    "pausedMessage": null,
+    "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1tEO5hy6BK1IitUVevC7Mm/70f476b0452b9f6af1b327ceaa34bea9/Twyne.png",
+    "maxBounty": 50000,
+    "outOfScopeAndRules": null,
+    "pocPerTypeAndSeverity": [
+      "smart_contract - critical",
+      "smart_contract - high"
+    ],
+    "primaryPaymentWallet": "EVM",
+    "prioritizedVulnerabilities": "_blank_",
+    "productType": [
+      "Lending"
+    ],
+    "programOverview": "Twyne is a modular risk layer that leverages credit-delegation to unlock new levels of capital efficiency in lending markets. Twyne empowers lending market users with the freedom to focus on their individual goals: lenders can re-lend, borrowers can re-borrow, and together they drive the emergence of new markets, ensuring capital flows to where it is needed most.\n\nFor more information about Twyne, please visit [https://twyne.xyz/](https://twyne.xyz/).\n\nTwyne provides rewards in USDC on Ethereum, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section.\n\n__Responsible Publication__\n\nTwyne adheres to  **Category 2: Notice Required**. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nTwyne adheres to the Primacy of Impact for the following impacts:\n\n- Smart Contract  —  Critical\n- Smart Contract  —  High\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. \n\nFor more information, please see [Best Practices: Primacy of Impact](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact) \n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n- Twyne inherits the assumptions of external lending markets it integrates. So security issues with Euler, for example, won’t be considered for a bounty.\n- If the reserved credit amount after calling handleExternalLiquidation() is too small, debt may not be socialized and the entire batch will revert. Since these are small positions, it’s fine. Protocol can pay intermediate vault on collateral vault’s behalf.\n- Issues stemming from external lending protocol changing its liquidation ltv. We’re bringing an upgrade to handle this soon.\n- No slippage check on liquidate() or handleExternalLiquidation(). Liquidators need to check for slippage on their side.\n- Credit reservation may fail if the intermediate vault doesn’t have enough liquidity.\n- Issues related to chain re-orgs and network liveness\n- Incompatibilities with ERC-4626 and ERC-20 unless they pose a direct security risk\n- Issues related to censorship / frontrunning users that interact with Pyth and RedStone. We expect users to interact with the EVC or another multicall-like contract to update the price and retrieve it in a single call\n- Issues stemming from sequencer downtime on L2s, including but not limited to inexistent sequencer liveness checks\n- Any issue related to stuck funds for tokens that are airdropped to Twyne contracts\n- Any issue related to rewards accrued to Twyne contracts, example: rewards assigned by external lending protocol or integrations\n- After external liquidation and before calling `handleExternalLiquidation()`, the shares exchange rate can be higher if it creates bad debt for intermediate vault. So intermediate vault share holders have a window where they can use this fact to get more assets than they deserve.\n\n__Previous Audits__\n\nTwyne’s completed audit reports can be found at [https://twyne.gitbook.io/twyne/resources/security](https://twyne.gitbook.io/twyne/resources/security). Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.",
+    "programType": [
+      "Smart Contract"
+    ],
+    "project": "Twyne",
+    "projectType": [
+      "Defi"
+    ],
+    "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 50 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD10 000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Repeatable Attack Limitations__\n\n- If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n- For critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Level Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of USD 10 000 to USD 3 000 depending on the funds at risk, capped at the maximum high reward.  \n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Twyne team directly and are denominated in USD. However, payments are done in USDC on Ethereum.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
+    "rewardsPool": 0,
+    "primaryPool": 0,
+    "allStarsPool": 0,
+    "podiumPool": 0,
+    "rewardsToken": "USDC",
+    "slug": "twyne",
+    "tenPercentEconomicRule": false,
+    "updatedDate": "2026-11-16T05:14:42.037Z",
+    "impactsBody": "All vaults deployed using `CollateralVaultFactory` are considered in scope",
+    "websiteUrl": "https://twyne.xyz/",
+    "githubUrl": "https://github.com/0xTwyne/",
+    "eligibilityCriteria": [],
+    "responsiblePublicationCategory": "category_3",
+    "description": "Twyne is a modular risk layer that leverages credit-delegation to unlock new levels of capital efficiency in lending markets. Twyne empowers lending market users with the freedom to focus on their individual goals: lenders can re-lend, borrowers can re-borrow, and together they drive the emergence of new markets, ensuring capital flows to where it is needed most.\n",
+    "knownIssues": [],
+    "defaultOutOfScopeBlockchain": null,
+    "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+    "defaultOutOfScopeWebAndApplications": null,
+    "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+    "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+    "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+    "customOutOfScopeInformation": "- Reverts in/through Operator contracts that solely prevent the execution of batched transactions shall be deemed out of scope.",
+    "customProhibitedActivities": [],
+    "impacts": [
+      {
+        "id": 15,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+      },
+      {
+        "id": 17,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Permanent freezing of funds"
+      },
+      {
+        "id": 22,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Protocol insolvency"
+      },
+      {
+        "id": 5742,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Temporary freezing of funds (for at least 24 hours)"
+      },
+      {
+        "id": 23,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Theft of unclaimed yield"
+      },
+      {
+        "id": 25,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Permanent freezing of unclaimed yield"
+      }
+    ],
+    "rewards": [
+      {
+        "id": 52518,
+        "primacy": null,
+        "severity": "critical",
+        "assetType": "smart_contract",
+        "maxReward": 50000,
+        "minReward": 10000,
+        "rewardModel": "range",
+        "rewardCalculationPercentage": 10
+      },
+      {
+        "id": 52519,
+        "primacy": null,
+        "severity": "high",
+        "assetType": "smart_contract",
+        "maxReward": 10000,
+        "minReward": 3000,
+        "rewardModel": "range"
+      }
+    ],
+    "audits": [
+      {
+        "id": "1beurkDiyFA3vxpT3NCjN0",
+        "url": "https://twyne.gitbook.io/twyne/resources/security",
+        "auditor": "All Audits",
+        "date": "2026-01-16T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "assets": [
+      {
+        "id": "4H9jOxIZhUY2jb5sXIMvYx",
+        "url": "https://seiscan.io/address/0x6f04B655d5209E85E47D3920A2EF407A66e83f6c",
+        "type": "smart_contract",
+        "addedAt": "2026-01-28T07:30:40.965Z",
+        "revision": 0,
+        "description": "OndoMintBurnAdapter (Sei)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "3pkHhNikhcEEEWb4gP6lrK",
+        "url": "https://seiscan.io/address/0x54cD901491AeF397084453F4372B93c33260e2A6",
+        "type": "smart_contract",
+        "addedAt": "2026-01-28T07:30:40.995Z",
+        "revision": 0,
+        "description": "USDY Token (Sei)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "3fVzSTp8iZv5mnHXMywPb",
+        "url": "https://explorer.plume.org/address/0xD2B65e851Be3d80D3c2ce795eB2E78f16cB088b2",
+        "type": "smart_contract",
+        "addedAt": "2026-01-28T07:30:40.991Z",
+        "revision": 0,
+        "description": "USDY Token (Plume)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "1D4823ZA702C6DvOfDaKvG",
+        "url": "https://bscscan.com/address/0x2D3Fa4e1AaB6E4BBd909CF81518A8084873c47B5",
+        "type": "smart_contract",
+        "addedAt": "2025-10-29T09:48:00.289Z",
+        "revision": 0,
+        "description": "IssuanceHours (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "1DqKwGmJJZmSrXgLQXFTDy",
+        "url": "https://etherscan.io/address/0x87b126e5518b6a1Bb8465779b4607C45C643DF90",
+        "type": "smart_contract",
+        "addedAt": "2025-12-17T12:08:25.520Z",
+        "revision": 0,
+        "description": "USDYOracleWrapper",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "1I4aOolbm8s2fcdjbW3QnW",
+        "url": "https://bscscan.com/address/0x898128F9f22c0192da0c5acD394D9eeAc461D911",
+        "type": "smart_contract",
+        "addedAt": "2025-10-29T09:47:58.519Z",
+        "revision": 0,
+        "description": "OndoIDRegistry (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "1JCjHxUia8E1vxTXoMP4Ln",
+        "url": "https://polygonscan.com/address/0xbA11C5effA33c4D6F8f593CFA394241CfE925811",
+        "type": "smart_contract",
+        "addedAt": "2024-04-25T14:41:41.678Z",
+        "revision": 0,
+        "description": "OUSG Token (Polygon)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "1QPIZFMIkMpFGgMDVESMIo",
+        "url": "https://bscscan.com/address/0x4D4E562D6882Dc523B8d629d2E9dF9230B699933",
+        "type": "smart_contract",
+        "addedAt": "2025-12-15T09:47:03.681Z",
+        "revision": 0,
+        "description": "OndoOwner (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "1TVlBsTv3kC1KKGgoYI8tj",
+        "url": "https://solscan.io/account/i7u4r16TcsJTgq1kAG8opmVZyVnAKBwLKu6ZPMwzxNc#metadata",
+        "type": "smart_contract",
+        "addedAt": "2024-04-25T14:41:26.276Z",
+        "revision": 0,
+        "description": "OUSG Token (Solana)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "1b4Is79YQdj2gYoHElb567",
+        "url": "https://etherscan.io/address/0x914D5Cb27cb30E80BdE8215ff577eD63Eb986B79",
+        "type": "smart_contract",
+        "addedAt": "2025-09-15T22:00:25.497Z",
+        "revision": 0,
+        "description": "OndoSanityCheckOracle",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "1eJQ8QLfNXFPJifGKyNjHf",
+        "url": "https://bscscan.com/address/0x01bB8620c0aEF4390c983A5A792d178AF2733e82",
+        "type": "smart_contract",
+        "addedAt": "2025-10-29T09:48:00.452Z",
+        "revision": 0,
+        "description": "GMTokenFactory (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "1szSefhlBsgBDF7Dkn4nOn",
+        "url": "https://polygonscan.com/address/0x7cd852c0d7613aa869e632929560f310d4059ac1",
+        "type": "smart_contract",
+        "addedAt": "2024-04-25T14:40:43.211Z",
+        "revision": 0,
+        "description": "KYCRegistry (Polygon)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "1zHPIJc3cT7IFmw2wSUXT5",
+        "url": "https://solscan.io/account/3cKyGYojYbFxeUnBf5xak3cTpaxmYuzpFbSnP9n3kyui",
+        "type": "smart_contract",
+        "addedAt": "2026-01-22T09:49:44.659Z",
+        "revision": 0,
+        "description": "Solana GMTokenManagerState",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "2D2pcPDGtkFRCUPJivF78Q",
+        "url": "https://solscan.io/account/7YNReenG6AXgVUfmSizt6hoVXrznS4zDdgCj1UTLJ2S3",
+        "type": "smart_contract",
+        "addedAt": "2025-05-05T08:53:14.206Z",
+        "revision": 0,
+        "description": "OndoMintBurnAdapter (Solana)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "2F9jmSfh9enq7ZiXpRbxAr",
+        "url": "https://etherscan.io/address/0xa0219aa5b31e65bc920b5b6dfb8edf0988121de0",
+        "type": "smart_contract",
+        "addedAt": "2024-04-25T14:44:51.720Z",
+        "revision": 0,
+        "description": "USDY Price Oracle",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "2Z2D6457Gbi2rMe13e4HhS",
+        "url": "https://solscan.io/account/CKW82CT7QtJUDkxCa6sSHZ3UXvUSu6EuGDXUtKyXgn67",
+        "type": "smart_contract",
+        "addedAt": "2026-01-22T09:49:44.667Z",
+        "revision": 0,
+        "description": "Solana USDonManagerState",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "2b68lQcDpEavPH0RjZvS6L",
+        "url": "https://bscscan.com/address/0x87786323ad9997924B22eac3AA9f71f562795633",
+        "type": "smart_contract",
+        "addedAt": "2025-12-15T09:47:03.692Z",
+        "revision": 0,
+        "description": "OndoOFT (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "2iMuoYZjhZydB4n4aLqSYT",
+        "url": "https://arbiscan.io/address/0x0bE393DC46248E4285dc5CAcA3084bc7e9bfbB41#code",
+        "type": "smart_contract",
+        "addedAt": "2024-11-26T07:52:47.626Z",
+        "revision": 0,
+        "description": "OndoMintBurnAdapter (Arbitrum)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "2mFHjVqnm2KwMhGUgWaKDL",
+        "url": "https://bscscan.com/address/0xCd6D30a1A585eb67E0d0ef5c1ae601BE20862897",
+        "type": "smart_contract",
+        "addedAt": "2025-10-29T09:47:58.352Z",
+        "revision": 0,
+        "description": "OndoRateLimiter (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "32DQuxkbUCuF6UIWLJ0wrZ",
+        "url": "https://bscscan.com/address/0x91f8Aff3738825e8eB16FC6f6b1A7A4647bDB299",
+        "type": "smart_contract",
+        "addedAt": "2025-10-29T09:47:58.344Z",
+        "revision": 0,
+        "description": "GMTokenManager (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "33vSk5IFfOHltDRf5vJGse",
+        "url": "https://etherscan.io/address/0x54043c656F0FAd0652D9Ae2603cDF347c5578d00",
+        "type": "smart_contract",
+        "addedAt": "2024-04-25T14:41:56.725Z",
+        "revision": 0,
+        "description": "rOUSG Token",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "34oYv1hQzMHEYhUMpOrbp7",
+        "url": "https://etherscan.io/address/0xe9b3c628103580702b465c052f67843cac61fb35",
+        "type": "smart_contract",
+        "addedAt": "2025-04-09T08:15:45.935Z",
+        "revision": 0,
+        "description": "BasicRecipient - USDC",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "354kMljxeU271GPxbKL49X",
+        "url": "https://etherscan.io/address/0xcf6958D69d535FD03BD6Df3F4fe6CDcd127D97df",
+        "type": "smart_contract",
+        "addedAt": "2025-04-09T08:12:18.291Z",
+        "revision": 0,
+        "description": "OndoIDRegistry",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "36j2WovOV4r60uLOCowWt5",
+        "url": "https://etherscan.io/address/0x98Db502215Da1ad9F626D4a0090A8A2f4971003c",
+        "type": "smart_contract",
+        "addedAt": "2025-04-09T08:13:52.704Z",
+        "revision": 0,
+        "description": "OndoRateLimiter",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "36tEanWtF8QmIaP0blwssO",
+        "url": "https://etherscan.io/address/0xeA8dBF5F3456FaB742fc11b977330A58069758eF",
+        "type": "smart_contract",
+        "addedAt": "2025-12-15T09:47:03.359Z",
+        "revision": 0,
+        "description": "OndoOFT",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "3NaUpk9J81qHjSa0M0n7nk",
+        "url": "https://bscscan.com/address/0x14032815B65f6B65f23d2532ad5F5DFf7BE48C03",
+        "type": "smart_contract",
+        "addedAt": "2025-10-29T09:48:00.406Z",
+        "revision": 0,
+        "description": "OndoSanityCheckOracle (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "3RUuTskeCn6UnYiyZo5ea2",
+        "url": "https://etherscan.io/address/0x99B8d1D1c17a10CD1A878d1A44c11fd7E4daD7bC",
+        "type": "smart_contract",
+        "addedAt": "2025-04-09T08:14:50.287Z",
+        "revision": 0,
+        "description": "OndoTokenRouter",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "3Zl74YH2wjIJspiihuDvo7",
+        "url": "https://etherscan.io/address/0xfD48112E448417CA79305a518c4186dF4b0A200a",
+        "type": "smart_contract",
+        "addedAt": "2025-09-15T22:01:38.886Z",
+        "revision": 0,
+        "description": "TokenPauseManger",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "3na9s2abRIZ2juuBSYjrE8",
+        "url": "https://etherscan.io/address/0xff2BABA46Df92919705E60120C477Ae5b7341Eb3",
+        "type": "smart_contract",
+        "addedAt": "2025-12-15T09:47:03.445Z",
+        "revision": 0,
+        "description": "Messenger",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "3oLb5MgAR0T2EWK6M7DxdH",
+        "url": "https://etherscan.io/address/0xD2746617c58b72254785BDb483e04f311c858d5f",
+        "type": "smart_contract",
+        "addedAt": "2025-09-15T22:01:09.302Z",
+        "revision": 0,
+        "description": "TokenManagerRegistrar",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "3vca5jMkjCkb5XccCj54Wu",
+        "url": "https://etherscan.io/address/0x2c158BC456e027b2AfFCCadF1BDBD9f5fC4c5C8c",
+        "type": "smart_contract",
+        "addedAt": "2025-09-15T22:02:15.017Z",
+        "revision": 0,
+        "description": "GMTokenManager",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "3wNkIHNmYmzfZGhLVPMhYR",
+        "url": "https://bscscan.com/address/0x578f397CA4661D1dB4D9a65065D6B284A1A850fd",
+        "type": "smart_contract",
+        "addedAt": "2025-10-29T09:47:58.678Z",
+        "revision": 0,
+        "description": "GMToken Implementation (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "44mmOWoiUdP1y3nakyVy76",
+        "url": "https://solscan.io/account/A1KLoBrKBde8Ty9qtNQUtq3C2ortoC3u7twggz7sEto6#metadata",
+        "type": "smart_contract",
+        "addedAt": "2024-04-25T14:43:50.726Z",
+        "revision": 0,
+        "description": "USDY Token (Standard SPL Token on Solana)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "47DAiuDuv29dtOAbWWHRvo",
+        "url": "https://etherscan.io/address/0x0b34233a94c3433092009D8903080553039bB7a1",
+        "type": "smart_contract",
+        "addedAt": "2025-12-15T09:47:03.631Z",
+        "revision": 0,
+        "description": "Inspector",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "48Jwose3l9xfjauJHL44J7",
+        "url": "https://etherscan.io/address/0x56A5D911052323D688C731d516530878557463e7",
+        "type": "smart_contract",
+        "addedAt": "2025-04-09T08:12:32.948Z",
+        "revision": 0,
+        "description": "OndoIDRegistryView",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "4M304BTapgeMB8O3Zv5KoA",
+        "url": "https://etherscan.io/address/0xE59dbF08CccF8D1ab90156b9664d31Fd20BB2AC7",
+        "type": "smart_contract",
+        "addedAt": "2025-09-15T22:00:09.614Z",
+        "revision": 0,
+        "description": "OndoIssuanceHours",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "4OEwyM3wTmdgQRl68iAg3g",
+        "url": "https://etherscan.io/address/0x54a8757c2FEF8649830b158a8C19D3a670e80318",
+        "type": "smart_contract",
+        "addedAt": "2025-09-15T22:01:51.580Z",
+        "revision": 0,
+        "description": "OndoComplianceGMView",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "4S4SorXAoTFnyoFednxr59",
+        "url": "https://etherscan.io/address/0x95feCDD21D48426d3bAd195c6A3f0686e6b4d635",
+        "type": "smart_contract",
+        "addedAt": "2025-09-15T21:59:40.212Z",
+        "revision": 0,
+        "description": "USDCSource",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "4Sc6p0Hhih1maG2OzH0bTs",
+        "url": "https://etherscan.io/address/0xaf37c1167910ebc994e266949387d2c7c326b879",
+        "type": "smart_contract",
+        "addedAt": "2024-05-08T11:24:39.926Z",
+        "revision": 0,
+        "description": "rUSDY Token",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "4sLrsVaMrjZFzyKaA6hf5t",
+        "url": "https://bscscan.com/address/0x2ced30744edcF9eDe5799eb07a0A29CE4f012a0c",
+        "type": "smart_contract",
+        "addedAt": "2025-12-15T09:47:03.855Z",
+        "revision": 0,
+        "description": "RateLimiter (OFTs) (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "4uvY2gzrwyGSjQERNjImfS",
+        "url": "https://etherscan.io/address/0xEaC2181075BA0FC53D5141B17943Ea9F913954e6",
+        "type": "smart_contract",
+        "addedAt": "2025-04-09T08:12:47.359Z",
+        "revision": 0,
+        "description": "OndoSubscriptionFees",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "4v549PJbXsqxt646flBHAw",
+        "url": "https://etherscan.io/address/0xAcE8E719899F6E91831B18AE746C9A965c2119F1",
+        "type": "smart_contract",
+        "addedAt": "2025-09-15T21:58:45.152Z",
+        "revision": 0,
+        "description": "USDon",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "4w3sisY63j5t6JNrPWHLHm",
+        "url": "https://etherscan.io/address/0xbC6D5C103a3f586e68bd475942a49d041b171C3e",
+        "type": "smart_contract",
+        "addedAt": "2025-12-15T09:47:03.452Z",
+        "revision": 0,
+        "description": "OndoOwner",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "5GhUOY1685ETpg6sOuT6O5",
+        "url": "https://etherscan.io/address/0xa6275720b3fB1Efe3E6EF2b5BF2293148852307D#code",
+        "type": "smart_contract",
+        "addedAt": "2024-11-26T07:51:14.705Z",
+        "revision": 0,
+        "description": "OndoMintBurnAdapter (Ethereum)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "5JVsLIPq3l6JhhSY7IHEpu",
+        "url": "https://bscscan.com/address/0x55E0b3aC59D3F6A924483B25A9F3D83C0Dd7C31c",
+        "type": "smart_contract",
+        "addedAt": "2025-10-29T09:48:00.369Z",
+        "revision": 0,
+        "description": "BridgeRegistrarStub (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "5Waq0MZQYbda9PdC1bBiYC",
+        "url": "https://etherscan.io/address/0x14dd822e1b75253525a209e3cc917cd0d54b6cae",
+        "type": "smart_contract",
+        "addedAt": "2025-09-15T21:59:56.403Z",
+        "revision": 0,
+        "description": "USDC/USDonRecipient",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "5ZvccnSOzAJz2YFvP8972c",
+        "url": "https://etherscan.io/address/0x156F73fc73197555e950743Cb2B23F411c751002",
+        "type": "smart_contract",
+        "addedAt": "2025-04-09T08:12:02.895Z",
+        "revision": 0,
+        "description": "OndoCompliance",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "5hvUM0AM1h5Oo9HtSN0qa8",
+        "url": "https://arbiscan.io/address/0x35e050d3C0eC2d29D269a8EcEa763a183bDF9A9D",
+        "type": "smart_contract",
+        "addedAt": "2024-07-15T08:39:26.415Z",
+        "revision": 0,
+        "description": "USDY Token (Arbitrum)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "5kEmPMOIbi02edgxcOJQ2N",
+        "url": "https://etherscan.io/address/0xebBcb2cEE51c2FeE4062c9C1270dcb98B0b22250",
+        "type": "smart_contract",
+        "addedAt": "2025-09-15T22:00:57.413Z",
+        "revision": 0,
+        "description": "GMToken Implementation",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "5smEAhasH5fYcaXmG5XmT2",
+        "url": "https://etherscan.io/address/0x9Cad45a8BF0Ed41Ff33074449B357C7a1fAb4094",
+        "type": "smart_contract",
+        "addedAt": "2025-04-09T08:14:19.795Z",
+        "revision": 0,
+        "description": "OndoOracle",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "5uavndQmk9LaHXjClyowjA",
+        "url": "https://bscscan.com/address/0x5f7d50242206993A4476C76b21950219a4ED2c91",
+        "type": "smart_contract",
+        "addedAt": "2025-12-15T09:47:03.684Z",
+        "revision": 0,
+        "description": "Messenger (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "5ueXCR78RaZjYo27ympqLr",
+        "url": "https://explorer.mantle.xyz/address/0x5bE26527e817998A7206475496fDE1E68957c5A6",
+        "type": "smart_contract",
+        "addedAt": "2024-04-25T14:43:34.838Z",
+        "revision": 0,
+        "description": "USDY Token (Mantle)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "611CKJy19FdSgKs9bJUD5y",
+        "url": "https://etherscan.io/address/0xa42613C243b67BF6194Ac327795b926B4b491f15",
+        "type": "smart_contract",
+        "addedAt": "2025-12-17T12:08:25.535Z",
+        "revision": 0,
+        "description": "USDY Instant RWA Manager",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "6GfbDIHkp4d10hSASUSlCX",
+        "url": "https://etherscan.io/address/0x27370016A46fF10255b8DAAbE7035f5203ce280E",
+        "type": "smart_contract",
+        "addedAt": "2025-04-09T08:15:31.120Z",
+        "revision": 0,
+        "description": "BasicSource - PYUSD",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "6Gpl690o30t6b2HMx0NVz9",
+        "url": "https://www.oklink.com/xlayer/address/0x5903E2Be82832c42a868A4748B64b5c401DE91Eb/contract#category=read",
+        "type": "smart_contract",
+        "addedAt": "2024-04-25T14:44:05.398Z",
+        "revision": 0,
+        "description": "USDY Token (X Layer)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "6QRTGY8RlCVAQObUBd0QJs",
+        "url": "https://etherscan.io/address/0x44cBF4D4Db78a48F80d54b61FA1955979f07AEfd",
+        "type": "smart_contract",
+        "addedAt": "2025-09-15T21:59:24.638Z",
+        "revision": 0,
+        "description": "USDonSource",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "6mw7WC3xxcHyKXPTdXRWrQ",
+        "url": "https://etherscan.io/address/0x10d8bbFAE5dF091DC1646A95685F7aFAe0c853E7",
+        "type": "smart_contract",
+        "addedAt": "2025-04-09T08:15:58.492Z",
+        "revision": 0,
+        "description": "BasicRecipient - PYUSD",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "6oTcuEs56NJ0SJZ0s95ZT7",
+        "url": "https://explorer.mantle.xyz/address/0xA96abbe61AfEdEB0D14a20440Ae7100D9aB4882f#code",
+        "type": "smart_contract",
+        "addedAt": "2024-04-25T14:45:07.102Z",
+        "revision": 0,
+        "description": "USDY Price Oracle (Mantle)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "6skHHLKBU1AoJ4Wy8ya8ly",
+        "url": "https://bscscan.com/address/0x6334924c787Ebd21C881740Ef6237Ef51962638F",
+        "type": "smart_contract",
+        "addedAt": "2025-10-29T09:47:58.525Z",
+        "revision": 0,
+        "description": "TokenPauseManager (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "6u49DeizPTadFzQcEFSSwP",
+        "url": "https://etherscan.io/address/0x93358db73B6cd4b98D89c8F5f230E81a95c2643a",
+        "type": "smart_contract",
+        "addedAt": "2025-04-09T08:11:49.694Z",
+        "revision": 0,
+        "description": "OUSG Instant RWA Manager",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "7F6fEIeg0dpQx75WbV2K0M",
+        "url": "https://etherscan.io/address/0x25A103A1D6AeC5967c1A4fe2039cdc514886b97e",
+        "type": "smart_contract",
+        "addedAt": "2024-04-25T14:44:35.674Z",
+        "revision": 0,
+        "description": "USDY Manager",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "7KVmmz7L6BZwzLX1BcffR",
+        "url": "https://etherscan.io/address/0x9F205E1aC7698F59EdbAa0a28C4A4c4ed605b722",
+        "type": "smart_contract",
+        "addedAt": "2025-04-09T08:15:15.286Z",
+        "revision": 0,
+        "description": "BuidlUSDCSource",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "7aWqjVfH9FwYxJ9JGWWZok",
+        "url": "https://bscscan.com/address/0xA21Ed4C3122fc51c6D6Db0d668D968C3B3f689CB",
+        "type": "smart_contract",
+        "addedAt": "2025-10-29T09:47:58.345Z",
+        "revision": 0,
+        "description": "TokenManagerRegistrar (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "7l3SmSJBn7GLvVbFDDEXVs",
+        "url": "https://bscscan.com/address/0x0b34233a94c3433092009d8903080553039bb7a1",
+        "type": "smart_contract",
+        "addedAt": "2025-12-15T09:47:05.459Z",
+        "revision": 0,
+        "description": "Inspector (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "9GeDAT7suA3EXGebE9zon",
+        "url": "https://www.mintscan.io/noble/assets/native/YXVzZHk=",
+        "type": "smart_contract",
+        "addedAt": "2024-07-15T08:39:08.711Z",
+        "revision": 0,
+        "description": "USDY Token (Noble)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "9Q8aeDRwKHuX1aQ7zcbQJ",
+        "url": "https://etherscan.io/address/0x1B19C19393e2d034D8Ff31ff34c81252FcBbee92",
+        "type": "smart_contract",
+        "addedAt": "2024-04-25T14:41:10.094Z",
+        "revision": 0,
+        "description": "OUSG Token",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "BMyZkIhAAyM7RRoxrOv0N",
+        "url": "https://etherscan.io/address/0x0502c5ae08E7CD64fe1AEDA7D6e229413eCC6abe",
+        "type": "smart_contract",
+        "addedAt": "2024-04-25T14:40:55.716Z",
+        "revision": 0,
+        "description": "OUSG Oracle",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "BuX74VFrq4JdaQ26sEFRQ",
+        "url": "https://explorer.mantle.xyz/address/0x0bE393DC46248E4285dc5CAcA3084bc7e9bfbB41?tab=contract",
+        "type": "smart_contract",
+        "addedAt": "2024-11-26T07:52:03.749Z",
+        "revision": 0,
+        "description": "OndoMintBurnAdapter (Mantle)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "C7jJIp5K3076mlqAuQ3xi",
+        "url": "https://etherscan.io/address/0x05CCbB4b74854f8A067b83475E8c34f5a413D7e1",
+        "type": "smart_contract",
+        "addedAt": "2025-09-15T21:59:07.567Z",
+        "revision": 0,
+        "description": "USDonManager",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "J15fQjmHBeDbXpYZBrce9",
+        "url": "https://explorer.mantle.xyz/address/0xab575258d37EaA5C8956EfABe71F4eE8F6397cF3?tab=contract#address-tabs",
+        "type": "smart_contract",
+        "addedAt": "2024-04-25T14:43:19.866Z",
+        "revision": 0,
+        "description": "rUSDY Token (a.k.a mUSD) (Mantle)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "SNUa4df67cHNceIbrL7Vd",
+        "url": "https://etherscan.io/address/0x7a17Ad297b79f1fA7e40FF4F81A332bE85D10f29",
+        "type": "smart_contract",
+        "addedAt": "2025-09-15T22:01:23.580Z",
+        "revision": 0,
+        "description": "BridgeRegistrarStub",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "TJwGG8nT5j2ZoBYq234Wz",
+        "url": "https://explorer.aptoslabs.com/account/0xcfea864b32833f157f042618bd845145256b1bf4c0da34a7013b76e42daa53cc/modules/code/usdy?network=mainnet",
+        "type": "smart_contract",
+        "addedAt": "2024-04-25T14:44:19.928Z",
+        "revision": 0,
+        "description": "USDY Token (Aptos)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "UBFXxEaZIfJSKv9LiMWtT",
+        "url": "https://bscscan.com/address/0x76be569C94C39a2E2492DE2F4D1C253F348250D0",
+        "type": "smart_contract",
+        "addedAt": "2025-10-29T09:47:58.667Z",
+        "revision": 0,
+        "description": "OndoComplianceGMView (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "ZDCt6DU5KFdZaWM9pLxoL",
+        "url": "https://etherscan.io/address/0xF16c188c2D411627d39655A60409eC6707D3d5e8",
+        "type": "smart_contract",
+        "addedAt": "2024-04-25T14:42:12.918Z",
+        "revision": 0,
+        "description": "OUSG Manager",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "bTRUgA0m9itLvAfnj3I1R",
+        "url": "https://bscscan.com/address/0x1f8955E640Cbd9abc3C3Bb408c9E2E1f5F20DfE6",
+        "type": "smart_contract",
+        "addedAt": "2025-10-29T09:48:00.561Z",
+        "revision": 0,
+        "description": "USDon (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "czSQSN4XaRsSODXXDFfA4",
+        "url": "https://solscan.io/account/XzTT4XB8m7sLD2xi6snefSasaswsKCxx5Tifjondogm",
+        "type": "smart_contract",
+        "addedAt": "2026-01-22T09:49:44.668Z",
+        "revision": 0,
+        "description": "Solana GM Program",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "hG4XhNerFWQTSd99X6YkW",
+        "url": "https://etherscan.io/address/0xADC4966E4F8CAAf12C777f07AA7A0Ae8D894cDf3",
+        "type": "smart_contract",
+        "addedAt": "2025-04-09T08:14:06.856Z",
+        "revision": 0,
+        "description": "OUSGOracleWrapper",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "i2lZCCznitpmeMyglzvWz",
+        "url": "https://etherscan.io/address/0xe28AfEC27C50096B4e98cd5546eAE8414b5e7542",
+        "type": "smart_contract",
+        "addedAt": "2025-04-09T08:15:03.759Z",
+        "revision": 0,
+        "description": "PauseManager",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "oVNNHOVfvhgAm02eaFn1f",
+        "url": "https://etherscan.io/address/0xE60F44AA6b7084d5Ca05D0e9145921e94bc23caB",
+        "type": "smart_contract",
+        "addedAt": "2025-09-15T22:00:42.756Z",
+        "revision": 0,
+        "description": "GMTokenFactory",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "qRJsG9LoKlU1MCEcYvK4P",
+        "url": "https://etherscan.io/address/0x96F6eF951840721AdBF46Ac996b59E0235CB985C",
+        "type": "smart_contract",
+        "addedAt": "2024-04-25T14:43:03.971Z",
+        "revision": 0,
+        "description": "USDY Token",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "sBBsTmGcZAYwvo14kai3p",
+        "url": "https://etherscan.io/address/0xE1cb24077d77d2fE763fCAC63e5653D97dc8D20C",
+        "type": "smart_contract",
+        "addedAt": "2025-04-09T08:13:38.696Z",
+        "revision": 0,
+        "description": "OndoRedemptionFees",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "tuXK1mW45VjBwiIjFrYpN",
+        "url": "https://etherscan.io/address/0x4D4E562D6882Dc523B8d629d2E9dF9230B699933",
+        "type": "smart_contract",
+        "addedAt": "2025-12-15T09:47:03.449Z",
+        "revision": 0,
+        "description": "RateLimiter (OFTs)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "ygVey6hIjvto9KFT6PvDZ",
+        "url": "https://bscscan.com/address/0xC58584FF45b06822f49Ec8871BA8af9B8943A689",
+        "type": "smart_contract",
+        "addedAt": "2025-10-29T09:47:58.381Z",
+        "revision": 0,
+        "description": "USDonConverter (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "yrxyaBAo2Xyvja0vXIQf0",
+        "url": "https://etherscan.io/address/0x1cb2Dcc325615d02ae384941149d1dA6521fa018",
+        "type": "smart_contract",
+        "addedAt": "2025-04-09T08:14:33.740Z",
+        "revision": 0,
+        "description": "AdminSubscriptionChecker",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "98713",
+        "url": "https://etherscan.io/address/0x9BC39DB6fbB44B91a48b8D5A6C208B82B1741bE6",
+        "type": "smart_contract",
+        "addedAt": "2026-02-06T18:50:51.374Z",
+        "revision": 0,
+        "description": "SyntheticSharesOracle",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "98714",
+        "url": "https://bscscan.com/address/0xF4Fd8a1B412633e10527454137A29Db7Aa35F15e",
+        "type": "smart_contract",
+        "addedAt": "2026-02-06T18:50:51.374Z",
+        "revision": 0,
+        "description": "SyntheticSharesOracle (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "98775",
+        "url": "https://etherscan.io/address/0xf0Bc39Fc911F6437C84d16188dD8294F7110f451",
+        "type": "smart_contract",
+        "addedAt": "2026-02-10T08:49:15.010Z",
+        "revision": 0,
+        "description": "GMTokenLimitOrder",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "98776",
+        "url": "https://bscscan.com/address/0x96b525B1a93f31E65F4aAf18C53842eD28525D48",
+        "type": "smart_contract",
+        "addedAt": "2026-02-10T08:49:15.010Z",
+        "revision": 0,
+        "description": "GMTokenLimitOrder (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101263",
+        "url": "https://etherscan.io/address/0xec8bBB0c90c0B5F4D8240D0F7b49DA3b0aA41f4E",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "GMIssuerManager (Ethereum)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101264",
+        "url": "https://bscscan.com/address/0x341f9e6463161F0C90037Cbc0150DC54e6d1e06e",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "GMIssuerManager (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101265",
+        "url": "https://etherscan.io/address/0x54aC0E5f60EC257385f134D5Fa490A00e5ddD17c",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "PortfolioTokenManager (Ethereum)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101266",
+        "url": "https://bscscan.com/address/0x28B2C711156EfB3238A19eFa6E0bF85F3523Bac4",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "PortfolioTokenManager (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101267",
+        "url": "https://etherscan.io/address/0x6658F677902e1Df805AdF42fac015E1124AEbFDB",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "PortfolioTokenLimitOrder (Ethereum)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101268",
+        "url": "https://bscscan.com/address/0xA2aA93cbB069B4BF246258E4D9cD093B914DcDFE",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "PortfolioTokenLimitOrder (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101269",
+        "url": "https://bscscan.com/address/0x818D560D5197C6DF7afFc41833289C453aDEE738",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "PortfolioOrchestrator (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101270",
+        "url": "https://explore.tempo.xyz/address/0x7E2A9d8B3B97EDa5922cdb320fC96e0ff4C8B4C5",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "USDYInstant RWA Manager (Tempo)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101271",
+        "url": "https://explore.tempo.xyz/address/0x99042B6C9094dDeFBE06cB5AC642377c38e71aB8",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "OndoTokenRouter (Tempo)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101272",
+        "url": "https://explore.tempo.xyz/address/0xf03746D4172c7c397CC7255D25C51b3ff16818eB",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "OndoOracle (Tempo)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101273",
+        "url": "https://explore.tempo.xyz/address/0x8ff4cbfEedD9565251482117eecFa5D910b4183B",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "OndoRateLimiter (Tempo)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101274",
+        "url": "https://explore.tempo.xyz/address/0x9BfC5B42ada75037f5E4fD7486709Ce95B9830Cb",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "OndoCompliance (Tempo)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101275",
+        "url": "https://explore.tempo.xyz/address/0x9C9f9fccD6e25a3158076cBb5396925E7da60719",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "OndoIDRegistry (Tempo)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101276",
+        "url": "https://explore.tempo.xyz/address/0xDE06fcB8D87c6b20f88B092eCF675e11C0df886E",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "OndoSubscriptionFees (Tempo)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101277",
+        "url": "https://explore.tempo.xyz/address/0xA5F9975a4334CF3fB411357A252e2fCC7b322999",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "OndoRedemptionFees (Tempo)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101278",
+        "url": "https://explore.tempo.xyz/address/0x6Dc6DD2375ED71F990b114b6739D7ad4262dBc70",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "PauseManager (Tempo)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101279",
+        "url": "https://explore.tempo.xyz/address/0x6B4e041956159a5E01377e035af2C0189378cBaF",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "BasicSource (Tempo)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101280",
+        "url": "https://explore.tempo.xyz/address/0x9c90817f3aB8D37a40e96deF7073673B8326201D",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "BasicRecipient (Tempo)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101281",
+        "url": "https://explore.tempo.xyz/address/0x2ccc69bAaB923c358F2bD7aA2DC90159fdB1977F",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "AdminSubscriptionChecker (Tempo)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101282",
+        "url": "https://explore.tempo.xyz/address/0x37Cfdb6fc80B11693a0B461dEbD4dcC6AFA57727",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "USDY Price Oracle (Tempo)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101283",
+        "url": "https://explore.tempo.xyz/address/0xb25b3266467a755328cfb8F1b349319C2B94419C",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "USDYOracleWrapper (Tempo)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101284",
+        "url": "https://etherscan.io/address/0x355c78ef949270A32e31174C057562F7469fE831",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "PortfolioTokenRegistrar (Ethereum)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101285",
+        "url": "https://bscscan.com/address/0x3e8Aa5A0Da924F6F7471D3DACc420a3Dd6999bC5",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "PortfolioTokenRegistrar (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101286",
+        "url": "https://etherscan.io/address/0xf1586e1BEb654435E320a5fd0263F174Af71f03E",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "PortfolioTokenFactory (Ethereum)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101287",
+        "url": "https://bscscan.com/address/0x75D1668C421c33D7Ae91072cf81D5f57a20bC3E1",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "PortfolioTokenFactory (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101288",
+        "url": "https://etherscan.io/address/0x5C8AD93f75805FB504FAc767378A170420671c32",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "OndoIssuanceHours (Ethereum)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101289",
+        "url": "https://bscscan.com/address/0x180EeCc78a99d32E925Ff6a0Ed42adA2AbfdD1bB",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "OndoIssuanceHours (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101290",
+        "url": "https://bscscan.com/address/0x643Aa7AD6D443fB25745F4072B169D334a827077",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "OndoTokenRouter (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101291",
+        "url": "https://bscscan.com/address/0xC246D6619C30CbC7AFF319019761cC49D20b937E",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "PortfolioVault - MAG7Xon (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101292",
+        "url": "https://bscscan.com/address/0xC9F8A9922917731f8a8ED21F6F131655B9cfd5Fe",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "PortfolioVault - BRAINon (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101293",
+        "url": "https://bscscan.com/address/0xfBBf4fF845339993BCacA6D425b09c50E6a27Be6",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "PortfolioVault - YLD5on (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101294",
+        "url": "https://bscscan.com/address/0x8760e42a5aA004969AbfdDc97a6cbbB6241e5728",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "PortfolioVault - YLD8on (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101295",
+        "url": "https://bscscan.com/address/0x058d2EFcD3C09E5c34Fd55D038Cc84f6B978F84F",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "PortfolioVault - BLKHIon (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101296",
+        "url": "https://bscscan.com/address/0xF131D1E7bb84e111A8Ee729A0871e358309185B9",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "PortfolioVault - BLKDIGon (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      },
+      {
+        "id": "101297",
+        "url": "https://bscscan.com/address/0x028c1ed9506D11208b48CdC0d661e2c65c29294d",
+        "type": "smart_contract",
+        "addedAt": "2026-09-29T13:23:03.247Z",
+        "revision": 0,
+        "description": "PortfolioVault - BLKGRWon (BSC)",
+        "isSafeHarbor": false,
+        "isPrimacyOfImpact": false
+      }
+    ],
+    "assetsBodyV2": "If an impact can be caused to any other asset managed by Ondo Finance that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project.\n\n\nFor the USDY Token (Noble) asset, please refer to https://github.com/ondoprotocol/usdy-noble for the source code.",
+    "boostedIntroEvaluating": "",
+    "boostedIntroFinished": "",
+    "boostedIntroLive": "",
+    "boostedIntroStartingIn": "",
+    "boostedLeaderboard": [],
+    "boostedSummaryReport": null,
+    "ecosystem": [
+      "ETH",
+      "Solana"
+    ],
+    "endDate": null,
+    "evaluationEndDate": null,
+    "features": [
+      "Pay to Mediate",
+      "Pay to Submit",
+      "Pay to Mediate - No Free Mediations"
+    ],
+    "hideAssetsInScope": null,
+    "immunefiStandard": true,
+    "inviteOnly": false,
+    "kyc": true,
+    "language": [
+      "Solidity",
+      "Rust"
+    ],
+    "launchDate": "2023-03-07T21:00:00.000Z",
+    "isPaused": true,
+    "pausedAt": "2026-11-15T10:38:31.145Z",
+    "pausedMessage": "Paused while working on pending reports",
+    "logo": "https://images.ctfassets.net/t3wqy70tc3bv/2dR2c08kamplNaWIiF37h6/c269496e763806bbbd815efa7c662590/ondo-logo.svg",
+    "maxBounty": 1000000,
+    "outOfScopeAndRules": null,
+    "pocPerTypeAndSeverity": [
+      "smart_contract - critical",
+      "smart_contract - high",
+      "smart_contract - medium",
+      "smart_contract - low"
+    ],
+    "primaryPaymentWallet": "EVM",
+    "prioritizedVulnerabilities": "_blank_",
+    "productType": [
+      "Yield Aggregator"
+    ],
+    "programOverview": "Ondo Finance brings exposure to US Treasuries on-chain, making it possible for token holders to earn yield daily with highly  liquid, bankruptcy-remote, tokenized assets. Ondo significantly broadens the investor base that can capitalize on these yields and put their assets to work in blockchain-based applications, while reducing the friction experienced when converting between stablecoins and tokenized traditional assets.\n\nQualifying purchasers receive tokenized assets which are transferable on-chain, including through approved smart contracts, paving the way for a compliant on-chain financial ecosystem powered by real world assets.\n\nFor more information about Ondo Finance, please visit https://ondo.finance/\n\nOndo Finance provides rewards in USDC on Ethereum, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below.\n\n__KYC Requirement__ \n\nOndo Finance will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\n__Eligibility Criteria__ \n\nSecurity researchers who wish to participate must adhere to the rules of engagement set forth in this program and cannot be:\n- On OFACs SDN list \n- Official contributor, both past or present\n- Employees and/or individuals closely associated with the project \n- Compensated team members of Ondo Finance or any of its affiliates;\n- Third-party vendors, suppliers and service providers to Ondo Finance or any of its affiliates, and team members of those third parties;\n- Businesses or organizations that are not Ondo Finance affiliates but hold or have held assets considered as critical infrastructure covered under the bug bounty program; third-party vendors, suppliers and service providers to those business or organizations; and team members of those business, organizations or third parties; and\n- Security auditors that directly or indirectly participated in the review of the code impacted, except for auditors that solely participated in crowdsourced/competitive audits sponsored by Ondo Finance.\n\n\n__Primacy of Impact vs Primacy of Rules__\n\nOndo Finance adheres to the Primacy of Impact for the following impacts, subject to the provisions of this section of Ondo’s Program:\n- Smart Contract - Critical\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. For more information, please see [Best Practices: Primacy of Impact](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact)\n \nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\n\nFor any impact that would be eligible for a reward based on the Primacy of Impact approach, but otherwise would not be eligible for a reward, the amount of the reward will be at Ondo Finance’s discretion. Rewards will not be provided for impacts that are out of scope, or where the limitations of this Program otherwise apply.\n\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nAll bug reports must come with a PoC with one or more Impacts in Scope on one or more Assets in Scope in order to be considered for a reward. Explanations and statements are not sufficient as PoC; bug reports must include a runnable PoC in order to prove impact. Exceptions may be made, at Ondo Finance’s discretion, in cases where the vulnerability is objectively evident; however, the bug reporter may be required to provide a PoC at any point in time. In addition to these requirements, all PoCs submitted must demonstrate a good-faith effort to comply with the Immunefi-wide PoC Guidelines and Rules. Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n- Profiting from purchasing OUSG or USDY before a price increase and then immediately selling after. This includes using MEV and flash loans. \n- Effects from large price swings in the SHV ETF, which may constrain the prices at which OUSG can be set to\n- Effects from allowlists or blocklists (e.g. KYC Registry, USDC blacklist, Chainalysis Sanctions Oracle, USDY Blocklist, BUIDL Whitelist, etc.)\n- Effects from the BUIDL token being seized by the issuer or configured in a way that interferes with OUSGInstantManager Redemptions\n- Users unable to perform instant redemptions because there is not enough USDC or BUIDL in the OUSGInstantManager contract\n- Users unable to perform instant redemptions because there is not enough USDC liquidity available for the BUIDL token\n- Effects from USDC depegging\n- Misuse of admin rights (malicious or accidental)\n- Taking advantage of rate limits to DDOS subscriptions, redemptions or bridges\n- Minimum redemption amounts prohibiting a user from performing a redemption\n- Minor imprecision stemming from rebasing tokens or differences in decimals. This includes intentional and unintentional dust accumulation in the form of token balances and rebasing token “shares.”\n- Front running permissioned setter functions that pertain to fees\n- Front running permissioned override functions for subscription or redemption state in OUSG Manager and USDY Manager\n- Bridge liveness impacts caused by the rate limiting configuration\n- Effects from OndoCompliance being intentionally unconfigured for USDY on Tempo, with the blocklist and sanctions list left unset. Transfer-level compliance for USDY on Tempo is enforced at the TIP-20 token layer rather than by the Instant Manager stack\n- Effects from the collateral depeg check in OndoTokenRouter on Tempo referencing a USDC/USD price feed rather than a pathUSD/USD feed, including a pathUSD depeg not being detected by the minimum token price check\n- Tokens transferred directly to a token source or token recipient contract, outside the subscription and redemption flows, requiring a governance role grant before they can be swept\n- Effects from the minimumRwaPrice sanity floor on the Instant Managers sitting materially below the current RWA price. The floor is a coarse lower bound intended to reject grossly incorrect prices rather than a precision check\n\n__Previous Audits__\n\nOndo Finance’s completed audit reports can be found at https://docs.ondo.finance/audits. Any issues mentioned in any of the above or below  reports, including but not limited to unfixed vulnerabilities, are not eligible for a reward. For Code4rena Audits, findings in the competition READMEs and findings repositories are also not eligible for a reward. \n- [April 2024 Code4rena Audit](https://code4rena.com/reports/2024-03-ondo-finance)\n- [April 2024 Cyfrin Audit](https://docs.ondo.finance/pdf/Ondo-Cyfrin-Audit-April-2024.pdf)\n- [September 2023 Code4rena Audit](https://code4rena.com/reports/2023-09-ondo/)\n- [August 2023 Zokyo Audit](https://docs.ondo.finance/pdf/Ondo-Zokyo-Audit-August-2023.pdf)\n- [April 2023 NetherMind Audit](https://docs.ondo.finance/pdf/Ondo-NetherMind-Audit-April-2023.pdf)\n- [January 2023 Code4rena Audit](https://code4rena.com/reports/2023-01-ondo/)\n\n\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Ondo Finance has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209).\n\n__Other Terms__\n\nThe Terms of Use between each participant in this bug bounty program and Immunefi Software Pte. Ltd., available at https://immunefi.com/terms-of-use/, shall apply between the participant and Ondo as if the participant were “you” or “User”, as if Ondo were “Company”, “we”, “our” or “us”, and as if “Interface”, “Website” and “Platform” referred only to the portions thereof that are applicable to this bug bounty program (except for Sections 7, 8, 11, 23, the first two paragraphs of Section 1 and the first paragraph of Section 12).",
+    "programType": [
+      "Smart Contract"
+    ],
+    "project": "Ondo Finance",
+    "projectType": [
+      "Defi"
+    ],
+    "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 1 000 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 50 000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, the amount of funds at risk will be calculated within the first 45 minutes from the first attack, inclusive, no matter how many times the attack can be executed within that time frame, as demonstrated by the PoC provided by the security researcher.\n\nExample 1: vulnerability is discovered that can steal USD 1 million 30 times within 45 minutes from the first execution of the attack, then the funds at risk is considered as USD 30 million.\n\nExample 2: if a vulnerability is discovered that can steal USD 1 million once every 45 minutes from the first execution of the attack, then the funds at risk is considered as USD 1 million.\n\nHowever, for smart contracts directly holding funds that can’t be protected, if a discovered vulnerability includes the temporary locking of funds that could otherwise be withdrawn and thus prevented from being stolen but still accessible to the exploiter to take the funds, the time is extended to the exact same time as temporary locking. Extensions of the temporary locking that introduce a gap where withdrawals can happen will not be considered.\n\n__Reward Calculation for High Level Reports__\n\n- High vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of USD 11 000 to USD 50 000 depending on the funds at risk, capped at the maximum high reward.  \n\n- In the event of temporary freezing, the reward doubles from the full frozen value for every additional [24h] that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\n__Reward Payment Terms__\nPayouts are handled by the Ondo Finance team directly and are denominated in USD. However, payments are done in USDC on Ethereum based on an implied USD:USDC exchange rate of 1:1.",
+    "rewardsPool": 0,
+    "primaryPool": 0,
+    "allStarsPool": 0,
+    "podiumPool": 0,
+    "rewardsToken": "USDC",
+    "slug": "ondofinance",
+    "tenPercentEconomicRule": true,
+    "updatedDate": "2026-11-15T10:38:12.709Z",
+    "impactsBody": "If an impact can be caused to any other asset managed by Ondo Finance that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for consideration by the project.\n\n\nFor the USDY Token (Noble) asset, please refer to https://github.com/ondoprotocol/usdy-noble for the source code.\n\nSeveral in-scope contracts are the same code deployed on more than one chain , or the same implementation behind several instances. A vulnerability with the same root cause is treated as a single issue no matter how many deployments or instances it affects, and is rewarded once. Please include every affected deployment in one submission. The first valid report is eligible; later reports of the same root cause that differ only by chain, address or instance are duplicates. For Critical reports, funds at risk are calculated across all in-scope deployments where the root cause is exploitable at the time of submission, subject to the program maximum. A vulnerability that exists only on one chain because of chain-specific code or configuration is a distinct issue.",
+    "websiteUrl": null,
+    "githubUrl": null,
+    "eligibilityCriteria": [
+      "no_ofac_sdn",
+      "no_official_contributor",
+      "no_employee",
+      "no_auditor"
+    ],
+    "responsiblePublicationCategory": "category_3",
+    "description": "Ondo Finance brings exposure to US Treasuries on-chain, making it possible for token holders to earn yield daily with highly  liquid, bankruptcy-remote, tokenized assets. Ondo significantly broadens the investor base that can capitalize on these yields and put their assets to work in blockchain-based applications, while reducing the friction experienced when converting between stablecoins and tokenized traditional assets.",
+    "knownIssues": [],
+    "defaultOutOfScopeBlockchain": null,
+    "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+    "defaultOutOfScopeWebAndApplications": null,
+    "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+    "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+    "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+    "customOutOfScopeInformation": "- Impacts that have already been reported, or that are highly similar to impacts that have already been reported, under this Ondo Finance bug bounty program\n- Reports of a previously reported root cause that differ only by chain, contract\n  address or instance (treated as duplicates)",
+    "customProhibitedActivities": [],
+    "impacts": [
+      {
+        "id": 1735,
+        "type": "smart_contract",
+        "severity": "low",
+        "title": "Smart contract failure to deliver promised returns (but without losing value)"
+      },
+      {
+        "id": 1736,
+        "type": "smart_contract",
+        "severity": "low",
+        "title": "Theft of gas"
+      },
+      {
+        "id": 1737,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Ability to bypass contract paused state"
+      },
+      {
+        "id": 1738,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Temporary freezing of funds for at least 24 hours"
+      },
+      {
+        "id": 1739,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Block stuffing for profit"
+      },
+      {
+        "id": 1740,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Bypassing blocklists, sanctions list, or allowlists, successfully allowing blocked actors to acquire OUSG or USDY tokens or rebasing versions of the same (note: use of wrappers does not constitute a bypass)"
+      },
+      {
+        "id": 1741,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Bypassing the Noble USDY IBC channel blocklist, successfully allowing USDY on Noble to be bridged out through a blocked channel via IBC (note: use of wrappers does not constitute a bypass)"
+      },
+      {
+        "id": 23,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Theft of unclaimed yield"
+      },
+      {
+        "id": 25,
+        "type": "smart_contract",
+        "severity": "high",
+        "title": "Permanent freezing of unclaimed yield"
+      },
+      {
+        "id": 31,
+        "type": "smart_contract",
+        "severity": "medium",
+        "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+      },
+      {
+        "id": 15,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+      },
+      {
+        "id": 17,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Permanent freezing of funds"
+      },
+      {
+        "id": 22,
+        "type": "smart_contract",
+        "severity": "critical",
+        "title": "Protocol insolvency"
+      }
+    ],
+    "rewards": [
+      {
+        "id": 52167,
+        "primacy": null,
+        "severity": "critical",
+        "assetType": "smart_contract",
+        "maxReward": 1000000,
+        "minReward": 50000,
+        "rewardModel": "range",
+        "rewardCalculationPercentage": 10
+      },
+      {
+        "id": 52168,
+        "primacy": null,
+        "severity": "high",
+        "assetType": "smart_contract",
+        "maxReward": 50000,
+        "minReward": 11000,
+        "rewardModel": "range"
+      },
+      {
+        "id": 52169,
+        "primacy": null,
+        "severity": "medium",
+        "assetType": "smart_contract",
+        "fixedReward": 10000,
+        "rewardModel": "fixed"
+      },
+      {
+        "id": 52170,
+        "primacy": null,
+        "severity": "low",
+        "assetType": "smart_contract",
+        "fixedReward": 1000,
+        "rewardModel": "fixed"
+      }
+    ],
+    "audits": [
+      {
+        "id": "1gNA3b2vZsxVp7OloUGQoi",
+        "url": "https://docs.ondo.finance/audits",
+        "auditor": "Various",
+        "date": "2025-10-06T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "assets": [
+      {
         "id": "db_526c3944-fcc2-4260-a360-2bc3328297fa",
         "url": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/packages/perps/src/MarginClearinghouse.sol",
         "type": "smart_contract",
@@ -330,327 +2392,6 @@
         "url": "https://github.com/immunefi-team/audit-comp-plether/blob/a82d4fefb02768e5b3bddcc97dee371eee24fea8/audits/scan-plether-fi-plether-core-d4541b49.md",
         "auditor": "AI scan findings",
         "date": "2026-10-26T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "assets": [
-      {
-        "id": "101475",
-        "url": "https://github.com/Metricxyz/periphery-contracts",
-        "type": "smart_contract",
-        "addedAt": "2026-10-29T16:31:30.859Z",
-        "revision": 0,
-        "description": "Periphery Contracts that facilitate the protocol",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "101476",
-        "url": "https://github.com/Metricxyz/pool-contracts",
-        "type": "smart_contract",
-        "addedAt": "2026-10-29T16:31:30.859Z",
-        "revision": 0,
-        "description": "Pool Contracts",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "101477",
-        "url": "https://www.metric.xyz",
-        "type": "smart_contract",
-        "addedAt": "2026-10-29T16:31:30.859Z",
-        "revision": 0,
-        "description": "Primacy of Impact",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": true
-      },
-      {
-        "id": "db_756435fe-dd07-40cc-a62d-9f402940239d",
-        "url": "https://github.com/Metricxyz/oracle-contracts",
-        "type": "smart_contract",
-        "addedAt": "2026-10-29T16:35:09.358Z",
-        "revision": 0,
-        "description": "Oracle and Price Provider Contracts",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      }
-    ],
-    "assetsBodyV2": null,
-    "boostedIntroEvaluating": "",
-    "boostedIntroFinished": "",
-    "boostedIntroLive": "",
-    "boostedIntroStartingIn": "",
-    "boostedLeaderboard": [],
-    "boostedSummaryReport": null,
-    "ecosystem": [
-      "ETH",
-      "BSC"
-    ],
-    "endDate": null,
-    "evaluationEndDate": null,
-    "features": [
-      "Subscription Plan: Essential",
-      "Pay to Mediate",
-      "Pay to Submit",
-      "Pay to Mediate - No Free Mediations"
-    ],
-    "hideAssetsInScope": null,
-    "immunefiStandard": false,
-    "inviteOnly": false,
-    "kyc": false,
-    "language": [
-      "Solidity"
-    ],
-    "launchDate": "2026-11-10T13:10:00.000Z",
-    "isPaused": false,
-    "pausedAt": null,
-    "pausedMessage": null,
-    "logo": "https://qn5bmgziiocgawpp.public.blob.vercel-storage.com/124090-Ij52DGnN8s_juawGV2dR1.png",
-    "maxBounty": 500000,
-    "outOfScopeAndRules": null,
-    "pocPerTypeAndSeverity": [
-      "smart_contract - critical",
-      "smart_contract - high",
-      "smart_contract - medium",
-      "smart_contract - low"
-    ],
-    "primaryPaymentWallet": "EVM",
-    "prioritizedVulnerabilities": "_blank_",
-    "productType": [
-      "DEX"
-    ],
-    "programOverview": "We're launching this bug bounty alongside our mainnet deployment. We want whitehats to look for vulnerabilities that could cause loss or freezing of user or LP funds, swaps at the wrong price, abuse of the oracle or extension logic, or a way around access controls and timelocks. Our main concerns are the pool, factory, oracles, extension and router contracts.",
-    "programType": [
-      "Smart Contract"
-    ],
-    "project": "Metric",
-    "projectType": [
-      "Defi"
-    ],
-    "rewardsBody": "Rewards for High and Medium smart contract vulnerabilities are 20% of the funds directly affected. Each amount is capped at its tier’s maximum and floored at its tier’s minimum.\n\nPermanent freezing of funds critical is capped at 200 000$.\n\nMalicious price provider implementations are out of scope. We still encourage research in this area: the team may, at its discretion, award individual valid findings hence why we added it to the scope as low.",
-    "rewardsPool": 0,
-    "primaryPool": 0,
-    "allStarsPool": 0,
-    "podiumPool": 0,
-    "rewardsToken": "USDC",
-    "slug": "metric",
-    "tenPercentEconomicRule": false,
-    "updatedDate": "2026-11-15T06:01:11.360Z",
-    "impactsBody": null,
-    "websiteUrl": "https://www.metric.xyz",
-    "githubUrl": "https://github.com/Metricxyz/",
-    "eligibilityCriteria": [],
-    "responsiblePublicationCategory": "category_3",
-    "description": "Metric is a decentralized exchange for active pools: pools with custom pricing and liquidity that proactively change with new information.",
-    "knownIssues": [
-      {
-        "id": 1554,
-        "link": "https://github.com/Metricxyz/Known_issues/tree/main/other",
-        "description": "This document + all issues mentioned int any of the audit reports",
-        "lastUpdatedAt": "2026-08-12T22:00:00.000Z",
-        "relatedImpactInScope": "smart_contract"
-      },
-      {
-        "id": 1555,
-        "link": "https://audits.sherlock.xyz/contests/1279?p=3d1041a8897184d70afd42ef032bc5f0c5b5f0fe4670aed8e94e945834476ef0",
-        "description": "Audit contest results include a lot of issues that are known as well",
-        "lastUpdatedAt": "2026-08-29T22:00:00.000Z",
-        "relatedImpactInScope": "smart_contract"
-      }
-    ],
-    "defaultOutOfScopeBlockchain": null,
-    "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-    "defaultOutOfScopeWebAndApplications": null,
-    "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
-    "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-    "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-    "customOutOfScopeInformation": "Additional Out of Scope Information\n\nThe following are out of scope and not eligible for rewards:\n\n1. Trusted roles and configuration\n- Issues requiring a malicious, compromised or careless trusted role: Factory Owner, Oracle ADMIN_ROLE (blacklist, integrators, approved factories, registration fee, withdrawEth), and the PriceProvider / AnchoredProvider factory admins.\n- Pool Admin actions within their allowed bounds (admin fees up to the cap, timelocked price-provider changes, pausing their own pool, bin and extension settings). Only bypassing the caps or an honestly configured timelock is in scope, and only at Medium severity or higher.\n- Pools created or configured with unreasonable or malicious parameters. Users are expected to do their own due diligence; pool risk tiers (red, unverified curator, unverified price provider) are informational.\n\n2. Oracles and off-chain components\n- Incorrect, manipulated or stale prices from oracle providers (Chainlink, Pyth, compressed or pushed oracles) or from off-chain pushers and signers. Oracle data is assumed correct and fresh.\n- Pools halting because a feed is stale or down (FeedStalled, staleness checks, Chainlink deviation or sequencer checks). This is intended behaviour, not denial of service.\n- Off-chain infrastructure: price pushers, quote and maker services (including protected execution lanes and pamm-quote), keepers, indexers, the API (api.metric.xyz), SDK, app, admin dashboard and docs.\n\n3. Tokens and third-party code\n- Non-standard ERC-20 tokens: fee-on-transfer, rebasing, tokens with transfer hooks (ERC-777), tokens with fewer than 6 or more than 18 decimals, tokens that revert on zero transfers. USDC and USDT are in scope; the effect of their issuers blocklisting an address is not.\n- Price providers, sources and extensions written and deployed by third parties, and anything that depends on them.\n- External protocols and routers (aggregators, other DEXes, routes through externalSwap / ExternalSwapExecutor). Losses caused by external routers or integrators, including insufficient gas limits, are out of scope.\n\n4. Market and execution risk\n- Front-running, sandwiching and other MEV within the user's slippage or deadline settings; gas griefing; block stuffing; reorgs; sequencer or builder behaviour.\n- Liquidity-provider losses from normal market risk: adverse selection, unfavourable price-provider or spread settings, impermanent loss.\n- Rounding dust or precision loss below the Medium threshold (0.01% and $10), unless it can be repeated to reach Medium or higher.\n\n5. Already known or not deployed\n- Issues listed in previous audits or known-issue documents, and any report sharing a root cause with them. https://github.com/Metricxyz/Known_issues for all known issues.\n- Contracts not listed as in-scope assets, superseded or deprecated deployments, test files, mocks, scripts, deployment tooling and testnet deployments.\n- Issues in code that is not deployed, or already fixed in the deployed version.\n\n6. General exclusions\n- Gas optimisations, code style, missing events, informational or best-practice findings, and centralisation concerns about trusted roles.\n- Attacks requiring stolen private keys, phishing, social engineering or physical access; denial-of-service on websites or APIs; rate-limit or spam issues on off-chain services.\n- Bugs in the underlying blockchain, the EVM, compilers or standard libraries (e.g. OpenZeppelin), unless Metric's code uses them incorrectly.\n\n7. Severity and feasibility rules\n\n- Critical requires at least $10,000 of funds directly at risk; otherwise the report is assessed as High at most.\n- Attacks that require a user to interact with a pool, extension or price provider created by the attacker are downgraded by one severity level.\n- Immunefi’s standard feasibility limitations apply, including Attack Investment Amount: if the capital required exceeds the potential gain, severity may be downgraded.\n- Reports must include a runnable proof of concept on a local fork. Testing against mainnet or testnet deployments is prohibited.",
-    "customProhibitedActivities": [],
-    "impacts": [
-      {
-        "id": 6402,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Bypassing the admin fee caps or the price-provider timelock."
-      },
-      {
-        "id": 6403,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "bypassing the deposit or swap allowlist extensions."
-      },
-      {
-        "id": 6404,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Swap on a Metric anchored price provider pool executes outside the band or beyond its configured staleness limit"
-      },
-      {
-        "id": 6405,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Successful swap on a paused pool"
-      },
-      {
-        "id": 6406,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Fees reach the wrong destination: protocol or admin fees go somewhere other than the configured receiver."
-      },
-      {
-        "id": 6407,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Unauthorized use of protocol roles: factory owner, oracle ADMIN_ROLE, propAMM adapter admin"
-      },
-      {
-        "id": 6408,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "An oracle accepts a price update without a valid Pyth or Chainlink signature, or a compressed-feed push from an unauthorized pusher"
-      },
-      {
-        "id": 6409,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "A configured stop-loss check is bypassed."
-      },
-      {
-        "id": 6410,
-        "type": "smart_contract",
-        "severity": "low",
-        "title": "Malicious Price Provider implementation that can lead to significant losses of funds for LPs"
-      },
-      {
-        "id": 6411,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Permanent freezing of funds"
-      },
-      {
-        "id": 27,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Temporary freezing of funds"
-      },
-      {
-        "id": 30,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Block stuffing"
-      },
-      {
-        "id": 31,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-      },
-      {
-        "id": 32,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Theft of gas"
-      },
-      {
-        "id": 33,
-        "type": "smart_contract",
-        "severity": "medium",
-        "title": "Unbounded gas consumption"
-      },
-      {
-        "id": 34,
-        "type": "smart_contract",
-        "severity": "low",
-        "title": "Contract fails to deliver promised returns, but doesn't lose value"
-      },
-      {
-        "id": 15,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-      },
-      {
-        "id": 22,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Protocol insolvency"
-      },
-      {
-        "id": 23,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Theft of unclaimed yield"
-      },
-      {
-        "id": 24,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Theft of unclaimed royalties"
-      },
-      {
-        "id": 25,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Permanent freezing of unclaimed yield"
-      },
-      {
-        "id": 26,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Permanent freezing of unclaimed royalties"
-      }
-    ],
-    "rewards": [
-      {
-        "id": 52514,
-        "primacy": "primacy_of_impact",
-        "severity": "critical",
-        "assetType": "smart_contract",
-        "maxReward": 500000,
-        "minReward": 50000,
-        "rewardModel": "range",
-        "rewardCalculationPercentage": 20
-      },
-      {
-        "id": 52515,
-        "primacy": "primacy_of_impact",
-        "severity": "high",
-        "assetType": "smart_contract",
-        "maxReward": 50000,
-        "minReward": 10000,
-        "rewardModel": "range"
-      },
-      {
-        "id": 52516,
-        "primacy": "primacy_of_impact",
-        "severity": "medium",
-        "assetType": "smart_contract",
-        "maxReward": 10000,
-        "minReward": 2500,
-        "rewardModel": "range"
-      },
-      {
-        "id": 52517,
-        "primacy": "primacy_of_impact",
-        "severity": "low",
-        "assetType": "smart_contract",
-        "fixedReward": 1000,
-        "rewardModel": "fixed"
-      }
-    ],
-    "audits": [
-      {
-        "id": "1543",
-        "url": "https://github.com/Metricxyz/Known_issues/tree/main/sherlock",
-        "auditor": "Sherlock",
-        "date": "2026-10-09T00:00:00.000Z"
-      },
-      {
-        "id": "1544",
-        "url": "https://github.com/Metricxyz/Known_issues/tree/main/zellic",
-        "auditor": "Zellic",
-        "date": "2026-06-28T00:00:00.000Z"
       }
     ]
   },
@@ -57371,317 +59112,6 @@
       }
     ],
     "audits": []
-  },
-  {
-    "assets": [
-      {
-        "id": "6ZyuP63lnWlRAJFkwc0SHS",
-        "url": "https://etherscan.io/address/0x7613D202Af490c3d1cE1873b0a7022a34E89815f",
-        "type": "smart_contract",
-        "addedAt": "2026-01-21T11:27:22.127Z",
-        "revision": 0,
-        "description": "eWSTETH Intermediate Credit Vault",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "6tytRoQFSHmzwDbJ1d2JUq",
-        "url": "https://etherscan.io/address/0x75029a47f28550C93Ad5A3BbD2d9b5315204B561",
-        "type": "smart_contract",
-        "addedAt": "2026-01-21T11:27:22.140Z",
-        "revision": 0,
-        "description": "aWSTETH Intermediate Credit Vault",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "2QlIEVqh8EXvdcNtDsvYs7",
-        "url": "https://etherscan.io/address/0x87b8081A3ace680f35125F469526Ac10f5418Ca7",
-        "type": "smart_contract",
-        "addedAt": "2025-10-09T11:25:02.005Z",
-        "revision": 0,
-        "description": "eWETH Intermediate Credit Vault",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "3KPWTCbSspspP26TgaiPQ0",
-        "url": "https://etherscan.io/address/0xB5Eb1d005e389Bef38161691E2083b4d86FF647a",
-        "type": "smart_contract",
-        "addedAt": "2025-10-09T11:24:34.990Z",
-        "revision": 0,
-        "description": "Intermediate Vault Factory",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "60tZnpcchN6yiO6hOpU41V",
-        "url": "https://etherscan.io/address/0xb001f039D76bA48E577A17c04b6940DB37aF8648",
-        "type": "smart_contract",
-        "addedAt": "2025-10-09T11:25:14.895Z",
-        "revision": 0,
-        "description": "Euler Oracle Router",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "6Yf3WyBHvvFQsfQ6sWweXs",
-        "url": "https://etherscan.io/address/0x0acd3A3c8Ab6a5F7b5A594C88DFa28999dA858aC",
-        "type": "smart_contract",
-        "addedAt": "2025-10-09T11:25:25.946Z",
-        "revision": 0,
-        "description": "Vault Manager",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "6kyGbPvccklgygiMtEDdD7",
-        "url": "https://etherscan.io/address/0xa1517cCe0bE75700A8838EA1cEE0dc383cd3A332",
-        "type": "smart_contract",
-        "addedAt": "2025-10-09T11:24:48.946Z",
-        "revision": 0,
-        "description": "Collateral Vault Factory",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "98749",
-        "url": "https://immunefi.com/",
-        "type": "smart_contract",
-        "addedAt": "2026-02-06T15:58:36.804Z",
-        "revision": 0,
-        "description": "Primacy of Impact",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": true
-      },
-      {
-        "id": "98826",
-        "url": "https://etherscan.io/address/0xFaBA8f777996C0C28fe9e6554D84cB30ca3e1881",
-        "type": "smart_contract",
-        "addedAt": "2026-02-13T08:58:12.349Z",
-        "revision": 0,
-        "description": "awstETH Wrapper",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "98827",
-        "url": "https://etherscan.io/address/0x868a21426852A775395d4b90De23B3e3E662bd78",
-        "type": "smart_contract",
-        "addedAt": "2026-02-13T08:58:12.349Z",
-        "revision": 0,
-        "description": "Aave V3 Teleport Operator",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "98828",
-        "url": "https://etherscan.io/address/0x451949bde57aBe2F5DBD4758Cd50C6DCfC093A4C",
-        "type": "smart_contract",
-        "addedAt": "2026-02-13T08:58:12.349Z",
-        "revision": 0,
-        "description": "Aave V3 Leverage Operator",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "98829",
-        "url": "https://etherscan.io/address/0x229fE10bC00bBE99Ac99703647D4f74F31605e91",
-        "type": "smart_contract",
-        "addedAt": "2026-02-13T08:58:12.349Z",
-        "revision": 0,
-        "description": "Aave V3 Deleverage Operator",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100234",
-        "url": "https://etherscan.io/address/0xef39D6493884C4C84D38a4bFF879Ce16CEdE702a",
-        "type": "smart_contract",
-        "addedAt": "2026-06-24T09:37:16.167Z",
-        "revision": 0,
-        "description": "Twyne EVC",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100243",
-        "url": "https://etherscan.io/address/0x79CF33e623555E899d4EE122b9BfA0214fa5A4A1",
-        "type": "smart_contract",
-        "addedAt": "2026-06-25T11:37:11.660Z",
-        "revision": 0,
-        "description": "aPT22Oct2026 Intermediate Credit Vault",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "100244",
-        "url": "https://etherscan.io/address/0x0aF56aFBDDCb140323445BD7211Ba90E54e5FD1C",
-        "type": "smart_contract",
-        "addedAt": "2026-06-25T11:37:11.660Z",
-        "revision": 0,
-        "description": "aPT22Oct2026 Wrapper",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "101347",
-        "url": "https://etherscan.io/address/0xd07e1dd26f415fed3e8c490623a80ab55cf7bdbb",
-        "type": "smart_contract",
-        "addedAt": "2026-10-06T16:45:49.646Z",
-        "revision": 0,
-        "description": "Euler Leverage Operator",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      },
-      {
-        "id": "101348",
-        "url": "https://etherscan.io/address/0xb7a7Cf5EB16C124562857632F8f86Ed627e6cc35",
-        "type": "smart_contract",
-        "addedAt": "2026-10-06T16:45:49.646Z",
-        "revision": 0,
-        "description": "Aave V3 Leverage Operator",
-        "isSafeHarbor": false,
-        "isPrimacyOfImpact": false
-      }
-    ],
-    "assetsBodyV2": null,
-    "boostedIntroEvaluating": "",
-    "boostedIntroFinished": "",
-    "boostedIntroLive": "",
-    "boostedIntroStartingIn": "",
-    "boostedLeaderboard": [],
-    "boostedSummaryReport": null,
-    "ecosystem": [
-      "ETH"
-    ],
-    "endDate": null,
-    "evaluationEndDate": null,
-    "features": [
-      "Pay to Mediate"
-    ],
-    "hideAssetsInScope": null,
-    "immunefiStandard": true,
-    "inviteOnly": false,
-    "kyc": false,
-    "language": [
-      "Solidity"
-    ],
-    "launchDate": "2026-01-16T14:30:00.000Z",
-    "isPaused": false,
-    "pausedAt": null,
-    "pausedMessage": null,
-    "logo": "https://images.ctfassets.net/t3wqy70tc3bv/1tEO5hy6BK1IitUVevC7Mm/70f476b0452b9f6af1b327ceaa34bea9/Twyne.png",
-    "maxBounty": 50000,
-    "outOfScopeAndRules": null,
-    "pocPerTypeAndSeverity": [
-      "smart_contract - critical",
-      "smart_contract - high"
-    ],
-    "primaryPaymentWallet": "EVM",
-    "prioritizedVulnerabilities": "_blank_",
-    "productType": [
-      "Lending"
-    ],
-    "programOverview": "Twyne is a modular risk layer that leverages credit-delegation to unlock new levels of capital efficiency in lending markets. Twyne empowers lending market users with the freedom to focus on their individual goals: lenders can re-lend, borrowers can re-borrow, and together they drive the emergence of new markets, ensuring capital flows to where it is needed most.\n\nFor more information about Twyne, please visit [https://twyne.xyz/](https://twyne.xyz/).\n\nTwyne provides rewards in USDC on Ethereum, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section.\n\n__Responsible Publication__\n\nTwyne adheres to  **Category 2: Notice Required**. This Policy determines what information researchers are allowed to make public from their submitted bug reports. For more information about the category selected, please refer to our [Responsible Publication](https://immunefi.com/responsible-publication/) page.\n\n__Primacy of Impact vs Primacy of Rules__\n\nTwyne adheres to the Primacy of Impact for the following impacts:\n\n- Smart Contract  —  Critical\n- Smart Contract  —  High\n\nPrimacy of Impact means that the impact is prioritized rather than a specific asset. This encourages security researchers to report on all bugs with an in-scope impact, even if the affected assets are not in scope. \n\nFor more information, please see [Best Practices: Primacy of Impact](https://immunefisupport.zendesk.com/hc/en-us/articles/12340245635089-Best-Practices-Primacy-of-Impact) \n\nWhen submitting a report on Immunefi’s dashboard, the security researcher should select the Primacy of Impact asset placeholder. If the team behind this project has multiple programs, those other programs are not covered under Primacy of Impact for this program. Instead, check if those other projects have a bug bounty program on Immunefi.\n\nIf the project has any testnet and/or mock files, those will not be covered under Primacy of Impact.\nAll other impacts are considered under the Primacy of Rules, which means that they are bound by the terms and conditions set within this program.\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. \n- Twyne inherits the assumptions of external lending markets it integrates. So security issues with Euler, for example, won’t be considered for a bounty.\n- If the reserved credit amount after calling handleExternalLiquidation() is too small, debt may not be socialized and the entire batch will revert. Since these are small positions, it’s fine. Protocol can pay intermediate vault on collateral vault’s behalf.\n- Issues stemming from external lending protocol changing its liquidation ltv. We’re bringing an upgrade to handle this soon.\n- No slippage check on liquidate() or handleExternalLiquidation(). Liquidators need to check for slippage on their side.\n- Credit reservation may fail if the intermediate vault doesn’t have enough liquidity.\n- Issues related to chain re-orgs and network liveness\n- Incompatibilities with ERC-4626 and ERC-20 unless they pose a direct security risk\n- Issues related to censorship / frontrunning users that interact with Pyth and RedStone. We expect users to interact with the EVC or another multicall-like contract to update the price and retrieve it in a single call\n- Issues stemming from sequencer downtime on L2s, including but not limited to inexistent sequencer liveness checks\n- Any issue related to stuck funds for tokens that are airdropped to Twyne contracts\n- Any issue related to rewards accrued to Twyne contracts, example: rewards assigned by external lending protocol or integrations\n- After external liquidation and before calling `handleExternalLiquidation()`, the shares exchange rate can be higher if it creates bad debt for intermediate vault. So intermediate vault share holders have a window where they can use this fact to get more assets than they deserve.\n\n__Previous Audits__\n\nTwyne’s completed audit reports can be found at [https://twyne.gitbook.io/twyne/resources/security](https://twyne.gitbook.io/twyne/resources/security). Any unfixed vulnerabilities mentioned in these reports are not eligible for a reward.",
-    "programType": [
-      "Smart Contract"
-    ],
-    "project": "Twyne",
-    "projectType": [
-      "Defi"
-    ],
-    "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 50 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD10 000 is to be rewarded in order to incentivize security researchers against withholding a critical bug report.\n\n__Repeatable Attack Limitations__\n\n- If the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n- For critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Level Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded within a range of USD 10 000 to USD 3 000 depending on the funds at risk, capped at the maximum high reward.  \n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Twyne team directly and are denominated in USD. However, payments are done in USDC on Ethereum.\n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
-    "rewardsPool": 0,
-    "primaryPool": 0,
-    "allStarsPool": 0,
-    "podiumPool": 0,
-    "rewardsToken": "USDC",
-    "slug": "twyne",
-    "tenPercentEconomicRule": false,
-    "updatedDate": "2026-10-12T07:09:19.554Z",
-    "impactsBody": "All vaults deployed using `CollateralVaultFactory` are considered in scope",
-    "websiteUrl": "https://twyne.xyz/",
-    "githubUrl": "https://github.com/0xTwyne/",
-    "eligibilityCriteria": [],
-    "responsiblePublicationCategory": "category_3",
-    "description": "Twyne is a modular risk layer that leverages credit-delegation to unlock new levels of capital efficiency in lending markets. Twyne empowers lending market users with the freedom to focus on their individual goals: lenders can re-lend, borrowers can re-borrow, and together they drive the emergence of new markets, ensuring capital flows to where it is needed most.\n",
-    "knownIssues": [],
-    "defaultOutOfScopeBlockchain": null,
-    "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
-    "defaultOutOfScopeWebAndApplications": null,
-    "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
-    "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
-    "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-    "customOutOfScopeInformation": "- Reverts in/through Operator contracts that solely prevent the execution of batched transactions shall be deemed out of scope.",
-    "customProhibitedActivities": [],
-    "impacts": [
-      {
-        "id": 15,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-      },
-      {
-        "id": 17,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Permanent freezing of funds"
-      },
-      {
-        "id": 22,
-        "type": "smart_contract",
-        "severity": "critical",
-        "title": "Protocol insolvency"
-      },
-      {
-        "id": 5742,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Temporary freezing of funds (for at least 24 hours)"
-      },
-      {
-        "id": 23,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Theft of unclaimed yield"
-      },
-      {
-        "id": 25,
-        "type": "smart_contract",
-        "severity": "high",
-        "title": "Permanent freezing of unclaimed yield"
-      }
-    ],
-    "rewards": [
-      {
-        "id": 51589,
-        "primacy": null,
-        "severity": "critical",
-        "assetType": "smart_contract",
-        "maxReward": 50000,
-        "minReward": 10000,
-        "rewardModel": "range",
-        "rewardCalculationPercentage": 10
-      },
-      {
-        "id": 51590,
-        "primacy": null,
-        "severity": "high",
-        "assetType": "smart_contract",
-        "maxReward": 10000,
-        "minReward": 3000,
-        "rewardModel": "range"
-      }
-    ],
-    "audits": [
-      {
-        "id": "1beurkDiyFA3vxpT3NCjN0",
-        "url": "https://twyne.gitbook.io/twyne/resources/security",
-        "auditor": "All Audits",
-        "date": "2026-01-16T00:00:00.000Z"
-      }
-    ]
   },
   {
     "assets": [
