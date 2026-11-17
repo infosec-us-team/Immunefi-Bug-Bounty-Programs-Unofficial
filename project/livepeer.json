@@ -291,7 +291,7 @@
   "rewardsToken": "USDC",
   "slug": "livepeer",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-11-12T19:46:00.543Z",
+  "updatedDate": "2026-11-16T14:48:44.692Z",
   "impactsBody": "## Repeatable attack limitations\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attack will be considered for a reward.\n\nThe amount of funds at risk will be calculated with the impact of the first attack being at **100**% and then a reduction of **100**% from the amount of the first attack for every **24** hours the attack needs for subsequent attacks from the first attack, rounded down.",
   "websiteUrl": "https://livepeer.org",
   "githubUrl": "https://github.com/livepeer/protocol",
@@ -311,6 +311,20 @@
       "link": "https://github.com/livepeer/protocol/issues/656",
       "description": "MixinReserve.claimableReserve() can produce per-claimant reserve caps above or below the fair R/N allocation when the live transcoder pool size and the current-round active set diverge mid-round (e.g. during resignation or activation). Overclaim is bounded by the ticket face value. No theft is possible.",
       "lastUpdatedAt": "2019-09-19T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1570,
+      "link": "https://github.com/livepeer/protocol/issues/668",
+      "description": "ETH payouts through Minter.trustedWithdrawETH fail for recipients that need more than the 2,300-gas stipend",
+      "lastUpdatedAt": "2023-08-11T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1571,
+      "link": "https://github.com/livepeer/protocol/issues/667",
+      "description": "L2Migrator.claimStake can mark a delegator with no delegate as migrated without bonding their stake",
+      "lastUpdatedAt": "2026-07-31T22:00:00.000Z",
       "relatedImpactInScope": "smart_contract"
     },
     {
@@ -430,7 +444,7 @@
   ],
   "rewards": [
     {
-      "id": 52428,
+      "id": 52535,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -439,7 +453,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 52429,
+      "id": 52536,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -447,7 +461,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 52430,
+      "id": 52537,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -455,7 +469,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 52431,
+      "id": 52538,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
