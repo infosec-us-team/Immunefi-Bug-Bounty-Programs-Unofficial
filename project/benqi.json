@@ -394,7 +394,9 @@
   "endDate": null,
   "evaluationEndDate": null,
   "features": [
-    "Pay to Mediate"
+    "Pay to Mediate",
+    "Pay to Submit",
+    "Pay to Mediate - No Free Mediations"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -418,7 +420,7 @@
     "smart_contract - high"
   ],
   "primaryPaymentWallet": "EVM",
-  "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types:\n\n__Smart Contracts and Blockchain__ \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors that could lead to a bricking of the contract\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces\n\n__Websites and Apps__\n\n  - Remote Code Execution\n  - Trusting trust/dependency vulnerabilities\n  - Vertical Privilege Escalation\n  - XML External Entities Injection\n  - SQL Injection\n  - LFI/RFI\n  - Horizontal Privilege Escalation\n  - Stored XSS\n  - Reflective XSS with impact\n  - CSRF with impact\n  - Internal SSRF\n  - Session fixation\n  - Insecure Deserialization\n  - Direct object reference\n  - DOM XSS\n  - SSL misconfigurations\n  - SSL/TLS issues (weak crypto, improper setup)\n  - URL redirect\n  - Clickjacking (must include PoC to be considered)\n  - Misleading Unicode text (e.g. using right to left override characters)",
+  "prioritizedVulnerabilities": "_blank_",
   "productType": [
     "Lending",
     "Liquid Staking"
@@ -440,7 +442,7 @@
   "rewardsToken": "QI",
   "slug": "benqi",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-08-05T13:40:26.978Z",
+  "updatedDate": "2026-11-17T18:13:55.762Z",
   "impactsBody": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table. All reports must come with a Proof of Concept (PoC) showing impact. Reports without a PoC will be automatically rejected.",
   "websiteUrl": "https://benqi.fi/",
   "githubUrl": null,
@@ -454,7 +456,7 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "  - Best practice critiques\n  - ERC-777 re-entrancy\n  - Reward distribution bugs affecting early borrowers in markets with zero distribution rewards\n  - Reward distribution bugs resulting from temporarily disabling distribution rewards",
+  "customOutOfScopeInformation": "- Best practice critiques\n  - ERC-777 re-entrancy\n  - Reward distribution bugs affecting early borrowers in markets with zero distribution rewards\n  - Reward distribution bugs resulting from temporarily disabling distribution rewards",
   "customProhibitedActivities": [],
   "impacts": [
     {
@@ -538,7 +540,7 @@
   ],
   "rewards": [
     {
-      "id": 49727,
+      "id": 52553,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -547,7 +549,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 49728,
+      "id": 52554,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -555,7 +557,7 @@
       "rewardModel": "up_to"
     },
     {
-      "id": 49729,
+      "id": 52555,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -564,7 +566,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 49730,
+      "id": 52556,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
