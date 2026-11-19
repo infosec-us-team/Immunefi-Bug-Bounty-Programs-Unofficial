@@ -270,7 +270,7 @@
   "projectType": [
     "Defi"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 1 000 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 100 000 is to be rewarded in order to incentivize security researchers against withholding a bug report.   \n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Public Disclosure of Known Issues__\n\nBug reports covering previously-discovered bugs acknowledged below are not eligible for any reward through the bug bounty program. \n\n**1.) SD Auction final bid price can be gamed by MEV optimization.** (This is intended)\n\n**2.) Node Operator can avoid small portion of validator penalty by exiting at the right time.** (This is limited to once per validator and cost of exiting and reactivation does not justify penalty saved)\n\n**3.) ER update via Chainlink may return incorrect or stale data as it is not implemented yet; currently ER data is submitted by oracle members.**\n\n**4.) Protocol will not benefit from slashing mechanism when remaining penalty bigger than minThreshold of SD.**\n\n**5.) ETHx exchange rate: deposits settle at the last applied oracle rate**\n\nThe ETHx exchange rate updates only when a quorum of oracle nodes agrees on a report for a past reporting block. Until quorum, deposits mint at the previously applied rate, so a depositor who enters after the reporting block and before an upward update receives a share of rewards accrued before entry, and can redeem after the update. This is a known trade-off of a committee-reported rate and was raised in the Code4rena June 2023 audit (issues 332 and 351). Reports that a depositor can \"sandwich\", \"front-run\" or \"snipe\" an exchange-rate update, act on a rate revealed by an earlier oracle submission, deposit during ER inspection mode or before it closes, or capture rewards not yet reflected in the rate, are variants of this known issue, regardless of the configured withdrawal delay.\n\n**6.) ETHx exchange rate: withdrawals finalize at the last applied rate; inspection mode does not block finalization**\n\nWithdrawal requests finalize at the lower of the rate at request time and the rate at finalization, after the configured delay. Between a loss-reporting block and quorum, mature requests finalize at the previous rate. A single node's pre-quorum submission does not change the applied rate. Large rate movements put the oracle in ER inspection mode for manual review; inspection mode does not itself gate withdrawal finalization, and the safe-mode switch exists for that purpose. See Code4rena June 2023 issues 222, 250, 293 and 338. Reports that a withdrawer can exit before a negative report is applied, or that inspection mode should freeze finalization, are variants of this known issue.\n\n**7.) SD Utility Pool: slashed SD collateral is not written back to the pool ledger**\n\nWhen an operator's SD collateral is slashed, SDCollateral.slashSD does not reduce the operator's utilized position in SDUtilityPool, and the slashed SD is auctioned with proceeds going to ETHx stakers, as the operator bond intends. The pool keeps the amount as a receivable owed by the operator, so the cToken exchange rate can exceed the SD recoverable until the position is repaid, liquidated or written off. This is the documented lending risk of the Utility Pool (Sigma Prime SD Utility Pool audit SDP-14, acknowledged; Stader documentation on SD delegation risks). Reports of \"phantom debt\", \"phantom interest\", pool insolvency after a slash, delegator SD routed to ETH stakers, or an early withdrawer receiving more than a later one, are variants of this known issue.\n\n**8.) Operator rewards collector: partial liquidation settlement when the operator has no active keys**\n\nWhen a liquidated operator's keys have all exited and the collector balance is below the outstanding liquidation amount, the collector pays the available balance and marks the liquidation complete. Liquidators are expected to assess recoverability before calling liquidationCall; the protocol does not guarantee full recovery from an operator whose validators have already exited. Operator-side variants (remaining debt or protocol fee forgiven) and liquidator-side variants (liquidator under-paid) share this root cause.\n\n**9.) Permissioned pool operators may utilize SD without an SD bond**\n\nPermissioned operators are approved individually by the protocol, operate validators funded by user ETH, and post no on-chain ETH or SD collateral; their participation relies on trust and accountability rather than collateral. SDUtilityPool.utilize is not restricted by pool, getOperatorTotalEth credits collateral per active key regardless of pool, and OperatorRewardsCollector.claim() applies liquidation settlement and the withdrawable-amount cap only to permissionless operators. A liquidator of a permissioned operator should call claimLiquidation in the same transaction as liquidationCall. Reports that a permissioned operator could borrow and default, leave unpaid interest in the pool's exchange rate, skip liquidation settlement on claim, or front-run a liquidator's settlement, fall under the trusted-role exclusion and this known issue.\n\n**10.) SD collateral: withdrawOnBehalf is permissionless**\n\nSDCollateral.withdrawOnBehalf may be called by anyone for any operator. It can only move SD above the operator's withdrawal threshold, first repays any Utility Pool debt, and sends the remainder to the operator's own reward address. The caller gains nothing. This is intended.\n\n**11.) Withdrawal queue: sequential finalization and small-request griefing**\n\nUserWithdrawalManager finalizes requests strictly in order, after the configured delay, and only when the pool holds enough ETH for the next request. Anyone can submit many minimum-size requests or one large request and delay later requests until theirs are finalized. The requester locks their own ETHx for the duration and gains nothing; finalization is permissionless and resumes as ETH arrives. Delays caused by available liquidity are out of scope. Reports of \"head-of-line blocking\", \"queue poisoning\", \"withdrawal spamming\" or request-id manipulation are variants of this known issue.\n\n**12.) SD price oracle: trusted nodes can move the SD price within the quorum rules**\n\nSD price updates are the median of values submitted by trusted oracle nodes, which source prices from external data and are applied under the quorum rules in StaderOracle. The risk of a compromised or faulty price source was reviewed and accepted (Halborn ETHx oracle audit HAL-02). Reports that a compromised or colluding minority of trusted nodes or price sources can influence the SD price or the ETHx rate fall under the trusted-role exclusion.\n\n**13.) Auction: lots may be created with zero SD**\n\nAuction.createLot does not reject a zero _sdAmount. A zero lot holds no SD, receives no bids worth anything, and costs only the creator's gas. Storage spam of this kind is informational.\n\n**14.) SD Utility Pool: timing of delegation around withdrawal finalization**\n\nQueued withdrawal requests remain in the cToken supply until finalized, and finalization pays the lower of the SD value at request time and at finalization. Any surplus stays in the pool and accrues to cToken holders at that block, including late entrants. This is inherent to a queue-based, snapshot-priced withdrawal (Sigma Prime SD Utility Pool audit SDP-14).\n\n**15.) Gas cost of iterating an operator's validator history**\n\nFunctions that count or iterate an operator's keys are linear in the operator's key count, and for operators with large key histories some may exceed the per-transaction gas limit. A cache has been deployed for permissionless operators; residual gas-cost reports on these paths are informational.\n\n**16.) Operator rewards collector: a maximum claim can leave a position at the liquidation threshold**\n\nclaim() lets an operator withdraw down to the amount retained for unpaid utilization fees, which can leave its health factor at or near 1. Liquidation at a health factor of 1 or below is the documented recovery path for unpaid utilization fees, and operators avoid it by repaying before claiming. Reports that a claim makes an operator immediately liquidatable, or that the liquidation bonus can be captured afterwards, are variants of this known issue.\n\n**17.) Permissioned pool: defective-key reimbursement is limited by the insurance fund balance**\n\nWhen the oracle reports front-run or invalid-signature keys, the pre-deposit amount per key is reimbursed from StaderInsuranceFund. A report whose defective keys exceed the fund balance reverts and must be resubmitted in smaller batches or after the fund is topped up (depositFund is permissionless). Defective keys are created only by whitelisted permissioned operators, so reports built on an operator submitting invalid keys fall under the trusted-role exclusion and this known issue.\n\n__Previous Audits__\n\nStader has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [https://www.staderlabs.com/audits/ethereum/smartcontracts/ETHx_SmartContract_Audit_Report_by_Halborn_v2.pdf](https://www.staderlabs.com/audits/ethereum/smartcontracts/ETHx_SmartContract_Audit_Report_by_Halborn_v2.pdf)\n- [https://www.staderlabs.com/audits/ethereum/smartcontracts/ETHx_SmartContract_audit_report_by_SigmaPrime_v2.pdf](https://www.staderlabs.com/audits/ethereum/smartcontracts/ETHx_SmartContract_audit_report_by_SigmaPrime_v2.pdf)\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract - Critical\n- Smart Contract - High\n- Smart Contract - Medium\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules). Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Stader team directly and are denominated in USD. However, payments are done in USDC.",
+  "rewardsBody": "Rewards are distributed according to the impact the vulnerability could otherwise cause based on the Impacts in Scope table further below. \n\n__Reward Calculation for Critical Level Reports__\n\nFor critical Smart Contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of USD 1 000 000. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted. However, a minimum reward of USD 100 000 is to be rewarded in order to incentivize security researchers against withholding a bug report.   \n\n__Repeatable Attack Limitations__\n\nIn cases of repeatable attacks for smart contract bugs, only the first attack will be counted, regardless of whether the smart contract is upgradable, pausable, or killable.\n\n__Previous Audits__\n\nStader has provided these completed audit review reports for reference. Any unfixed vulnerability mentioned in these reports are not eligible for a reward.\n- [https://www.staderlabs.com/audits/ethereum/smartcontracts/ETHx_SmartContract_Audit_Report_by_Halborn_v2.pdf](https://www.staderlabs.com/audits/ethereum/smartcontracts/ETHx_SmartContract_Audit_Report_by_Halborn_v2.pdf)\n- [https://www.staderlabs.com/audits/ethereum/smartcontracts/ETHx_SmartContract_audit_report_by_SigmaPrime_v2.pdf](https://www.staderlabs.com/audits/ethereum/smartcontracts/ETHx_SmartContract_audit_report_by_SigmaPrime_v2.pdf)\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC is required for the following severity levels:\n- Smart Contract - Critical\n- Smart Contract - High\n- Smart Contract - Medium\n\nAll PoCs submitted must comply with the Immunefi-wide [PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules). Bug report submissions without a PoC when a PoC is required will not be provided with a reward.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Stader team directly and are denominated in USD. However, payments are done in USDC.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -278,14 +278,134 @@
   "rewardsToken": "USDC",
   "slug": "staderforeth",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-11-16T14:44:48.750Z",
+  "updatedDate": "2026-11-18T14:24:00.380Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
   "eligibilityCriteria": [],
   "responsiblePublicationCategory": "category_3",
   "description": "Stader is a non-custodial smart contract based staking platform that helps you conveniently discover and access staking solutions.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1573,
+      "link": "https://github.com/stader-labs/ethx/blob/9d4a9211431d6c0cdf014bd64d3718cba4ce96ab/contracts/StaderInsuranceFund.sol#L55-L61",
+      "description": "Permissioned pool: defective-key reimbursement is limited by the insurance fund balance - When the oracle reports front-run or invalid-signature keys, the pre-deposit amount per key is reimbursed from StaderInsuranceFund. A report whose defective keys exceed the fund balance reverts and must be resubmitted in smaller batches or after the fund is topped up (depositFund is permissionless). Defective keys are created only by whitelisted permissioned operators, so reports built on an operator submitting invalid keys fall under the trusted-role exclusion and this known issue.",
+      "lastUpdatedAt": "2026-11-03T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1574,
+      "link": "https://github.com/stader-labs/ethx/blob/9d4a9211431d6c0cdf014bd64d3718cba4ce96ab/contracts/OperatorRewardsCollector.sol#L95-L115",
+      "description": "Operator rewards collector: a maximum claim can leave a position at the liquidation threshold - claim() lets an operator withdraw down to the amount retained for unpaid utilization fees, which can leave its health factor at or near 1. Liquidation at a health factor of 1 or below is the documented recovery path for unpaid utilization fees, and operators avoid it by repaying before claiming. Reports that a claim makes an operator immediately liquidatable, or that the liquidation bonus can be captured afterwards, are variants of this known issue.",
+      "lastUpdatedAt": "2026-09-30T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1575,
+      "link": "https://github.com/stader-labs/ethx/blob/9d4a9211431d6c0cdf014bd64d3718cba4ce96ab/contracts/PermissionedNodeRegistry.sol#L535-L557",
+      "description": "Gas cost of iterating an operator's validator history - Functions that count or iterate an operator's keys are linear in the operator's key count, and for operators with large key histories some may exceed the per-transaction gas limit. A cache has been deployed for permissionless operators; residual gas-cost reports on these paths are informational.",
+      "lastUpdatedAt": "2026-11-13T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1576,
+      "link": "https://www.staderlabs.com/audits/SDUtilityPool/SD_Utility_Pool_Audit_Report_by_SigmaPrime.pdf",
+      "description": "SD Utility Pool: timing of delegation around withdrawal finalization - Queued withdrawal requests remain in the cToken supply until finalized, and finalization pays the lower of the SD value at request time and at finalization. Any surplus stays in the pool and accrues to cToken holders at that block, including late entrants. This is inherent to a queue-based, snapshot-priced withdrawal (Sigma Prime SD Utility Pool audit SDP-14).",
+      "lastUpdatedAt": "2023-12-31T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1577,
+      "link": "https://github.com/code-423n4/2023-06-stader-findings/issues/284",
+      "description": "Auction: lots may be created with zero SD - Auction.createLot does not reject a zero _sdAmount. A zero lot holds no SD, receives no bids worth anything, and costs only the creator's gas. Storage spam of this kind is informational.",
+      "lastUpdatedAt": "2023-06-08T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1578,
+      "link": "https://www.staderlabs.com/audits/ethx/StaderLabs_ETHx_Oracle_Audit_report_by_Halborn.pdf",
+      "description": "SD price oracle: trusted nodes can move the SD price within the quorum rules - SD price updates are the median of values submitted by trusted oracle nodes, which source prices from external data and are applied under the quorum rules in StaderOracle. The risk of a compromised or faulty price source was reviewed and accepted (Halborn ETHx oracle audit HAL-02). Reports that a compromised or colluding minority of trusted nodes or price sources can influence the SD price or the ETHx rate fall under the trusted-role exclusion.",
+      "lastUpdatedAt": "2023-05-31T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1579,
+      "link": "https://github.com/stader-labs/ethx/blob/9d4a9211431d6c0cdf014bd64d3718cba4ce96ab/contracts/UserWithdrawalManager.sol#L137-L179",
+      "description": "Withdrawal queue: sequential finalization and small-request griefing - UserWithdrawalManager finalizes requests strictly in order, after the configured delay, and only when the pool holds enough ETH for the next request. Anyone can submit many minimum-size requests or one large request and delay later requests until theirs are finalized. The requester locks their own ETHx for the duration and gains nothing; finalization is permissionless and resumes as ETH arrives. Delays caused by available liquidity are out of scope. Reports of \"head-of-line blocking\", \"queue poisoning\", \"withdrawal spamming\" or request-id manipulation are variants of this known issue.",
+      "lastUpdatedAt": "2026-11-07T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1580,
+      "link": "https://github.com/stader-labs/ethx/blob/9d4a9211431d6c0cdf014bd64d3718cba4ce96ab/contracts/SDCollateral.sol#L109-L141",
+      "description": "SD collateral: withdrawOnBehalf is permissionless - SDCollateral.withdrawOnBehalf may be called by anyone for any operator. It can only move SD above the operator's withdrawal threshold, first repays any Utility Pool debt, and sends the remainder to the operator's own reward address. The caller gains nothing. This is intended.",
+      "lastUpdatedAt": "2024-11-24T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1581,
+      "link": "https://github.com/stader-labs/ethx/blob/9d4a9211431d6c0cdf014bd64d3718cba4ce96ab/contracts/OperatorRewardsCollector.sol#L55-L66",
+      "description": "Permissioned pool operators may utilize SD without an SD bond - Permissioned operators are approved individually by the protocol, operate validators funded by user ETH, and post no on-chain ETH or SD collateral; their participation relies on trust and accountability rather than collateral. SDUtilityPool.utilize is not restricted by pool, getOperatorTotalEth credits collateral per active key regardless of pool, and OperatorRewardsCollector.claim() applies liquidation settlement and the withdrawable-amount cap only to permissionless operators. A liquidator of a permissioned operator should call claimLiquidation in the same transaction as liquidationCall. Reports that a permissioned operator could borrow and default, leave unpaid interest in the pool's exchange rate, skip liquidation settlement on claim, or front-run a liquidator's settlement, fall under the trusted-role exclusion and this known issue.",
+      "lastUpdatedAt": "2026-05-13T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1582,
+      "link": "https://github.com/stader-labs/ethx/blob/9d4a9211431d6c0cdf014bd64d3718cba4ce96ab/contracts/OperatorRewardsCollector.sol#L140-L193",
+      "description": "Operator rewards collector: partial liquidation settlement when the operator has no active keys - When a liquidated operator's keys have all exited and the collector balance is below the outstanding liquidation amount, the collector pays the available balance and marks the liquidation complete. Liquidators are expected to assess recoverability before calling liquidationCall; the protocol does not guarantee full recovery from an operator whose validators have already exited. Operator-side variants (remaining debt or protocol fee forgiven) and liquidator-side variants (liquidator under-paid) share this root cause.",
+      "lastUpdatedAt": "2026-09-19T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1583,
+      "link": "https://www.staderlabs.com/audits/SDUtilityPool/SD_Utility_Pool_Audit_Report_by_SigmaPrime.pdf",
+      "description": "SD Utility Pool: slashed SD collateral is not written back to the pool ledger - When an operator's SD collateral is slashed, SDCollateral.slashSD does not reduce the operator's utilized position in SDUtilityPool, and the slashed SD is auctioned with proceeds going to ETHx stakers, as the operator bond intends. The pool keeps the amount as a receivable owed by the operator, so the cToken exchange rate can exceed the SD recoverable until the position is repaid, liquidated or written off. This is the documented lending risk of the Utility Pool (Sigma Prime SD Utility Pool audit SDP-14, acknowledged; Stader documentation on SD delegation risks). Reports of \"phantom debt\", \"phantom interest\", pool insolvency after a slash, delegator SD routed to ETH stakers, or an early withdrawer receiving more than a later one, are variants of this known issue.",
+      "lastUpdatedAt": "2023-12-31T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1584,
+      "link": "https://github.com/code-423n4/2023-06-stader-findings/issues/250",
+      "description": "ETHx exchange rate: withdrawals finalize at the last applied rate; inspection mode does not block finalization - Withdrawal requests finalize at the lower of the rate at request time and the rate at finalization, after the configured delay. Between a loss-reporting block and quorum, mature requests finalize at the previous rate. A single node's pre-quorum submission does not change the applied rate. Large rate movements put the oracle in ER inspection mode for manual review; inspection mode does not itself gate withdrawal finalization, and the safe-mode switch exists for that purpose. See Code4rena June 2023 issues 222, 250, 293 and 338. Reports that a withdrawer can exit before a negative report is applied, or that inspection mode should freeze finalization, are variants of this known issue.",
+      "lastUpdatedAt": "2023-06-08T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1585,
+      "link": "https://github.com/code-423n4/2023-06-stader-findings/issues/351",
+      "description": "ETHx exchange rate: deposits settle at the last applied oracle rate - The ETHx exchange rate updates only when a quorum of oracle nodes agrees on a report for a past reporting block. Until quorum, deposits mint at the previously applied rate, so a depositor who enters after the reporting block and before an upward update receives a share of rewards accrued before entry, and can redeem after the update. This is a known trade-off of a committee-reported rate and was raised in the Code4rena June 2023 audit (issues 332 and 351). Reports that a depositor can \"sandwich\", \"front-run\" or \"snipe\" an exchange-rate update, act on a rate revealed by an earlier oracle submission, deposit during ER inspection mode or before it closes, or capture rewards not yet reflected in the rate, are variants of this known issue, regardless of the configured withdrawal delay.",
+      "lastUpdatedAt": "2023-06-08T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1586,
+      "link": "https://github.com/stader-labs/ethx/blob/9d4a9211431d6c0cdf014bd64d3718cba4ce96ab/contracts/SDCollateral.sol#L162-L168",
+      "description": "Protocol will not benefit from slashing mechanism when remaining penalty bigger than minThreshold of SD.",
+      "lastUpdatedAt": "2023-06-30T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1587,
+      "link": "https://github.com/stader-labs/ethx/blob/9d4a9211431d6c0cdf014bd64d3718cba4ce96ab/contracts/StaderOracle.sol#L737-L743",
+      "description": "ER update via Chainlink may return incorrect or stale data as it is not implemented yet; currently ER data is submitted by oracle members.",
+      "lastUpdatedAt": "2023-06-30T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1588,
+      "link": "https://github.com/stader-labs/ethx/blob/9d4a9211431d6c0cdf014bd64d3718cba4ce96ab/contracts/Penalty.sol#L94-L116",
+      "description": "Node Operator can avoid small portion of validator penalty by exiting at the right time. (This is limited to once per validator and cost of exiting and reactivation does not justify penalty saved)",
+      "lastUpdatedAt": "2023-06-30T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1589,
+      "link": "https://github.com/stader-labs/ethx/blob/9d4a9211431d6c0cdf014bd64d3718cba4ce96ab/contracts/Auction.sol#L60-L76",
+      "description": "SD Auction final bid price can be gamed by MEV optimization. (This is intended)",
+      "lastUpdatedAt": "2023-06-30T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeWebAndApplications": null,
@@ -352,7 +472,7 @@
   ],
   "rewards": [
     {
-      "id": 52532,
+      "id": 52565,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -362,7 +482,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 52533,
+      "id": 52566,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -370,7 +490,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 52534,
+      "id": 52567,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
