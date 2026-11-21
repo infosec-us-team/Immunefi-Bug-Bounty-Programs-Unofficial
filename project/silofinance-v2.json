@@ -304,7 +304,9 @@
   "endDate": null,
   "evaluationEndDate": null,
   "features": [
-    "Pay to Mediate"
+    "Pay to Mediate",
+    "Pay to Submit",
+    "Pay to Mediate - No Free Mediations"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -325,7 +327,7 @@
     "smart_contract - high"
   ],
   "primaryPaymentWallet": "EVM",
-  "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+  "prioritizedVulnerabilities": "_blank_",
   "productType": [
     "Asset Management",
     "Lending"
@@ -346,9 +348,9 @@
   "rewardsToken": "USDC",
   "slug": "silofinance-v2",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-10-05T22:04:49.607Z",
+  "updatedDate": "2026-11-21T08:03:52.465Z",
   "impactsBody": null,
-  "websiteUrl": "https://www.silo.finance/ ",
+  "websiteUrl": "https://www.silo.finance/",
   "githubUrl": "https://github.com/silo-finance/silo-contracts-v3",
   "eligibilityCriteria": [
     "no_ofac_sdn",
@@ -357,7 +359,7 @@
     "no_auditor"
   ],
   "responsiblePublicationCategory": "category_3",
-  "description": "Silo Finance consists of two prototocls: \n- Silo Lending: A non-custodial protocol that creates isolated, programmable lending markets.\n- Silo Vaults: Single-asset vaults that deploy and manage funds within Silo’s lending markets.\n",
+  "description": "Silo Finance consists of two prototocls: \n- Silo Lending: A non-custodial protocol that creates isolated, programmable lending markets.\n- Silo Vaults: Single-asset vaults that deploy and manage funds within Silo’s lending markets.",
   "knownIssues": [
     {
       "id": 1286,
@@ -391,16 +393,28 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 23,
+      "id": 30,
       "type": "smart_contract",
-      "severity": "high",
-      "title": "Theft of unclaimed yield"
+      "severity": "medium",
+      "title": "Block stuffing"
     },
     {
       "id": 25,
       "type": "smart_contract",
       "severity": "high",
       "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 3132,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing for profit"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
     },
     {
       "id": 27,
@@ -413,12 +427,6 @@
       "type": "smart_contract",
       "severity": "medium",
       "title": "Smart contract unable to operate due to lack of token funds"
-    },
-    {
-      "id": 3132,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Block stuffing for profit"
     },
     {
       "id": 31,
@@ -475,12 +483,6 @@
       "title": "Temporary freezing of NFTs"
     },
     {
-      "id": 30,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Block stuffing"
-    },
-    {
       "id": 5590,
       "type": "smart_contract",
       "severity": "medium",
@@ -489,7 +491,7 @@
   ],
   "rewards": [
     {
-      "id": 51424,
+      "id": 52903,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -499,7 +501,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 51425,
+      "id": 52904,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -507,7 +509,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 51426,
+      "id": 52905,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
