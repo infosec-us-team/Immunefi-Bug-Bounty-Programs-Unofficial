@@ -954,7 +954,7 @@
     "Defi",
     "Infrastructure"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nIn addition to Immunefi’s Vulnerability Severity Classification System, deBridge classifies the following vulnerabilities as follows. In case of discrepancy, the one below will be followed.\n\nCritical\n  - More than 5% of the loss of TVL or an unauthorized minting of deAssets in an amount that leads to substantial loss of the peg of the wrapped asset (Total supply of deAsset exceeds amount of underlying collateral locked for more than 5%)\n\nHigh\n  - Up to 5% of the loss of TVL or an unauthorized minting of deAssets in an amount that leads to substantial loss of the peg of the wrapped asset (Total supply of deAsset is on up to 5% exceeds the amount of underlying collateral locked)\n\nThe following vulnerabilities/problems are not eligible for a reward:\n\n  - Default bridging functionality doesn’t support non-standard assets (e.g. rebase assets, assets with elastic supply or tokens with fees during transfer) \n  - If a user sets an incorrect receiver or fallback address he won’t be able to claim his transfer in the destination chain and funds might be locked forever\n  - If user passes ​​REVERT_IF_EXTERNAL_FAIL flag and specifies \"data\" and \"receiver address\" params that will lead to tx being constantly reverted\n  - Framework used by the deBridge node exploitation of which requires knowledge of IP address unless information about IP address was obtained during the attack\n  - Problem with the callProxy smart contract when gas limit specified by claimer is not enough for the proper execution of the externalCall that leads to externalCall being reverted even though transaction itself is completed\n\nPayouts are handled by the __deBridge__ team directly and are denominated in USD. However, payouts are done in __USDT and USDC__, with the choice of the ratio at the discretion of the team.",
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nIn addition to Immunefi’s Vulnerability Severity Classification System, deBridge classifies the following vulnerabilities as follows. In case of discrepancy, the one below will be followed.\n\nCritical\n  - More than 5% of the loss of TVL or an unauthorized minting of deAssets in an amount that leads to substantial loss of the peg of the wrapped asset (Total supply of deAsset exceeds amount of underlying collateral locked for more than 5%)\n\nHigh\n  - Up to 5% of the loss of TVL or an unauthorized minting of deAssets in an amount that leads to substantial loss of the peg of the wrapped asset (Total supply of deAsset is on up to 5% exceeds the amount of underlying collateral locked)\n\nThe following vulnerabilities/problems are not eligible for a reward:\n\n  - Default bridging functionality doesn’t support non-standard assets (e.g. rebase assets, assets with elastic supply or tokens with fees during transfer) \n  - If a user sets an incorrect receiver or fallback address he won’t be able to claim his transfer in the destination chain and funds might be locked forever\n  - If user passes ​​REVERT_IF_EXTERNAL_FAIL flag and specifies \"data\" and \"receiver address\" params that will lead to tx being constantly reverted\n  - Framework used by the deBridge node exploitation of which requires knowledge of IP address unless information about IP address was obtained during the attack\n  - Problem with the callProxy smart contract when gas limit specified by claimer is not enough for the proper execution of the externalCall that leads to externalCall being reverted even though transaction itself is completed\n  - Problem with the callProxy contract where the `_destination` was not set correctly and cannot execute code\n\nPayouts are handled by the __deBridge__ team directly and are denominated in USD. However, payouts are done in __USDT and USDC__, with the choice of the ratio at the discretion of the team.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -962,7 +962,7 @@
   "rewardsToken": "USDC or USDT",
   "slug": "debridge",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-11-20T11:02:15.833Z",
+  "updatedDate": "2026-11-24T04:12:20.528Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -1060,7 +1060,7 @@
   ],
   "rewards": [
     {
-      "id": 52628,
+      "id": 52991,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -1069,7 +1069,7 @@
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 52629,
+      "id": 52992,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -1077,7 +1077,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 52630,
+      "id": 52993,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
