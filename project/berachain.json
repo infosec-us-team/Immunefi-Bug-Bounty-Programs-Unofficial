@@ -58,7 +58,8 @@
     "Subscription Plan: Essential",
     "Pay to Mediate",
     "Pay to Submit",
-    "Pay to Mediate - No Free Mediations"
+    "Pay to Mediate - No Free Mediations",
+    "Payout Flow"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -110,7 +111,7 @@
   "rewardsToken": "",
   "slug": "berachain",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-11-12T19:49:48.668Z",
+  "updatedDate": "2026-11-24T12:06:14.322Z",
   "impactsBody": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered in scope, even if they affect something in the assets in the scope table.\n\n__For Blockchain/DLT__\n\nThe set of attack vectors listed in this bullet list represents potential exploits that may result in one or more of the impacts defined in the table.\n\n- Remote code execution on validator node\n- Exposure of cryptographic key material\n- Impersonation of validator’s authenticated actions, e.g. forging of signatures or votes\n- Bugs that would allow the extraction, or the destruction, or the generation of surplus monetary rewards other than what is designated in the protocol\n- Any bug that would lead to a perceivable advantage other than the validator’s voting power, e.g. election bias\n- Confused deputy on equivocating or slashable behavior, e.g. the validator node is induced into voting twice involuntarily\n- Attacks lead a percentage of nodes to crash, halting the chain\n- Bugs leading to a percentage of nodes into an inconsistent state, without stopping the chain\n- Non-generic attacks lead to a chain halt or make the chain unable to progress\n- Safety and correctness flaws that would require the combination of extraordinary conditions to occur\n- Extended degradation of performances by non-generic means \n- Non-generic attacks mean that there must be an omission or a defect in the code that would result in any significant computational advantage.",
   "websiteUrl": "https://www.berachain.com",
   "githubUrl": null,
@@ -159,6 +160,30 @@
       "title": "Temporary freezing of network transactions by delaying one block by 500% or more of the average block time of the preceding 24 hours beyond standard difficulty adjustments"
     },
     {
+      "id": 14,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results"
+    },
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 16,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user NFTs, whether at-rest or in-motion, other than unclaimed royalties"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
       "id": 3,
       "type": "blockchain_dlt",
       "severity": "critical",
@@ -199,30 +224,6 @@
       "type": "blockchain_dlt",
       "severity": "low",
       "title": "Modification of transaction fees outside of design parameters"
-    },
-    {
-      "id": 14,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Manipulation of governance voting result deviating from voted outcome and resulting in a direct change from intended effect of original results"
-    },
-    {
-      "id": 15,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
-    },
-    {
-      "id": 16,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Direct theft of any user NFTs, whether at-rest or in-motion, other than unclaimed royalties"
-    },
-    {
-      "id": 17,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Permanent freezing of funds"
     },
     {
       "id": 18,
@@ -329,7 +330,7 @@
   ],
   "rewards": [
     {
-      "id": 52453,
+      "id": 53030,
       "primacy": null,
       "severity": "critical",
       "assetType": "blockchain_dlt",
@@ -339,7 +340,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 52454,
+      "id": 53031,
       "primacy": null,
       "severity": "medium",
       "assetType": "blockchain_dlt",
@@ -348,7 +349,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 52455,
+      "id": 53032,
       "primacy": null,
       "severity": "low",
       "assetType": "blockchain_dlt",
@@ -356,7 +357,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 52456,
+      "id": 53033,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -366,7 +367,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 52457,
+      "id": 53034,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -375,7 +376,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 52458,
+      "id": 53035,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -384,7 +385,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 52459,
+      "id": 53036,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",

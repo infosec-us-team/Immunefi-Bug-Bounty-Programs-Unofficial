@@ -61,17 +61,16 @@
     "Asset Management",
     "Wallet"
   ],
-  "programOverview": "Unstoppable Wallet is a non-custodial cryptocurrency asset management application for iOS and Android, focused on self-custody, open access to markets, and privacy.\n\nFor more information about Unstoppable Wallet, please visit https://unstoppable.money/.\n\nThis bug bounty program focuses on vulnerabilities affecting the Unstoppable Wallet mobile applications, particularly those that could result in:\n\n- Execution of unauthorized system commands\n- Extraction of sensitive application or system data\n- Authentication bypass\n- Persistent or material application unavailability\n- Unauthorized redirection of user deposits or withdrawals\n- Unauthorized modification of a transaction’s recipient, asset, amount, or payload after it has been presented to and confirmed by the user, resulting in financial loss\n- Signing or broadcasting a transaction that differs from the transaction explicitly confirmed by the user\n\nThe following are not considered security vulnerabilities unless they result in a demonstrated unauthorized transaction or direct financial loss:\n\n- UI/UX issues or incomplete presentation of transaction details\n- Actions explicitly initiated and confirmed by the user\n- Risks originating from malicious or compromised third-party applications\n- Missing warnings or additional confirmation steps where the user is still required to approve the action\n- Hypothetical attack scenarios without an end-to-end proof demonstrating the claimed impact in the released application",
+  "programOverview": "Unstoppable Wallet is a non-custodial cryptocurrency asset management application for iOS and Android, focused on self-custody, open access to markets, and privacy.\n\nFor more information about Unstoppable Wallet, please visit https://unstoppable.money/.\n\nThis bug bounty program focuses on vulnerabilities in the Unstoppable Wallet mobile applications that an attacker can exploit without the user's approval of a malicious action, particularly those that could result in:\n\n- Extraction of private keys or seed phrases from the device or application storage\n- Authentication bypass (PIN, biometrics, duress mode)\n- Signing or broadcasting a transaction whose bytes differ from the transaction requested by the user or the connected application\n- Substitution of the user's receive address, redirecting incoming deposits\n- Privilege escalation to access unauthorized functionality within the application\n\n**Connected applications (WalletConnect and dApps)**\nUnstoppable Wallet cannot verify the intent of third-party applications a user chooses to connect to. The following are out of scope regardless of demonstrated financial loss:\n\n- Any scenario that requires the user to connect to a malicious, compromised or attacker-controlled dApp, including via WalletConnect\n- Requests (transactions, messages, typed data, permits) sent by a connected application and approved by the user, including cases where the confirmation screen shows incomplete, simplified or misleading details of that request\n- Missing, incomplete or ineffective warnings, decoding or risk detection for requests from connected applications\n\nImprovements to how such requests are displayed are treated as product enhancements and may be submitted as feedback, but are not eligible for rewards.\n\n**Other exclusions**\n- UI/UX issues or incomplete presentation of transaction details\n- Actions explicitly initiated and confirmed by the user\n- Impacts requiring phishing or other social engineering against users or employees\n- Hypothetical attack scenarios without an end-to-end proof in the latest released application",
   "programType": [
     "Websites and Applications"
   ],
   "project": "Unstoppable Wallet",
   "projectType": [
     "Blockchain",
-    "Defi",
-    "NFT"
+    "Defi"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.2](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2). This is a simplified 5-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit. \n\nAll web/app bug reports must come with a PoC with an end-effect impacting an asset-in-scope and a suggestion for fix in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nPayouts are handled by the __Unstoppable Wallet__ team directly and are denominated in USD. However, payouts are done in __ETH and BTC__, with the choice of the ratio at the discretion of the team.",
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). This is a simplified 4-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll bug reports must come with a runnable PoC demonstrating an end-to-end impact on an in-scope asset in the latest released version of the application, and a suggestion for a fix, in order to be considered for a reward. Explanations and statements are not accepted as PoC and code is required.\n\nPayouts are handled by the __Unstoppable Wallet__ team directly and are denominated in USD. Payouts are made in __USDT on Ethereum__.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -79,13 +78,13 @@
   "rewardsToken": "USDT",
   "slug": "unstoppablewallet",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-11-20T12:45:58.469Z",
+  "updatedDate": "2026-11-24T14:12:45.585Z",
   "impactsBody": null,
-  "websiteUrl": null,
-  "githubUrl": null,
+  "websiteUrl": "https://unstoppable.money/",
+  "githubUrl": "https://github.com/horizontalsystems",
   "eligibilityCriteria": [],
-  "responsiblePublicationCategory": null,
-  "description": "Unstoppable wallet is a non-custodial cryptocurrency asset management application for iOS and Android  with a focus on self-custody, open access to markets and privacy.",
+  "responsiblePublicationCategory": "category_3",
+  "description": "Unstoppable Wallet is a non-custodial cryptocurrency asset management application for iOS and Android, focused on self-custody, open access to markets, and privacy.",
   "knownIssues": [],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": null,
@@ -103,63 +102,33 @@
       "title": "Privilege escalation to access unauthorized functionalities"
     },
     {
-      "id": 1943,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Spoofing content on the target application (Persistent)"
-    },
-    {
-      "id": 1944,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Ability to execute system commands"
-    },
-    {
-      "id": 1945,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Extract Sensitive data/files from the server such as /etc/passwd"
-    },
-    {
       "id": 1946,
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Bypassing Authentication"
     },
     {
-      "id": 1947,
+      "id": 6481,
       "type": "websites_and_applications",
       "severity": "critical",
-      "title": "Taking Down the application"
+      "title": "Substitution of the user's receive address, redirecting incoming deposits"
     },
     {
-      "id": 1948,
+      "id": 6482,
       "type": "websites_and_applications",
       "severity": "critical",
-      "title": "Redirection of user deposits and withdrawals"
+      "title": "Signing or broadcasting a transaction whose bytes differ from the transaction requested by the user or the connected application"
     },
     {
-      "id": 1949,
+      "id": 6483,
       "type": "websites_and_applications",
       "severity": "critical",
-      "title": "Wallet interaction modification resulting in financial loss"
-    },
-    {
-      "id": 1950,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Tampering with transactions submitted to the user’s wallet"
-    },
-    {
-      "id": 1951,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Submitting malicious transactions to an already-connected wallet"
+      "title": "Extraction of private keys or seed phrase from the device or application storage"
     }
   ],
   "rewards": [
     {
-      "id": 52786,
+      "id": 53349,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -168,7 +137,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 52787,
+      "id": 53350,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",

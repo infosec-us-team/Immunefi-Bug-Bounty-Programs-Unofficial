@@ -81,16 +81,6 @@
       "isPrimacyOfImpact": false
     },
     {
-      "id": "100337",
-      "url": "https://explorer.intuition.systems/address/0xbCb1526A8de4a155e4dE003361b122eDe2f22908",
-      "type": "smart_contract",
-      "addedAt": "2026-07-07T05:46:55.173Z",
-      "revision": 0,
-      "description": "AtomWallet implementation (logic behind AtomWalletBeacon) - Intuition Mainnet",
-      "isSafeHarbor": false,
-      "isPrimacyOfImpact": false
-    },
-    {
       "id": "100338",
       "url": "https://explorer.intuition.systems/address/0x98C9BCecf318d0D1409Bf81Ea3551b629fAEC165",
       "type": "smart_contract",
@@ -159,6 +149,36 @@
       "description": "Primacy of Impact",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": true
+    },
+    {
+      "id": "101710",
+      "url": "https://explorer.intuition.systems/address/0x45B65BB9FFC4BC51C9e3a56902d9183dcff51B55",
+      "type": "smart_contract",
+      "addedAt": "2026-11-24T15:23:46.770Z",
+      "revision": 0,
+      "description": "FeeProxy - Intuition Mainnet",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101711",
+      "url": "https://explorer.intuition.systems/address/0x7dB2C5040Da4A496dD592346D9aB455e264EC13B",
+      "type": "smart_contract",
+      "addedAt": "2026-11-24T15:23:46.770Z",
+      "revision": 0,
+      "description": "MultiVaultLib - Intuition Mainnet",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101712",
+      "url": "https://explorer.intuition.systems/address/0x0A33b2FdB41afd6344434759f34E5ce75285EB30",
+      "type": "smart_contract",
+      "addedAt": "2026-11-24T15:23:46.770Z",
+      "revision": 0,
+      "description": "AtomWallet implementation (logic behind AtomWalletBeacon) - Intuition Mainnet",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": null,
@@ -218,7 +238,7 @@
   "rewardsToken": "USDC",
   "slug": "intuition",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-11-20T13:13:56.390Z",
+  "updatedDate": "2026-11-24T16:47:33.619Z",
   "impactsBody": null,
   "websiteUrl": "https://intuition.systems",
   "githubUrl": "https://github.com/0xIntuition",
@@ -230,14 +250,169 @@
   ],
   "responsiblePublicationCategory": "category_3",
   "description": "Intuition is a decentralized, token-curated knowledge graph. Users create on-chain claims (atoms and triples) and stake the native token, TRUST, into per-claim bonding-curve vaults to signal confidence. The protocol runs cross-chain: the TRUST token and emissions source are deployed on Base Mainnet, while the core MultiVault, bonding curves, staking, and smart-contract atom wallets run on the Intuition Network (an Arbitrum Orbit L3 that settles to Base).",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "id": 1603,
+      "link": "https://github.com/code-423n4/intuition-bug-bounty/issues/28",
+      "description": "Utilization: a deposit and redeem round trip leaves a residue - Deposits and creations credit utilization with the full amount sent (_addUtilization with msg.value), and redeems debit it with the asset value leaving the vault before fees (_removeUtilization with assetsBeforeFees). The two bases differ by the fees retained on the way in and by any price change while the position was held, so a deposit followed by a full redeem does not return the counter to its earlier value. The personalUtilization NatSpec states this: utilization measures a user's contribution during the epoch, capital plus fees paid, and no invariant ties it to share value or TVL. A same-epoch round trip therefore leaves a positive residue that can raise the ratio, and the fees that make up the residue stay with the protocol and vault holders. Reports that gross-in and net-out accounting is asymmetric, that wash deposits and redeems inflate utilization, or that utilization drifts away from TVL are variants of this known issue.",
+      "lastUpdatedAt": "2026-01-20T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1604,
+      "link": "https://github.com/code-423n4/intuition-bug-bounty/issues/19",
+      "description": "Atom wallets: deposit fees wait for a claimed wallet - Atom-wallet deposit fees accrue in MultiVault under the atom's counterfactual wallet address (accumulatedAtomWalletDepositFees) and are paid to that wallet's owner() by claimAtomWalletDepositFees, which only the wallet itself can call. Until the wallet is deployed (AtomWalletFactory.deployAtomWallet, permissionless) and claimed through AtomWarden, it has no registered owner, so nothing can trigger the claim and owner() still returns the warden. The fees are not lost: they stay in MultiVault and the owner collects the full balance after the claim. An address atom can be claimed by the matching address, lowercase or checksummed, and any atom can be claimed through claimWithAuthorization, claimAsCreatorAfterExpiry or an operator grant. Reports that pre-claim fees are frozen or stranded, that the warden cannot receive them, or that no wallet has collected fees are variants of this known issue.",
+      "lastUpdatedAt": "2026-01-06T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1605,
+      "link": "https://github.com/code-423n4/intuition-bug-bounty/issues/18",
+      "description": "Approvals: operator approvals are account-wide and scoped by action - MultiVault.approve(sender, approvalType) stores one grant per receiver and operator, scoped by action (DEPOSIT, REDEMPTION, CREATION and their combinations), not by vault, amount or time. An approved operator can deposit into any vault for the receiver, which credits the receiver's utilization and can create a counter-stake on a triple, and can redeem any of the receiver's positions with a minAssets the operator chooses. Shares and redemption proceeds always go to the receiver (_processRedeem pays the share owner), never to the operator. The receiver opts in explicitly and can revoke at any time with approve(sender, ApprovalTypes.NONE). Reports that an approved operator can force deposits, utilization or counter-stakes on the receiver, or redeem all of the receiver's positions with no slippage floor, are variants of this known issue.",
+      "lastUpdatedAt": "2026-01-03T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1606,
+      "link": "https://github.com/code-423n4/intuition-bug-bounty/issues/13",
+      "description": "Fees: vault fees go to default-curve vaults - Entry and exit fees are added to the totalAssets of the term's default-curve vault, and the atom deposit fraction to its components' default-curve vaults, without minting shares (_increaseProRataVaultAssets always uses defaultCurveId), whichever curve the user deposited to or redeemed from. The share price of those vaults rises, so their holders at that moment gain. Non-default vaults never receive fees. The live non-default curve, OffsetProgressiveCurve, prices shares from the share supply alone and redeems along the curve rather than pro rata to totalAssets, so a donation cannot move its price and earlier buyers pay less per share by design. Reports that fees from non-default curves are misdirected, that fees are trapped in progressive vaults, that progressive curves allow first-depositor or donation attacks, or that depositing just before a fee lands captures part of it are variants of this known issue.",
+      "lastUpdatedAt": "2025-12-20T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1607,
+      "link": "https://github.com/code-423n4/intuition-bug-bounty/issues/9",
+      "description": "VotingEscrow: deposit_for is permissionless - TrustBonding inherits Curve's VotingEscrow deposit_for(_addr, _value), which anyone can call to add to an existing, unexpired lock. The WTRUST comes from _addr's own allowance to the contract and goes into _addr's own lock; the unlock time does not change and the caller gains nothing. This is the upstream Curve and Stargate behaviour, kept on purpose and documented on deposit_for. Holders should approve only what they mean to lock, and revoking the allowance removes the exposure. Reports that a third party can force-lock a holder's approved WTRUST, or that this freezes funds until the holder's own unlock time, are variants of this known issue.",
+      "lastUpdatedAt": "2025-12-13T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1608,
+      "link": "https://github.com/code-423n4/intuition-bug-bounty/issues/3",
+      "description": "Utilization: not time-weighted within an epoch - MultiVault keeps personalUtilization and totalUtilization as signed per-epoch counters that change at the moment of each deposit and redeem, and TrustBonding derives each ratio from the change between an epoch's value and the previous epoch's. Capital committed in the last block of an epoch counts the same as capital held all epoch, because the veTRUST lock already prices duration. A redeem always debits the epoch it executes in, so a closed epoch's value is final, and a position opened before a boundary and closed after it lowers the next epoch's ratio. The ratios only split each epoch's scheduled emission between released and reclaimed amounts: emissionsForEpoch never exceeds the schedule and the sum of claims never exceeds emissionsForEpoch, so no ratio outcome raises issuance or reduces another holder's reward. Reports that deposits just before an epoch ends, flash or boundary-straddling deposits, or a large redeem late in an epoch move the personal or system ratio, or that a higher ratio steals unclaimed rewards or doubles emissions, are variants of this known issue.",
+      "lastUpdatedAt": "2025-12-11T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1590,
+      "link": "https://github.com/0xIntuition/intuition-contracts-v2/blob/v1.1.0/src/protocol/wallet/AtomWarden.sol#L328-L365",
+      "description": "AtomWarden: the creator fallback also covers address atoms - AtomWarden.claimAsCreatorAfterExpiry lets an atom's recorded creator claim the atom's unclaimed wallet once claimWindow (currently 365 days) has passed since the atom was created. It applies to every atom created after the v1.1.0 upgrade, including atoms that name an address. Until the window ends the creator fallback is closed, and the named address can claim its wallet at any time until someone else does. Addresses that cannot call AtomWarden themselves, such as contracts, can be assigned through grantAtomWalletOwnership. Atoms created before the upgrade have no recorded creator, so the fallback cannot reach them, and governance can turn it off with setClaimWindow(0). Claiming before the window ends is the address owner's responsibility. Reports that an atom's creator can take the wallet of an address atom, or the fees accrued to it, after the window are variants of this known issue.",
+      "lastUpdatedAt": "2026-11-15T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1591,
+      "link": "https://github.com/0xIntuition/intuition-contracts-v2/blob/v1.1.0/src/libraries/MultiVaultLib.sol#L1634-L1636",
+      "description": "Fees: every fee costs at least 1 wei - _feeOnRaw rounds every fee up (mulDivUp), so each nonzero fee rate costs at least 1 wei on any nonzero base. Creating an atom with exactly 1 wei above _getAtomCost, or a triple with exactly 1 wei above _getTripleCost when the atom deposit fraction is charged, makes the fees larger than that 1 wei base, and _calculateAtomCreate or _calculateTripleCreate reverts with an arithmetic underflow (panic 0x11) instead of a named error. The same rounding makes a redeem worth only a few wei revert with MultiVault_RedeemYieldsNoAssets. Each case reverts the caller's own transaction, so only gas is lost, and deposits are not affected because minDeposit applies first. Reports of the 1 wei creation revert, directly or through FeeProxy, or of a few-wei position that cannot be redeemed on its own, are variants of this known issue.",
+      "lastUpdatedAt": "2026-10-14T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1592,
+      "link": "https://github.com/0xIntuition/intuition-contracts-v2/blob/v1.1.0/src/Trust.sol#L88-L90",
+      "description": "TRUST: V2 minting is not bounded by the legacy MAX_SUPPLY - Trust (V2) overrides the legacy TrustToken.mint, so the legacy MAX_SUPPLY of 1 billion and the totalMinted counter no longer apply. Trust.mint is callable only by the BaseEmissionsController, which mints each epoch's scheduled amount once (_mintAndBridge). The V2 supply model is that schedule, not a fixed cap, so totalSupply is not bounded by the legacy constant. Reports that mint bypasses MAX_SUPPLY, that totalMinted is frozen, or that a supply above 1 billion shows unlimited minting are variants of this known issue.",
+      "lastUpdatedAt": "2026-07-14T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1593,
+      "link": "https://github.com/0xIntuition/intuition-contracts-v2/blob/main/audits/Diligence-Audit-Report-3.pdf",
+      "description": "AtomWallet: ownership after the claim is the owner's responsibility - The protocol's role ends when AtomWarden assigns a wallet's first owner through completeClaim. After that, the wallet's registered owners control it: any owner can add owners (addOwnerAddress, addOwnerPublicKey) and move the primary owner, and transferOwnership removes only the outgoing primary owner, so other registered owners stay. As in any ERC-4337 account, a UserOperation is checked against the owner set at validation and not again at execution, so an operation signed before a transfer can still run. The protocol does not support or underwrite transfers or sales of wallets between parties who do not trust each other; a recipient must check the owner set and any signed operations. Reports that a previous owner or co-signer keeps control after a transfer, or drains a buyer with a pre-signed UserOperation, are variants of this known issue.",
+      "lastUpdatedAt": "2026-08-03T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1594,
+      "link": "https://github.com/0xIntuition/intuition-contracts-v2/blob/v1.1.0/src/protocol/emissions/BaseEmissionsController.sol#L229-L235",
+      "description": "Emissions: _mintAndBridge does not check the approve return value - BaseEmissionsController._mintAndBridge calls approve on TRUST for the MetaERC20 hub without checking the return value. TRUST is a first-party standard ERC-20 whose approve returns true or reverts, the allowance is granted and used in the same call, and if the bridge cannot pull the full amount the whole transaction reverts. The path is CONTROLLER_ROLE-only and runs at most once per epoch. Reports that the unchecked approve can cause unbacked bridging or leave a stale allowance are variants of this known issue.",
+      "lastUpdatedAt": "2026-07-19T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1595,
+      "link": "https://github.com/0xIntuition/intuition-contracts-v2/blob/v1.1.0/src/interfaces/ITrustBonding.sol#L327-L353",
+      "description": "Utilization: lower bounds are read at claim time - systemUtilizationLowerBound and personalUtilizationLowerBound are read from storage whenever a ratio is computed, at claim time and in views, and are not snapshotted per epoch. A change through updateSystemUtilizationLowerBound or updatePersonalUtilizationLowerBound therefore applies to every epoch not yet claimed and changes historical views. Both setters are timelocked and limited by hardcoded windows of [4000, 10000] and [2500, 10000] basis points, and the timelock delay gives holders notice to claim first. Reports that a lower-bound change retroactively changes past emissions or pending claims are variants of this known issue.",
+      "lastUpdatedAt": "2026-07-19T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1596,
+      "link": "https://github.com/0xIntuition/intuition-contracts-v2/blob/v1.1.0/src/external/curve/VotingEscrow.sol#L748-L758",
+      "description": "VotingEscrow: totalSupplyAtT is defined only from initialization - VotingEscrow.totalSupplyAtT(t) is defined only for t at or after the contract's first checkpoint (point_history[0].ts). For an earlier t, _supply_at underflows and the call reverts instead of returning 0, which is the inherited Curve and Stargate behaviour. The function is a view, so the revert changes no state, and TrustBonding only queries epoch-end timestamps after deployment. Reports that totalSupplyAtT reverts for pre-deployment timestamps, or that this can block reward claims, are variants of this known issue.",
+      "lastUpdatedAt": "2026-07-15T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1597,
+      "link": "https://github.com/0xIntuition/intuition-contracts-v2/blob/v1.1.0/src/protocol/MultiVault.sol#L852-L865",
+      "description": "Protocol fees: sweepAccumulatedProtocolFees is permissionless - sweepAccumulatedProtocolFees(epoch) has no access control. It always sends that epoch's accrued protocol fees to generalConfig.protocolMultisig, which only timelocked governance can change; neither the caller nor a parameter can change the destination. A caller can only move already-accrued fees to their intended recipient at its own gas cost, and a repeat call for the same epoch does nothing. This is intended. Reports that anyone can call the sweep, front-run an admin sweep, or sweep an epoch before it ends are variants of this known issue.",
+      "lastUpdatedAt": "2026-07-15T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1598,
+      "link": "https://github.com/0xIntuition/intuition-contracts-v2/blob/v1.1.0/src/libraries/MultiVaultLib.sol#L775-L907",
+      "description": "Fees: the payer shares in its own entry and exit fees - A deposit prices the new shares on the vault's state before fees (_calculateDeposit) and then adds the entry fee to the default-curve vault's totalAssets; a redeem prices the shares before the burn and adds the exit fee before _updateVaultOnRedeem removes them. Entry and exit fees are not protocol fees: they go pro rata to everyone holding the default-curve vault at that moment. A depositor into that vault therefore shares in its own entry fee, and a holder who redeems in parts shares in the exit fee of each earlier part through the shares it still holds. TRUST is the native asset, so a deposit's full msg.value is already in MultiVault, and totalAssets is an accounting figure over that balance. Reports that a depositor recaptures its own entry fee, that split redemptions return more in total than one redeem, or that the entry fee is credited without a matching token transfer are variants of this known issue.",
+      "lastUpdatedAt": "2026-07-14T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1599,
+      "link": "https://github.com/code-423n4/intuition-bug-bounty/issues/66",
+      "description": "VotingEscrow: block numbers are parent-chain block numbers - VotingEscrow records block.number in its checkpoints, and on Intuition, an Arbitrum Orbit chain, block.number returns the parent chain's block number, not the L2 height an RPC reports. The block-number helpers balanceOfAt and totalSupplyAt therefore expect parent-chain numbers; TrustBonding reads balances by timestamp only. A Foundry fork of Intuition mainnet sets block.number to the L2 height, below the recorded checkpoints, so _checkpoint underflows at block.number - last_point.blk and checkpoint, create_lock, deposit_for and withdraw revert with panic 0x11. A fork test must vm.roll to at least the blk of the latest point_history entry. Reports whose proof of concept fails only for this reason, or that the block-number helpers revert for L2 block numbers, are variants of this known issue.",
+      "lastUpdatedAt": "2026-04-04T22:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1600,
+      "link": "https://github.com/code-423n4/intuition-bug-bounty/issues/61",
+      "description": "Triples: the atom deposit fraction follows the triple's components - When a triple deposit or creation charges the atom deposit fraction, _increaseProRataVaultsAssets splits it into three equal parts and adds one to the default-curve vault of each component, without minting shares. _createTriple accepts any existing term as a component (_requireTermExists), so a component can be a triple or counter-triple, and a term used in more than one position receives more than one part. The depositor pays the fraction and the holders of the component vaults receive it; moving value from triple depositors to their components is the purpose of the fraction. Anyone can hold those component shares, including the depositor. Reports that the fraction inflates component share prices, that nested or repeated components divert or concentrate it, or that holding component shares recaptures part of it are variants of this known issue.",
+      "lastUpdatedAt": "2026-03-28T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1601,
+      "link": "https://github.com/code-423n4/intuition-bug-bounty/issues/60",
+      "description": "Router: TrustSwapAndBridgeRouter does not guarantee full input use on every hop - swapAndBridgeWithERC20 and swapAndBridgeWithETH take the full input and call Slipstream's exactInput once, checking only that the TRUST output is at least minTrustOut. A concentrated-liquidity hop that runs out of in-range liquidity can stop before it has used its whole input. Unused first-hop input then stays in the router, which has no owner, sweep function or upgrade path, and unused intermediate tokens stay in Slipstream's own router, where its public sweepToken can take them. This is a known limitation of the currently deployed router: the caller chooses the path and should set minTrustOut from an independent price, not from quoteExactInput, which runs the same path. Reports that a partial fill strands input in the router, that leftover intermediate tokens can be swept from Slipstream, or that an attacker-created thin pool causes either, are variants of this known issue.",
+      "lastUpdatedAt": "2026-03-26T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1602,
+      "link": "https://github.com/code-423n4/intuition-bug-bounty/issues/56",
+      "description": "Counter-stake: the for/against exclusion is per curve - _hasCounterStake blocks a deposit into one side of a triple only when the receiver holds shares on the opposite side on the same curve. Holding a triple on one curve and its counter-triple on another is allowed: each curve prices its own vault, so the two positions carry real opposing exposure, and both legs pay fees. Checking every curve would need a loop over an open-ended set of curves. Reports that the exclusion can be bypassed across curves, or that cross-curve hedges farm emissions without risk, are variants of this known issue.",
+      "lastUpdatedAt": "2026-03-15T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1609,
+      "link": "https://github.com/code-423n4/intuition-bug-bounty/issues/2",
+      "description": "Fees: vault fees are waived below feeThreshold - _shouldChargeFees waives the entry fee while the term's default-curve vault holds fewer than feeThreshold shares, whichever curve the deposit uses, and _shouldChargeExitFees waives the exit fee when the default-curve shares left after the redeem would be below it. The atom deposit fraction is charged only when all three components of a triple pass the same test (_shouldChargeAtomDepositFraction). These fees are credited to default-curve vaults, and crediting them to a near-empty share supply would move its price sharply, so they wait until the vault has depth; the protocol fee, and on atoms the atom-wallet fee, are always charged. The threshold measures depth, not age or ownership, and anyone can add or remove default-curve shares. Reports that users avoid fees on non-default curves or through a thin component atom, that redeeming below the threshold avoids the exit fee, or that staking component atoms over the threshold switches the fraction on for later depositors are variants of this known issue.",
+      "lastUpdatedAt": "2025-12-10T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1610,
+      "link": "https://github.com/0xIntuition/intuition-contracts-v2/blob/main/audits/Diligence-Audit-Report-2.pdf",
+      "description": "Default curve: creation assumes a hookless 1:1 linear curve - Atoms and triples are created on defaultCurveId, and _getAtomCost and _getTripleCost add minShare, a share count, to an asset amount. That is correct only for a curve that mints 1:1 from an empty vault, which the deployed default (curve 1, LinearCurve) does; keeping it so is a deployment rule documented on _getAtomCost. initialize and setBondingCurveConfig reject a default curve with fee hooks (_assertDefaultCurveIsHookless, the fix for Consensys Diligence report 3, §5.6), and changing the default curve is a timelocked governance action. New vaults on non-default curves price their seed shares on their own curve (_minAssetsForCurve), which is the fix for report 2, §5.4. Reports whose impact depends on a progressive, non-1:1 or hook-bearing default curve, such as creation-cost \"unit confusion\" or fees stranded in a progressive default vault, are variants of this known issue.",
+      "lastUpdatedAt": "2025-11-09T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    },
+    {
+      "id": 1611,
+      "link": "https://github.com/0xIntuition/intuition-contracts-v2/blob/main/audits/Diligence-Audit-Report-1.pdf",
+      "description": "Utilization: ratio targets are the previous epoch's claimed rewards - TrustBonding measures each epoch's ratios against the rewards claimed for the previous epoch: the system ratio against totalClaimedRewardsForEpoch[epoch - 1] and the personal ratio against what the user claimed for epoch - 1 (_getSystemUtilizationRatio, _getPersonalUtilizationRatio). Epochs 0 and 1 have no previous claim, so both ratios are 100% there. A user whose utilization grew and who had no eligible rewards in the previous epoch gets 100%, and a user who was eligible but did not claim gets the personal floor; this rule is the fix for Consensys Diligence report 1, §5.2. Claiming is optional, so unclaimed rewards lower the next system target, but the ratio stays within its bounds and only splits the fixed emission schedule. Reports that the first two epochs over-release, that first-time claimers skip the utilization test, or that not claiming manipulates the system ratio are variants of this known issue.",
+      "lastUpdatedAt": "2025-11-09T23:00:00.000Z",
+      "relatedImpactInScope": "smart_contract"
+    }
+  ],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
   "defaultOutOfScopeWebAndApplications": null,
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "The following are out of scope for this program.\n\n**Accepted protocol design & privileged roles**\n\n- Actions taken by trusted roles within their documented powers: contract upgrades and parameter changes executed through the Upgrades / Parameters TimelockControllers and the governing multisig — pausing, upgrading, changing fees within configured caps, registering bonding curves, and setting the AtomWarden.\n- Protocol fees accruing to the configured FeeProxy recipient by design.\n- Bonding-curve rounding that favors the protocol and yields only dust-level differences with no profitable, repeatable extraction.\n- First-depositor or share-inflation scenarios that do not overcome the protocol's initial-share-price and minimum-deposit mitigations.\n- Reports premised on non-standard behavior of the TRUST token itself (fee-on-transfer, rebasing); TRUST is a standard ERC-20.\n\n**Execution environment — single-sequencer networks**\n\n- Both Base Mainnet and the Intuition Network are operated by a single centralized sequencer with no public mempool: pending transactions are not publicly gossiped and reach the sequencer only via RPC, and are ordered first-come-first-served without exposure to third-party reordering. Any finding whose exploitation depends on public-mempool access, transaction reordering, or MEV extraction — front-running, back-running, or sandwiching by other users or searchers — is out of scope on both networks, because that adversarial environment does not exist under the current sequencing model. User-configurable slippage bounds (min-shares / min-assets) remain the supported protection, and only defeating those bounds qualifies.\n\n**Cross-chain & infrastructure**\n\n- Cross-chain message latency, sequencer downtime, and reorg behavior inherent to the Intuition Network, the Caldera MetaLayer / Hyperlane bridge, and the Base settlement layer; only Intuition's own dispatcher and controller accounting logic is in scope.\n- ERC-4337 EntryPoint, bundler, and paymaster behavior; only the AtomWallet / AtomWalletFactory / AtomWarden validation logic is in scope.\n- Behavior of external systems the periphery integrates with — Aerodrome / Uniswap v3 routers, MetaLayer / Hyperlane, and Chainlink Automation — except where Intuition's own integration logic is at fault.\n- Governance, admin, and proxy infrastructure: the TimelockControllers, all ProxyAdmin contracts, and the multisig signers.\n- Shared third-party infrastructure deployed alongside the protocol: Multicall3, the ERC-4337 EntryPoint, and the SafeSingletonFactory.\n\n**Excluded assets**\n\n- Contracts not deployed to mainnet or not listed as in-scope assets.\n- All testnet deployments (Base Sepolia, Intuition Sepolia).\n\n**Known issues & prior audits**\n\n- Any vulnerability already reported, publicly known, or already fixed in an unreleased branch.\n- Findings from the protocol's public security audits, including the September 2025 audits by Consensys Diligence and the Code4rena April 2026 competitive audit.\n\n**Standard exclusions**\n\n- Attacks requiring leaked/compromised privileged keys, or control of a trusted role or governance majority.\n- Generic economic or governance attacks (e.g. 51% attacks).\n- Best-practice, informational, gas-optimization, missing-event, and NatSpec findings without a demonstrated impact.\n- Automated scanner output without a working proof of concept.\n- Sybil attacks, spam, and volumetric / DDoS attacks.\n- Issues requiring social engineering, phishing, or physical attacks, or targeting Intuition employees, infrastructure, or off-chain services.\n- Testing against public mainnet or testnet (use a local fork).\n- Frontend, website, or UX issues with no contract-level fund or accounting impact.\n\n*The assessment of the extent of any potential indirect economic damage, defined as damage other than that evidenced by a PoC that showcases the direct exploitation of the vulnerability leading to impact, is at the full discretion of the project.*",
+  "customOutOfScopeInformation": "The following are out of scope for this program.\n\n**Accepted protocol design & privileged roles**\n\n- Actions taken by trusted roles within their documented powers: contract upgrades and parameter changes executed through the Upgrades / Parameters TimelockControllers and the governing multisig — pausing, upgrading, changing fees within configured caps, registering bonding curves, and setting the AtomWarden.\n- Protocol fees accruing to the configured FeeProxy recipient by design.\n- Bonding-curve rounding that favors the protocol and yields only dust-level differences with no profitable, repeatable extraction.\n- First-depositor or share-inflation scenarios that do not overcome the protocol's initial-share-price and minimum-deposit mitigations.\n- Reports premised on non-standard behavior of the TRUST token itself (fee-on-transfer, rebasing); TRUST is a standard ERC-20.\n\n**Execution environment — single-sequencer networks**\n\n- Both Base Mainnet and the Intuition Network are operated by a single centralized sequencer with no public mempool: pending transactions are not publicly gossiped and reach the sequencer only via RPC, and are ordered first-come-first-served without exposure to third-party reordering. Any finding whose exploitation depends on public-mempool access, transaction reordering, or MEV extraction — front-running, back-running, or sandwiching by other users or searchers — is out of scope on both networks, because that adversarial environment does not exist under the current sequencing model. User-configurable slippage bounds (min-shares / min-assets) remain the supported protection, and only defeating those bounds qualifies.\n\n**Cross-chain & infrastructure**\n\n- Cross-chain message latency, sequencer downtime, and reorg behavior inherent to the Intuition Network, the Caldera MetaLayer / Hyperlane bridge, and the Base settlement layer; only Intuition's own dispatcher and controller accounting logic is in scope.\n- ERC-4337 EntryPoint, bundler, and paymaster behavior; only the AtomWallet / AtomWalletFactory / AtomWarden validation logic is in scope.\n- Behavior of external systems the periphery integrates with — Aerodrome / Uniswap v3 routers, MetaLayer / Hyperlane, and Chainlink Automation — except where Intuition's own integration logic is at fault.\n- Governance, admin, and proxy infrastructure: the TimelockControllers, all ProxyAdmin contracts, and the multisig signers.\n- Shared third-party infrastructure deployed alongside the protocol: Multicall3, the ERC-4337 EntryPoint, and the SafeSingletonFactory.\n\n**Excluded assets**\n\n- Contracts not deployed to mainnet or not listed as in-scope assets.\n- All testnet deployments (Base Sepolia, Intuition Sepolia).\n\n**Known issues & prior audits**\n\n- Any vulnerability already reported, publicly known, or already fixed in an unreleased branch.\n- Findings from the protocol's public security audits, including the Consensys Diligence audits (August and September 2025, and the v1.1.0 audit in October 2026), the Code4rena competitive audit (March 2026) and its mitigation review (April 2026).\n\n**Standard exclusions**\n\n- Attacks requiring leaked/compromised privileged keys, or control of a trusted role or governance majority.\n- Generic economic or governance attacks (e.g. 51% attacks).\n- Best-practice, informational, gas-optimization, missing-event, and NatSpec findings without a demonstrated impact.\n- Automated scanner output without a working proof of concept.\n- Sybil attacks, spam, and volumetric / DDoS attacks.\n- Issues requiring social engineering, phishing, or physical attacks, or targeting Intuition employees, infrastructure, or off-chain services.\n- Testing against public mainnet or testnet (use a local fork).\n- Frontend, website, or UX issues with no contract-level fund or accounting impact.\n\n*The assessment of the extent of any potential indirect economic damage, defined as damage other than that evidenced by a PoC that showcases the direct exploitation of the vulnerability leading to impact, is at the full discretion of the project.*",
   "customProhibitedActivities": [],
   "impacts": [
     {
@@ -369,7 +544,7 @@
   ],
   "rewards": [
     {
-      "id": 52857,
+      "id": 53355,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -379,7 +554,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 52858,
+      "id": 53356,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -388,7 +563,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 52859,
+      "id": 53357,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -397,7 +572,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 52860,
+      "id": 53358,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
@@ -419,16 +594,22 @@
       "date": "2025-09-21T00:00:00.000Z"
     },
     {
-      "id": "db_6f858ac2-c998-42de-b08b-2da8efbb5bfd",
-      "url": "https://code4rena.com/audits/2026-03-intuition",
-      "auditor": "Code4rena — Intuition competitive audit (March 2026):",
-      "date": "2026-03-09T00:00:00.000Z"
+      "id": "1549",
+      "url": "https://code4rena.com/audits/2026-04-intuition-mitigation-review",
+      "auditor": "Code4rena — Intuition mitigation review",
+      "date": "2026-04-05T00:00:00.000Z"
     },
     {
-      "id": "db_dfd3d3fc-2c91-44c8-8008-36f5e51f770b",
-      "url": "https://code4rena.com/audits/2026-04-intuition-mitigation-review",
-      "auditor": "Code4rena — Intuition mitigation review (April 2026)",
-      "date": "2026-04-06T00:00:00.000Z"
+      "id": "1550",
+      "url": "https://code4rena.com/audits/2026-03-intuition",
+      "auditor": "Code4rena — Intuition competitive audit",
+      "date": "2026-03-08T00:00:00.000Z"
+    },
+    {
+      "id": "1551",
+      "url": "https://github.com/0xIntuition/intuition-contracts-v2/blob/main/audits/Diligence-Audit-Report-3.pdf",
+      "auditor": "Consensys Diligence",
+      "date": "2026-10-08T00:00:00.000Z"
     }
   ]
 }
