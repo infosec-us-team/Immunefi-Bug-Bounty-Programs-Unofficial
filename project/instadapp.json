@@ -59,6 +59,96 @@
       "description": "Governance",
       "isSafeHarbor": false,
       "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101713",
+      "url": "https://www.moveregistry.com/package/@0xfluid/library",
+      "type": "smart_contract",
+      "addedAt": "2026-11-25T13:34:00.074Z",
+      "revision": 0,
+      "description": "Fluid Sui – Library (@0xfluid/library)",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101714",
+      "url": "https://www.moveregistry.com/package/@0xfluid/liquidity",
+      "type": "smart_contract",
+      "addedAt": "2026-11-25T13:34:00.074Z",
+      "revision": 0,
+      "description": "Fluid Sui – Liquidity (@0xfluid/liquidity)",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101715",
+      "url": "https://www.moveregistry.com/package/@0xfluid/lending",
+      "type": "smart_contract",
+      "addedAt": "2026-11-25T13:34:00.074Z",
+      "revision": 0,
+      "description": "Fluid Sui – Lending (@0xfluid/lending)",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101716",
+      "url": "https://www.moveregistry.com/package/@0xfluid/lending-rewards",
+      "type": "smart_contract",
+      "addedAt": "2026-11-25T13:34:00.074Z",
+      "revision": 0,
+      "description": "Fluid Sui – Lending Rewards (@0xfluid/lending-rewards)",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101717",
+      "url": "https://www.moveregistry.com/package/@0xfluid/oracle",
+      "type": "smart_contract",
+      "addedAt": "2026-11-25T13:34:00.074Z",
+      "revision": 0,
+      "description": "Fluid Sui – Oracle (@0xfluid/oracle)",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101718",
+      "url": "https://www.moveregistry.com/package/@0xfluid/vaults",
+      "type": "smart_contract",
+      "addedAt": "2026-11-25T13:34:00.074Z",
+      "revision": 0,
+      "description": "Fluid Sui – Vaults (@0xfluid/vaults)",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101719",
+      "url": "https://www.moveregistry.com/package/@0xfluid/timelock",
+      "type": "smart_contract",
+      "addedAt": "2026-11-25T13:34:00.074Z",
+      "revision": 0,
+      "description": "Fluid Sui – Timelock (@0xfluid/timelock)",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101720",
+      "url": "https://etherscan.io/address/0x273DA948ACa9261043fbdb2a857BC255ECC29012",
+      "type": "smart_contract",
+      "addedAt": "2026-11-25T13:34:00.074Z",
+      "revision": 0,
+      "description": "Fluid Lite USD – Vault (and all linked modules)",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101721",
+      "url": "https://etherscan.io/address/0xA0D3707c569ff8C87FA923d3823eC5D81c98Be78",
+      "type": "smart_contract",
+      "addedAt": "2026-11-25T13:34:00.074Z",
+      "revision": 0,
+      "description": "Fluid Lite ETH – Vault iETHv2 (and all linked modules)",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": "Only those in the Assets in Scope table are considered as in-scope of the bug bounty program.\n\nAll folders and files labeled with the words “test”, “mock/mocks”, or “dummy” are out-of-scope of the bug bounty program.",
@@ -71,9 +161,10 @@
   "ecosystem": [
     "Avalanche",
     "BSC",
-    "ETH",
     "Optimism",
-    "Polygon"
+    "Polygon",
+    "ETH",
+    "SUI"
   ],
   "endDate": null,
   "evaluationEndDate": null,
@@ -88,7 +179,8 @@
   "inviteOnly": false,
   "kyc": false,
   "language": [
-    "Solidity"
+    "Solidity",
+    "Move"
   ],
   "launchDate": "2021-09-20T01:30:00.000Z",
   "isPaused": false,
@@ -119,7 +211,7 @@
   "projectType": [
     "Defi"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). This is a simplified 4-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nWhere the rules on this program page differ from the Severity Classification System V2.3, the rules on this page take precedence.\n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract vulnerabilities, the reward is 10% of the directly affected funds, up to a maximum of USD 500,000. The calculation considers the funds at risk based on the bug report submission date and time. There is a minimum guaranteed reward of USD 10,000 to encourage reporting even for smaller valued critical bugs.\n\n\n__Reward Calculation for High Level Reports__\n\nFor high smart contract impacts, the reward is capped at $100,000 and is based on 50% of the value of the affected funds. The calculation considers the funds at risk based on the bug report submission date and time. There is a minimum guaranteed reward of USD 5,000 to encourage reporting even for smaller valued high severity bugs.\n\n__Severity and Funds at Risk__\n\nThe Severity Classification System V2.3 lists \"Direct theft of any user funds\" and \"Permanent freezing of funds\" as Critical without regard to the amount affected. On this program, that is overridden where the funds at risk are small and there is no direct path for the funds at risk to increase. Admin actions do not count as such a path. Examples are funds at risk that are limited by hard limits, or a deprecated contract that still holds funds but that no new users can enter. In these cases the funds actually at risk in the affected contracts at the time of submission are part of the severity rating, and the finding may be classified at a lower severity than its impact category alone suggests.\n\n__Secondary/Market Attack on Fluid__\n\nFluid as a lending protocol utilizes different aspects of the blockchain which may indirectly affect the protocol. The following outline conditions for particular secondary attacks that are not directly on the Fluid contracts, but that have secondary or associated effects to the Fluid contracts may be considered for a reward:\n\n- The attack must directly impact Fluid i.e an attack which affects the broader market such as price manipulation but is not targeting Fluid would not qualify.\n\nExamples of secondary attacks would be:\n\n- Manipulation of a DEX or on Chain price oracle from a secondary source, which results in the immediate and total loss of funds of the Fluid protocol, where the attack is specifically targeting Fluid protocol.\n- Flash Loan based attack that would cause immediate and irreversible financial loss to Fluid protocol; where the attack is specifically targeting the Fluid protocol, this would exclude attacks which manipulate the price of a single token used on Fluid.\n\n__Repeatable Attacks on Pausable Contracts__\n\nFluid contracts can be paused by the protocol guardians. Where the vulnerable contract can be paused or upgraded, only the initial attack is considered for the reward, as Fluid can mitigate further exploitation by pausing or upgrading the affected component; repeated or looped extraction after the first attack is not compounded into severity or reward. For contracts that cannot be paused or upgraded, the Repeatable Attack Limitations configured for this program apply (25% reduction per additional attack, 1-hour interval).\n\n__Audits__\n\nPrior published audits are here for review, any noted vulnerability or bugs in previously completed audits are not eligible for a reward.\n\nDefi Smart Accounts (DSA)/Instadapp PRO\n- [Peckshield - Mar 16, 2021](https://github.com/Instadapp/dsa-contracts/blob/master/audits/v2_PeckShield_Mar_2021.pdf)\n- [Peckshield - Mar 18, 2020](https://github.com/Instadapp/dsa-contracts/blob/master/audits/v1_PeckShield_Mar_2020.pdf)\n- [Samczun Audit - Mar 2020](https://github.com/Instadapp/dsa-contracts/blob/master/audits/v1_samczsun_Mar_2020.md)\n\nAvocado\n- [Statemind - Sept 28, 2023](https://github.com/Instadapp/avocado-audits/blob/main/Statemind-Audit-Report-Avocado-v3.pdf)\n- [Peckshield - June 12, 2023](https://github.com/Instadapp/avocado-audits/blob/main/PeckShield-Audit-Report-Avocado-v3.pdf)\n\nFluid\n- [Statemind - Dec 29th, 2023](https://github.com/statemindio/public-audits/blob/main/Instadapp/2023-12-29_Instadapp_Fluid.pdf)\n\n__Proof of Concept (PoC) Requirements__\n\nA Proof of Concept is required for all severity levels (Critical, High, Medium and Low), for every asset type in scope.\n\nWhen calculating the USD value of total value locked (TVL) to determine funds at risk, outstanding borrows are excluded.\n\nTo be eligible for a reward, the vulnerability must exist in the deployed smart contract.\n\nBugs resulting in temporary freezing of funds for under 10 days are not eligible for a reward. Temporary freezing of funds for more than 10 days is assessed under the in-scope High impact.\n\nPayouts are handled by the Instadapp team directly. Payouts are made in USDC, USDT or DAI on Ethereum, denominated in USD.\n\n__Scope Clarifications__\n\n- Issues affecting the first or last user of a pool or vault that arise from dust amounts, in any protocol other than DexV2, are classified at most as Low, since the standard production setup includes seeding a dust position that serves as the first and last user.\n\n- A vulnerability present in both the EVM and Solana codebases is treated as a single finding and rewarded once, not as two separate reports.\n\n- Deployed contract addresses are listed in [deployments.md](https://github.com/Instadapp/fluid-contracts-public/blob/main/deployments/deployments.md) in the public repository; funds at risk is assessed against the deployed contracts referenced there.\n\n__Deprecated Contracts__\n\nContracts marked as deprecated in the public deployments file (https://github.com/Instadapp/fluid-contracts-public/blob/main/deployments/deployments.md) remain in scope for as long as they hold funds. For findings on deprecated contracts, the minimum reward is one tenth of the standard minimum: USD 1,000 for Critical and USD 500 for High.",
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/). This is a simplified 4-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nWhere the rules on this program page differ from the Severity Classification System V2.3, the rules on this page take precedence.\n\n__Reward Calculation for Critical Level Reports__\n\nFor critical smart contract vulnerabilities, the reward is 10% of the directly affected funds, up to a maximum of USD 500,000. The calculation considers the funds at risk based on the bug report submission date and time. There is a minimum guaranteed reward of USD 10,000 to encourage reporting even for smaller valued critical bugs.\n\n\n__Reward Calculation for High Level Reports__\n\nFor high smart contract impacts, the reward is capped at $100,000 and is based on 50% of the value of the affected funds. The calculation considers the funds at risk based on the bug report submission date and time. There is a minimum guaranteed reward of USD 5,000 to encourage reporting even for smaller valued high severity bugs.\n\n__Severity and Funds at Risk__\n\nThe Severity Classification System V2.3 lists \"Direct theft of any user funds\" and \"Permanent freezing of funds\" as Critical without regard to the amount affected. On this program, that is overridden where the funds at risk are small and there is no direct path for the funds at risk to increase. Admin actions do not count as such a path. Examples are funds at risk that are limited by hard limits, or a deprecated contract that still holds funds but that no new users can enter. In these cases the funds actually at risk in the affected contracts at the time of submission are part of the severity rating, and the finding may be classified at a lower severity than its impact category alone suggests.\n\n__Secondary/Market Attack on Fluid__\n\nFluid as a lending protocol utilizes different aspects of the blockchain which may indirectly affect the protocol. The following outline conditions for particular secondary attacks that are not directly on the Fluid contracts, but that have secondary or associated effects to the Fluid contracts may be considered for a reward:\n\n- The attack must directly impact Fluid i.e an attack which affects the broader market such as price manipulation but is not targeting Fluid would not qualify.\n\nExamples of secondary attacks would be:\n\n- Manipulation of a DEX or on Chain price oracle from a secondary source, which results in the immediate and total loss of funds of the Fluid protocol, where the attack is specifically targeting Fluid protocol.\n- Flash Loan based attack that would cause immediate and irreversible financial loss to Fluid protocol; where the attack is specifically targeting the Fluid protocol, this would exclude attacks which manipulate the price of a single token used on Fluid.\n\n__Repeatable Attacks on Pausable Contracts__\n\nFluid contracts can be paused by the protocol guardians. Where the vulnerable contract can be paused or upgraded, only the initial attack is considered for the reward, as Fluid can mitigate further exploitation by pausing or upgrading the affected component; repeated or looped extraction after the first attack is not compounded into severity or reward. For contracts that cannot be paused or upgraded, the Repeatable Attack Limitations configured for this program apply (25% reduction per additional attack, 1-hour interval).\n\n__Audits__\n\nPrior published audits are here for review, any noted vulnerability or bugs in previously completed audits are not eligible for a reward.\n\nDefi Smart Accounts (DSA)/Instadapp PRO\n- [Peckshield - Mar 16, 2021](https://github.com/Instadapp/dsa-contracts/blob/master/audits/v2_PeckShield_Mar_2021.pdf)\n- [Peckshield - Mar 18, 2020](https://github.com/Instadapp/dsa-contracts/blob/master/audits/v1_PeckShield_Mar_2020.pdf)\n- [Samczun Audit - Mar 2020](https://github.com/Instadapp/dsa-contracts/blob/master/audits/v1_samczsun_Mar_2020.md)\n\nAvocado\n- [Statemind - Sept 28, 2023](https://github.com/Instadapp/avocado-audits/blob/main/Statemind-Audit-Report-Avocado-v3.pdf)\n- [Peckshield - June 12, 2023](https://github.com/Instadapp/avocado-audits/blob/main/PeckShield-Audit-Report-Avocado-v3.pdf)\n\nFluid\n- [Statemind - Dec 29th, 2023](https://github.com/statemindio/public-audits/blob/main/Instadapp/2023-12-29_Instadapp_Fluid.pdf)\n\n__Proof of Concept (PoC) Requirements__\n\nA Proof of Concept is required for all severity levels (Critical, High, Medium and Low), for every asset type in scope.\n\nWhen calculating the USD value of total value locked (TVL) to determine funds at risk, outstanding borrows are excluded.\n\nTo be eligible for a reward, the vulnerability must exist in the deployed smart contract.\n\nBugs resulting in temporary freezing of funds for under 10 days are not eligible for a reward. Temporary freezing of funds for more than 10 days is assessed under the in-scope High impact.\n\nPayouts are handled by the Instadapp team directly. Payouts are made in USDC, USDT or DAI on Ethereum, denominated in USD.\n\n__Scope Clarifications__\n\n- Issues affecting the first or last user of a pool or vault that arise from dust amounts, in any protocol other than DexV2, are classified at most as Low, since the standard production setup includes seeding a dust position that serves as the first and last user.\n\n- A vulnerability present in more than one of the EVM, Solana and Sui codebases is treated as a single finding and rewarded once.\n\n- Sui: the mainnet packages listed in Assets by Move Registry name, at their latest version. Fluid Lite USD and Fluid Lite ETH: the vault proxies listed in Assets and all linked modules.\n\n- Deployed contract addresses are listed in [deployments.md](https://github.com/Instadapp/fluid-contracts-public/blob/main/deployments/deployments.md) in the public repository; funds at risk is assessed against the deployed contracts referenced there. For the Sui packages and Fluid Lite, funds at risk is assessed against the packages and vaults listed in Assets.\n\n__Deprecated Contracts__\n\nContracts marked as deprecated in the public deployments file (https://github.com/Instadapp/fluid-contracts-public/blob/main/deployments/deployments.md) remain in scope for as long as they hold funds. For findings on deprecated contracts, the minimum reward is one tenth of the standard minimum: USD 1,000 for Critical and USD 500 for High.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -127,7 +219,7 @@
   "rewardsToken": "USDC, USDT, DAI",
   "slug": "instadapp",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-11-20T11:29:18.543Z",
+  "updatedDate": "2026-11-25T13:34:00.201Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -279,7 +371,7 @@
   ],
   "rewards": [
     {
-      "id": 52691,
+      "id": 53364,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -289,7 +381,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 52692,
+      "id": 53365,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -298,7 +390,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 52693,
+      "id": 53366,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -308,7 +400,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 52694,
+      "id": 53367,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",

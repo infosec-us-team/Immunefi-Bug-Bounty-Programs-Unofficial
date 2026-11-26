@@ -145,7 +145,7 @@
   "projectType": [
     "Infrastructure"
   ],
-  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\n__Reward Calculation for Critical Smart Contract Reports__\n\nFor critical smart contract bugs, the reward amount is 10% of the funds directly affected up to a maximum of 125 000 USDC. The calculation of the amount of funds at risk is based on the time and date the bug report is submitted.  For the avoidance of doubt, directly affected funds calculation does not include downstream protocols or users of the Pyth protocol or any effects on the $PYTH token price.\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attacks within the first hour will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\n\nFor critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Smart Contract Reports__\n\nHigh vulnerabilities concerning theft/permanent freezing of unclaimed yield/royalties are rewarded up to $50,000 USDC depending on the funds at risk, capped at the maximum high reward.  \n\n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\n__Reward Calculation for High Websites and Applications Reports__\n\nFor High web/app impacts, the maximum reward of **USD 20 000** will only be paid out for issues that affect our main user-facing applications, generally hosted under pyth.network.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Pyth Data Association directly and are denominated in USD. However, payments are done in USDC. \n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3. ](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3/)\n\n__Reward Calculation for Critical Smart Contract Reports__\n\nThe calculation of the amount of funds at risk is based on the time and date the bug report is submitted.  For the avoidance of doubt, directly affected funds calculation does not include downstream protocols or users of the Pyth protocol or any effects on the $PYTH token price.\n\n__Repeatable Attack Limitations__\n\nIf the smart contract where the vulnerability exists can be upgraded or paused, only the initial attacks within the first hour will be considered for a reward. This is because the project can mitigate the risk of further exploitation by upgrading or pausing the component where the vulnerability exists. The reward amount will depend on the severity of the impact and the funds at risk. \n\nFor critical repeatable attacks on smart contracts that cannot be upgraded or paused, the project will consider the cumulative impact of the repeatable attacks for a reward. This is because the project cannot prevent the attacker from repeatedly exploiting the vulnerability until all funds are drained and/or other irreversible damage is done. Therefore, this warrants a reward equivalent to 10% of funds at risk, capped at the maximum critical reward. \n\n__Reward Calculation for High Smart Contract Reports__\n\nIn the event of temporary freezing, the reward doubles from the full frozen value for every additional 24h that the funds are temporarily frozen, up until a max cap of the high reward. This is because as the duration of the freezing lengthens, the potential for greater damage and subsequent reputational harm intensifies. Thus, by increasing the reward proportionally with the frozen duration, the project ensures stronger incentives for bug disclosure of this nature.\n\n__Reward Calculation for High Websites and Applications Reports__\n\nFor High web/app impacts, the maximum reward will only be paid out for issues that affect our main user-facing applications, generally hosted under pyth.network.\n\n__Reward Payment Terms__\n\nPayouts are handled by the Pyth Data Association directly and are denominated in USD. However, payments are done in USDC. \n\nThe calculation of the net amount rewarded is based on the average price between CoinMarketCap.com and CoinGecko.com at the time the bug report was submitted. No adjustments are made based on liquidity availability.",
   "rewardsPool": 0,
   "primaryPool": 0,
   "allStarsPool": 0,
@@ -153,7 +153,7 @@
   "rewardsToken": "USDC",
   "slug": "pythnetwork",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-11-24T13:01:50.314Z",
+  "updatedDate": "2026-11-26T06:43:02.940Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -182,22 +182,70 @@
       "title": "Contract fails to deliver promised returns, but  doesn't lose value"
     },
     {
-      "id": 4862,
-      "type": "smart_contract",
-      "severity": "high",
-      "title": "Software flaws in the on-chain program cause Pyth to publish an inaccurate price when ≥ 3/4 of the contributing publishers are accurate."
-    },
-    {
       "id": 4863,
       "type": "smart_contract",
       "severity": "high",
       "title": "Exposure of private keys controlled by the PDA or permissionless services"
     },
     {
-      "id": 23,
+      "id": 4865,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Assume ownership of Pyth’s contracts in mainnet"
+    },
+    {
+      "id": 6507,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Temporary freezing of funds for at least 7 days (assuming Pyth takes no action), including funds that only a contract upgrade can free"
+    },
+    {
+      "id": 6508,
       "type": "smart_contract",
       "severity": "high",
-      "title": "Theft of unclaimed yield"
+      "title": "Permanent freezing of unclaimed yield: no one can move or recover it, even with a contract upgrade"
+    },
+    {
+      "id": 6509,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Change the result of a Pyth DAO vote through a bug in an in-scope contract (i.e., the voted-on outcome differs from the outcome in the governance message sent to other blockchains), or make an in-scope contract run a governance action that Pyth governance did not approve, including one from a replaced governance data source or an approved message run twice on the same contract."
+    },
+    {
+      "id": 6510,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Make an in-scope contract on mainnet accept or return, for a feed, an attacker-chosen value (price, confidence, exponent, time or another field) that the signers and data sources it is configured to trust did not sign for that feed, or make Entropy give a request a random number other than the one the Entropy protocol determines for it"
+    },
+    {
+      "id": 6511,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Theft of funds staked on Pyth"
+    },
+    {
+      "id": 6512,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing or loss of funds, other than unclaimed yield: no one can move or recover them, even with a contract upgrade"
+    },
+    {
+      "id": 51,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:\n- Reflected HTML Injection\n- Loading external site data"
+    },
+    {
+      "id": 52,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Redirecting users to malicious websites (open redirect)"
+    },
+    {
+      "id": 53,
+      "type": "websites_and_applications",
+      "severity": "low",
+      "title": "Changing details of other users (including modifying browser local storage) without already-connected wallet interaction and with significant user interaction, such as:\n- Iframing leading to modifying the backend/browser state (must demonstrate impact with PoC)"
     },
     {
       "id": 25,
@@ -210,24 +258,6 @@
       "type": "smart_contract",
       "severity": "high",
       "title": "Temporary freezing of funds"
-    },
-    {
-      "id": 4864,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Arbitrarily manipulate Pyth oracle prices or other published values"
-    },
-    {
-      "id": 4865,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Assume ownership of Pyth’s contracts in mainnet"
-    },
-    {
-      "id": 4866,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Locking, loss, or theft of funds staked on Pyth"
     },
     {
       "id": 29,
@@ -246,12 +276,6 @@
       "type": "smart_contract",
       "severity": "medium",
       "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
-    },
-    {
-      "id": 32,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Theft of gas"
     },
     {
       "id": 33,
@@ -282,6 +306,18 @@
       "type": "smart_contract",
       "severity": "critical",
       "title": "Protocol insolvency"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 32,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Theft of gas"
     },
     {
       "id": 35,
@@ -336,29 +372,11 @@
       "type": "websites_and_applications",
       "severity": "high",
       "title": "Subdomain takeover without already-connected wallet interaction"
-    },
-    {
-      "id": 51,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Injecting/modifying the static content on the target application without JavaScript (reflected), such as:\n- Reflected HTML Injection\n- Loading external site data"
-    },
-    {
-      "id": 52,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Redirecting users to malicious websites (open redirect)"
-    },
-    {
-      "id": 53,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Changing details of other users (including modifying browser local storage) without already-connected wallet interaction and with significant user interaction, such as:\n- Iframing leading to modifying the backend/browser state (must demonstrate impact with PoC)"
     }
   ],
   "rewards": [
     {
-      "id": 53223,
+      "id": 53413,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -368,7 +386,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 53224,
+      "id": 53414,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -377,7 +395,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 53225,
+      "id": 53415,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -386,7 +404,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 53226,
+      "id": 53416,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
@@ -395,7 +413,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 53227,
+      "id": 53417,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -405,7 +423,7 @@
       "otherImpactMaxReward": 30000
     },
     {
-      "id": 53228,
+      "id": 53418,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -414,7 +432,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 53229,
+      "id": 53419,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
@@ -422,7 +440,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 53230,
+      "id": 53420,
       "primacy": null,
       "severity": "low",
       "assetType": "websites_and_applications",

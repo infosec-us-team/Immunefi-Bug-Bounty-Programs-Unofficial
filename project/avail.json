@@ -4,19 +4,21 @@
       "id": "18liAnHwE6kAUPXBNjvUqI",
       "url": "https://bridge.availproject.org",
       "type": "websites_and_applications",
-      "addedAt": "2024-07-23T02:00:00.000Z",
-      "revision": 4,
+      "addedAt": "2024-07-22T20:45:58.650Z",
+      "revision": 0,
       "description": "Bridge UI",
-      "isPrimacyOfImpact": null
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     },
     {
       "id": "2H8B6VRAaNU6KqQ8JMd7JZ",
       "url": "https://github.com/availproject/contracts",
       "type": "smart_contract",
-      "addedAt": "2024-07-23T02:00:00.000Z",
-      "revision": 2,
+      "addedAt": "2024-07-22T20:45:19.965Z",
+      "revision": 0,
       "description": "Avail Bridge Smart Contracts",
-      "isPrimacyOfImpact": null
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
     }
   ],
   "assetsBodyV2": "Fusion contracts (Fusion.sol,...) are out of scope as they are not in production.",
@@ -33,7 +35,8 @@
   "evaluationEndDate": null,
   "features": [
     "Managed Triage: Time Saver",
-    "Subscription Plan: Essential"
+    "Subscription Plan: Essential",
+    "Pay to Mediate"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -59,14 +62,14 @@
     "websites_and_applications - low"
   ],
   "primaryPaymentWallet": "EVM",
-  "prioritizedVulnerabilities": "Avail’s codebase can be found at [https://github.com/availproject](https://github.com/availproject). \n\nDocumentation and further resources can be found on [https://docs.availproject.org/docs/introduction-to-avail](https://docs.availproject.org/docs/introduction-to-avail).",
+  "prioritizedVulnerabilities": "_blank_",
   "productType": [
     "L2"
   ],
   "programOverview": "Avail is designed to be a platform that connects different ecosystems by providing a modular, scalable, and interoperable platform.\nAvail's vision is to provide a cohesive, unified user experience within a flexible and modular blockchain ecosystem, drawing on lessons from Web2 to innovate in Web3. Avail is not just building a product; we are pioneering a new category in the blockchain space, paving the way for an era of enhanced scalability and seamless integration.\n\n\nAvail aims to provide a cohesive platform that bridges the gaps between various blockchain ecosystems.\nBy implementing the right primitives and standards, Avail seeks to ensure interoperability and cooperation among diverse blockchain networks. This approach not only enhances the user experience but also fosters a more integrated and efficient blockchain ecosystem.\nWith Avail's foundational DA layer, different ecosystems can innovate on top freely, while leveraging Nexus for cross-ecosystem messaging.\nFor more information about Avail, please visit https://www.availproject.org/\n\nAvail provides rewards in USDC on Ethereum, denominated in USD. For more details about the payment process, please view the Rewards by Threat Level section further below. \n\n__KYC Requirement__ \n\nAvail will be requesting KYC information in order to pay for successful bug submissions. The following information will be required:\n- Full name \n- Date of birth\n- Proof of address (either a redacted bank statement with address or a recent utility bill)\n- Copy of Passport or other Government issued ID\n\n__Proof of Concept (PoC) Requirements__\n\nA PoC, demonstrating the bug's impact, is required for this program and has to comply with the [Immunefi PoC Guidelines and Rules](https://immunefisupport.zendesk.com/hc/en-us/articles/9946217628561-Proof-of-Concept-PoC-Guidelines-and-Rules).\n\n__Previous Audits__\n\nAvail’s completed audit reports can be found at [https://github.com/availproject/audits](https://github.com/availproject/audits). Any unfixed vulnerabilities  mentioned in these reports are not eligible for a reward.\n\n\n__Immunefi Standard Badge__\n\nBy adhering to Immunefi’s best practice recommendations, Avail has satisfied the requirements for the [Immunefi Standard Badge](https://immunefisupport.zendesk.com/hc/en-us/articles/15006865432209).",
   "programType": [
-    "Smart Contract",
-    "Websites and Applications"
+    "Websites and Applications",
+    "Smart Contract"
   ],
   "project": "Avail",
   "projectType": [
@@ -80,7 +83,7 @@
   "rewardsToken": "USDC",
   "slug": "avail",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2025-12-15T09:56:17.673Z",
+  "updatedDate": "2026-11-25T15:00:39.282Z",
   "impactsBody": null,
   "websiteUrl": "https://www.availproject.org/",
   "githubUrl": "https://github.com/availproject",
@@ -107,12 +110,6 @@
       "type": "websites_and_applications",
       "severity": "low",
       "title": "Temporarily disabling user to access target site, such as:  Locking up the victim from login Cookie bombing, etc."
-    },
-    {
-      "id": 4992,
-      "type": "websites_and_applications",
-      "severity": "low",
-      "title": "Taking over broken or expired outgoing links, such as:  Social media handles, etc."
     },
     {
       "id": 4993,
@@ -255,7 +252,8 @@
   ],
   "rewards": [
     {
-      "id": 39457,
+      "id": 53368,
+      "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
       "maxReward": 250000,
@@ -264,7 +262,8 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 39458,
+      "id": 53369,
+      "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
       "maxReward": 40000,
@@ -272,36 +271,42 @@
       "rewardModel": "range"
     },
     {
-      "id": 39459,
+      "id": 53370,
+      "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
       "fixedReward": 4000,
       "rewardModel": "fixed"
     },
     {
-      "id": 39460,
+      "id": 53371,
+      "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
       "maxReward": 20000,
       "minReward": 6000,
-      "rewardModel": "range"
+      "rewardModel": "range",
+      "otherImpactMaxReward": 0
     },
     {
-      "id": 39461,
+      "id": 53372,
+      "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
       "fixedReward": 5000,
       "rewardModel": "fixed"
     },
     {
-      "id": 39462,
+      "id": 53373,
+      "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
       "fixedReward": 2500,
       "rewardModel": "fixed"
     },
     {
-      "id": 39463,
+      "id": 53374,
+      "primacy": null,
       "severity": "low",
       "assetType": "websites_and_applications",
       "fixedReward": 1000,
