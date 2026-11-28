@@ -115,7 +115,7 @@
   "rewardsToken": "USDC",
   "slug": "gmtrade",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-11-20T11:26:25.190Z",
+  "updatedDate": "2026-11-27T13:36:15.828Z",
   "impactsBody": null,
   "websiteUrl": "https://gmtrade.xyz",
   "githubUrl": "https://github.com/gmsol-labs/gmx-solana",
@@ -137,7 +137,7 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "Known Issues\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. Every issue opened in the repo, closed PRs, previous contests and audits are out of scope.\n\nAll issues submitted by wardens to the GMTrade bounty will be added to this repo once they have been reviewed by the sponsors. These are considered known issues and are out-of-scope for bounty rewards.\n\nhttps://github.com/gmsol-labs/gmx-solana/blob/main/README.md#known-issues\n\n\nPrevious Audits\nAny previously reported vulnerabilities mentioned in past audit reports are not eligible for a reward.\n\nGMTrade previous audits can be found below:\n\nhttps://github.com/gmsol-labs/gmx-solana-audits\n\n\nSpecific Types of Issues\n• Informational findings.\n• Design choices or expected design behaviors related to protocol.\n• Issues that are ultimately user errors and can easily be caught in the frontend. For example, transfers to the System Program.\n• Rounding errors.\n• Relatively high gas consumption.\n• Attacks requiring access to Timelock or Oracles.\n• Risk of loss due to decline in pool asset prices.\n• Price manipulation on third-party exchanges.\n• Exploits based on delayed or extreme price feed updates.\n• Attacks that are not economically feasible.\n• Vulnerabilities related to hosting providers.\n\n\nTrusted Roles\n• Program upgrade authorities responsible for deploying and upgrading program code.\n• The administrators with control over the default store account authority, typically protected by multisig and timelock mechanisms.\n• Any program-defined privileged roles granted or managed by the administrators.\n• Keeper accounts responsible for critical operations or maintaining service availability.",
+  "customOutOfScopeInformation": "Known Issues\nBug reports covering previously-discovered bugs (listed below) are not eligible for a reward within this program. This includes known issues that the project is aware of but has consciously decided not to “fix”, necessary code changes, or any implemented operational mitigating procedures that can lessen potential risk. Every issue opened in the repo, closed PRs, previous contests and audits are out of scope.\n\nAll issues submitted by wardens to the GMTrade bounty will be added to this repo once they have been reviewed by the sponsors. These are considered known issues and are out-of-scope for bounty rewards.\n\nhttps://github.com/gmsol-labs/gmx-solana/blob/main/README.md#known-issues\n\nAn issue is considered a known issue under the GMTrade Bug Bounty Program if it is documented in the GMX Synthetics repository (https://github.com/gmx-io/gmx-synthetics), including in its Known Issues section or source code comments, or in an audit report covering GMX Synthetics, and the same underlying issue applies to a protocol mechanism shared with GMTrade. Reports covering such issues are ineligible for rewards.\n\nPrevious Audits\nAny previously reported vulnerabilities mentioned in past audit reports are not eligible for a reward.\n\nGMTrade previous audits can be found below:\n\nhttps://github.com/gmsol-labs/gmx-solana-audits\n\n\nSpecific Types of Issues\n• Informational findings.\n• Design choices or expected design behaviors related to protocol.\n• Issues that are ultimately user errors and can easily be caught in the frontend. For example, transfers to the System Program.\n• Rounding errors.\n• Relatively high gas consumption.\n• Attacks requiring access to Timelock or Oracles.\n• Risk of loss due to decline in pool asset prices.\n• Price manipulation on third-party exchanges.\n• Exploits based on delayed or extreme price feed updates.\n• Attacks that are not economically feasible.\n• Vulnerabilities related to hosting providers.\n\n\nTrusted Roles\n• Program upgrade authorities responsible for deploying and upgrading program code.\n• The administrators with control over the default store account authority, typically protected by multisig and timelock mechanisms.\n• Any program-defined privileged roles granted or managed by the administrators.\n• Keeper accounts responsible for critical operations or maintaining service availability.",
   "customProhibitedActivities": [],
   "impacts": [
     {
@@ -191,7 +191,7 @@
   ],
   "rewards": [
     {
-      "id": 52663,
+      "id": 53574,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -201,7 +201,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 52664,
+      "id": 53575,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -210,7 +210,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 52665,
+      "id": 53576,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",

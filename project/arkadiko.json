@@ -144,7 +144,9 @@
   "features": [
     "Subscription Plan: Essential",
     "Arbitration",
-    "Pay to Mediate"
+    "Pay to Mediate",
+    "Pay to Submit",
+    "Pay to Mediate - No Free Mediations"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -166,7 +168,7 @@
     "websites_and_applications - critical"
   ],
   "primaryPaymentWallet": "EVM",
-  "prioritizedVulnerabilities": "Only the following impacts are accepted within this bug bounty program. All other impacts are not considered as in-scope, even if they affect something in the assets in scope table.",
+  "prioritizedVulnerabilities": "_blank_",
   "productType": [
     "Stablecoin"
   ],
@@ -187,13 +189,13 @@
   "rewardsToken": "USDC",
   "slug": "arkadiko",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-11-20T12:34:40.974Z",
+  "updatedDate": "2026-11-27T17:09:40.437Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
   "eligibilityCriteria": [],
   "responsiblePublicationCategory": "category_3",
-  "description": "Arkadiko is a decentralized, non-custodial liquidity protocol where users can collateralize their assets and mint a stablecoin called USDA. ",
+  "description": "Arkadiko is a decentralized, non-custodial liquidity protocol where users can collateralize their assets and mint a stablecoin called USDA.",
   "knownIssues": [],
   "defaultOutOfScopeBlockchain": null,
   "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
@@ -265,6 +267,18 @@
       "title": "Permanent freezing of funds"
     },
     {
+      "id": 4919,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:   Changing registration information, Commenting, Voting, Making trades, Withdrawals, etc."
+    },
+    {
+      "id": 4920,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Malicious interactions with an already-connected wallet, such as:  Modifying transaction arguments or parameters, Substituting contract addresses, Submitting malicious transactions"
+    },
+    {
       "id": 18,
       "type": "smart_contract",
       "severity": "critical",
@@ -295,27 +309,15 @@
       "title": "Protocol insolvency"
     },
     {
-      "id": 4919,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:   Changing registration information, Commenting, Voting, Making trades, Withdrawals, etc."
-    },
-    {
       "id": 42,
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Direct theft of user funds"
-    },
-    {
-      "id": 4920,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Malicious interactions with an already-connected wallet, such as:  Modifying transaction arguments or parameters, Substituting contract addresses, Submitting malicious transactions"
     }
   ],
   "rewards": [
     {
-      "id": 10611,
+      "id": 53589,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -325,7 +327,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 10612,
+      "id": 53590,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -334,7 +336,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 10613,
+      "id": 53591,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",

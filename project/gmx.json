@@ -2568,7 +2568,7 @@
   "rewardsToken": "ETH or USDC",
   "slug": "gmx",
   "tenPercentEconomicRule": true,
-  "updatedDate": "2026-11-18T15:58:27.846Z",
+  "updatedDate": "2026-11-27T17:42:24.484Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -2629,10 +2629,22 @@
   "customProhibitedActivities": [],
   "impacts": [
     {
-      "id": 6414,
+      "id": 52,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Redirecting users to malicious websites (open redirect)"
+    },
+    {
+      "id": 30,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing"
+    },
+    {
+      "id": 37,
       "type": "websites_and_applications",
       "severity": "critical",
-      "title": "Wallet interaction flow modification by an attacker resulting in financial loss"
+      "title": "Taking down the application/website"
     },
     {
       "id": 41,
@@ -2675,18 +2687,6 @@
       "type": "websites_and_applications",
       "severity": "medium",
       "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Changing the first/last name of user\n- Enabling/disabling notifications"
-    },
-    {
-      "id": 52,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Redirecting users to malicious websites (open redirect)"
-    },
-    {
-      "id": 6413,
-      "type": "websites_and_applications",
-      "severity": "high",
-      "title": "Interface logic error, with no attacker involved, that directly makes user funds unrecoverable (excluding fees and execution price)"
     },
     {
       "id": 5178,
@@ -2737,12 +2737,6 @@
       "title": "Smart contract unable to operate due to lack of token funds"
     },
     {
-      "id": 30,
-      "type": "smart_contract",
-      "severity": "medium",
-      "title": "Block stuffing"
-    },
-    {
       "id": 31,
       "type": "smart_contract",
       "severity": "medium",
@@ -2773,10 +2767,16 @@
       "title": "Retrieve sensitive data/files from a running server, such as:\n- /etc/shadow\n- database passwords\n- blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
     },
     {
-      "id": 37,
+      "id": 6413,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Interface logic error, with no attacker involved, that directly makes user funds unrecoverable (excluding fees and execution price)"
+    },
+    {
+      "id": 6414,
       "type": "websites_and_applications",
       "severity": "critical",
-      "title": "Taking down the application/website"
+      "title": "Wallet interaction flow modification by an attacker resulting in financial loss"
     },
     {
       "id": 5179,
@@ -2841,7 +2841,7 @@
   ],
   "rewards": [
     {
-      "id": 52568,
+      "id": 53696,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -2850,7 +2850,7 @@
       "rewardCalculationPercentage": 10
     },
     {
-      "id": 52569,
+      "id": 53697,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
@@ -2859,7 +2859,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 52570,
+      "id": 53698,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -2868,7 +2868,7 @@
       "rewardModel": "range"
     },
     {
-      "id": 52571,
+      "id": 53699,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -2878,7 +2878,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 52572,
+      "id": 53700,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -2886,7 +2886,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 52573,
+      "id": 53701,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
@@ -2894,7 +2894,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 52574,
+      "id": 53702,
       "primacy": null,
       "severity": "low",
       "assetType": "websites_and_applications",

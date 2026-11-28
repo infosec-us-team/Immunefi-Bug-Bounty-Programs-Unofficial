@@ -1,0 +1,381 @@
+{
+  "assets": [
+    {
+      "id": "101739",
+      "url": "https://docs.lido.fi/lend/deployed-contracts/",
+      "type": "smart_contract",
+      "addedAt": "2026-11-26T14:23:45.934Z",
+      "revision": 0,
+      "description": "Deployed contracts",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101740",
+      "url": "https://github.com/lidofinance/lend",
+      "type": "smart_contract",
+      "addedAt": "2026-11-26T14:23:45.934Z",
+      "revision": 0,
+      "description": "Core",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101741",
+      "url": "https://github.com/lidofinance/lend-irm",
+      "type": "smart_contract",
+      "addedAt": "2026-11-26T14:23:45.934Z",
+      "revision": 0,
+      "description": "Interest rate models",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101742",
+      "url": "https://github.com/lidofinance/lend-markets",
+      "type": "smart_contract",
+      "addedAt": "2026-11-26T14:23:45.934Z",
+      "revision": 0,
+      "description": "Markets",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101743",
+      "url": "https://github.com/lidofinance/lend-guardian-daemon",
+      "type": "smart_contract",
+      "addedAt": "2026-11-26T14:23:45.934Z",
+      "revision": 0,
+      "description": "Guardian daemon",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    },
+    {
+      "id": "101744",
+      "url": "https://lend.lido.fi",
+      "type": "websites_and_applications",
+      "addedAt": "2026-11-26T14:23:45.934Z",
+      "revision": 0,
+      "description": "Website",
+      "isSafeHarbor": false,
+      "isPrimacyOfImpact": false
+    }
+  ],
+  "assetsBodyV2": "Smart Contracts labeled or categorized as testnet are not in scope of this bug bounty program.\n\nDomains not listed in scope are out of scope. Lido may still make a goodwill payment for such a report.\n\nThe program covers deployed code only:\n\n- For a smart contract, the code in scope is the bytecode at an address on [docs.lido.fi/lend/deployed-contracts](https://docs.lido.fi/lend/deployed-contracts/). A listed repository holds its source.\n- For the guardian daemon, the code in scope is its latest release or tag.\n- A new contract enters the scope when that page lists it and a listed repository holds its source.",
+  "boostedIntroEvaluating": "",
+  "boostedIntroFinished": "",
+  "boostedIntroLive": "",
+  "boostedIntroStartingIn": "",
+  "boostedLeaderboard": [],
+  "boostedSummaryReport": null,
+  "ecosystem": [
+    "ETH"
+  ],
+  "endDate": null,
+  "evaluationEndDate": null,
+  "features": [
+    "Subscription Plan: Essential"
+  ],
+  "hideAssetsInScope": null,
+  "immunefiStandard": false,
+  "inviteOnly": false,
+  "kyc": false,
+  "language": [
+    "Solidity",
+    "Typescript"
+  ],
+  "launchDate": "2026-11-27T13:30:00.000Z",
+  "isPaused": false,
+  "pausedAt": null,
+  "pausedMessage": null,
+  "logo": "https://qn5bmgziiocgawpp.public.blob.vercel-storage.com/55314-MvUq_3YpY5CvPiGShW2fg.png",
+  "maxBounty": 2000000,
+  "outOfScopeAndRules": null,
+  "pocPerTypeAndSeverity": [],
+  "primaryPaymentWallet": "EVM",
+  "prioritizedVulnerabilities": "_blank_",
+  "productType": [
+    "Lending"
+  ],
+  "programOverview": "Lido Lend is a lending protocol on Ethereum, governed by the Lido DAO. Users can supply assets to isolated lending markets and earn interest, or borrow assets against collateral. Lido Lend is built on a modified fork of Morpho Blue.\n\nLido Lend aims to solve the key challenges of lending against staked assets — liquidity risk for lenders and fast-changing collateral risk — by keeping each market narrow, limiting how quickly new collateral can support a loan, and giving lenders more than one exit path.\n\nFor more information about Lido Lend, please visit [lend.lido.fi](https://lend.lido.fi/).\n\nThe bug bounty program covers its smart contracts and applications, focusing on preventing loss of user funds, freezing of funds, protocol insolvency and unauthorized control of Lido Lend roles.\n\n**Relationship with Lido's Safe Harbor Program**\n\nBug Bounty is distinct from [Lido's Safe Harbor Program](https://docs.lido.fi/security/safeharbor):\n\n- Bug bounty: for responsible disclosure of vulnerabilities before an active exploit, following Immunefi rules.\n- Safe Harbor: for live, active exploits where immediate intervention is needed and normal disclosure is too slow.\n\nSafe Harbor and the Bug Bounty program are mutually exclusive from a rewards perspective. A Whitehat rewarded via the Bug Bounty program cannot receive a reward for the same exploit under Safe Harbor, even if Safe Harbor's legal protections apply.\n\n**Relationship with the Lido Bug Bounty Program**\n\nThis program is separate from the [Lido bug bounty program](https://immunefi.com/bug-bounty/lido/), which covers all other Lido products and the Lido DAO governance contracts. A bug in their code belongs to that program.",
+  "programType": [
+    "Smart Contract",
+    "Websites and Applications"
+  ],
+  "project": "Lido Lend",
+  "projectType": [
+    "Defi"
+  ],
+  "rewardsBody": "Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System V2.3](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3). This is a simplified 4-level scale, with separate scales for websites/apps and smart contracts/blockchains, encompassing everything from consequence of exploitation to privilege required to likelihood of a successful exploit.\n\nAll web and app bugs must come with a PoC in order to be accepted. All web and app bug reports without a PoC will be rejected with a request for a PoC.\n\n### Smart Contracts Rewards Breakdown\n\n**Critical**\n\n- **Loss of user funds:**\n    - When a minimum of 2,000,000 USD of assets is at risk\n    - Reward: 10% of the funds directly affected, **Minimum 20,000 USD**, **Maximum 2,000,000 USD**\n- **Loss of protocol fees:**\n    - When a minimum of 100,000 USD of assets is at risk\n    - Reward: 10% of the funds directly affected, **Minimum 1,000 USD**, **Maximum 100,000 USD**\n\n**High**\n\n- When a minimum of 250,000 USD of assets is at risk\n- Reward: **Minimum 5,000 USD**, **Maximum 100,000 USD**\n\n**Medium**\n\n- When a minimum of 50,000 USD of assets is at risk\n- Reward: **Minimum 500 USD**, **Maximum 50,000 USD**\n\n**Low**\n\n- Reward: **Minimum 50 USD**, **Maximum 1,000 USD**\n\nIf the assets at risk are below the minimum of a level, the next lower level applies. An impact that puts no funds at risk gets the minimum reward of its level.\n\n**Funds at Risk**\n\nThe assets at risk are the funds that the attack can take or freeze. The funds can be in the core, a vault or an Exit Book.\n\nLent-out tokens are with the borrowers, not in the contracts. They count only when the attack makes lenders lose them, for example when the attack erases a borrower's debt.\n\nEach token counts once. Taken collateral counts minus the debt that its owner no longer has to repay.\n\nEach market has a supply cap, which limits the total assets that lenders can supply. For an empty market, the assets at risk are its full supply cap. The reward is at most 10% of the supply caps of the affected markets, but never below the level minimum. For a market with no supply cap, the assets at risk are the funds in the market, and this limit does not apply.\n\n---\n\n### Web/App Rewards Breakdown\n\n**Critical**\n\n- Reward: **Minimum 10,000 USD**, **Maximum 100,000 USD**\n\n**High**\n\n- Reward: **Minimum 5,000 USD**, **Maximum 50,000 USD**\n\n**Medium**\n\n- Reward: **Minimum 500 USD**, **Maximum 5,000 USD**\n\n**Low**\n\n- Reward: **Minimum 50 USD**, **Maximum 500 USD**\n\n---\n\nPayouts are handled by the Lido contributors directly and are denominated in USD. Payouts are done in USDC on Ethereum.\nAll rewards are defined under Lido Discretion.",
+  "rewardsPool": 0,
+  "primaryPool": 0,
+  "allStarsPool": 0,
+  "podiumPool": 0,
+  "rewardsToken": "USDC",
+  "slug": "lido-lend",
+  "tenPercentEconomicRule": false,
+  "updatedDate": "2026-11-27T13:31:42.499Z",
+  "impactsBody": "**Attack Window**\n\nLido considers only the initial attack window for a reward. The attack window is the time from the start of the attack until the protocol stops further exploitation. Its length depends on how the protocol can react and on the governance process:\n\n- If an emergency pause can stop the attack, the window is 1 hour.\n- If only an upgrade can stop the attack, the window is the time that governance needs to approve and execute the upgrade.\n- If no pause and no upgrade can stop the attack, the full impact counts.\n\nA market pause and an Exit Book pause both count as a pause. Example: only an upgrade can fix a bug in a Lido Lend oracle. But a market pause stops the attack, so the window is 1 hour.\n\n**Report Requirements**\n\nA smart contract report must include:\n\n- the affected asset, one impact from the list, and the funds at risk with the calculation;\n- a PoC that runs against the deployed contracts on a fork.\n\nThe PoC must:\n\n- prove the impact, not only describe it;\n- use the deployed in-scope contracts, not its own copies of them;\n- change the state of in-scope contracts only with transactions, not with direct writes to their code, storage or balances;\n- send only transactions that an attacker or an ordinary user can send. However, the PoC can execute a governance action that is already published, with its published parameters, e.g. activating a Lido Lend market.",
+  "websiteUrl": "https://lend.lido.fi",
+  "githubUrl": "https://github.com/lidofinance/lend-markets",
+  "eligibilityCriteria": [],
+  "responsiblePublicationCategory": "category_3",
+  "description": "Lido Lend is a lending protocol on Ethereum, governed by the Lido DAO. Lenders supply assets to isolated markets and earn interest. Borrowers borrow against collateral such as wstETH. Lido Lend is built on a fork of Morpho Blue.",
+  "knownIssues": [],
+  "defaultOutOfScopeBlockchain": null,
+  "defaultOutOfScopeSmartContract": "- Incorrect data supplied by third party oracles\n  - Not to exclude oracle manipulation/flash loan attacks\n- Impacts requiring basic economic and governance attacks (e.g. 51% attack)\n- Lack of liquidity impacts\n- Impacts from Sybil attacks\n- Impacts involving centralization risks",
+  "defaultOutOfScopeWebAndApplications": "- Theoretical impacts without any proof or demonstration\n- Impacts involving attacks requiring physical access to the victim device\n- Impacts involving attacks requiring access to the local network of the victim\n- Reflected plain text injection (e.g. url parameters, path, etc.)\n  - This does not exclude reflected HTML injection with or without JavaScript\n  - This does not exclude persistent plain text injection\n- Any impacts involving self-XSS\n- Captcha bypass using OCR without impact demonstration\n- CSRF with no state modifying security impact (e.g. logout CSRF)\n- Impacts related to missing HTTP Security Headers (such as X-FRAME-OPTIONS) or cookie security flags (such as “httponly”) without demonstration of impact\n- Server-side non-confidential information disclosure, such as IPs, server names, and most stack traces\n- Impacts causing only the enumeration or confirmation of the existence of users or tenants\n- Impacts caused by vulnerabilities requiring un-prompted, in-app user actions that are not part of the normal app workflows\n- Lack of SSL/TLS best practices\n- Impacts that only require DDoS\n- UX and UI impacts that do not materially disrupt use of the platform\n- Impacts primarily caused by browser/plugin defects\n- Leakage of non sensitive API keys (e.g. Etherscan, Infura, Alchemy, etc.)\n- Any vulnerability exploit requiring browser bugs for exploitation (e.g. CSP bypass)\n- SPF/DMARC misconfigured records)\n- Missing HTTP Headers without demonstrated impact\n- Automated scanner reports without demonstrated impact\n- UI/UX best practice recommendations\n- Non-future-proof NFT rendering",
+  "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
+  "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
+  "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
+  "customOutOfScopeInformation": "- Best practice critiques.\n- Only accept reports targeting deployed contracts, not latest contracts in repos.\n- Only accept reports associated with releases, not develop or feature branches.\n- All impact of an attack on offchain software must be described in terms of impact on protocol itself and classified accordingly.\n- All impact of an attack on re-entrancy must be described in terms of impact on protocol itself and classified accordingly.\n- Smart Contracts labeled or categorized as testnet are not in scope of this bug bounty program.\n- Domains not listed in scope are out of scope. Lido may still make a goodwill payment for such a report.\n- Bugs in the code of other Lido products or the Lido DAO governance contracts. The Lido bug bounty program covers them.\n- The result of an action that a Lido Lend role takes within its intended authority. A role that acts beyond its limit stays in scope.\n- Results of parameter choices by governance or a risk steward.\n- Incorrect data from third-party screening providers to the guardian daemon.\n- Normal competition between users for permissionless actions, including front-running of these actions.\n- Rounding that the Lido Lend documentation describes. Other rounding counts only when an attack uses it to take or freeze funds.\n- Bad debt from a market price change, and the write-off of that bad debt against the suppliers of the market.\n- Guardian daemon code outside the `src/` folder.\n- Guardian daemon impacts, except:\n    - an early heartbeat, or a wrong or missing `flag` or `suspect` call, that an unprivileged on-chain user causes;\n    - extraction of the guardian daemon's signing key by an unprivileged attacker.\n\n**Known Issues are:**\n\n- findings in the Lido Lend audit reports at https://github.com/lidofinance/audits/tree/main/lend;\n- findings in the Morpho Blue, Morpho IRM and Morpho Bundler3 audit reports at https://github.com/morpho-org/morpho-blue/tree/main/audits, https://github.com/morpho-org/morpho-blue-irm/tree/main/audits and https://github.com/morpho-org/bundler3/tree/main/audits;\n- behavior that the Morpho Blue whitepaper at https://github.com/lidofinance/lend/blob/v1.0.0/morpho-blue-whitepaper.pdf describes;\n- behavior that the documentation of the repositories in the asset list describes as intended, or as an accepted risk with its effect;\n- cases that a test in these repositories shows as expected behavior;\n- issues in the GitHub issue trackers of these repositories, open or closed.\n\nDocumentation includes specifications and README files. An item counts only if it was public before the report, on any branch or in any pull request.\n\nAn item makes a report a known issue only when it describes the same root cause.\n\nA bypass of a fix is a new issue, and it stays eligible.",
+  "customProhibitedActivities": [],
+  "impacts": [
+    {
+      "id": 6589,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Improperly disclosing confidential user information such as email address, phone number, IP address, etc."
+    },
+    {
+      "id": 6590,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Injecting/modifying the static content on the target application without JavaScript injection such as HTML injection, replacing existing text with arbitrary text, arbitrary file uploads, etc."
+    },
+    {
+      "id": 6591,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Retrieve sensitive data/files from a running server, such as: /etc/shadow database passwords blockchain keys (this does not include non-sensitive environment variables, open source code, or usernames)"
+    },
+    {
+      "id": 15,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Direct theft of any user funds, whether at-rest or in-motion, other than unclaimed yield"
+    },
+    {
+      "id": 17,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Permanent freezing of funds"
+    },
+    {
+      "id": 22,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Protocol insolvency"
+    },
+    {
+      "id": 23,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Theft of unclaimed yield"
+    },
+    {
+      "id": 25,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Permanent freezing of unclaimed yield"
+    },
+    {
+      "id": 30,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Block stuffing"
+    },
+    {
+      "id": 31,
+      "type": "smart_contract",
+      "severity": "medium",
+      "title": "Griefing (e.g. no profit motive for an attacker, but damage to the users or the protocol)"
+    },
+    {
+      "id": 34,
+      "type": "smart_contract",
+      "severity": "low",
+      "title": "Contract fails to deliver promised returns, but doesn't lose value"
+    },
+    {
+      "id": 35,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Execute arbitrary system commands"
+    },
+    {
+      "id": 39,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Taking and/modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as:\n- Changing registration information\n- Commenting\n- Voting\n- Making trades\n- Withdrawals, etc."
+    },
+    {
+      "id": 41,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Subdomain takeover with already-connected wallet interaction"
+    },
+    {
+      "id": 42,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Direct theft of user funds"
+    },
+    {
+      "id": 43,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Malicious interactions with an already-connected wallet, such as:\n- Modifying transaction arguments or parameters\n- Substituting contract addresses\n- Submitting malicious transactions"
+    },
+    {
+      "id": 47,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Changing sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as:\n- Email\n- Password of the victim etc."
+    },
+    {
+      "id": 49,
+      "type": "websites_and_applications",
+      "severity": "high",
+      "title": "Subdomain takeover without already-connected wallet interaction"
+    },
+    {
+      "id": 6518,
+      "type": "websites_and_applications",
+      "severity": "low",
+      "title": "Taking down the application/website"
+    },
+    {
+      "id": 6520,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Theft or permanent freezing of protocol fees"
+    },
+    {
+      "id": 6585,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Temporary freezing of funds for at least 24 hours"
+    },
+    {
+      "id": 6586,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "An unprivileged attacker extracts the guardian daemon's signing key"
+    },
+    {
+      "id": 6587,
+      "type": "smart_contract",
+      "severity": "high",
+      "title": "Acquiring a Lido Lend role without its holder or governance granting it"
+    },
+    {
+      "id": 6588,
+      "type": "websites_and_applications",
+      "severity": "low",
+      "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as changing the first/last name of user, or en/disabling notifications"
+    }
+  ],
+  "rewards": [
+    {
+      "id": 53566,
+      "primacy": null,
+      "severity": "critical",
+      "assetType": "smart_contract",
+      "maxReward": 2000000,
+      "minReward": 20000,
+      "rewardModel": "range",
+      "rewardCalculationPercentage": 10
+    },
+    {
+      "id": 53567,
+      "primacy": null,
+      "severity": "high",
+      "assetType": "smart_contract",
+      "maxReward": 100000,
+      "minReward": 5000,
+      "rewardModel": "range"
+    },
+    {
+      "id": 53568,
+      "primacy": null,
+      "severity": "medium",
+      "assetType": "smart_contract",
+      "maxReward": 50000,
+      "minReward": 500,
+      "rewardModel": "range"
+    },
+    {
+      "id": 53569,
+      "primacy": null,
+      "severity": "low",
+      "assetType": "smart_contract",
+      "maxReward": 1000,
+      "minReward": 50,
+      "rewardModel": "range"
+    },
+    {
+      "id": 53570,
+      "primacy": null,
+      "severity": "critical",
+      "assetType": "websites_and_applications",
+      "maxReward": 100000,
+      "minReward": 10000,
+      "rewardModel": "range",
+      "otherImpactMaxReward": 0
+    },
+    {
+      "id": 53571,
+      "primacy": null,
+      "severity": "high",
+      "assetType": "websites_and_applications",
+      "maxReward": 50000,
+      "minReward": 5000,
+      "rewardModel": "range"
+    },
+    {
+      "id": 53572,
+      "primacy": null,
+      "severity": "medium",
+      "assetType": "websites_and_applications",
+      "maxReward": 5000,
+      "minReward": 500,
+      "rewardModel": "range"
+    },
+    {
+      "id": 53573,
+      "primacy": null,
+      "severity": "low",
+      "assetType": "websites_and_applications",
+      "maxReward": 500,
+      "minReward": 50,
+      "rewardModel": "range"
+    }
+  ],
+  "audits": [
+    {
+      "id": "1560",
+      "url": "https://github.com/lidofinance/audits/blob/main/lend/2026-11-16-cyfrin-lido-lend-deployment-verification.pdf",
+      "auditor": "Cyfrin",
+      "date": "2026-11-15T00:00:00.000Z"
+    },
+    {
+      "id": "1561",
+      "url": "https://github.com/lidofinance/audits/blob/main/lend/2026-11-10-mixbytes-lido-lend-easy-track-factories-audit-report.pdf",
+      "auditor": "MixBytes",
+      "date": "2026-11-15T00:00:00.000Z"
+    },
+    {
+      "id": "1562",
+      "url": "https://github.com/lidofinance/audits/blob/main/lend/2026-11-9-mixbytes-lido-lend-guardian-daemon-sdk.pdf",
+      "auditor": "MixBytes",
+      "date": "2026-11-08T00:00:00.000Z"
+    },
+    {
+      "id": "1563",
+      "url": "https://github.com/lidofinance/audits/blob/main/lend/2026-10-26_Cyfrin_Lido-Lend.pdf",
+      "auditor": "Cyfrin",
+      "date": "2026-10-25T00:00:00.000Z"
+    }
+  ]
+}

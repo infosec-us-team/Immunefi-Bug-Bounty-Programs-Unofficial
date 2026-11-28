@@ -2454,7 +2454,9 @@
   "endDate": null,
   "evaluationEndDate": null,
   "features": [
-    "Pay to Mediate"
+    "Pay to Mediate",
+    "Pay to Submit",
+    "Pay to Mediate - No Free Mediations"
   ],
   "hideAssetsInScope": null,
   "immunefiStandard": true,
@@ -2477,7 +2479,7 @@
     "websites_and_applications - low"
   ],
   "primaryPaymentWallet": "EVM",
-  "prioritizedVulnerabilities": "We are especially interested in receiving and rewarding vulnerabilities of the following types as long as they result in an impact stated in the Impacts in Scope section:\n\n__Smart Contracts and Blockchain__ \n\n  - Re-entrancy\n  - Logic errors\n    - including user authentication errors\n  - Solidity/EVM details not considered\n    - including integer over-/under-flow\n    - including rounding errors\n    - including unhandled exceptions\n  - Trusting trust/dependency vulnerabilities\n    - including composability vulnerabilities\n  - Oracle failure/manipulation\n  - Novel governance attacks\n  - Economic/financial attacks\n    - including flash loan attacks\n  - Congestion and scalability\n    - including running out of gas\n    - including block stuffing\n    - including susceptibility to frontrunning\n  - Consensus failures\n  - Cryptography problems\n    - Signature malleability\n    - Susceptibility to replay attacks\n    - Weak randomness\n    - Weak encryption\n  - Susceptibility to block timestamp manipulation\n  - Missing access controls / unprotected internal or debugging interfaces\n\n__Websites and Apps__\n\n  - Remote Code Execution\n  - Trusting trust/dependency vulnerabilities\n  - Vertical Privilege Escalation\n  - XML External Entities Injection\n  - SQL Injection\n  - LFI/RFI\n  - Horizontal Privilege Escalation\n  - Stored XSS\n  - Reflective XSS with impact\n  - CSRF with impact\n  - Direct object reference\n  - Internal SSRF\n  - Session fixation\n  - Insecure Deserialization\n  - DOM XSS\n  - SSL misconfigurations\n  - SSL/TLS issues (weak crypto, improper setup)\n  - URL redirect\n  - Clickjacking (must be accompanied with PoC)\n  - Misleading Unicode text (e.g. using right to left override characters)",
+  "prioritizedVulnerabilities": "_blank_",
   "productType": [
     "Yield Aggregator"
   ],
@@ -2498,7 +2500,7 @@
   "rewardsToken": "BTC, ETH",
   "slug": "beefyfinance",
   "tenPercentEconomicRule": false,
-  "updatedDate": "2026-11-20T12:36:33.032Z",
+  "updatedDate": "2026-11-27T17:10:22.885Z",
   "impactsBody": null,
   "websiteUrl": null,
   "githubUrl": null,
@@ -2512,7 +2514,7 @@
   "defaultOutOfScopeGeneral": "- Impacts requiring attacks that the reporter has already exploited themselves, leading to damage\n- Impacts caused by attacks requiring access to leaked keys/credentials\n- Impacts caused by attacks requiring access to privileged addresses (including, but not limited to: governance and strategist contracts) without additional modifications to the privileges attributed\n- Impacts relying on attacks involving the depegging of an external stablecoin where the attacker does not directly cause the depegging due to a bug in code\n- Mentions of secrets, access tokens, API keys, private keys, etc. in Github will be considered out of scope without proof that they are in-use in production\n- Best practice recommendations\n- Feature requests\n- Impacts on test files and configuration files unless stated otherwise in the bug bounty program\n- Impacts requiring phishing or other social engineering attacks against project's employees and/or customers",
   "defaultFeasibilityLimitations": "The project may be receiving reports that are valid (the bug and attack vector are real) and cite assets and impacts that are in scope, but there may be obstacles or barriers to executing the attack in the real world. In other words, there is a question about how feasible the attack really is. Conversely, there may also be mitigation measures that projects can take to prevent the impact of the bug, which are not feasible or would require unconventional action and hence, should not be used as reasons for downgrading a bug's severity.\n\nTherefore, Immunefi has developed a set of feasibility limitation standards which by default states what security researchers, as well as projects, can or cannot cite when reviewing a bug report.\n- [Chain Rollbacks](https://immunefisupport.zendesk.com/hc/en-us/articles/16913153448721-Chain-Rollbacks)\n- [Pre-Impact Bug Monitoring](https://immunefisupport.zendesk.com/hc/en-us/articles/19430444320401-Pre-Impact-Bug-Monitoring)\n- [Attack Investment Amount](https://immunefisupport.zendesk.com/hc/en-us/articles/17243068885265-Attack-Investment-Amount)\n- [Attacks With A Financial Risk To The Attacker](https://immunefisupport.zendesk.com/hc/en-us/articles/17454897136401-Attacks-With-A-Financial-Risk-To-The-Attacker)\n- [When Is An Impactful Attack Downgraded To Griefing?](https://immunefisupport.zendesk.com/hc/en-us/articles/17455102268305-When-Is-An-Impactful-Attack-Downgraded-To-Griefing)",
   "defaultProhibitedActivities": "- Any testing on mainnet or public testnet deployed code; all testing should be done on local-forks of either public testnet or mainnet\n- Any testing with pricing oracles or third-party smart contracts\n- Attempting phishing or other social engineering attacks against our employees and/or customers\n- Any testing with third-party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\n- Any denial of service attacks that are executed against project assets\n- Automated testing of services that generates significant amounts of traffic\n- Public disclosure of an unpatched vulnerability in an embargoed bounty\n- [Any other actions prohibited by the Immunefi Rules](https://immunefi.com/rules/)",
-  "customOutOfScopeInformation": "  - Attacks requiring privileged access from within the organization\n  - Best practice critiques",
+  "customOutOfScopeInformation": "- Attacks requiring privileged access from within the organization\n  - Best practice critiques",
   "customProhibitedActivities": [],
   "impacts": [
     {
@@ -2600,6 +2602,48 @@
       "title": "Block stuffing for profit"
     },
     {
+      "id": 661,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as changing the first/last name of user, or en/disabling notification"
+    },
+    {
+      "id": 662,
+      "type": "websites_and_applications",
+      "severity": "medium",
+      "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data"
+    },
+    {
+      "id": 663,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Any governance voting result manipulation"
+    },
+    {
+      "id": 664,
+      "type": "smart_contract",
+      "severity": "critical",
+      "title": "Miner-extractable value (MEV)"
+    },
+    {
+      "id": 665,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys(this does not include non-sensitive environment variables, open source code, or usernames)"
+    },
+    {
+      "id": 666,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc."
+    },
+    {
+      "id": 667,
+      "type": "websites_and_applications",
+      "severity": "critical",
+      "title": "Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions"
+    },
+    {
       "id": 31,
       "type": "smart_contract",
       "severity": "medium",
@@ -2618,28 +2662,10 @@
       "title": "Unbounded gas consumption"
     },
     {
-      "id": 661,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Changing non-sensitive details of other users (including modifying browser local storage) without already-connected wallet interaction and with up to one click of user interaction, such as changing the first/last name of user, or en/disabling notification"
-    },
-    {
-      "id": 662,
-      "type": "websites_and_applications",
-      "severity": "medium",
-      "title": "Injecting/modifying the static content on the target application without Javascript (Reflected) such as reflected HTML injection or loading external site data"
-    },
-    {
       "id": 52,
       "type": "websites_and_applications",
       "severity": "medium",
       "title": "Redirecting users to malicious websites (open redirect)"
-    },
-    {
-      "id": 663,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Any governance voting result manipulation"
     },
     {
       "id": 15,
@@ -2654,12 +2680,6 @@
       "title": "Permanent freezing of funds"
     },
     {
-      "id": 664,
-      "type": "smart_contract",
-      "severity": "critical",
-      "title": "Miner-extractable value (MEV)"
-    },
-    {
       "id": 22,
       "type": "smart_contract",
       "severity": "critical",
@@ -2672,22 +2692,10 @@
       "title": "Execute arbitrary system commands"
     },
     {
-      "id": 665,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Retrieve sensitive data/files from a running server such as /etc/shadow, database passwords, and blockchain keys(this does not include non-sensitive environment variables, open source code, or usernames)"
-    },
-    {
       "id": 37,
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Taking down the application/website"
-    },
-    {
-      "id": 666,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Taking state-modifying authenticated actions (with or without blockchain state interaction) on behalf of other users without any interaction by that user, such as, changing registration information, commenting, voting, making trades, withdrawals, etc."
     },
     {
       "id": 41,
@@ -2700,17 +2708,11 @@
       "type": "websites_and_applications",
       "severity": "critical",
       "title": "Direct theft of user funds"
-    },
-    {
-      "id": 667,
-      "type": "websites_and_applications",
-      "severity": "critical",
-      "title": "Malicious interactions with an already-connected wallet such as modifying transaction arguments or parameters, substituting contract addresses, submitting malicious transactions"
     }
   ],
   "rewards": [
     {
-      "id": 8940,
+      "id": 53595,
       "primacy": null,
       "severity": "medium",
       "assetType": "smart_contract",
@@ -2718,7 +2720,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 8941,
+      "id": 53596,
       "primacy": null,
       "severity": "low",
       "assetType": "smart_contract",
@@ -2726,7 +2728,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 8942,
+      "id": 53597,
       "primacy": null,
       "severity": "critical",
       "assetType": "websites_and_applications",
@@ -2735,7 +2737,7 @@
       "otherImpactMaxReward": 0
     },
     {
-      "id": 8943,
+      "id": 53598,
       "primacy": null,
       "severity": "high",
       "assetType": "websites_and_applications",
@@ -2743,7 +2745,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 8944,
+      "id": 53599,
       "primacy": null,
       "severity": "medium",
       "assetType": "websites_and_applications",
@@ -2751,7 +2753,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 8945,
+      "id": 53600,
       "primacy": null,
       "severity": "low",
       "assetType": "websites_and_applications",
@@ -2759,7 +2761,7 @@
       "rewardModel": "fixed"
     },
     {
-      "id": 8938,
+      "id": 53601,
       "primacy": null,
       "severity": "critical",
       "assetType": "smart_contract",
@@ -2768,7 +2770,7 @@
       "rewardCalculationPercentage": 0
     },
     {
-      "id": 8939,
+      "id": 53602,
       "primacy": null,
       "severity": "high",
       "assetType": "smart_contract",
